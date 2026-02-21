@@ -1,9 +1,6 @@
-# Ignore videos
 *.mp4
+*.webm
 *.mkv
-*.avi
-*.mov
-*.wmv
-
+*.bak
 *.zip
 *.rar
