@@ -1,0 +1,107 @@
+<!-- <!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خريطة مع أماكن محددة</title>
+    <style>
+        #map {
+            height: 80vh;
+            width: 100%;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px;
+            background: #f5f5f5;
+            border-bottom: 1px solid #ddd;
+        }
+        .place-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #4285f4;
+            color: red;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        .place-btn:hover {
+            background: #3367d6;
+        }
+        .place-btn.active {
+            background: #0d47a1;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="buttons">
+        <button class="place-btn" data-lat="30.0444" data-lng="31.2357">القاهرة</button>
+        <button class="place-btn" data-lat="31.2001" data-lng="29.9187">الإسكندرية</button>
+        <button class="place-btn" data-lat="25.6872" data-lng="32.6396">الأقصر</button>
+        <button class="place-btn" id="current-location">موقعي الحالي</button>
+    </div>
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Centered Buttons</title>
+
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            box-sizing: border-box;
+            
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+        
+            align-items: center;
+       
+        }
+
+        /* .buttons {
+            display: flex;
+            flex-direction: column;
+          
+            gap: 15px;
+        } */
+
+        button {
+            width: 200px;
+            padding: 12px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="buttons">
+        <button>زر 1</button>
+        <button>زر 2</button>
+        <button>زر 3</button>
+        <button>زر 4</button>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>audio</title>
+    <style>
+        .aud {
+            margin-bottom: 20px;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <audio src="Super Mario Bros (NES) Music - Overworld Theme.mp3" controls style="margin: 20px;"></audio>
+
+    <div style="margin: 20px;">
+        <label>TimeRange</label>
+        <input type="range" min="0" max="100" value="0" id="timeRange">
+
+    </div>
+
+    <div style="margin: 20px;">
+        <label>Volume</label>
+        <input type="range" min="0" max="100" value="0" id="volumeRange" style="    margin-left: 28px;">
+    </div>
+    <div style="margin: 20px;">
+
+        <button onclick="play()">play</button>
+        <button onclick="pause()">pause</button>
+        <button onclick="Stop()">stop</button>
+    </div>
+    <div id="Playlist">
+        <label style="font-size: 50px; margin-bottom: 100px;">Playlist</label>
+        <br>
+        <button class="aud" value="027.mp3">An-Nagm</button>
+        <br>
+        <button class="aud" value="028.mp3">Al-Qasas</button>
+        <br>
+        <button class="aud" value="029.mp3">Al-Ankaut</button>
+
+    </div>
+
+    <script src="05-audio.js"></script>
+</body>
+
+</html>

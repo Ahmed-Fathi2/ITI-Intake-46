@@ -1,0 +1,80 @@
+🎯 أول خطوة: تضمين المكتبة
+#include <vector>
+using namespace std;
+
+1️⃣ إنشاء vector
+🔹 vector فاضي:
+vector<int> v;
+
+🔹 vector بحجم محدد:
+vector<int> v(5);  // فيها 5 عناصر كلهم 0
+
+🔹 vector بحجم وقيمة ابتدائية:
+vector<int> v(5, 10);  // 5 عناصر كلهم 10
+
+🔹 vector من قائمة:
+vector<int> v = {1, 2, 3, 4};
+
+2️⃣ إضافة عناصر
+✔️ push_back: إضافة في آخر الـ vector
+v.push_back(10);
+
+✔️ insert: إدخال عنصر في مكان معين
+v.insert(v.begin() + 2, 99);  // يدخل 99 عند index = 2
+
+3️⃣ حذف عناصر
+✔️ pop_back: حذف آخر عنصر
+v.pop_back();
+
+✔️ erase: حذف عنصر بمكان معين
+v.erase(v.begin() + 1);  // يمسح index رقم 1
+
+✔️ حذف range
+v.erase(v.begin(), v.begin() + 3);  // يمسح أول 3 عناصر
+
+4️⃣ الوصول للعناصر
+✔️ باستخدام index
+cout << v[0];
+
+✔️ at (آمنة)
+cout << v.at(1);
+
+5️⃣ الخصائص الأساسية
+✔️ معرفة الحجم:
+v.size();
+
+✔️ هل فاضي؟
+v.empty();
+
+✔️ آخر عنصر:
+v.back();
+
+✔️ أول عنصر:
+v.front();
+
+6️⃣ اللوب على الـ vector
+✔️ for عادي:
+for (int i = 0; i < v.size(); i++)
+    cout << v[i] << " ";
+
+✔️ range-based for:
+for (int x : v)
+    cout << x << " ";
+
+✔️ باستخدام Iterator:
+for (auto it = v.begin(); it != v.end(); it++)
+    cout << *it << " ";
+
+7️⃣ مسح كل العناصر
+v.clear();
+
+8️⃣ معرفة السعة Capacity
+
+(الذاكرة المحجوزة وليس عدد العناصر)
+
+v.capacity();
+
+9️⃣ تغيير حجم الـ vector
+v.resize(10);        // يزود الحجم ويضيف 0
+v.resize(3);         // يقلل الحجم ويمسح الباقي
+v.resize(5, 7);      // يضيف عناصر جديدة قيمتها 7

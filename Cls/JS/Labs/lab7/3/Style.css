@@ -1,0 +1,20 @@
+ 
+ 
+ #container {
+
+    position: relative;
+    height: 120px;
+  }
+
+  .marble {
+    width: 50px;
+    height: 50px;
+  }
+
+  #moving {
+    /* width: 50px;
+    height: 50px;
+    position: absolute; */
+    display: none;
+
+  }

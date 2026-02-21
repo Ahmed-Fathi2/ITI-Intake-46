@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Counter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f6f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .counter-box {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            width: 250px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #counterValue {
+            font-size: 48px;
+            margin: 20px 0;
+            color: #2e7d32;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .buttons button {
+            margin: 5px;
+            padding: 8px 14px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #increase {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        #decrease {
+            background-color: #e0e0e0;
+        }
+
+        #reset {
+            background-color: #ffc107;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="counter-box">
+        <h2>Counter</h2>
+        <div id="counterValue">0</div>
+
+        <div class="buttons">
+            <button id="decrease">Decrease</button>
+            <button id="reset">Reset</button>
+            <button id="increase">Increase</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,3 @@
+IEnumerable ---> base class for all collections
+Enumerable ---> class of all Linq methods يعني دة الكلاس الي جواة كل اللينك فانكشن
+Casting ---> harm performance (bad)

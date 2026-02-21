@@ -1,0 +1,14 @@
+C:\Users\engmt\source\repos\SD46CSD05\SD46CSD05\bin\Debug\net8.0\SD46CSD05.exe
+C:\Users\engmt\source\repos\SD46CSD05\SD46CSD05\bin\Debug\net8.0\SD46CSD05.deps.json
+C:\Users\engmt\source\repos\SD46CSD05\SD46CSD05\bin\Debug\net8.0\SD46CSD05.runtimeconfig.json
+C:\Users\engmt\source\repos\SD46CSD05\SD46CSD05\bin\Debug\net8.0\SD46CSD05.dll
+C:\Users\engmt\source\repos\SD46CSD05\SD46CSD05\bin\Debug\net8.0\SD46CSD05.pdb
+C:\Users\engmt\source\repos\SD46CSD05\SD46CSD05\obj\Debug\net8.0\SD46CSD05.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\engmt\source\repos\SD46CSD05\SD46CSD05\obj\Debug\net8.0\SD46CSD05.AssemblyInfoInputs.cache
+C:\Users\engmt\source\repos\SD46CSD05\SD46CSD05\obj\Debug\net8.0\SD46CSD05.AssemblyInfo.cs
+C:\Users\engmt\source\repos\SD46CSD05\SD46CSD05\obj\Debug\net8.0\SD46CSD05.csproj.CoreCompileInputs.cache
+C:\Users\engmt\source\repos\SD46CSD05\SD46CSD05\obj\Debug\net8.0\SD46CSD05.dll
+C:\Users\engmt\source\repos\SD46CSD05\SD46CSD05\obj\Debug\net8.0\refint\SD46CSD05.dll
+C:\Users\engmt\source\repos\SD46CSD05\SD46CSD05\obj\Debug\net8.0\SD46CSD05.pdb
+C:\Users\engmt\source\repos\SD46CSD05\SD46CSD05\obj\Debug\net8.0\SD46CSD05.genruntimeconfig.cache
+C:\Users\engmt\source\repos\SD46CSD05\SD46CSD05\obj\Debug\net8.0\ref\SD46CSD05.dll

@@ -1,0 +1,17 @@
+D:\iti\.net\C#\ExamSystem\ExamSystem\bin\Debug\net9.0\ExamSystem.exe
+D:\iti\.net\C#\ExamSystem\ExamSystem\bin\Debug\net9.0\ExamSystem.deps.json
+D:\iti\.net\C#\ExamSystem\ExamSystem\bin\Debug\net9.0\ExamSystem.runtimeconfig.json
+D:\iti\.net\C#\ExamSystem\ExamSystem\bin\Debug\net9.0\ExamSystem.dll
+D:\iti\.net\C#\ExamSystem\ExamSystem\bin\Debug\net9.0\ExamSystem.pdb
+D:\iti\.net\C#\ExamSystem\ExamSystem\obj\Debug\net9.0\ExamSystem.GeneratedMSBuildEditorConfig.editorconfig
+D:\iti\.net\C#\ExamSystem\ExamSystem\obj\Debug\net9.0\ExamSystem.AssemblyInfoInputs.cache
+D:\iti\.net\C#\ExamSystem\ExamSystem\obj\Debug\net9.0\ExamSystem.AssemblyInfo.cs
+D:\iti\.net\C#\ExamSystem\ExamSystem\obj\Debug\net9.0\ExamSystem.csproj.CoreCompileInputs.cache
+D:\iti\.net\C#\ExamSystem\ExamSystem\obj\Debug\net9.0\ExamSystem.dll
+D:\iti\.net\C#\ExamSystem\ExamSystem\obj\Debug\net9.0\refint\ExamSystem.dll
+D:\iti\.net\C#\ExamSystem\ExamSystem\obj\Debug\net9.0\ExamSystem.pdb
+D:\iti\.net\C#\ExamSystem\ExamSystem\obj\Debug\net9.0\ExamSystem.genruntimeconfig.cache
+D:\iti\.net\C#\ExamSystem\ExamSystem\obj\Debug\net9.0\ref\ExamSystem.dll
+D:\iti\.net\C#\ExamSystem\ExamSystem\bin\Debug\net9.0\Newtonsoft.Json.dll
+D:\iti\.net\C#\ExamSystem\ExamSystem\obj\Debug\net9.0\ExamSystem.csproj.AssemblyReference.cache
+D:\iti\.net\C#\ExamSystem\ExamSystem\obj\Debug\net9.0\ExamSystem.csproj.Up2Date

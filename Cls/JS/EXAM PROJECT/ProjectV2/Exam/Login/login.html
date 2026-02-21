@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizGrad</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="/assets/favicon.ico">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .logo {
+            font-size: 42px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .logo .quiz {
+            color: #333;
+        }
+
+        .logo .grad {
+            color: #FDB927;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid grid-cols-1 xl:grid-cols-2 min-h-screen">
+
+        <div class="bg-white flex justify-center items-center">
+            <div class="w-full max-w-lg p-12">
+                <div class="logo">
+                    <span class="quiz cursor-pointer" onclick="window.location.href='/index.html'">Quiz</span><span class="grad cursor-pointer" onclick="window.location.href='/index.html'">Grad</span>
+                </div>
+                <p class="text-center text-slate-400 mb-10">
+                    Welcome back! <br>
+                    Please Login/Sign-Up to your account
+                </p>
+
+                <form action="/Landing/Landing.html" onsubmit="ValidateLogin(event)">
+                    <fieldset class="fieldset">
+                        <label class="label">Email</label>
+                        <input type="email" class="input w-full" placeholder="Email" />
+
+                        <label class="label">Password</label>
+                        <input type="password" class="input w-full" placeholder="Password" />
+
+                        <!-- <div>
+                            <a class="link link-hover">Forgot password?</a>
+                        </div> -->
+
+                        <p id="Invalid" class="text-red-600"></p>
+                    </fieldset>
+
+                    <div class="py-10 flex gap-4">
+                        <button type="submit" class="btn btn-warning flex-1">Login</button>
+                        <button type="button" onclick="window.location.href='/Register/Register.html'"
+                            class="btn btn-outline btn-warning flex-1">
+                            Signup
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="hidden xl:flex items-center justify-center bg-white">
+            <img src="/assets/5601k__91599.jpg" class="max-w-md object-cover" alt="">
+        </div>
+    </div>
+
+    <script src="/Login/LoginScript.js"></script>
+</body>
+
+</html>

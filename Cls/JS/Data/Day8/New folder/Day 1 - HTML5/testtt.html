@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Login</title>
+
+    <style>
+        /* ===== Reset ===== */
+        * {
+            margin: 0;                 /* نشيل المسافات الافتراضية */
+            padding: 0;
+            box-sizing: border-box;    /* حساب مقاسات أسهل */
+        }
+
+        /* ===== Page Setup ===== */
+        body {
+            height: 100vh;             /* طول الصفحة قد الشاشة */
+            display: flex;             /* نستخدم Flex */
+            justify-content: center;   /* توسيط أفقي */
+            align-items: center;       /* توسيط رأسي */
+            background-color: #f2f4f7; /* خلفية هادية */
+            font-family: Arial, sans-serif;
+        }
+
+        /* ===== Form Container ===== */
+        .login-box {
+            background-color: #ffffff; /* خلفية الفورم */
+            padding: 25px;             /* مسافة داخلية */
+            border-radius: 12px;       /* زوايا مدورة */
+            width: 320px;              /* عرض ثابت */
+            display: flex;             /* Flex */
+            flex-direction: column;    /* العناصر تحت بعض */
+            gap: 15px;                 /* مسافة بين العناصر */
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* ظل خفيف */
+        }
+
+        /* ===== Inputs ===== */
+        input {
+            padding: 10px;             /* مسافة جوه input */
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        /* لما ندوس على input */
+        input:focus {
+            outline: none;             /* نشيل الخط الأزرق */
+            border-color: #4f46e5;     /* لون مميز */
+        }
+
+        /* ===== Buttons Container ===== */
+        .buttons {
+            display: flex;             /* Flex علشان الأزرار */
+            gap: 10px;                 /* مسافة بينهم */
+        }
+
+        /* ===== Buttons ===== */
+        button {
+            flex: 1;                   /* كل زر نفس العرض */
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        /* زر Login */
+        .login {
+            background-color: #4f46e5;
+            color: white;
+        }
+
+        /* زر Register */
+        .register {
+            background-color: #e5e7eb;
+        }
+
+        /* Hover effect */
+        button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form class="login-box">
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+
+        <div class="buttons">
+            <button class="login">Login</button>
+            <button class="register">Register</button>
+        </div>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,167 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\engmt\\source\\repos\\SD46CSD07\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BF2C58B1-040C-4AAE-A56B-A0459AA3531B}|SD46CSD07\\SD46CSD07.csproj|c:\\users\\engmt\\source\\repos\\sd46csd07\\sd46csd07\\mylist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF2C58B1-040C-4AAE-A56B-A0459AA3531B}|SD46CSD07\\SD46CSD07.csproj|solutionrelative:sd46csd07\\mylist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF2C58B1-040C-4AAE-A56B-A0459AA3531B}|SD46CSD07\\SD46CSD07.csproj|c:\\users\\engmt\\source\\repos\\sd46csd07\\sd46csd07\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF2C58B1-040C-4AAE-A56B-A0459AA3531B}|SD46CSD07\\SD46CSD07.csproj|solutionrelative:sd46csd07\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF2C58B1-040C-4AAE-A56B-A0459AA3531B}|SD46CSD07\\SD46CSD07.csproj|c:\\users\\engmt\\source\\repos\\sd46csd07\\sd46csd07\\mutablevsimmutable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF2C58B1-040C-4AAE-A56B-A0459AA3531B}|SD46CSD07\\SD46CSD07.csproj|solutionrelative:sd46csd07\\mutablevsimmutable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF2C58B1-040C-4AAE-A56B-A0459AA3531B}|SD46CSD07\\SD46CSD07.csproj|c:\\users\\engmt\\source\\repos\\sd46csd07\\sd46csd07\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF2C58B1-040C-4AAE-A56B-A0459AA3531B}|SD46CSD07\\SD46CSD07.csproj|solutionrelative:sd46csd07\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF2C58B1-040C-4AAE-A56B-A0459AA3531B}|SD46CSD07\\SD46CSD07.csproj|c:\\users\\engmt\\source\\repos\\sd46csd07\\sd46csd07\\trial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF2C58B1-040C-4AAE-A56B-A0459AA3531B}|SD46CSD07\\SD46CSD07.csproj|solutionrelative:sd46csd07\\trial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF2C58B1-040C-4AAE-A56B-A0459AA3531B}|SD46CSD07\\SD46CSD07.csproj|c:\\users\\engmt\\source\\repos\\sd46csd07\\sd46csd07\\interfacewithgeneric.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF2C58B1-040C-4AAE-A56B-A0459AA3531B}|SD46CSD07\\SD46CSD07.csproj|solutionrelative:sd46csd07\\interfacewithgeneric.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF2C58B1-040C-4AAE-A56B-A0459AA3531B}|SD46CSD07\\SD46CSD07.csproj|c:\\users\\engmt\\source\\repos\\sd46csd07\\sd46csd07\\stack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF2C58B1-040C-4AAE-A56B-A0459AA3531B}|SD46CSD07\\SD46CSD07.csproj|solutionrelative:sd46csd07\\stack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF2C58B1-040C-4AAE-A56B-A0459AA3531B}|SD46CSD07\\SD46CSD07.csproj|c:\\users\\engmt\\source\\repos\\sd46csd07\\sd46csd07\\trial2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF2C58B1-040C-4AAE-A56B-A0459AA3531B}|SD46CSD07\\SD46CSD07.csproj|solutionrelative:sd46csd07\\trial2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF2C58B1-040C-4AAE-A56B-A0459AA3531B}|SD46CSD07\\SD46CSD07.csproj|c:\\users\\engmt\\source\\repos\\sd46csd07\\sd46csd07\\trial3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF2C58B1-040C-4AAE-A56B-A0459AA3531B}|SD46CSD07\\SD46CSD07.csproj|solutionrelative:sd46csd07\\trial3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MyList.cs",
+              "DocumentMoniker": "C:\\Users\\engmt\\source\\repos\\SD46CSD07\\SD46CSD07\\MyList.cs",
+              "RelativeDocumentMoniker": "SD46CSD07\\MyList.cs",
+              "ToolTip": "C:\\Users\\engmt\\source\\repos\\SD46CSD07\\SD46CSD07\\MyList.cs",
+              "RelativeToolTip": "SD46CSD07\\MyList.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T09:41:08.111Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Users\\engmt\\source\\repos\\SD46CSD07\\SD46CSD07\\Employee.cs",
+              "RelativeDocumentMoniker": "SD46CSD07\\Employee.cs",
+              "ToolTip": "C:\\Users\\engmt\\source\\repos\\SD46CSD07\\SD46CSD07\\Employee.cs",
+              "RelativeToolTip": "SD46CSD07\\Employee.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAowEEAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T08:10:57.653Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "InterfaceWithGeneric.cs",
+              "DocumentMoniker": "C:\\Users\\engmt\\source\\repos\\SD46CSD07\\SD46CSD07\\InterfaceWithGeneric.cs",
+              "RelativeDocumentMoniker": "SD46CSD07\\InterfaceWithGeneric.cs",
+              "ToolTip": "C:\\Users\\engmt\\source\\repos\\SD46CSD07\\SD46CSD07\\InterfaceWithGeneric.cs",
+              "RelativeToolTip": "SD46CSD07\\InterfaceWithGeneric.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAAAE0AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T07:57:01.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Trial3.cs",
+              "DocumentMoniker": "C:\\Users\\engmt\\source\\repos\\SD46CSD07\\SD46CSD07\\Trial3.cs",
+              "RelativeDocumentMoniker": "SD46CSD07\\Trial3.cs",
+              "ToolTip": "C:\\Users\\engmt\\source\\repos\\SD46CSD07\\SD46CSD07\\Trial3.cs",
+              "RelativeToolTip": "SD46CSD07\\Trial3.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T07:45:59.209Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Trial2.cs",
+              "DocumentMoniker": "C:\\Users\\engmt\\source\\repos\\SD46CSD07\\SD46CSD07\\Trial2.cs",
+              "RelativeDocumentMoniker": "SD46CSD07\\Trial2.cs",
+              "ToolTip": "C:\\Users\\engmt\\source\\repos\\SD46CSD07\\SD46CSD07\\Trial2.cs",
+              "RelativeToolTip": "SD46CSD07\\Trial2.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T07:37:56.493Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Trial.cs",
+              "DocumentMoniker": "C:\\Users\\engmt\\source\\repos\\SD46CSD07\\SD46CSD07\\Trial.cs",
+              "RelativeDocumentMoniker": "SD46CSD07\\Trial.cs",
+              "ToolTip": "C:\\Users\\engmt\\source\\repos\\SD46CSD07\\SD46CSD07\\Trial.cs",
+              "RelativeToolTip": "SD46CSD07\\Trial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T07:33:26.541Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Stack.cs",
+              "DocumentMoniker": "C:\\Users\\engmt\\source\\repos\\SD46CSD07\\SD46CSD07\\Stack.cs",
+              "RelativeDocumentMoniker": "SD46CSD07\\Stack.cs",
+              "ToolTip": "C:\\Users\\engmt\\source\\repos\\SD46CSD07\\SD46CSD07\\Stack.cs",
+              "RelativeToolTip": "SD46CSD07\\Stack.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T07:15:31.108Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MutableVsImmutable.cs",
+              "DocumentMoniker": "C:\\Users\\engmt\\source\\repos\\SD46CSD07\\SD46CSD07\\MutableVsImmutable.cs",
+              "RelativeDocumentMoniker": "SD46CSD07\\MutableVsImmutable.cs",
+              "ToolTip": "C:\\Users\\engmt\\source\\repos\\SD46CSD07\\SD46CSD07\\MutableVsImmutable.cs",
+              "RelativeToolTip": "SD46CSD07\\MutableVsImmutable.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAwwDkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T07:08:00.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\engmt\\source\\repos\\SD46CSD07\\SD46CSD07\\Program.cs",
+              "RelativeDocumentMoniker": "SD46CSD07\\Program.cs",
+              "ToolTip": "C:\\Users\\engmt\\source\\repos\\SD46CSD07\\SD46CSD07\\Program.cs",
+              "RelativeToolTip": "SD46CSD07\\Program.cs",
+              "ViewState": "AgIAAKAAAAAAAAAAAAAQwBsAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T07:04:05.788Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

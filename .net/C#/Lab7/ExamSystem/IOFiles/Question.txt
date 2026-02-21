@@ -1,0 +1,162 @@
+[
+  {
+    "$type": "Mcq",
+    "QusetType": 0,
+    "QuestBody": "Which keyword is used to create an object in C#?",
+    "Answers": [
+      {
+        "AnswerBody": "new"
+      },
+      {
+        "AnswerBody": "create"
+      },
+      {
+        "AnswerBody": "object"
+      },
+      {
+        "AnswerBody": "class"
+      }
+    ]
+  },
+  {
+    "$type": "TF",
+    "QusetType": 1,
+    "QuestBody": "C# supports multiple inheritance using classes",
+    "Answers": [
+      {
+        "AnswerBody": "True"
+      },
+      {
+        "AnswerBody": "False"
+      }
+    ]
+  },
+  {
+    "$type": "Mcq",
+    "QusetType": 0,
+    "QuestBody": "Which of the following is a value type?",
+    "Answers": [
+      {
+        "AnswerBody": "String"
+      },
+      {
+        "AnswerBody": "Array"
+      },
+      {
+        "AnswerBody": "Int32"
+      },
+      {
+        "AnswerBody": "Class"
+      }
+    ]
+  },
+  {
+    "$type": "TF",
+    "QusetType": 1,
+    "QuestBody": "The Main method is the entry point of a C# program",
+    "Answers": [
+      {
+        "AnswerBody": "True"
+      },
+      {
+        "AnswerBody": "False"
+      }
+    ]
+  },
+  {
+    "$type": "Mcq",
+    "QusetType": 0,
+    "QuestBody": "Which keyword is used to prevent inheritance?",
+    "Answers": [
+      {
+        "AnswerBody": "sealed"
+      },
+      {
+        "AnswerBody": "static"
+      },
+      {
+        "AnswerBody": "const"
+      },
+      {
+        "AnswerBody": "readonly"
+      }
+    ]
+  },
+  {
+    "$type": "TF",
+    "QusetType": 1,
+    "QuestBody": "An interface can contain method implementations",
+    "Answers": [
+      {
+        "AnswerBody": "True"
+      },
+      {
+        "AnswerBody": "False"
+      }
+    ]
+  },
+  {
+    "$type": "Mcq",
+    "QusetType": 0,
+    "QuestBody": "Which collection does NOT allow duplicate values?",
+    "Answers": [
+      {
+        "AnswerBody": "List"
+      },
+      {
+        "AnswerBody": "Array"
+      },
+      {
+        "AnswerBody": "HashSet"
+      },
+      {
+        "AnswerBody": "Dictionary"
+      }
+    ]
+  },
+  {
+    "$type": "TF",
+    "QusetType": 1,
+    "QuestBody": "Garbage Collector manages memory automatically in C#",
+    "Answers": [
+      {
+        "AnswerBody": "True"
+      },
+      {
+        "AnswerBody": "False"
+      }
+    ]
+  },
+  {
+    "$type": "Mcq",
+    "QusetType": 0,
+    "QuestBody": "Which keyword is used to handle exceptions?",
+    "Answers": [
+      {
+        "AnswerBody": "try"
+      },
+      {
+        "AnswerBody": "catch"
+      },
+      {
+        "AnswerBody": "finally"
+      },
+      {
+        "AnswerBody": "All of the above"
+      }
+    ]
+  },
+  {
+    "$type": "TF",
+    "QusetType": 1,
+    "QuestBody": "Structs are reference types in C#",
+    "Answers": [
+      {
+        "AnswerBody": "True"
+      },
+      {
+        "AnswerBody": "False"
+      }
+    ]
+  }
+]

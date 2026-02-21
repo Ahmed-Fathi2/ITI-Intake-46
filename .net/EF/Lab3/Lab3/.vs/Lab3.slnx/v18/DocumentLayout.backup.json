@@ -1,0 +1,143 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\ITI\\.net\\EF\\Lab3\\Lab3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BD6B9E9E-3E19-1E62-5DC0-58D981F02584}|Lab3\\Lab3.csproj|f:\\iti\\.net\\ef\\lab3\\lab3\\lab3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD6B9E9E-3E19-1E62-5DC0-58D981F02584}|Lab3\\Lab3.csproj|solutionrelative:lab3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD6B9E9E-3E19-1E62-5DC0-58D981F02584}|Lab3\\Lab3.csproj|f:\\iti\\.net\\ef\\lab3\\lab3\\lab3\\repository\\studentrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD6B9E9E-3E19-1E62-5DC0-58D981F02584}|Lab3\\Lab3.csproj|solutionrelative:lab3\\repository\\studentrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD6B9E9E-3E19-1E62-5DC0-58D981F02584}|Lab3\\Lab3.csproj|f:\\iti\\.net\\ef\\lab3\\lab3\\lab3\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD6B9E9E-3E19-1E62-5DC0-58D981F02584}|Lab3\\Lab3.csproj|solutionrelative:lab3\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD6B9E9E-3E19-1E62-5DC0-58D981F02584}|Lab3\\Lab3.csproj|f:\\iti\\.net\\ef\\lab3\\lab3\\lab3\\models\\instcourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD6B9E9E-3E19-1E62-5DC0-58D981F02584}|Lab3\\Lab3.csproj|solutionrelative:lab3\\models\\instcourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD6B9E9E-3E19-1E62-5DC0-58D981F02584}|Lab3\\Lab3.csproj|f:\\iti\\.net\\ef\\lab3\\lab3\\lab3\\models\\studcourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD6B9E9E-3E19-1E62-5DC0-58D981F02584}|Lab3\\Lab3.csproj|solutionrelative:lab3\\models\\studcourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD6B9E9E-3E19-1E62-5DC0-58D981F02584}|Lab3\\Lab3.csproj|f:\\iti\\.net\\ef\\lab3\\lab3\\lab3\\models\\instractor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD6B9E9E-3E19-1E62-5DC0-58D981F02584}|Lab3\\Lab3.csproj|solutionrelative:lab3\\models\\instractor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD6B9E9E-3E19-1E62-5DC0-58D981F02584}|Lab3\\Lab3.csproj|f:\\iti\\.net\\ef\\lab3\\lab3\\lab3\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD6B9E9E-3E19-1E62-5DC0-58D981F02584}|Lab3\\Lab3.csproj|solutionrelative:lab3\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StudentRepo.cs",
+              "DocumentMoniker": "F:\\ITI\\.net\\EF\\Lab3\\Lab3\\Lab3\\Repository\\StudentRepo.cs",
+              "RelativeDocumentMoniker": "Lab3\\Repository\\StudentRepo.cs",
+              "ToolTip": "F:\\ITI\\.net\\EF\\Lab3\\Lab3\\Lab3\\Repository\\StudentRepo.cs",
+              "RelativeToolTip": "Lab3\\Repository\\StudentRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-18T14:23:09.488Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StudCourse.cs",
+              "DocumentMoniker": "F:\\ITI\\.net\\EF\\Lab3\\Lab3\\Lab3\\Models\\StudCourse.cs",
+              "RelativeDocumentMoniker": "Lab3\\Models\\StudCourse.cs",
+              "ToolTip": "F:\\ITI\\.net\\EF\\Lab3\\Lab3\\Lab3\\Models\\StudCourse.cs",
+              "RelativeToolTip": "Lab3\\Models\\StudCourse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-18T14:11:41.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "InstCourse.cs",
+              "DocumentMoniker": "F:\\ITI\\.net\\EF\\Lab3\\Lab3\\Lab3\\Models\\InstCourse.cs",
+              "RelativeDocumentMoniker": "Lab3\\Models\\InstCourse.cs",
+              "ToolTip": "F:\\ITI\\.net\\EF\\Lab3\\Lab3\\Lab3\\Models\\InstCourse.cs",
+              "RelativeToolTip": "Lab3\\Models\\InstCourse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-18T14:11:36.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Instractor.cs",
+              "DocumentMoniker": "F:\\ITI\\.net\\EF\\Lab3\\Lab3\\Lab3\\Models\\Instractor.cs",
+              "RelativeDocumentMoniker": "Lab3\\Models\\Instractor.cs",
+              "ToolTip": "F:\\ITI\\.net\\EF\\Lab3\\Lab3\\Lab3\\Models\\Instractor.cs",
+              "RelativeToolTip": "Lab3\\Models\\Instractor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-18T14:07:53.443Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Department.cs",
+              "DocumentMoniker": "F:\\ITI\\.net\\EF\\Lab3\\Lab3\\Lab3\\Models\\Department.cs",
+              "RelativeDocumentMoniker": "Lab3\\Models\\Department.cs",
+              "ToolTip": "F:\\ITI\\.net\\EF\\Lab3\\Lab3\\Lab3\\Models\\Department.cs",
+              "RelativeToolTip": "Lab3\\Models\\Department.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-18T14:07:47.429Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "F:\\ITI\\.net\\EF\\Lab3\\Lab3\\Lab3\\Models\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Lab3\\Models\\AppDbContext.cs",
+              "ToolTip": "F:\\ITI\\.net\\EF\\Lab3\\Lab3\\Lab3\\Models\\AppDbContext.cs",
+              "RelativeToolTip": "Lab3\\Models\\AppDbContext.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA9wBYAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-18T14:07:20.402Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\ITI\\.net\\EF\\Lab3\\Lab3\\Lab3\\Program.cs",
+              "RelativeDocumentMoniker": "Lab3\\Program.cs",
+              "ToolTip": "F:\\ITI\\.net\\EF\\Lab3\\Lab3\\Lab3\\Program.cs*",
+              "RelativeToolTip": "Lab3\\Program.cs*",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAAGsAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-18T13:43:22.28Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

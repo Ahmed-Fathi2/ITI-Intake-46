@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizo</title>
+    <link rel="stylesheet" href="/Quiz/QuizStyle.css">
+    <link rel="icon" href="/assets/favicon.ico">
+
+</head>
+
+<body>
+
+    <!-- Top Header -->
+    <div class="top-header" >
+        <div class="logo" >
+            <span class="quiz">Quiz</span><span class="grad">Grad</span>
+        </div>
+        <div class="timer" >
+            <span  class="timer-icon">⏱️</span>
+            <span id="timerDisplay">00:00</span>
+        </div>
+    </div>
+
+
+    <!-- Main Container -->
+    <div class="main-container" >
+        <!-- progress-section -->
+        <div class="progress-section" >
+            <div class="progress-header" >
+                <span class="progress-text" >Quiz Progress</span>
+                <span class="question-counter" >
+                    Question <span id="currentQ">1</span> of <span id="totalQ">10</span>
+                </span>
+            </div>
+
+            <!-- Question Numbers Grid -->
+            <div class="question-grid" id="questionGrid">
+                <!-- Will be populated by JavaScript -->
+            </div>
+
+
+            <div class="buttons-section" >
+                <button class="markbtn" onclick="GoToQuestion(event)">1</button>
+                <button class="markbtn" onclick="GoToQuestion(event)">2</button>
+                <button class="markbtn" onclick="GoToQuestion(event)">3</button>
+                <button class="markbtn" onclick="GoToQuestion(event)">4</button>
+                <button class="markbtn" onclick="GoToQuestion(event)">5</button>
+                <button class="markbtn" onclick="GoToQuestion(event)">6</button>
+                <button class="markbtn" onclick="GoToQuestion(event)">7</button>
+                <button class="markbtn" onclick="GoToQuestion(event)">8</button>
+                <button class="markbtn" onclick="GoToQuestion(event)">9</button>
+                <button class="markbtn" onclick="GoToQuestion(event)">10</button>
+            </div>
+            <!-- Legend -->
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="legend-box legend-current"></div>
+                    <span>Current</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-box legend-answered"></div>
+                    <span>Answered</span>
+                </div>
+                <div class="legend-item unanswered">
+                    <div class="legend-box legend-marked"></div>
+                    <span>Marked</span>
+                </div>
+                <div class="legend-item ">
+                    <div class="legend-box legend-unanswered"></div>
+                    <span>Unanswered</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="Questions">
+            <h1 class="question-text"></h1>
+
+            <div class="options-container">
+                <div class="option-item">
+                    <input type="radio" name="answers" id="ans11" class="optionInput">
+                    <label for="ans11" class="optionText">hbnjm bhnm</label>
+                </div>
+
+                <div  class="option-item">
+                    <input type="radio" name="answers" id="ans22" class="optionInput">
+                    <label for="ans22" class="optionText">gvhbjnmk,l</label>
+                </div>
+
+                <div  class="option-item">
+                    <input type="radio" name="answers" id="ans33" class="optionInput">
+                    <label for="ans33" class="optionText">cfvgbhnjm</label>
+                </div>
+
+                <div  class="option-item">
+                    <input type="radio" name="answers" id="ans44" class="optionInput">
+                    <label for="ans44" class="optionText">vgbhnjm</label>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="navigation">
+                <button  class="Prevbtn" disabled>← Previous</button>
+                <button  id="mark" onclick="Mark()">🏴 Mark for Review</button>
+                <button  class="btnNext">Next</button>
+                <!-- Submit -->
+                <div style="float: right;" class="submit">
+                    <button  id="submitbtn" onclick="Submit()">Submit</button>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+ 
+
+    <script src="Quiz.js"></script>
+</body>
+
+</html>

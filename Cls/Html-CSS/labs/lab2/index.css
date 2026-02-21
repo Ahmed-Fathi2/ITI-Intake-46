@@ -1,0 +1,98 @@
+.header {
+ position: relative;
+ background-image: url(header.jpeg);
+ background-size: cover;
+ height: 35vh;
+
+
+}
+
+.header h1 {
+ position: absolute;
+ 
+ left:50%;
+ transform: translate(-50% , -50%);
+}
+
+.about{
+
+position: relative;
+    border: 1px solid black ;
+    width: 50%;
+    height: 150px;
+    padding: 10px 10px;
+    margin: 30px auto ;
+    background-color: rgb(223, 228, 233);
+    border-radius: 5px ;
+ 
+}
+
+.about .Me{
+    text-align: center;
+}
+
+.skills {
+
+position: relative;
+width: 50%;
+margin: 0 auto;
+
+}
+
+.skills h1{
+    text-align: center;
+    
+}
+.skills ul{
+    padding-left: 0;
+}
+
+
+.projects {
+width: 50%;
+margin: 0 auto;
+text-align: center;
+}
+
+.projects table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.projects th{
+    background-color: rgb(70, 80, 218);
+}
+
+.projects td, th{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+
+
+.Contact{
+
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.Contact a{
+text-decoration: none;
+background-color: rgb(56, 81, 223);
+color: aliceblue;
+padding: 10px 7px;
+border-radius: 5px;}
+
+/* .Contact button{
+    margin-top: 50px;
+}
+.Contact button:hover{
+    cursor: pointer;
+} */
+
+footer {
+background-color: rgb(173, 159, 137);
+text-align: center;
+padding: 10px;
+margin-top: 30px;
+}

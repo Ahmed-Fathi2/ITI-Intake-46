@@ -1,0 +1,14 @@
+D:\iti\.net\C#\DelegateTask\DelegateTask\obj\Debug\net9.0\DelegateTask.GeneratedMSBuildEditorConfig.editorconfig
+D:\iti\.net\C#\DelegateTask\DelegateTask\obj\Debug\net9.0\DelegateTask.AssemblyInfoInputs.cache
+D:\iti\.net\C#\DelegateTask\DelegateTask\obj\Debug\net9.0\DelegateTask.AssemblyInfo.cs
+D:\iti\.net\C#\DelegateTask\DelegateTask\obj\Debug\net9.0\DelegateTask.csproj.CoreCompileInputs.cache
+D:\iti\.net\C#\DelegateTask\DelegateTask\bin\Debug\net9.0\DelegateTask.exe
+D:\iti\.net\C#\DelegateTask\DelegateTask\bin\Debug\net9.0\DelegateTask.deps.json
+D:\iti\.net\C#\DelegateTask\DelegateTask\bin\Debug\net9.0\DelegateTask.runtimeconfig.json
+D:\iti\.net\C#\DelegateTask\DelegateTask\bin\Debug\net9.0\DelegateTask.dll
+D:\iti\.net\C#\DelegateTask\DelegateTask\bin\Debug\net9.0\DelegateTask.pdb
+D:\iti\.net\C#\DelegateTask\DelegateTask\obj\Debug\net9.0\DelegateTask.dll
+D:\iti\.net\C#\DelegateTask\DelegateTask\obj\Debug\net9.0\refint\DelegateTask.dll
+D:\iti\.net\C#\DelegateTask\DelegateTask\obj\Debug\net9.0\DelegateTask.pdb
+D:\iti\.net\C#\DelegateTask\DelegateTask\obj\Debug\net9.0\DelegateTask.genruntimeconfig.cache
+D:\iti\.net\C#\DelegateTask\DelegateTask\obj\Debug\net9.0\ref\DelegateTask.dll

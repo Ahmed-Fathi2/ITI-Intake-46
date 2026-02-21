@@ -1,0 +1,325 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\ITI\\.net\\EF\\Lab2\\Lab2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F319D487-73D8-7112-8F5F-41EC036A539B}|Lab2\\Lab2.csproj|f:\\iti\\.net\\ef\\lab2\\lab2\\lab2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F319D487-73D8-7112-8F5F-41EC036A539B}|Lab2\\Lab2.csproj|solutionrelative:lab2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F319D487-73D8-7112-8F5F-41EC036A539B}|Lab2\\Lab2.csproj|f:\\iti\\.net\\ef\\lab2\\lab2\\lab2\\repository\\courserepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F319D487-73D8-7112-8F5F-41EC036A539B}|Lab2\\Lab2.csproj|solutionrelative:lab2\\repository\\courserepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F319D487-73D8-7112-8F5F-41EC036A539B}|Lab2\\Lab2.csproj|f:\\iti\\.net\\ef\\lab2\\lab2\\lab2\\entity\\instractor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F319D487-73D8-7112-8F5F-41EC036A539B}|Lab2\\Lab2.csproj|solutionrelative:lab2\\entity\\instractor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F319D487-73D8-7112-8F5F-41EC036A539B}|Lab2\\Lab2.csproj|f:\\iti\\.net\\ef\\lab2\\lab2\\lab2\\entity\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F319D487-73D8-7112-8F5F-41EC036A539B}|Lab2\\Lab2.csproj|solutionrelative:lab2\\entity\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F319D487-73D8-7112-8F5F-41EC036A539B}|Lab2\\Lab2.csproj|f:\\iti\\.net\\ef\\lab2\\lab2\\lab2\\migrations\\20260217200936_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F319D487-73D8-7112-8F5F-41EC036A539B}|Lab2\\Lab2.csproj|solutionrelative:lab2\\migrations\\20260217200936_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F319D487-73D8-7112-8F5F-41EC036A539B}|Lab2\\Lab2.csproj|f:\\iti\\.net\\ef\\lab2\\lab2\\lab2\\data\\configurations\\studcourseconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F319D487-73D8-7112-8F5F-41EC036A539B}|Lab2\\Lab2.csproj|solutionrelative:lab2\\data\\configurations\\studcourseconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F319D487-73D8-7112-8F5F-41EC036A539B}|Lab2\\Lab2.csproj|f:\\iti\\.net\\ef\\lab2\\lab2\\lab2\\entity\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F319D487-73D8-7112-8F5F-41EC036A539B}|Lab2\\Lab2.csproj|solutionrelative:lab2\\entity\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F319D487-73D8-7112-8F5F-41EC036A539B}|Lab2\\Lab2.csproj|f:\\iti\\.net\\ef\\lab2\\lab2\\lab2\\entity\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F319D487-73D8-7112-8F5F-41EC036A539B}|Lab2\\Lab2.csproj|solutionrelative:lab2\\entity\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F319D487-73D8-7112-8F5F-41EC036A539B}|Lab2\\Lab2.csproj|f:\\iti\\.net\\ef\\lab2\\lab2\\lab2\\repository\\studentrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F319D487-73D8-7112-8F5F-41EC036A539B}|Lab2\\Lab2.csproj|solutionrelative:lab2\\repository\\studentrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F319D487-73D8-7112-8F5F-41EC036A539B}|Lab2\\Lab2.csproj|f:\\iti\\.net\\ef\\lab2\\lab2\\lab2\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F319D487-73D8-7112-8F5F-41EC036A539B}|Lab2\\Lab2.csproj|solutionrelative:lab2\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F319D487-73D8-7112-8F5F-41EC036A539B}|Lab2\\Lab2.csproj|f:\\iti\\.net\\ef\\lab2\\lab2\\lab2\\data\\configurations\\studentconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F319D487-73D8-7112-8F5F-41EC036A539B}|Lab2\\Lab2.csproj|solutionrelative:lab2\\data\\configurations\\studentconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F319D487-73D8-7112-8F5F-41EC036A539B}|Lab2\\Lab2.csproj|f:\\iti\\.net\\ef\\lab2\\lab2\\lab2\\data\\configurations\\instractorconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F319D487-73D8-7112-8F5F-41EC036A539B}|Lab2\\Lab2.csproj|solutionrelative:lab2\\data\\configurations\\instractorconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F319D487-73D8-7112-8F5F-41EC036A539B}|Lab2\\Lab2.csproj|f:\\iti\\.net\\ef\\lab2\\lab2\\lab2\\data\\configurations\\instcourseconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F319D487-73D8-7112-8F5F-41EC036A539B}|Lab2\\Lab2.csproj|solutionrelative:lab2\\data\\configurations\\instcourseconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F319D487-73D8-7112-8F5F-41EC036A539B}|Lab2\\Lab2.csproj|f:\\iti\\.net\\ef\\lab2\\lab2\\lab2\\data\\configurations\\topicconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F319D487-73D8-7112-8F5F-41EC036A539B}|Lab2\\Lab2.csproj|solutionrelative:lab2\\data\\configurations\\topicconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F319D487-73D8-7112-8F5F-41EC036A539B}|Lab2\\Lab2.csproj|f:\\iti\\.net\\ef\\lab2\\lab2\\lab2\\data\\configurations\\departmentconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F319D487-73D8-7112-8F5F-41EC036A539B}|Lab2\\Lab2.csproj|solutionrelative:lab2\\data\\configurations\\departmentconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F319D487-73D8-7112-8F5F-41EC036A539B}|Lab2\\Lab2.csproj|f:\\iti\\.net\\ef\\lab2\\lab2\\lab2\\data\\configurations\\courseconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F319D487-73D8-7112-8F5F-41EC036A539B}|Lab2\\Lab2.csproj|solutionrelative:lab2\\data\\configurations\\courseconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F319D487-73D8-7112-8F5F-41EC036A539B}|Lab2\\Lab2.csproj|f:\\iti\\.net\\ef\\lab2\\lab2\\lab2\\entity\\topic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F319D487-73D8-7112-8F5F-41EC036A539B}|Lab2\\Lab2.csproj|solutionrelative:lab2\\entity\\topic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F319D487-73D8-7112-8F5F-41EC036A539B}|Lab2\\Lab2.csproj|f:\\iti\\.net\\ef\\lab2\\lab2\\lab2\\entity\\studcourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F319D487-73D8-7112-8F5F-41EC036A539B}|Lab2\\Lab2.csproj|solutionrelative:lab2\\entity\\studcourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F319D487-73D8-7112-8F5F-41EC036A539B}|Lab2\\Lab2.csproj|f:\\iti\\.net\\ef\\lab2\\lab2\\lab2\\entity\\instcourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F319D487-73D8-7112-8F5F-41EC036A539B}|Lab2\\Lab2.csproj|solutionrelative:lab2\\entity\\instcourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CourseRepo.cs",
+              "DocumentMoniker": "F:\\ITI\\.net\\EF\\Lab2\\Lab2\\Lab2\\Repository\\CourseRepo.cs",
+              "RelativeDocumentMoniker": "Lab2\\Repository\\CourseRepo.cs",
+              "ToolTip": "F:\\ITI\\.net\\EF\\Lab2\\Lab2\\Lab2\\Repository\\CourseRepo.cs",
+              "RelativeToolTip": "Lab2\\Repository\\CourseRepo.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAtwCUAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T20:47:18.361Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Instractor.cs",
+              "DocumentMoniker": "F:\\ITI\\.net\\EF\\Lab2\\Lab2\\Lab2\\Entity\\Instractor.cs",
+              "RelativeDocumentMoniker": "Lab2\\Entity\\Instractor.cs",
+              "ToolTip": "F:\\ITI\\.net\\EF\\Lab2\\Lab2\\Lab2\\Entity\\Instractor.cs",
+              "RelativeToolTip": "Lab2\\Entity\\Instractor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T18:51:15.815Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\ITI\\.net\\EF\\Lab2\\Lab2\\Lab2\\Program.cs",
+              "RelativeDocumentMoniker": "Lab2\\Program.cs",
+              "ToolTip": "F:\\ITI\\.net\\EF\\Lab2\\Lab2\\Lab2\\Program.cs*",
+              "RelativeToolTip": "Lab2\\Program.cs*",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAwwG4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T17:23:04.254Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Department.cs",
+              "DocumentMoniker": "F:\\ITI\\.net\\EF\\Lab2\\Lab2\\Lab2\\Entity\\Department.cs",
+              "RelativeDocumentMoniker": "Lab2\\Entity\\Department.cs",
+              "ToolTip": "F:\\ITI\\.net\\EF\\Lab2\\Lab2\\Lab2\\Entity\\Department.cs",
+              "RelativeToolTip": "Lab2\\Entity\\Department.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAIAxwBYAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T18:51:15.423Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "20260217200936_InitialCreate.cs",
+              "DocumentMoniker": "F:\\ITI\\.net\\EF\\Lab2\\Lab2\\Lab2\\Migrations\\20260217200936_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Lab2\\Migrations\\20260217200936_InitialCreate.cs",
+              "ToolTip": "F:\\ITI\\.net\\EF\\Lab2\\Lab2\\Lab2\\Migrations\\20260217200936_InitialCreate.cs",
+              "RelativeToolTip": "Lab2\\Migrations\\20260217200936_InitialCreate.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T20:09:36.343Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "StudCourseConfiguration.cs",
+              "DocumentMoniker": "F:\\ITI\\.net\\EF\\Lab2\\Lab2\\Lab2\\Data\\Configurations\\StudCourseConfiguration.cs",
+              "RelativeDocumentMoniker": "Lab2\\Data\\Configurations\\StudCourseConfiguration.cs",
+              "ToolTip": "F:\\ITI\\.net\\EF\\Lab2\\Lab2\\Lab2\\Data\\Configurations\\StudCourseConfiguration.cs",
+              "RelativeToolTip": "Lab2\\Data\\Configurations\\StudCourseConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T19:57:37.631Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Student.cs",
+              "DocumentMoniker": "F:\\ITI\\.net\\EF\\Lab2\\Lab2\\Lab2\\Entity\\Student.cs",
+              "RelativeDocumentMoniker": "Lab2\\Entity\\Student.cs",
+              "ToolTip": "F:\\ITI\\.net\\EF\\Lab2\\Lab2\\Lab2\\Entity\\Student.cs",
+              "RelativeToolTip": "Lab2\\Entity\\Student.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T18:51:15.246Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Course.cs",
+              "DocumentMoniker": "F:\\ITI\\.net\\EF\\Lab2\\Lab2\\Lab2\\Entity\\Course.cs",
+              "RelativeDocumentMoniker": "Lab2\\Entity\\Course.cs",
+              "ToolTip": "F:\\ITI\\.net\\EF\\Lab2\\Lab2\\Lab2\\Entity\\Course.cs",
+              "RelativeToolTip": "Lab2\\Entity\\Course.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T18:51:15.568Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "StudentRepo.cs",
+              "DocumentMoniker": "F:\\ITI\\.net\\EF\\Lab2\\Lab2\\Lab2\\Repository\\StudentRepo.cs",
+              "RelativeDocumentMoniker": "Lab2\\Repository\\StudentRepo.cs",
+              "ToolTip": "F:\\ITI\\.net\\EF\\Lab2\\Lab2\\Lab2\\Repository\\StudentRepo.cs",
+              "RelativeToolTip": "Lab2\\Repository\\StudentRepo.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAowFAAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T20:11:07.268Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "F:\\ITI\\.net\\EF\\Lab2\\Lab2\\Lab2\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Lab2\\Data\\AppDbContext.cs",
+              "ToolTip": "F:\\ITI\\.net\\EF\\Lab2\\Lab2\\Lab2\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Lab2\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAA2wBwAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T17:24:44.411Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "StudentConfiguration.cs",
+              "DocumentMoniker": "F:\\ITI\\.net\\EF\\Lab2\\Lab2\\Lab2\\Data\\Configurations\\StudentConfiguration.cs",
+              "RelativeDocumentMoniker": "Lab2\\Data\\Configurations\\StudentConfiguration.cs",
+              "ToolTip": "F:\\ITI\\.net\\EF\\Lab2\\Lab2\\Lab2\\Data\\Configurations\\StudentConfiguration.cs",
+              "RelativeToolTip": "Lab2\\Data\\Configurations\\StudentConfiguration.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAqwBYAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T19:36:22.991Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "InstractorConfiguration.cs",
+              "DocumentMoniker": "F:\\ITI\\.net\\EF\\Lab2\\Lab2\\Lab2\\Data\\Configurations\\InstractorConfiguration.cs",
+              "RelativeDocumentMoniker": "Lab2\\Data\\Configurations\\InstractorConfiguration.cs",
+              "ToolTip": "F:\\ITI\\.net\\EF\\Lab2\\Lab2\\Lab2\\Data\\Configurations\\InstractorConfiguration.cs",
+              "RelativeToolTip": "Lab2\\Data\\Configurations\\InstractorConfiguration.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T19:47:29.359Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "InstCourseConfiguration.cs",
+              "DocumentMoniker": "F:\\ITI\\.net\\EF\\Lab2\\Lab2\\Lab2\\Data\\Configurations\\InstCourseConfiguration.cs",
+              "RelativeDocumentMoniker": "Lab2\\Data\\Configurations\\InstCourseConfiguration.cs",
+              "ToolTip": "F:\\ITI\\.net\\EF\\Lab2\\Lab2\\Lab2\\Data\\Configurations\\InstCourseConfiguration.cs",
+              "RelativeToolTip": "Lab2\\Data\\Configurations\\InstCourseConfiguration.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB0AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T19:53:19.208Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "TopicConfiguration.cs",
+              "DocumentMoniker": "F:\\ITI\\.net\\EF\\Lab2\\Lab2\\Lab2\\Data\\Configurations\\TopicConfiguration.cs",
+              "RelativeDocumentMoniker": "Lab2\\Data\\Configurations\\TopicConfiguration.cs",
+              "ToolTip": "F:\\ITI\\.net\\EF\\Lab2\\Lab2\\Lab2\\Data\\Configurations\\TopicConfiguration.cs",
+              "RelativeToolTip": "Lab2\\Data\\Configurations\\TopicConfiguration.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAUwBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T20:00:25.666Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "DepartmentConfiguration.cs",
+              "DocumentMoniker": "F:\\ITI\\.net\\EF\\Lab2\\Lab2\\Lab2\\Data\\Configurations\\DepartmentConfiguration.cs",
+              "RelativeDocumentMoniker": "Lab2\\Data\\Configurations\\DepartmentConfiguration.cs",
+              "ToolTip": "F:\\ITI\\.net\\EF\\Lab2\\Lab2\\Lab2\\Data\\Configurations\\DepartmentConfiguration.cs",
+              "RelativeToolTip": "Lab2\\Data\\Configurations\\DepartmentConfiguration.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAIwBwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T19:42:52.34Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CourseConfiguration.cs",
+              "DocumentMoniker": "F:\\ITI\\.net\\EF\\Lab2\\Lab2\\Lab2\\Data\\Configurations\\CourseConfiguration.cs",
+              "RelativeDocumentMoniker": "Lab2\\Data\\Configurations\\CourseConfiguration.cs",
+              "ToolTip": "F:\\ITI\\.net\\EF\\Lab2\\Lab2\\Lab2\\Data\\Configurations\\CourseConfiguration.cs",
+              "RelativeToolTip": "Lab2\\Data\\Configurations\\CourseConfiguration.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T19:51:12.635Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Topic.cs",
+              "DocumentMoniker": "F:\\ITI\\.net\\EF\\Lab2\\Lab2\\Lab2\\Entity\\Topic.cs",
+              "RelativeDocumentMoniker": "Lab2\\Entity\\Topic.cs",
+              "ToolTip": "F:\\ITI\\.net\\EF\\Lab2\\Lab2\\Lab2\\Entity\\Topic.cs",
+              "RelativeToolTip": "Lab2\\Entity\\Topic.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T18:51:16.157Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "StudCourse.cs",
+              "DocumentMoniker": "F:\\ITI\\.net\\EF\\Lab2\\Lab2\\Lab2\\Entity\\StudCourse.cs",
+              "RelativeDocumentMoniker": "Lab2\\Entity\\StudCourse.cs",
+              "ToolTip": "F:\\ITI\\.net\\EF\\Lab2\\Lab2\\Lab2\\Entity\\StudCourse.cs",
+              "RelativeToolTip": "Lab2\\Entity\\StudCourse.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAhwBAAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T18:51:15.694Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "InstCourse.cs",
+              "DocumentMoniker": "F:\\ITI\\.net\\EF\\Lab2\\Lab2\\Lab2\\Entity\\InstCourse.cs",
+              "RelativeDocumentMoniker": "Lab2\\Entity\\InstCourse.cs",
+              "ToolTip": "F:\\ITI\\.net\\EF\\Lab2\\Lab2\\Lab2\\Entity\\InstCourse.cs",
+              "RelativeToolTip": "Lab2\\Entity\\InstCourse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T18:51:15.981Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

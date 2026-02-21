@@ -1,0 +1,58 @@
+-second use of Delegate   [Multicasting]
+-for event Handling model
+-event is a Delegate Object
+-enevt is a c# keyword
+-event is a 4th thing to be use in [object] class 
+-represent model of programming we cannot do it without event
+-I've 2 Parts in this model 
+    -Publisher/s
+    -subscriper/s
+-publisher has an information/Event/Action inside this DT to be
+    Informed to All Around
+-When i press button , i open connection ti Database
+-when ball move,Players and referee run into new location of it
+
+
+-Like Observer DP
+
+
+-publisher is a ball when it moves to new location,
+    i will notify any other class enteresting about this event 
+
+-Relation between publisher and Subscriber?
+    -Publisher will build framework inside it to let other
+    interesting subscriper to subscripe
+    and be notifing in runtime
+
+-[Bad Way] Player Object each second check if ball location
+    has been changed
+-[Best Way] Ball notifies all subscripers its location has changed
+
+
+-publisher declare event [delegate object] 
+
+-subscriper declare function to be callBack upon event firing
+
+-link between publisher and Subscriber will be in design/run time
+-how??? leave name and address of function to Event
+
+
+-Publisher declare Event
+-Subscriber Declare callback method
+-Subscribers should subscripe event
+-LAST ==>when to fire Event??? in RUNTIME
+
+
+Again???
+1- Publisher Create Event as delegate with same signature Subscriber will follow
+2- Subscribers create callback method will be called back when event fired
+3- Register subscriper to event in runtime =>it means leave address of method and name in invocation list
+4- event firing By Publisher ONLY
+
+
+
+
+
+
+
+

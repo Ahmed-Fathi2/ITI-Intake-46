@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>info-form</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+
+    <form  id="form-data">
+        <div class="txt-name">
+
+            <label>Name</label>
+            <input type="text" placeholder="Enter your name" id="inName">
+            <span id="nameError" class="error"></span>
+        </div>
+        <div class="txt-age">
+
+            <label>Age</label>
+            <input type="text" placeholder="Enter your Age" id="inAge">
+            <span id="ageError" class="error"></span>
+        </div>
+        <div class="txt-email">
+
+            <label>E-mail</label>
+            <input type="text" placeholder="Enter your Email" id="inMail">
+               <span id="emailError" class="error"></span>
+        </div>
+
+        <input type="submit" value="Add" id="add-btn">
+       <input type="button" value="Reset" id="reset-btn">
+
+    </form>
+
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Name</th>
+                <th>Age</th>
+                <th>Email</th>
+
+            </tr>
+        </thead>
+        <tbody id='table-body'>
+            <tr>
+                <td>ahmed</td>
+                <td>20</td>
+                <td>ahmedfathi@gmail.com</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <script src="scrp.js"></script>
+</body>
+
+</html>

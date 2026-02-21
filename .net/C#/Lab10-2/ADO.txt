@@ -1,0 +1,126 @@
+server where app hosted wanted to call DataBase Server , 
+app server want to know 
+
+1-IP Address ---> كدة دة عنوان السيرفر كدة انت وصلت ل السيرفر بتاع الدتا بيز
+
+2-auth ---- بعد لما وصلت انت مين بقي؟؟
+	    windows auth ----> when you authentication to windewos --> you auth to sql server 
+	    sql auth     ----> userName & Pass given From sql server Admin
+
+3-Database Name --> هنا بقي انت عايز اي  عاوز الداتا بيز دي 
+
+
+=======================================================================================================
+
+So you has a ConnectionString that contains 
+1- Ip Address
+2- auth
+3- dbName
+
+"Server=.  ; 
+ DBName=dbname  ;
+ trusted_connection=true --> that mean windows Auth ; ----> integrated security = the same = Trusted_connectiob
+ trustServerCertificate=true
+"
+
+
+4- Command ---> في طريقتين للتنفيذ 
+
+a- Connected   هنا كل شغلك علي السرفر الخاص ب الداتا بيز يعني انت حاطط ايدك علي الجدول والجدول دة لوك مقفول محدش يقدر يستخدمة  
+b- DisConnected انما هنا بتاخد snapshot من الداتا بيز وتحطها عندك ف سيرفر الابلكيشن وتشتغل بعيد عن سيرفر الداتا بيز
+
+========================================
+connected ---> sqldataReader : دة الي مسؤل انة يروح يجيب الداتا من الدتا بيز سيرفر ب هيعمل السيليكت علي سيرفر الداتا بيز
+
+disconnected ---> sqldataAdapter 
+
+
+=====================================
+using Microsoft.Data.SqlClient
+=====================================
+
+SqlConnection con
+SqlCommand cmd
+cmd.commandType ---> CommandType.Text ----> Text[default] , storedProc
+cmd.commandText ---> "select * From Author " / "Proc Name"
+
+cmd.Connection= con
+
+try{
+
+con.open()
+SqlDataReader dr = cmd.ExecuteReader()  بيشاور علي الداتا الي راجعة من sql command
+
+// databinding
+DataTable dt = new DataTable
+
+dt,load(dr)
+
+}  
+catch{
+}
+finally{
+con.close()
+}
+
+
+// create DataGridView grid (Name / Text)
+
+
+grid.DataSource(dt);
+
+
+
+
+dr---->dt --->grid 
+
+==============================================
+
+using(SqlConnection con = new SqlConnection)
+{
+// مع نهاية السكوب ال 
+Garbage Collector will free ala resource used inside scope of using
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

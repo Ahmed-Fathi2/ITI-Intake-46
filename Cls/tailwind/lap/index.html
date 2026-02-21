@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50">
+
+    <!-- Navbar -->
+    <nav class="bg-white fixed w-full z-20 top-0 left-0 border-b border-gray-200 shadow">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <h1 class="text-xl font-semibold text-purple-900">My Portfolio</h1>
+
+            <!-- Mobile menu button -->
+            <button id="menuBtn"
+                class="md:hidden inline-flex items-center p-2 text-gray-700 rounded hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-300">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+
+            <!-- Menu -->
+            <div id="navbar-default" class="hidden w-full md:flex md:w-auto">
+                <ul class="flex flex-col md:flex-row md:space-x-8 mt-4 md:mt-0">
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-purple-900 rounded md:p-0 md:hover:text-violet-700">Home</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-gray-700 rounded md:p-0 md:hover:text-violet-700">Services</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-gray-700 rounded md:p-0 md:hover:text-violet-700">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-gray-700 rounded md:p-0 md:hover:text-violet-700">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="mt-20 bg-gradient-to-r from-purple-500 to-pink-500 ">
+        <div class="max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 lg:py-16 lg:grid lg:grid-cols-12 items-center">
+            <!-- Left Content -->
+            <div class="mr-auto place-self-center lg:col-span-7">
+                <h1
+                    class="text-white max-w-2xl mb-4 text-3xl font-extrabold tracking-tight leading-tight md:text-4xl lg:text-5xl xl:text-6xl">
+                    Payments tool for software companies
+                </h1>
+                <p class="text-gray-100 max-w-2xl mb-6 font-light md:text-lg lg:text-xl">
+                    From checkout to global sales tax compliance, companies around the world use Flowbite to simplify
+                    their payment stack.
+                </p>
+                <div class="flex flex-row sm:flex-row gap-4">
+                    <a href="#"
+                        class="px-5 py-3 text-lg font-medium text-gray-900 bg-white rounded-lg hover:bg-gray-100 dark:text-white dark:bg-gray-700 dark:hover:bg-gray-600">
+                        View Work
+                    </a>
+                    <a href="#"
+                        class=" border-2 border-white px-5 py-3 text-lg font-medium text-white bg-transparent rounded-lg hover:bg-gray-100  hover:text-black dark:text-white dark:bg-gray-700 dark:hover:bg-gray-600">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Image -->
+            <div class="flex lg:col-span-5 mt-8 lg:mt-0 justify-center">
+                <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png" alt="mockup"
+                    class="w-3/4 sm:w-1/2 lg:w-full h-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- Cards Section -->
+    <section class="mt-12 mb-12 max-w-screen-xl mx-auto px-4">
+
+        <div class="text-center mb-8">
+            <h2 class="text-4xl font-bold text-black">Services</h2>
+
+        </div>
+        <div class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <!-- Card 1 -->
+            <div class="bg-white border border-gray-200 rounded-xl shadow p-4 flex flex-col">
+                <img src="spiderman.jpg" alt="Card 1" class="rounded-lg w-full h-48 object-cover">
+                <div class="mt-4">
+                    <h5 class="text-2xl font-semibold mb-2">Streamlining your design process today.</h5>
+                    <p class="text-gray-700">In today’s fast-paced digital landscape, fostering seamless collaboration
+                        among Developers and IT Operations.</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white border border-gray-200 rounded-xl shadow p-4 flex flex-col">
+                <img src="spiderman.jpg" alt="Card 2" class="rounded-lg w-full h-48 object-cover">
+                <div class="mt-4">
+                    <h5 class="text-2xl font-semibold mb-2">Boost your productivity efficiently.</h5>
+                    <p class="text-gray-700">Tools and processes designed to help teams achieve their goals faster and
+                        with higher quality output.</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white border border-gray-200 rounded-xl shadow p-4 flex flex-col">
+                <img src="spiderman.jpg" alt="Card 3" class="rounded-lg w-full h-48 object-cover">
+                <div class="mt-4">
+                    <h5 class="text-2xl font-semibold mb-2">Collaborate seamlessly across teams.</h5>
+                    <p class="text-gray-700">Connect developers, designers, and operations teams to streamline workflows
+                        and communication.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const btn = document.getElementById('menuBtn');
+        const menu = document.getElementById('navbar-default');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
+    <!-- Projects Section -->
+    <section class="mt-12 mb-12 max-w-screen-xl mx-auto px-4">
+        <!-- Section Header -->
+        <div class="text-center mb-8">
+            <!-- <h2 class="text-4xl font-bold text-purple-900">Projects</h2> -->
+            <h2 class="text-4xl font-bold text-black">Projects</h2>
+
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+
+            <!-- Card 1 -->
+            <div
+                class="bg-white border border-gray-200 rounded-xl shadow p-4 flex flex-col hover:shadow-lg transition-shadow duration-300">
+                <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Project 1"
+                    class="rounded-lg w-full h-48 object-cover">
+                <div class="mt-4 flex flex-col flex-grow">
+                    <h5 class="text-2xl font-semibold mb-2">Project Title 1</h5>
+                    <p class="text-gray-700 flex-grow">A brief description about this project, what technologies were
+                        used, and its main features.</p>
+                    <button
+                        class="mt-4 py-2 bg-purple-500 text-white font-medium rounded-lg hover:bg-purple-600 transition-colors">View
+                        Details</button>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+                class="bg-white border border-gray-200 rounded-xl shadow p-4 flex flex-col hover:shadow-lg transition-shadow duration-300">
+                <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Project 2"
+                    class="rounded-lg w-full h-48 object-cover">
+                <div class="mt-4 flex flex-col flex-grow">
+                    <h5 class="text-2xl font-semibold mb-2">Project Title 2</h5>
+                    <p class="text-gray-700 flex-grow">A brief description about this project, highlighting its main
+                        functionalities and design approach.</p>
+                    <button
+                        class="mt-4 py-2 bg-purple-500 text-white font-medium rounded-lg hover:bg-purple-600 transition-colors">View
+                        Details</button>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+                class="bg-white border border-gray-200 rounded-xl shadow p-4 flex flex-col hover:shadow-lg transition-shadow duration-300">
+                <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Project 3"
+                    class="rounded-lg w-full h-48 object-cover">
+                <div class="mt-4 flex flex-col flex-grow">
+                    <h5 class="text-2xl font-semibold mb-2">Project Title 3</h5>
+                    <p class="text-gray-700 flex-grow">A short explanation of the project, its technologies, and the
+                        benefits it provides to users.</p>
+                    <button
+                        class="mt-4 py-2 bg-purple-500 text-white font-medium rounded-lg hover:bg-purple-600 transition-colors">View
+                        Details</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="mt-12 mb-12 max-w-screen-xl mx-auto px-4">
+
+        <!-- Section Header -->
+        <div class="text-center mb-8">
+            <h2 class="text-4xl font-bold text-black">Skills</h2>
+        </div>
+
+        <!-- Skills Buttons -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
+            <span
+                class="bg-white shadow-md py-4 rounded-lg text-black font-medium cursor-pointer hover:shadow-xl transition-shadow text-center">HTML</span>
+            <span
+                class="bg-white shadow-md py-4 rounded-lg text-black font-medium cursor-pointer hover:shadow-xl transition-shadow text-center">CSS</span>
+            <span
+                class="bg-white shadow-md py-4 rounded-lg text-black font-medium cursor-pointer hover:shadow-xl transition-shadow text-center">JavaScript</span>
+            <span
+                class="bg-white shadow-md py-4 rounded-lg text-black font-medium cursor-pointer hover:shadow-xl transition-shadow text-center">Tailwind</span>
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="bg-gradient-to-r from-[#8B5CF6] to-[#6366F1] py-20">
+        <div class="text-center text-white">
+            <h3 class="text-3xl font-bold mb-6">Let’s Work Together</h3>
+            <button class="bg-white text-[#8B5CF6] px-8 py-3 rounded-lg font-semibold
+             transition-all duration-300
+             hover:bg-gray-100 hover:shadow-xl">
+                Get In Touch
+            </button>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-400 py-6">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-4">
+            <p>© 2025 MyPortfolio. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a class="hover:text-white" href="#">LinkedIn</a>
+                <a class="hover:text-white" href="#">GitHub</a>
+                <a class="hover:text-white" href="#">Email</a>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+</body>
+
+</html>

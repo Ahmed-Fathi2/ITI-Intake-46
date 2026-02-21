@@ -1,0 +1,39 @@
+<h3>ما هي عاصمة مصر؟</h3>
+
+<label>
+    <input type="radio" name="answer" value="القاهرة">
+    القاهرة
+</label><br>
+
+<label>
+    <input type="radio" name="answer" value="الإسكندرية">
+    الإسكندرية
+</label><br>
+
+<label>
+    <input type="radio" name="answer" value="المنصورة">
+    المنصورة
+</label><br>
+
+<label>
+    <input type="radio" name="answer" value="أسوان">
+    أسوان
+</label><br>
+
+<button onclick="saveAnswer()">حفظ الإجابة</button>
+
+
+function saveAnswer() {
+    let selected = document.querySelector('input[name="answer"]:checked');
+
+    if (selected) {
+        let value = selected.value;
+        console.log("الإجابة المختارة:", value);
+
+        // هنا بقى تخزنها
+        // localStorage / variable / API
+    } else {
+        alert("اختار إجابة الأول");
+    }
+}
+

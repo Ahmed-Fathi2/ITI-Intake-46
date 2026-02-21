@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- ====================================================================================================================================== -->
+
+    <a href="https://www.youtube.com/watch?v=qfPUMV9J5yw&t=1946s" target="_blank">Go to Example.com</a> inline element
+
+    <a href="mailto:ahmedmhmd0237@gmail.com">Go to Example.com</a>
+
+    <!-- ====================================================================================================================================== -->
+
+    <img src="../ahmed/" alt="">
+
+    <!-- ====================================================================================================================================== -->
+
+    <!-- table -->
+    <!-- rowspan -->
+    <!-- colspan -->
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Name</th>
+                <th>Age</th>
+                <th>Add</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>Ahmed</td>
+                <td>25</td>
+                <td rowspan="2">zag</td>
+
+            </tr>
+            <tr>
+
+                <td>Mohamed</td>
+                <td>40</td>
+                <td>alex</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <!-- ====================================================================================================================================== -->
+
+    <!-- Form ---->
+    <!-- input  -->
+    <!-- how to link between radio buttons and labels -->
+
+    <!--
+     text 
+    password
+    email
+    number
+    range
+    radio
+    checkbox
+    submit
+    reset 
+    file
+    search
+    url
+    date
+    list
+    -->
+
+
+    <form>
+
+        <!-- ====================================================================================================================================== -->
+
+        <div>
+            <label>Name</label>
+            <input type="text" required placeholder="enter your name" name="username" value="samy" autofocus>
+
+        </div>
+
+        <!-- ====================================================================================================================================== -->
+        <div>
+            <label>Password</label>
+            <input type="password" required placeholder="enter complex pass" name="pass">
+        </div>
+
+        <!-- ====================================================================================================================================== -->
+        <div>
+
+            <label>Email</label>
+            <input type="email" required placeholder="enter your email" name="email">
+        </div>
+        <!-- ====================================================================================================================================== -->
+
+        <div>
+
+            <input type="hidden" name="user_id" value="12345">
+
+        </div>
+
+        <!-- ====================================================================================================================================== -->
+
+        <div>
+
+            <input id="rad" type="radio" name="radio-test" value="windowsvip" checked>
+            <label for="rad">Windows</label>
+
+
+        </div>
+
+        <div>
+
+            <input id="lin" type="radio" name="radio-test" value="linuxVip">
+            <label for="lin">linux</label>
+        </div>
+        <!-- ====================================================================================================================================== -->
+
+        <div>
+
+            <input id="wid1" type="checkbox" name="checkbox-win" value="windowsvip" checked>
+            <label for="wid1">Windows</label>
+
+        </div>
+
+        <div>
+            <input id="lin1" type="checkbox" name="rad-test" value="linuxVip">
+            <label for="lin1">linux</label>
+        </div>
+        <!-- ====================================================================================================================================== -->
+
+        <label for="sport"> choose your favo sport</label>
+
+        <select name="spooort" id="sport">
+
+            <optgroup label="sp1">
+                <option value="1" selected>Bascketball</option>
+                <option value="2">Football</option>
+            </optgroup>
+
+
+            <optgroup label="sp2">
+                <option value="3">Handball</option>
+                <option value="4">Tennis</option>
+            </optgroup>
+
+        </select>
+
+        <!-- ====================================================================================================================================== -->
+
+        <input list="prog" name="programming lang">
+        <datalist id="prog">
+
+            <option value="c#">
+            <option value="java">
+            <option value="python">
+            <option value="javascript">
+            <option value="php">
+
+        </datalist>
+
+        <!-- ====================================================================================================================================== -->
+
+
+        <textarea name="text" placeholder="test jdscm"></textarea>
+
+        <!-- ====================================================================================================================================== -->
+
+        <input type="date" name="bday">
+
+        <!-- ====================================================================================================================================== -->
+
+        <button>Click</button>
+
+        <!-- ====================================================================================================================================== -->
+
+        <div>
+
+            <input type="range" name="range" value="0" min="0" max="100" step="20">
+        </div>
+
+        <!-- ====================================================================================================================================== -->
+
+        <div>
+            <input type="submit" value="Save">
+
+            <input type="reset" name="Reset">
+        </div>
+        <!-- ====================================================================================================================================== -->
+
+    </form>
+
+
+</body>
+
+</html>

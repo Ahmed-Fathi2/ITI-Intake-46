@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" style="padding: 0; margin: 0;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizGrad</title>
+    <link rel="stylesheet" href="Register.css">
+    <link rel="icon" href="/assets/favicon.ico">
+</head>
+
+<body>
+
+
+    <div class="container">
+
+        <section class="left-section">
+
+
+            <div class="logo">
+                <span class="quiz">Quiz</span><span class="grad">Grad</span>
+            </div>
+            <p class="welcome-text">Create your account!</p>
+            <p class="subtitle">Please signup to create your account.</p>
+            <form id="form">
+
+
+                <div class="names">
+
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="Enter your First Name"
+                            autocomplete="given-name">
+
+                        <span id="firstNameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Enter your Last Name"
+                            autocomplete="family-name">
+                        <span id="lastNameError" class="error"></span>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" placeholder="example@gmail.com" autocomplete="email">
+                    <span id="emailError" class="error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your Password">
+                    <span id="passwordError" class="error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword"
+                        placeholder="Re-enter your Password">
+                    <span id="confirmPasswordError" class="error"></span>
+                </div>
+
+                <button type="submit" class="btn-signup">Signup</button>
+                <button type="button" onclick="window.location.href='/Login/login.html'"
+                    class="btn-login">Login</button>
+
+            </form>
+
+        </section>
+
+
+        <section class="right-section">
+            <div class="right-content">
+                <h2>Test Your Knowledge</h2>
+                <p>Create quizzes, learn faster, and track your progress.</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="Register.js"></script>
+</body>
+
+</html>

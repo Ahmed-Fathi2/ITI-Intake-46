@@ -1,0 +1,173 @@
+* {
+
+    box-sizing: border-box;
+    margin: 0;
+    color: white;
+    border: transparent !important;
+}
+
+
+a {
+
+    text-decoration: none;
+    /* padding: 5px; */
+}
+
+li {
+    list-style-type: none;
+    /* border: 2px solid green; */
+    margin: 10px;
+}
+
+ul {
+    margin: 15px;
+    padding: 0;
+}
+
+
+.container {
+
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    grid-template-rows: repeat(7, 1fr);
+    gap: 10px;
+
+
+}
+
+div {
+
+    padding: 10px;
+}
+
+/* header  */
+.child1 {
+
+    grid-column: 1/6;
+    text-align: center;
+    background-color: #34495e
+
+}
+
+
+/* left-side */
+.child2 {
+
+    grid-row: 2/7;
+    padding: 0;
+    background-color: #48c9b0;
+}
+
+/* rightside */
+.child3 {
+    grid-column: 5/6;
+    grid-row: 2/7;
+    background-color: #1b3b4f;
+    /* padding-top: 20px; */
+
+
+}
+
+.child3 p,
+.child3 h2 {
+    margin-top: 5px;
+    margin-bottom: 2px;
+}
+
+
+
+.child4,
+.child5,
+.child6,
+.child7,
+.child8 {
+
+    grid-column: 2/5;
+    text-align: center;
+    text-align: left;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* contect */
+
+.child4 {
+
+    text-align: left;
+    background-color: #ff6b6b;
+
+}
+
+/* p,h2{
+    margin: 0;
+    } */
+
+.child5 {
+
+    background-color: #48c9b0;
+
+
+}
+
+.child6 {
+
+
+    background-color: #f9e79f;
+}
+
+.child7 {
+
+
+    background-color:#ff6b6b;
+
+}
+
+.child8 {
+    background-color: #48c9b0;
+    margin-bottom: 10px;
+
+}
+
+
+/* footer  */
+.child9 {
+
+    grid-column: 1/6;
+    text-align: center;
+    font-size: 25px;
+    background-color:#34495e
+}
+
+.child9 p {
+    margin-top: 15px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto;
+        gap: 10px;
+    }
+
+   
+    .child1, 
+    .child9  {
+        grid-column: 1 / -1; 
+        width: 100%;         
+        text-align: center;
+        box-sizing: border-box; 
+    }
+
+
+    .child2, .child3,
+    .child4, .child5, .child6, .child7, .child8 {
+        grid-column: 1 / -1;
+        grid-row: auto;
+        width: 100%; 
+    }
+}
+

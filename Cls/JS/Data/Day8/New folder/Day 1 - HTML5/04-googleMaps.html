@@ -1,0 +1,208 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>خريطة</title>
+      <style>
+        button {
+            display: block;
+            width: 200px;
+            height: 40px;
+            margin: 5px;
+            background: #f0f0f0;
+            border: 1px solid #ddd;
+            cursor: pointer;
+        }
+    </style>
+    <script src="03-geolocation.js"></script>
+</head>
+<body>
+    <button onclick="goToCairo()">القاهرة</button>
+    <button onclick="goToAlex()">الإسكندرية</button>
+    <button onclick="goToLuxor()">الأقصر</button>
+    <button onclick="goToMyLocation()">موقعي الحالي</button>
+    
+    <div id="map" style="height:500px; width:100%;"></div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap" async defer></script>
+
+   
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خريطة مع أماكن محددة</title>
+    <style>
+        #map {
+            height: 80vh;
+            width: 100%;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px;
+            background: #f5f5f5;
+            border-bottom: 1px solid #ddd;
+        }
+        .place-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #4285f4;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        .place-btn:hover {
+            background: #3367d6;
+        }
+        .place-btn.active {
+            background: #0d47a1;
+        }
+    </style>
+</head>
+<body>
+    <!-- أزرار الأماكن -->
+    <div class="buttons">
+        <button class="place-btn" data-lat="30.0444" data-lng="31.2357">القاهرة</button>
+        <button class="place-btn" data-lat="31.2001" data-lng="29.9187">الإسكندرية</button>
+        <button class="place-btn" data-lat="25.6872" data-lng="32.6396">الأقصر</button>
+        <button class="place-btn" id="current-location">موقعي الحالي</button>
+    </div>
+
+    <!-- الخريطة -->
+    <div id="map"></div>
+
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap" async defer></script>
+
+    <script>
+        let map;
+        let currentMarker;
+        let currentLocation = { lat: 30.0444, lng: 31.2357 }; // القاهرة كموقع افتراضي
+
+        function initMap() {
+            // إنشاء الخريطة بالموقع الافتراضي
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: currentLocation,
+                zoom: 12,
+                mapTypeControl: true,
+                streetViewControl: true,
+                fullscreenControl: true
+            });
+
+            // إضافة ماركر الموقع الافتراضي
+            addMarker(currentLocation, "القاهرة");
+
+            // محاولة الحصول على الموقع الحالي
+            getCurrentLocation();
+
+            // إضافة أحداث لأزرار الأماكن
+            document.querySelectorAll('.place-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    // إزالة التفعيل من كل الأزرار
+                    document.querySelectorAll('.place-btn').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    
+                    // تفعيل الزر المضغوط
+                    this.classList.add('active');
+                    
+                    const lat = parseFloat(this.getAttribute('data-lat'));
+                    const lng = parseFloat(this.getAttribute('data-lng'));
+                    const name = this.textContent;
+                    
+                    if (this.id === 'current-location') {
+                        // الحصول على الموقع الحالي
+                        getCurrentLocation();
+                    } else {
+                        // الانتقال للموقع المحدد
+                        moveToLocation(lat, lng, name);
+                    }
+                });
+            });
+        }
+
+        // دالة للحصول على الموقع الحالي
+        function getCurrentLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    function(position) {
+                        const pos = {
+                            lat: position.coords.latitude,
+                            lng: position.coords.longitude
+                        };
+                        
+                        // تحديث الموقع الحالي
+                        currentLocation = pos;
+                        
+                        // تحريك الخريطة للموقع الحالي
+                        moveToLocation(pos.lat, pos.lng, "موقعك الحالي");
+                        
+                        // تفعيل زر الموقع الحالي
+                        document.getElementById('current-location').classList.add('active');
+                    },
+                    function() {
+                        alert("لم نتمكن من الحصول على موقعك");
+                    }
+                );
+            } else {
+                alert("متصفحك لا يدخدم خدمة الموقع");
+            }
+        }
+
+        // دالة لتحريك الخريطة وإضافة ماركر
+        function moveToLocation(lat, lng, title) {
+            // تحريك الخريطة للموقع الجديد
+            map.setCenter({ lat: lat, lng: lng });
+            map.setZoom(15);
+            
+            // إضافة ماركر جديد
+            addMarker({ lat: lat, lng: lng }, title);
+        }
+
+        // دالة لإضافة ماركر
+        function addMarker(position, title) {
+            // إزالة الماركر السابق إن وجد
+            if (currentMarker) {
+                currentMarker.setMap(null);
+            }
+            
+            // إنشاء ماركر جديد
+            currentMarker = new google.maps.Marker({
+                position: position,
+                map: map,
+                title: title,
+                animation: google.maps.Animation.DROP
+            });
+            
+            // إضافة نافذة معلومات
+            const infoWindow = new google.maps.InfoWindow({
+                content: `<div style="padding: 10px;">
+                            <h3 style="margin: 0 0 5px 0;">${title}</h3>
+                            <p style="margin: 0;">خط العرض: ${position.lat.toFixed(4)}</p>
+                            <p style="margin: 0;">خط الطول: ${position.lng.toFixed(4)}</p>
+                          </div>`
+            });
+            
+            // فتح نافذة المعلومات تلقائياً
+            infoWindow.open(map, currentMarker);
+            
+            // إضافة حدث لفتح النافذة عند النقر على الماركر
+            currentMarker.addListener('click', () => {
+                infoWindow.open(map, currentMarker);
+            });
+        }
+    </script>
+</body>
+</html>

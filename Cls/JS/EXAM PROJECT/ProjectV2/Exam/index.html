@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizGrad</title>
+
+    <link rel="icon" href="/assets/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="font-sans">
+
+    <div class="hero min-h-screen bg-cover bg-center"
+        style="background-image: url('/assets/bg.png');">
+
+        <!-- Overlay -->
+        <div class="hero-overlay bg-black/60"></div>
+
+        <!-- Content -->
+        <div class="hero-content text-center text-white">
+            <div class="max-w-lg space-y-6">
+
+                <h1 class="text-5xl md:text-6xl font-extrabold leading-tight">
+                    Prepare better <br>
+                    <span class="text-warning">Score higher</span>
+                </h1>
+
+                <p class="text-lg opacity-90">
+                    Solve questions, learn concepts, and build confidence for exams
+                    and quizzes — anytime, anywhere.
+                </p>
+
+                <!-- Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+
+                    <button
+                        onclick="window.location.href='/Login/login.html'"
+                        class="btn btn-warning px-10 py-4 text-lg hover:scale-105 transition-all duration-300">
+                        Login
+                    </button>
+
+                    <button
+                        onclick="window.location.href='/Register/Register.html'"
+                        class="btn btn-outline btn-warning px-10 py-4 text-lg hover:bg-warning hover:text-black transition-all duration-300">
+                        Signup
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

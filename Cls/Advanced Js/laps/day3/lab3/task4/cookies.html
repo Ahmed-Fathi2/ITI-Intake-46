@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Profile System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            color: #555;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .gender-selection {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 20px 0;
+        }
+
+        .gender-option {
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .gender-icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            transition: all 0.3s;
+            border: 4px solid transparent;
+        }
+
+        .gender-option input[type="radio"] {
+            display: none;
+        }
+
+        .gender-option input[type="radio"]:checked + .gender-icon {
+            transform: scale(1.1);
+            border-color: #667eea;
+        }
+
+        .gender-option input[type="radio"]:checked + .gender-icon.male {
+            background: #4299e1;
+        }
+
+        .gender-option input[type="radio"]:checked + .gender-icon.female {
+            background: #ed64a6;
+        }
+
+        .gender-icon img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .gender-label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #5568d3;
+        }
+
+        .profile-container {
+            text-align: center;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .profile-image.male {
+            background: #4299e1;
+        }
+
+        .profile-image.female {
+            background: #ed64a6;
+        }
+
+        .profile-image img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .welcome-text {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .visits-text {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .profile-info {
+            text-align: left;
+            margin: 20px 0;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+
+        .profile-info p {
+            margin: 10px 0;
+            color: #666;
+            font-size: 16px;
+        }
+
+        .profile-info strong {
+            color: #333;
+        }
+
+        .logout-btn {
+            background: #e53e3e;
+            margin-top: 20px;
+        }
+
+        .logout-btn:hover {
+            background: #c53030;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        
+    </style>
+
+    <script src="cookies.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div id="registerPage" class="hidden">
+            <h1>User Registration</h1>
+            <div class="form-group">
+                <label>Enter your name:</label>
+                <input type="text" id="username" placeholder="Your name">
+            </div>
+            <div class="form-group">
+                <label>Enter your age:</label>
+                <input type="number" id="age" placeholder="Your age" min="1" max="120">
+            </div>
+            <div class="form-group">
+                <label>Select your Gender:</label>
+                <div class="gender-selection">
+                    <div class="gender-option">
+                        <input type="radio" name="gender" value="male" id="male">
+                        <label for="male">
+                            <div class="gender-icon male">
+                                <svg width="60" height="60" viewBox="0 0 24 24" fill="white">
+                                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                </svg>
+                            </div>
+                            <div class="gender-label">Male</div>
+                        </label>
+                    </div>
+                    <div class="gender-option">
+                        <input type="radio" name="gender" value="female" id="female">
+                        <label for="female">
+                            <div class="gender-icon female">
+                                <svg width="60" height="60" viewBox="0 0 24 24" fill="white">
+                                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                </svg>
+                            </div>
+                            <div class="gender-label">Female</div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Select your Favorite color:</label>
+                <select id="color">
+                    <option value="Red">Red</option>
+                    <option value="Green">Green</option>
+                    <option value="Blue">Blue</option>
+                    <option value="Purple">Purple</option>
+                    <option value="Orange">Orange</option>
+                </select>
+            </div>
+            <button onclick="register()">Register</button>
+        </div>
+
+        <div id="profilePage" class="hidden">
+            <div class="profile-container">
+                <div id="profileImage" class="profile-image">
+                    <svg width="100" height="100" viewBox="0 0 24 24" fill="white">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                </div>
+                <div class="welcome-text">
+                    Welcome <span id="displayName"></span>
+                </div>
+                <div class="visits-text">
+                    You have visited this site <span id="visitCount"></span> time<span id="plural">s</span>
+                </div>
+                <div class="profile-info">
+                    <p><strong>Age:</strong> <span id="displayAge"></span></p>
+                    <p><strong>Gender:</strong> <span id="displayGender"></span></p>
+                    <p><strong>Favorite Color:</strong> <span id="displayColor"></span></p>
+                </div>
+                <button class="logout-btn" onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="cookieManager.js"></script>
+    <script>
+        // Initialize the page
+        function init() {
+            if (CookieManager.hasCookie('username')) {
+                showProfile();
+            } else {
+                showRegister();
+            }
+        }
+
+        function showRegister() {
+            document.getElementById('registerPage').classList.remove('hidden');
+            document.getElementById('profilePage').classList.add('hidden');
+        }
+
+        function showProfile() {
+            var name = CookieManager.getCookie('username');
+            var age = CookieManager.getCookie('age');
+            var gender = CookieManager.getCookie('gender');
+            var color = CookieManager.getCookie('favoriteColor');
+            var visits = parseInt(CookieManager.getCookie('visits') || '0');
+
+            // Increment visits
+            visits = visits + 1;
+            var expiryDate = new Date();
+            expiryDate.setDate(expiryDate.getDate() + 30);
+            CookieManager.setCookie('visits', visits, expiryDate);
+
+            // Get color code
+            var colorMap = {
+                'Red': '#EF4444',
+                'Green': '#10B981',
+                'Blue': '#3B82F6',
+                'Purple': '#A855F7',
+                'Orange': '#F97316'
+            };
+            var colorCode = colorMap[color] || '#000';
+
+            // Update profile display
+            document.getElementById('displayName').textContent = name;
+            document.getElementById('displayName').style.color = colorCode;
+            document.getElementById('visitCount').textContent = visits;
+            document.getElementById('visitCount').style.color = colorCode;
+            document.getElementById('visitCount').style.fontWeight = 'bold';
+            document.getElementById('plural').style.display = visits === 1 ? 'none' : 'inline';
+            document.getElementById('displayAge').textContent = age;
+            document.getElementById('displayGender').textContent = gender.charAt(0).toUpperCase() + gender.slice(1);
+            document.getElementById('displayColor').textContent = color;
+
+           
+            var profileImg = document.getElementById('profileImage');
+            if (gender === 'male') {
+                profileImg.className = 'profile-image male';
+            } else {
+                profileImg.className = 'profile-image female';
+            }
+
+            document.getElementById('registerPage').classList.add('hidden');
+            document.getElementById('profilePage').classList.remove('hidden');
+        }
+
+        function register() {
+            var name = document.getElementById('username').value;
+            var age = document.getElementById('age').value;
+            var gender = document.querySelector('input[name="gender"]:checked');
+            var color = document.getElementById('color').value;
+
+            if (!name || !age || !gender) {
+                alert('Please fill all fields');
+                return;
+            }
+
+        
+            var expiryDate = new Date();
+            expiryDate.setDate(expiryDate.getDate() + 30);
+
+            CookieManager.setCookie('username', name, expiryDate);
+            CookieManager.setCookie('age', age, expiryDate);
+            CookieManager.setCookie('gender', gender.value, expiryDate);
+            CookieManager.setCookie('favoriteColor', color, expiryDate);
+            CookieManager.setCookie('visits', '0', expiryDate);
+
+        
+            showProfile();
+        }
+
+        function logout() {
+            CookieManager.deleteCookie('username');
+            CookieManager.deleteCookie('age');
+            CookieManager.deleteCookie('gender');
+            CookieManager.deleteCookie('favoriteColor');
+            CookieManager.deleteCookie('visits');
+
+            document.getElementById('username').value = '';
+            document.getElementById('age').value = '';
+            var genderInputs = document.querySelectorAll('input[name="gender"]');
+            for (var i = 0; i < genderInputs.length; i++) {
+                genderInputs[i].checked = false;
+            }
+            document.getElementById('color').value = 'Red';
+
+            showRegister();
+        }
+
+        
+        window.onload = init;
+    </script>
+</body>
+</html>
