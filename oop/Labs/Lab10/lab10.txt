@@ -1,0 +1,945 @@
+///////////////////////////////////////////////////////////////
+//[Inheritance]Every Code below 
+////////////////will inherit from public
+///////////////////////////////////////////////////////////////
+//#include<iostream>
+using namespace std;
+class Base
+{
+    protected:
+    int x;
+    public:
+    void SetX(int _x){x=_x;}
+    int GetX(){return x;}
+    Base(){x=0;}
+    Base(int _x){x=_x;}
+    ~Base(){}
+    void Show()
+    {
+        cout<<"I'm BASE ...";
+    }
+};
+
+class Derived:public Base
+{
+    protected:
+    int y;
+    public:
+    void SetY(int _y){y=_y;}
+    int GetY(){return y;}
+    Derived(){x=y=0;}
+    Derived(int _x,int _y):Base(_x)
+    {
+        y=_y;
+    }
+    ~Derived(){}
+    void Show()
+    {
+        cout<<"I'm Derived ...";
+    }
+};
+int main()
+{
+    Base b1(10);  //?4B  Stack
+    b1.Show(); //i'm base
+
+    Derived d1(3,4);
+    d1.Show(); //i'm derived
+
+    Base *bPtr=new Base(3);
+    bPtr->Show(); //i'm base
+    ///compiler call show copy that related to pointer DT
+    
+    Derived *dPtr=new Derived(3,4);
+    dPtr->Show(); //i'm derived
+    ///compiler call show copy that related to pointer DT    
+    return 0;
+}
+
+int main()
+{
+    Base *bPtr=new Derived(3,4);
+    //الأب يحتوي جميع ابناؤه
+    //inheritance [is a]
+    //car is a veichle 
+    //bus is a veichle 
+    bPtr->Show(); //i'm base
+    ///compiler call show copy that related to pointer DT
+
+    return 0;
+}
+
+class Derived2:public Derived
+{
+    protected:
+    int z;
+    public:
+    void SetZ(int _z){z=_z;}
+    int GetZ(){return z;}
+    Derived2(){z=0;}
+    Derived2(int _x,int _y,int _z)
+    :Derived(_x,_y)
+    {
+        z=_z;
+    }
+    ~Derived2(){}
+    void Show()
+    {
+        cout<<"I'm Derived2";
+    }
+};
+
+int main()
+{
+
+    Base *bPtr=new Derived(3,4);
+    bPtr->Show(); //i'm base
+    ///compiler call show copy that related to pointer DT
+
+    Base *bPtr2=new Derived2(3,4,5);
+    bPtr2->Show(); //i'm base
+    ///compiler call show copy that related to pointer DT
+
+    Derived *dPtr=new Derived2(3,4,5);
+    dPtr->Show(); //i'm derived
+    
+    return 0;
+}
+
+/////////////////////////////////////////
+///Non Sense
+
+
+
+
+//LOGIC
+//Base* bPtr=new Derived2(1,2,3);
+//dPtr->Show(); //i'm Derived2
+
+//////////////////////////////////////////
+class Human
+{
+    protected:
+    string name;
+    public:
+    void SayName()
+    {
+        cout<<"No Name";
+    }
+};
+class Male:public Human
+{
+    public:
+    Male(string _name)
+    {
+        name=_name;
+    }
+    void SayName()
+    {
+        cout<<"my name is "<<name<<endl;
+    }
+};
+class Female:public Human
+{
+    public:
+    Female(string _name)
+    {
+        name=_name;
+    }
+    void SayName()
+    {
+        cout<<"my name is "<<name<<endl;
+    }
+};
+int main()
+{
+    Male m1("Ali");
+    Female f1("Sara");
+    m1.SayName(); //my name is ali
+    f1.SayName(); //my name is sara
+
+    Male *mPtr=new Male("Ali");
+    mPtr->SayName();
+
+    Human *hPtr=new Male("Ali");
+    hPtr->SayName(); //No Name
+    
+    return 0;
+}
+////////////////////////////////////////////
+//Early/Static Binding: [Compile Time]
+
+////when pointer from parent points
+///object from its child
+////when call overriden method
+////Complier will EARLY [compile Time] 
+///Retrieve fn copy of Pointer DT
+/////not copy of Object DT
+
+//LOGIC
+//Base* bPtr=new Derived2(1,2,3);
+//dPtr->Show(); //i'm Derived2
+
+///////////////////////////////////////////
+
+///Is there a solution make pointer of Base
+//Will Retrieve copy of overriden method 
+//that belong to object not pointer???
+////YES
+
+/////Late/Dynamic Binding [Run time]
+////when pointer from parent points
+// object from child
+////when call overriden method
+////Complier will Later [at run time] 
+//Retrieve  fn copy of Object DT
+/////not copy of Pointer DT
+
+//how?
+//1- fn to be overridden in fst level -parent DT- must 
+//////be public and virtual
+//2- derived Datatype must inherits from public parent
+//3- overridden method in child dt must be also public
+//4- make pointer from base references object from its childs
+
+class Base
+{
+    protected:
+    int x;
+    public:
+    void SetX(int _x){x=_x;}
+    int GetX(){return x;}
+    Base(){x=0;}
+    Base(int _x){x=_x;}
+    ~Base(){}
+    virtual void Show()
+    {
+        cout<<"I'm BASE ...";
+    }
+};
+class Derived:public Base
+{
+    protected:
+    int y;
+    public:
+    void SetY(int _y){y=_y;}
+    int GetY(){return y;}
+    Derived(){x=y=0;}
+    Derived(int _x,int _y):Base(_x)
+    {
+        y=_y;
+    }
+    ~Derived(){}
+    void Show() override /*safety factor*/
+    {
+        cout<<"I'm Derived ...";
+    }
+};
+class Derived2:public Derived
+{
+    protected:
+    int z;
+    public:
+    void SetZ(int _z){z=_z;}
+    int GetZ(){return z;}
+    Derived2(){z=0;}
+    Derived2(int _x,int _y,int _z)
+    :Derived(_x,_y)
+    {
+        z=_z;
+    }
+    ~Derived2(){}
+    void Show()
+    {
+        cout<<"I'm Derived2";
+    }
+};
+
+
+int main()
+{
+    Base * bPtr=new Derived(1,2);
+    bPtr->Show(); //i'm derived
+
+    Base * bPtr2=new Derived2(1,2,3);
+    bPtr2->Show(); //i'm derived2
+
+    Derived * dPtr=new Derived2(1,2,3);
+    dPtr->Show(); //i'm derived2
+
+    //Derived2 *dptr2=new Derived2(3,4,5);
+
+    //in Java
+    //reference from Parent reference 
+    //object from child
+    ///call overridden fn => object copy
+    //[virtual] implicitly
+    return 0;
+}
+
+///////////////////////////////////////////////
+//class Geoshape
+
+class Geoshape
+{
+    protected:
+    double dim1;
+    double dim2;
+    public:
+    void SetDim1(double _dim1){dim1=_dim1;}
+    double GetDim1(){return dim1;}
+    void SetDim2(double _dim2){dim2=_dim2;}
+    double GetDim2(){return dim2;}
+    Geoshape()
+    {
+        dim1=dim2=0;
+        cout<<"geo def ctor";
+    }
+    Geoshape(double _dim1,double _dim2)
+    {
+        dim1=_dim1;
+        dim2=_dim2;
+        cout<<"geo 2p ctor";
+    }
+    Geoshape(double _dim)
+    {
+        dim1=dim2=_dim;
+        cout<<"geo 1p ctor";
+    }
+    ~Geoshape(){}
+    //
+    // virtual double Area()
+    // {
+    //     return -1;
+    // }
+    //
+    //pure virtual fn
+    
+    virtual double Area()=0;
+    //virtual void Hello()=0;
+    //
+};
+/////
+class Rect:public Geoshape
+{
+    public:
+    Rect()
+    {
+    }
+    Rect(double _d1,double _d2):Geoshape(_d1,_d2)
+    {  
+    }
+    ~Rect(){}
+    double Area()
+    {
+        return dim1*dim2;
+    }
+    //virtual void Hello()=0;
+    
+};
+/////
+class Square:public Geoshape
+{
+    public:
+    Square(){}
+    Square(double _d):Geoshape(_d)//Geoshape(_d,_d)
+    {
+        
+    }
+    ~Square(){}
+    double Area()
+    {
+        return dim1*dim2;
+    }
+};
+/////
+class Circle:public Geoshape
+{
+    public:
+    Circle(){}
+    Circle(double _radius)
+    {
+        dim1=dim2=_radius;
+    }
+    ~Circle(){}
+    double Area()
+    {
+        3.14 * dim1 * dim2;
+    }
+};
+/////
+class Tri:public Geoshape
+{
+    public:
+    Tri(){}
+    Tri(double _base,double _height)
+    :Geoshape(_height,_base)
+    {}
+    ~Tri(){}
+    double Area()
+    {
+        return 0.5 * dim1 * dim2;
+    }
+};
+
+
+//fail open close principle
+double SumOfAreasV1(Rect *_rptr,int _rSize,Square* _sPtr,int _sSize,Tri *_tPtr,int _tSize)
+{
+    double sum=0;
+    for (int i = 0; i < _rSize; i++)
+    {
+        sum+=_rptr[i].Area();
+    }
+    for (int i = 0; i < _sSize; i++)
+    {
+        sum+=_sPtr[i].Area();
+    }
+    for (int i = 0; i < _tSize; i++)
+    {
+        sum+=_tPtr[i].Area();
+    }
+    return sum;
+}
+
+//succeed open close principle
+//double SumOfAreasV2(Geoshape* _gPtrArr[],int _gSize)
+double SumOfAreasV2(Geoshape** _gPtrArr,int _gSize)
+{
+    double sum=0;
+    for (int i = 0; i < _gSize; i++)
+    {
+        sum+=_gPtrArr[i]->Area();
+    }
+    return sum;
+}
+
+
+int main()
+{
+    Rect rarr[3]={Rect(3,4),Rect(2,5),Rect(2,5)};
+    Square sarr[2]={Square(10),Square(10)};
+    Tri tarr[2]={Tri(2,10),Tri(2,10)};
+    Circle c(10);
+    cout<<SumOfAreasV1(rarr,3,sarr,2,tarr,2); //232
+
+    //
+    Geoshape *gPtr=new Rect(3,4);
+    cout<<gPtr->Area(); //12
+
+
+}
+
+int main()
+{
+    Rect rarr[3]={Rect(3,4),Rect(2,5),Rect(2,5)};
+    Square sarr[2]={Square(10),Square(10)};
+    Tri tarr[2]={Tri(2,10),Tri(2,10)};
+    Circle c(10);
+
+    Geoshape* gPtrArr[8]
+    ={rarr,&rarr[1],&rarr[2],sarr,&sarr[1],tarr,&tarr[1],&c};
+    //cout<<gPtrArr[3]->Area(); //100
+    cout<<SumOfAreasV2(gPtrArr,8);  //232
+
+
+}
+
+///////////////////////////////////////////////
+//restrict create object from geo
+int main()
+{
+    Geoshape obj;
+    Rect r1;
+    Human hObj;
+    return 0;
+}
+//restrict create object from class=> abstract class
+
+//how to make class to be abstract?
+//abstract class is class contains atleast
+//ONE PURE VIRTUAL FUNCTION 
+
+//PURE VIRTUAL FUNCTION 
+//virtual fn heaher only without body()=0;
+
+//virtual fn may be overridden
+
+//pure virtual fn MUSTTTT be overridden
+//if not 
+
+
+
+
+
+
+
+///restrict create object from class
+///if it is [ABSTRACT CLASS]
+
+///abstract class:
+//////class we cannot create object from it
+
+///how to make class to be abstract?
+///class became abstract 
+///if it contains at least 
+///one pure virtual fn
+
+///pure virtual function?
+////virtual function prototype[header] only without body =0; 
+
+///pure virtual fn must be overridden 
+///in child class?
+
+//if not...
+//child class became also abstract
+
+////////////////////////////////////////////////////
+class TypeA
+{
+    protected:
+    int x;
+    public:
+    //
+    //
+    //
+    virtual void FunOne()=0;
+    virtual void FunTwo()=0;
+};
+
+class TypeB:public TypeA
+{
+    protected:
+    int y;
+    public:
+    //
+    void FunOne() override    //became virtual fn
+    {
+        cout<<"Hello";
+    }
+    //implicitly virtual void FunTwo()=0;
+};
+
+class TypeC:public TypeB
+{
+    public:
+    void FunTwo() override  //became virtual fn
+    {
+        cout<<"Bye";
+    }
+};
+
+int main()
+{
+    TypeA objA;//compile Error //abstract
+    TypeB objB;//compile Error //abstract
+    TypeC objc;
+}
+
+//SEARCH   =>virtual destructor
+///cpy ctor  
+int main()
+{
+    Geoshape *gPtr=new Rect(3,4);
+    delete gPtr; //call rect dest
+
+
+    ///Stack s1(10);
+    //Stack s2;
+
+    //s2=s1;  //call = operator
+
+    //Stack s3=s2;  //call copy ctor  //compiler Stack s3(s2);
+
+    //Stack s3;
+    //s3=s2;  //= operator
+    
+}
+
+
+//factory DP
+/////////////////////////////////////////////
+
+//aggregation/association
+//#include"graphics.h"
+//#include<iostream>
+class Point
+{
+    private:
+    int x;
+    int y;
+    public:
+    void SetX(int _x){x=_x;}
+    int GetX(){return x;}
+    void SetY(int _y){y=_y;}
+    int GetY(){return y;}
+    //l1 call this ctor to construct start
+    //l1 call this ctor to construct end
+    Point()
+    {
+        x=y=0;
+        cout<<"point def ctor";
+    }
+    Point(int _x,int _y)
+    {
+        x=_x;y=_y;
+        cout<<"point 2p ctor";
+    }
+    //useless
+    ~Point(){cout<<"point dest";}
+    //useless
+    Point(const Point& old)
+    {
+        x=old.x;
+        y=old.y;
+        cout<<"point cctor";
+    }
+};
+
+class Shape
+{
+    protected:
+    int myColor;
+    public:
+    void SetMyColor(int _mycolor){myColor=_mycolor;}
+    int GetMyColor(){return myColor;}
+    Shape()
+    {
+        myColor=0;
+    }
+    Shape(int _color)
+    {
+        myColor=_color;
+    }
+    ~Shape(){}
+    virtual void Draw()=0;
+};
+
+class MyLine:public Shape
+{
+    private:
+    Point start;
+    Point end;
+    public:
+    void SetStart(Point _start)
+    {
+        start=_start;
+    }
+    Point GetStart()
+    {
+        return start;
+    }
+    void SetEnd(Point _end)
+    {
+        end=_end;
+    }
+    Point GetEnd()
+    {
+        return end;
+    }
+    
+    MyLine()
+    {
+        
+    }
+
+    MyLine(int x1,int y1,int x2,int y2,int _color)
+    :start(x1,y1),end(x2,y2),Shape(_color)
+    {
+       
+    }
+    ~MyLine(){}
+    MyLine(const MyLine& old)
+    {
+        start=old.start;
+        end=old.end;
+        myColor=old.myColor;
+    }
+    void Draw()
+    {
+        //built-in fn
+        setcolor(myColor);
+        line(start.GetX(),start.GetY(),end.GetX(),end.GetY()); 
+    }
+
+};
+
+class Rect:public Shape
+{
+    private:
+    Point ul;
+    Point lr;
+    public:
+    //setters & getters
+    Rect()
+    {
+    }
+    Rect(int x1,int y1,int x2,int y2,int _color)
+    :ul(x1,y1),lr(x2,y2),Shape(_color)
+    {
+    }
+    ~Rect(){}
+    Rect(Rect& old){}
+    void Draw()
+    {
+        setcolor(myColor);
+        rectangle(ul.GetX(),ul.GetY(),lr.GetX(),lr.GetY());
+    }
+};
+
+class MyCircle:public Shape
+{
+    int radius;
+    Point center;
+    public:
+    //
+    //
+    //
+    //
+    //
+    void Draw()
+    {
+        //setcolor();
+        //circle(,,);
+    }
+};
+
+class MyTri:public Shape
+{
+    Point p1;
+    Point p2;
+    Point p3;
+    public:
+    //
+    //
+    //
+    //
+    //
+    void Draw()
+    {
+        setcolor(myColor);
+        line();
+        line();
+        line();
+    }
+};
+
+class Picture
+{
+    private:
+    Shape** sPtr;
+    int sSize;
+    public:
+    Picture()
+    {
+        sPtr=NULL;
+        sSize=0;
+    }
+    //set relationship
+    void SetShapes(Shape** _sPtr,int _sSize)
+    {
+        sPtr=_sPtr;
+        sSize=_sSize;
+    }
+    //Process
+    void Execute()
+    {
+       for (int i = 0; i < sSize; i++)
+       {
+            sPtr[i]->Draw();
+       }
+    }
+
+};
+
+int main()
+{
+    initgraph();
+    MyLine larr[2]={MyLine(1,1,1,1,1),MyLine()};
+    Rect rarr[3]={};
+    
+    Shape* sPtrArr[5]={larr,&larr[1],rarr,&rarr[1],&rarr[2]};
+
+    Picture p1;
+
+    p1.SetShapes(sPtrArr,5);
+
+    p1.Execute();
+
+    p1.SetShapes(NULL,0);
+
+
+}
+/////////////////////////////////////////////
+//template   => generics
+template<class M>
+class Stack
+{
+    private:
+    M *arr;
+    int tos;
+    int size;
+    public:
+    Stack()
+    {
+        tos=0;
+        size=5;
+        arr=new M[size];
+        cout<<"ctor called";
+    }
+    Stack(int _size)
+    {
+        tos=0;
+        size=_size;
+        arr=new M[size];
+        cout<<"ctor called";
+    }
+    ~Stack() //IMPORTANT
+    {
+        //useless
+        for (int i = 0; i < size; i++)
+        {
+            arr[i]=-1;
+        }
+        //
+        delete[] arr;
+        cout<<"dest called";
+    }
+
+    //Stack Functions
+    void Push(/*this->s2*/M value)
+    {
+        //if (tos!=size)
+        if (!this->IsFull())
+        {
+            arr[tos]=value;
+            tos++;
+        }
+        else
+        {
+            cout<<"FULL !!!\n";
+        }   
+    }
+
+    M Pop()
+    {
+        M result=-1234;
+        //if (tos!=0)
+        if (!IsEmpty())
+        {
+            tos--;
+            result=arr[tos];
+            //return result;
+        }
+        else
+        {
+            cout<<"EMPTY!!!\n";
+            //return -1234;
+            //throw runtime error
+        }  
+        return result;
+    }
+
+    int IsFull(){return tos==size;}
+    int IsEmpty(){return tos==0;}
+    //
+    void Print(){}
+};
+
+int main()
+{
+    //Stack s1; //compile error
+    Stack<float> s1;
+    //s1.Push();
+    
+    return 0;
+}
+////////////////////////////////////////////
+////////////////////////////////////////////
+
+class Complex
+{
+    private:
+    int real;
+    int img;
+    public:
+    void SetReal(int _real)
+    {
+        this->real=_real;
+    }
+    int GetReal() const 
+    {
+        return this->real;
+    }
+    void SetImg(int _img)
+    {
+        img=_img;
+    }
+    int GetImg() const
+    {
+        return (*this).img;
+    }
+    void Print()
+    {
+        cout<<real<<"+"<<this->img<<"i"<<endl;
+    }
+    Complex Add(Complex right)
+    {
+        Complex result;
+        result.real=this->real+right.real;
+        result.img=img+right.img;
+        return result;
+    }
+    //fn to initialize each object
+    Complex()
+    {
+        this->real=3;
+        img=4;
+    }
+    Complex(int _real,int _img)
+    {
+        this->real=_real;
+        img=_img;
+    }
+    void Initialize(int _num)
+    {
+        this->real=img=_num;;
+    }
+    //(int)c1
+    operator int()
+    {
+        return real;
+    }
+    //
+};
+
+int main()
+{
+    Complex c1(3,4);
+    //implicit casting
+    int real=c1;
+    int real2=(int)c1;
+    cout<< real; //3
+}
+
+///////////////////////////////////////////////
+///parameter vs. arguments
+//shallow => bitwise copy
+///////////////////////////////////////////////
+//Lab Assigments:
+//[discuss] early vs late binding Base,Derived,Derived2 
+//1-Geoshape abstract
+////SumOFAreasV1()
+////SumOFAreasV2()
+
+//2- abajora via picture {shape** sptr}
+
+//hackerrank
+//leetcode
+
+
+
+
+
+
+

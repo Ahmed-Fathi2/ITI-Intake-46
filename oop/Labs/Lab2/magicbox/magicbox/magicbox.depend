@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1762375823 source:d:\iti\oop\oop\lab2\magicbox\magicbox\main.cpp
+	<iostream>
+	<stdlib.h>
+	<windows.h>
+

@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1762341466 source:c:\users\dell\desktop\oop\lab4\stringconcatandcopy\stringconcatandcopy\main.cpp
+	<iostream>
+	<cstring>
+

@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1762948299 source:d:\iti\oop\oop\lab9\aggregation\aggregation\main.cpp
+	"graphics.h"
+	<conio.h>
+	<iostream>
+
+1762860060 d:\iti\oop\oop\lab9\aggregation\aggregation\graphics.h
+	<iostream>
+	<math.h>
+	<windows.h>
+	<Windows.h>
+

@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1762344631 source:c:\users\dell\desktop\oop\lab3\reverse=string\reversestring\main.cpp
+	<iostream>
+
+1762529705 source:c:\users\dell\desktop\oop\lab3\reversestring\reversestring\main.cpp
+	<iostream>
+	<conio.h>
+	<string.h>
+

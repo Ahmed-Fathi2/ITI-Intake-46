@@ -1,0 +1,39 @@
+<div
+  class="relative overflow-x-auto bg-white shadow-md rounded-2xl border border-gray-200 hover:border-gray-300 transition w-full max-h-f"
+>
+  <table class="w-full text-[12px] md:text-sm text-left text-gray-900">
+    <caption class="p-4 md:p-5 text-[14px] md:text-lg font-medium text-left">
+      Order History
+      <p class="mt-1 text-[10px] md:text-sm font-normal text-gray-500">
+        Track your past purchases.
+      </p>
+    </caption>
+    <thead
+      class="text-[12px] md:text-sm bg-gray-50  border-b border-t border-gray-200  text-gray-600 "
+    >
+      <tr>
+        <th scope="col" class="px-4 md:px-6 py-2 md:py-3 font-medium">Order ID</th>
+        <th scope="col" class="px-4 md:px-6 py-2 md:py-3 font-medium">Date</th>
+        <th scope="col" class="px-4 md:px-6 py-2 md:py-3 font-medium">Total</th>
+        <th scope="col" class="px-4 md:px-6 py-2 md:py-3 font-medium">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container>
+        <tr *ngFor="let order of orders()" class="border-b border-gray-200 ">
+          <th
+            scope="row"
+            class="px-4 md:px-6 py-2 md:py-4 font-medium text-heading whitespace-nowrap"
+          >
+            #ORD-{{ order.id }}
+          </th>
+          <td class="px-4 md:px-6 py-2 md:py-4">{{ order.createdAt | date: 'dd MMM yyyy' }}</td>
+          <td class="px-4 md:px-6 py-2 md:py-4">${{ order.totalPrice }}</td>
+          <td class="px-4 md:px-6 py-2 md:py-4">
+            <p [ngClass]="order.status">• {{ order.status | titlecase }}</p>
+          </td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</div>

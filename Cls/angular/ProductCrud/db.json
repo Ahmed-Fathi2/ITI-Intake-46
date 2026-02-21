@@ -1,0 +1,116 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Pen",
+      "price": 10,
+      "description": "Blue ink pen",
+      "productCode": "PEN-1001",
+      "imageUrl": "https://images.unsplash.com/photo-1585338107529-13afc5f02586?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "name": "Notebook",
+      "price": 25,
+      "description": "A5 ruled notebook with 200 pages",
+      "productCode": "NOTE-2001",
+      "imageUrl": "https://images.unsplash.com/photo-1531346878377-a5be20888e57?auto=format&fit=crop&w=800&q=80",
+      "id": "2"
+    },
+    {
+      "name": "Pencil",
+      "price": 5,
+      "description": "HB graphite pencil",
+      "productCode": "PENC-4001",
+      "imageUrl": "https://cdn.pixabay.com/photo/2025/03/21/18/04/art-9485478_1280.jpg",
+      "id": "4"
+    },
+    {
+      "name": "Eraser",
+      "price": 3,
+      "description": "White rubber eraser",
+      "productCode": "ERAS-5001",
+      "imageUrl": "https://m.media-amazon.com/images/I/716YBLPCc7L._AC_UF894,1000_QL80_.jpg",
+      "id": "5"
+    },
+    {
+      "name": "Ruler",
+      "price": 8,
+      "description": "30cm plastic ruler",
+      "productCode": "RULE-6001",
+      "imageUrl": "https://www.dreambox.com/wp-content/uploads/2024/10/how-to-read-a-ruler-scaled-min.jpg",
+      "id": "6"
+    },
+    {
+      "name": "Backpack ",
+      "price": 250,
+      "description": "Waterproof school backpack",
+      "productCode": "BAG-7011",
+      "imageUrl": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80",
+      "id": "7"
+    },
+    {
+      "name": "Calculator",
+      "price": 45,
+      "description": "Scientific calculator",
+      "productCode": "CALC-8001",
+      "imageUrl": "https://thumbs.dreamstime.com/b/hand-holding-modern-white-calculator-against-grey-textured-background-light-shadows-concept-business-finance-accounting-407763295.jpg",
+      "id": "8"
+    },
+    {
+      "name": "Highlighter",
+      "price": 12,
+      "description": "Yellow fluorescent highlighter",
+      "productCode": "HIGH-9001",
+      "imageUrl": "https://m.media-amazon.com/images/I/51hJ2r9eamL._AC_SX679_.jpg",
+      "id": "9"
+    },
+    {
+      "id": "11",
+      "name": "Modern Stapler",
+      "price": 35,
+      "description": "Ergonomic heavy-duty stapler with a sleek metallic finish.",
+      "productCode": "STAP-1001",
+      "imageUrl": "/assets/products/stapler.png"
+    },
+    {
+      "id": "12",
+      "name": "Pastel Sticky Notes",
+      "price": 12,
+      "description": "Set of 5 pastel-colored sticky note pads for organized thoughts.",
+      "productCode": "STICK-2002",
+      "imageUrl": "/assets/products/sticky-notes.png"
+    },
+    {
+      "id": "13",
+      "name": "Mesh Desk Organizer",
+      "price": 45,
+      "description": "Black mesh organizer with multiple compartments for all your desk essentials.",
+      "productCode": "ORG-3003",
+      "imageUrl": "/assets/products/organizer.png"
+    },
+    {
+      "id": "14",
+      "name": "Elite Gold Paper Clips",
+      "price": 8,
+      "description": "Premium gold-plated paper clips in a minimalist glass jar.",
+      "productCode": "CLIP-4004",
+      "imageUrl": "/assets/products/paper-clips.png"
+    },
+    {
+      "id": "15",
+      "name": "Luxury Fountain Pen",
+      "price": 250,
+      "description": "Handcrafted fountain pen with a gold nib and premium leather finish.",
+      "productCode": "PEN-5005",
+      "imageUrl": "/assets/products/fountain-pen.png"
+    },
+    {
+      "id": "5130",
+      "name": "IPhone 16 ProMax",
+      "price": 1500,
+      "description": "IPhone 16 ProMax special stock",
+      "productCode": "IP-2025",
+      "imageUrl": "https://thedisconnekt.com/wp-content/uploads/2024/09/Apple-iPhone-16-Pro-Max-9.jpg"
+    }
+  ]
+}

@@ -1,0 +1,432 @@
+//casting
+//pointers revision
+//dynamic allocation
+//recursive function [self study]
+////////////////////////////////////////////////////////
+int main()
+{
+    int a=1,b=2,c=3,d=4;
+    int* ptrarr[4];  
+    //B  ptrarr |Address of a|->|->|->|
+    
+    //put address of a into fst elemtn of array
+    //ptrarr=a; //F
+    //ptrarr=&a; //F
+    //ptrarr[0]=a;//F
+    //ptrarr[0]=&a;//T
+    //*ptrarr=&a; //T
+
+
+    //Array default values with array declaration
+    int* ptrArr[]={&a,&b,&c,&d};
+}
+
+int main()
+{
+    int arr[4]={1,2,3,4};
+    int* ptrArr[4]; //ptrArr|Address [1]|||||
+
+
+    //ptrArr=arr; //F
+    //ptrArr[0]=arr;//T
+    //ptrArr[0]=&arr;//T
+    //ptrArr[0]=&arr[0];//
+    //*ptrArr=arr;//T
+}
+/////////////////////////////////////////////
+//Casting [value/state]
+
+///Convert value from data type to another
+// data type
+//casting
+//value of data type can be converted to another one ,,, True
+//latest c,cPP Versions , this will be done Implicitly
+//Implicitly =>compiler will do it itself
+//Explicitly => you [developer ] will do it yourself
+
+
+int main()
+{
+    int x=22; //4B  
+    double y=33; //8B  //44_444_444_444(value>int data type)
+    
+    //NO ERROR
+    //implicit casting
+    //unsafe casting
+    x=y;
+    cout<<x // -->>>> rubbish value
+
+    //Explicit casting [recommended]
+    x=(int)y;
+
+
+    // //implicit casting
+    // //safe casting [implicit]
+    // y=x;
+
+    // //explicit casting [useless]
+    // y=(double)x;
+
+    cout<<"x="<<x; //rubbish
+    cout<<"y="<<y; //44 milliar
+}
+
+//////////////////////////////////////////
+///promotion
+///char->int -> long -> float -> double
+int main()
+{
+    int x=3;
+    char ch='M';
+    //int z=x+(int)ch;  //useless
+    int z=x+ch;
+    cout<<z; //80
+
+
+    int a=3,b=4;
+    float c;
+
+    c=(float)a/b;
+    cout<<c; //0.75
+    return 0;
+}
+
+//////////////////////////////////////////
+///GP Pointer
+int main()
+{
+    //
+    int a=10;
+    int *ptr2=&a;
+    //
+    int x=10;     //x|10|0x10
+    void *ptr;   
+    ptr=&x;       //ptr|0x10|0x30
+    //cout<<*ptr; //compile error
+
+    //soln1:
+    int* tmpPtr=ptr; //tmpPtr|0x10|0x50
+    //int* tmpPtr=(int*)ptr; //useless
+    cout<<*tmpPtr; //10
+
+
+
+    //soln2:
+    cout<<    *((int*)ptr)   ; //10
+    //cout<<    *ptr   ; //10
+    return 0;
+}
+//////////////////////////////////////////
+//array of 24 students
+//array resized to 25 students=> Impossible
+
+//////////////////////////////////////////////////////////////
+//dynamic Allocation
+
+//array => fixed size
+/////we cannot declare array
+//based on specific/different size in runtime
+/////array when declared ,
+//cannot be modified or deleted ->end of scope
+
+//RUNTIME
+////think to allocate dynamic place in runtime
+////based on specific value/size
+//think of deallocate this place whenever i want
+
+
+/////dynamic allocation
+///allocate specific value/values in runtime
+///based on specific size
+////deallocate whenever i want to.
+///Stored in Heap  =>c,c++,java,c#
+
+//syntax      HLL===>new
+//c --->     malloc()
+
+//syntax
+//allocate 5 integers
+
+//syntax
+//allocate 5 integers
+//(return address fst allocated data as pointer to void) new int[5];
+//pointer to int=new int[5];
+//int *tmpPtr=new int[5];
+
+
+
+
+
+//pointer to fst element allocated = new int[5]
+
+int main()
+{
+    // //allocate 5 integers at runtime
+    // int* ptr=new int[5];
+    // //allocate 5 doubles at runtime
+    // double *dPtr=new double[5];
+
+    //Standard way for dynamic allocation  5 integers at runtime
+    int size;
+    cout<<"Enter array size\n";
+    cin>>size; //10
+
+    //int arr[size];
+    int *ptr =new int[size];
+}
+
+
+////////////////////////////////////////
+//allocate 5 integers at runtime and fill it
+int main()
+{
+    int size=5;
+    int *ptr=new int [size];
+    //from this moment int* ptr ==new==int arr[5]
+
+    //v1 NOOOOO
+    *ptr=10;
+    ptr++;
+    /////
+
+
+    //v2
+    *(ptr+0)=10;
+
+
+    //v3 when pointer points array , it acts like array [indexer]
+    for (int i = 0; i < size; i++)
+    {
+        ptr[i]=10;
+    }
+
+}   
+
+
+//////////////////////////////////////////
+//allocate 5 Characters at runtime and fill it
+int main()
+{
+    int size=15;
+    char* cPtr=new char[size];
+
+    //v2
+    *(cPtr+0)='A';
+    *(cPtr+1)='A';
+    *(cPtr+2)='A';
+    *(cPtr+3)='\0';
+
+    //v3
+    cPtr[0]='A';
+    cPtr[1]='A';
+    cPtr[2]='A';
+    cPtr[3]='\0';
+
+    gets(cPtr);
+    puts(cPtr);
+
+    cin>>cPtr;
+    cout<<cPtr;
+    return 0;
+}
+/////////////////////////////////////////
+//allocate 5 integers
+//then deallocate it whenever i want
+
+int main()
+{
+
+    int size=5;
+    int *ptr=new int[size];
+    //from this moment int *ptr==new==int ptr[5]
+    //deallocate this array here
+    //syntax
+    //delete[] address fst element of allocated data
+    delete[] ptr;
+        
+    //
+    ////we wanna deallocate place in heap we stored
+    //delete[] ptr;
+    //////delete[] -> remove protection
+    //for allocated bytes
+    ///so  any app can write in this place
+    ///REMEMBER
+    //ptr will still carries 0x10
+    // =>undefined address
+    //delete[] dosen't remove values/state
+    // => remove protection
+    //
+    //
+    ///
+    //
+
+    //in delete
+    //delete[] ptr;
+    //CAREFUL NOT ===> delete ptr;
+    //delete[] ptr -> remove array
+    //delete ptr -> remove non array[object]
+}
+
+////////////////////////////////////////////
+//ISSUE
+void tryMe()
+{
+    int *ptr=new int[5];
+
+    //REMBER
+    delete[] ptr;
+}
+int main()
+{
+    tryMe();
+    tryMe();
+    tryMe();
+}
+
+int* tryMe2()
+{
+    int *ptr=new int[5];
+    return ptr;
+}
+int main()
+{
+    int *tmpPtr=tryMe2();
+    cout<<tmpPtr[0];
+
+    delete [] tmpPtr;
+    
+}
+
+///////////////////////////////////////////
+//dynamic allocation for array of pointers
+//v1
+int main()
+{
+    int* ptrArr[3];
+    //from this moment int* ptrArr[3]==new==int ptrArr[3][4]  
+    ptrArr[0]=new int[4];
+    ptrArr[1]=new int[4];
+    ptrArr[2]=new int[4];
+
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 4; j++)
+        {
+            ptrArr[i][j]=10;
+        }
+    }
+
+    //delete[] ptrArr;//WRONG
+
+    delete[] ptrArr[0];
+    delete[] ptrArr[1];
+    delete[] ptrArr[2];
+    
+}
+
+
+///////////////////////////////////////////
+//v2
+int main()
+{
+    int row=3;
+    int col=4;
+    int ** ptrArr;
+
+    ptrArr=new int*[row];   //|->|->|->|
+    //from this moment int ** ptrArr; ==new==int * ptrArr[3];
+    ptrArr[0]=new int[col];
+    ptrArr[1]=new int[col];
+    ptrArr[2]=new int[col];
+    //from this moment int * ptrArr[3]==new==int ptrArr[3][4];
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 4; j++)
+        {
+            //ptrArr[i][j]=10;
+        }
+    }
+
+    //deallocation
+    delete[] ptrArr[0];
+    delete[] ptrArr[1];
+    delete[] ptrArr[2];
+    delete[] ptrArr;
+    
+    return 0;
+}
+
+///Wrong
+int main()
+{
+    int row=3;
+    int col=4;
+    int * ptrArr;
+
+    ptrArr=new int*[row];
+    //from this moment int ** ptrArr; ==new==int * ptrArr[3];
+    ptrArr[0]=new int[col];
+    ptrArr[1]=new int[col];
+    ptrArr[2]=new int[col];
+    //from this moment int * ptrArr[3]==new==int ptrArr[3][4];
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 4; j++)
+        {
+            ptrArr[0][0]=10;
+            //ptrArr[i][j]=10;
+        }
+    }
+    
+    return 0;
+}
+
+///////////////////////////////////////////
+//Dynamic allocation for struct 
+struct Employee
+{
+    int id;
+    char name[12];
+    int age;
+};
+
+int main()
+{
+    Employee *empPtr;
+    int empSize=3;
+    empPtr=new Employee[empSize];
+    //from this moment Employee *empPtr ==new== Employee empPtr[3];
+
+
+    empPtr[0].id=1;
+    empPtr[1].id=1;
+
+
+    (empPtr+0)->id=1;
+    (empPtr+1)->id=2;
+    (empPtr+2)->id=3;
+
+}
+
+
+
+
+
+
+////////////////////////////////////
+
+//Lab Assignments
+
+
+///1- try dynamic allocation
+// for pointer to integer read and write  2ways
+///2- try dynamic allocation for Array
+// of pointers to integers read and write
+//// int *arr[3] -> int arr[3][4]
+
+//3- int **ptrArr;
+
+
+
+
+

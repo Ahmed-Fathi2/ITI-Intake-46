@@ -1,0 +1,9 @@
+<app-side-bar />
+<main
+  class="min-h-screen bg-gray-50/50 transition-[margin] duration-300 ease-out relative"
+  [class]="sidebar.isOpen() ? 'ml-20 lg:ml-[16rem]' : 'ml-20'"
+>
+  <div class="mx-auto">
+    <router-outlet />
+  </div>
+</main>

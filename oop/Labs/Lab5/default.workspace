@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="Workspace">
+		<Project filename="Dynamic-Alloc-Pointer-To-Integers/dynamicallocpointertointegers/dynamicallocpointertointegers.cbp" />
+		<Project filename="Dynamic-Alloc-For-Array-Of-Pointers/dynamicallocforarrayofpointers/dynamicallocforarrayofpointers.cbp" />
+		<Project filename="Dynamic-Alloc-For-Array-Of-Pointers-All-in-Heap/dynamicallocforarrayofpointersallinheap/dynamicallocforarrayofpointersallinheap.cbp" />
+	</Workspace>
+</CodeBlocks_workspace_file>
