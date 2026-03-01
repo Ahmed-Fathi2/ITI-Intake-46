@@ -1,0 +1,85 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\FCI\\iti\\01- lets start our journey\\iti R3 23-24\\backEnd\\Asp.net Web API\\day_1\\CodeOfLec\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F00ABE66-8F8C-4633-885F-3DF4E5178E8F}|WebAPIDotNet\\WebAPIDotNet.csproj|d:\\fci\\iti\\01- lets start our journey\\iti r3 23-24\\backend\\asp.net web api\\day_1\\codeoflec\\webapidotnet\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00ABE66-8F8C-4633-885F-3DF4E5178E8F}|WebAPIDotNet\\WebAPIDotNet.csproj|solutionrelative:webapidotnet\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00ABE66-8F8C-4633-885F-3DF4E5178E8F}|WebAPIDotNet\\WebAPIDotNet.csproj|d:\\fci\\iti\\01- lets start our journey\\iti r3 23-24\\backend\\asp.net web api\\day_1\\codeoflec\\webapidotnet\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00ABE66-8F8C-4633-885F-3DF4E5178E8F}|WebAPIDotNet\\WebAPIDotNet.csproj|solutionrelative:webapidotnet\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00ABE66-8F8C-4633-885F-3DF4E5178E8F}|WebAPIDotNet\\WebAPIDotNet.csproj|d:\\fci\\iti\\01- lets start our journey\\iti r3 23-24\\backend\\asp.net web api\\day_1\\codeoflec\\webapidotnet\\models\\iticontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00ABE66-8F8C-4633-885F-3DF4E5178E8F}|WebAPIDotNet\\WebAPIDotNet.csproj|solutionrelative:webapidotnet\\models\\iticontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F00ABE66-8F8C-4633-885F-3DF4E5178E8F}|WebAPIDotNet\\WebAPIDotNet.csproj|d:\\fci\\iti\\01- lets start our journey\\iti r3 23-24\\backend\\asp.net web api\\day_1\\codeoflec\\webapidotnet\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F00ABE66-8F8C-4633-885F-3DF4E5178E8F}|WebAPIDotNet\\WebAPIDotNet.csproj|solutionrelative:webapidotnet\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DepartmentController.cs",
+              "DocumentMoniker": "D:\\FCI\\iti\\01- lets start our journey\\iti R3 23-24\\backEnd\\Asp.net Web API\\day_1\\CodeOfLec\\WebAPIDotNet\\Controllers\\DepartmentController.cs",
+              "RelativeDocumentMoniker": "WebAPIDotNet\\Controllers\\DepartmentController.cs",
+              "ToolTip": "D:\\FCI\\iti\\01- lets start our journey\\iti R3 23-24\\backEnd\\Asp.net Web API\\day_1\\CodeOfLec\\WebAPIDotNet\\Controllers\\DepartmentController.cs",
+              "RelativeToolTip": "WebAPIDotNet\\Controllers\\DepartmentController.cs",
+              "ViewState": "AQIAADYAAAAAAAAAAAAowEUAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-11T21:43:56.144Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Department.cs",
+              "DocumentMoniker": "D:\\FCI\\iti\\01- lets start our journey\\iti R3 23-24\\backEnd\\Asp.net Web API\\day_1\\CodeOfLec\\WebAPIDotNet\\Models\\Department.cs",
+              "RelativeDocumentMoniker": "WebAPIDotNet\\Models\\Department.cs",
+              "ToolTip": "D:\\FCI\\iti\\01- lets start our journey\\iti R3 23-24\\backEnd\\Asp.net Web API\\day_1\\CodeOfLec\\WebAPIDotNet\\Models\\Department.cs",
+              "RelativeToolTip": "WebAPIDotNet\\Models\\Department.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-11T21:31:25.54Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\FCI\\iti\\01- lets start our journey\\iti R3 23-24\\backEnd\\Asp.net Web API\\day_1\\CodeOfLec\\WebAPIDotNet\\Program.cs",
+              "RelativeDocumentMoniker": "WebAPIDotNet\\Program.cs",
+              "ToolTip": "D:\\FCI\\iti\\01- lets start our journey\\iti R3 23-24\\backEnd\\Asp.net Web API\\day_1\\CodeOfLec\\WebAPIDotNet\\Program.cs",
+              "RelativeToolTip": "WebAPIDotNet\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-11T21:29:38.32Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ITIContext.cs",
+              "DocumentMoniker": "D:\\FCI\\iti\\01- lets start our journey\\iti R3 23-24\\backEnd\\Asp.net Web API\\day_1\\CodeOfLec\\WebAPIDotNet\\Models\\ITIContext.cs",
+              "RelativeDocumentMoniker": "WebAPIDotNet\\Models\\ITIContext.cs",
+              "ToolTip": "D:\\FCI\\iti\\01- lets start our journey\\iti R3 23-24\\backEnd\\Asp.net Web API\\day_1\\CodeOfLec\\WebAPIDotNet\\Models\\ITIContext.cs",
+              "RelativeToolTip": "WebAPIDotNet\\Models\\ITIContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-11T21:21:29.858Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
