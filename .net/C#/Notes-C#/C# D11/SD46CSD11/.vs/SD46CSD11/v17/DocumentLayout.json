@@ -1,0 +1,87 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\engmt\\source\\repos\\SD46CSD11\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9C58D007-25C9-4236-B6C4-BDCDB97F26BE}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\engmt\\source\\repos\\sd46csd11\\consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C58D007-25C9-4236-B6C4-BDCDB97F26BE}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5EFD20B-4A69-4971-A646-4EB1B54C3207}|Company.PresentationLayer\\Company.PresentationLayer.csproj|c:\\users\\engmt\\source\\repos\\sd46csd11\\company.presentationlayer\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5EFD20B-4A69-4971-A646-4EB1B54C3207}|Company.PresentationLayer\\Company.PresentationLayer.csproj|solutionrelative:company.presentationlayer\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C58D007-25C9-4236-B6C4-BDCDB97F26BE}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\engmt\\source\\repos\\sd46csd11\\consoleapp1\\phonebook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C58D007-25C9-4236-B6C4-BDCDB97F26BE}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\phonebook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5EFD20B-4A69-4971-A646-4EB1B54C3207}|Company.PresentationLayer\\Company.PresentationLayer.csproj|c:\\users\\engmt\\source\\repos\\sd46csd11\\company.presentationlayer\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D5EFD20B-4A69-4971-A646-4EB1B54C3207}|Company.PresentationLayer\\Company.PresentationLayer.csproj|solutionrelative:company.presentationlayer\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PhoneBook.cs",
+              "DocumentMoniker": "C:\\Users\\engmt\\source\\repos\\SD46CSD11\\ConsoleApp1\\PhoneBook.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\PhoneBook.cs",
+              "ToolTip": "C:\\Users\\engmt\\source\\repos\\SD46CSD11\\ConsoleApp1\\PhoneBook.cs",
+              "RelativeToolTip": "ConsoleApp1\\PhoneBook.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAwwFwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T09:55:57.67Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\engmt\\source\\repos\\SD46CSD11\\ConsoleApp1\\Program.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\Program.cs",
+              "ToolTip": "C:\\Users\\engmt\\source\\repos\\SD46CSD11\\ConsoleApp1\\Program.cs",
+              "RelativeToolTip": "ConsoleApp1\\Program.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAABCwA4AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T09:55:50.232Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\engmt\\source\\repos\\SD46CSD11\\Company.PresentationLayer\\Form1.cs",
+              "RelativeDocumentMoniker": "Company.PresentationLayer\\Form1.cs",
+              "ToolTip": "C:\\Users\\engmt\\source\\repos\\SD46CSD11\\Company.PresentationLayer\\Form1.cs",
+              "RelativeToolTip": "Company.PresentationLayer\\Form1.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBAAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T09:54:03.6Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\engmt\\source\\repos\\SD46CSD11\\Company.PresentationLayer\\Form1.cs",
+              "RelativeDocumentMoniker": "Company.PresentationLayer\\Form1.cs",
+              "ToolTip": "C:\\Users\\engmt\\source\\repos\\SD46CSD11\\Company.PresentationLayer\\Form1.cs [Design]",
+              "RelativeToolTip": "Company.PresentationLayer\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T09:54:00.43Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

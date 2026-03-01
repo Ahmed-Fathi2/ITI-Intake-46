@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="ITI.Application/ITI.Application.csproj" />
+    <Project Path="ITI.Domain/ITI.Domain.csproj" />
+    <Project Path="ITI.Infrastructure/ITI.Infrastructure.csproj" />
+    <Project Path="ITI.WinForms/ITI.WinForms.csproj" />
+  </Folder>
+</Solution>

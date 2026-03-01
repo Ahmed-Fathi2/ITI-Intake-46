@@ -1,0 +1,12 @@
+﻿using ITI.Application.Dtos;
+
+namespace ITI.Application.Interfaces.Services
+{
+    public interface IStudentService
+    {
+        public IEnumerable<AllStudentDto> GetAll();
+
+        public AllStudentDto? GetById(int id);
+        public void Add(CreateStudentDto createStudentDto);
+    }
+}

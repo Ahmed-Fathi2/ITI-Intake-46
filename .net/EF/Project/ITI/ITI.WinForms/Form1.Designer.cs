@@ -1,0 +1,176 @@
+﻿namespace ITI.WinForms
+{
+    partial class Form1
+    {
+        /// <summary>
+        ///  Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        ///  Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        ///  Required method for Designer support - do not modify
+        ///  the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            studentDataView = new DataGridView();
+            CreateStudentBtn = new Button();
+            DeleteStudentBtn = new Button();
+            UpdateStudentBtn = new Button();
+            label1 = new Label();
+            label2 = new Label();
+            Phone = new Label();
+            FNameTxt = new TextBox();
+            LNameTxt = new TextBox();
+            PhoneTxt = new TextBox();
+            studentCombo = new ComboBox();
+            ((System.ComponentModel.ISupportInitialize)studentDataView).BeginInit();
+            SuspendLayout();
+            // 
+            // studentDataView
+            // 
+            studentDataView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            studentDataView.Location = new Point(46, 12);
+            studentDataView.Name = "studentDataView";
+            studentDataView.RowHeadersWidth = 51;
+            studentDataView.Size = new Size(551, 273);
+            studentDataView.TabIndex = 0;
+            // 
+            // CreateStudentBtn
+            // 
+            CreateStudentBtn.Location = new Point(155, 480);
+            CreateStudentBtn.Name = "CreateStudentBtn";
+            CreateStudentBtn.Size = new Size(100, 33);
+            CreateStudentBtn.TabIndex = 1;
+            CreateStudentBtn.Text = "Add";
+            CreateStudentBtn.UseVisualStyleBackColor = true;
+            CreateStudentBtn.Click += CreateStudentBtn_Click;
+            // 
+            // DeleteStudentBtn
+            // 
+            DeleteStudentBtn.Location = new Point(701, 510);
+            DeleteStudentBtn.Name = "DeleteStudentBtn";
+            DeleteStudentBtn.Size = new Size(130, 45);
+            DeleteStudentBtn.TabIndex = 2;
+            DeleteStudentBtn.Text = "Delete";
+            DeleteStudentBtn.UseVisualStyleBackColor = true;
+            // 
+            // UpdateStudentBtn
+            // 
+            UpdateStudentBtn.Location = new Point(540, 510);
+            UpdateStudentBtn.Name = "UpdateStudentBtn";
+            UpdateStudentBtn.Size = new Size(130, 45);
+            UpdateStudentBtn.TabIndex = 3;
+            UpdateStudentBtn.Text = "Update";
+            UpdateStudentBtn.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(46, 327);
+            label1.Name = "label1";
+            label1.Size = new Size(76, 20);
+            label1.TabIndex = 4;
+            label1.Text = "FirstName";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(46, 377);
+            label2.Name = "label2";
+            label2.Size = new Size(75, 20);
+            label2.TabIndex = 5;
+            label2.Text = "LastName";
+            // 
+            // Phone
+            // 
+            Phone.AutoSize = true;
+            Phone.Location = new Point(46, 432);
+            Phone.Name = "Phone";
+            Phone.Size = new Size(50, 20);
+            Phone.TabIndex = 6;
+            Phone.Text = "Phone";
+            // 
+            // FNameTxt
+            // 
+            FNameTxt.Location = new Point(134, 327);
+            FNameTxt.Name = "FNameTxt";
+            FNameTxt.Size = new Size(146, 27);
+            FNameTxt.TabIndex = 7;
+            // 
+            // LNameTxt
+            // 
+            LNameTxt.Location = new Point(134, 374);
+            LNameTxt.Name = "LNameTxt";
+            LNameTxt.Size = new Size(146, 27);
+            LNameTxt.TabIndex = 8;
+            // 
+            // PhoneTxt
+            // 
+            PhoneTxt.Location = new Point(134, 425);
+            PhoneTxt.Name = "PhoneTxt";
+            PhoneTxt.Size = new Size(146, 27);
+            PhoneTxt.TabIndex = 9;
+            // 
+            // studentCombo
+            // 
+            studentCombo.FormattingEnabled = true;
+            studentCombo.Location = new Point(616, 12);
+            studentCombo.Name = "studentCombo";
+            studentCombo.Size = new Size(151, 28);
+            studentCombo.TabIndex = 10;
+            studentCombo.SelectedIndexChanged += studentCombo_SelectedIndexChanged;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(941, 606);
+            Controls.Add(studentCombo);
+            Controls.Add(PhoneTxt);
+            Controls.Add(LNameTxt);
+            Controls.Add(FNameTxt);
+            Controls.Add(Phone);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(UpdateStudentBtn);
+            Controls.Add(DeleteStudentBtn);
+            Controls.Add(CreateStudentBtn);
+            Controls.Add(studentDataView);
+            Name = "Form1";
+            Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)studentDataView).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        #endregion
+
+        private DataGridView studentDataView;
+        private Button CreateStudentBtn;
+        private Button DeleteStudentBtn;
+        private Button UpdateStudentBtn;
+        private Label label1;
+        private Label label2;
+        private Label Phone;
+        private TextBox FNameTxt;
+        private TextBox LNameTxt;
+        private TextBox PhoneTxt;
+        private ComboBox studentCombo;
+    }
+}

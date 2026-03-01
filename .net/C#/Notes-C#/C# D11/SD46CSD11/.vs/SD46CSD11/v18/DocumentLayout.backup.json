@@ -1,0 +1,104 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\ITI\\.net\\C#\\Notes-C#\\C# D11\\SD46CSD11\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9FEA394E-9CEC-4A19-AA40-DB7642F3B92A}|Company.DataAccessLayer\\Company.DataAccessLayer.csproj|f:\\iti\\.net\\c#\\notes-c#\\c# d11\\sd46csd11\\company.dataaccesslayer\\company.dataaccesslayer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{9FEA394E-9CEC-4A19-AA40-DB7642F3B92A}|Company.DataAccessLayer\\Company.DataAccessLayer.csproj|solutionrelative:company.dataaccesslayer\\company.dataaccesslayer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5EFD20B-4A69-4971-A646-4EB1B54C3207}|Company.PresentationLayer\\Company.PresentationLayer.csproj|F:\\ITI\\.net\\C#\\Notes-C#\\C# D11\\SD46CSD11\\company.presentationlayer\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D5EFD20B-4A69-4971-A646-4EB1B54C3207}|Company.PresentationLayer\\Company.PresentationLayer.csproj|solutionrelative:company.presentationlayer\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5EFD20B-4A69-4971-A646-4EB1B54C3207}|Company.PresentationLayer\\Company.PresentationLayer.csproj|f:\\iti\\.net\\c#\\notes-c#\\c# d11\\sd46csd11\\company.presentationlayer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5EFD20B-4A69-4971-A646-4EB1B54C3207}|Company.PresentationLayer\\Company.PresentationLayer.csproj|solutionrelative:company.presentationlayer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE0BCE25-D640-4D3E-BC6B-6FEB4CE9D1EC}|DisconnectedMode\\DisconnectedMode.csproj|f:\\iti\\.net\\c#\\notes-c#\\c# d11\\sd46csd11\\disconnectedmode\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE0BCE25-D640-4D3E-BC6B-6FEB4CE9D1EC}|DisconnectedMode\\DisconnectedMode.csproj|solutionrelative:disconnectedmode\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5EFD20B-4A69-4971-A646-4EB1B54C3207}|Company.PresentationLayer\\Company.PresentationLayer.csproj|f:\\iti\\.net\\c#\\notes-c#\\c# d11\\sd46csd11\\company.presentationlayer\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5EFD20B-4A69-4971-A646-4EB1B54C3207}|Company.PresentationLayer\\Company.PresentationLayer.csproj|solutionrelative:company.presentationlayer\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Company.DataAccessLayer",
+              "DocumentMoniker": "F:\\ITI\\.net\\C#\\Notes-C#\\C# D11\\SD46CSD11\\Company.DataAccessLayer\\Company.DataAccessLayer.csproj",
+              "RelativeDocumentMoniker": "Company.DataAccessLayer\\Company.DataAccessLayer.csproj",
+              "ToolTip": "F:\\ITI\\.net\\C#\\Notes-C#\\C# D11\\SD46CSD11\\Company.DataAccessLayer\\Company.DataAccessLayer.csproj",
+              "RelativeToolTip": "Company.DataAccessLayer\\Company.DataAccessLayer.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-02-26T13:54:44.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\ITI\\.net\\C#\\Notes-C#\\C# D11\\SD46CSD11\\Company.PresentationLayer\\Program.cs",
+              "RelativeDocumentMoniker": "Company.PresentationLayer\\Program.cs",
+              "ToolTip": "F:\\ITI\\.net\\C#\\Notes-C#\\C# D11\\SD46CSD11\\Company.PresentationLayer\\Program.cs",
+              "RelativeToolTip": "Company.PresentationLayer\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T13:54:27.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\ITI\\.net\\C#\\Notes-C#\\C# D11\\SD46CSD11\\DisconnectedMode\\Program.cs",
+              "RelativeDocumentMoniker": "DisconnectedMode\\Program.cs",
+              "ToolTip": "F:\\ITI\\.net\\C#\\Notes-C#\\C# D11\\SD46CSD11\\DisconnectedMode\\Program.cs",
+              "RelativeToolTip": "DisconnectedMode\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T13:54:22.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "F:\\ITI\\.net\\C#\\Notes-C#\\C# D11\\SD46CSD11\\Company.PresentationLayer\\Form1.cs",
+              "RelativeDocumentMoniker": "Company.PresentationLayer\\Form1.cs",
+              "ToolTip": "F:\\ITI\\.net\\C#\\Notes-C#\\C# D11\\SD46CSD11\\Company.PresentationLayer\\Form1.cs",
+              "RelativeToolTip": "Company.PresentationLayer\\Form1.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBAAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T13:53:55.133Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "F:\\ITI\\.net\\C#\\Notes-C#\\C# D11\\SD46CSD11\\Company.PresentationLayer\\Form1.cs",
+              "RelativeDocumentMoniker": "Company.PresentationLayer\\Form1.cs",
+              "ToolTip": "F:\\ITI\\.net\\C#\\Notes-C#\\C# D11\\SD46CSD11\\Company.PresentationLayer\\Form1.cs [Design]",
+              "RelativeToolTip": "Company.PresentationLayer\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T13:53:55.267Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

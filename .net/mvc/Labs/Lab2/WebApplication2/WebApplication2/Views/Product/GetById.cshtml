@@ -1,0 +1,44 @@
+﻿@using WebApplication2.ViewModel
+@model ProductReadDetailsVM
+
+
+
+
+
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="~/@Model.ImageUrl" alt="Card image cap">
+    <div class="card-body">
+  
+
+            <h4 class="card-title text-success fw-bold mb-3">
+                @Model.Name
+            </h4>
+
+            <p class="card-text mb-1">
+                <strong>Description:</strong> @Model.Description
+            </p>
+
+            <p class="card-text mb-1">
+                <strong>Category:</strong> @Model.Category
+            </p>
+
+            <p class="card-text mb-1">
+                <strong>Price:</strong>
+                <span class="text-success fw-bold">@Model.Price $</span>
+            </p>
+
+            <p class="card-text mb-3">
+                <strong>Stock:</strong> @Model.Count
+            </p>
+
+            <div class="d-flex gap-2">
+                <a href="/Product/Index" class="btn btn-outline-secondary w-50">
+                    Back
+                </a>
+
+                @* <a href="/Product/Edit/@Model.Id" class="btn btn-success w-50">
+                    Edit
+                </a> *@
+            </div>
+    </div>
+</div>

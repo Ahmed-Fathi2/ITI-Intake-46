@@ -1,0 +1,46 @@
+﻿@{
+    Layout = "_MyLayout";
+}
+
+
+@using WebApplication2.ViewModel
+@model IEnumerable<CategoryReadVM>
+
+<div class="d-flex justify-content-center  m-3">
+    <h2 class="text-success">  Category List</h2>
+</div>
+
+<hr />
+<a class="btn btn-success mb-2" href="~/Category/Create">Add New Category</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th class="text-center" scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var category in Model)
+        {
+
+            <tr>
+                <th scope="row">@category.Id</th>
+                <th scope="row">@category.Name</th>
+                <th scope="row">@category.Description</th>
+          
+                <th class="d-flex justify-content-center gap-1" scope="row">
+
+                    <a class="btn btn-primary" href="~/Category/GetById/@category.Id">ViewDetails</a>
+                    <a class="btn btn-secondary" href="~/Category/Edit/@category.Id">Edit</a>
+                    <a class="btn btn-outline-danger" href="~/Category/Delete/@category.Id">Delete</a>
+
+                </th>
+            </tr>
+        }
+
+    </tbody>
+</table>

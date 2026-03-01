@@ -73,5 +73,55 @@ namespace WebApplication1.Controllers
             }
         }
 
+
+      
+        public IActionResult Create()
+        {
+            return View();
+        }
+      
+        public IActionResult ActualCreate(Product product)
+        {
+            products.Add(product);
+            return RedirectToAction("GetAll");
+        }
+        
+        public IActionResult Edit(int id)
+        {
+            var proToUpdate = products.FirstOrDefault(e => e.Id == id);
+            if (proToUpdate == null)
+            {
+                return RedirectToAction("GetAll");
+            }
+            return View(proToUpdate);
+        }
+        
+       
+        public IActionResult ActualEdit(Product product)
+        {
+            var proToUpdate = products.FirstOrDefault(e => e.Id == product.Id);
+            if (proToUpdate == null)
+            {
+                return RedirectToAction("GetAll");
+            }
+            proToUpdate.Name = product.Name;
+            proToUpdate.Description = product.Description;
+            proToUpdate.Price = product.Price;
+            proToUpdate.Count = product.Count;
+
+            return RedirectToAction("GetAll");
+        }
+       
+        public IActionResult Delete(int id)
+        {
+            var proToDelete = products.FirstOrDefault(e => e.Id == id);
+            if (proToDelete == null)
+            {
+                return RedirectToAction("GetAll");
+            }
+            products.Remove(proToDelete);
+            return RedirectToAction("GetAll");
+        }
+
     }
 }

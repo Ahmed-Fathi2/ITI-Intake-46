@@ -57,3 +57,6 @@ D:\iti\.net\C#\ADO.Disconnected\ADO.Disconnected\obj\Debug\net9.0-windows\refint
 D:\iti\.net\C#\ADO.Disconnected\ADO.Disconnected\obj\Debug\net9.0-windows\ADO.Disconnected.pdb
 D:\iti\.net\C#\ADO.Disconnected\ADO.Disconnected\obj\Debug\net9.0-windows\ADO.Disconnected.genruntimeconfig.cache
 D:\iti\.net\C#\ADO.Disconnected\ADO.Disconnected\obj\Debug\net9.0-windows\ref\ADO.Disconnected.dll
+F:\ITI\.net\C#\Lab11\ADO.Disconnected\obj\Debug\net9.0-windows\ADO.Disconnected.dll
+F:\ITI\.net\C#\Lab11\ADO.Disconnected\obj\Debug\net9.0-windows\refint\ADO.Disconnected.dll
+F:\ITI\.net\C#\Lab11\ADO.Disconnected\obj\Debug\net9.0-windows\ADO.Disconnected.pdb

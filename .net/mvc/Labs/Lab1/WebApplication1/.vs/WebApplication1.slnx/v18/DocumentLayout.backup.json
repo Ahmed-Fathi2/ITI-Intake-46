@@ -3,24 +3,32 @@
   "WorkspaceRootPath": "F:\\ITI\\.net\\mvc\\Labs\\Lab1\\WebApplication1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{54F2ABDD-4B43-4ADE-AFA1-C12B05EFF8C6}|WebApplication1\\WebApplication1.csproj|f:\\iti\\.net\\mvc\\labs\\lab1\\webapplication1\\webapplication1\\views\\product\\getbyid.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{54F2ABDD-4B43-4ADE-AFA1-C12B05EFF8C6}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\product\\getbyid.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{1139E486-A36B-6B58-4965-3753D45010A4}|WebApplication1\\WebApplication1.csproj|f:\\iti\\.net\\mvc\\labs\\lab1\\webapplication1\\webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1139E486-A36B-6B58-4965-3753D45010A4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54F2ABDD-4B43-4ADE-AFA1-C12B05EFF8C6}|WebApplication1\\WebApplication1.csproj|f:\\iti\\.net\\mvc\\labs\\lab1\\webapplication1\\webapplication1\\views\\product\\getall.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{54F2ABDD-4B43-4ADE-AFA1-C12B05EFF8C6}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\product\\getall.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{1139E486-A36B-6B58-4965-3753D45010A4}|WebApplication1\\WebApplication1.csproj|f:\\iti\\.net\\mvc\\labs\\lab1\\webapplication1\\webapplication1\\views\\product\\getall.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1139E486-A36B-6B58-4965-3753D45010A4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\product\\getall.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54F2ABDD-4B43-4ADE-AFA1-C12B05EFF8C6}|WebApplication1\\WebApplication1.csproj|f:\\iti\\.net\\mvc\\labs\\lab1\\webapplication1\\webapplication1\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54F2ABDD-4B43-4ADE-AFA1-C12B05EFF8C6}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1139E486-A36B-6B58-4965-3753D45010A4}|WebApplication1\\WebApplication1.csproj|f:\\iti\\.net\\mvc\\labs\\lab1\\webapplication1\\webapplication1\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1139E486-A36B-6B58-4965-3753D45010A4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54F2ABDD-4B43-4ADE-AFA1-C12B05EFF8C6}|WebApplication1\\WebApplication1.csproj|f:\\iti\\.net\\mvc\\labs\\lab1\\webapplication1\\webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54F2ABDD-4B43-4ADE-AFA1-C12B05EFF8C6}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1139E486-A36B-6B58-4965-3753D45010A4}|WebApplication1\\WebApplication1.csproj|f:\\iti\\.net\\mvc\\labs\\lab1\\webapplication1\\webapplication1\\views\\product\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1139E486-A36B-6B58-4965-3753D45010A4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\product\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54F2ABDD-4B43-4ADE-AFA1-C12B05EFF8C6}|WebApplication1\\WebApplication1.csproj|f:\\iti\\.net\\mvc\\labs\\lab1\\webapplication1\\webapplication1\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54F2ABDD-4B43-4ADE-AFA1-C12B05EFF8C6}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1139E486-A36B-6B58-4965-3753D45010A4}|WebApplication1\\WebApplication1.csproj|f:\\iti\\.net\\mvc\\labs\\lab1\\webapplication1\\webapplication1\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1139E486-A36B-6B58-4965-3753D45010A4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1139E486-A36B-6B58-4965-3753D45010A4}|WebApplication1\\WebApplication1.csproj|f:\\iti\\.net\\mvc\\labs\\lab1\\webapplication1\\webapplication1\\views\\product\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1139E486-A36B-6B58-4965-3753D45010A4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\product\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1139E486-A36B-6B58-4965-3753D45010A4}|WebApplication1\\WebApplication1.csproj|f:\\iti\\.net\\mvc\\labs\\lab1\\webapplication1\\webapplication1\\views\\product\\getbyid.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1139E486-A36B-6B58-4965-3753D45010A4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\product\\getbyid.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,20 +38,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "F:\\ITI\\.net\\mvc\\Labs\\Lab1\\WebApplication1\\WebApplication1\\Views\\Product\\Edit.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Product\\Edit.cshtml",
+              "ToolTip": "F:\\ITI\\.net\\mvc\\Labs\\Lab1\\WebApplication1\\WebApplication1\\Views\\Product\\Edit.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Product\\Edit.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABAAAABnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-22T12:49:58.443Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "create.cshtml",
+              "DocumentMoniker": "F:\\ITI\\.net\\mvc\\Labs\\Lab1\\WebApplication1\\WebApplication1\\Views\\Product\\create.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Product\\create.cshtml",
+              "ToolTip": "F:\\ITI\\.net\\mvc\\Labs\\Lab1\\WebApplication1\\WebApplication1\\Views\\Product\\create.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Product\\create.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-22T12:49:12.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "GetById.cshtml",
               "DocumentMoniker": "F:\\ITI\\.net\\mvc\\Labs\\Lab1\\WebApplication1\\WebApplication1\\Views\\Product\\GetById.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Product\\GetById.cshtml",
-              "ToolTip": "F:\\ITI\\.net\\mvc\\Labs\\Lab1\\WebApplication1\\WebApplication1\\Views\\Product\\GetById.cshtml*",
-              "RelativeToolTip": "WebApplication1\\Views\\Product\\GetById.cshtml*",
+              "ToolTip": "F:\\ITI\\.net\\mvc\\Labs\\Lab1\\WebApplication1\\WebApplication1\\Views\\Product\\GetById.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Product\\GetById.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-21T13:44:16.063Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-21T13:44:16.063Z"
             },
             {
               "$type": "Document",
@@ -53,20 +86,20 @@
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Product\\GetAll.cshtml",
               "ToolTip": "F:\\ITI\\.net\\mvc\\Labs\\Lab1\\WebApplication1\\WebApplication1\\Views\\Product\\GetAll.cshtml",
               "RelativeToolTip": "WebApplication1\\Views\\Product\\GetAll.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAADwvzIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-02-21T13:43:54.94Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "F:\\ITI\\.net\\mvc\\Labs\\Lab1\\WebApplication1\\WebApplication1\\Program.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Program.cs",
-              "ToolTip": "F:\\ITI\\.net\\mvc\\Labs\\Lab1\\WebApplication1\\WebApplication1\\Program.cs*",
-              "RelativeToolTip": "WebApplication1\\Program.cs*",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBkAAAAqAAAAAAAAAA==",
+              "ToolTip": "F:\\ITI\\.net\\mvc\\Labs\\Lab1\\WebApplication1\\WebApplication1\\Program.cs",
+              "RelativeToolTip": "WebApplication1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-21T13:41:31.715Z",
               "EditorCaption": ""
@@ -77,9 +110,9 @@
               "Title": "ProductController.cs",
               "DocumentMoniker": "F:\\ITI\\.net\\mvc\\Labs\\Lab1\\WebApplication1\\WebApplication1\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Controllers\\ProductController.cs",
-              "ToolTip": "F:\\ITI\\.net\\mvc\\Labs\\Lab1\\WebApplication1\\WebApplication1\\Controllers\\ProductController.cs*",
-              "RelativeToolTip": "WebApplication1\\Controllers\\ProductController.cs*",
-              "ViewState": "AgIAADcAAAAAAAAAAAAQwEAAAAAAAAAAAAAAAA==",
+              "ToolTip": "F:\\ITI\\.net\\mvc\\Labs\\Lab1\\WebApplication1\\WebApplication1\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAkwG0AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-21T13:41:14.094Z",
               "EditorCaption": ""
@@ -92,7 +125,7 @@
               "RelativeDocumentMoniker": "WebApplication1\\Models\\Product.cs",
               "ToolTip": "F:\\ITI\\.net\\mvc\\Labs\\Lab1\\WebApplication1\\WebApplication1\\Models\\Product.cs",
               "RelativeToolTip": "WebApplication1\\Models\\Product.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAWwAoAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-21T13:39:48.557Z",
               "EditorCaption": ""

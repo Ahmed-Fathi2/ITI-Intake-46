@@ -23,7 +23,7 @@ namespace WebApplication1
             app.MapStaticAssets();
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}")
+                pattern: "{controller=Product}/{action=GetAll}/{id?}")
                 .WithStaticAssets();
 
             app.Run();

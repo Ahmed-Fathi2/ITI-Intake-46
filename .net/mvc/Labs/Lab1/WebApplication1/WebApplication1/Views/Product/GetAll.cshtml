@@ -2,6 +2,10 @@
     All Products
 </h1>
 
+<div class="mb-3">
+    <a href="~/Product/Create" class="btn btn-success">Add New Product</a>
+</div>
+
 <table class="table">
     <thead>
         <tr>
@@ -22,13 +26,75 @@
                 <td>@product.Description</td>
                 <td>@product.Price</td>
                 <td>@product.Count</td>
-                <td>
+
+                <td class="d-flex justify-content-center gap-2">
+
                     <a class="btn btn-primary" href="~/Product/GetById/@product.Id">
                         View Details
                     </a>
+
+                    <a class="btn btn-secondary" href="~/Product/Edit/@product.Id">
+                        Edit
+                    </a>
+
+                    @* <a class="btn btn-outline-danger" href="~/Product/Delete/@product.Id">
+                        Delete
+                    </a> *@
+
+                    <button type="button" class="btn btn-danger"
+                            data-bs-toggle="modal"
+                            data-bs-target="#deleteModal"
+                            data-productid="@product.Id"
+                            data-productname="@product.Name">
+                        Delete
+                    </button>
+
                 </td>
             </tr>
         }
     </tbody>
 </table>
+
+
+<!-- Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Delete Product</h5>
+            </div>
+
+            <div class="modal-body">
+                Are you sure you want to delete <strong id="productName"></strong>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-outline-danger" id="deleteBtn">Delete</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        const deleteModal = document.getElementById('deleteModal');
+
+        deleteModal.addEventListener('show.bs.modal', event => {
+            const button = event.relatedTarget;
+
+            const productId = button.getAttribute('data-productid');
+            const productName = button.getAttribute('data-productname');
+
+            deleteModal.querySelector('#productName').textContent = productName;
+
+            const deleteBtn = deleteModal.querySelector('#deleteBtn');
+            deleteBtn.onclick = function() {
+                window.location.href = `/Product/Delete/${productId}`;
+            }
+        });
+    </script>
+}
 
