@@ -1,0 +1,14 @@
+F:\ITI\.net\Linq\Lab2\Lab2\bin\Debug\net10.0\Lab2.exe
+F:\ITI\.net\Linq\Lab2\Lab2\bin\Debug\net10.0\Lab2.deps.json
+F:\ITI\.net\Linq\Lab2\Lab2\bin\Debug\net10.0\Lab2.runtimeconfig.json
+F:\ITI\.net\Linq\Lab2\Lab2\bin\Debug\net10.0\Lab2.dll
+F:\ITI\.net\Linq\Lab2\Lab2\bin\Debug\net10.0\Lab2.pdb
+F:\ITI\.net\Linq\Lab2\Lab2\obj\Debug\net10.0\Lab2.GeneratedMSBuildEditorConfig.editorconfig
+F:\ITI\.net\Linq\Lab2\Lab2\obj\Debug\net10.0\Lab2.AssemblyInfoInputs.cache
+F:\ITI\.net\Linq\Lab2\Lab2\obj\Debug\net10.0\Lab2.AssemblyInfo.cs
+F:\ITI\.net\Linq\Lab2\Lab2\obj\Debug\net10.0\Lab2.csproj.CoreCompileInputs.cache
+F:\ITI\.net\Linq\Lab2\Lab2\obj\Debug\net10.0\Lab2.dll
+F:\ITI\.net\Linq\Lab2\Lab2\obj\Debug\net10.0\refint\Lab2.dll
+F:\ITI\.net\Linq\Lab2\Lab2\obj\Debug\net10.0\Lab2.pdb
+F:\ITI\.net\Linq\Lab2\Lab2\obj\Debug\net10.0\Lab2.genruntimeconfig.cache
+F:\ITI\.net\Linq\Lab2\Lab2\obj\Debug\net10.0\ref\Lab2.dll

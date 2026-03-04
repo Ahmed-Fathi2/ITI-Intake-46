@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "F:\\ITI\\.net\\mvc\\Labs\\Lab2\\WebApplication5\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{34453AB6-B73C-ECB2-B4B6-6EF853CD37CF}|WebApplication5\\WebApplication5.csproj|f:\\iti\\.net\\mvc\\labs\\lab2\\webapplication5\\webapplication5\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34453AB6-B73C-ECB2-B4B6-6EF853CD37CF}|WebApplication5\\WebApplication5.csproj|solutionrelative:webapplication5\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{34453AB6-B73C-ECB2-B4B6-6EF853CD37CF}|WebApplication5\\WebApplication5.csproj|f:\\iti\\.net\\mvc\\labs\\lab2\\webapplication5\\webapplication5\\filters\\testfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{34453AB6-B73C-ECB2-B4B6-6EF853CD37CF}|WebApplication5\\WebApplication5.csproj|solutionrelative:webapplication5\\filters\\testfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{34453AB6-B73C-ECB2-B4B6-6EF853CD37CF}|WebApplication5\\WebApplication5.csproj|f:\\iti\\.net\\mvc\\labs\\lab2\\webapplication5\\webapplication5\\filters\\loggingfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{34453AB6-B73C-ECB2-B4B6-6EF853CD37CF}|WebApplication5\\WebApplication5.csproj|solutionrelative:webapplication5\\filters\\loggingfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34453AB6-B73C-ECB2-B4B6-6EF853CD37CF}|WebApplication5\\WebApplication5.csproj|f:\\iti\\.net\\mvc\\labs\\lab2\\webapplication5\\webapplication5\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34453AB6-B73C-ECB2-B4B6-6EF853CD37CF}|WebApplication5\\WebApplication5.csproj|solutionrelative:webapplication5\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{34453AB6-B73C-ECB2-B4B6-6EF853CD37CF}|WebApplication5\\WebApplication5.csproj|f:\\iti\\.net\\mvc\\labs\\lab2\\webapplication5\\webapplication5\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,11 +34,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "TestFilter.cs",
               "DocumentMoniker": "F:\\ITI\\.net\\mvc\\Labs\\Lab2\\WebApplication5\\WebApplication5\\Filters\\TestFilter.cs",
               "RelativeDocumentMoniker": "WebApplication5\\Filters\\TestFilter.cs",
@@ -59,12 +59,11 @@
               "RelativeToolTip": "WebApplication5\\Controllers\\HomeController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T20:52:37.608Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-28T20:52:37.608Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "FilterController.cs",
               "DocumentMoniker": "F:\\ITI\\.net\\mvc\\Labs\\Lab2\\WebApplication5\\WebApplication5\\Controllers\\FilterController.cs",
               "RelativeDocumentMoniker": "WebApplication5\\Controllers\\FilterController.cs",
@@ -72,12 +71,11 @@
               "RelativeToolTip": "WebApplication5\\Controllers\\FilterController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T20:45:33.016Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-28T20:45:33.016Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "LoggingFilter.cs",
               "DocumentMoniker": "F:\\ITI\\.net\\mvc\\Labs\\Lab2\\WebApplication5\\WebApplication5\\Filters\\LoggingFilter.cs",
               "RelativeDocumentMoniker": "WebApplication5\\Filters\\LoggingFilter.cs",
@@ -85,12 +83,11 @@
               "RelativeToolTip": "WebApplication5\\Filters\\LoggingFilter.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAUwB8AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T20:38:34.007Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-28T20:38:34.007Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "F:\\ITI\\.net\\mvc\\Labs\\Lab2\\WebApplication5\\WebApplication5\\Program.cs",
               "RelativeDocumentMoniker": "WebApplication5\\Program.cs",

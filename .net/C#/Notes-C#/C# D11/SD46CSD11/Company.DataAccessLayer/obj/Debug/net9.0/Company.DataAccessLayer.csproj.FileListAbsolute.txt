@@ -1,0 +1,13 @@
+C:\Users\engmt\source\repos\SD46CSD11\Company.DataAccessLayer\bin\Debug\net9.0\Company.DataAccessLayer.dll.config
+C:\Users\engmt\source\repos\SD46CSD11\Company.DataAccessLayer\bin\Debug\net9.0\Company.DataAccessLayer.deps.json
+C:\Users\engmt\source\repos\SD46CSD11\Company.DataAccessLayer\bin\Debug\net9.0\Company.DataAccessLayer.dll
+C:\Users\engmt\source\repos\SD46CSD11\Company.DataAccessLayer\bin\Debug\net9.0\Company.DataAccessLayer.pdb
+C:\Users\engmt\source\repos\SD46CSD11\Company.DataAccessLayer\obj\Debug\net9.0\Company.DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\engmt\source\repos\SD46CSD11\Company.DataAccessLayer\obj\Debug\net9.0\Company.DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\engmt\source\repos\SD46CSD11\Company.DataAccessLayer\obj\Debug\net9.0\Company.DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\engmt\source\repos\SD46CSD11\Company.DataAccessLayer\obj\Debug\net9.0\Company.DataAccessLayer.AssemblyInfo.cs
+C:\Users\engmt\source\repos\SD46CSD11\Company.DataAccessLayer\obj\Debug\net9.0\Company.DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\engmt\source\repos\SD46CSD11\Company.DataAccessLayer\obj\Debug\net9.0\Company.DataAccessLayer.dll
+C:\Users\engmt\source\repos\SD46CSD11\Company.DataAccessLayer\obj\Debug\net9.0\refint\Company.DataAccessLayer.dll
+C:\Users\engmt\source\repos\SD46CSD11\Company.DataAccessLayer\obj\Debug\net9.0\Company.DataAccessLayer.pdb
+C:\Users\engmt\source\repos\SD46CSD11\Company.DataAccessLayer\obj\Debug\net9.0\ref\Company.DataAccessLayer.dll

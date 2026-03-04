@@ -3,19 +3,27 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using WebApplication2.Data;
 using WebApplication2.Entities;
+using WebApplication2.Repositories.CategoryRepository;
+using WebApplication2.Repositories.ProductRepository;
 using WebApplication2.ViewModel;
 
 namespace WebApplication2.Controllers
 {
     public class ProductController : Controller
     {
-        private AppDbContext dbContext = new AppDbContext();
+       private readonly IProductRepository _productRepository;
+        private readonly ICategoryRepository _categoryRepository;
+
+        public ProductController(IProductRepository productRepository , ICategoryRepository categoryRepository)
+        {
+            _productRepository = productRepository;
+            _categoryRepository = categoryRepository;
+        }
 
         [HttpGet]
         public IActionResult Index()
         {
-            var productReadVM = dbContext.Products
-                .Include(x => x.Category)
+            var productReadVM = _productRepository.GetAll()
                 .Select(x => new ProductReadVM
                 {
                     Id = x.Id,
@@ -35,10 +43,8 @@ namespace WebApplication2.Controllers
         [HttpGet]
         public IActionResult GetById(int id)
         {
-            var product = dbContext.Products
-                            .Include(x => x.Category)
-                            .FirstOrDefault(x => x.Id == id);
-
+            var product = _productRepository.GetById(id);
+                                
             if (product is null)
             {
                 return RedirectToAction("Index");
@@ -64,7 +70,7 @@ namespace WebApplication2.Controllers
         public IActionResult Create()
         {
 
-            var categories = dbContext.Categories.Select(x => new SelectListItem
+            var categories = _categoryRepository.GetAll().Select(x => new SelectListItem
             {
                 Value = x.Id.ToString(),
                 Text = x.Name
@@ -86,7 +92,7 @@ namespace WebApplication2.Controllers
             if (!ModelState.IsValid)
             {
 
-                var categories = dbContext.Categories.Select(x => new SelectListItem
+                var categories = _categoryRepository.GetAll().Select(x => new SelectListItem
                 {
                     Value = x.Id.ToString(),
                     Text = x.Name
@@ -129,8 +135,8 @@ namespace WebApplication2.Controllers
 
             };
 
-            dbContext.Add(product);
-            dbContext.SaveChanges();
+            _productRepository.Insert(product);
+            _productRepository.Save();
 
             return RedirectToAction("Index");
 
@@ -141,12 +147,12 @@ namespace WebApplication2.Controllers
         public IActionResult Edit(int id)
         {
 
-            var product = dbContext.Products.Include(x => x.Category).FirstOrDefault(x => x.Id == id);
+            var product = _productRepository.GetById(id);
             if (product == null)
             {
                 return RedirectToAction("Index");
             }
-            var categories = dbContext.Categories.Select(x => new SelectListItem
+            var categories = _categoryRepository.GetAll().Select(x => new SelectListItem
             {
                 Value = x.Id.ToString(),
                 Text = x.Name
@@ -174,7 +180,7 @@ namespace WebApplication2.Controllers
         [HttpPost]
         public IActionResult Edit(ProductEditVM productEditVM)
         {
-            var product = dbContext.Products.FirstOrDefault(x=>x.Id == productEditVM.Id);
+            var product = _productRepository.GetById(productEditVM.Id);
             if (product == null)
             {
                 return RedirectToAction("Index");
@@ -185,7 +191,7 @@ namespace WebApplication2.Controllers
             product.Count= productEditVM.Count;
             product.CategoryId= productEditVM.CategoryId;
 
-            dbContext.SaveChanges();
+            _productRepository.Save();
             return RedirectToAction("Index");
 
         }
@@ -193,20 +199,20 @@ namespace WebApplication2.Controllers
         [HttpGet]
         public IActionResult Delete(int id)
         {
-            var product = dbContext.Products.Find(id);
+            var product = _productRepository.GetById(id);
             if(product is null)
             {
                 return RedirectToAction("Index");
             }
-            dbContext.Remove(product);
-            dbContext.SaveChanges();
+            _productRepository.Delete(product);
+            _productRepository.Save();
             return RedirectToAction("Index");
         }
 
         [AcceptVerbs("GET","POST")]
         public IActionResult IsNameExist(string name)
         {
-            var isNameExist=dbContext.Products.Any(x=>x.Name== name);
+            var isNameExist = _productRepository.Any(name);
 
             if (isNameExist)
             {

@@ -1,0 +1,25 @@
+1- public DbSet<Employee> Employees {get; set;}  XXXXX because of Set;
+
+	public DbSet<Employee> Employees =>Set<Employee>(); ----> only Get
+	public DbSet<Employee> Employees {get; }
+
+
+2- IAuditableEntity 
+
+3- Create Generic Repository 
+	----> Problems of G-Repo 
+
+
+
+	IEmployeeRepository   -------> IGenericRepository
+		|				|
+		|				|
+		|				|
+		^				^
+	EmployeeRepository    -------> GenericRepository
+
+4- _context.Update(TEntity) --> مش بنشتغل بيها لان بيعمل ابديت لكل القيم ولو قيم مش اتبعت هيعملها ب الديفلت فاليو
+
+5- مشكلة savechanges()  --- >UOW
+
+6- UnitOfwork

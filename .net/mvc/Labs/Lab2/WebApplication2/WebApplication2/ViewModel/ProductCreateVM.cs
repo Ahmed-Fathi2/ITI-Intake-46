@@ -9,7 +9,7 @@ namespace WebApplication2.ViewModel
     {
         [Required]
         [MinLength(3)]
-        [MaxLength(10)]
+        [MaxLength(100)]
         [Remote(action:"IsNameExist",controller: "Product", ErrorMessage ="Product Name Is already Exist !! ")]
         public string Name { get; set; } = string.Empty;
 

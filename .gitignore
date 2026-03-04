@@ -1,10 +1,47 @@
-bin/
-obj/
-*.bak
+# Ignore node modules
+node_modules/
+
+# Ignore all video files
 *.mp4
 *.mkv
-*.webm
 *.avi
+*.mov
+*.wmv
+*.flv
+*.webm
+*.mpeg
+*.mpg
+*.3gp
+*.url
+*.vsidx
+# (Optional) Ignore videos in any folder explicitly
+**/*.mp4
+**/*.mkv
+**/*.avi
+**/*.mov
+
+# Database backups
+*.bak
+*.backup
+*.sql
+*.dump
+*.db
+*.sqlite
+*.sqlite3
+
+# Compressed backups
 *.zip
 *.rar
-*.exe
+*.7z
+*.tar
+*.gz
+
+# Common backup folders
+backup/
+backups/
+db_backup/
+database_backup/
+
+#-----------
+
+03 Database/Session 10/Lab/AdventureWorks2012_Snap.ss

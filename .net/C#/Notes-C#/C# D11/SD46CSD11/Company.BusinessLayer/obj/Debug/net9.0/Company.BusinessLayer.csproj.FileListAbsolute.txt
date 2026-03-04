@@ -1,0 +1,16 @@
+C:\Users\engmt\source\repos\SD46CSD11\Company.BusinessLayer\bin\Debug\net9.0\Company.BusinessLayer.deps.json
+C:\Users\engmt\source\repos\SD46CSD11\Company.BusinessLayer\bin\Debug\net9.0\Company.BusinessLayer.dll
+C:\Users\engmt\source\repos\SD46CSD11\Company.BusinessLayer\bin\Debug\net9.0\Company.BusinessLayer.pdb
+C:\Users\engmt\source\repos\SD46CSD11\Company.BusinessLayer\bin\Debug\net9.0\Company.DataAccessLayer.dll
+C:\Users\engmt\source\repos\SD46CSD11\Company.BusinessLayer\bin\Debug\net9.0\Company.DataAccessLayer.pdb
+C:\Users\engmt\source\repos\SD46CSD11\Company.BusinessLayer\bin\Debug\net9.0\Company.DataAccessLayer.dll.config
+C:\Users\engmt\source\repos\SD46CSD11\Company.BusinessLayer\obj\Debug\net9.0\Company.BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\engmt\source\repos\SD46CSD11\Company.BusinessLayer\obj\Debug\net9.0\Company.BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\engmt\source\repos\SD46CSD11\Company.BusinessLayer\obj\Debug\net9.0\Company.BusinessLayer.AssemblyInfoInputs.cache
+C:\Users\engmt\source\repos\SD46CSD11\Company.BusinessLayer\obj\Debug\net9.0\Company.BusinessLayer.AssemblyInfo.cs
+C:\Users\engmt\source\repos\SD46CSD11\Company.BusinessLayer\obj\Debug\net9.0\Company.BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\engmt\source\repos\SD46CSD11\Company.BusinessLayer\obj\Debug\net9.0\Company..BB3567A5.Up2Date
+C:\Users\engmt\source\repos\SD46CSD11\Company.BusinessLayer\obj\Debug\net9.0\Company.BusinessLayer.dll
+C:\Users\engmt\source\repos\SD46CSD11\Company.BusinessLayer\obj\Debug\net9.0\refint\Company.BusinessLayer.dll
+C:\Users\engmt\source\repos\SD46CSD11\Company.BusinessLayer\obj\Debug\net9.0\Company.BusinessLayer.pdb
+C:\Users\engmt\source\repos\SD46CSD11\Company.BusinessLayer\obj\Debug\net9.0\ref\Company.BusinessLayer.dll

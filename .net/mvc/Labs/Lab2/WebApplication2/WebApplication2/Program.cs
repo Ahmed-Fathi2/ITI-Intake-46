@@ -1,3 +1,8 @@
+using Microsoft.EntityFrameworkCore;
+using WebApplication2.Data;
+using WebApplication2.Repositories.CategoryRepository;
+using WebApplication2.Repositories.ProductRepository;
+
 namespace WebApplication2
 {
     public class Program
@@ -8,6 +13,14 @@ namespace WebApplication2
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddScoped<IProductRepository, ProductRepository>();
+            builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+
+            builder.Services.AddDbContext<AppDbContext>(option =>
+            {
+                option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+            });
 
             var app = builder.Build();
 

@@ -3,18 +3,24 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using WebApplication2.Data;
 using WebApplication2.Entities;
+using WebApplication2.Repositories.CategoryRepository;
 using WebApplication2.ViewModel;
 
 namespace WebApplication2.Controllers
 {
     public class CategoryController : Controller
     {
-        private AppDbContext dbContext = new AppDbContext();
+       private readonly ICategoryRepository _categoryRepository;
+
+        public CategoryController(ICategoryRepository categoryRepository)
+        {
+            _categoryRepository = categoryRepository;
+        }
 
         [HttpGet]
         public IActionResult Index()
         {
-            var categoryReadVM = dbContext.Categories
+            var categoryReadVM = _categoryRepository.GetAll()
                 .Select(x => new CategoryReadVM
                 {
                     Id = x.Id,
@@ -31,8 +37,7 @@ namespace WebApplication2.Controllers
         [HttpGet]
         public IActionResult GetById(int id)
         {
-            var category = dbContext.Categories
-                            .FirstOrDefault(x => x.Id == id);
+            var category = _categoryRepository.GetById(id);
 
             if (category is null)
             {
@@ -74,8 +79,8 @@ namespace WebApplication2.Controllers
 
             };
 
-            dbContext.Add(category);
-            dbContext.SaveChanges();
+            _categoryRepository.Insert(category);
+            _categoryRepository.Save();
 
             return RedirectToAction("Index");
 
@@ -86,7 +91,7 @@ namespace WebApplication2.Controllers
         public IActionResult Edit(int id)
         {
 
-            var category = dbContext.Categories.FirstOrDefault(x => x.Id == id);
+            var category = _categoryRepository.GetById(id);
             if (category == null)
             {
                 return RedirectToAction("Index");
@@ -110,16 +115,16 @@ namespace WebApplication2.Controllers
         [HttpPost]
         public IActionResult Edit(CategoryEditVM categoryEditVM)
         {
-            var category = dbContext.Categories.FirstOrDefault(x => x.Id == categoryEditVM.Id);
+            var category = _categoryRepository.GetById(categoryEditVM.Id);
             if (category == null)
             {
                 return RedirectToAction("Index");
             }
             category.Name = categoryEditVM.Name;
             category.Description = categoryEditVM.Description;
-           
 
-            dbContext.SaveChanges();
+
+            _categoryRepository.Save();
             return RedirectToAction("Index");
 
         }
@@ -127,13 +132,13 @@ namespace WebApplication2.Controllers
         [HttpGet]
         public IActionResult Delete(int id)
         {
-            var category = dbContext.Categories.Find(id);
+            var category = _categoryRepository.GetById(id);
             if (category is null)
             {
                 return RedirectToAction("Index");
             }
-            dbContext.Remove(category);
-            dbContext.SaveChanges();
+            _categoryRepository.Delete(category);
+            _categoryRepository.Save();
             return RedirectToAction("Index");
         }
     }
