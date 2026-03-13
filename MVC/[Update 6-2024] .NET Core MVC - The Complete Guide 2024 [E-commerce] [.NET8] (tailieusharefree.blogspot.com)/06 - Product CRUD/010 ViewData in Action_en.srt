@@ -1,0 +1,268 @@
+1
+00:00:02,040 --> 00:00:04,920
+Bhrugen: We have seen ViewBag in the last video.
+
+2
+00:00:04,920 --> 00:00:08,730
+Next, we want to see how we can accomplish the same things
+
+3
+00:00:08,730 --> 00:00:10,830
+with ViewData.
+
+4
+00:00:10,830 --> 00:00:13,110
+ViewData also transfers the data
+
+5
+00:00:13,110 --> 00:00:16,680
+from Controller to View, and not vice-versa.
+
+6
+00:00:16,680 --> 00:00:19,710
+And again, it is ideal for the situation
+
+7
+00:00:19,710 --> 00:00:23,790
+where the temporary data is not in a model.
+
+8
+00:00:23,790 --> 00:00:27,480
+ViewData is derived from ViewDataDictionary,
+
+9
+00:00:27,480 --> 00:00:29,910
+which is a dictionary type.
+
+10
+00:00:29,910 --> 00:00:34,050
+ViewData value must be type casted before use.
+
+11
+00:00:34,050 --> 00:00:38,070
+Like, if we go back, when we were using ViewBag right here,
+
+12
+00:00:38,070 --> 00:00:40,740
+we did not have to cast that data.
+
+13
+00:00:40,740 --> 00:00:42,720
+It was all dynamic.
+
+14
+00:00:42,720 --> 00:00:44,790
+But when we use ViewData,
+
+15
+00:00:44,790 --> 00:00:48,483
+we will have to cast that before we use the value.
+
+16
+00:00:49,560 --> 00:00:52,560
+And lastly, the ViewBags life only lasts
+
+17
+00:00:52,560 --> 00:00:55,230
+during the current http request,
+
+18
+00:00:55,230 --> 00:00:59,430
+and ViewData values will be null if redirection occurs,
+
+19
+00:00:59,430 --> 00:01:01,500
+similar to ViewBag.
+
+20
+00:01:01,500 --> 00:01:04,560
+So there are quite a few things that are similar here
+
+21
+00:01:04,560 --> 00:01:07,560
+but let us see that with an example.
+
+22
+00:01:07,560 --> 00:01:10,320
+First, we have to go back to the Controller.
+
+23
+00:01:10,320 --> 00:01:12,390
+Let me comment this out.
+
+24
+00:01:12,390 --> 00:01:14,670
+Copy that and paste it here.
+
+25
+00:01:14,670 --> 00:01:18,990
+Rather than ViewBag, we want to use ViewData.
+
+26
+00:01:18,990 --> 00:01:21,930
+If you use dot there, it will not work.
+
+27
+00:01:21,930 --> 00:01:24,930
+You have to define that in a square bracket.
+
+28
+00:01:24,930 --> 00:01:28,353
+And what is the key value? Like in a dictionary.
+
+29
+00:01:29,460 --> 00:01:32,733
+That is how you assign a value to ViewData.
+
+30
+00:01:33,810 --> 00:01:38,010
+Now the question is how do you access that inside view?
+
+31
+00:01:38,010 --> 00:01:39,630
+When we were using ViewBag,
+
+32
+00:01:39,630 --> 00:01:41,940
+we did not have to do conversion,
+
+33
+00:01:41,940 --> 00:01:46,260
+but with ViewData we will have to do some conversion here.
+
+34
+00:01:46,260 --> 00:01:51,260
+So we will use the @ sign and we will save ViewData here.
+
+35
+00:01:51,720 --> 00:01:54,990
+Write the key name, let me go back and copy that
+
+36
+00:01:54,990 --> 00:01:57,540
+to avoid any spelling mistake.
+
+37
+00:01:57,540 --> 00:02:00,900
+And then we have to explicitly convert that.
+
+38
+00:02:00,900 --> 00:02:02,760
+So we will say as,
+
+39
+00:02:02,760 --> 00:02:07,203
+and this will be an IEnumerable of SelectListItem.
+
+40
+00:02:09,180 --> 00:02:11,280
+With that, the errors go away
+
+41
+00:02:11,280 --> 00:02:15,810
+and you can see how ViewData might be a little inconvenient
+
+42
+00:02:15,810 --> 00:02:18,033
+as compared to ViewBag.
+
+43
+00:02:18,900 --> 00:02:22,230
+But with that, everything should work the same.
+
+44
+00:02:22,230 --> 00:02:26,223
+Let me restart the application and see that in action.
+
+45
+00:02:28,170 --> 00:02:31,680
+We go to create new product, and perfect.
+
+46
+00:02:31,680 --> 00:02:33,570
+That is functional.
+
+47
+00:02:33,570 --> 00:02:36,370
+But there is one more thing that you should be aware of.
+
+48
+00:02:37,230 --> 00:02:42,230
+ViewBag internally inserts data into the ViewBagDictionary.
+
+49
+00:02:42,450 --> 00:02:44,370
+So the key of ViewData,
+
+50
+00:02:44,370 --> 00:02:47,880
+and property of ViewBag must not match
+
+51
+00:02:47,880 --> 00:02:50,883
+because both of them will go to the same entity.
+
+52
+00:02:52,830 --> 00:02:55,170
+Now, before I wrap up this video,
+
+53
+00:02:55,170 --> 00:02:57,570
+previously we have seen TempData,
+
+54
+00:02:57,570 --> 00:02:59,820
+which are used to generate alerts,
+
+55
+00:02:59,820 --> 00:03:03,030
+and TempData can be used to store data
+
+56
+00:03:03,030 --> 00:03:06,420
+between two consecutive requests.
+
+57
+00:03:06,420 --> 00:03:10,590
+TempData internally use Session to store the data.
+
+58
+00:03:10,590 --> 00:03:13,740
+So think of it as a short lived session,
+
+59
+00:03:13,740 --> 00:03:17,370
+which will only exist for one request.
+
+60
+00:03:17,370 --> 00:03:21,780
+Now, TempData value must also be type cast before use.
+
+61
+00:03:21,780 --> 00:03:26,780
+So check for null values to avoid any runtime errors.
+
+62
+00:03:26,970 --> 00:03:29,220
+Finally, as you already know,
+
+63
+00:03:29,220 --> 00:03:33,330
+TempData can be used to store only onetime message
+
+64
+00:03:33,330 --> 00:03:36,420
+like error messages or validation message.
+
+65
+00:03:36,420 --> 00:03:41,130
+And if you refresh the page after that, it will go away.
+
+66
+00:03:41,130 --> 00:03:44,640
+So that gives you a brief idea on all the differences
+
+67
+00:03:44,640 --> 00:03:48,180
+between Viewbag, ViewData, and TempData.
+

@@ -1,0 +1,232 @@
+1
+00:00:01,980 --> 00:00:03,750
+Instructor: Now that the image functionality
+
+2
+00:00:03,750 --> 00:00:07,770
+for creating and updating is working as expected,
+
+3
+00:00:07,770 --> 00:00:11,220
+what I want to do is when we run the application,
+
+4
+00:00:11,220 --> 00:00:15,450
+I want to display all of the product on the absurd page.
+
+5
+00:00:15,450 --> 00:00:17,940
+So if the product has any image
+
+6
+00:00:17,940 --> 00:00:20,880
+when a user goes to update the product,
+
+7
+00:00:20,880 --> 00:00:23,680
+I want to display all the existing image
+
+8
+00:00:24,660 --> 00:00:26,820
+and that we will have to go
+
+9
+00:00:26,820 --> 00:00:31,820
+in the web project product we have observed
+
+10
+00:00:32,310 --> 00:00:36,510
+and we have the image tag that was there before,
+
+11
+00:00:36,510 --> 00:00:39,300
+but now we will have a collection of image
+
+12
+00:00:39,300 --> 00:00:43,500
+because there can be more than one image for a product.
+
+13
+00:00:43,500 --> 00:00:46,140
+We basically have to populate that
+
+14
+00:00:46,140 --> 00:00:49,770
+and pass it on to our view from the controller,
+
+15
+00:00:49,770 --> 00:00:51,840
+which is product controller.
+
+16
+00:00:51,840 --> 00:00:54,780
+We have the absurd get action method.
+
+17
+00:00:54,780 --> 00:00:56,370
+When we are updating,
+
+18
+00:00:56,370 --> 00:00:58,893
+we need to retrieve that product image.
+
+19
+00:00:59,880 --> 00:01:00,870
+If we take a look
+
+20
+00:01:00,870 --> 00:01:05,040
+at our repository inside the repository here,
+
+21
+00:01:05,040 --> 00:01:08,280
+we added something called as include properties
+
+22
+00:01:08,280 --> 00:01:11,073
+where we can include navigation property.
+
+23
+00:01:12,360 --> 00:01:14,310
+So in the include property here,
+
+24
+00:01:14,310 --> 00:01:18,520
+we can pass that as a string and that will be the model name
+
+25
+00:01:19,500 --> 00:01:21,783
+and that will be product images.
+
+26
+00:01:23,070 --> 00:01:26,760
+So here, where we are getting an individual product,
+
+27
+00:01:26,760 --> 00:01:29,880
+we can also pass include properties.
+
+28
+00:01:29,880 --> 00:01:32,493
+We want to include the product images,
+
+29
+00:01:33,810 --> 00:01:37,860
+name here must exactly match the name that we have
+
+30
+00:01:37,860 --> 00:01:41,490
+in DB context right here.
+
+31
+00:01:41,490 --> 00:01:45,420
+So if it is plural, including the casing as well.
+
+32
+00:01:45,420 --> 00:01:48,360
+P is capital and I is capital,
+
+33
+00:01:48,360 --> 00:01:51,360
+so we will have that exact name here.
+
+34
+00:01:51,360 --> 00:01:54,693
+If that is any different, things will not work.
+
+35
+00:01:55,740 --> 00:01:58,530
+With that, it will include the product images
+
+36
+00:01:58,530 --> 00:02:03,120
+for that product automatically using EF corp.
+
+37
+00:02:03,120 --> 00:02:07,440
+Once we have that navigation property in product populated,
+
+38
+00:02:07,440 --> 00:02:12,270
+we can iterate in for each loop and display all the product.
+
+39
+00:02:12,270 --> 00:02:13,710
+But first, we need to check
+
+40
+00:02:13,710 --> 00:02:18,710
+if model.product.productimages is not known,
+
+41
+00:02:18,870 --> 00:02:21,570
+then we will have a for each loop
+
+42
+00:02:21,570 --> 00:02:25,200
+and we will iterate through variable image
+
+43
+00:02:25,200 --> 00:02:29,133
+in model.product.productimages.
+
+44
+00:02:30,240 --> 00:02:32,730
+Inside there, let me add a div
+
+45
+00:02:32,730 --> 00:02:36,750
+and between that div, we will display the image.
+
+46
+00:02:36,750 --> 00:02:39,540
+So I will cut this image from here,
+
+47
+00:02:39,540 --> 00:02:44,540
+paste it right there and we need the image url.
+
+48
+00:02:45,000 --> 00:02:50,000
+That will be inside image.imageurl .
+
+49
+00:02:50,520 --> 00:02:51,960
+With that configured,
+
+50
+00:02:51,960 --> 00:02:55,743
+let me run the application and see if that works.
+
+51
+00:02:57,780 --> 00:03:01,080
+We will go to product here, add it.
+
+52
+00:03:01,080 --> 00:03:05,100
+I believe we had a few products there and perfect.
+
+53
+00:03:05,100 --> 00:03:08,370
+We see all the three product go back here,
+
+54
+00:03:08,370 --> 00:03:13,370
+dark skies and I did not add any image there,
+
+55
+00:03:13,890 --> 00:03:17,700
+but the new product that we added, perfect.
+
+56
+00:03:17,700 --> 00:03:19,950
+We have the two image.
+
+57
+00:03:19,950 --> 00:03:23,130
+We are able to display all the image for product
+
+58
+00:03:23,130 --> 00:03:25,083
+on the update product page.
+

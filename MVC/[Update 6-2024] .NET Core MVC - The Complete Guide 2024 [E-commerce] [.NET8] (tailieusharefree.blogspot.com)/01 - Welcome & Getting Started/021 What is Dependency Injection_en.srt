@@ -1,0 +1,580 @@
+1
+00:00:02,160 --> 00:00:04,590
+Bhrugen: What is dependency injection?
+
+2
+00:00:04,590 --> 00:00:06,870
+It is a common interview question,
+
+3
+00:00:06,870 --> 00:00:10,590
+and explaining that with a real world example will show
+
+4
+00:00:10,590 --> 00:00:13,830
+that you really understand the concept.
+
+5
+00:00:13,830 --> 00:00:17,820
+My name is Bhrugen and welcome to Dot Net Mastery.
+
+6
+00:00:17,820 --> 00:00:21,960
+If you enjoy free content related to .NET programming,
+
+7
+00:00:21,960 --> 00:00:24,690
+make sure to subscribe to the channel.
+
+8
+00:00:24,690 --> 00:00:29,460
+That way you will be notified when new content is uploaded.
+
+9
+00:00:29,460 --> 00:00:31,290
+Now, back to the main question,
+
+10
+00:00:31,290 --> 00:00:34,470
+what exactly is dependency injection?
+
+11
+00:00:34,470 --> 00:00:38,700
+Dependency injection is a design pattern in which a class
+
+12
+00:00:38,700 --> 00:00:43,290
+or object has its dependent classes injected
+
+13
+00:00:43,290 --> 00:00:45,573
+rather than directly creating them.
+
+14
+00:00:46,650 --> 00:00:50,100
+This is done so that we do not have to create, manage,
+
+15
+00:00:50,100 --> 00:00:51,900
+and dispose the object,
+
+16
+00:00:51,900 --> 00:00:55,413
+and it improves the loose coupling between classes.
+
+17
+00:00:56,610 --> 00:00:58,800
+Now, that is too much technical.
+
+18
+00:00:58,800 --> 00:00:59,910
+Do not worry.
+
+19
+00:00:59,910 --> 00:01:03,480
+Let me simplify that with a real world example
+
+20
+00:01:03,480 --> 00:01:06,243
+that almost everyone can relate to.
+
+21
+00:01:07,260 --> 00:01:11,760
+In this example, we have Bob here who wants to go on hiking.
+
+22
+00:01:11,760 --> 00:01:13,380
+Now, it is a long hike,
+
+23
+00:01:13,380 --> 00:01:16,380
+and for that he will require many supplies
+
+24
+00:01:16,380 --> 00:01:19,410
+like maps, flashlight, protein bars,
+
+25
+00:01:19,410 --> 00:01:21,120
+and much more.
+
+26
+00:01:21,120 --> 00:01:24,360
+So he places all of them in his backpack,
+
+27
+00:01:24,360 --> 00:01:27,240
+and next day when he goes on the hiking,
+
+28
+00:01:27,240 --> 00:01:30,000
+he takes the backpack with him.
+
+29
+00:01:30,000 --> 00:01:33,420
+The bag that he has acts as an container
+
+30
+00:01:33,420 --> 00:01:36,030
+so during the hike when he needs anything,
+
+31
+00:01:36,030 --> 00:01:39,273
+he can take it out of the container and use them.
+
+32
+00:01:40,170 --> 00:01:42,150
+This is the simple concept.
+
+33
+00:01:42,150 --> 00:01:45,090
+You put the items that you need in a container
+
+34
+00:01:45,090 --> 00:01:46,380
+and when you need them,
+
+35
+00:01:46,380 --> 00:01:48,960
+they are already present in the container
+
+36
+00:01:48,960 --> 00:01:52,143
+so you can directly fetch them from the container.
+
+37
+00:01:53,130 --> 00:01:56,250
+Now, that is a little too easy to understand,
+
+38
+00:01:56,250 --> 00:01:59,610
+but how does it relate to programming world?
+
+39
+00:01:59,610 --> 00:02:01,710
+To show that, let me elaborate
+
+40
+00:02:01,710 --> 00:02:04,743
+a situation without dependency injection.
+
+41
+00:02:05,790 --> 00:02:08,520
+In our application, we have three pages,
+
+42
+00:02:08,520 --> 00:02:12,600
+and we have some common functionality that we want to use
+
+43
+00:02:12,600 --> 00:02:15,480
+across all the three pages,
+
+44
+00:02:15,480 --> 00:02:17,640
+like we want to send emails
+
+45
+00:02:17,640 --> 00:02:20,280
+and we want to access our database
+
+46
+00:02:20,280 --> 00:02:23,280
+in all the three pages that we have.
+
+47
+00:02:23,280 --> 00:02:27,240
+So first, let's say we have to access database.
+
+48
+00:02:27,240 --> 00:02:28,770
+In order to do that,
+
+49
+00:02:28,770 --> 00:02:32,640
+what we typically do is create object of our class,
+
+50
+00:02:32,640 --> 00:02:35,670
+which is used to access the database.
+
+51
+00:02:35,670 --> 00:02:39,090
+Let me call that DB for this example.
+
+52
+00:02:39,090 --> 00:02:42,420
+Then we might call some method inside that object
+
+53
+00:02:42,420 --> 00:02:44,070
+and retrieve data.
+
+54
+00:02:44,070 --> 00:02:45,390
+Once we are done,
+
+55
+00:02:45,390 --> 00:02:48,663
+we will be disposing that object that was created.
+
+56
+00:02:49,590 --> 00:02:52,650
+This object creation logic we will have to write
+
+57
+00:02:52,650 --> 00:02:54,630
+in all the three pages
+
+58
+00:02:54,630 --> 00:02:58,710
+and same thing we will have to do with email, as well.
+
+59
+00:02:58,710 --> 00:03:01,710
+By doing that, we are actually solving the issue
+
+60
+00:03:01,710 --> 00:03:05,730
+of having email and database access in our page.
+
+61
+00:03:05,730 --> 00:03:07,380
+But as you can see,
+
+62
+00:03:07,380 --> 00:03:12,240
+we have a lot of duplicate code that is being written here,
+
+63
+00:03:12,240 --> 00:03:16,770
+and when we design, we try to build the perfect solution.
+
+64
+00:03:16,770 --> 00:03:19,500
+But sadly, most of the time we do not know
+
+65
+00:03:19,500 --> 00:03:22,620
+the complete future of a project.
+
+66
+00:03:22,620 --> 00:03:25,440
+It could very well happen that in future,
+
+67
+00:03:25,440 --> 00:03:27,360
+because of some reason,
+
+68
+00:03:27,360 --> 00:03:31,530
+you might have to create a new class for sending email
+
+69
+00:03:31,530 --> 00:03:34,920
+or maybe a new data access class.
+
+70
+00:03:34,920 --> 00:03:37,440
+What happens in that case?
+
+71
+00:03:37,440 --> 00:03:39,720
+Well, it is simple for now.
+
+72
+00:03:39,720 --> 00:03:42,720
+In all the pages where we had the old object,
+
+73
+00:03:42,720 --> 00:03:45,210
+we will replace that with the new class.
+
+74
+00:03:45,210 --> 00:03:49,080
+Like in this case we have Db_new class
+
+75
+00:03:49,080 --> 00:03:50,180
+and we have Email_new.
+
+76
+00:03:52,410 --> 00:03:54,180
+And when we think about that,
+
+77
+00:03:54,180 --> 00:03:57,000
+it does not seem like a big issue.
+
+78
+00:03:57,000 --> 00:04:00,480
+That is because we only have three pages right now.
+
+79
+00:04:00,480 --> 00:04:05,480
+But what if your application had 30 pages or 300 pages?
+
+80
+00:04:05,790 --> 00:04:08,880
+You will have to modify that in all the pages
+
+81
+00:04:08,880 --> 00:04:11,070
+and on top of that you will be dealing with
+
+82
+00:04:11,070 --> 00:04:13,470
+creating the object, managing,
+
+83
+00:04:13,470 --> 00:04:14,853
+and disposing them.
+
+84
+00:04:15,750 --> 00:04:18,300
+That is a time-consuming effort
+
+85
+00:04:18,300 --> 00:04:21,093
+when we have to do that in all the pages.
+
+86
+00:04:22,320 --> 00:04:25,440
+So what is the solution to avoid all of this
+
+87
+00:04:25,440 --> 00:04:28,620
+and get an optimal architecture?
+
+88
+00:04:28,620 --> 00:04:31,833
+The answer to that is dependency injection.
+
+89
+00:04:32,850 --> 00:04:36,780
+Let me show you how the same situation would look like
+
+90
+00:04:36,780 --> 00:04:39,420
+with dependency injection.
+
+91
+00:04:39,420 --> 00:04:41,820
+Again, we would have the three pages
+
+92
+00:04:41,820 --> 00:04:45,630
+and we would have email and database functionality.
+
+93
+00:04:45,630 --> 00:04:49,680
+These are common things that we had before, as well,
+
+94
+00:04:49,680 --> 00:04:52,470
+but right now we would have something special,
+
+95
+00:04:52,470 --> 00:04:56,190
+which is a dependency injection container,
+
+96
+00:04:56,190 --> 00:04:59,460
+and in that container we will register both email
+
+97
+00:04:59,460 --> 00:05:01,380
+and database service.
+
+98
+00:05:01,380 --> 00:05:06,060
+So there we will have an interface for IEmail and IDb
+
+99
+00:05:06,060 --> 00:05:09,390
+and we will have the implementation inside email
+
+100
+00:05:09,390 --> 00:05:10,713
+and DB class.
+
+101
+00:05:11,670 --> 00:05:15,270
+When any page would access these functionalities,
+
+102
+00:05:15,270 --> 00:05:20,270
+they would ask for an implementation of IDb or IEmail.
+
+103
+00:05:20,790 --> 00:05:23,430
+The pages do not know what implementation
+
+104
+00:05:23,430 --> 00:05:25,260
+will be given to them.
+
+105
+00:05:25,260 --> 00:05:28,350
+Dependency injection container is responsible
+
+106
+00:05:28,350 --> 00:05:29,553
+for all of that.
+
+107
+00:05:30,510 --> 00:05:33,660
+So what the framework will do is when a page request
+
+108
+00:05:33,660 --> 00:05:36,780
+implementation of email interface,
+
+109
+00:05:36,780 --> 00:05:39,000
+it will look in the container to find out
+
+110
+00:05:39,000 --> 00:05:44,000
+that email interface is implemented inside the email class,
+
+111
+00:05:44,250 --> 00:05:47,460
+so it will automatically create the object
+
+112
+00:05:47,460 --> 00:05:49,860
+and pass it on to the page.
+
+113
+00:05:49,860 --> 00:05:51,810
+That way we do not have to deal with
+
+114
+00:05:51,810 --> 00:05:54,120
+creating object, disposing,
+
+115
+00:05:54,120 --> 00:05:56,313
+or managing that in our page.
+
+116
+00:05:57,510 --> 00:05:59,430
+Pages will look very clean
+
+117
+00:05:59,430 --> 00:06:01,890
+because they will just have the interface
+
+118
+00:06:01,890 --> 00:06:03,990
+and implementation is provided
+
+119
+00:06:03,990 --> 00:06:06,513
+by the dependency injection container.
+
+120
+00:06:07,380 --> 00:06:09,060
+The best thing is in future,
+
+121
+00:06:09,060 --> 00:06:12,420
+if you have to change or replace the implementation,
+
+122
+00:06:12,420 --> 00:06:15,270
+you do not have to do in all the places
+
+123
+00:06:15,270 --> 00:06:17,910
+because you only registered the implementation
+
+124
+00:06:17,910 --> 00:06:19,410
+in the container,
+
+125
+00:06:19,410 --> 00:06:22,230
+so only in that file you will have to go
+
+126
+00:06:22,230 --> 00:06:24,813
+and replace with the new implementation.
+
+127
+00:06:25,680 --> 00:06:27,570
+So our DB and email,
+
+128
+00:06:27,570 --> 00:06:31,650
+we just need to replace them with DB new and email new
+
+129
+00:06:31,650 --> 00:06:34,170
+and all the pages will automatically get
+
+130
+00:06:34,170 --> 00:06:35,943
+the new implementation.
+
+131
+00:06:37,200 --> 00:06:38,970
+So with that, you can see email
+
+132
+00:06:38,970 --> 00:06:43,120
+and database are now loosely coupled with the other classes
+
+133
+00:06:44,400 --> 00:06:48,090
+and that is the beauty of dependency injection.
+
+134
+00:06:48,090 --> 00:06:50,640
+Now, dependency injection is built in
+
+135
+00:06:50,640 --> 00:06:53,460
+if you are using .NET framework,
+
+136
+00:06:53,460 --> 00:06:56,100
+so you just have to register the service
+
+137
+00:06:56,100 --> 00:07:00,270
+and .NET framework will take care of everything else.
+
+138
+00:07:00,270 --> 00:07:04,470
+I hope with that short video you have a better understanding
+
+139
+00:07:04,470 --> 00:07:06,870
+of dependency injection.
+
+140
+00:07:06,870 --> 00:07:08,670
+If you enjoyed the video,
+
+141
+00:07:08,670 --> 00:07:10,650
+make sure to like the video
+
+142
+00:07:10,650 --> 00:07:14,280
+and leave a comment if you have any other question
+
+143
+00:07:14,280 --> 00:07:17,580
+or topics that I should cover next.
+
+144
+00:07:17,580 --> 00:07:21,690
+You can check out more free videos on dotnetmastery.com.
+
+145
+00:07:21,690 --> 00:07:23,763
+Until then, happy coding.
+

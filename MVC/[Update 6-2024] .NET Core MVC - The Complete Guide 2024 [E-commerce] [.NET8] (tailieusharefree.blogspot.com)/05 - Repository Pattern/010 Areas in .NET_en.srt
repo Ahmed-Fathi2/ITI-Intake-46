@@ -1,0 +1,536 @@
+1
+00:00:01,800 --> 00:00:03,510
+Instructor: Now I hope you are comfortable
+
+2
+00:00:03,510 --> 00:00:05,580
+with controllers, actions.
+
+3
+00:00:05,580 --> 00:00:09,960
+And we are going to add one more hierarchy on top of that.
+
+4
+00:00:09,960 --> 00:00:12,090
+And the only reason I am showing that
+
+5
+00:00:12,090 --> 00:00:14,580
+is it is actually a great feature
+
+6
+00:00:14,580 --> 00:00:18,180
+if you have to divide few things in your project.
+
+7
+00:00:18,180 --> 00:00:20,103
+And that is called as area.
+
+8
+00:00:20,940 --> 00:00:24,660
+Typically when we work with routing, we have controller
+
+9
+00:00:24,660 --> 00:00:26,820
+and then action method.
+
+10
+00:00:26,820 --> 00:00:30,450
+But .NET team has also provided something special
+
+11
+00:00:30,450 --> 00:00:33,900
+to divide few things in different areas.
+
+12
+00:00:33,900 --> 00:00:37,534
+Like if you have a customer facing website and admin panel,
+
+13
+00:00:37,534 --> 00:00:41,523
+you can divide your project in those two areas.
+
+14
+00:00:42,630 --> 00:00:45,810
+Now how do you add that in a project?
+
+15
+00:00:45,810 --> 00:00:49,320
+We will right click on BulkyBookWeb here, add,
+
+16
+00:00:49,320 --> 00:00:52,323
+and we will click new scaffolded item.
+
+17
+00:00:53,790 --> 00:00:57,870
+Inside there you can see we have an MVC area.
+
+18
+00:00:57,870 --> 00:00:59,400
+Let's add that.
+
+19
+00:00:59,400 --> 00:01:02,490
+And we need to give area a name.
+
+20
+00:01:02,490 --> 00:01:05,519
+Let's say we have two section in our website.
+
+21
+00:01:05,519 --> 00:01:07,980
+One is for the admin section,
+
+22
+00:01:07,980 --> 00:01:10,830
+so let me add an area for admin.
+
+23
+00:01:10,830 --> 00:01:14,700
+It'll add the NuGet package and scaffold that area.
+
+24
+00:01:15,563 --> 00:01:19,950
+Another area that we will add will be the customer area
+
+25
+00:01:19,950 --> 00:01:23,190
+that will have the code related to customer
+
+26
+00:01:23,190 --> 00:01:27,004
+like homepage, details and much more.
+
+27
+00:01:27,004 --> 00:01:28,440
+Perfect.
+
+28
+00:01:28,440 --> 00:01:30,930
+Right here when we scaffold that,
+
+29
+00:01:30,930 --> 00:01:34,342
+you can see it adds a folder with the name of areas.
+
+30
+00:01:34,342 --> 00:01:38,760
+Then it has admin, which is the area that we added.
+
+31
+00:01:38,760 --> 00:01:42,423
+And inside there we have controllers, models and view.
+
+32
+00:01:43,590 --> 00:01:46,470
+So basically all the code that was previously
+
+33
+00:01:46,470 --> 00:01:50,190
+just in one location, we can now break that down
+
+34
+00:01:50,190 --> 00:01:52,470
+in different areas.
+
+35
+00:01:52,470 --> 00:01:55,740
+But when we add area, you can see the routing here
+
+36
+00:01:55,740 --> 00:01:57,780
+also changes.
+
+37
+00:01:57,780 --> 00:02:01,650
+In the scaffold.txt, it displays that, hey,
+
+38
+00:02:01,650 --> 00:02:05,163
+now you have to add areas in the routing as well.
+
+39
+00:02:06,030 --> 00:02:07,710
+So let me do that.
+
+40
+00:02:07,710 --> 00:02:09,720
+Let me copy this.
+
+41
+00:02:09,720 --> 00:02:13,230
+And we will go to our program.cs.
+
+42
+00:02:13,230 --> 00:02:15,630
+We have the controller route here.
+
+43
+00:02:15,630 --> 00:02:20,193
+Let me paste that here and we will add a forward slash.
+
+44
+00:02:21,600 --> 00:02:24,840
+So now we need to say what area should be invoked
+
+45
+00:02:24,840 --> 00:02:28,980
+by default, I will call that as customer.
+
+46
+00:02:28,980 --> 00:02:33,183
+We do not have that, so let me add that area as well.
+
+47
+00:02:36,150 --> 00:02:41,150
+And we will call that customer area, and let me add that.
+
+48
+00:02:43,614 --> 00:02:46,140
+Perfect, that looks good.
+
+49
+00:02:46,140 --> 00:02:48,920
+Now with that, we will have to move our controllers
+
+50
+00:02:48,920 --> 00:02:51,750
+inside the area folders.
+
+51
+00:02:51,750 --> 00:02:54,300
+Now in the area you can see we have folder
+
+52
+00:02:54,300 --> 00:02:56,280
+for data and models,
+
+53
+00:02:56,280 --> 00:02:59,190
+but we have moved that to the individual project
+
+54
+00:02:59,190 --> 00:03:01,830
+so we do not need these two here.
+
+55
+00:03:01,830 --> 00:03:06,210
+Let me delete that from both the areas.
+
+56
+00:03:06,210 --> 00:03:07,950
+We will only have controllers
+
+57
+00:03:07,950 --> 00:03:10,893
+and views inside the area Folder.
+
+58
+00:03:11,880 --> 00:03:16,320
+Category controller belongs to the admin functionality
+
+59
+00:03:16,320 --> 00:03:19,803
+so I will move that to the admin controller.
+
+60
+00:03:20,730 --> 00:03:25,380
+Home controller is a customer facing, so I will change that
+
+61
+00:03:25,380 --> 00:03:29,070
+and move that inside the customer area.
+
+62
+00:03:29,070 --> 00:03:32,730
+With that, our default route now is customer area,
+
+63
+00:03:32,730 --> 00:03:35,553
+home controller, and index action.
+
+64
+00:03:36,450 --> 00:03:40,620
+Now when I moved this, the namespace were also updated,
+
+65
+00:03:40,620 --> 00:03:43,290
+but if in your case you selected no
+
+66
+00:03:43,290 --> 00:03:45,690
+and you did not update the namespace,
+
+67
+00:03:45,690 --> 00:03:48,147
+make sure to update that namespace.
+
+68
+00:03:49,440 --> 00:03:52,050
+On top of that, how do you tell a controller
+
+69
+00:03:52,050 --> 00:03:56,250
+that this controller belongs to a specific area?
+
+70
+00:03:56,250 --> 00:03:59,370
+For that we have the area attribute here.
+
+71
+00:03:59,370 --> 00:04:01,770
+And we need to give the name
+
+72
+00:04:01,770 --> 00:04:06,000
+that category controller is inside the admin area
+
+73
+00:04:06,000 --> 00:04:10,473
+and home controller is inside customer area.
+
+74
+00:04:12,530 --> 00:04:16,382
+With that configured, let me run the project.
+
+75
+00:04:17,910 --> 00:04:19,829
+And things are not working.
+
+76
+00:04:19,829 --> 00:04:24,120
+The constraint customer inside the route option.
+
+77
+00:04:24,120 --> 00:04:27,000
+Let me see what the route option is.
+
+78
+00:04:27,000 --> 00:04:31,623
+And of course this will be equal to and not a colon.
+
+79
+00:04:33,690 --> 00:04:36,810
+Now we have a more user friendly exception,
+
+80
+00:04:36,810 --> 00:04:39,690
+which says the view was not found.
+
+81
+00:04:39,690 --> 00:04:41,760
+And that is indeed correct,
+
+82
+00:04:41,760 --> 00:04:44,190
+because we have moved the controller
+
+83
+00:04:44,190 --> 00:04:46,983
+but we did not move the corresponding views.
+
+84
+00:04:48,000 --> 00:04:50,310
+So let me go to the views here,
+
+85
+00:04:50,310 --> 00:04:54,840
+category, we will move that inside the admin here,
+
+86
+00:04:54,840 --> 00:04:59,840
+and home, move that to the customer views right here.
+
+87
+00:05:01,860 --> 00:05:05,280
+Once you move that and if you run the project,
+
+88
+00:05:05,280 --> 00:05:07,443
+things will still not work.
+
+89
+00:05:08,430 --> 00:05:11,790
+Where is the namespace, let me see.
+
+90
+00:05:11,790 --> 00:05:14,613
+It is inside the category views.
+
+91
+00:05:15,660 --> 00:05:19,560
+And yep, we have the model of category.
+
+92
+00:05:19,560 --> 00:05:24,030
+But how will we know where exactly is this category?
+
+93
+00:05:24,030 --> 00:05:29,030
+If you examined, we had that previously in the view imports.
+
+94
+00:05:29,130 --> 00:05:30,843
+We had dot models.
+
+95
+00:05:32,130 --> 00:05:35,700
+So along with that we also have to move the view start
+
+96
+00:05:35,700 --> 00:05:37,500
+and view import.
+
+97
+00:05:37,500 --> 00:05:42,500
+Both the files, we will paste it inside the view folder
+
+98
+00:05:42,570 --> 00:05:44,970
+in both the areas.
+
+99
+00:05:44,970 --> 00:05:46,413
+Perfect.
+
+100
+00:05:47,310 --> 00:05:50,463
+With that, let me run the project once again.
+
+101
+00:05:52,590 --> 00:05:57,540
+And perfect, the website comes up and everything looks good.
+
+102
+00:05:57,540 --> 00:06:01,500
+But when you click on home and privacy, that is working
+
+103
+00:06:01,500 --> 00:06:05,460
+because both of them are inside the customer area
+
+104
+00:06:05,460 --> 00:06:08,610
+but category is inside admin area.
+
+105
+00:06:08,610 --> 00:06:11,190
+When you click there, it tries to look
+
+106
+00:06:11,190 --> 00:06:15,453
+for category controller in customer, which does not exist.
+
+107
+00:06:16,290 --> 00:06:19,050
+So we have to modify that.
+
+108
+00:06:19,050 --> 00:06:23,370
+So what will happen is where we have the asp-controller
+
+109
+00:06:23,370 --> 00:06:27,513
+now we will also have to define asp-area.
+
+110
+00:06:28,620 --> 00:06:31,410
+So category is inside admin
+
+111
+00:06:31,410 --> 00:06:34,923
+and home controller is inside customer.
+
+112
+00:06:39,540 --> 00:06:43,530
+If you do not write the area, it'll look for that controller
+
+113
+00:06:43,530 --> 00:06:47,853
+in the existing area where the page is already residing.
+
+114
+00:06:48,900 --> 00:06:50,220
+That looks good.
+
+115
+00:06:50,220 --> 00:06:53,823
+Let me run the project and see if that works.
+
+116
+00:06:55,042 --> 00:06:55,950
+Perfect.
+
+117
+00:06:55,950 --> 00:06:58,890
+Admin, category, that works.
+
+118
+00:06:58,890 --> 00:07:01,980
+If you click create new category, it will work
+
+119
+00:07:01,980 --> 00:07:05,070
+because even if you have not defined the area
+
+120
+00:07:05,070 --> 00:07:10,070
+we are looking inside the same admin area that we are in.
+
+121
+00:07:10,110 --> 00:07:13,740
+So you can see create, back to list, edit,
+
+122
+00:07:13,740 --> 00:07:15,660
+everything is working
+
+123
+00:07:15,660 --> 00:07:18,843
+because we are working in the same area.
+
+124
+00:07:19,680 --> 00:07:21,780
+Now typically moving forward,
+
+125
+00:07:21,780 --> 00:07:26,190
+I will explicitly write all the areas, but for category
+
+126
+00:07:26,190 --> 00:07:28,410
+I think we are good to skip that
+
+127
+00:07:28,410 --> 00:07:31,830
+because we will always perform CRUD operations
+
+128
+00:07:31,830 --> 00:07:34,053
+from the category index page.
+
+129
+00:07:35,370 --> 00:07:36,540
+But perfect.
+
+130
+00:07:36,540 --> 00:07:40,050
+With that you can see how areas will add one more layer
+
+131
+00:07:40,050 --> 00:07:41,490
+in navigation.
+
+132
+00:07:41,490 --> 00:07:44,100
+And now when we are working with routing
+
+133
+00:07:44,100 --> 00:07:47,580
+we will define area first, then controller,
+
+134
+00:07:47,580 --> 00:07:49,203
+and then the action name.
+

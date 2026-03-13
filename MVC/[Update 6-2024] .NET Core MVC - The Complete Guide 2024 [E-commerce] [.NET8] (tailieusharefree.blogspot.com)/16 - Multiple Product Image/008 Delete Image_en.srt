@@ -1,0 +1,344 @@
+1
+00:00:01,830 --> 00:00:02,910
+Instructor: We have the image
+
+2
+00:00:02,910 --> 00:00:04,740
+that is being displayed here.
+
+3
+00:00:04,740 --> 00:00:08,189
+We can also add a delete button below each image.
+
+4
+00:00:08,189 --> 00:00:11,130
+So if a user wants to remove any image
+
+5
+00:00:11,130 --> 00:00:12,450
+they can remove that.
+
+6
+00:00:12,450 --> 00:00:14,538
+And of course, if they want to add,
+
+7
+00:00:14,538 --> 00:00:16,980
+when they are on the update here
+
+8
+00:00:16,980 --> 00:00:20,670
+they can always select a new image update.
+
+9
+00:00:20,670 --> 00:00:22,680
+And I believe with that,
+
+10
+00:00:22,680 --> 00:00:24,543
+now we have the three image.
+
+11
+00:00:25,650 --> 00:00:28,833
+So let me add a delete button right here.
+
+12
+00:00:29,993 --> 00:00:32,220
+We will go back to the Upsert here,
+
+13
+00:00:32,220 --> 00:00:36,390
+and we will have an anchor tag, asp-action,
+
+14
+00:00:36,390 --> 00:00:39,150
+let me call that delete image.
+
+15
+00:00:39,150 --> 00:00:44,150
+We will add some bootstrap classes of btn btn-danger,
+
+16
+00:00:45,000 --> 00:00:47,670
+and when we are deleting any image,
+
+17
+00:00:47,670 --> 00:00:49,620
+we need the image ID.
+
+18
+00:00:49,620 --> 00:00:52,787
+We will pass that as asp-route-imageId
+
+19
+00:00:53,640 --> 00:00:57,723
+is equal to @image.id.
+
+20
+00:00:59,100 --> 00:01:01,053
+Let me hide this here.
+
+21
+00:01:01,920 --> 00:01:03,780
+We will write delete there.
+
+22
+00:01:03,780 --> 00:01:08,460
+And let me add a bootstrap icon of the trash fill,
+
+23
+00:01:08,460 --> 00:01:12,783
+save that, we will have to rebuild this time.
+
+24
+00:01:14,190 --> 00:01:16,773
+Let me go to product, edit,
+
+25
+00:01:19,020 --> 00:01:20,190
+and perfect.
+
+26
+00:01:20,190 --> 00:01:21,933
+We have a delete button,
+
+27
+00:01:23,040 --> 00:01:25,740
+so let's make that functional.
+
+28
+00:01:25,740 --> 00:01:29,790
+We need to create an action method, delete image.
+
+29
+00:01:29,790 --> 00:01:32,253
+Let me do that right here.
+
+30
+00:01:33,480 --> 00:01:35,040
+In the parameter here,
+
+31
+00:01:35,040 --> 00:01:37,500
+we will receive image ID,
+
+32
+00:01:37,500 --> 00:01:39,573
+which will be an integer,
+
+33
+00:01:40,530 --> 00:01:42,480
+based on the image ID.
+
+34
+00:01:42,480 --> 00:01:45,720
+We will go to unitOfWork.productImage,
+
+35
+00:01:45,720 --> 00:01:49,083
+and we will retrieve the image that we have to delete.
+
+36
+00:01:50,070 --> 00:01:53,763
+Next, we will check if image to be deleted is not null.
+
+37
+00:01:55,440 --> 00:01:56,520
+In that case,
+
+38
+00:01:56,520 --> 00:02:00,720
+we need to check if the URL is also not null,
+
+39
+00:02:00,720 --> 00:02:03,573
+so if not string.isNullOrEmpty,
+
+40
+00:02:06,064 --> 00:02:08,231
+imageToBeDeleted.imageUrl.
+
+41
+00:02:09,941 --> 00:02:12,937
+As long as that is not null or empty,
+
+42
+00:02:12,937 --> 00:02:16,980
+we can retrieve the old image path and delete that.
+
+43
+00:02:16,980 --> 00:02:21,120
+We will have to get the old image path and delete that.
+
+44
+00:02:21,120 --> 00:02:24,540
+We are doing something similar right here,
+
+45
+00:02:24,540 --> 00:02:27,510
+so let me copy what we had in the delete
+
+46
+00:02:27,510 --> 00:02:29,850
+when we were deleting product.
+
+47
+00:02:29,850 --> 00:02:33,543
+This time we want to delete only the image directly.
+
+48
+00:02:34,890 --> 00:02:37,920
+So old image path, we have the web root path.
+
+49
+00:02:37,920 --> 00:02:38,820
+On top of that,
+
+50
+00:02:38,820 --> 00:02:42,630
+we will combine the image to be deleted
+
+51
+00:02:42,630 --> 00:02:44,913
+and we will trim the backward slash.
+
+52
+00:02:46,080 --> 00:02:48,900
+If the file exists, we will delete that,
+
+53
+00:02:48,900 --> 00:02:50,610
+and after that is done,
+
+54
+00:02:50,610 --> 00:02:55,470
+we will say unitOfWork.ProductImage.remove.
+
+55
+00:02:55,470 --> 00:02:58,770
+We want to remove that record from the database.
+
+56
+00:02:58,770 --> 00:03:03,770
+So imageToBeDeleted and underscore unitOfWork.Save.
+
+57
+00:03:04,740 --> 00:03:07,620
+Then let me add a temp data for alert.
+
+58
+00:03:07,620 --> 00:03:10,077
+We will display "delete successful".
+
+59
+00:03:11,310 --> 00:03:13,320
+Finally, we want to redirect back,
+
+60
+00:03:13,320 --> 00:03:15,903
+so return redirectToAction.
+
+61
+00:03:16,980 --> 00:03:21,390
+We want to return to the name of Upsert action,
+
+62
+00:03:21,390 --> 00:03:25,050
+and we want to navigate to that product ID
+
+63
+00:03:25,050 --> 00:03:27,930
+because if you know the Upsert action,
+
+64
+00:03:27,930 --> 00:03:29,640
+let me go to the get,
+
+65
+00:03:29,640 --> 00:03:31,323
+we need to pass the ID.
+
+66
+00:03:32,820 --> 00:03:36,630
+So right here we will pass ID is equal to
+
+67
+00:03:36,630 --> 00:03:38,730
+and we need the product ID,
+
+68
+00:03:38,730 --> 00:03:42,570
+which we can retrieve from this image to be deleted.
+
+69
+00:03:42,570 --> 00:03:44,040
+So right here I can say
+
+70
+00:03:44,040 --> 00:03:48,810
+integer productId is equal to imageToBeDeleted.
+
+71
+00:03:48,810 --> 00:03:53,403
+That product ID, we will pass that right here.
+
+72
+00:03:54,450 --> 00:03:57,600
+I believe that looks good for delete image.
+
+73
+00:03:57,600 --> 00:04:01,113
+Let me save this and restart the application.
+
+74
+00:04:02,880 --> 00:04:05,700
+We will go to product here.
+
+75
+00:04:05,700 --> 00:04:08,100
+Let me go to the new product
+
+76
+00:04:08,100 --> 00:04:10,440
+and try to delete an image.
+
+77
+00:04:10,440 --> 00:04:12,903
+I will also open the folder,
+
+78
+00:04:14,160 --> 00:04:17,430
+product seven, that has three image here.
+
+79
+00:04:17,430 --> 00:04:19,560
+Let me delete one.
+
+80
+00:04:19,560 --> 00:04:22,380
+It reloads the page and perfect.
+
+81
+00:04:22,380 --> 00:04:25,410
+It removes that from the location as well.
+
+82
+00:04:25,410 --> 00:04:29,340
+So you can see that is working as expected.
+
+83
+00:04:29,340 --> 00:04:31,710
+I have to press F5 to refresh,
+
+84
+00:04:31,710 --> 00:04:33,183
+and that goes away.
+
+85
+00:04:34,230 --> 00:04:37,320
+So now we can manage image for a product
+
+86
+00:04:37,320 --> 00:04:38,853
+from the Upsert page.
+

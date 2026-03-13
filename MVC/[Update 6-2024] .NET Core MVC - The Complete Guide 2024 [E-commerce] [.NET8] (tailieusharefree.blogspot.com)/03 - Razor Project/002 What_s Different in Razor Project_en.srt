@@ -1,0 +1,316 @@
+1
+00:00:02,160 --> 00:00:04,530
+Before anything else we want to see.
+
+2
+00:00:04,530 --> 00:00:08,070
+What are some things that are similar between both the project?
+
+3
+00:00:08,280 --> 00:00:11,130
+So let me expand the project here.
+
+4
+00:00:11,860 --> 00:00:13,360
+And perfect.
+
+5
+00:00:13,390 --> 00:00:17,920
+You will notice in the Razer project we have app settings .JSON.
+
+6
+00:00:18,190 --> 00:00:24,340
+This is exactly same like we have in the MVC project and all the connection or settings.
+
+7
+00:00:24,340 --> 00:00:28,420
+We will place them in the app settings.JSON file.
+
+8
+00:00:29,080 --> 00:00:33,310
+After that the program.cs is also exactly same.
+
+9
+00:00:33,310 --> 00:00:37,630
+Well, the functionality is same, but the files will be different.
+
+10
+00:00:37,900 --> 00:00:46,810
+You can see in the MVC one it added controllers with view, but in the razor pages it added builder.services
+
+11
+00:00:46,810 --> 00:00:49,210
+.razor pages to the container.
+
+12
+00:00:49,860 --> 00:00:57,060
+That way the application will know that it will be using razor pages as compared to MVC, which is controllers
+
+13
+00:00:57,060 --> 00:00:58,110
+and views.
+
+14
+00:00:59,060 --> 00:01:01,340
+If you scroll down the default route.
+
+15
+00:01:01,340 --> 00:01:05,810
+Also, we had controller and action in an MVC application.
+
+16
+00:01:06,420 --> 00:01:13,710
+But when it comes to razor pages, the routing is straightforward and we have map razor pages.
+
+17
+00:01:14,870 --> 00:01:22,250
+Now the way routing works in a razor page application is whatever is inside the pages folder that will
+
+18
+00:01:22,250 --> 00:01:23,180
+be the route.
+
+19
+00:01:23,510 --> 00:01:29,660
+So if in pages folder there is an index page, you directly type index and that will be the default
+
+20
+00:01:29,660 --> 00:01:30,290
+page.
+
+21
+00:01:30,500 --> 00:01:35,240
+If you type privacy, we have the privacy page right here.
+
+22
+00:01:35,600 --> 00:01:42,650
+So basically whatever the folder structure is there in the pages folder, that will be the exact routing
+
+23
+00:01:42,650 --> 00:01:45,230
+that we will follow in the URL.
+
+24
+00:01:46,030 --> 00:01:50,380
+And we will, of course, see that pretty shortly in the upcoming video.
+
+25
+00:01:51,210 --> 00:01:54,540
+But we will come back to the pages folder in a second.
+
+26
+00:01:54,750 --> 00:02:04,440
+Other than Appsettings and Program.cs, we have www Root, which is also exactly same as the MVC application.
+
+27
+00:02:05,280 --> 00:02:10,120
+And then the property stays the same, dependencies stays the same.
+
+28
+00:02:10,139 --> 00:02:15,930
+The only thing that is majorly different is we do not have controllers, models or views.
+
+29
+00:02:16,290 --> 00:02:19,740
+We only have one thing, which are pages.
+
+30
+00:02:20,460 --> 00:02:25,650
+And these pages are different than what we had for controllers or views.
+
+31
+00:02:26,910 --> 00:02:31,180
+Here we have the index page, which is index.csHTML.
+
+32
+00:02:31,200 --> 00:02:38,370
+If you double click that, it still has that razor syntax where you can use the at sign and use C#
+
+33
+00:02:38,370 --> 00:02:38,900
+code.
+
+34
+00:02:38,910 --> 00:02:43,560
+But on top of that there is something called as @page directive.
+
+35
+00:02:44,350 --> 00:02:48,040
+This add page directive is used for the razor pages.
+
+36
+00:02:48,040 --> 00:02:52,840
+And if you expand the arrow here we have the .CS file.
+
+37
+00:02:53,260 --> 00:03:00,100
+This .CS file is not the code behind file that we had in traditional .net application.
+
+38
+00:03:00,460 --> 00:03:07,510
+It is a complete rewrite and it is basically a page model for the razor page that we have.
+
+39
+00:03:08,140 --> 00:03:13,750
+You can see it extends from the page model, which is inside the .net core package.
+
+40
+00:03:14,780 --> 00:03:21,440
+Page model will have all the get and post endpoints that we typically had in the controller that we
+
+41
+00:03:21,440 --> 00:03:23,360
+saw in the first project.
+
+42
+00:03:23,940 --> 00:03:29,010
+So you can see on Cat is the default handler for cat action method.
+
+43
+00:03:29,660 --> 00:03:31,640
+The naming here must match.
+
+44
+00:03:31,640 --> 00:03:37,100
+So basically on is required and then if it is a get, it will be get.
+
+45
+00:03:37,130 --> 00:03:41,240
+If it is post, we will have the on post handler.
+
+46
+00:03:42,590 --> 00:03:49,490
+Now I will not go crazy deep into razor pages because it has its own course and it can be lengthy.
+
+47
+00:03:49,490 --> 00:03:55,930
+But I will give you a brief idea on how to perform CRUD operation in razor pages.
+
+48
+00:03:55,940 --> 00:03:59,630
+That way you are comfortable with razor pages.
+
+49
+00:04:00,910 --> 00:04:04,810
+Now inside pages, you will see something common in shared.
+
+50
+00:04:04,810 --> 00:04:10,810
+We have the underscore layout and validation scripts partial exactly the same as MVC.
+
+51
+00:04:11,410 --> 00:04:20,290
+We have view, imports and view start exactly the same and we have an error page to display error message.
+
+52
+00:04:20,890 --> 00:04:27,790
+But before we do anything else here, like working on the razor pages or anything, I want to configure
+
+53
+00:04:27,790 --> 00:04:31,180
+entity framework Core in this project.
+
+54
+00:04:32,130 --> 00:04:34,890
+Configuring that will be exactly the same.
+
+55
+00:04:35,310 --> 00:04:43,770
+So for that, what I will do is right click here, add a new folder which will be for models, and I
+
+56
+00:04:43,770 --> 00:04:47,700
+will actually copy the model that we have for category.
+
+57
+00:04:48,330 --> 00:04:50,130
+Let me copy this.
+
+58
+00:04:50,610 --> 00:04:55,230
+Close that in the models, add a new class.
+
+59
+00:04:56,400 --> 00:05:02,010
+Do not copy the class and paste it here because then the namespace will be copied over.
+
+60
+00:05:02,490 --> 00:05:06,900
+Rather we will paste that here and perfect.
+
+61
+00:05:07,080 --> 00:05:11,910
+So with that we have added the category model in the Razor project.
+
+62
+00:05:12,420 --> 00:05:17,340
+What your assignment is to configure entity framework core in this project.
+
+63
+00:05:17,370 --> 00:05:24,480
+It will require the exact packages that we did in MVC project and you will have to create an application
+
+64
+00:05:24,480 --> 00:05:30,570
+DB context class that you will do inside the data folder.
+
+65
+00:05:31,650 --> 00:05:33,630
+So configure all the steps.
+
+66
+00:05:33,630 --> 00:05:35,730
+Configure program.cs.
+
+67
+00:05:35,760 --> 00:05:38,580
+Make sure to seed the category as well.
+
+68
+00:05:39,230 --> 00:05:44,320
+The last thing that I will do before I end this video is in app settings.
+
+69
+00:05:44,330 --> 00:05:47,720
+Let me copy this connection string from MVC.
+
+70
+00:05:48,960 --> 00:05:57,570
+Paste it right here and I will change the database name from bulky to bulky_razor.
+
+71
+00:05:59,270 --> 00:06:00,100
+Perfect.
+
+72
+00:06:00,110 --> 00:06:06,420
+So you have the connection string in the Razer project you need to configure entity framework core.
+
+73
+00:06:06,440 --> 00:06:15,110
+Create the database seat the category table with three categories, just like we did with the MVC project.
+
+74
+00:06:15,980 --> 00:06:22,070
+That will give you a hands on practice on setting up entity framework core in a project.
+
+75
+00:06:23,610 --> 00:06:29,550
+So complete all the steps, but do not update the database or add the migration.
+
+76
+00:06:29,850 --> 00:06:32,460
+Do everything for the configuration.
+
+77
+00:06:32,460 --> 00:06:38,750
+And when you are at the step of adding a migration, follow along with me in the next video.
+
+78
+00:06:38,760 --> 00:06:43,380
+That way I want to show you one thing that you have to be careful about.
+
+79
+00:06:43,800 --> 00:06:49,710
+So good luck with that assignment and I will show you how to do that in the next video.
+

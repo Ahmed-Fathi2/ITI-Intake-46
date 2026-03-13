@@ -1,0 +1,120 @@
+1
+00:00:01,569 --> 00:00:07,270
+Now, I have said before that ID in the category table will be the primary key.
+
+2
+00:00:07,600 --> 00:00:13,090
+But how do we define or rather say that this ID must be the primary key?
+
+3
+00:00:13,600 --> 00:00:21,460
+Because sometimes, let's say if the name is category, underscore, underscore, and then we have the
+
+4
+00:00:21,460 --> 00:00:29,350
+ID, If the variable name is something like this, then how can entity framework core know that this
+
+5
+00:00:29,350 --> 00:00:34,120
+particular property that you have will be the primary key of the table?
+
+6
+00:00:34,660 --> 00:00:38,200
+For that, we have something called as data annotation.
+
+7
+00:00:38,320 --> 00:00:45,780
+So right here in square bracket, if I write key, you can see it is inside system dot component model
+
+8
+00:00:45,790 --> 00:00:47,500
+that data annotation.
+
+9
+00:00:47,770 --> 00:00:54,940
+When I press enter here, key data annotation is added here and that way entity framework core will
+
+10
+00:00:54,940 --> 00:01:00,370
+know that this property will be the primary key for the category table.
+
+11
+00:01:01,060 --> 00:01:09,590
+So that sounds good, but by default, if the name is purely ID, it will automatically or rather entity
+
+12
+00:01:09,620 --> 00:01:14,800
+framework core will automatically think that this is the primary key.
+
+13
+00:01:14,810 --> 00:01:19,370
+And because of that, the key data annotation will not be required.
+
+14
+00:01:19,820 --> 00:01:26,840
+Also, if the name is exactly same like the model that we have, which is category followed by an ID
+
+15
+00:01:26,870 --> 00:01:34,370
+like this, then also it will automatically treat that particular property as the primary key.
+
+16
+00:01:35,120 --> 00:01:42,470
+But with all of that defined, if you explicitly define the key data annotation that way, looking at
+
+17
+00:01:42,470 --> 00:01:48,890
+the key data annotation, you can tell that ID is the primary key for category table.
+
+18
+00:01:49,760 --> 00:01:57,740
+Along with that, we also have another data annotation which is required once you add required to any
+
+19
+00:01:57,740 --> 00:02:04,760
+of the property here when SQL script will be generated to create this particular table in database,
+
+20
+00:02:04,790 --> 00:02:08,729
+you will see that string will have a not null setting.
+
+21
+00:02:08,750 --> 00:02:12,740
+That is why we have the required data annotation.
+
+22
+00:02:13,640 --> 00:02:20,030
+Now there are more data annotations, but we will uncover them as we proceed with the course.
+
+23
+00:02:20,630 --> 00:02:27,620
+Right now we have talked so much about creating database, creating models, having tables and adding
+
+24
+00:02:27,620 --> 00:02:29,440
+multiple columns in there.
+
+25
+00:02:29,450 --> 00:02:32,630
+How do we define a primary key in that table?
+
+26
+00:02:32,780 --> 00:02:36,170
+But how do we actually create the table?
+
+27
+00:02:36,830 --> 00:02:44,420
+For that, we have to define connection string in our project to the SQL Server and we have to configure
+
+28
+00:02:44,420 --> 00:02:48,980
+our application to use entity Framework Core and SQL Server.
+
+29
+00:02:49,910 --> 00:02:56,780
+That configuration is a little bit lengthy, so stick with me and we will continue on that from the
+
+30
+00:02:56,780 --> 00:02:57,860
+next video.
+

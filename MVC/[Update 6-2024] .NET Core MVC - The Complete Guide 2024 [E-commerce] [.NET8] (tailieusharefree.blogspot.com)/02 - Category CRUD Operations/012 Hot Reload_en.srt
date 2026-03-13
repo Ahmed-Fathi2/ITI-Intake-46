@@ -1,0 +1,145 @@
+1
+00:00:01,810 --> 00:00:07,330
+Now we have the list of categories right here in the 
+obj category list.
+
+2
+00:00:07,630 --> 00:00:16,420
+But how do we pass that to The view, which is if we go to view category, we have the index view.
+
+3
+00:00:16,780 --> 00:00:22,030
+If I switch back to the browser here, you can see we are displaying category list.
+
+4
+00:00:22,060 --> 00:00:25,330
+Rather than that we want to display a table.
+
+5
+00:00:26,150 --> 00:00:29,870
+So first, let me create a table right here.
+
+6
+00:00:30,700 --> 00:00:40,240
+I will add a table, give it some bootstrap classes of table table bordered and table striped.
+
+7
+00:00:41,280 --> 00:00:43,200
+In an HTML table element.
+
+8
+00:00:43,200 --> 00:00:48,000
+We have TR and inside there we have TH for heading.
+
+9
+00:00:48,030 --> 00:00:50,730
+So first we have a row in there.
+
+10
+00:00:50,730 --> 00:00:54,900
+We have columns, but first we need to display the headings here.
+
+11
+00:00:55,290 --> 00:01:02,100
+So let me display category name and followed that by the display order.
+
+12
+00:01:03,580 --> 00:01:07,430
+With .net seven, we have something called as hot reload.
+
+13
+00:01:07,480 --> 00:01:12,400
+So if we save the change, let me keep them side by side.
+
+14
+00:01:12,400 --> 00:01:20,020
+And if I save the changes, it should automatically refresh the UI and that will only work if views
+
+15
+00:01:20,020 --> 00:01:21,130
+are updated.
+
+16
+00:01:21,220 --> 00:01:25,450
+If you change something in the controller, you will have to rebuild the project.
+
+17
+00:01:25,450 --> 00:01:33,400
+But if you update something in the views which is HTML, CSS or JavaScript, it should automatically
+
+18
+00:01:33,400 --> 00:01:35,230
+reflect those changes.
+
+19
+00:01:35,440 --> 00:01:41,950
+That way you do not have to reload the application every time, but right now you can see that is not
+
+20
+00:01:41,950 --> 00:01:42,730
+working.
+
+21
+00:01:43,060 --> 00:01:47,470
+The reason behind that is you see the icon here for hot reload.
+
+22
+00:01:47,620 --> 00:01:54,340
+If you click on the arrow next to that, the hot reload on Filesave must be enabled.
+
+23
+00:01:54,550 --> 00:01:58,660
+Once you do that, then restart the application.
+
+24
+00:01:59,730 --> 00:02:03,780
+And if we go to category here, we hit our break point.
+
+25
+00:02:03,810 --> 00:02:05,480
+Let me remove them.
+
+26
+00:02:05,490 --> 00:02:06,600
+But perfect.
+
+27
+00:02:06,600 --> 00:02:07,980
+We display the table.
+
+28
+00:02:08,009 --> 00:02:11,009
+Let me change something here and save it.
+
+29
+00:02:12,110 --> 00:02:13,220
+And perfect.
+
+30
+00:02:13,220 --> 00:02:20,030
+You can see it automatically refreshed and we do not have to restart the application anymore.
+
+31
+00:02:20,800 --> 00:02:23,410
+So that is the power of hot reload.
+
+32
+00:02:23,410 --> 00:02:26,830
+And with .net seven it comes built in.
+
+33
+00:02:26,860 --> 00:02:33,730
+That way we do not have to restart the application when we are modifying some things in the view side
+
+34
+00:02:33,760 --> 00:02:35,500
+of the application.
+
+35
+00:02:35,920 --> 00:02:41,080
+With that we have the table header here, but we want to display the details.
+
+36
+00:02:41,480 --> 00:02:44,380
+Let me do that in the next video.
+

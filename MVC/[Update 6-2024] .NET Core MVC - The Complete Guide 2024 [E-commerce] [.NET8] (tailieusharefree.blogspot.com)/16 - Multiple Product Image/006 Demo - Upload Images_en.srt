@@ -1,0 +1,160 @@
+1
+00:00:01,800 --> 00:00:03,120
+Instructor: Now we need to test
+
+2
+00:00:03,120 --> 00:00:05,580
+if everything is functional.
+
+3
+00:00:05,580 --> 00:00:10,580
+Let me break this out and open the www root folder as well.
+
+4
+00:00:12,240 --> 00:00:17,240
+Open that and I will add that right here.
+
+5
+00:00:17,550 --> 00:00:19,053
+Where is the file?
+
+6
+00:00:19,920 --> 00:00:20,753
+Perfect.
+
+7
+00:00:21,780 --> 00:00:26,070
+So here, let me go to content management product
+
+8
+00:00:26,070 --> 00:00:29,910
+and let me click edit, cotton candy.
+
+9
+00:00:29,910 --> 00:00:34,110
+It will create a new folder with the name of products here.
+
+10
+00:00:34,110 --> 00:00:36,150
+We will see that.
+
+11
+00:00:36,150 --> 00:00:41,090
+First, let me try to upload to image here and update.
+
+12
+00:00:44,460 --> 00:00:45,293
+Perfect.
+
+13
+00:00:45,293 --> 00:00:48,870
+It says product created updated successfully.
+
+14
+00:00:48,870 --> 00:00:53,870
+If I refresh the folder, I have that folder here and great.
+
+15
+00:00:54,300 --> 00:00:56,010
+We have product four.
+
+16
+00:00:56,010 --> 00:01:00,000
+If I add it here, that is the product ID.
+
+17
+00:01:00,000 --> 00:01:03,063
+Inside there, we have both the image.
+
+18
+00:01:04,170 --> 00:01:06,570
+Let me go to database here,
+
+19
+00:01:06,570 --> 00:01:10,380
+and we will open the bulky new here.
+
+20
+00:01:10,380 --> 00:01:13,350
+I will examine the product images table.
+
+21
+00:01:13,350 --> 00:01:15,930
+It should have two records.
+
+22
+00:01:15,930 --> 00:01:17,070
+Great.
+
+23
+00:01:17,070 --> 00:01:19,260
+All of that is done automatically
+
+24
+00:01:19,260 --> 00:01:21,123
+by Entity Framework Core.
+
+25
+00:01:22,170 --> 00:01:26,460
+Now, if I go back here and if I select one more image,
+
+26
+00:01:26,460 --> 00:01:30,423
+it should automatically add that in the same folder.
+
+27
+00:01:31,380 --> 00:01:34,890
+I will have to refresh here and great.
+
+28
+00:01:34,890 --> 00:01:38,850
+Finally, let me try to create a new product here.
+
+29
+00:01:38,850 --> 00:01:40,230
+Test.
+
+30
+00:01:40,230 --> 00:01:42,730
+I will have dummy information here
+
+31
+00:01:44,850 --> 00:01:47,223
+and let me upload to image there.
+
+32
+00:01:48,240 --> 00:01:50,160
+It will create the product.
+
+33
+00:01:50,160 --> 00:01:54,660
+Let me see what is the ID of the newly created product here?
+
+34
+00:01:54,660 --> 00:01:55,980
+That is seven.
+
+35
+00:01:55,980 --> 00:02:00,573
+It should create a new folder, product seven and perfect.
+
+36
+00:02:01,620 --> 00:02:03,900
+If we go to database
+
+37
+00:02:03,900 --> 00:02:08,759
+we have the new records right here, so great.
+
+38
+00:02:08,759 --> 00:02:12,150
+With that, we are able to upload all the images
+
+39
+00:02:12,150 --> 00:02:14,370
+and when we create a new product
+
+40
+00:02:14,370 --> 00:02:17,703
+we see all the records in product images.
+

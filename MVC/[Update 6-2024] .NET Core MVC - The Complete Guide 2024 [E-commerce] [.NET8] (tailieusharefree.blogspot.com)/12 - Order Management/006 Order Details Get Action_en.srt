@@ -1,0 +1,184 @@
+1
+00:00:01,830 --> 00:00:04,500
+Bhrugen: Now we can see all the orders here,
+
+2
+00:00:04,500 --> 00:00:06,663
+but how about OrderDetails?
+
+3
+00:00:07,740 --> 00:00:10,290
+We need to create that action method
+
+4
+00:00:10,290 --> 00:00:14,220
+and retrieve all the OrderDetails in Index here,
+
+5
+00:00:14,220 --> 00:00:16,590
+if we scroll down.
+
+6
+00:00:16,590 --> 00:00:19,410
+Well not here, in the order.js.
+
+7
+00:00:19,410 --> 00:00:21,933
+We are passing that as orderId.
+
+8
+00:00:22,830 --> 00:00:27,483
+So let me create that action method in the OrderController.
+
+9
+00:00:28,470 --> 00:00:30,112
+Let me do that.
+
+10
+00:00:30,112 --> 00:00:32,790
+Areas.
+
+11
+00:00:32,790 --> 00:00:33,630
+Perfect.
+
+12
+00:00:33,630 --> 00:00:38,630
+Right here, I can copy the Index, paste it here,
+
+13
+00:00:39,180 --> 00:00:44,180
+call that as Details and integer will be orderId.
+
+14
+00:00:45,180 --> 00:00:47,100
+Based on that orderId,
+
+15
+00:00:47,100 --> 00:00:50,883
+we have an Order ViewModel, which we can populate.
+
+16
+00:00:52,170 --> 00:00:55,740
+In there, we need to retrieve the OrderHeader
+
+17
+00:00:55,740 --> 00:01:00,397
+that we will do from unitOfWork.OrderHeader.Get.
+
+18
+00:01:02,160 --> 00:01:06,003
+We will get that using u=>u.Id==orderId,
+
+19
+00:01:09,630 --> 00:01:12,027
+and we can include the "ApplicationUser".
+
+20
+00:01:14,760 --> 00:01:16,020
+That looks good.
+
+21
+00:01:16,020 --> 00:01:18,510
+We can also retrieve the OrderDetail
+
+22
+00:01:18,510 --> 00:01:22,583
+from unitOfWork.OrderDetail.GetAll
+
+23
+00:01:23,580 --> 00:01:26,703
+because there will be more than one OrderDetail.
+
+24
+00:01:28,080 --> 00:01:32,820
+We will get that based on the orderId is equal equal
+
+25
+00:01:32,820 --> 00:01:34,263
+to the orderId.
+
+26
+00:01:35,190 --> 00:01:37,980
+And this one will not be orderId.
+
+27
+00:01:37,980 --> 00:01:40,920
+It is OrderHeaderId.
+
+28
+00:01:40,920 --> 00:01:42,363
+Let me correct that.
+
+29
+00:01:43,290 --> 00:01:46,020
+When we retrieve the OrderDetails,
+
+30
+00:01:46,020 --> 00:01:50,553
+let me include properties to get all the product details.
+
+31
+00:01:51,870 --> 00:01:55,620
+That looks good for the Order ViewModel.
+
+32
+00:01:55,620 --> 00:01:58,920
+Let me call that OrderVM.
+
+33
+00:01:58,920 --> 00:02:01,230
+And when we return to the view,
+
+34
+00:02:01,230 --> 00:02:03,273
+we will pass the Order ViewModel.
+
+35
+00:02:04,770 --> 00:02:07,200
+Let me add a debugging point here
+
+36
+00:02:07,200 --> 00:02:11,403
+and see if the Order ViewModel is getting populated.
+
+37
+00:02:12,330 --> 00:02:14,763
+We will go to Manage Order here.
+
+38
+00:02:15,660 --> 00:02:16,743
+Click Edit.
+
+39
+00:02:18,060 --> 00:02:21,150
+It should hit our break point here,
+
+40
+00:02:21,150 --> 00:02:22,620
+and perfect.
+
+41
+00:02:22,620 --> 00:02:25,620
+We have the OrderDetail there.
+
+42
+00:02:25,620 --> 00:02:29,253
+The OrderHeader is also looking good.
+
+43
+00:02:30,090 --> 00:02:31,290
+So perfect.
+
+44
+00:02:31,290 --> 00:02:33,870
+It is populating everything here
+
+45
+00:02:33,870 --> 00:02:36,810
+but we need to add that view.
+
+46
+00:02:36,810 --> 00:02:41,013
+So let me create the 'Details' view in the next video.
+

@@ -1,0 +1,156 @@
+1
+00:00:01,859 --> 00:00:09,210
+Bây giờ chúng ta đã thêm mã cho danh mục cập nhật, hãy để tôi chạy ứng dụng và xem nó hoạt động.
+
+2
+00:00:10,230 --> 00:00:18,600
+Khi chúng tôi chuyển đến danh mục ở đây, chúng tôi sẽ cố gắng chỉnh sửa hành động ở đây và để tôi cập nhật hành động đó thành hành động
+
+3
+00:00:18,600 --> 00:00:20,520
+111 và thứ tự hiển thị là năm.
+
+4
+00:00:21,280 --> 00:00:22,030
+Ngay lập tức.
+
+5
+00:00:22,030 --> 00:00:23,020
+Nó sẽ hoạt động.
+
+6
+00:00:23,680 --> 00:00:24,340
+Hoàn hảo.
+
+7
+00:00:24,340 --> 00:00:26,530
+Bạn có thể thấy nó đã được cập nhật.
+
+8
+00:00:26,830 --> 00:00:32,020
+Nếu chúng tôi cập nhật nó trở lại như ban đầu, nó cũng sẽ hoạt động.
+
+9
+00:00:32,890 --> 00:00:34,120
+Và hoàn hảo.
+
+10
+00:00:34,270 --> 00:00:38,880
+Vì vậy, cùng với đó, chức năng chỉnh sửa đang hoạt động như mong đợi.
+
+11
+00:00:38,890 --> 00:00:42,490
+Nhưng có một điều mà tôi sẽ nói với bạn ngay bây giờ.
+
+12
+00:00:42,910 --> 00:00:50,020
+Khi bạn thêm một điểm gỡ lỗi ở đây và nếu bạn cố cập nhật điểm này, chẳng hạn như bảy,
+
+13
+00:00:50,020 --> 00:00:53,710
+bạn sẽ nhận thấy trong OBJ ID được điền.
+
+14
+00:00:54,380 --> 00:01:02,540
+Bây giờ, lý do ID được điền là nếu chúng tôi chuyển đến phần chỉnh sửa của mình tại đây, bạn có thể thấy chúng tôi không có ID đó trong
+
+15
+00:01:02,540 --> 00:01:03,230
+trường.
+
+16
+00:01:03,530 --> 00:01:12,410
+Thông thường, chúng tôi yêu cầu điều đó trong một trường đầu vào như thế này, nơi chúng tôi sẽ nói ASP cho ID và nó sẽ là
+
+17
+00:01:12,410 --> 00:01:13,670
+một trường ẩn.
+
+18
+00:01:14,610 --> 00:01:17,490
+Nhưng chỉ vì tên biến là ID.
+
+19
+00:01:17,700 --> 00:01:21,480
+Dòng này hoặc biến đầu vào là không bắt buộc.
+
+20
+00:01:21,630 --> 00:01:29,910
+Nếu vì lý do nào đó, ID của bạn là ID danh mục hoặc bất kỳ thứ gì khác, thì bạn sẽ phải thêm thuộc tính ẩn.
+
+21
+00:01:30,150 --> 00:01:37,260
+Khác Điều gì sẽ xảy ra là, thay vì chỉnh sửa một bản ghi hiện có, nó sẽ giữ bản ghi đó và nó sẽ thêm
+
+22
+00:01:37,260 --> 00:01:38,670
+một bản ghi mới.
+
+23
+00:01:38,670 --> 00:01:42,420
+Trên hết với tên mới mà bạn đã chỉnh sửa.
+
+24
+00:01:43,460 --> 00:01:48,830
+Tôi sẽ chỉ ra điều đó trong các video sắp tới khi chúng tôi làm việc với các mô hình khác nhau.
+
+25
+00:01:49,160 --> 00:01:54,130
+Nhưng đó là điều mà tôi muốn bạn nhớ khi bạn cố gắng chỉnh sửa.
+
+26
+00:01:54,140 --> 00:02:01,040
+Nếu bạn thấy một bản ghi mới đang được thêm vào, hãy thêm một điểm sửa lỗi tại đây và tôi có thể đảm
+
+27
+00:02:01,040 --> 00:02:04,280
+bảo với bạn rằng ID ở đây bằng 0 vì điều đó.
+
+28
+00:02:04,280 --> 00:02:11,720
+Nếu bạn chuyển một ID bằng 0 để cập nhật câu lệnh trong lõi khung thực thể, nó sẽ cho rằng
+
+29
+00:02:11,750 --> 00:02:18,770
+không sao, vì ID bằng 0, bạn muốn tôi tạo một bản ghi mới vì sẽ không có bản ghi nào có
+
+30
+00:02:18,770 --> 00:02:20,030
+ID bằng 0.
+
+31
+00:02:20,510 --> 00:02:22,640
+Đó là hành vi mặc định.
+
+32
+00:02:22,640 --> 00:02:29,960
+Vì vậy, một lần nữa, nếu bạn từng thử cập nhật một bản ghi và nó đang tạo một bản ghi mới, hãy đảm bảo rằng
+
+33
+00:02:29,960 --> 00:02:31,730
+ID được điền ở đây.
+
+34
+00:02:31,730 --> 00:02:39,170
+Nếu điều đó không hiệu quả, thì bạn phải thêm thuộc tính ẩn như tôi đã trình bày ở dòng bốn.
+
+35
+00:02:39,880 --> 00:02:43,660
+Chúng ta sẽ thấy điều đó trong hành động trong các video sau.
+
+36
+00:02:43,660 --> 00:02:47,890
+Nhưng tôi muốn cung cấp cho bạn một số ý tưởng về điều đó ngay bây giờ.
+
+37
+00:02:48,470 --> 00:02:49,670
+Nhưng hoàn hảo.
+
+38
+00:02:49,700 --> 00:02:57,260
+Cùng với đó, chúng tôi có thể chỉnh sửa danh mục của mình và chức năng cuối cùng mà chúng tôi có là xóa
+
+39
+00:02:57,260 --> 00:02:58,250
+danh mục.
+

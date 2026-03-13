@@ -1,0 +1,44 @@
+1
+00:00:01,680 --> 00:00:05,150
+Một thứ mà tôi muốn giới thiệu là bộ điều khiển người dùng.
+
+2
+00:00:05,160 --> 00:00:08,220
+Chúng tôi đang sử dụng ngữ cảnh DB của ứng dụng.
+
+3
+00:00:08,670 --> 00:00:15,300
+Thông thường, trong toàn bộ ứng dụng, chúng tôi đã sử dụng trực tiếp đơn vị công việc và chúng tôi tránh sử dụng ngữ cảnh
+
+4
+00:00:15,300 --> 00:00:18,540
+cơ sở dữ liệu ứng dụng trực tiếp trong bộ điều khiển.
+
+5
+00:00:19,140 --> 00:00:25,650
+Vì vậy, tôi muốn các bạn coi đó như một nhiệm vụ và sửa đổi mã trong tệp cụ thể này.
+
+6
+00:00:25,680 --> 00:00:32,960
+Bằng cách đó, bạn chỉ phải xử lý đơn vị công việc và giống như chúng tôi có phương pháp trợ giúp của trình quản lý người dùng.
+
+7
+00:00:32,970 --> 00:00:37,770
+Chúng tôi cũng có một thứ gọi là trình quản lý vai trò mà chúng tôi có thể sử dụng.
+
+8
+00:00:38,550 --> 00:00:40,200
+Vì vậy, hãy nhận nhiệm vụ đó.
+
+9
+00:00:40,200 --> 00:00:46,650
+Bạn có thể phải tìm một số thứ trên Google về cách truy cập vai trò và các thuộc tính khác của mình
+
+10
+00:00:46,650 --> 00:00:51,450
+và tôi muốn bạn tìm ra cách sử dụng đơn vị công việc thay vì ứng dụng.
+
+11
+00:00:51,450 --> 00:00:53,100
+Bối cảnh DB tại đây.
+

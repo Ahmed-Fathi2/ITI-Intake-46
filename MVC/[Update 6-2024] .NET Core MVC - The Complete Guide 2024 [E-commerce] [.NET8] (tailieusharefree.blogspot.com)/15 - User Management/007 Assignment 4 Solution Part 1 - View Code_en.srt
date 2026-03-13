@@ -1,0 +1,520 @@
+1
+00:00:01,740 --> 00:00:03,000
+Instructor: I hope you were able
+
+2
+00:00:03,000 --> 00:00:05,160
+to complete the assignment.
+
+3
+00:00:05,160 --> 00:00:07,593
+If not, let's do that together.
+
+4
+00:00:08,520 --> 00:00:12,450
+I will switch back to the application, stop that,
+
+5
+00:00:12,450 --> 00:00:16,563
+and we will be adding a view model for the permission page.
+
+6
+00:00:18,090 --> 00:00:21,483
+I will call that role management view model.
+
+7
+00:00:23,280 --> 00:00:25,620
+It will be a public class.
+
+8
+00:00:25,620 --> 00:00:27,180
+And as I said before,
+
+9
+00:00:27,180 --> 00:00:30,810
+we need four properties in this model.
+
+10
+00:00:30,810 --> 00:00:33,210
+Now, rather than adding a current role here
+
+11
+00:00:33,210 --> 00:00:34,920
+in application user,
+
+12
+00:00:34,920 --> 00:00:36,660
+we already have a role,
+
+13
+00:00:36,660 --> 00:00:38,730
+so we can use that.
+
+14
+00:00:38,730 --> 00:00:41,673
+So we should be good with these three properties.
+
+15
+00:00:42,870 --> 00:00:45,960
+With that configured in the user controller,
+
+16
+00:00:45,960 --> 00:00:48,243
+I need to add an action method.
+
+17
+00:00:49,260 --> 00:00:54,260
+That action method will receive userId in the parameter,
+
+18
+00:00:54,570 --> 00:00:57,300
+so from user on click here,
+
+19
+00:00:57,300 --> 00:00:59,580
+we should invoke the action method,
+
+20
+00:00:59,580 --> 00:01:03,720
+which is role management with the userId.
+
+21
+00:01:03,720 --> 00:01:04,980
+So right here,
+
+22
+00:01:04,980 --> 00:01:06,400
+let me add the href for that
+
+23
+00:01:07,620 --> 00:01:09,810
+and pass the userId.
+
+24
+00:01:09,810 --> 00:01:12,453
+I will do that in both the places.
+
+25
+00:01:13,320 --> 00:01:14,673
+Perfect, that looks good.
+
+26
+00:01:16,770 --> 00:01:20,790
+After that, we will go back to the user controller here,
+
+27
+00:01:20,790 --> 00:01:22,860
+and based on the userId,
+
+28
+00:01:22,860 --> 00:01:25,170
+I want to retrieve the roleId,
+
+29
+00:01:25,170 --> 00:01:29,043
+so that I can do from the user roles table.
+
+30
+00:01:29,970 --> 00:01:31,080
+When we are in there,
+
+31
+00:01:31,080 --> 00:01:34,890
+we have to populate the role management view model,
+
+32
+00:01:34,890 --> 00:01:38,700
+and inside there we need ApplicationUser.
+
+33
+00:01:38,700 --> 00:01:42,630
+We will get that from ApplicationUsers.Include.
+
+34
+00:01:42,630 --> 00:01:44,970
+We want to include the company,
+
+35
+00:01:44,970 --> 00:01:49,353
+and we will do first our default based on the userId.
+
+36
+00:01:50,730 --> 00:01:53,340
+Then next we have to populate the dropdowns
+
+37
+00:01:53,340 --> 00:01:56,250
+for role list and company list.
+
+38
+00:01:56,250 --> 00:01:59,400
+We have done that in the past using projection,
+
+39
+00:01:59,400 --> 00:02:01,923
+so that is exactly what we will do.
+
+40
+00:02:02,940 --> 00:02:04,530
+After all of that,
+
+41
+00:02:04,530 --> 00:02:07,230
+inside the role view model,
+
+42
+00:02:07,230 --> 00:02:09,514
+we have ApplicationUser,
+
+43
+00:02:09,514 --> 00:02:11,910
+and there we have role of the user
+
+44
+00:02:11,910 --> 00:02:16,560
+that we will populate using _db.Roles
+
+45
+00:02:16,560 --> 00:02:19,710
+based on the roleId that we retrieved here,
+
+46
+00:02:19,710 --> 00:02:22,863
+and we want to extract name from there.
+
+47
+00:02:23,700 --> 00:02:24,810
+With that configured,
+
+48
+00:02:24,810 --> 00:02:26,820
+when we return back to the view,
+
+49
+00:02:26,820 --> 00:02:29,463
+we have to pass the role view model.
+
+50
+00:02:30,300 --> 00:02:31,890
+That looks great.
+
+51
+00:02:31,890 --> 00:02:33,573
+Let me create this view.
+
+52
+00:02:34,800 --> 00:02:37,050
+It will not be an index.
+
+53
+00:02:37,050 --> 00:02:39,120
+What is the name?
+
+54
+00:02:39,120 --> 00:02:41,133
+Role management.
+
+55
+00:02:43,230 --> 00:02:45,900
+For the view here to be consistent,
+
+56
+00:02:45,900 --> 00:02:49,773
+let me copy that from category create,
+
+57
+00:02:50,700 --> 00:02:54,633
+and I will paste that right here.
+
+58
+00:02:55,830 --> 00:02:58,140
+First thing, we need the model here,
+
+59
+00:02:58,140 --> 00:03:00,780
+but it is not detecting that.
+
+60
+00:03:00,780 --> 00:03:03,363
+Let me open that once again,
+
+61
+00:03:04,530 --> 00:03:07,890
+and for some reason it is not detecting that.
+
+62
+00:03:07,890 --> 00:03:12,033
+Let me copy and paste role management view model.
+
+63
+00:03:13,110 --> 00:03:16,740
+Let me save this and open that again.
+
+64
+00:03:16,740 --> 00:03:19,770
+Now, when things don't work in the IntelliSense,
+
+65
+00:03:19,770 --> 00:03:22,413
+it is time to restart Visual Studio.
+
+66
+00:03:24,180 --> 00:03:29,180
+I will open the project again and I hope that works.
+
+67
+00:03:30,480 --> 00:03:33,093
+Great, now it is being detected.
+
+68
+00:03:33,990 --> 00:03:35,460
+First thing first,
+
+69
+00:03:35,460 --> 00:03:38,580
+we will change that to be Manage User Role,
+
+70
+00:03:38,580 --> 00:03:41,400
+and we want to display the name here,
+
+71
+00:03:41,400 --> 00:03:44,580
+so ApplicationUser.Name.
+
+72
+00:03:44,580 --> 00:03:46,190
+We will display that.
+
+73
+00:03:46,190 --> 00:03:48,243
+It will be a read-only.
+
+74
+00:03:49,770 --> 00:03:51,540
+When we will be posting,
+
+75
+00:03:51,540 --> 00:03:55,290
+make sure you have the userId in the hidden property.
+
+76
+00:03:55,290 --> 00:03:58,053
+That way we can retrieve that userId.
+
+77
+00:03:59,010 --> 00:04:01,680
+Finally, we need a select dropdown here,
+
+78
+00:04:01,680 --> 00:04:04,350
+so select asp-for.
+
+79
+00:04:04,350 --> 00:04:08,130
+That will be ApplicationUser.Role.
+
+80
+00:04:08,130 --> 00:04:10,380
+We will save it there
+
+81
+00:04:10,380 --> 00:04:13,653
+and the dropdown will be Models.RoleList.
+
+82
+00:04:16,290 --> 00:04:19,920
+We will give that a class of form-select,
+
+83
+00:04:19,920 --> 00:04:22,440
+and that should be good.
+
+84
+00:04:22,440 --> 00:04:25,170
+We need another dropdown for company.
+
+85
+00:04:25,170 --> 00:04:27,630
+Asp-for will be CompanyId
+
+86
+00:04:27,630 --> 00:04:30,333
+and items will be CompanyList.
+
+87
+00:04:31,350 --> 00:04:34,710
+Now we need to toggle this dropdown dynamically,
+
+88
+00:04:34,710 --> 00:04:37,920
+but let me worry about that later on.
+
+89
+00:04:37,920 --> 00:04:40,830
+Let me call this Update Role here
+
+90
+00:04:40,830 --> 00:04:42,660
+and back to list.
+
+91
+00:04:42,660 --> 00:04:44,013
+Remove the controller.
+
+92
+00:04:45,600 --> 00:04:46,560
+Perfect.
+
+93
+00:04:46,560 --> 00:04:51,003
+With that, let me run the application and see if that works.
+
+94
+00:04:52,920 --> 00:04:55,743
+We go to log in here as an admin.
+
+95
+00:04:56,760 --> 00:04:59,130
+Content management.
+
+96
+00:04:59,130 --> 00:05:00,933
+We have managed user.
+
+97
+00:05:02,070 --> 00:05:04,740
+Test employee, perfect.
+
+98
+00:05:04,740 --> 00:05:07,170
+We see the company dropdown here,
+
+99
+00:05:07,170 --> 00:05:09,600
+but that should be only visible
+
+100
+00:05:09,600 --> 00:05:11,883
+if the dropdown here is company.
+
+101
+00:05:12,930 --> 00:05:17,760
+So what I can do is right here I can add a eraser code
+
+102
+00:05:17,760 --> 00:05:21,840
+and we can set a variable companyVisible display:none,
+
+103
+00:05:21,840 --> 00:05:23,940
+and if the role is company,
+
+104
+00:05:23,940 --> 00:05:28,940
+only then we will set display block in the asp-for here.
+
+105
+00:05:29,190 --> 00:05:33,743
+Let me add that dynamic style using companyVisible.
+
+106
+00:05:35,370 --> 00:05:37,650
+With that, if I save this,
+
+107
+00:05:37,650 --> 00:05:40,470
+now if a employee opens that up,
+
+108
+00:05:40,470 --> 00:05:42,150
+it does not display.
+
+109
+00:05:42,150 --> 00:05:45,903
+If a company opens it, we see the company dropdown.
+
+110
+00:05:46,770 --> 00:05:50,400
+But finally, we need to toggle that based on the ID,
+
+111
+00:05:50,400 --> 00:05:53,790
+because right now if we go to permission
+
+112
+00:05:53,790 --> 00:05:56,040
+and if a company is selected,
+
+113
+00:05:56,040 --> 00:05:58,413
+that dropdown should be visible.
+
+114
+00:05:59,550 --> 00:06:02,790
+We have that logic in the register, I believe.
+
+115
+00:06:02,790 --> 00:06:04,383
+Let me open that.
+
+116
+00:06:06,240 --> 00:06:10,670
+And whoops, it's in the CSHTML right here.
+
+117
+00:06:12,750 --> 00:06:13,773
+Copy that.
+
+118
+00:06:14,670 --> 00:06:17,160
+Go back to the role management.
+
+119
+00:06:17,160 --> 00:06:20,133
+And we will paste it right here.
+
+120
+00:06:21,300 --> 00:06:24,753
+We need to get the IDs, so let me do that.
+
+121
+00:06:26,070 --> 00:06:27,183
+F12.
+
+122
+00:06:29,970 --> 00:06:32,103
+The role is ApplicationUser_Role.
+
+123
+00:06:34,440 --> 00:06:36,900
+Let me modify that.
+
+124
+00:06:36,900 --> 00:06:39,303
+And where we have the company,
+
+125
+00:06:40,830 --> 00:06:44,793
+that one is ApplicationUser_CompanyId.
+
+126
+00:06:47,400 --> 00:06:48,300
+Perfect.
+
+127
+00:06:48,300 --> 00:06:52,860
+Let's go back here and if it is company, it is visible.
+
+128
+00:06:52,860 --> 00:06:56,070
+If anything else, that goes away.
+
+129
+00:06:56,070 --> 00:06:59,460
+Perfect, so the view is looking great.
+
+130
+00:06:59,460 --> 00:07:03,033
+In the next video, let's work on the update button.
+

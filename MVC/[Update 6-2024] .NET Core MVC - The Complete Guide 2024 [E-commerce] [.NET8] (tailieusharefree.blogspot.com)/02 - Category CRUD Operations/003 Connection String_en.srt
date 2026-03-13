@@ -1,0 +1,252 @@
+1
+00:00:01,609 --> 00:00:06,110
+In this video, we want to add connection string to our project.
+
+2
+00:00:06,350 --> 00:00:11,720
+Now, when we are adding a connection string, we actually need a SQL Server.
+
+3
+00:00:11,960 --> 00:00:18,860
+So I hope you have installed SQL Server as well as SQL Server Management Studio.
+
+4
+00:00:19,660 --> 00:00:20,740
+With that in place.
+
+5
+00:00:20,740 --> 00:00:26,290
+If you hit the connect icon here, it will ask you for a server name.
+
+6
+00:00:27,200 --> 00:00:31,920
+Now I have multiple servers that are installed on my local machine.
+
+7
+00:00:31,940 --> 00:00:37,070
+If I type localhost and connect, I'm able to connect there.
+
+8
+00:00:37,190 --> 00:00:43,160
+Next, I have local db forward slash MySQL local DB.
+
+9
+00:00:43,790 --> 00:00:48,220
+If I press that, I am able to connect to that as well.
+
+10
+00:00:48,230 --> 00:00:53,180
+And I also have a local server with just a .here.
+
+11
+00:00:53,210 --> 00:00:56,990
+When I do that, I am able to connect successfully.
+
+12
+00:00:57,260 --> 00:01:04,250
+So I have three different server on my local machine based on what server you have and you are able
+
+13
+00:01:04,250 --> 00:01:07,820
+to connect in the SQL Server Management studio.
+
+14
+00:01:07,850 --> 00:01:12,290
+You can use that in the connection string right here.
+
+15
+00:01:12,290 --> 00:01:19,790
+If I expand database, you can see I have an MVC test and a red mango API database.
+
+16
+00:01:20,210 --> 00:01:28,710
+We will be creating a new database, but for that we need to define connection string inside our project.
+
+17
+00:01:29,190 --> 00:01:34,020
+Defining that is super simple, but where do we define that?
+
+18
+00:01:34,700 --> 00:01:42,770
+You can always hardcode that in program.cs where we will be setting up the entity framework, but all
+
+19
+00:01:42,770 --> 00:01:47,240
+the connection and secrets will always go inside.
+
+20
+00:01:47,270 --> 00:01:49,190
+Appsettings.json.
+
+21
+00:01:49,950 --> 00:01:55,170
+It is a basic JSON file where we have a key and we have value.
+
+22
+00:01:55,650 --> 00:02:02,250
+So if you have to define something with connection string, you can say connection here, but when you
+
+23
+00:02:02,250 --> 00:02:08,460
+start typing, IntelliSense will show you that there is something called as connection strings.
+
+24
+00:02:09,039 --> 00:02:13,210
+Now you can ignore that and define your own custom key here.
+
+25
+00:02:13,210 --> 00:02:17,320
+But connection strings is what we will use to get started.
+
+26
+00:02:17,650 --> 00:02:22,800
+That is one of the helper methods that have been provided with the app settings.
+
+27
+00:02:22,810 --> 00:02:29,560
+So if I double click or you can just type it here, it will be connection strings that will be the key
+
+28
+00:02:29,560 --> 00:02:30,190
+name.
+
+29
+00:02:30,550 --> 00:02:35,830
+So make sure there is no spelling mistake here and it is exactly the same.
+
+30
+00:02:36,520 --> 00:02:38,740
+Inside the double brackets here.
+
+31
+00:02:38,740 --> 00:02:44,290
+Next, we have to define a key value pair where we have to define the value.
+
+32
+00:02:45,070 --> 00:02:48,490
+What we have defined here, that is the section name.
+
+33
+00:02:48,490 --> 00:02:51,700
+And inside there we have the key value pairing.
+
+34
+00:02:52,090 --> 00:02:54,640
+We can call that anything we want.
+
+35
+00:02:54,670 --> 00:02:57,310
+I will name that default connection.
+
+36
+00:02:57,310 --> 00:03:03,130
+And then we have to define connection string in the double quotes right here.
+
+37
+00:03:04,060 --> 00:03:07,720
+First thing that we have to define is what is the server?
+
+38
+00:03:08,080 --> 00:03:12,550
+If I go back to SQL Server, I am using a .here.
+
+39
+00:03:12,640 --> 00:03:19,090
+If it was something else, make sure to copy that and I will paste it right here.
+
+40
+00:03:19,540 --> 00:03:22,300
+I have a . so that works.
+
+41
+00:03:22,570 --> 00:03:29,200
+We will add a semicolon and next property, we have to define what will be the database name.
+
+42
+00:03:29,740 --> 00:03:32,290
+I will call that as bulky.
+
+43
+00:03:32,800 --> 00:03:36,040
+Let me add that and semicolon.
+
+44
+00:03:36,640 --> 00:03:38,470
+Let me hide this here.
+
+45
+00:03:38,470 --> 00:03:41,920
+And after this I want to define two properties.
+
+46
+00:03:42,040 --> 00:03:44,140
+First one is trusted.
+
+47
+00:03:44,140 --> 00:03:50,440
+Underscore connection is equal to true and trust server certificate to be true.
+
+48
+00:03:50,830 --> 00:03:58,180
+If you do not define them, sometimes when you have installed the SQL Server, it requires a trust certificate.
+
+49
+00:03:58,330 --> 00:04:02,230
+If you do not set that, then the connection will not work.
+
+50
+00:04:02,980 --> 00:04:04,190
+So perfect.
+
+51
+00:04:04,340 --> 00:04:11,120
+These two properties you have to define as is and make sure there is no spelling mistake in the trusted
+
+52
+00:04:11,120 --> 00:04:17,660
+connection there is an underscore, but when we write the trust server certificate, there is no underscore
+
+53
+00:04:17,660 --> 00:04:18,769
+or space.
+
+54
+00:04:19,420 --> 00:04:23,470
+So with that, we have defined a connection string in our project.
+
+55
+00:04:23,800 --> 00:04:30,580
+In the app settings, we have added a block with the name of Connection strings and I told you to use
+
+56
+00:04:30,580 --> 00:04:31,780
+that exact name.
+
+57
+00:04:31,780 --> 00:04:38,050
+Reason I will explain that in the upcoming videos when we see everything come together.
+
+58
+00:04:38,320 --> 00:04:40,720
+But in that connection, Strings Block.
+
+59
+00:04:40,750 --> 00:04:44,770
+Here we have a key with the name of Default Connection.
+
+60
+00:04:44,770 --> 00:04:50,170
+And there we have defined the connection string for our local SQL Server.
+
+61
+00:04:50,590 --> 00:04:56,710
+So perfect, we have defined our connection string in Appsettings.json file.
+
+62
+00:04:57,040 --> 00:05:03,550
+Now how will we use the connection string to connect to the database and actually create a table?
+
+63
+00:05:03,880 --> 00:05:07,660
+Let me continue for that in the next video.
+

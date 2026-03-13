@@ -1,0 +1,472 @@
+1
+00:00:02,009 --> 00:00:04,950
+Lecturer: Now it's time to work on the post action method
+
+2
+00:00:04,950 --> 00:00:06,390
+for details.
+
+3
+00:00:06,390 --> 00:00:11,390
+So let me copy and paste that and it'll be Http post.
+
+4
+00:00:11,760 --> 00:00:16,113
+The model that we will receive here will be shopping cart.
+
+5
+00:00:17,490 --> 00:00:19,860
+Now if we go to the details here
+
+6
+00:00:19,860 --> 00:00:22,230
+we will be receiving the count
+
+7
+00:00:22,230 --> 00:00:24,960
+but we will not receive product ID
+
+8
+00:00:24,960 --> 00:00:29,310
+because that is not inside any input properties.
+
+9
+00:00:29,310 --> 00:00:34,310
+We will have to add a hidden input field for product ID.
+
+10
+00:00:34,380 --> 00:00:36,930
+That way in the home controller when we receive
+
+11
+00:00:36,930 --> 00:00:41,253
+shopping cart, the product ID will be populated.
+
+12
+00:00:42,150 --> 00:00:43,260
+But on top of that
+
+13
+00:00:43,260 --> 00:00:47,460
+when we have to enter a record in the shopping cart table
+
+14
+00:00:47,460 --> 00:00:51,840
+we need user ID of the user that is logged in.
+
+15
+00:00:51,840 --> 00:00:54,450
+So this Http post
+
+16
+00:00:54,450 --> 00:00:56,910
+we have to add the authorized keyword
+
+17
+00:00:56,910 --> 00:00:59,550
+because if someone is posting,
+
+18
+00:00:59,550 --> 00:01:02,370
+they must be an authorized user.
+
+19
+00:01:02,370 --> 00:01:04,890
+We do not care what role they have
+
+20
+00:01:04,890 --> 00:01:08,640
+they just have to be logged into the website.
+
+21
+00:01:08,640 --> 00:01:11,700
+That is why we will use authorized keyword here
+
+22
+00:01:11,700 --> 00:01:13,920
+without any role.
+
+23
+00:01:13,920 --> 00:01:17,430
+Now that is good that a user is authorized
+
+24
+00:01:17,430 --> 00:01:22,430
+but how will we get that user ID of the logged in user?
+
+25
+00:01:22,440 --> 00:01:24,840
+We have helper method for that.
+
+26
+00:01:24,840 --> 00:01:27,780
+So we will first have to get something which is
+
+27
+00:01:27,780 --> 00:01:32,640
+a claims identity that is inside user object
+
+28
+00:01:32,640 --> 00:01:35,310
+that is provided by default dot
+
+29
+00:01:35,310 --> 00:01:36,820
+we have the identity
+
+30
+00:01:37,710 --> 00:01:42,710
+we have to explicitly convert that to claims identity.
+
+31
+00:01:42,750 --> 00:01:44,283
+So let me do that.
+
+32
+00:01:45,180 --> 00:01:47,550
+Now from that claims identity
+
+33
+00:01:47,550 --> 00:01:49,680
+there is a special claim with the name
+
+34
+00:01:49,680 --> 00:01:53,640
+of name identifier that will have user ID
+
+35
+00:01:53,640 --> 00:01:55,980
+of the logged in user.
+
+36
+00:01:55,980 --> 00:01:58,560
+These are the default methods that are provided
+
+37
+00:01:58,560 --> 00:02:02,610
+by the dot net team and I'm not reinventing anything
+
+38
+00:02:02,610 --> 00:02:05,700
+just accessing them right here.
+
+39
+00:02:05,700 --> 00:02:10,699
+So user ID is inside the claims identity dot find first
+
+40
+00:02:11,700 --> 00:02:16,700
+and we want to find a claim type dot name identifier.
+
+41
+00:02:17,490 --> 00:02:21,030
+This name identifier is nothing but a constant
+
+42
+00:02:21,030 --> 00:02:23,970
+and that is where the user ID will be stored.
+
+43
+00:02:23,970 --> 00:02:28,800
+When a user logs in, we have to access dot value
+
+44
+00:02:28,800 --> 00:02:32,553
+and that way the user ID will be populated.
+
+45
+00:02:33,960 --> 00:02:37,500
+Now in order to show that, let me actually
+
+46
+00:02:37,500 --> 00:02:42,033
+add a debugging point here and restart the application.
+
+47
+00:02:44,910 --> 00:02:48,960
+Let me go to details and if I select add to cart
+
+48
+00:02:48,960 --> 00:02:51,120
+it'll ask me to log in.
+
+49
+00:02:51,120 --> 00:02:56,120
+So let me log in as a customer here and perfect.
+
+50
+00:02:56,310 --> 00:02:58,980
+Now, if I click add to cart
+
+51
+00:02:58,980 --> 00:03:01,050
+It hits our breakpoint.
+
+52
+00:03:01,050 --> 00:03:04,440
+And if you examine we have a claims identity
+
+53
+00:03:04,440 --> 00:03:07,980
+and insight there we have all the claims there.
+
+54
+00:03:07,980 --> 00:03:11,130
+If you examine, we have name identifier
+
+55
+00:03:11,130 --> 00:03:13,503
+and that has the user ID.
+
+56
+00:03:14,460 --> 00:03:18,390
+That is the user ID that we want and that user ID
+
+57
+00:03:18,390 --> 00:03:22,503
+we have to add to the shopping cart when we create a record.
+
+58
+00:03:23,670 --> 00:03:26,490
+So if I press F10 again here
+
+59
+00:03:26,490 --> 00:03:30,273
+user ID is populated and that looks good.
+
+60
+00:03:31,260 --> 00:03:32,093
+So perfect.
+
+61
+00:03:32,093 --> 00:03:33,870
+Let me stop the application.
+
+62
+00:03:33,870 --> 00:03:37,500
+We have the user ID and the product ID will be
+
+63
+00:03:37,500 --> 00:03:39,753
+inside the shopping cart model.
+
+64
+00:03:40,710 --> 00:03:44,430
+So all we have to do is say shopping cart dot application
+
+65
+00:03:44,430 --> 00:03:48,330
+user ID is equal to the user ID
+
+66
+00:03:48,330 --> 00:03:51,033
+and then we have to add that shopping cart.
+
+67
+00:03:51,960 --> 00:03:54,930
+To add that we will say underscore unit of work
+
+68
+00:03:54,930 --> 00:03:57,330
+dot shopping cart dot add,
+
+69
+00:03:57,330 --> 00:04:02,220
+we add the shopping cart and we say underscore unit of work
+
+70
+00:04:02,220 --> 00:04:03,123
+dot save.
+
+71
+00:04:04,500 --> 00:04:08,523
+With that let me run the application and see what happens.
+
+72
+00:04:11,490 --> 00:04:16,490
+I will open the database here, let me refresh the tables.
+
+73
+00:04:18,120 --> 00:04:20,820
+Shopping cart is empty.
+
+74
+00:04:20,820 --> 00:04:24,600
+And let me go to details here.
+
+75
+00:04:24,600 --> 00:04:29,600
+We will have to log in again and let me add three items.
+
+76
+00:04:30,840 --> 00:04:31,863
+Add to cart.
+
+77
+00:04:32,880 --> 00:04:35,190
+Now it hits an exception.
+
+78
+00:04:35,190 --> 00:04:38,793
+Can you try to find out on why it hits an exception?
+
+79
+00:04:40,320 --> 00:04:42,450
+The reason is in home controller
+
+80
+00:04:42,450 --> 00:04:44,520
+when everything is successful
+
+81
+00:04:44,520 --> 00:04:46,980
+we are redirecting back to the view.
+
+82
+00:04:46,980 --> 00:04:50,940
+But this details view expects a shopping cart
+
+83
+00:04:50,940 --> 00:04:53,760
+that is not provided here.
+
+84
+00:04:53,760 --> 00:04:56,190
+So basically everything was done
+
+85
+00:04:56,190 --> 00:04:58,650
+and then it returns back to the view.
+
+86
+00:04:58,650 --> 00:05:02,730
+So if I go to the shopping cart, perfect
+
+87
+00:05:02,730 --> 00:05:05,313
+we have the entry right here.
+
+88
+00:05:06,150 --> 00:05:10,740
+All we have to do is if I go back and continue
+
+89
+00:05:10,740 --> 00:05:13,950
+rather than returning back to the view
+
+90
+00:05:13,950 --> 00:05:18,180
+I would have to redirect them to the homepage.
+
+91
+00:05:18,180 --> 00:05:21,810
+Now, when we redirect them to the index action method
+
+92
+00:05:21,810 --> 00:05:24,660
+rather than writing the magic string here
+
+93
+00:05:24,660 --> 00:05:27,300
+we have something called as name of.
+
+94
+00:05:27,300 --> 00:05:31,050
+And there it provides name of all the action method
+
+95
+00:05:31,050 --> 00:05:32,820
+inside this controller.
+
+96
+00:05:32,820 --> 00:05:36,960
+So that way you can see we avoid the spelling mistakes
+
+97
+00:05:36,960 --> 00:05:39,033
+and we avoid magic string.
+
+98
+00:05:40,200 --> 00:05:42,753
+With that, let me run the application again.
+
+99
+00:05:45,090 --> 00:05:47,490
+Let me go to the details here
+
+100
+00:05:47,490 --> 00:05:50,820
+and let me update the count to be one,
+
+101
+00:05:50,820 --> 00:05:52,503
+we will have to log in.
+
+102
+00:05:54,960 --> 00:05:56,400
+Perfect that work.
+
+103
+00:05:56,400 --> 00:06:01,110
+But if I go to database, previously the count was three.
+
+104
+00:06:01,110 --> 00:06:03,300
+I logged in with the same user
+
+105
+00:06:03,300 --> 00:06:05,640
+and I updated the same product.
+
+106
+00:06:05,640 --> 00:06:08,790
+But you can see what is happening here
+
+107
+00:06:08,790 --> 00:06:12,450
+it is adding duplicate entries in the table.
+
+108
+00:06:12,450 --> 00:06:14,160
+We do not want that.
+
+109
+00:06:14,160 --> 00:06:16,770
+If the product ID already exist
+
+110
+00:06:16,770 --> 00:06:19,110
+then we have to update the count,
+
+111
+00:06:19,110 --> 00:06:21,573
+else we have to add a new entry.
+
+112
+00:06:22,440 --> 00:06:24,240
+We will have to clear things here.
+
+113
+00:06:24,240 --> 00:06:28,980
+So we will say delete and let me drop all the three rows.
+
+114
+00:06:28,980 --> 00:06:32,070
+But now we need to figure out that, okay
+
+115
+00:06:32,070 --> 00:06:36,510
+if a cart already exists for that user and that product
+
+116
+00:06:36,510 --> 00:06:38,400
+then we have to update
+
+117
+00:06:38,400 --> 00:06:40,560
+else we will create.
+
+118
+00:06:40,560 --> 00:06:43,053
+Let me do that in the next video.
+

@@ -1,0 +1,208 @@
+1
+00:00:01,680 --> 00:00:04,680
+Narrator: Now, we want to work on the details page.
+
+2
+00:00:04,680 --> 00:00:07,110
+For that, what we will do is we will display
+
+3
+00:00:07,110 --> 00:00:09,780
+all the product details on that page,
+
+4
+00:00:09,780 --> 00:00:13,680
+and then for those product details, we will ask the user
+
+5
+00:00:13,680 --> 00:00:18,000
+how many products you want to add to the shopping cart.
+
+6
+00:00:18,000 --> 00:00:20,490
+So let's go back to our controller.
+
+7
+00:00:20,490 --> 00:00:23,760
+Inside the HomeController, let me stop this.
+
+8
+00:00:23,760 --> 00:00:26,550
+We will copy the index action method,
+
+9
+00:00:26,550 --> 00:00:29,643
+and we will create a details action method.
+
+10
+00:00:30,540 --> 00:00:32,970
+Inside detail, we do not want a list,
+
+11
+00:00:32,970 --> 00:00:35,340
+we just want a single product.
+
+12
+00:00:35,340 --> 00:00:40,230
+So we will retrieve that and I can call this as product.
+
+13
+00:00:40,230 --> 00:00:44,493
+Rather than GetAll, we will have the GetFirstOrDefault.
+
+14
+00:00:45,330 --> 00:00:48,720
+In the action method here, we will receive an id
+
+15
+00:00:48,720 --> 00:00:51,420
+for which we want to view the details.
+
+16
+00:00:51,420 --> 00:00:54,060
+So inside the GetFirstOrDefault,
+
+17
+00:00:54,060 --> 00:00:56,340
+we will have our link expression,
+
+18
+00:00:56,340 --> 00:01:00,769
+u equals to u dot id is equal equal to the id.
+
+19
+00:01:00,769 --> 00:01:01,800
+(keyboard typing)
+
+20
+00:01:01,800 --> 00:01:04,920
+We will return back our product model.
+
+21
+00:01:04,920 --> 00:01:06,480
+Now, inside the details page,
+
+22
+00:01:06,480 --> 00:01:08,670
+we will also need the number of count
+
+23
+00:01:08,670 --> 00:01:12,930
+that user wants for that product in their shopping cart.
+
+24
+00:01:12,930 --> 00:01:15,420
+So we will need to create a view model
+
+25
+00:01:15,420 --> 00:01:18,330
+since product will not be sufficient.
+
+26
+00:01:18,330 --> 00:01:20,190
+And once the user adds that,
+
+27
+00:01:20,190 --> 00:01:23,580
+we will be adding that to the shopping cart,
+
+28
+00:01:23,580 --> 00:01:26,254
+so it makes sense to create a view model.
+
+29
+00:01:26,254 --> 00:01:27,420
+(mouse clicking)
+
+30
+00:01:27,420 --> 00:01:30,840
+I will call that as shopping cart.
+
+31
+00:01:30,840 --> 00:01:33,930
+We will make that a public class.
+
+32
+00:01:33,930 --> 00:01:35,310
+We'll do prop here.
+
+33
+00:01:35,310 --> 00:01:39,120
+We will have a product and we will call it the same.
+
+34
+00:01:39,120 --> 00:01:42,180
+Next, what we want is count for that product.
+
+35
+00:01:42,180 --> 00:01:45,240
+So we will do prop integer.
+
+36
+00:01:45,240 --> 00:01:49,650
+We will have count here and we will add the range validation
+
+37
+00:01:49,650 --> 00:01:53,340
+that it must be between one and thousand.
+
+38
+00:01:53,340 --> 00:01:56,310
+That looks good for now, but we will come back
+
+39
+00:01:56,310 --> 00:02:00,510
+and modify our shopping cart in the future videos.
+
+40
+00:02:00,510 --> 00:02:03,750
+Right now, if we go to our home controller,
+
+41
+00:02:03,750 --> 00:02:07,380
+here, we can create a ShoppingCart object.
+
+42
+00:02:07,380 --> 00:02:09,122
+Let me press control dot.
+
+43
+00:02:10,800 --> 00:02:14,403
+This will be cartObj is equal to new.
+
+44
+00:02:15,510 --> 00:02:17,700
+And within the parameters here,
+
+45
+00:02:17,700 --> 00:02:20,460
+we will assign this to product.
+
+46
+00:02:20,460 --> 00:02:24,870
+So product is equal to the product here
+
+47
+00:02:24,870 --> 00:02:28,080
+and I want count to be defaulted to one.
+
+48
+00:02:28,080 --> 00:02:31,830
+So right here we can set count is equal to one.
+
+49
+00:02:31,830 --> 00:02:33,540
+That's perfect.
+
+50
+00:02:33,540 --> 00:02:38,540
+We will return the cartObj to the view and let's save this.
+
+51
+00:02:39,150 --> 00:02:42,540
+In the next video, let's create the details view
+
+52
+00:02:42,540 --> 00:02:44,493
+and display all the details.
+

@@ -1,0 +1,364 @@
+1
+00:00:01,890 --> 00:00:02,723
+Instructor: Now we want
+
+2
+00:00:02,723 --> 00:00:06,840
+to implement the initialized method and the DB Initializer.
+
+3
+00:00:06,840 --> 00:00:09,810
+And there, I want to do three things.
+
+4
+00:00:09,810 --> 00:00:13,620
+First, I want to push migrations if they are not applied.
+
+5
+00:00:13,620 --> 00:00:17,040
+Next, create roles if they are not created.
+
+6
+00:00:17,040 --> 00:00:19,680
+Third, if the roles are not created,
+
+7
+00:00:19,680 --> 00:00:22,503
+then we will create admin user as well.
+
+8
+00:00:23,550 --> 00:00:27,300
+So basically, we will create roles and admin user,
+
+9
+00:00:27,300 --> 00:00:30,603
+along with pushing all the pending migration.
+
+10
+00:00:31,590 --> 00:00:34,230
+Now, when we are working with creating user
+
+11
+00:00:34,230 --> 00:00:38,580
+or assigning roles, we have always used user manager,
+
+12
+00:00:38,580 --> 00:00:42,300
+role manager and application DB context.
+
+13
+00:00:42,300 --> 00:00:44,730
+So, let me inject all three of them,
+
+14
+00:00:44,730 --> 00:00:46,953
+using dependency injection.
+
+15
+00:00:47,790 --> 00:00:49,110
+But once we do that,
+
+16
+00:00:49,110 --> 00:00:52,563
+then first we want to apply any pending migration.
+
+17
+00:00:53,700 --> 00:00:57,100
+That we can do inside a try-catch block here
+
+18
+00:00:58,320 --> 00:01:01,890
+and exception E, perfect.
+
+19
+00:01:01,890 --> 00:01:04,140
+Here, we will have an F condition
+
+20
+00:01:04,140 --> 00:01:08,130
+and on underscore DB, we have database,
+
+21
+00:01:08,130 --> 00:01:10,200
+where we have a helper function,
+
+22
+00:01:10,200 --> 00:01:13,020
+which is get pending migrations
+
+23
+00:01:13,020 --> 00:01:16,620
+and we will check if the count of pending migration
+
+24
+00:01:16,620 --> 00:01:18,900
+is greater than zero.
+
+25
+00:01:18,900 --> 00:01:21,660
+If that is, then we will apply the migration
+
+26
+00:01:21,660 --> 00:01:26,343
+by using _DB.database.migrate.
+
+27
+00:01:27,240 --> 00:01:29,040
+Next, we need to create roles.
+
+28
+00:01:29,040 --> 00:01:33,420
+If they are not created, we have that inside register.
+
+29
+00:01:33,420 --> 00:01:37,533
+We can cut that and paste it right here.
+
+30
+00:01:38,640 --> 00:01:39,780
+That looks good.
+
+31
+00:01:39,780 --> 00:01:43,710
+And after that, we have to create an application user,
+
+32
+00:01:43,710 --> 00:01:46,710
+so user manager dot create async.
+
+33
+00:01:46,710 --> 00:01:49,560
+We will create a new application user
+
+34
+00:01:49,560 --> 00:01:51,603
+and populate some of the details.
+
+35
+00:01:52,830 --> 00:01:55,980
+With a comma here, we have to add the password,
+
+36
+00:01:55,980 --> 00:01:58,830
+so that is what we will add right here.
+
+37
+00:01:58,830 --> 00:02:03,720
+You can see, we need identity user comma the password.
+
+38
+00:02:03,720 --> 00:02:05,880
+Because it is an async here,
+
+39
+00:02:05,880 --> 00:02:10,350
+we will have to call the GetAwaiter.GetResult.
+
+40
+00:02:10,350 --> 00:02:14,670
+Once the user is created, we will retrieve that user object
+
+41
+00:02:14,670 --> 00:02:17,163
+from database, using _db.ApplicationUser.
+
+42
+00:02:20,760 --> 00:02:22,470
+And after that is done,
+
+43
+00:02:22,470 --> 00:02:24,633
+we will call userManager.AddToRoleAsync,
+
+44
+00:02:27,420 --> 00:02:32,030
+where we'll pass the user and the role is SD.Role_Admin.
+
+45
+00:02:33,810 --> 00:02:37,293
+We will call the GetAwaiter.GetResult.
+
+46
+00:02:39,150 --> 00:02:41,370
+Now, this user that we want to create
+
+47
+00:02:41,370 --> 00:02:45,870
+will only happen the first time if the role does not exist,
+
+48
+00:02:45,870 --> 00:02:49,503
+so we can add that inside the same if condition.
+
+49
+00:02:50,850 --> 00:02:54,450
+And after everything, we will directly return back
+
+50
+00:02:54,450 --> 00:02:57,573
+to the application and that looks good.
+
+51
+00:02:59,160 --> 00:03:03,090
+So, perfect, you can see how we are seeding our data
+
+52
+00:03:03,090 --> 00:03:05,730
+with the initialized method.
+
+53
+00:03:05,730 --> 00:03:07,080
+But now the question is,
+
+54
+00:03:07,080 --> 00:03:09,390
+how will this initialized method
+
+55
+00:03:09,390 --> 00:03:12,933
+or where will we invoke this initialized method?
+
+56
+00:03:13,860 --> 00:03:18,860
+We have to get creative to invoke that inside Program.CS.
+
+57
+00:03:19,020 --> 00:03:23,433
+Let me open that and we will add that to our pipeline.
+
+58
+00:03:24,930 --> 00:03:28,740
+Right after app.run, let me create a method here
+
+59
+00:03:28,740 --> 00:03:33,740
+with the name of C database and they're using app.service.
+
+60
+00:03:34,350 --> 00:03:36,183
+We will have to create a scope.
+
+61
+00:03:37,078 --> 00:03:39,777
+So, I will add a using statement here.
+
+62
+00:03:39,777 --> 00:03:42,180
+I will say variable scope
+
+63
+00:03:42,180 --> 00:03:46,563
+is equal to app.Services.CreateScope.
+
+64
+00:03:47,970 --> 00:03:52,053
+On this scope object, we can get the service provider.
+
+65
+00:03:53,130 --> 00:03:56,730
+So, on scope, we have the service provider.
+
+66
+00:03:56,730 --> 00:04:00,180
+There, we have a method, get required service.
+
+67
+00:04:00,180 --> 00:04:03,900
+And the type of service implementation that we want
+
+68
+00:04:03,900 --> 00:04:06,213
+is IDB Initializer.
+
+69
+00:04:07,770 --> 00:04:12,770
+We will store that inside a variable DB Initializer here.
+
+70
+00:04:12,840 --> 00:04:14,810
+And then, on DB initializer,
+
+71
+00:04:14,810 --> 00:04:17,882
+we can invoke that initialized method.
+
+72
+00:04:19,260 --> 00:04:23,820
+Now the seed database, let me invoke that in our pipeline.
+
+73
+00:04:23,820 --> 00:04:27,063
+So, right here, we can invoke that.
+
+74
+00:04:28,110 --> 00:04:31,260
+So, that will be invoked every time the application
+
+75
+00:04:31,260 --> 00:04:35,460
+is restarted, but if we examine the code here,
+
+76
+00:04:35,460 --> 00:04:38,940
+we are checking the role, if that already exists,
+
+77
+00:04:38,940 --> 00:04:42,360
+it'll not execute any of the statement.
+
+78
+00:04:42,360 --> 00:04:46,170
+It'll only execute the statements first time
+
+79
+00:04:46,170 --> 00:04:51,150
+when it is creating role and that is exactly what we want.
+
+80
+00:04:51,150 --> 00:04:54,360
+But anytime, if there are pending migrations,
+
+81
+00:04:54,360 --> 00:04:57,510
+they will be applied automatically.
+
+82
+00:04:57,510 --> 00:05:01,680
+But one thing is remaining in Program.CS.
+
+83
+00:05:01,680 --> 00:05:04,752
+We are telling the service provider to get an implementation
+
+84
+00:05:04,752 --> 00:05:07,890
+of IDB initializer.
+
+85
+00:05:07,890 --> 00:05:11,640
+But have we registered that in builder services?
+
+86
+00:05:11,640 --> 00:05:12,473
+We have not.
+
+87
+00:05:13,530 --> 00:05:14,670
+So, let me add that
+
+88
+00:05:14,670 --> 00:05:19,670
+by builder.services.AddScoped IDB Initializer
+
+89
+00:05:19,680 --> 00:05:24,680
+and the implementation is inside DB Initializer.
+
+90
+00:05:24,900 --> 00:05:27,120
+Now with all of that configured,
+
+91
+00:05:27,120 --> 00:05:30,903
+let me show you how to test this in the next video.
+

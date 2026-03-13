@@ -1,0 +1,148 @@
+1
+00:00:02,450 --> 00:00:09,050
+Điều tiếp theo, điều tôi muốn thêm ở đây là dựa trên ID người dùng, chúng tôi muốn khóa bất kỳ tài khoản nào và mở khóa
+
+2
+00:00:09,050 --> 00:00:11,540
+bất kỳ tài khoản nào trong lõi dotnet.
+
+3
+00:00:12,310 --> 00:00:14,440
+Bây giờ làm điều đó là siêu đơn giản.
+
+4
+00:00:14,440 --> 00:00:22,000
+Trong ASP. NET Người dùng, chúng tôi có một cột dành cho cột bị khóa ở cuối ngay tại đây.
+
+5
+00:00:22,390 --> 00:00:30,370
+Nếu giá trị trong cột này được điền cho bất kỳ người dùng nào và nếu ngày đó là một ngày trong tương lai, thì tài khoản
+
+6
+00:00:30,370 --> 00:00:32,650
+của họ sẽ bị khóa cho đến ngày đó.
+
+7
+00:00:33,070 --> 00:00:35,050
+Vì vậy, đó là logic đơn giản.
+
+8
+00:00:35,080 --> 00:00:40,870
+Nếu chúng tôi muốn khóa bất kỳ tài khoản nào, chúng tôi phải đặt ngày kết thúc khóa là ngày trong tương lai.
+
+9
+00:00:40,870 --> 00:00:43,990
+Cho đến ngày đó, tài khoản sẽ bị khóa.
+
+10
+00:00:44,780 --> 00:00:50,570
+Vì vậy, hãy để tôi quay lại và để tôi làm việc với nó ngay tại đây trong bộ điều khiển.
+
+11
+00:00:50,990 --> 00:00:57,740
+Tôi sẽ đổi tên cái này thành lock unlock ở đây và tôi sẽ biến nó thành một bài đăng HTTP.
+
+12
+00:00:59,400 --> 00:01:06,570
+Chúng tôi sẽ lấy ID ở đây, nhưng đó sẽ là ID người dùng, sẽ là chuỗi và chúng tôi sẽ lấy ID đó từ phần
+
+13
+00:01:06,570 --> 00:01:07,320
+thân.
+
+14
+00:01:08,550 --> 00:01:15,630
+Dựa trên ID đó, chúng tôi muốn truy xuất bản ghi người dùng từ cơ sở dữ liệu và chúng tôi sẽ trả lại
+
+15
+00:01:15,660 --> 00:01:17,970
+JSON nếu đối tượng đó trống.
+
+16
+00:01:18,510 --> 00:01:25,290
+Bây giờ, khi chúng tôi nhận được bản ghi, chúng tôi sẽ sử dụng cùng một phương pháp để khóa người dùng và mở khóa người dùng.
+
+17
+00:01:25,440 --> 00:01:33,210
+Vì vậy, nếu ngày không trống và nếu ngày là tương lai, điều đó có nghĩa là người dùng hiện đang bị khóa.
+
+18
+00:01:33,240 --> 00:01:35,070
+Chúng ta phải mở khóa chúng.
+
+19
+00:01:35,900 --> 00:01:47,420
+Vì vậy, nếu OBJ từ db dot lock out end không phải là null và obj từ db dot lock out end lớn hơn ngày hôm
+
+20
+00:01:47,420 --> 00:01:48,020
+nay.
+
+21
+00:01:48,380 --> 00:01:50,600
+Vì vậy, nó lớn hơn dấu chấm ngày giờ.
+
+22
+00:01:50,600 --> 00:01:57,950
+Bây giờ điều đó có nghĩa là người dùng đó hiện đang bị khóa và chúng tôi cần mở khóa họ.
+
+23
+00:01:59,160 --> 00:02:05,420
+Vì vậy, ở đây chúng ta sẽ nói OBJ từ DB dot lockout end bằng với date time dot.
+
+24
+00:02:05,430 --> 00:02:11,610
+Bây giờ điều đó sẽ làm là từ thời điểm này trở đi, người dùng sẽ được mở khóa.
+
+25
+00:02:12,560 --> 00:02:13,610
+Trông tôt đây.
+
+26
+00:02:13,730 --> 00:02:18,080
+Nhưng nếu người dùng đã được mở khóa, chúng tôi muốn khóa họ.
+
+27
+00:02:18,380 --> 00:02:24,710
+Vì vậy, kết thúc khóa bằng với dấu chấm ngày giờ và chúng tôi muốn thêm năm.
+
+28
+00:02:25,100 --> 00:02:32,180
+Hãy thêm 1000 năm để người dùng sẽ bị khóa trong 1000 năm tới.
+
+29
+00:02:32,420 --> 00:02:34,580
+Chúng ta phải lưu các thay đổi.
+
+30
+00:02:35,310 --> 00:02:37,840
+Ngay bây giờ chúng tôi không sử dụng đơn vị công việc.
+
+31
+00:02:37,860 --> 00:02:42,210
+Chúng tôi đang trực tiếp làm việc với lõi khung thực thể với DB gạch dưới.
+
+32
+00:02:42,900 --> 00:02:49,740
+Vì vậy, khi chúng tôi phải thực hiện thay đổi, chúng tôi có thể truy xuất trực tiếp bản ghi đó, cập nhật nội dung nào đó trong
+
+33
+00:02:49,740 --> 00:02:51,540
+bản ghi đó và lưu các thay đổi.
+
+34
+00:02:52,290 --> 00:02:59,250
+Điều này sẽ hoạt động ngay bây giờ vì bản ghi được truy xuất đang được theo dõi bởi thực thể Framework Core.
+
+35
+00:03:00,670 --> 00:03:03,260
+Vì vậy, phương pháp đăng có vẻ tốt ở đây.
+
+36
+00:03:03,280 --> 00:03:07,240
+Chúng ta cần sử dụng nó từ người dùng dot js.
+
+37
+00:03:07,780 --> 00:03:10,540
+Hãy để tôi làm điều đó trong video tiếp theo.
+

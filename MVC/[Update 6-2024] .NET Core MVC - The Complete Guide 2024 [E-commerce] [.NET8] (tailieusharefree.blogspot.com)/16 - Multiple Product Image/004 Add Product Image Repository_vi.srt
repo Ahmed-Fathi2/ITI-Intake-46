@@ -1,0 +1,100 @@
+1
+00:00:01,700 --> 00:00:09,920
+Bây giờ, cách chúng tôi đã thiết kế dự án của mình là chúng tôi có kho lưu trữ để truy cập vào bất kỳ mô hình cốt lõi nào tương tự
+
+2
+00:00:09,920 --> 00:00:11,630
+như kho lưu trữ danh mục.
+
+3
+00:00:11,660 --> 00:00:19,130
+Chúng tôi cũng sẽ phải thêm một kho lưu trữ cho hình ảnh sản phẩm và sau đó chúng tôi sẽ phải thêm kho lưu trữ đó vào đơn vị
+
+4
+00:00:19,160 --> 00:00:20,000
+công việc.
+
+5
+00:00:20,360 --> 00:00:24,530
+Đó là thiết kế của kho lưu trữ mà chúng tôi có trong dự án của mình.
+
+6
+00:00:24,560 --> 00:00:35,030
+Vì vậy, hãy để tôi sao chép kho lưu trữ danh mục, dán nó và tôi sẽ sửa đổi kho lưu trữ hình ảnh sản phẩm đó cho tôi.
+
+7
+00:00:37,090 --> 00:00:41,620
+Tôi sẽ sao chép tên đó và chúng tôi sẽ sửa đổi giao diện ở đây.
+
+8
+00:00:41,650 --> 00:00:44,800
+Đó sẽ là trên hình ảnh sản phẩm mô hình.
+
+9
+00:00:45,220 --> 00:00:50,170
+Và trong bản cập nhật tới đây chúng ta sẽ nhận được một đối tượng hình ảnh sản phẩm.
+
+10
+00:00:51,640 --> 00:00:54,380
+Thực tế hoàn hảo, giao diện có vẻ tốt.
+
+11
+00:00:54,400 --> 00:00:58,300
+Hãy để tôi sao chép việc triển khai kho lưu trữ danh mục.
+
+12
+00:00:58,330 --> 00:01:05,470
+Dán nó một lần nữa và tôi sẽ đổi tên nó thành kho lưu trữ hình ảnh sản phẩm.
+
+13
+00:01:07,490 --> 00:01:13,640
+Tôi sẽ sao chép tên đó ở đây và tôi sẽ sửa đổi kho hình ảnh sản phẩm.
+
+14
+00:01:13,940 --> 00:01:16,250
+Hãy để tôi làm điều đó thực sự nhanh chóng.
+
+15
+00:01:18,390 --> 00:01:25,560
+Model ở đây sẽ là ảnh sản phẩm và tên constructor sẽ là kho ảnh sản phẩm.
+
+16
+00:01:25,590 --> 00:01:33,540
+Khi cập nhật, chúng tôi sẽ nhận được một hình ảnh sản phẩm và chúng tôi sẽ chuyển đến hình ảnh sản phẩm dấu chấm DB gạch dưới.
+
+17
+00:01:33,540 --> 00:01:34,590
+Cập nhật chấm.
+
+18
+00:01:35,680 --> 00:01:38,470
+Điều đó có vẻ tốt cho cả kho lưu trữ.
+
+19
+00:01:38,500 --> 00:01:43,540
+Cuối cùng, chúng ta phải cấu hình đơn vị công việc trong giao diện ở đây.
+
+20
+00:01:43,540 --> 00:01:52,660
+Chúng ta chỉ cần tạo một kho lưu trữ hình ảnh sản phẩm và trong phần triển khai ở đây, hãy để tôi tạo kho lưu trữ
+
+21
+00:01:52,960 --> 00:01:57,220
+hình ảnh sản phẩm mắt công khai và khởi tạo nó.
+
+22
+00:02:03,040 --> 00:02:03,910
+Hoàn hảo.
+
+23
+00:02:03,910 --> 00:02:05,140
+Trông tôt đây.
+
+24
+00:02:05,140 --> 00:02:10,330
+Và cùng với đó, chúng tôi đã thêm hình ảnh sản phẩm vào đơn vị công việc của mình.
+
+25
+00:02:10,539 --> 00:02:13,720
+Hãy để tôi tiếp tục từ video tiếp theo.
+

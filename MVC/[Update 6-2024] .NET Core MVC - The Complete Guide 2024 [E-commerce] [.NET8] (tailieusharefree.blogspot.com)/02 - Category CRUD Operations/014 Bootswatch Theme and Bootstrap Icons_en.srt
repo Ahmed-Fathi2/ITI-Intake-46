@@ -1,0 +1,288 @@
+1
+00:00:01,990 --> 00:00:08,500
+Everyone loves a pretty application, but when you are working with backend programming, designing
+
+2
+00:00:08,500 --> 00:00:12,400
+is not something that typically developers are comfortable with.
+
+3
+00:00:12,820 --> 00:00:19,870
+Thankfully, we have bootstrap and on top of that we have something else to make bootstrap look even
+
+4
+00:00:19,870 --> 00:00:20,650
+better.
+
+5
+00:00:21,040 --> 00:00:24,580
+And for that we will go to bootSwatch.com.
+
+6
+00:00:25,360 --> 00:00:33,250
+Boot Swatch basically provides free themes for bootstrap, so it takes the bootstrap CSS and modifies
+
+7
+00:00:33,250 --> 00:00:35,590
+them to give you different styling.
+
+8
+00:00:36,100 --> 00:00:42,430
+You can scroll down here and we have multiple themes that are available right here.
+
+9
+00:00:43,150 --> 00:00:46,540
+I will be using Lux theme for the project.
+
+10
+00:00:46,930 --> 00:00:52,660
+We can click the download here and we can download the bootstrap.CSS.
+
+11
+00:00:52,990 --> 00:00:54,520
+Let me open that.
+
+12
+00:00:55,510 --> 00:00:56,950
+I will copy this.
+
+13
+00:00:57,100 --> 00:01:01,910
+Let me switch back to the code here and stop the code for a second.
+
+14
+00:01:01,910 --> 00:01:09,500
+And if we examine the underscored layout, that is where we have the bootstrap CSS right here.
+
+15
+00:01:09,740 --> 00:01:15,530
+What we can do is we can directly modify that inside www root.
+
+16
+00:01:15,560 --> 00:01:19,820
+We have the lib folder bootstrap CSS.
+
+17
+00:01:20,540 --> 00:01:25,190
+And we have bootstrap.CSS as well as the minified file.
+
+18
+00:01:25,520 --> 00:01:28,700
+Let me modify the bootstrap.CSS.
+
+19
+00:01:28,970 --> 00:01:35,390
+I will remove what we have here and paste the new code that we copied with our new style.
+
+20
+00:01:36,310 --> 00:01:41,000
+Then in the underscored layout here, we will not be using the minified file.
+
+21
+00:01:41,020 --> 00:01:44,230
+We will be using bootstrap.CSS.
+
+22
+00:01:45,560 --> 00:01:52,610
+With that configured, let me run the project and see if we are able to notice some difference.
+
+23
+00:01:53,720 --> 00:01:54,860
+And perfect.
+
+24
+00:01:54,860 --> 00:01:58,790
+You can see right away this looks different than what we had.
+
+25
+00:01:59,500 --> 00:02:01,300
+That looks much better.
+
+26
+00:02:01,480 --> 00:02:06,040
+On top of that, I want to make the header and footer here a little dark.
+
+27
+00:02:07,020 --> 00:02:13,860
+So we can go to underscored layout here and where we have nav bar light we will write the class nav
+
+28
+00:02:13,890 --> 00:02:16,740
+bar dark and bg dark.
+
+29
+00:02:17,280 --> 00:02:21,520
+Let me switch back here and we have a gray color.
+
+30
+00:02:21,540 --> 00:02:23,460
+I wanted the black one.
+
+31
+00:02:23,460 --> 00:02:28,110
+So let me go into the theme here and we open that.
+
+32
+00:02:28,140 --> 00:02:31,470
+We have NAV Bar Dark and BG Primary.
+
+33
+00:02:32,600 --> 00:02:34,030
+We will go back here.
+
+34
+00:02:34,040 --> 00:02:36,200
+BG will be primary.
+
+35
+00:02:37,540 --> 00:02:38,590
+And perfect.
+
+36
+00:02:38,590 --> 00:02:39,820
+That looks better.
+
+37
+00:02:39,820 --> 00:02:42,200
+We need to modify the color.
+
+38
+00:02:42,260 --> 00:02:43,600
+Let me go back.
+
+39
+00:02:43,630 --> 00:02:45,610
+We no longer need the text.
+
+40
+00:02:45,610 --> 00:02:46,360
+Dark.
+
+41
+00:02:46,870 --> 00:02:48,580
+I will remove that.
+
+42
+00:02:49,830 --> 00:02:51,450
+And let's see.
+
+43
+00:02:51,480 --> 00:02:52,320
+Perfect.
+
+44
+00:02:52,590 --> 00:02:54,450
+That looks much better.
+
+45
+00:02:54,660 --> 00:02:56,940
+We will make the footer dark as well.
+
+46
+00:02:56,940 --> 00:02:58,300
+So let me go back.
+
+47
+00:02:58,320 --> 00:03:00,390
+We have the footer here.
+
+48
+00:03:00,600 --> 00:03:03,210
+We will say BG primary.
+
+49
+00:03:03,660 --> 00:03:05,910
+And let's take a look at that.
+
+50
+00:03:06,270 --> 00:03:07,470
+And perfect.
+
+51
+00:03:07,470 --> 00:03:09,000
+That looks better.
+
+52
+00:03:09,240 --> 00:03:12,480
+The footer here, we will keep that bulky web.
+
+53
+00:03:14,100 --> 00:03:14,850
+Perfect.
+
+54
+00:03:15,680 --> 00:03:18,140
+Now we also require icons.
+
+55
+00:03:18,470 --> 00:03:25,550
+We will go to icons.getbootstrap.com, and we will go to the install tab, which is at the very
+
+56
+00:03:25,550 --> 00:03:26,160
+end.
+
+57
+00:03:26,180 --> 00:03:28,370
+We have the CDN for that.
+
+58
+00:03:29,300 --> 00:03:29,990
+Copy that.
+
+59
+00:03:29,990 --> 00:03:34,730
+CDN and we will add that inside the underscored layout.
+
+60
+00:03:35,590 --> 00:03:39,130
+We will paste it in the CSS at the top here.
+
+61
+00:03:39,490 --> 00:03:41,110
+And that looks good.
+
+62
+00:03:42,350 --> 00:03:48,770
+With that configured, let me go back to the website here and let me search for an icon.
+
+63
+00:03:50,120 --> 00:03:53,780
+We scroll up, I will look for a heart icon.
+
+64
+00:03:55,820 --> 00:03:57,920
+And we have the heart fill.
+
+65
+00:03:57,950 --> 00:03:59,210
+Copy that.
+
+66
+00:04:00,190 --> 00:04:03,040
+We will modify our footer once again.
+
+67
+00:04:04,950 --> 00:04:11,520
+And I will paste it made with heart pie.net mastery.
+
+68
+00:04:12,730 --> 00:04:18,050
+Save that and perfect looks much better.
+
+69
+00:04:18,070 --> 00:04:22,570
+Let me do text center here and great.
+
+70
+00:04:23,170 --> 00:04:30,100
+Our header and footer are now looking great, but we have added bootstrap icons as well as we are using
+
+71
+00:04:30,100 --> 00:04:31,420
+the Boots watch theme.
+
+72
+00:04:32,110 --> 00:04:35,200
+Let me continue from the next video.
+

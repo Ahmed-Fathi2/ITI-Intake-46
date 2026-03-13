@@ -1,0 +1,416 @@
+1
+00:00:01,830 --> 00:00:05,070
+We have added the NuGet packages that are needed.
+
+2
+00:00:05,460 --> 00:00:12,990
+Now we will be adding something to establish the connection between our database and entity framework.
+
+3
+00:00:13,590 --> 00:00:20,880
+We will create a new file, but in the main project we will right click add a new folder with the name
+
+4
+00:00:20,880 --> 00:00:25,320
+of data, and inside there I will create a class.
+
+5
+00:00:26,120 --> 00:00:30,140
+Which will be application dbcontext.CS.
+
+6
+00:00:30,380 --> 00:00:33,050
+Now you can call that anything you want.
+
+7
+00:00:33,260 --> 00:00:38,720
+I am calling that application DB context because that is what I have been using.
+
+8
+00:00:39,080 --> 00:00:45,440
+But before we write any code in this particular class file, make sure you remember one thing.
+
+9
+00:00:45,830 --> 00:00:52,610
+Whatever we will do next is basic configuration that is needed for entity framework.
+
+10
+00:00:53,030 --> 00:00:55,070
+So think about it like that.
+
+11
+00:00:55,100 --> 00:01:00,920
+If you have to set up some other package in an application, in any programming language, there are
+
+12
+00:01:00,920 --> 00:01:03,080
+some things that you have to do.
+
+13
+00:01:03,110 --> 00:01:10,250
+It is the basic syntax or basic classes that has to be configured in this way in order to use entity
+
+14
+00:01:10,280 --> 00:01:11,390
+framework core.
+
+15
+00:01:11,660 --> 00:01:14,480
+And it just has to be like that.
+
+16
+00:01:14,630 --> 00:01:21,200
+I will try to explain everything that I do here, but remember, whatever we will be programming in
+
+17
+00:01:21,200 --> 00:01:26,970
+the next two videos is basic configuration for entity framework.
+
+18
+00:01:27,690 --> 00:01:35,580
+First thing that we have to do is any class that you have here that must implement the DB context class.
+
+19
+00:01:35,940 --> 00:01:43,980
+That DB Context class is basically the root class of entity framework core using which we will be accessing
+
+20
+00:01:43,980 --> 00:01:45,390
+entity framework.
+
+21
+00:01:46,020 --> 00:01:52,470
+If you press control.here, you can see we have using Microsoft.entity framework core.
+
+22
+00:01:53,710 --> 00:01:54,340
+Perfect.
+
+23
+00:01:54,340 --> 00:02:02,290
+So our application DB context now basically implements or inherits from the DB context class, which
+
+24
+00:02:02,290 --> 00:02:07,000
+is a built in class inside the entity framework Core NuGet package.
+
+25
+00:02:07,950 --> 00:02:14,970
+Next thing that we have to do is in the Dbcontext class, in the constructor, we have to pass the connection
+
+26
+00:02:14,970 --> 00:02:15,720
+string.
+
+27
+00:02:16,170 --> 00:02:23,820
+Now how will we pass the connection string that we have inside Appsettings.json to our dbcontext?
+
+28
+00:02:24,180 --> 00:02:31,440
+Well, basically what we will do is when we will inject this application DB context or rather configure
+
+29
+00:02:31,440 --> 00:02:39,600
+the application DB context, we will get that connection string as a parameter in constructor as DB
+
+30
+00:02:39,600 --> 00:02:45,300
+context option and that we will be passing on to the base class.
+
+31
+00:02:46,440 --> 00:02:54,570
+So right here, let me add a constructor by typing ctor, which is a snippet, and if I press tab twice,
+
+32
+00:02:54,600 --> 00:02:57,120
+we have the constructor here.
+
+33
+00:02:57,120 --> 00:03:05,340
+We will be configuring something called as DB Context options and that will be on the class, which
+
+34
+00:03:05,340 --> 00:03:07,770
+is application Dbcontext.
+
+35
+00:03:08,040 --> 00:03:10,530
+I will call that as options.
+
+36
+00:03:11,700 --> 00:03:15,170
+Now, again, this is something that we will be configuring.
+
+37
+00:03:15,180 --> 00:03:21,300
+It has not been configured and do not panic on what it will be or how I will configure that.
+
+38
+00:03:21,450 --> 00:03:28,410
+Just remember that when we register application DB context, we will be adding some configuration.
+
+39
+00:03:28,830 --> 00:03:35,490
+Whatever configuration that we add here, we want to pass that to the DB context class.
+
+40
+00:03:35,730 --> 00:03:44,190
+So if we have to pass that in C#, we will write base here and we will pass the options like that.
+
+41
+00:03:45,860 --> 00:03:46,550
+That way.
+
+42
+00:03:46,550 --> 00:03:53,990
+What will happen is whatever options we configure here will be passed on to the base class of Dbcontext.
+
+43
+00:03:54,440 --> 00:03:55,660
+That is great.
+
+44
+00:03:55,670 --> 00:03:59,030
+But now where will we register this application?
+
+45
+00:03:59,030 --> 00:04:00,320
+DB context.
+
+46
+00:04:01,670 --> 00:04:07,040
+Whenever we have to register something, we will do that in Program.cs.
+
+47
+00:04:07,280 --> 00:04:09,200
+Always remember that.
+
+48
+00:04:10,640 --> 00:04:15,110
+So right here, you can see we are adding services to the container.
+
+49
+00:04:15,410 --> 00:04:22,430
+In that block, before we have this line of Builder.build, we will be adding all the services that
+
+50
+00:04:22,430 --> 00:04:23,270
+we want.
+
+51
+00:04:23,660 --> 00:04:30,560
+And what we want to add is we want to tell our application that, hey, we want to use entity framework
+
+52
+00:04:30,560 --> 00:04:31,190
+core.
+
+53
+00:04:32,460 --> 00:04:36,420
+So for that we will be adding builder.services.
+
+54
+00:04:36,420 --> 00:04:39,990
+And there we have to add the DB context.
+
+55
+00:04:40,380 --> 00:04:44,670
+This is the DB context that is there in entity framework core.
+
+56
+00:04:44,880 --> 00:04:51,780
+So when we say that we want to add DB context, we are basically telling that, hey, we want to add
+
+57
+00:04:51,780 --> 00:04:54,090
+entity framework code to the project.
+
+58
+00:04:54,850 --> 00:04:58,090
+So where do we have the add DB context here?
+
+59
+00:04:58,090 --> 00:05:03,370
+We have to tell that which class has the implementation of DB context?
+
+60
+00:05:04,060 --> 00:05:13,210
+We added that inside the application DB context right here, so I can copy this name, go back here
+
+61
+00:05:13,210 --> 00:05:14,860
+and paste it there.
+
+62
+00:05:15,760 --> 00:05:17,580
+If we add a semicolon there.
+
+63
+00:05:17,590 --> 00:05:18,340
+Perfect.
+
+64
+00:05:18,370 --> 00:05:21,790
+We have added dbcontext to our container.
+
+65
+00:05:22,210 --> 00:05:25,030
+But there is one thing that is missing here.
+
+66
+00:05:25,060 --> 00:05:28,180
+We also want to configure some option.
+
+67
+00:05:29,290 --> 00:05:36,550
+If we go back here in C# or in .net core, when we have to configure options, we can call it
+
+68
+00:05:36,550 --> 00:05:37,900
+anything we want.
+
+69
+00:05:37,930 --> 00:05:47,620
+We can say o goes to and configure that O object or to be explicit, I can say options goes to which
+
+70
+00:05:47,620 --> 00:05:49,180
+is the arrow syntax.
+
+71
+00:05:49,180 --> 00:05:53,950
+And then we want to define what are the options we want to configure.
+
+72
+00:05:54,540 --> 00:05:56,700
+So we will write options here.
+
+73
+00:05:56,700 --> 00:06:02,010
+And you can see there are quite a few things that we can configure on this options object.
+
+74
+00:06:02,630 --> 00:06:10,460
+What we want to configure is we want to tell that DB context will be using SQL Server for that.
+
+75
+00:06:10,460 --> 00:06:18,050
+If you write, use SQL Server, it is inside Microsoft.Entity Framework Core NuGet Package.
+
+76
+00:06:19,350 --> 00:06:19,950
+That way.
+
+77
+00:06:19,950 --> 00:06:26,160
+We are telling that the DB context that we have in our project will be using SQL Server.
+
+78
+00:06:26,940 --> 00:06:33,900
+And again, these are the basic steps that are needed to configure DB context and entity framework core.
+
+79
+00:06:34,610 --> 00:06:41,210
+Now, the one last thing that is missing here is when we are using SQL Server, we have to define the
+
+80
+00:06:41,210 --> 00:06:43,970
+connection string right here.
+
+81
+00:06:44,650 --> 00:06:47,020
+Now where is that connection string?
+
+82
+00:06:47,840 --> 00:06:51,590
+If you said Appsettings.json file, you are correct.
+
+83
+00:06:51,800 --> 00:06:58,790
+But how will we retrieve this connection string from appsettings and pass it in the parameter right
+
+84
+00:06:58,790 --> 00:06:59,510
+here?
+
+85
+00:07:00,940 --> 00:07:03,790
+Let me break this in different line.
+
+86
+00:07:04,820 --> 00:07:06,110
+And perfect.
+
+87
+00:07:06,500 --> 00:07:13,190
+Now, right now we are using a section with the name of Connection Strings, which is a built in section.
+
+88
+00:07:13,550 --> 00:07:20,600
+And there you can see it says Get connection strings with the I configuration .get connection string
+
+89
+00:07:20,600 --> 00:07:22,220
+extension method.
+
+90
+00:07:22,730 --> 00:07:31,190
+So if I go back here, builder.configuration and there we have a built in helper method which is
+
+91
+00:07:31,190 --> 00:07:32,750
+get connection string.
+
+92
+00:07:33,350 --> 00:07:39,260
+You can see it is a shorthand for getting a section with the name of connection strings.
+
+93
+00:07:39,740 --> 00:07:44,810
+That is the exact name that we have inside the Appsettings.json file.
+
+94
+00:07:44,810 --> 00:07:48,650
+And because of that, it will retrieve that connection string.
+
+95
+00:07:49,190 --> 00:07:53,750
+But inside that section we have the key value pair.
+
+96
+00:07:54,110 --> 00:07:56,420
+Key name is default connection.
+
+97
+00:07:56,420 --> 00:08:01,100
+So we will copy that and I will paste that right here.
+
+98
+00:08:01,670 --> 00:08:09,380
+I will add the closing bracket here and perfect that way it will retrieve the connection string and
+
+99
+00:08:09,380 --> 00:08:12,800
+pass it inside the use SQL Server.
+
+100
+00:08:13,280 --> 00:08:20,570
+Before we take a look at this and see how everything comes together, let me introduce an error here
+
+101
+00:08:20,570 --> 00:08:23,180
+by saying default connection one.
+
+102
+00:08:23,910 --> 00:08:26,580
+An appsettings right here.
+
+103
+00:08:26,580 --> 00:08:33,750
+We have default connection, but I have intentionally added an incorrect key name right here.
+
+104
+00:08:34,169 --> 00:08:38,760
+With that configured, let me continue from the next video.
+

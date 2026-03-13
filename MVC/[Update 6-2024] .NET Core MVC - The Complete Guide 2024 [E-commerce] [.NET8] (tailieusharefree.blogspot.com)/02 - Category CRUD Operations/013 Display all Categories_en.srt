@@ -1,0 +1,280 @@
+1
+00:00:01,790 --> 00:00:04,730
+Hot reload is now working in our project.
+
+2
+00:00:04,730 --> 00:00:11,870
+But what we actually have to do is from the controller here, we need to retrieve the category list
+
+3
+00:00:11,870 --> 00:00:14,600
+and we have to display that in our view.
+
+4
+00:00:14,990 --> 00:00:22,910
+By now you should be familiar with the terms when I'm using controller actions, views and models to
+
+5
+00:00:22,910 --> 00:00:30,020
+repeat again, we have the controller here inside that we will have action methods that will be invoked
+
+6
+00:00:30,020 --> 00:00:37,640
+and we will have corresponding views related to that inside the views folder with the same name as the
+
+7
+00:00:37,640 --> 00:00:38,600
+controller.
+
+8
+00:00:39,440 --> 00:00:40,490
+So perfect.
+
+9
+00:00:40,520 --> 00:00:43,190
+We have all the categories right here.
+
+10
+00:00:43,220 --> 00:00:45,530
+How do we pass them to the view?
+
+11
+00:00:45,890 --> 00:00:47,090
+Pretty simple.
+
+12
+00:00:47,090 --> 00:00:50,840
+We copy that and paste it in the round bracket.
+
+13
+00:00:51,290 --> 00:00:59,030
+That way it will automatically pass this object to the view and then we have to capture that or retrieve
+
+14
+00:00:59,030 --> 00:01:00,260
+that in the view.
+
+15
+00:01:00,830 --> 00:01:04,760
+So here we do that using the model keyword.
+
+16
+00:01:05,269 --> 00:01:13,070
+When we write that we have to write @model and make sure everything is lowercase this time.
+
+17
+00:01:14,440 --> 00:01:17,830
+Because when we have to access model, it will be different.
+
+18
+00:01:17,830 --> 00:01:24,850
+But when we are retrieving or defining the model at top here, everything will be lowercase.
+
+19
+00:01:25,240 --> 00:01:29,650
+And then we have to define what will be the type of this model.
+
+20
+00:01:30,250 --> 00:01:35,380
+If we go to controller, it is a list of category that is being passed.
+
+21
+00:01:35,620 --> 00:01:40,690
+So we can copy that and we can paste that right here.
+
+22
+00:01:41,720 --> 00:01:48,260
+That way we are defining that our view will get a model which will be list of category.
+
+23
+00:01:48,920 --> 00:01:55,370
+Once we define that, then we can use this model inside our HTML code.
+
+24
+00:01:55,940 --> 00:02:03,380
+When we are working with MVC application, we have the view here and inside there we have something
+
+25
+00:02:03,380 --> 00:02:04,250
+special.
+
+26
+00:02:04,400 --> 00:02:06,560
+We can write C# code.
+
+27
+00:02:06,830 --> 00:02:11,210
+If you are coming from .net background, this was not possible.
+
+28
+00:02:11,540 --> 00:02:17,510
+But here we can have C# code like if condition for loops and much more.
+
+29
+00:02:18,220 --> 00:02:21,250
+To write any C-sharp code inside The View.
+
+30
+00:02:21,280 --> 00:02:23,260
+We have to use the ADD sign.
+
+31
+00:02:26,730 --> 00:02:32,010
+And let me add that inside the th and we will have a Tea party.
+
+32
+00:02:34,020 --> 00:02:38,400
+This is basic HTML and nothing to do with .net core.
+
+33
+00:02:38,640 --> 00:02:47,550
+But now when we have tbody, we will have a tr here and I will add a td tag where we want to display
+
+34
+00:02:47,550 --> 00:02:48,870
+the category name.
+
+35
+00:02:49,290 --> 00:02:54,960
+We will add another td where we want to display the display order.
+
+36
+00:02:55,760 --> 00:02:58,370
+Name and display order will be inside.
+
+37
+00:02:58,370 --> 00:02:59,990
+List of category.
+
+38
+00:03:00,660 --> 00:03:04,980
+So we will have to iterate through them and display all of them.
+
+39
+00:03:05,490 --> 00:03:09,540
+Basically, we need a for loop for this tr element.
+
+40
+00:03:10,120 --> 00:03:17,410
+To add a for loop, we have the ADD sign, we have the for each statement and you can see we can easily
+
+41
+00:03:17,410 --> 00:03:22,450
+write C# code inside the UI component, which is our view.
+
+42
+00:03:23,110 --> 00:03:28,300
+So for each we will say variable obj in model.
+
+43
+00:03:28,660 --> 00:03:35,200
+Now here, in order to access the model that we have defined on the top here, we cannot write model
+
+44
+00:03:35,200 --> 00:03:40,420
+in lowercase, but we have to rather write that in Pascal case.
+
+45
+00:03:40,420 --> 00:03:47,860
+So M will be capital and that way it will iterate through the model that we have defined on the page
+
+46
+00:03:47,860 --> 00:03:51,010
+and that will be list of all the categories.
+
+47
+00:03:51,980 --> 00:03:52,970
+So perfect.
+
+48
+00:03:52,970 --> 00:03:54,500
+We are iterating through them.
+
+49
+00:03:54,500 --> 00:04:02,030
+We will have the curly bracket and I will close the curly bracket after tr like that.
+
+50
+00:04:05,450 --> 00:04:06,080
+Perfect.
+
+51
+00:04:06,350 --> 00:04:14,060
+If I save all here and if I go back to the view because of hot reload, you can see it is displaying
+
+52
+00:04:14,060 --> 00:04:16,670
+the name and display order three times.
+
+53
+00:04:16,940 --> 00:04:20,720
+That is because we have three categories in the database.
+
+54
+00:04:20,870 --> 00:04:28,520
+But in order to display the value inside OBJ again we have to use the ADD sign we can access OBJ.
+
+55
+00:04:28,940 --> 00:04:34,880
+If we write . similar to the C# code, we can access all the properties.
+
+56
+00:04:34,880 --> 00:04:40,100
+So we have name and we have obj.displayorder.
+
+57
+00:04:40,880 --> 00:04:45,620
+Save that, go back and perfect with that.
+
+58
+00:04:45,620 --> 00:04:48,380
+Everything is working as expected.
+
+59
+00:04:48,530 --> 00:04:52,550
+We are displaying the name as well as display order.
+
+60
+00:04:53,450 --> 00:04:56,810
+One thing that you can do here is where we have the model.
+
+61
+00:04:56,810 --> 00:05:00,980
+We can do C# code because we are in the ADD statement.
+
+62
+00:05:00,980 --> 00:05:09,920
+So we can order that by and here we can define the property which will be u goes to u.displayorder.
+
+63
+00:05:10,710 --> 00:05:12,170
+If I save that?
+
+64
+00:05:12,180 --> 00:05:13,020
+Perfect.
+
+65
+00:05:13,050 --> 00:05:16,140
+Now we have the ascending display order.
+
+66
+00:05:16,680 --> 00:05:24,270
+You can see how powerful views are where we can incorporate c# code within our views and we can
+
+67
+00:05:24,270 --> 00:05:30,390
+do some complex calculation which was not possible in the older .net frameworks.
+
+68
+00:05:30,810 --> 00:05:31,980
+So perfect.
+
+69
+00:05:31,980 --> 00:05:34,050
+We have made great progress.
+
+70
+00:05:34,170 --> 00:05:37,230
+Let me continue from the next video.
+

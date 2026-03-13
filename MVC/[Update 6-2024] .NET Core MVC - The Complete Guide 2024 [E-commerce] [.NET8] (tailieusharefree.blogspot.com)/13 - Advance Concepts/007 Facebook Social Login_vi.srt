@@ -1,0 +1,436 @@
+1
+00:00:00,630 --> 00:00:02,580
+Người hướng dẫn: Bây giờ tôi muốn cho
+
+2
+00:00:02,580 --> 00:00:05,670
+các em xem một số điểm phổ biến trên trang web ngày nay.
+
+3
+00:00:05,670 --> 00:00:07,410
+Khi bạn cố gắng đăng ký, chúng
+
+4
+00:00:07,410 --> 00:00:10,230
+tôi có thể sử dụng dịch vụ khác để đăng ký,
+
+5
+00:00:10,230 --> 00:00:13,080
+như Facebook, Google, LinkedIn và các
+
+6
+00:00:13,080 --> 00:00:16,353
+dịch vụ khác kích hoạt tính năng đó.
+
+7
+00:00:17,370 --> 00:00:22,050
+Bây giờ để thêm nó vào . Mã NET siêu, siêu đơn giản.
+
+8
+00:00:22,050 --> 00:00:25,950
+Đầu tiên chúng ta sẽ vào facebook. nhà phát triển.
+
+9
+00:00:25,950 --> 00:00:30,870
+Tôi tin rằng họ có một trang, các nhà phát triển. Facebook. com.
+
+10
+00:00:30,870 --> 00:00:33,420
+Ở đó, hãy để tôi điều hướng đến các ứng dụng của
+
+11
+00:00:33,420 --> 00:00:35,850
+mình và tôi có một vài ứng dụng cũ ở đây nhưng
+
+12
+00:00:35,850 --> 00:00:38,253
+hãy để tôi tạo một ứng dụng mới ở đây.
+
+13
+00:00:39,270 --> 00:00:41,730
+Bây giờ đến đây chúng ta muốn làm gì?
+
+14
+00:00:41,730 --> 00:00:44,760
+Bạn có thể thích, để tôi chọn cho phép mọi người đăng nhập
+
+15
+00:00:44,760 --> 00:00:46,620
+bằng tài khoản Facebook của họ.
+
+16
+00:00:46,620 --> 00:00:48,630
+Nhưng hãy để tôi dừng bạn ở đó.
+
+17
+00:00:48,630 --> 00:00:50,850
+Đừng chọn tùy chọn đó.
+
+18
+00:00:50,850 --> 00:00:53,370
+Đảm bảo chọn khác ở đây.
+
+19
+00:00:53,370 --> 00:00:56,940
+Và sau khi bạn chọn mục đó, chúng tôi có người tiêu dùng, nơi
+
+20
+00:00:56,940 --> 00:01:00,363
+chúng tôi đăng nhập Facebook, hãy để tôi chọn mục đó.
+
+21
+00:01:01,260 --> 00:01:06,260
+Đó là điều chúng tôi muốn và tôi sẽ đặt cho nó cái tên Bulky.
+
+22
+00:01:06,510 --> 00:01:08,310
+Hãy để tôi tạo ra điều đó.
+
+23
+00:01:08,310 --> 00:01:10,953
+Tôi sẽ phải nhập mật khẩu của tôi.
+
+24
+00:01:12,570 --> 00:01:14,250
+Và tuyệt vời.
+
+25
+00:01:14,250 --> 00:01:17,670
+Ở đây chúng ta cần thiết lập đăng nhập Facebook.
+
+26
+00:01:17,670 --> 00:01:19,233
+Vậy hãy để tôi chọn cái đó.
+
+27
+00:01:20,130 --> 00:01:24,967
+Và ở đó, chúng tôi muốn với trang web www, chúng tôi cần URL.
+
+28
+00:01:25,980 --> 00:01:30,980
+Để tôi quay lại đây và sao chép URL máy chủ cục bộ ở đó,
+
+29
+00:01:31,680 --> 00:01:35,283
+dán ngay vào đây, Lưu và tiếp tục.
+
+30
+00:01:36,180 --> 00:01:38,790
+Thông thường, khi chúng ta phải thêm
+
+31
+00:01:38,790 --> 00:01:43,230
+nó, bạn có thể thấy có rất nhiều cấu hình cần thiết.
+
+32
+00:01:43,230 --> 00:01:47,970
+Nhưng may mắn thay, chúng ta không phải làm vậy, vì . lõi NET.
+
+33
+00:01:47,970 --> 00:01:50,880
+Những gì bạn phải làm là khi đăng nhập Facebook,
+
+34
+00:01:50,880 --> 00:01:53,010
+chúng ta sẽ chuyển đến tab Cài đặt
+
+35
+00:01:53,010 --> 00:01:54,960
+và ở đó chúng ta phải điền URI
+
+36
+00:01:54,960 --> 00:01:57,993
+chuyển hướng OAuth hợp lệ này.
+
+37
+00:01:59,250 --> 00:02:01,680
+Chúng tôi sẽ dán đường dẫn máy chủ cục
+
+38
+00:02:01,680 --> 00:02:03,960
+bộ và trên hết chúng tôi sẽ thêm một
+
+39
+00:02:03,960 --> 00:02:07,440
+thứ gọi là dấu gạch nối đăng nhập Facebook.
+
+40
+00:02:07,440 --> 00:02:12,440
+Đó là URI chuyển hướng OAuth hợp lệ mặc định cho Facebook.
+
+41
+00:02:13,380 --> 00:02:14,610
+Bây giờ khi xuất bản,
+
+42
+00:02:14,610 --> 00:02:17,310
+bạn sẽ phải cấp thêm quyền truy cập vào đây,
+
+43
+00:02:17,310 --> 00:02:19,953
+nhưng để thử nghiệm thì tất cả đều ổn.
+
+44
+00:02:20,995 --> 00:02:24,180
+Với cấu hình đó, hãy để tôi lưu các thay đổi ở đây.
+
+45
+00:02:24,180 --> 00:02:26,340
+Và sau đó chúng ta sẽ đi đến Cài đặt.
+
+46
+00:02:26,340 --> 00:02:28,203
+Chúng tôi có các cài đặt cơ bản.
+
+47
+00:02:29,100 --> 00:02:30,870
+Bây giờ tương tự như Stripe,
+
+48
+00:02:30,870 --> 00:02:35,640
+chúng ta có ID ứng dụng và bí mật ứng dụng cho Facebook.
+
+49
+00:02:35,640 --> 00:02:39,630
+Chúng tôi sẽ phải cấu hình nó trong ứng dụng của chúng tôi.
+
+50
+00:02:39,630 --> 00:02:43,230
+Bây giờ, trước đây vào thời xa xưa của . NET core, Facebook,
+
+51
+00:02:43,230 --> 00:02:45,480
+Google và tất cả chúng đều
+
+52
+00:02:45,480 --> 00:02:48,510
+được đưa vào . NET, nhưng bây giờ
+
+53
+00:02:48,510 --> 00:02:50,640
+họ đã tách gói đó ra.
+
+54
+00:02:50,640 --> 00:02:52,380
+Vì vậy, trong dự án
+
+55
+00:02:52,380 --> 00:02:56,250
+web, chúng tôi sẽ chọn Quản lý gói NuGet.
+
+56
+00:02:56,250 --> 00:02:59,040
+Hãy để tôi đóng mọi thứ khác ở đây.
+
+57
+00:02:59,040 --> 00:03:01,260
+Và gói mà chúng ta muốn tìm kiếm chính
+
+58
+00:03:01,260 --> 00:03:06,260
+là Microsoft. aspnet. cốt lõi. xác thực. Facebook.
+
+59
+00:03:10,290 --> 00:03:12,390
+Hoàn hảo, chúng tôi có gói đó ở đây.
+
+60
+00:03:12,390 --> 00:03:16,173
+Hãy để tôi bao gồm bản phát hành trước và cài đặt nó.
+
+61
+00:03:19,920 --> 00:03:22,770
+Tuyệt vời, gói đó đã được cài đặt.
+
+62
+00:03:22,770 --> 00:03:25,980
+Hãy để tôi xem những gì tôi có trong tab Cập nhật ở đây.
+
+63
+00:03:25,980 --> 00:03:27,390
+Không sao đâu.
+
+64
+00:03:27,390 --> 00:03:29,040
+Hãy để tôi đóng nó lại.
+
+65
+00:03:29,040 --> 00:03:29,873
+Và cùng với
+
+66
+00:03:29,873 --> 00:03:33,423
+đó, chúng tôi đã thêm hỗ trợ xác thực Facebook.
+
+67
+00:03:34,290 --> 00:03:36,060
+Bây giờ, điều cuối cùng chúng ta phải
+
+68
+00:03:36,060 --> 00:03:39,090
+làm là thêm và định cấu hình nó trong dự án của mình.
+
+69
+00:03:39,090 --> 00:03:42,960
+Và tập tin mà chúng ta sẽ sử dụng để cấu hình là gì?
+
+70
+00:03:42,960 --> 00:03:46,383
+Nếu bạn nói Program. cs, bạn nói đúng.
+
+71
+00:03:47,430 --> 00:03:48,570
+Về người xây dựng ở đây,
+
+72
+00:03:48,570 --> 00:03:53,280
+chúng ta sẽ nói người xây dựng. Dịch vụ. Thêm xác thực.
+
+73
+00:03:53,280 --> 00:03:57,030
+Và chúng tôi muốn thêm xác thực Facebook, vì gói này,
+
+74
+00:03:57,030 --> 00:03:58,620
+bây giờ chúng tôi có tùy
+
+75
+00:03:58,620 --> 00:04:00,930
+chọn này ở đây và ở đó chúng tôi phải
+
+76
+00:04:00,930 --> 00:04:03,663
+định cấu hình một vài tùy chọn.
+
+77
+00:04:04,830 --> 00:04:06,633
+Đầu tiên là tùy chọn. AppId và chúng
+
+78
+00:04:08,257 --> 00:04:10,860
+tôi sẽ cung cấp từ cổng thông tin.
+
+79
+00:04:10,860 --> 00:04:14,040
+Trên hết, chúng tôi còn có AppSecret,
+
+80
+00:04:14,040 --> 00:04:17,313
+chúng tôi cũng sẽ phải tìm nạp từ cổng.
+
+81
+00:04:18,360 --> 00:04:21,600
+Vì vậy, hãy để tôi chuyển trở lại cổng thông tin.
+
+82
+00:04:21,600 --> 00:04:23,460
+Sao chép ID ứng dụng.
+
+83
+00:04:23,460 --> 00:04:25,830
+Dán nó ngay tại đây.
+
+84
+00:04:25,830 --> 00:04:30,830
+Và tôi sẽ sao chép AppSecret, dán nó vào đây.
+
+85
+00:04:31,380 --> 00:04:33,480
+Với ba dòng mã đó, hãy để
+
+86
+00:04:33,480 --> 00:04:35,460
+tôi chạy ứng dụng và xem
+
+87
+00:04:35,460 --> 00:04:38,073
+bây giờ có gì khác không.
+
+88
+00:04:39,780 --> 00:04:43,560
+Và thật ngạc nhiên, nếu bạn đi đăng ký lần này, bạn sẽ
+
+89
+00:04:43,560 --> 00:04:45,963
+thấy một nút dành cho Facebook.
+
+90
+00:04:47,040 --> 00:04:49,910
+Bây giờ nếu bạn bấm vào nút ở đây...
+
+91
+00:04:50,850 --> 00:04:53,820
+Hoàn hảo, bạn có thể thấy Bulky đang yêu cầu
+
+92
+00:04:53,820 --> 00:04:57,690
+quyền truy cập vào tên, ảnh hồ sơ và địa chỉ email.
+
+93
+00:04:57,690 --> 00:05:01,050
+Bây giờ nếu tôi chọn Tiếp tục với tư cách Bhrugen ở đây,
+
+94
+00:05:01,050 --> 00:05:04,290
+nó sẽ chuyển hướng và đưa tôi quay lại trang web dựa trên
+
+95
+00:05:04,290 --> 00:05:07,380
+URI chuyển hướng mà chúng tôi đã cung cấp.
+
+96
+00:05:07,380 --> 00:05:08,670
+Và hoàn hảo.
+
+97
+00:05:08,670 --> 00:05:11,310
+Nó báo là bạn đã xác thực thành công
+
+98
+00:05:11,310 --> 00:05:12,600
+với Facebook.
+
+99
+00:05:12,600 --> 00:05:17,460
+Vui lòng nhập địa chỉ email và nhấp vào nút Đăng ký.
+
+100
+00:05:17,460 --> 00:05:21,510
+Bây giờ đừng nhấn nút đăng ký ngay tại đây.
+
+101
+00:05:21,510 --> 00:05:25,323
+Bởi vì nếu chúng ta mở URL này trong cửa sổ khác.
+
+102
+00:05:26,280 --> 00:05:30,210
+Ngay tại đây, bạn sẽ nhận thấy trên trang đăng ký, chúng
+
+103
+00:05:30,210 --> 00:05:32,970
+tôi đang yêu cầu nhiều trường khác.
+
+104
+00:05:32,970 --> 00:05:36,780
+Nhưng trên trang này, nó chỉ có email.
+
+105
+00:05:36,780 --> 00:05:39,210
+Vì vậy, chúng tôi phải sửa đổi
+
+106
+00:05:39,210 --> 00:05:42,450
+trang này để xử lý các trường khác.
+
+107
+00:05:42,450 --> 00:05:46,080
+Chỉ sau đó, nhấn nút Đăng ký.
+
+108
+00:05:46,080 --> 00:05:50,490
+Vì vậy, chúng ta phải truy cập danh tính, tài khoản, đăng nhập bên ngoài
+
+109
+00:05:50,490 --> 00:05:53,313
+và để tôi làm điều đó trong video tiếp theo.
+

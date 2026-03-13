@@ -1,0 +1,384 @@
+1
+00:00:01,650 --> 00:00:03,240
+Instructor: Now we want to implement
+
+2
+00:00:03,240 --> 00:00:08,240
+increment, decrement, and remove item from Shopping Cart.
+
+3
+00:00:08,370 --> 00:00:10,770
+If I go back and look at the code,
+
+4
+00:00:10,770 --> 00:00:13,263
+we have all of them right here.
+
+5
+00:00:14,130 --> 00:00:17,490
+So what we can do is where we have the anchor tag,
+
+6
+00:00:17,490 --> 00:00:19,680
+we can call a new action.
+
+7
+00:00:19,680 --> 00:00:24,120
+And for increment, let me call that as plus.
+
+8
+00:00:24,120 --> 00:00:29,120
+For decrement, let me call a new action which is minus.
+
+9
+00:00:29,910 --> 00:00:34,910
+And for delete here we will have an asp-action of remove.
+
+10
+00:00:36,750 --> 00:00:39,240
+When we are updating any quantity,
+
+11
+00:00:39,240 --> 00:00:41,460
+we need to know the cart Id.
+
+12
+00:00:41,460 --> 00:00:44,013
+Based on that, we can toggle the quantity.
+
+13
+00:00:44,940 --> 00:00:47,280
+So when we are calling the action here,
+
+14
+00:00:47,280 --> 00:00:49,290
+we need to pass the Id,
+
+15
+00:00:49,290 --> 00:00:52,530
+which will be cart Id as a parameter.
+
+16
+00:00:52,530 --> 00:00:54,750
+So asp-route
+
+17
+00:00:54,750 --> 00:00:59,653
+and let me call that cart Id is equal to item.Id,
+
+18
+00:01:02,340 --> 00:01:05,823
+copy that and paste it for all three of them.
+
+19
+00:01:06,990 --> 00:01:08,100
+Perfect.
+
+20
+00:01:08,100 --> 00:01:10,800
+Now we need to create this action method
+
+21
+00:01:10,800 --> 00:01:12,990
+in the cart controller.
+
+22
+00:01:12,990 --> 00:01:16,350
+In the index here we have not defined any controller.
+
+23
+00:01:16,350 --> 00:01:20,103
+Because of that, it will look inside the same controller.
+
+24
+00:01:21,270 --> 00:01:25,200
+And for that we can directly create controller action.
+
+25
+00:01:25,200 --> 00:01:27,960
+And I will do that before the private method
+
+26
+00:01:27,960 --> 00:01:29,430
+that we have here.
+
+27
+00:01:29,430 --> 00:01:33,480
+That way, all the action methods stay together.
+
+28
+00:01:33,480 --> 00:01:35,610
+We will create the first action method
+
+29
+00:01:35,610 --> 00:01:40,610
+which will be public IactionResult, name will be Plus here.
+
+30
+00:01:40,950 --> 00:01:43,410
+And the property that we will receive here
+
+31
+00:01:43,410 --> 00:01:45,303
+will be integer cartId.
+
+32
+00:01:46,680 --> 00:01:48,963
+So what will be the return type here?
+
+33
+00:01:49,860 --> 00:01:52,230
+Well, we will return back to the view
+
+34
+00:01:52,230 --> 00:01:55,080
+after we increment the Count.
+
+35
+00:01:55,080 --> 00:01:57,030
+In order to increment the account,
+
+36
+00:01:57,030 --> 00:01:59,340
+we first have to retrieve the Shopping Cart
+
+37
+00:01:59,340 --> 00:02:04,340
+from database using unitOfWork.ShoppingCart.Get,
+
+38
+00:02:04,650 --> 00:02:07,293
+and we will get that based on the Id.
+
+39
+00:02:08,550 --> 00:02:13,053
+So, u dot Id is equal equal to the cart Id.
+
+40
+00:02:14,340 --> 00:02:17,700
+Once we retrieve that, we have to update the count.
+
+41
+00:02:17,700 --> 00:02:22,593
+So cartFromDb dot Count plus equal to one.
+
+42
+00:02:24,120 --> 00:02:25,966
+And after that we have to call
+
+43
+00:02:25,966 --> 00:02:30,966
+unitOfWork.shoppingCart.update cartFromDb,
+
+44
+00:02:31,110 --> 00:02:33,513
+and unitOfWork.save.
+
+45
+00:02:34,440 --> 00:02:37,800
+That will update the cart, but once we update,
+
+46
+00:02:37,800 --> 00:02:41,100
+we have to return back to the index view
+
+47
+00:02:41,100 --> 00:02:43,020
+of the card controller,
+
+48
+00:02:43,020 --> 00:02:45,153
+which will be the Shopping Cart page.
+
+49
+00:02:46,110 --> 00:02:50,100
+So we can say return RedirectToAction index,
+
+50
+00:02:50,100 --> 00:02:54,090
+but rather than magic string we can use nameof
+
+51
+00:02:54,090 --> 00:02:56,790
+and we can use index.
+
+52
+00:02:56,790 --> 00:02:59,070
+So Plus here looks good.
+
+53
+00:02:59,070 --> 00:03:02,643
+Let me copy and paste that here for Minus.
+
+54
+00:03:03,690 --> 00:03:05,460
+And in case of Minus,
+
+55
+00:03:05,460 --> 00:03:08,310
+we have to be careful about one thing,
+
+56
+00:03:08,310 --> 00:03:10,920
+if the Count is equal to one.
+
+57
+00:03:10,920 --> 00:03:13,770
+In that case, we want to remove that item
+
+58
+00:03:13,770 --> 00:03:17,220
+because we do not want an item with count of zero
+
+59
+00:03:17,220 --> 00:03:18,573
+in the Shopping Cart.
+
+60
+00:03:19,590 --> 00:03:24,390
+So we can say if cart.Count is equal equal to one,
+
+61
+00:03:24,390 --> 00:03:27,480
+or we can say if less than equal to one,
+
+62
+00:03:27,480 --> 00:03:29,943
+then we want to remove that from Cart.
+
+63
+00:03:31,800 --> 00:03:35,430
+In the else, we will decrease the count by one,
+
+64
+00:03:35,430 --> 00:03:38,250
+and we will save the changes.
+
+65
+00:03:38,250 --> 00:03:42,630
+So let me cut this from here, paste it inside.
+
+66
+00:03:42,630 --> 00:03:44,280
+And where we have to remove that,
+
+67
+00:03:44,280 --> 00:03:49,280
+we can say _unitOfWork.ShoppingCart.remove,
+
+68
+00:03:49,590 --> 00:03:52,143
+we want to remove the cartFromDb.
+
+69
+00:03:53,280 --> 00:03:57,060
+With that configured, the Minus also looks good.
+
+70
+00:03:57,060 --> 00:03:59,280
+Copy and paste that again.
+
+71
+00:03:59,280 --> 00:04:01,560
+The last one is Remove,
+
+72
+00:04:01,560 --> 00:04:04,620
+and that we only want to remove,
+
+73
+00:04:04,620 --> 00:04:08,070
+so we can remove everything else.
+
+74
+00:04:08,070 --> 00:04:09,210
+And perfect.
+
+75
+00:04:09,210 --> 00:04:11,250
+I believe that looks good.
+
+76
+00:04:11,250 --> 00:04:14,280
+Let me press Control + A, Control + KD
+
+77
+00:04:14,280 --> 00:04:16,503
+to align everything here.
+
+78
+00:04:17,820 --> 00:04:20,519
+And perfect.
+
+79
+00:04:20,519 --> 00:04:22,019
+That looks great.
+
+80
+00:04:22,019 --> 00:04:26,373
+Let me restart the application and see if that works.
+
+81
+00:04:28,950 --> 00:04:32,223
+Perfect. Let me go to Shopping Cart here.
+
+82
+00:04:33,313 --> 00:04:36,420
+Let me select the minus button and great.
+
+83
+00:04:36,420 --> 00:04:40,290
+The TOTAL as well as the Count here was updated.
+
+84
+00:04:40,290 --> 00:04:43,950
+You can see it is modifying both of them.
+
+85
+00:04:43,950 --> 00:04:46,323
+Let me try to remove them more,
+
+86
+00:04:49,890 --> 00:04:51,210
+and perfect.
+
+87
+00:04:51,210 --> 00:04:52,503
+Looks good.
+
+88
+00:04:52,503 --> 00:04:57,503
+If I remove this further, let me make the quantity of one.
+
+89
+00:04:57,570 --> 00:04:59,280
+And now if I remove,
+
+90
+00:04:59,280 --> 00:05:03,120
+it should delete this item from the Shopping Cart.
+
+91
+00:05:03,120 --> 00:05:04,890
+That works.
+
+92
+00:05:04,890 --> 00:05:07,533
+Let me try to add one more item here,
+
+93
+00:05:08,370 --> 00:05:10,800
+and I will go to the Cart.
+
+94
+00:05:10,800 --> 00:05:15,800
+Let me click Delete here, and perfect that also works.
+
+95
+00:05:16,380 --> 00:05:20,050
+So increment, decrement, and remove functionalities
+
+96
+00:05:21,027 --> 00:05:22,227
+are working as expected.
+

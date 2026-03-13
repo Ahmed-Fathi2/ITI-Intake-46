@@ -1,0 +1,68 @@
+1
+00:00:01,670 --> 00:00:04,430
+Bây giờ, hãy để tôi chỉ cho bạn một lỗi nhỏ.
+
+2
+00:00:04,670 --> 00:00:10,220
+Nếu chúng tôi đăng nhập với tư cách khách hàng tại đây và chúng tôi có hai mặt hàng trong giỏ hàng.
+
+3
+00:00:10,250 --> 00:00:12,110
+Để tôi đặt hàng.
+
+4
+00:00:14,550 --> 00:00:21,330
+Khi chúng tôi nhấn nút phát, bạn sẽ thấy đơn hàng đã được đặt, nhưng giỏ hàng ở đây không
+
+5
+00:00:21,330 --> 00:00:22,200
+được xóa.
+
+6
+00:00:22,650 --> 00:00:27,690
+Chà, giỏ hàng thực sự rõ ràng, nhưng chúng tôi không xóa phiên.
+
+7
+00:00:28,800 --> 00:00:31,260
+Vì vậy, hãy để tôi làm điều đó thực sự nhanh chóng.
+
+8
+00:00:31,290 --> 00:00:34,200
+Đó là bên trong bộ điều khiển giỏ hàng.
+
+9
+00:00:34,740 --> 00:00:37,560
+Chúng tôi đã xác nhận đơn hàng.
+
+10
+00:00:39,090 --> 00:00:42,270
+Hãy để tôi nhìn lên đó ngay tại đây.
+
+11
+00:00:42,600 --> 00:00:50,280
+Khi mọi thứ đã hoàn tất ở đây, chúng ta có thể đặt dấu chấm phiên httpcontext rõ ràng.
+
+12
+00:00:50,610 --> 00:00:54,530
+Bây giờ, tôi biết rằng tôi chỉ có một phiên trong ứng dụng.
+
+13
+00:00:54,540 --> 00:00:56,730
+Đó là lý do tại sao tôi xóa nó.
+
+14
+00:00:56,730 --> 00:01:01,290
+Nhưng thông thường, bạn sẽ làm trống phiên dựa trên tên khóa.
+
+15
+00:01:02,070 --> 00:01:04,739
+Nhưng điều này sẽ làm việc cho tình hình của chúng tôi.
+
+16
+00:01:04,739 --> 00:01:08,670
+Và cùng với đó, nếu bạn thử lại một lần nữa, nó sẽ hoạt động.
+
+17
+00:01:08,670 --> 00:01:12,480
+Và tôi tin rằng với điều đó mọi thứ đều tốt đẹp.
+

@@ -1,0 +1,148 @@
+1
+00:00:02,000 --> 00:00:07,460
+What we have to do is create a project using Visual Studio 2022.
+
+2
+00:00:08,029 --> 00:00:16,670
+I have opened Visual Studio 2022 here and I will select create a new project on the left hand side here.
+
+3
+00:00:16,670 --> 00:00:23,030
+I will have recent project templates, but what we want to do here is search for MVC.
+
+4
+00:00:23,390 --> 00:00:27,740
+And with that we should get ASP.NET Core Web app.
+
+5
+00:00:28,040 --> 00:00:32,030
+Now the project we want to work on is MVC application.
+
+6
+00:00:32,030 --> 00:00:36,200
+So make sure to select the one with Model View and Controller.
+
+7
+00:00:36,560 --> 00:00:42,440
+There is also a web app without MVC that uses razor pages.
+
+8
+00:00:42,590 --> 00:00:44,300
+We do not want that.
+
+9
+00:00:45,350 --> 00:00:51,590
+We will give our project a name of bulky web, location wherever you want to save it.
+
+10
+00:00:51,590 --> 00:00:53,630
+And then we need a solution.
+
+11
+00:00:53,630 --> 00:00:55,820
+Name. now solution name,
+
+12
+00:00:55,820 --> 00:01:01,670
+I will keep that as bulky because in there we will have multiple project.
+
+13
+00:01:01,670 --> 00:01:05,390
+With that configured, let me hit the next button.
+
+14
+00:01:05,810 --> 00:01:09,320
+The framework that we want to use is .net eight.
+
+15
+00:01:09,350 --> 00:01:12,530
+We will select that, authentication type.
+
+16
+00:01:12,530 --> 00:01:15,410
+We will be adding authentication later on.
+
+17
+00:01:15,410 --> 00:01:22,010
+But right now we want to keep things super simple and then we will add on to our project.
+
+18
+00:01:22,460 --> 00:01:27,560
+So right now we will keep that as none configure for HTTPS.
+
+19
+00:01:27,590 --> 00:01:30,320
+That looks good and we will not check that.
+
+20
+00:01:30,320 --> 00:01:32,630
+Do not use top level statements.
+
+21
+00:01:32,630 --> 00:01:37,880
+It is just adding the using statements at the top and it is not that important.
+
+22
+00:01:37,880 --> 00:01:42,230
+That is why we can just ignore that and hit the create button.
+
+23
+00:01:43,210 --> 00:01:48,580
+With the click of that button, the magic happens and your project is created.
+
+24
+00:01:49,800 --> 00:01:54,340
+I will explore all the files and folders that are being created by default.
+
+25
+00:01:54,360 --> 00:01:58,050
+But before that, let me add this to source control.
+
+26
+00:01:59,370 --> 00:02:02,240
+I have already signed in to my git repo.
+
+27
+00:02:02,250 --> 00:02:04,350
+So that is coming along.
+
+28
+00:02:04,440 --> 00:02:05,790
+Repository name.
+
+29
+00:02:05,790 --> 00:02:09,330
+Let me call that bulky underscore MVC.
+
+30
+00:02:10,500 --> 00:02:17,160
+I will make that a private repository for now, but once the course is launched, I will convert that
+
+31
+00:02:17,160 --> 00:02:19,650
+to be a public repository.
+
+32
+00:02:20,900 --> 00:02:24,890
+With that configured, let me hit, create and push button.
+
+33
+00:02:25,280 --> 00:02:26,630
+And perfect.
+
+34
+00:02:26,630 --> 00:02:28,950
+We have two outgoing changes.
+
+35
+00:02:28,970 --> 00:02:30,560
+Let me push them.
+
+36
+00:02:32,560 --> 00:02:33,190
+Perfect.
+
+37
+00:02:33,190 --> 00:02:38,950
+So we have created our project and we have committed our code to the git repo.
+

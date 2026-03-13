@@ -1,0 +1,196 @@
+1
+00:00:01,770 --> 00:00:03,800
+Dự án của chúng tôi được tạo ra ở đây.
+
+2
+00:00:03,810 --> 00:00:08,370
+Hãy để tôi hướng dẫn bạn qua tất cả các tệp mà chúng tôi thấy ngay tại đây, từng tệp một.
+
+3
+00:00:08,580 --> 00:00:16,350
+Nhưng trước khi tôi làm bất cứ điều gì với điều đó, hãy để tôi chạy ứng dụng bằng cách nhấp vào https ở đây
+
+4
+00:00:16,350 --> 00:00:20,430
+và điều đó sẽ xây dựng dự án và mở nó trong trình duyệt.
+
+5
+00:00:21,270 --> 00:00:22,110
+Hoàn hảo.
+
+6
+00:00:22,110 --> 00:00:24,510
+Theo mặc định, chúng tôi có một ứng dụng đơn giản.
+
+7
+00:00:24,510 --> 00:00:31,230
+Hãy để tôi phóng to ở đây và chúng tôi có hai điều trong tiêu đề ở đây, trang chủ nơi chúng tôi thấy chào mừng
+
+8
+00:00:31,230 --> 00:00:35,970
+ở đây và chúng tôi có một trang riêng tư nơi nó hiển thị một trang khác.
+
+9
+00:00:36,510 --> 00:00:42,090
+Vì vậy, một điều bạn có thể thấy ngay bên ngoài hộp, chúng tôi có tiêu đề ở đây, chúng tôi có chân trang, chúng tôi có phần
+
+10
+00:00:42,090 --> 00:00:49,230
+nội dung ở đây và chúng tôi có điều hướng đã được định cấu hình theo mặc định . dự án mạng.
+
+11
+00:00:49,560 --> 00:00:51,240
+Đó là tin tuyệt vời.
+
+12
+00:00:51,480 --> 00:00:57,840
+Nhưng trước khi chúng ta xem bất kỳ tệp nào khác, tệp chính mà tôi muốn cho bạn xem
+
+13
+00:00:57,840 --> 00:01:03,790
+là chính tệp dự án để kiểm tra tệp dự án, bạn phải nhấp chuột phải vào dự án.
+
+14
+00:01:04,239 --> 00:01:06,300
+Bây giờ, ở đây có hai điều.
+
+15
+00:01:06,310 --> 00:01:12,490
+Một là dự án web cồng kềnh, và một là giải pháp cồng kềnh.
+
+16
+00:01:12,760 --> 00:01:16,600
+Một giải pháp có thể có nhiều dự án trong . mạng lưới.
+
+17
+00:01:17,390 --> 00:01:21,110
+Ngay bây giờ chúng tôi chỉ có một dự án là web cồng kềnh.
+
+18
+00:01:21,470 --> 00:01:25,520
+Khi chúng tôi kiểm tra tệp dự án, nó thuộc về một dự án.
+
+19
+00:01:25,520 --> 00:01:29,540
+Vì vậy, chúng tôi sẽ nhấp chuột phải vào Bulky Web, đây là dự án của chúng tôi.
+
+20
+00:01:29,540 --> 00:01:33,140
+Và ở đó chúng ta có một thứ gọi là chỉnh sửa tệp Dự án.
+
+21
+00:01:34,400 --> 00:01:35,300
+Hoàn hảo.
+
+22
+00:01:35,330 --> 00:01:38,660
+Khi tôi mở nó, bạn có thể thấy nó khá đơn giản.
+
+23
+00:01:38,660 --> 00:01:45,950
+Ngay bây giờ, trong các phiên bản cũ hơn của . net, điều này phức tạp hơn, nhưng họ đang đơn giản hóa điều
+
+24
+00:01:45,950 --> 00:01:47,900
+này với phiên bản mới hơn.
+
+25
+00:01:48,810 --> 00:01:50,460
+Nhóm tài sản bên trong.
+
+26
+00:01:50,460 --> 00:01:57,420
+Chúng tôi có một thứ gọi là khung mục tiêu nói rằng chúng tôi đang sử dụng mạng 8. 0, đó là. Net 8 framework.
+
+27
+00:01:57,660 --> 00:01:59,130
+Sau đó, chúng tôi có một cái gì đó được gọi là nullable và được kích hoạt.
+
+28
+00:02:00,880 --> 00:02:05,380
+Bây giờ chính xác nullable này sẽ làm gì, tôi sẽ đề
+
+29
+00:02:05,410 --> 00:02:12,580
+cập đến điều đó trong các video sau vì còn quá sớm để đi sâu vào các chi tiết đó.
+
+30
+00:02:12,580 --> 00:02:14,530
+Và tiếp theo, chúng ta có các câu lệnh sử dụng ẩn.
+
+31
+00:02:15,290 --> 00:02:18,380
+Nếu bạn đến từ bất kỳ thư viện giao diện người dùng nào hoặc
+
+32
+00:02:18,530 --> 00:02:24,950
+bất kỳ khung công tác nào khác, thì bạn nên làm quen với một số câu lệnh nhập mà bạn viết để nhập các thư viện khác.
+
+33
+00:02:24,950 --> 00:02:29,390
+Bây giờ, vì việc sử dụng ẩn được bật ở đây, các câu lệnh sử dụng hoặc nhập khẩu mặc định từ tệp . net, chúng tôi sẽ không phải viết
+
+34
+00:02:29,900 --> 00:02:36,740
+tất cả những thứ đó.
+
+35
+00:02:36,740 --> 00:02:40,070
+Nó sẽ tự động được đưa vào dự án của chúng ta.
+
+36
+00:02:40,220 --> 00:02:44,180
+Nếu bạn vô hiệu hóa điều đó, thì về cơ bản, bạn sẽ phải thêm các câu lệnh nhập một cách rõ ràng.
+
+37
+00:02:44,300 --> 00:02:50,300
+Không có gì phức tạp hơn, nhưng thật tiện lợi
+
+38
+00:02:50,330 --> 00:02:57,980
+khi bật sử dụng ẩn và đó cũng là cài đặt chúng tôi sẽ giữ.
+
+39
+00:02:57,980 --> 00:02:59,510
+Tệp dự án về cơ bản có tất cả các thuộc tính dự án được đặt bởi tệp . mạng ngay tại đây.
+
+40
+00:03:00,760 --> 00:03:07,210
+Và trên hết, khi bạn thêm một số
+
+41
+00:03:07,210 --> 00:03:14,260
+gói NuGet hoặc gói NPM, thì bạn phải thêm chúng vào tệp dự án.
+
+42
+00:03:14,260 --> 00:03:15,910
+Bây giờ khi chúng tôi thêm
+
+43
+00:03:16,450 --> 00:03:23,500
+gói NuGet, tôi sẽ chỉ cho bạn cách tệp dự án ở đây được cập nhật trong các video sắp tới.
+
+44
+00:03:23,500 --> 00:03:24,310
+Nhưng ngay bây giờ, khi chúng tôi có tệp dự án, chúng tôi có tệp . net target framework thực sự quan trọng.
+
+45
+00:03:25,060 --> 00:03:31,690
+Và chúng tôi có Nullable, được giới thiệu từ . mạng sáu.
+
+46
+00:03:31,690 --> 00:03:37,240
+Tôi cũng sẽ giải thích điều đó trong các video sau.
+
+47
+00:03:37,630 --> 00:03:40,420
+Và chúng tôi đã ngầm sử dụng không có gì ưa thích ngay bây giờ.
+
+48
+00:03:40,420 --> 00:03:44,770
+Nhưng khi chúng ta thêm nhiều thứ vào dự án của mình, tôi sẽ chỉ cho bạn cách cập nhật tệp dự án.
+
+49
+00:03:44,770 --> 00:03:51,910
+Với cái nhìn tổng quan ngắn gọn đó, hãy để tôi tiếp tục từ video tiếp theo.
+

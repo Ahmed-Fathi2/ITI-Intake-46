@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/Src/">
+    <Project Path="WebService.Api/WebService.Api.csproj" />
+    <Project Path="WebService.BLL/WebService.BLL.csproj" />
+    <Project Path="WebService.DAL/WebService.DAL.csproj" />
+  </Folder>
+</Solution>

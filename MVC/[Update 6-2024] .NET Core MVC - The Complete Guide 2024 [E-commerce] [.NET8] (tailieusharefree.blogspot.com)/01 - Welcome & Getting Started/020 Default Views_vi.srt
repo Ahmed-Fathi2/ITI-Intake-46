@@ -1,0 +1,404 @@
+1
+00:00:01,420 --> 00:00:07,990
+Bây giờ chúng ta đã thấy định tuyến, chúng ta biết cách các chế độ xem được hiển thị dựa trên URL.
+
+2
+00:00:08,230 --> 00:00:14,320
+Nhưng nếu tôi chạy lại ứng dụng, đó không phải là thứ duy nhất được hiển
+
+3
+00:00:14,710 --> 00:00:23,290
+thị trên trang, bởi vì nếu tôi mở tệp index. cshtml, bạn có thể thấy có một văn bản chào mừng và tìm hiểu về văn bản mà chúng tôi
+
+4
+00:00:23,320 --> 00:00:24,460
+thấy ngay tại đây.
+
+5
+00:00:24,790 --> 00:00:30,070
+Nhưng những gì về tiêu đề này mà chúng tôi có trên đầu trang và chúng tôi cũng có một chân trang.
+
+6
+00:00:30,250 --> 00:00:32,439
+Làm thế nào mà được tải?
+
+7
+00:00:32,950 --> 00:00:37,390
+Và để làm được điều đó, chúng ta phải đi đến giải pháp trong thư mục Lượt xem.
+
+8
+00:00:37,390 --> 00:00:44,800
+Chúng tôi đã thấy những gì có trong chế độ xem trang chủ, nhưng chúng tôi có một thứ được gọi là chia sẻ và chúng
+
+9
+00:00:44,800 --> 00:00:50,350
+tôi có một thứ gọi là nhập chế độ xem gạch dưới và bắt đầu chế độ xem gạch dưới.
+
+10
+00:00:51,110 --> 00:00:57,500
+Nếu bạn đã làm việc với . net, bạn có thể nhớ một cái gì đó được gọi là Trang
+
+11
+00:00:57,500 --> 00:01:04,040
+chính và bố cục gạch dưới trang con là trang chính của ứng dụng hoàn chỉnh của bạn.
+
+12
+00:01:04,610 --> 00:01:09,850
+Nếu tôi mở bố cục gạch dưới ở đây, bạn có thể thấy chúng tôi có doctype html.
+
+13
+00:01:09,860 --> 00:01:12,770
+Chúng tôi có một cái đầu ở đây với một số phong cách.
+
+14
+00:01:12,770 --> 00:01:16,310
+Chúng tôi có một cơ thể và ở đó chúng tôi có tiêu đề.
+
+15
+00:01:16,460 --> 00:01:24,650
+Trong tiêu đề, bạn có thể thấy chúng tôi có các liên kết nhà riêng và quyền riêng tư ở đây và chúng tôi cuộn xuống, chúng tôi có một
+
+16
+00:01:24,650 --> 00:01:26,600
+thứ gọi là nội dung kết xuất.
+
+17
+00:01:26,930 --> 00:01:34,220
+Phần thân kết xuất này là một trình trợ giúp tích hợp sẵn trong MVC và nó sẽ hiển thị bất cứ thứ gì chúng ta muốn trong
+
+18
+00:01:34,220 --> 00:01:34,940
+phần thân.
+
+19
+00:01:35,950 --> 00:01:41,890
+Bây giờ cơ thể đó sẽ là gì, điều đó sẽ được xác định bởi những gì được trả về từ bộ điều khiển.
+
+20
+00:01:42,160 --> 00:01:47,410
+Nếu chúng ta trả về chế độ xem chỉ mục, nó sẽ hiển thị chế độ xem đó ngay tại đây.
+
+21
+00:01:48,710 --> 00:01:50,180
+Sau bữa tiệc kết xuất.
+
+22
+00:01:50,180 --> 00:01:54,230
+Chúng tôi có một chân trang ở đây nơi chúng tôi đang hiển thị trang web cồng kềnh.
+
+23
+00:01:54,260 --> 00:01:59,330
+Nếu chúng ta quay lại ứng dụng, đó là những gì chúng ta có ngay tại đây.
+
+24
+00:02:00,770 --> 00:02:07,950
+Vì vậy, bố cục được gạch dưới sẽ là trang chính của ứng dụng hoặc trang chính của ứng dụng của bạn.
+
+25
+00:02:07,970 --> 00:02:09,650
+Hãy luôn nhớ điều đó.
+
+26
+00:02:09,949 --> 00:02:18,200
+Và trong bố cục được gạch chân, chúng tôi sẽ thêm tất cả JavaScript, tất cả CSS mà chúng tôi muốn sử dụng trên toàn
+
+27
+00:02:18,200 --> 00:02:19,760
+cầu trong ứng dụng.
+
+28
+00:02:20,690 --> 00:02:26,270
+Cùng với đó, chúng tôi có một cái gì đó trong các thẻ neo như bộ điều khiển ASP, hành động ASP.
+
+29
+00:02:26,300 --> 00:02:31,480
+Chúng được gọi là trình trợ giúp thẻ, nhưng hãy bỏ qua chúng khi đến thời điểm thích hợp.
+
+30
+00:02:31,490 --> 00:02:35,170
+Tôi sẽ giải thích cho bạn tại sao chúng ta cần chúng ngay bây giờ.
+
+31
+00:02:35,180 --> 00:02:42,470
+Bố cục gạch dưới là trang chính của ứng dụng của bạn và bất kỳ chế độ xem nào chúng tôi trả về từ bộ điều
+
+32
+00:02:42,470 --> 00:02:48,080
+khiển sẽ được hiển thị trong nội dung kết xuất của bố cục được gạch dưới.
+
+33
+00:02:49,720 --> 00:02:55,660
+Sau đó, hãy quay lại và chúng ta có một phần gọi là tập lệnh xác thực.
+
+34
+00:02:55,690 --> 00:02:59,470
+Về cơ bản, chúng tôi đã đưa vào JavaScript.
+
+35
+00:02:59,770 --> 00:03:05,620
+Bây giờ khi chúng tôi tiến hành khóa học, chúng tôi muốn thêm xác thực phía máy khách và để làm
+
+36
+00:03:05,620 --> 00:03:12,160
+điều đó, chúng tôi sẽ sử dụng JavaScript này vì điều đó trên tất cả các trang, không cần xác thực.
+
+37
+00:03:12,220 --> 00:03:19,960
+Vì vậy, những gì các . net đã làm được là họ đã thêm một số JavaScript cơ bản tại đây và sau đó
+
+38
+00:03:19,960 --> 00:03:21,580
+trên các trang cần xác thực.
+
+39
+00:03:21,580 --> 00:03:29,080
+Nó đã tách nó ra trong một tệp khác và chúng tôi chỉ có thể sử dụng chúng trong tệp của mình nếu cần.
+
+40
+00:03:29,710 --> 00:03:32,240
+Chúng tôi sẽ thấy rằng trong hành động xuống đường.
+
+41
+00:03:32,260 --> 00:03:36,790
+Nhưng ở đây chúng tôi có một thứ gọi là tập lệnh xác thực một phần.
+
+42
+00:03:38,480 --> 00:03:42,320
+Bây giờ, một điều mà bạn nhận thấy ở đây là một phần trong tập lệnh xác thực.
+
+43
+00:03:42,320 --> 00:03:43,820
+Chúng tôi có một dấu gạch dưới.
+
+44
+00:03:44,030 --> 00:03:49,640
+Dấu gạch dưới này không bắt buộc trong bố cục hoặc tập lệnh xác thực một phần.
+
+45
+00:03:50,030 --> 00:03:57,860
+Nhưng thông thường, nếu đó là một trang hoặc thành phần được sử dụng xuyên suốt ứng dụng, thì chúng tôi thường muốn
+
+46
+00:03:57,860 --> 00:03:59,600
+thêm dấu gạch dưới.
+
+47
+00:03:59,630 --> 00:04:05,540
+Theo cách đó, khi nhìn vào tên, chúng ta có thể biết rằng, được, chế độ xem này sẽ được sử dụng
+
+48
+00:04:05,540 --> 00:04:11,480
+trong toàn bộ ứng dụng và cũng có một tên đặc biệt cho chế độ xem đó, đó là chế độ xem một phần.
+
+49
+00:04:11,840 --> 00:04:16,640
+Chế độ xem một phần về cơ bản có nghĩa là chúng không thể tự hiển thị trên trang.
+
+50
+00:04:16,670 --> 00:04:24,710
+Chúng sẽ được kết hợp như một phần của một số chế độ xem chính, nhưng hiện tại điều đó hơi quá kỹ thuật
+
+51
+00:04:24,710 --> 00:04:26,090
+hoặc hơi sớm.
+
+52
+00:04:26,120 --> 00:04:32,630
+Nhưng chỉ cần ghi nhớ thuật ngữ đó rằng có một thứ được gọi là Dạng xem và có các dạng xem
+
+53
+00:04:32,630 --> 00:04:34,400
+một phần theo tên.
+
+54
+00:04:34,400 --> 00:04:39,540
+Chế độ xem một phần về cơ bản là chế độ xem mà bạn không sử dụng riêng.
+
+55
+00:04:39,570 --> 00:04:42,930
+Chúng sẽ được sử dụng bên trong chế độ xem chính.
+
+56
+00:04:43,590 --> 00:04:45,990
+Tiếp theo chúng ta có một cái nhìn cho lỗi.
+
+57
+00:04:45,990 --> 00:04:47,670
+Chấm Cshtml.
+
+58
+00:04:47,700 --> 00:04:50,850
+Đây là chế độ xem nơi chúng tôi hiển thị thông báo lỗi.
+
+59
+00:04:50,850 --> 00:04:55,200
+Nếu bất cứ điều gì gặp phải và chúng ta có thể bỏ qua điều đó ngay bây giờ.
+
+60
+00:04:56,140 --> 00:05:03,640
+Bây giờ, một câu hỏi chính mà tôi có khi học MVC là làm thế nào để ứng dụng biết rằng bố cục
+
+61
+00:05:03,640 --> 00:05:07,960
+được gạch chân này là trang chính của ứng dụng?
+
+62
+00:05:08,830 --> 00:05:10,010
+Điều đó thật đơn giản.
+
+63
+00:05:10,030 --> 00:05:15,720
+Chúng tôi xác định rằng bên trong tệp view start dot cshtml.
+
+64
+00:05:16,090 --> 00:05:21,580
+Ở đó, chúng tôi đang nói rằng bố cục của ứng dụng là bố cục được gạch dưới.
+
+65
+00:05:21,940 --> 00:05:26,680
+Nếu tôi thay đổi cái này thành bố cục ở đây, hãy để tôi dừng nó và chạy nó.
+
+66
+00:05:26,710 --> 00:05:28,390
+Mọi thứ sẽ không hoạt động.
+
+67
+00:05:29,470 --> 00:05:31,030
+Chúng tôi có một ngoại lệ ở đây.
+
+68
+00:05:31,030 --> 00:05:37,300
+Không thể định vị bố cục và bạn có thể thấy vị trí thực sự đang tìm kiếm bố cục.
+
+69
+00:05:38,880 --> 00:05:39,810
+Để khắc phục điều đó.
+
+70
+00:05:39,840 --> 00:05:46,140
+Những gì chúng tôi có thể làm là tôi có thể đổi tên cái này thành bố cục và sau đó nó sẽ bắt đầu hoạt động trở lại.
+
+71
+00:05:48,460 --> 00:05:49,240
+Hoàn hảo.
+
+72
+00:05:49,600 --> 00:05:56,380
+Vì vậy, bạn có thể thấy đó là cách ứng dụng được cấu hình để biết đâu là bố cục mặc định hoặc trang
+
+73
+00:05:56,380 --> 00:05:58,390
+chính của ứng dụng của bạn.
+
+74
+00:05:58,540 --> 00:06:01,330
+Hãy để tôi hoàn nguyên sự thay đổi ở đây.
+
+75
+00:06:01,750 --> 00:06:04,300
+Tôi sẽ giữ bố cục gạch dưới.
+
+76
+00:06:04,450 --> 00:06:08,470
+Đó là cái tên mà bạn nên quen thuộc chứ không phải bố cục.
+
+77
+00:06:09,650 --> 00:06:10,430
+Hoàn hảo.
+
+78
+00:06:10,580 --> 00:06:14,990
+Hãy để tôi chạy ứng dụng và nó sẽ hoạt động như cũ.
+
+79
+00:06:15,530 --> 00:06:16,340
+Tuyệt vời.
+
+80
+00:06:16,940 --> 00:06:23,630
+Vì vậy, bạn bắt đầu sẽ xác định trang chính là gì hoặc bố cục của ứng dụng web của bạn là gì.
+
+81
+00:06:24,410 --> 00:06:28,370
+Sau đó, chúng tôi cũng có một thứ gọi là Xem Nhập khẩu.
+
+82
+00:06:28,940 --> 00:06:33,560
+Ở đây chúng tôi đã xác định các mô hình web cồng kềnh và web cồng kềnh.
+
+83
+00:06:33,800 --> 00:06:36,360
+Chúng tôi đã thêm các câu lệnh sử dụng ở đây.
+
+84
+00:06:36,380 --> 00:06:42,560
+Nếu bạn đang làm việc với . net, bạn biết rằng các câu lệnh sử dụng được sử dụng thay vì gõ câu lệnh
+
+85
+00:06:42,560 --> 00:06:43,220
+đó mỗi lần.
+
+86
+00:06:43,790 --> 00:06:45,110
+Nếu không, đừng lo lắng.
+
+87
+00:06:45,110 --> 00:06:49,400
+Khi đến lúc, tôi sẽ chỉ cho bạn lý do tại sao cần sử dụng câu lệnh.
+
+88
+00:06:49,820 --> 00:06:57,230
+Nhưng trên hết, nó đã thêm một thứ gọi là trình trợ giúp thẻ mà chúng tôi cũng sẽ giới thiệu trong các video
+
+89
+00:06:57,230 --> 00:06:58,070
+sắp tới.
+
+90
+00:06:58,070 --> 00:07:02,780
+Nhưng khi xem quá trình nhập, bạn có thể coi đó là tệp nhập toàn cầu.
+
+91
+00:07:02,930 --> 00:07:10,440
+Thay vì nhập hoặc viết câu lệnh sử dụng trong tất cả các tệp, bạn có thể thêm câu lệnh đó tại đây và câu lệnh
+
+92
+00:07:10,440 --> 00:07:13,860
+đó sẽ tự động có sẵn trong tất cả các dạng xem.
+
+93
+00:07:14,770 --> 00:07:21,280
+Một lần nữa, lần nhập chế độ xem hoặc câu lệnh sử dụng mà chúng tôi đã thêm ở đây sẽ chỉ khả dụng trong chế
+
+94
+00:07:21,280 --> 00:07:24,820
+độ xem chứ không phải trong bộ điều khiển hoặc mô hình.
+
+95
+00:07:25,330 --> 00:07:31,990
+Khi có thời gian thích hợp trong các video trong tương lai, tôi sẽ cho bạn thấy tầm quan trọng của việc nhập lượt xem
+
+96
+00:07:31,990 --> 00:07:35,410
+và chúng tôi cũng sẽ bổ sung thêm nhiều lượt nhập vào tệp.
+
+97
+00:07:36,010 --> 00:07:38,140
+Hãy để tôi đóng tất cả các tab ở đây.
+
+98
+00:07:38,140 --> 00:07:42,650
+Và với điều đó, tôi tin rằng chúng tôi đã bao gồm tất cả các tệp trong chế độ xem.
+
+99
+00:07:42,670 --> 00:07:46,750
+Chúng tôi có một bộ điều khiển mô hình và hoàn hảo.
+
+100
+00:07:47,140 --> 00:07:53,710
+Bây giờ, với phần tổng quan mà chúng tôi đã trình bày với tất cả các tệp và thư mục, đây là thời điểm
+
+101
+00:07:53,710 --> 00:07:57,100
+hoàn hảo để bắt tay vào xem video tiếp theo.
+

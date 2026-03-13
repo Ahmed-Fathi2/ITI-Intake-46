@@ -1,0 +1,432 @@
+1
+00:00:01,920 --> 00:00:04,440
+Instructor: We have the homepage and the details page
+
+2
+00:00:04,440 --> 00:00:07,110
+that are working as expected.
+
+3
+00:00:07,110 --> 00:00:08,430
+With that covered,
+
+4
+00:00:08,430 --> 00:00:12,000
+I want to work on authentication and authorization
+
+5
+00:00:12,000 --> 00:00:16,350
+and scaffolding identity with the .NET project.
+
+6
+00:00:16,350 --> 00:00:18,390
+When we talk about identity,
+
+7
+00:00:18,390 --> 00:00:22,230
+we think directly about registration, log-in,
+
+8
+00:00:22,230 --> 00:00:24,390
+what if the password is invalid,
+
+9
+00:00:24,390 --> 00:00:27,630
+how to create all of those tables in the database,
+
+10
+00:00:27,630 --> 00:00:31,410
+and making sure that security is top-notch.
+
+11
+00:00:31,410 --> 00:00:33,660
+But when it comes to .NET project,
+
+12
+00:00:33,660 --> 00:00:36,090
+we do not have to worry about all of that.
+
+13
+00:00:36,090 --> 00:00:40,860
+The .NET team provides a default identity implementation
+
+14
+00:00:40,860 --> 00:00:43,440
+that we can use with confidence
+
+15
+00:00:43,440 --> 00:00:47,610
+because it is built and provided by the .NET team.
+
+16
+00:00:47,610 --> 00:00:51,660
+And that basically lifts off all the heavy lifting
+
+17
+00:00:51,660 --> 00:00:55,470
+and we can trust the code that is being written.
+
+18
+00:00:55,470 --> 00:00:57,930
+But how do we add that identity,
+
+19
+00:00:57,930 --> 00:01:00,060
+which is, login, registration
+
+20
+00:01:00,060 --> 00:01:03,633
+and everything related to that, to our project.
+
+21
+00:01:05,220 --> 00:01:09,660
+To get started, on the web project we will right click, add,
+
+22
+00:01:09,660 --> 00:01:13,620
+and we will select new scaffolded item.
+
+23
+00:01:13,620 --> 00:01:17,343
+There we have identity and we can select that.
+
+24
+00:01:18,360 --> 00:01:21,360
+Now, in the later versions of .NET 8,
+
+25
+00:01:21,360 --> 00:01:23,970
+the identity might get updated.
+
+26
+00:01:23,970 --> 00:01:27,690
+If that happens, I will update the course as well.
+
+27
+00:01:27,690 --> 00:01:30,690
+But this is what it is right now.
+
+28
+00:01:30,690 --> 00:01:31,890
+On the top here
+
+29
+00:01:31,890 --> 00:01:35,880
+if we want a different master page, we can select that.
+
+30
+00:01:35,880 --> 00:01:37,830
+If not, we can leave that.
+
+31
+00:01:37,830 --> 00:01:40,110
+But then you can see all of the files
+
+32
+00:01:40,110 --> 00:01:42,963
+that are provided by the identity team.
+
+33
+00:01:44,070 --> 00:01:48,510
+We have many pages here for login, logout, set password,
+
+34
+00:01:48,510 --> 00:01:52,560
+register, reset password, and much more.
+
+35
+00:01:52,560 --> 00:01:55,860
+You will not need all the pages right here.
+
+36
+00:01:55,860 --> 00:01:59,610
+So what we can do is, we can select the pages that we want
+
+37
+00:01:59,610 --> 00:02:02,733
+but before I do that, we have something called as DbContext.
+
+38
+00:02:04,080 --> 00:02:08,039
+Now we already have a DbContext in the data access
+
+39
+00:02:08,039 --> 00:02:10,953
+but you can see that is not being detected here.
+
+40
+00:02:11,790 --> 00:02:13,800
+The reason it is not being detected
+
+41
+00:02:13,800 --> 00:02:16,680
+is not because it is in its own project.
+
+42
+00:02:16,680 --> 00:02:20,820
+It is because when we have a DbContext for identity,
+
+43
+00:02:20,820 --> 00:02:23,310
+we need to do some configuration
+
+44
+00:02:23,310 --> 00:02:26,373
+and we will do that before we continue.
+
+45
+00:02:27,270 --> 00:02:30,360
+If I open the DbContext that we have,
+
+46
+00:02:30,360 --> 00:02:33,180
+which is ApplicationDbContext,
+
+47
+00:02:33,180 --> 00:02:37,200
+that basically implements the DbContext.
+
+48
+00:02:37,200 --> 00:02:40,320
+But if you have to implement the identity,
+
+49
+00:02:40,320 --> 00:02:42,600
+then we have to implement something
+
+50
+00:02:42,600 --> 00:02:45,360
+called as IdentityDbContext.
+
+51
+00:02:45,360 --> 00:02:48,000
+And if you press control + dot here,
+
+52
+00:02:48,000 --> 00:02:50,580
+we have to install the NuGet package,
+
+53
+00:02:50,580 --> 00:02:54,873
+Microsoft.AspNetCore.Identity.EntityFrameworkCore.
+
+54
+00:02:57,180 --> 00:03:00,480
+We can install that package directly from here,
+
+55
+00:03:00,480 --> 00:03:03,600
+or we can say install with package manager,
+
+56
+00:03:03,600 --> 00:03:06,450
+opens the package manager here
+
+57
+00:03:06,450 --> 00:03:09,720
+and we can install the .NET 8.
+
+58
+00:03:09,720 --> 00:03:11,103
+Let me do that.
+
+59
+00:03:12,270 --> 00:03:14,580
+Perfect. That is done.
+
+60
+00:03:14,580 --> 00:03:15,870
+Once that is done,
+
+61
+00:03:15,870 --> 00:03:18,720
+we have to add that using statement
+
+62
+00:03:18,720 --> 00:03:21,090
+and the error goes away.
+
+63
+00:03:21,090 --> 00:03:24,240
+Now that is the only change that we have to do.
+
+64
+00:03:24,240 --> 00:03:27,510
+But when we use IdentityDbContext,
+
+65
+00:03:27,510 --> 00:03:30,750
+if we run our project, something will fail.
+
+66
+00:03:30,750 --> 00:03:32,043
+And let me show that.
+
+67
+00:03:33,150 --> 00:03:37,830
+We see an exception here, the entity type IdentityUserLogin
+
+68
+00:03:37,830 --> 00:03:41,220
+requires a primary key to be defined.
+
+69
+00:03:41,220 --> 00:03:45,390
+I will not go into much details about what is going on here
+
+70
+00:03:45,390 --> 00:03:49,350
+but basically where we have the ApplicationDbContext
+
+71
+00:03:49,350 --> 00:03:51,790
+if you have OnModelCreating,
+
+72
+00:03:51,790 --> 00:03:54,090
+there basically you will have to write
+
+73
+00:03:54,090 --> 00:03:56,580
+this one piece of line.
+
+74
+00:03:56,580 --> 00:03:57,630
+And that is because
+
+75
+00:03:57,630 --> 00:04:02,310
+keys of identity tables are mapped in the OnModelCreating,
+
+76
+00:04:02,310 --> 00:04:05,520
+and if this particular method is not called
+
+77
+00:04:05,520 --> 00:04:08,820
+then you will run into the error message.
+
+78
+00:04:08,820 --> 00:04:11,190
+So, ignore all the details here.
+
+79
+00:04:11,190 --> 00:04:14,520
+It is one of the configuration that is needed.
+
+80
+00:04:14,520 --> 00:04:17,250
+So when we have IdentityDbContext
+
+81
+00:04:17,250 --> 00:04:21,570
+we have to add base.OnModelCreating(modelBuilder)
+
+82
+00:04:21,570 --> 00:04:24,450
+and with that, if we run the project here
+
+83
+00:04:24,450 --> 00:04:25,773
+it should work again.
+
+84
+00:04:27,240 --> 00:04:28,320
+And perfect.
+
+85
+00:04:28,320 --> 00:04:31,320
+You can see the application is coming up here,
+
+86
+00:04:31,320 --> 00:04:33,510
+we can navigate to the details
+
+87
+00:04:33,510 --> 00:04:36,810
+and everything is working the same.
+
+88
+00:04:36,810 --> 00:04:40,320
+But basically the DbContext now is implementing
+
+89
+00:04:40,320 --> 00:04:45,093
+the IdentityDbContext rather than simple DbContext.
+
+90
+00:04:46,110 --> 00:04:49,440
+With that change of IdentityDbContext,
+
+91
+00:04:49,440 --> 00:04:51,960
+if we right click on the web project
+
+92
+00:04:51,960 --> 00:04:55,710
+and if we try to scaffold the identity here,
+
+93
+00:04:55,710 --> 00:04:57,063
+let me do that,
+
+94
+00:04:58,470 --> 00:05:02,220
+and by default let me override all the files,
+
+95
+00:05:02,220 --> 00:05:04,620
+but the DbContext, you can see
+
+96
+00:05:04,620 --> 00:05:08,760
+it automatically now detects ApplicationDbContext
+
+97
+00:05:08,760 --> 00:05:11,793
+because that has IdentityDbContext.
+
+98
+00:05:13,170 --> 00:05:14,880
+With that configured,
+
+99
+00:05:14,880 --> 00:05:16,803
+let me hit the add button.
+
+100
+00:05:17,640 --> 00:05:19,110
+This might take a while,
+
+101
+00:05:19,110 --> 00:05:23,070
+so let me wait for all the scaffolding to be done.
+
+102
+00:05:23,070 --> 00:05:23,903
+And perfect,
+
+103
+00:05:23,903 --> 00:05:26,580
+you can see that completed successfully.
+
+104
+00:05:26,580 --> 00:05:28,020
+And in the git changes here,
+
+105
+00:05:28,020 --> 00:05:31,830
+you can see there are 79 changes.
+
+106
+00:05:31,830 --> 00:05:34,890
+So quite a few things have been changed here
+
+107
+00:05:34,890 --> 00:05:37,950
+and many things have been added.
+
+108
+00:05:37,950 --> 00:05:42,183
+Let me walk you through all of that in the next video.
+

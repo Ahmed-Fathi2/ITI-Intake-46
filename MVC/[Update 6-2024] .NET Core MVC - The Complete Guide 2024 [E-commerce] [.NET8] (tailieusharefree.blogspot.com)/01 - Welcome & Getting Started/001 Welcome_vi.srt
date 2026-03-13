@@ -1,0 +1,160 @@
+1
+00:00:00,260 --> 00:00:04,220
+Bạn đang tìm kiếm khóa học cuối cùng để học. mạng lõi MVC?
+
+2
+00:00:04,730 --> 00:00:07,250
+Nếu vậy, bạn đang ở đúng nơi.
+
+3
+00:00:07,820 --> 00:00:14,150
+Tên tôi là Bhrugen và chào mừng bạn đến với Hướng dẫn đầy đủ về ASP. Khóa học NET Core MVC.
+
+4
+00:00:14,980 --> 00:00:19,750
+Khóa học này là tất cả về. lõi mạng, bắt đầu từ Ground zero.
+
+5
+00:00:20,080 --> 00:00:27,190
+Chúng tôi sẽ xây dựng nhiều ứng dụng và chúng tôi sẽ hiểu cả hai trang MVC và Razor.
+
+6
+00:00:27,460 --> 00:00:34,720
+Mặc dù khóa học này tập trung vào MVC, nhưng tôi sẽ chỉ cho bạn cách xây dựng một ứng dụng nhỏ bằng cách sử
+
+7
+00:00:34,720 --> 00:00:42,820
+dụng các trang dao cạo vì sau này khi chúng ta triển khai danh tính, được cung cấp bởi Microsoft, được xây dựng bằng
+
+8
+00:00:42,820 --> 00:00:44,200
+các trang dao cạo.
+
+9
+00:00:44,770 --> 00:00:48,670
+Vì vậy, thật tốt khi có một ý tưởng cơ bản về chúng.
+
+10
+00:00:49,260 --> 00:00:57,210
+Sau khi chúng tôi nắm vững các nguyên tắc cơ bản đằng sau MVC và . net, thì chúng tôi sẽ xây dựng hoặc nâng cao
+
+11
+00:00:57,210 --> 00:01:03,060
+ứng dụng đó để xây dựng ứng dụng thương mại điện tử bằng MVC.
+
+12
+00:01:03,900 --> 00:01:10,980
+Tôi đã là một . net đã hơn mười năm nay và trọng tâm chính của tôi là loại
+
+13
+00:01:10,980 --> 00:01:15,660
+bỏ khó khăn mà tôi gặp phải khi học MVC hoặc thậm chí chuyển sang. lõi ròng.
+
+14
+00:01:15,900 --> 00:01:16,800
+Tôi sẽ có hơn mười nhiệm vụ và trọng tâm chính của tôi không phải là dạy cho bạn viễn cảnh thế giới hoàn hảo.
+
+15
+00:01:17,190 --> 00:01:24,540
+Do đó, tôi đã cố ý giới thiệu các lỗi và lỗi trong khi lập trình, sau đó tôi chỉ
+
+16
+00:01:24,720 --> 00:01:31,560
+cho bạn các lỗi phổ biến cũng như cách gỡ lỗi và giải quyết chúng.
+
+17
+00:01:31,560 --> 00:01:35,910
+Điều đó rất quan trọng khi bạn đang học một ngôn ngữ lập
+
+18
+00:01:36,680 --> 00:01:42,710
+trình mới, bởi vì rất có thể bạn sẽ gặp thông báo lỗi khi tự lập trình.
+
+19
+00:01:42,710 --> 00:01:46,580
+Hiện nay . net đang thay đổi và có các bản cập nhật hàng năm với phiên bản mới.
+
+20
+00:01:47,080 --> 00:01:52,780
+Do đó, tôi sẽ luôn cố gắng cập nhật khóa học.
+
+21
+00:01:52,990 --> 00:01:57,370
+Bằng cách đó, bạn không phải vật lộn khi một cái gì đó không hoạt động do cập nhật phiên bản.
+
+22
+00:01:57,400 --> 00:02:04,000
+Đây sẽ là một khóa học dài với các chức năng phức tạp vì trọng tâm
+
+23
+00:02:05,430 --> 00:02:13,080
+chính của tôi là giúp bạn tiếp xúc tốt với dự án trong thế giới thực.
+
+24
+00:02:13,080 --> 00:02:15,930
+Nhưng đừng lo lắng, tôi sẽ ở đó để hướng dẫn bạn mọi chức năng phức tạp mà chúng ta sẽ xây dựng.
+
+25
+00:02:16,260 --> 00:02:23,130
+Trước khi chúng ta bắt đầu, tôi có một lời khuyên nhỏ dành cho bạn.
+
+26
+00:02:23,870 --> 00:02:27,860
+Nhiều khi chúng ta đang học một công nghệ mới, chúng
+
+27
+00:02:27,890 --> 00:02:34,970
+ta cảm thấy khó khăn và bạn có thể cảm thấy trong một số video rằng điều này là vô nghĩa.
+
+28
+00:02:34,970 --> 00:02:37,190
+Nhưng trong trường hợp nếu một video không có ý nghĩa hoàn chỉnh, hãy làm theo những gì tôi đang làm.
+
+29
+00:02:38,080 --> 00:02:43,420
+Và tôi có thể đảm bảo với bạn rằng trong vài video tiếp theo, mọi thứ sẽ bắt đầu có ý nghĩa.
+
+30
+00:02:43,420 --> 00:02:48,910
+Khi bạn đang học một điều gì đó mới, bạn có thể phải viết hoặc lập
+
+31
+00:02:49,700 --> 00:02:56,360
+trình bước đó một vài lần trước khi logic hoàn chỉnh bắt đầu có ý nghĩa.
+
+32
+00:02:56,360 --> 00:02:59,120
+Và tôi đã đề cập đến tất cả các bước cần thiết cho điều đó trong khóa học này.
+
+33
+00:02:59,540 --> 00:03:04,610
+Vì vậy, nếu bạn cảm thấy quá nhiều, hãy nghỉ ngơi và quay lại vào ngày hôm sau.
+
+34
+00:03:04,940 --> 00:03:10,130
+Đừng cố gắng vượt qua khóa học một cách nhanh chóng.
+
+35
+00:03:10,370 --> 00:03:13,310
+Hãy dành thời gian của bạn và sau khi bạn hoàn thành khóa
+
+36
+00:03:13,340 --> 00:03:19,490
+học, cá nhân tôi có thể đảm bảo rằng bạn sẽ tự hào về ứng dụng cuối cùng mà bạn sẽ xây dựng vào cuối khóa học này.
+
+37
+00:03:19,490 --> 00:03:24,230
+Và cùng với đó, bạn cũng sẽ hiểu được tất cả những
+
+38
+00:03:24,500 --> 00:03:31,790
+nền tảng cơ bản, những lỗi thường gặp phải và cách giải quyết chúng.
+
+39
+00:03:31,790 --> 00:03:33,590
+Tôi hy vọng bạn sẽ tham gia cùng tôi trong hành trình học tập thú vị này. net MVC bằng cách xây
+
+40
+00:03:34,190 --> 00:03:41,510
+dựng một ứng dụng thương mại điện tử.
+

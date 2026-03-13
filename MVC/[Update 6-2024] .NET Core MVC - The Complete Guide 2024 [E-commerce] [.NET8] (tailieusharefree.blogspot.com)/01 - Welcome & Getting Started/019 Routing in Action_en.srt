@@ -1,0 +1,560 @@
+1
+00:00:01,720 --> 00:00:08,290
+Now you have a rough idea of what is a controller and what is an action based on the URL.
+
+2
+00:00:08,470 --> 00:00:15,610
+So basically, if you have a URL from that, you can tell me what is the controller, what is the action
+
+3
+00:00:15,610 --> 00:00:16,870
+and what is the ID?
+
+4
+00:00:18,080 --> 00:00:19,520
+With that rough idea.
+
+5
+00:00:19,670 --> 00:00:25,040
+Let me go back to the project here and I will open Solution Explorer.
+
+6
+00:00:25,820 --> 00:00:29,990
+You can see there are three folders here that we have not covered yet.
+
+7
+00:00:30,170 --> 00:00:35,750
+There is a view folder, there is a model folder and there is a controller folder.
+
+8
+00:00:36,500 --> 00:00:40,760
+In controller, you can see we have something called as home controller.
+
+9
+00:00:41,400 --> 00:00:43,710
+When we are naming any controller.
+
+10
+00:00:43,710 --> 00:00:47,640
+One thing that is important is the controller keyword.
+
+11
+00:00:48,240 --> 00:00:55,170
+So if you have a home controller, you should have the name followed by the controller keyword and that
+
+12
+00:00:55,170 --> 00:00:58,320
+must be placed inside the controllers folder.
+
+13
+00:00:58,590 --> 00:01:02,160
+If you place it somewhere else, it will not work.
+
+14
+00:01:02,430 --> 00:01:06,840
+These are the rules that are defined for the MVC architecture.
+
+15
+00:01:07,140 --> 00:01:10,530
+So in controllers we have home controller.
+
+16
+00:01:10,830 --> 00:01:15,450
+In models we just have one model which is error view model.
+
+17
+00:01:15,600 --> 00:01:22,650
+It is a basic class file and it has two properties, nothing fancy, and we don't want to go into those
+
+18
+00:01:22,650 --> 00:01:24,330
+detail right now.
+
+19
+00:01:25,380 --> 00:01:31,560
+Another thing that I want to point out is when a request comes to controller, it is not always required
+
+20
+00:01:31,560 --> 00:01:33,240
+that a model is needed.
+
+21
+00:01:33,360 --> 00:01:40,260
+Sometimes it can render a view which can be a static view and no model is needed in that case.
+
+22
+00:01:40,770 --> 00:01:43,370
+But I want you to keep that in mind.
+
+23
+00:01:43,380 --> 00:01:46,380
+That model is not always needed.
+
+24
+00:01:46,680 --> 00:01:47,670
+Perfect.
+
+25
+00:01:47,700 --> 00:01:55,800
+So now we have a home controller here and all the views related to that controller will be placed inside
+
+26
+00:01:55,800 --> 00:02:00,210
+the views folder with the exact same name as controller.
+
+27
+00:02:00,360 --> 00:02:03,750
+And this will be home and not home controller.
+
+28
+00:02:03,870 --> 00:02:10,660
+Controller is a keyword here, so actual name of the controller is home and that will be the name of
+
+29
+00:02:10,680 --> 00:02:13,380
+folder inside views folder.
+
+30
+00:02:14,150 --> 00:02:16,860
+And that is the architecture for MVC.
+
+31
+00:02:17,370 --> 00:02:24,510
+We have controllers and all the views that corresponds to that controller must be placed inside the
+
+32
+00:02:24,510 --> 00:02:30,750
+views folder with a subfolder of the exact name as the controller name.
+
+33
+00:02:31,290 --> 00:02:32,310
+So perfect.
+
+34
+00:02:32,340 --> 00:02:37,980
+We can see in home controller we have an index view and we have a privacy view.
+
+35
+00:02:38,750 --> 00:02:41,120
+If I run the application here.
+
+36
+00:02:42,240 --> 00:02:46,560
+And right there you can see we have a homepage and a privacy page.
+
+37
+00:02:46,950 --> 00:02:54,300
+Right now we only have one controller in our application, so both of the view belongs to the same controller.
+
+38
+00:02:54,890 --> 00:02:57,720
+When we load the page, you can see the URL.
+
+39
+00:02:57,740 --> 00:03:01,430
+We do not have any controller name or action name.
+
+40
+00:03:01,790 --> 00:03:04,250
+We just have this welcome text.
+
+41
+00:03:04,930 --> 00:03:08,860
+Let's see where the text is inside Home View.
+
+42
+00:03:08,890 --> 00:03:10,510
+We have the index view.
+
+43
+00:03:10,540 --> 00:03:16,210
+If I open that, that is the exact text that we see right here.
+
+44
+00:03:16,510 --> 00:03:24,250
+We have the welcome we have learned about and we have an anchor tag with building web apps with ASP.NET
+
+45
+00:03:24,250 --> 00:03:24,880
+Core.
+
+46
+00:03:25,510 --> 00:03:34,120
+So what we see on the home page here basically is displayed from this index view inside the home folder.
+
+47
+00:03:34,960 --> 00:03:39,100
+When we click on privacy here, we have the privacy policy.
+
+48
+00:03:39,100 --> 00:03:47,860
+And if I open the privacy cshtml file, that is the data that is being displayed right here.
+
+49
+00:03:48,460 --> 00:03:54,700
+Ignore this view data for now, but you can see the paragraph tag is exactly what we have.
+
+50
+00:03:55,700 --> 00:04:01,910
+Now, something interesting that you should notice here is when we are going to the privacy page.
+
+51
+00:04:01,910 --> 00:04:07,040
+The URL here is something that we have seen before with routing.
+
+52
+00:04:07,460 --> 00:04:09,080
+Based on this URL.
+
+53
+00:04:09,110 --> 00:04:13,640
+Can you tell me what is the controller name and what is the action name?
+
+54
+00:04:14,640 --> 00:04:19,800
+The controller name is home controller and action name is privacy.
+
+55
+00:04:20,450 --> 00:04:22,700
+Now, how does that come together?
+
+56
+00:04:23,180 --> 00:04:24,410
+I will show you that.
+
+57
+00:04:24,410 --> 00:04:28,300
+But before that, let me change this to be index.
+
+58
+00:04:28,310 --> 00:04:33,980
+So home controller index action press enter and perfect.
+
+59
+00:04:34,100 --> 00:04:36,350
+We get back to the home page.
+
+60
+00:04:36,530 --> 00:04:38,270
+How did that happen?
+
+61
+00:04:38,600 --> 00:04:45,590
+When we click on home page, it does not define anything in the root and that is because the default
+
+62
+00:04:45,590 --> 00:04:46,850
+root that we have here.
+
+63
+00:04:46,850 --> 00:04:53,450
+We are saying that if nothing is defined, go to home controller and index action.
+
+64
+00:04:53,630 --> 00:05:01,010
+So that means that even if you define home controller and index action, it will take you to basically
+
+65
+00:05:01,010 --> 00:05:02,090
+the same page.
+
+66
+00:05:02,720 --> 00:05:06,020
+So I hope you can see how things are coming together.
+
+67
+00:05:06,500 --> 00:05:13,580
+But the main question, how does it know where it has to load this particular view that we see?
+
+68
+00:05:14,200 --> 00:05:18,700
+Let me show you that we have home controller and index action.
+
+69
+00:05:19,210 --> 00:05:22,360
+For that, let me go to the home controller here.
+
+70
+00:05:22,360 --> 00:05:25,600
+And we have few things right here.
+
+71
+00:05:25,810 --> 00:05:29,110
+You can see there is something here, but ignore that.
+
+72
+00:05:29,730 --> 00:05:35,190
+What I want to show you is in home controller what we have down here.
+
+73
+00:05:35,220 --> 00:05:39,330
+These are called the action method on line 11.
+
+74
+00:05:39,330 --> 00:05:45,090
+We basically have a constructor for our class and I will explain you that in later videos.
+
+75
+00:05:45,090 --> 00:05:52,230
+But other than that, we have three action methods here and they are returning something called as I
+
+76
+00:05:52,230 --> 00:05:53,400
+action result.
+
+77
+00:05:53,970 --> 00:05:59,040
+I was telling you before that there are two things controller and action.
+
+78
+00:05:59,870 --> 00:06:01,970
+What we have defined in the URL.
+
+79
+00:06:01,970 --> 00:06:06,710
+We are telling go to the home controller and get the index action.
+
+80
+00:06:06,980 --> 00:06:14,960
+So at that point it will go to the home controller and it will execute this index action in index action.
+
+81
+00:06:14,960 --> 00:06:16,610
+We do not have any code.
+
+82
+00:06:16,640 --> 00:06:19,040
+We are only saying return view.
+
+83
+00:06:19,250 --> 00:06:20,810
+What does this mean?
+
+84
+00:06:21,230 --> 00:06:28,610
+Well, it basically says that we have to return some view inside the views folder, but what view does
+
+85
+00:06:28,610 --> 00:06:29,900
+it have to return?
+
+86
+00:06:30,230 --> 00:06:35,180
+And that is where the naming that we have given to folder comes into picture.
+
+87
+00:06:35,300 --> 00:06:42,380
+If we have not defined a name inside this round bracket, it will use the same name as the action name.
+
+88
+00:06:42,680 --> 00:06:45,500
+So it will return an index view.
+
+89
+00:06:45,890 --> 00:06:48,620
+But where will it get that view from?
+
+90
+00:06:49,010 --> 00:06:52,250
+It will get that view from the home controller.
+
+91
+00:06:52,250 --> 00:06:59,940
+So it will go to the home folder inside views and there it will get the index dot CSS, HTML.
+
+92
+00:07:01,070 --> 00:07:07,340
+And if we type Home Forward slash privacy, it will execute the privacy action method.
+
+93
+00:07:07,340 --> 00:07:15,260
+And the view that it will return will be the privacy view, because that is the name of the action method.
+
+94
+00:07:15,860 --> 00:07:22,850
+Now we ignore the error action method that we have here, but you can see how index and privacy are
+
+95
+00:07:22,850 --> 00:07:23,900
+executed.
+
+96
+00:07:25,080 --> 00:07:29,520
+Now with Visual Studio, we have great debugging functionality.
+
+97
+00:07:30,350 --> 00:07:30,800
+For that.
+
+98
+00:07:30,800 --> 00:07:35,750
+What you have to do is right here when you hover, you can see a circle dot.
+
+99
+00:07:36,050 --> 00:07:39,980
+If you click there, that means you have added a debugger.
+
+100
+00:07:40,760 --> 00:07:43,370
+Let me add that in both the lines here.
+
+101
+00:07:43,370 --> 00:07:51,680
+And if I go back here and if I execute home index and press enter, you can see the breakpoint is being
+
+102
+00:07:51,680 --> 00:07:52,550
+hit here.
+
+103
+00:07:52,700 --> 00:07:57,350
+That means that this statement is being executed right now.
+
+104
+00:07:57,830 --> 00:08:02,180
+So that proves that it is going to the index action method.
+
+105
+00:08:03,090 --> 00:08:10,320
+We will have to hit continue here and then it will navigate or continue execution and bring back the
+
+106
+00:08:10,320 --> 00:08:11,220
+website.
+
+107
+00:08:12,030 --> 00:08:16,470
+When we click on privacy, it will go to the privacy action method.
+
+108
+00:08:16,470 --> 00:08:18,630
+And we continue here.
+
+109
+00:08:18,720 --> 00:08:20,130
+And perfect.
+
+110
+00:08:21,330 --> 00:08:26,580
+So with that, I hope you have a rough idea of how routing works.
+
+111
+00:08:26,790 --> 00:08:30,780
+But let me show you something before I end the video.
+
+112
+00:08:31,290 --> 00:08:36,690
+When we are returning back to The View, actually let me go to program here.
+
+113
+00:08:36,690 --> 00:08:44,130
+And rather than home controller index action, let me set the default to home and privacy.
+
+114
+00:08:44,280 --> 00:08:45,990
+And let me run that.
+
+115
+00:08:46,500 --> 00:08:50,670
+Now, when the application loads, we do not have any URL defined.
+
+116
+00:08:50,700 --> 00:08:57,570
+So on the home page, it will invoke the privacy action method and that view will be returned.
+
+117
+00:08:58,940 --> 00:08:59,850
+Perfect.
+
+118
+00:08:59,870 --> 00:09:05,810
+Let me roll back that change and I will go back here to controller.
+
+119
+00:09:05,840 --> 00:09:08,630
+There when I am returning the view.
+
+120
+00:09:08,630 --> 00:09:15,590
+As I said before, if nothing is defined here, it will look for the same view with the name of the
+
+121
+00:09:15,590 --> 00:09:20,000
+action method in the folder of that controller name.
+
+122
+00:09:20,780 --> 00:09:27,920
+Now, rather than that, I am saying that when the index is being called, I want you to return a view
+
+123
+00:09:27,950 --> 00:09:29,870
+with the name of privacy.
+
+124
+00:09:30,600 --> 00:09:37,980
+In that case, it will go to the home folder and look for a view with the name of privacy and views.
+
+125
+00:09:37,980 --> 00:09:41,760
+Have an extension of dot css html.
+
+126
+00:09:42,770 --> 00:09:44,150
+Let me run this.
+
+127
+00:09:44,930 --> 00:09:48,590
+Now the default page, it again loads the privacy page.
+
+128
+00:09:48,590 --> 00:09:55,130
+But to prove you that if I go to home and index privacy view is being loaded.
+
+129
+00:09:55,870 --> 00:10:00,340
+So you can always override what view will be returned.
+
+130
+00:10:00,370 --> 00:10:04,990
+But this is the default that we have if nothing is present.
+
+131
+00:10:06,450 --> 00:10:10,920
+I will also roll back that change to keep things simple for now.
+
+132
+00:10:12,420 --> 00:10:17,130
+But I hope with that you have a rough idea of how routing works.
+
+133
+00:10:17,370 --> 00:10:24,360
+And again, in controller we will have action methods that will define what view needs to be returned
+
+134
+00:10:24,360 --> 00:10:24,990
+back.
+
+135
+00:10:25,620 --> 00:10:29,530
+Now, MVC is tricky to understand, as I've said before.
+
+136
+00:10:29,550 --> 00:10:36,090
+So I do not expect you to understand 100% of the things that I'm explaining right now.
+
+137
+00:10:36,360 --> 00:10:43,080
+But even if you are understanding 50 to 70% so far, that is a great progress.
+
+138
+00:10:43,200 --> 00:10:50,040
+And when you actually start implementing this in the upcoming section, everything will start making
+
+139
+00:10:50,040 --> 00:10:55,290
+much more sense and you will understand why this pattern is so powerful.
+
+140
+00:10:56,780 --> 00:11:00,830
+With that overview, let me continue from the next video.
+

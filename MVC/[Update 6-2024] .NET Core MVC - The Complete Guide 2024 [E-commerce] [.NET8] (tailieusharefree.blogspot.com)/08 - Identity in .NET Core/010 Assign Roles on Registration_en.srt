@@ -1,0 +1,700 @@
+1
+00:00:01,920 --> 00:00:04,770
+Instructor: Now that we have roles in our database,
+
+2
+00:00:04,770 --> 00:00:06,689
+when we register a user,
+
+3
+00:00:06,689 --> 00:00:08,400
+I can add a dropdown here
+
+4
+00:00:08,400 --> 00:00:12,270
+where user can select any of the existing roles.
+
+5
+00:00:12,270 --> 00:00:15,517
+Now you might be saying that, "Hey, you are giving someone
+
+6
+00:00:15,517 --> 00:00:17,917
+"the right to register an admin user
+
+7
+00:00:17,917 --> 00:00:21,270
+"from the registration page. Is that a good approach?"
+
+8
+00:00:21,270 --> 00:00:23,010
+Of course it's not.
+
+9
+00:00:23,010 --> 00:00:25,050
+But right now we are learning things,
+
+10
+00:00:25,050 --> 00:00:27,630
+and that is why we will keep it here.
+
+11
+00:00:27,630 --> 00:00:30,330
+But later on in the advanced sections
+
+12
+00:00:30,330 --> 00:00:32,400
+I will obviously remove that
+
+13
+00:00:32,400 --> 00:00:34,473
+before the code is being deployed.
+
+14
+00:00:35,580 --> 00:00:37,500
+So right now we are learning things,
+
+15
+00:00:37,500 --> 00:00:41,130
+and it is completely okay when you are learning.
+
+16
+00:00:41,130 --> 00:00:42,540
+But when you deploy,
+
+17
+00:00:42,540 --> 00:00:46,110
+make sure that does not go into production.
+
+18
+00:00:46,110 --> 00:00:48,600
+So we need to add a dropdown.
+
+19
+00:00:48,600 --> 00:00:51,000
+When we add a dropdown on the UI,
+
+20
+00:00:51,000 --> 00:00:54,090
+we need to pass some things from the page model.
+
+21
+00:00:54,090 --> 00:00:56,940
+That way it will be accessible on the page,
+
+22
+00:00:56,940 --> 00:00:59,343
+and we can display that in a dropdown.
+
+23
+00:01:00,300 --> 00:01:02,580
+So we have the page model here,
+
+24
+00:01:02,580 --> 00:01:04,739
+and we have input model,
+
+25
+00:01:04,739 --> 00:01:08,253
+where we have "BindProperty" in Razor Page.
+
+26
+00:01:09,120 --> 00:01:13,533
+Inside that input model, I will be adding more properties.
+
+27
+00:01:14,580 --> 00:01:17,790
+So what we will do is after confirm password,
+
+28
+00:01:17,790 --> 00:01:22,410
+let me create a property which will be a string of roles,
+
+29
+00:01:22,410 --> 00:01:25,770
+and then we actually need a role dropdown list.
+
+30
+00:01:25,770 --> 00:01:30,393
+For that we need an IEnumerable of select list item.
+
+31
+00:01:31,899 --> 00:01:33,840
+So let me close this here,
+
+32
+00:01:33,840 --> 00:01:37,830
+and I will add an IEnumberable of select list item.
+
+33
+00:01:37,830 --> 00:01:41,460
+Call that "RoleList," and for validation,
+
+34
+00:01:41,460 --> 00:01:42,897
+I will say "ValidateNever."
+
+35
+00:01:44,640 --> 00:01:47,070
+Once we have that IEnnumerable,
+
+36
+00:01:47,070 --> 00:01:51,453
+we need to populate that inside the "OnGet" right here.
+
+37
+00:01:52,410 --> 00:01:55,500
+So we need to populate the input is equal to
+
+38
+00:01:55,500 --> 00:01:57,570
+new input model.
+
+39
+00:01:57,570 --> 00:01:59,940
+We can use the new syntax here.
+
+40
+00:01:59,940 --> 00:02:03,150
+In there, we want to populate RoleList,
+
+41
+00:02:03,150 --> 00:02:06,210
+and in order to access all the roles,
+
+42
+00:02:06,210 --> 00:02:08,699
+typically, we use unit of work,
+
+43
+00:02:08,699 --> 00:02:11,280
+but when we are working with identity,
+
+44
+00:02:11,280 --> 00:02:13,140
+we have "roleManager."
+
+45
+00:02:13,140 --> 00:02:15,120
+Inside there we have roles,
+
+46
+00:02:15,120 --> 00:02:18,450
+and that will have list of all the roles.
+
+47
+00:02:18,450 --> 00:02:20,220
+Now we do not want all the roles.
+
+48
+00:02:20,220 --> 00:02:24,540
+We will have to project that to be a select list item.
+
+49
+00:02:24,540 --> 00:02:27,570
+So for projection, we will use "Select,"
+
+50
+00:02:27,570 --> 00:02:31,290
+and we can say x goes to x.Name.
+
+51
+00:02:31,290 --> 00:02:35,130
+We only care about the name, we select that name.
+
+52
+00:02:35,130 --> 00:02:36,930
+And once we select that name,
+
+53
+00:02:36,930 --> 00:02:40,920
+we will project that into the select list item.
+
+54
+00:02:40,920 --> 00:02:44,297
+So "i" goes to "new SelectListItem,"
+
+55
+00:02:46,380 --> 00:02:50,280
+and we want to populate "Text is equal to i"
+
+56
+00:02:50,280 --> 00:02:54,030
+and "Value is equal to i," as well.
+
+57
+00:02:54,030 --> 00:02:56,250
+What we are doing is, from roles,
+
+58
+00:02:56,250 --> 00:02:58,590
+we are selecting only the name.
+
+59
+00:02:58,590 --> 00:03:00,900
+And whatever we are selecting here,
+
+60
+00:03:00,900 --> 00:03:03,780
+we are adding that to a SelectListItem,
+
+61
+00:03:03,780 --> 00:03:07,947
+and we are adding that field to both "Text" and "Value."
+
+62
+00:03:08,790 --> 00:03:12,120
+You can see how projections can get super fancy
+
+63
+00:03:12,120 --> 00:03:15,360
+and how they simplify multiple lines of code
+
+64
+00:03:15,360 --> 00:03:18,060
+in just a few lines of code.
+
+65
+00:03:18,060 --> 00:03:22,380
+Now the final thing is to display this particular RoleList
+
+66
+00:03:22,380 --> 00:03:24,570
+inside our register.
+
+67
+00:03:24,570 --> 00:03:28,890
+So, "Areas," we have the register here,
+
+68
+00:03:28,890 --> 00:03:33,690
+and let me copy this "div," paste it one more time.
+
+69
+00:03:33,690 --> 00:03:37,650
+We do not want any validation here or label as well.
+
+70
+00:03:37,650 --> 00:03:40,350
+All we need is a select field.
+
+71
+00:03:40,350 --> 00:03:44,220
+So you can use "Input," or you can use a "Select" here,
+
+72
+00:03:44,220 --> 00:03:49,220
+where "asp-for," that is "Input.Role,"
+
+73
+00:03:49,650 --> 00:03:54,650
+and "asp-items" is equal to "Model.Input.RoleList."
+
+74
+00:03:57,120 --> 00:04:01,197
+Give it a class name of "form-select." Perfect.
+
+75
+00:04:03,060 --> 00:04:06,030
+Now again, when you are using asp-for,
+
+76
+00:04:06,030 --> 00:04:08,370
+it automatically checks the model,
+
+77
+00:04:08,370 --> 00:04:11,460
+but if you are using any other tag helper,
+
+78
+00:04:11,460 --> 00:04:14,133
+you have to use the "@Model" before that.
+
+79
+00:04:15,450 --> 00:04:17,610
+With that configured, let me save
+
+80
+00:04:17,610 --> 00:04:20,579
+and restart the application.
+
+81
+00:04:20,579 --> 00:04:22,260
+I think I have to restart
+
+82
+00:04:22,260 --> 00:04:25,380
+because hot reload might not kick that in,
+
+83
+00:04:25,380 --> 00:04:26,553
+but let's see.
+
+84
+00:04:27,840 --> 00:04:32,163
+Perfect. We have Admin, Customer, Employee, and Company.
+
+85
+00:04:33,420 --> 00:04:37,260
+On top of that I can also go back, and within "select,"
+
+86
+00:04:37,260 --> 00:04:42,260
+I can add an option, which is disabled, to select a role.
+
+87
+00:04:42,390 --> 00:04:45,933
+If I go back, perfect, looks good.
+
+88
+00:04:47,040 --> 00:04:49,920
+Now we have added a role in the UI,
+
+89
+00:04:49,920 --> 00:04:51,960
+but based on our selection,
+
+90
+00:04:51,960 --> 00:04:54,663
+we have to assign that role to a user.
+
+91
+00:04:55,590 --> 00:04:57,690
+Doing that is super simple,
+
+92
+00:04:57,690 --> 00:05:00,600
+and we have to write one line of code
+
+93
+00:05:00,600 --> 00:05:03,243
+in the register "OnPost" handler.
+
+94
+00:05:04,590 --> 00:05:09,363
+We will do that if the CreateUser is successful right here,
+
+95
+00:05:10,290 --> 00:05:12,120
+because we are checking if a result
+
+96
+00:05:12,120 --> 00:05:14,700
+is succeeded of creating user.
+
+97
+00:05:14,700 --> 00:05:18,090
+If that is, then we want to assign the role.
+
+98
+00:05:18,090 --> 00:05:21,750
+We will first check "if(Input.Role)," if that is not null.
+
+99
+00:05:25,620 --> 00:05:30,267
+Or rather than that, let me do a "String.IsNullOrEmpty,"
+
+100
+00:05:33,300 --> 00:05:38,070
+if that is not null or empty, then we want to assign role,
+
+101
+00:05:38,070 --> 00:05:41,550
+and we will say "await" on "userManager,"
+
+102
+00:05:41,550 --> 00:05:44,457
+we have a helper method, "AddToRoleAsync."
+
+103
+00:05:45,780 --> 00:05:48,090
+Now you can see there are two methods here,
+
+104
+00:05:48,090 --> 00:05:50,490
+so be careful when you type.
+
+105
+00:05:50,490 --> 00:05:52,830
+If you type "AddToRolesAsync,"
+
+106
+00:05:52,830 --> 00:05:56,220
+that means you are adding multiple roles to a user.
+
+107
+00:05:56,220 --> 00:06:00,240
+You can see it expects an IEnnumerable of roles.
+
+108
+00:06:00,240 --> 00:06:02,670
+But we are only adding one role,
+
+109
+00:06:02,670 --> 00:06:07,170
+so we will say "AddToRoleAsync," pass our user
+
+110
+00:06:07,170 --> 00:06:11,940
+and the role that has been selected by the dropdown.
+
+111
+00:06:11,940 --> 00:06:15,900
+In the "else" part here, I can copy and paste that
+
+112
+00:06:15,900 --> 00:06:18,810
+and basically if user does not select anything
+
+113
+00:06:18,810 --> 00:06:20,460
+from the dropdown,
+
+114
+00:06:20,460 --> 00:06:25,437
+then I want to assign them "SD.Role_Customer."
+
+115
+00:06:26,400 --> 00:06:31,320
+So if Input.Role is not null or empty, we will assign that,
+
+116
+00:06:31,320 --> 00:06:34,413
+else we will assign them the role of customer.
+
+117
+00:06:35,280 --> 00:06:39,120
+It is super simple, thankful to all the helper methods
+
+118
+00:06:39,120 --> 00:06:42,303
+that are provided by the .NET Identity.
+
+119
+00:06:43,320 --> 00:06:47,760
+With that configured, let me restart the application.
+
+120
+00:06:47,760 --> 00:06:50,730
+Whenever I make change in the .CS file,
+
+121
+00:06:50,730 --> 00:06:53,883
+I feel like restarting just to be confirmed.
+
+122
+00:06:55,020 --> 00:06:57,360
+Now, let me register here.
+
+123
+00:06:57,360 --> 00:07:01,650
+I will set "testadmin@gmail.com,"
+
+124
+00:07:01,650 --> 00:07:04,497
+and we will select a role of "Admin."
+
+125
+00:07:06,900 --> 00:07:09,270
+And we see an exception here
+
+126
+00:07:09,270 --> 00:07:13,110
+where it is generating email confirmation token,
+
+127
+00:07:13,110 --> 00:07:15,810
+and that is because of the same thing.
+
+128
+00:07:15,810 --> 00:07:18,930
+Previously, we were using the default identity,
+
+129
+00:07:18,930 --> 00:07:21,720
+and that included the implementation,
+
+130
+00:07:21,720 --> 00:07:24,450
+but when we have the "AddIdentity,"
+
+131
+00:07:24,450 --> 00:07:27,000
+it is not included by default.
+
+132
+00:07:27,000 --> 00:07:31,290
+So we have to add the "AddDefaultTokenProviders,"
+
+133
+00:07:31,290 --> 00:07:34,650
+because when we register in the page model here,
+
+134
+00:07:34,650 --> 00:07:38,760
+you can see it is generating the email confirmation token,
+
+135
+00:07:38,760 --> 00:07:42,393
+and that requires the default token providers.
+
+136
+00:07:43,650 --> 00:07:47,760
+But if you examine, that code is after the user is created
+
+137
+00:07:47,760 --> 00:07:49,950
+and role is assigned.
+
+138
+00:07:49,950 --> 00:07:54,210
+So that means our user should be created in database.
+
+139
+00:07:54,210 --> 00:07:57,930
+If I go to AspNetUsers, perfect.
+
+140
+00:07:57,930 --> 00:08:00,180
+We have the testadmin here,
+
+141
+00:08:00,180 --> 00:08:04,353
+and how do we see if that user is assigned the correct role?
+
+142
+00:08:05,190 --> 00:08:08,397
+Well, we have a mapping table, which is "AspNetUserRoles,"
+
+143
+00:08:09,390 --> 00:08:13,140
+that maps users to their corresponding roles.
+
+144
+00:08:13,140 --> 00:08:17,430
+If I do "select top thousand" and examine the user ID,
+
+145
+00:08:17,430 --> 00:08:20,790
+it ends in "80." That is correct.
+
+146
+00:08:20,790 --> 00:08:24,240
+The role ID here starts with "045."
+
+147
+00:08:24,240 --> 00:08:28,563
+And if I go to the roles table, "045" is Admin,
+
+148
+00:08:29,520 --> 00:08:32,400
+so that means correct role have been assigned
+
+149
+00:08:32,400 --> 00:08:34,023
+in our database.
+
+150
+00:08:34,890 --> 00:08:37,590
+Let me try to register one more.
+
+151
+00:08:37,590 --> 00:08:39,000
+Let's go back,
+
+152
+00:08:39,000 --> 00:08:43,440
+and this time we should not see the error message of token.
+
+153
+00:08:43,440 --> 00:08:44,553
+Let me see that.
+
+154
+00:08:48,960 --> 00:08:52,023
+This time let me register an employee,
+
+155
+00:08:54,030 --> 00:08:55,983
+and let's register.
+
+156
+00:08:57,630 --> 00:09:00,240
+Perfect, we don't see that error here.
+
+157
+00:09:00,240 --> 00:09:05,240
+Let me go to database, employee ends in "19."
+
+158
+00:09:05,820 --> 00:09:09,060
+Let me refresh here, and perfect.
+
+159
+00:09:09,060 --> 00:09:13,920
+The new user has a role that ends in "19," that is employee.
+
+160
+00:09:13,920 --> 00:09:16,410
+Now finally, if we do not select anything,
+
+161
+00:09:16,410 --> 00:09:18,750
+by default, it should be customer.
+
+162
+00:09:18,750 --> 00:09:20,880
+That ends in "12."
+
+163
+00:09:20,880 --> 00:09:22,863
+Let me test that, as well.
+
+164
+00:09:24,540 --> 00:09:26,700
+We will not select any role.
+
+165
+00:09:26,700 --> 00:09:30,570
+And register that. Perfect.
+
+166
+00:09:30,570 --> 00:09:34,980
+If I go here, once again, customer is "12,"
+
+167
+00:09:34,980 --> 00:09:39,213
+new user should have "12," and that looks correct.
+
+168
+00:09:40,620 --> 00:09:43,830
+So with that, we can see users are being created
+
+169
+00:09:43,830 --> 00:09:45,180
+in our database,
+
+170
+00:09:45,180 --> 00:09:49,530
+and correct rules are being assigned to those users.
+
+171
+00:09:49,530 --> 00:09:53,040
+We did not have to write much code to implement that.
+
+172
+00:09:53,040 --> 00:09:56,310
+All credit goes to the built-in helper method,
+
+173
+00:09:56,310 --> 00:09:59,973
+provided in userManager and roleManager.
+
+174
+00:10:01,440 --> 00:10:03,240
+With that configuration,
+
+175
+00:10:03,240 --> 00:10:06,183
+let me continue from the next video.
+

@@ -1,0 +1,228 @@
+1
+00:00:01,520 --> 00:00:06,320
+Bây giờ, khi chúng ta đi đến phần tóm tắt và đặt hàng, chúng ta sẽ đến vạch.
+
+2
+00:00:06,320 --> 00:00:11,390
+Và ở đó chúng ta phải nhập thông tin thẻ tín dụng và nhấn đặt hàng.
+
+3
+00:00:11,510 --> 00:00:16,309
+Sau khi thành công, nó sẽ đưa chúng ta đến trang cụ thể này.
+
+4
+00:00:16,550 --> 00:00:23,540
+Nhưng khi chúng tôi truy cập trang này, làm sao chúng tôi biết được liệu thanh toán có thực sự thành công hay không?
+
+5
+00:00:23,990 --> 00:00:30,260
+Để làm được điều đó, chúng tôi sẽ phải lấy lại phiên từ Stripe và kiểm tra trạng thái của nó.
+
+6
+00:00:30,860 --> 00:00:38,420
+Vì vậy, nếu bạn cuộn xuống nơi chúng tôi có xác nhận đơn hàng ngay tại đây, trước tiên chúng tôi sẽ phải thêm một
+
+7
+00:00:39,050 --> 00:00:39,770
+số logic.
+
+8
+00:00:39,770 --> 00:00:44,060
+Dựa trên ID, chúng tôi sẽ truy xuất tiêu đề đơn hàng hoàn chỉnh.
+
+9
+00:00:44,750 --> 00:00:52,460
+Sau đó, chúng tôi chỉ quan tâm đến việc thanh toán nếu trạng thái thanh toán không phải là thanh toán chậm vì nếu đó là thanh
+
+10
+00:00:52,460 --> 00:00:59,330
+toán chậm mà chúng tôi thấy trong đơn hàng đầu tiên, thì chúng tôi không quan tâm đến Stripe ngay bây giờ.
+
+11
+00:01:00,020 --> 00:01:09,270
+Vì vậy, chúng tôi sẽ thêm điều kiện nếu nếu trạng thái thanh toán của dấu chấm tiêu đề đơn hàng không bằng dấu chấm, chúng tôi có trạng
+
+12
+00:01:09,270 --> 00:01:11,400
+thái thanh toán bị trì hoãn.
+
+13
+00:01:11,880 --> 00:01:17,910
+Nếu không phải như vậy thì đây là đơn đặt hàng của khách hàng.
+
+14
+00:01:18,150 --> 00:01:22,710
+Trong trường hợp đó, chúng tôi phải truy xuất một phiên sọc.
+
+15
+00:01:23,160 --> 00:01:25,530
+Làm điều đó là siêu đơn giản.
+
+16
+00:01:25,830 --> 00:01:33,120
+Hãy để tôi tạo một biến có tên của dịch vụ và đó sẽ là loại dịch vụ phiên mới.
+
+17
+00:01:33,480 --> 00:01:36,750
+Đó là một lớp tích hợp trong gói Stripe.
+
+18
+00:01:36,750 --> 00:01:40,230
+Và sau đó chúng tôi muốn truy xuất một đối tượng phiên.
+
+19
+00:01:40,440 --> 00:01:47,910
+Sử dụng dịch vụ, chúng tôi có thể gọi một phương thức tích hợp sẵn, vào bên trong đó và ở đó về cơ bản chúng tôi phải
+
+20
+00:01:47,910 --> 00:01:49,140
+viết ID phiên.
+
+21
+00:01:50,370 --> 00:01:57,810
+Điều tốt là chúng tôi đang lưu id phiên đó trong tiêu đề đơn đặt hàng để chúng tôi có thể truy xuất ID phiên đó và sau đó chúng tôi
+
+22
+00:01:57,810 --> 00:02:05,010
+có thể kiểm tra trạng thái thanh toán để chúng tôi có thể cho biết trạng thái thanh toán của phiên có dấu chấm hay không.
+
+23
+00:02:05,840 --> 00:02:07,730
+Là bằng nhau.
+
+24
+00:02:07,730 --> 00:02:11,030
+Và hãy để tôi đi đến tài liệu Stripe.
+
+25
+00:02:12,290 --> 00:02:15,110
+phiên sọc. mạng lưới.
+
+26
+00:02:20,180 --> 00:02:24,860
+Và ngay tại đó, hãy để tôi tìm kiếm trạng thái thanh toán.
+
+27
+00:02:28,770 --> 00:02:35,610
+Bạn có thể thấy các giá trị enum có thể cho trạng thái thanh toán là đã thanh toán, chưa thanh toán hoặc không cần thanh toán.
+
+28
+00:02:35,880 --> 00:02:38,910
+Chúng tôi quan tâm nếu trạng thái thanh toán được thanh toán.
+
+29
+00:02:38,910 --> 00:02:41,520
+Điều đó có nghĩa là mọi thứ đã thành công.
+
+30
+00:02:41,880 --> 00:02:45,810
+Vì vậy, ngay tại đây, chúng ta có thể chuyển đổi giá trị này thành thấp hơn.
+
+31
+00:02:45,810 --> 00:02:52,170
+Và nếu số tiền đó bằng với số tiền đã thanh toán, điều đó có nghĩa là khoản thanh toán thực tế đã được thực hiện.
+
+32
+00:02:52,740 --> 00:02:59,970
+Trong trường hợp đó, đối tượng phiên sẽ có ID mục đích thanh toán. Vì vậy, hãy để tôi sao chép dòng này,
+
+33
+00:02:59,970 --> 00:03:06,060
+dán lại và chúng tôi muốn cập nhật ID mục đích thanh toán và điều đó sẽ hoạt động.
+
+34
+00:03:06,510 --> 00:03:12,510
+Bây giờ khi chúng tôi cập nhật ID mục đích thanh toán, chúng tôi cũng phải cập nhật trạng thái đơn đặt hàng.
+
+35
+00:03:12,510 --> 00:03:16,440
+Vì vậy, tiêu đề đơn hàng cập nhật trạng thái chấm.
+
+36
+00:03:17,170 --> 00:03:19,300
+ID ở bên trong.
+
+37
+00:03:19,330 --> 00:03:19,990
+Trực tiếp.
+
+38
+00:03:19,990 --> 00:03:20,680
+Giấy tờ tùy thân?
+
+39
+00:03:23,060 --> 00:03:25,700
+Sao chép và dán dấu phẩy đó.
+
+40
+00:03:26,330 --> 00:03:31,520
+Trạng thái mới sẽ là trạng thái được phê duyệt và trạng thái thanh toán cũng được thực hiện.
+
+41
+00:03:31,520 --> 00:03:35,180
+Vì vậy, ST chấm trạng thái thanh toán đã được phê duyệt.
+
+42
+00:03:35,840 --> 00:03:43,490
+Sau tất cả những điều đó, đừng quên lưu đơn vị công việc, nếu không mọi thứ sẽ không hoạt động.
+
+43
+00:03:44,490 --> 00:03:45,300
+Rất hoàn hảo.
+
+44
+00:03:45,300 --> 00:03:51,060
+Chúng tôi đang cập nhật trạng thái thanh toán tại đây và mọi thứ đã hoàn tất vào thời điểm này.
+
+45
+00:03:51,570 --> 00:03:57,540
+Trước khi tiếp tục, điều chúng ta có thể làm là xóa giỏ hàng và để trống.
+
+46
+00:03:57,930 --> 00:04:00,840
+Vì vậy, danh sách các giỏ hàng.
+
+47
+00:04:00,960 --> 00:04:09,990
+Truy xuất tất cả giỏ hàng, đơn vị công việc gạch dưới, chấm giỏ hàng dot get tất cả những gì chúng tôi muốn
+
+48
+00:04:09,990 --> 00:04:19,740
+lấy chúng dựa trên ID người dùng, do đó, bạn chuyển đến id người dùng ứng dụng chấm của bạn bằng với id người dùng
+
+49
+00:04:19,769 --> 00:04:26,370
+ứng dụng chấm tiêu đề đơn hàng và chúng tôi sẽ chuyển đổi đó để liệt kê.
+
+50
+00:04:27,750 --> 00:04:31,290
+Hãy để tôi chia nhỏ nó ra để dễ đọc hơn.
+
+51
+00:04:32,390 --> 00:04:33,290
+Hoàn hảo.
+
+52
+00:04:33,410 --> 00:04:38,380
+Khi chúng tôi có danh sách, chúng tôi cần xóa danh sách đó khỏi cơ sở dữ liệu của mình.
+
+53
+00:04:38,390 --> 00:04:42,110
+Vì vậy, gạch dưới đơn vị của công việc chấm giỏ hàng.
+
+54
+00:04:42,140 --> 00:04:47,570
+Chúng tôi có một phạm vi loại bỏ ở đó và chúng tôi có thể chuyển tất cả các giỏ hàng ở đó.
+
+55
+00:04:48,630 --> 00:04:52,860
+Cuối cùng, chúng tôi sẽ lưu các thay đổi và điều đó sẽ hoạt động.
+
+56
+00:04:53,890 --> 00:05:01,870
+Cùng với đó, chúng tôi đã thêm khá nhiều logic vào trang xác nhận đơn hàng và hãy để tôi khởi động lại ứng dụng
+
+57
+00:05:01,870 --> 00:05:05,410
+và kiểm tra mọi thứ trong video tiếp theo.
+

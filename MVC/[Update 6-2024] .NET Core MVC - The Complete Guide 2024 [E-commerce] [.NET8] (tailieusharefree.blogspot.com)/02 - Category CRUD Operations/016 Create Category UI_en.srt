@@ -1,0 +1,544 @@
+1
+00:00:01,790 --> 00:00:05,360
+Now we want to work on creating a new category.
+
+2
+00:00:05,930 --> 00:00:08,060
+For that, it will be a new page.
+
+3
+00:00:08,630 --> 00:00:14,540
+But when we work with creating a new page, we do not go by directly creating a view.
+
+4
+00:00:14,840 --> 00:00:20,600
+We first have to create an action method that will be invoked and that will call the View.
+
+5
+00:00:21,630 --> 00:00:26,400
+That action method, we will be adding inside the category controller.
+
+6
+00:00:26,640 --> 00:00:30,150
+Creating a new action method is super simple.
+
+7
+00:00:30,300 --> 00:00:37,590
+We will say public return type will be I action result and let me call that as create.
+
+8
+00:00:39,360 --> 00:00:42,480
+All that will do right now is return back The View.
+
+9
+00:00:43,150 --> 00:00:46,090
+Next step will be to create the view itself.
+
+10
+00:00:46,750 --> 00:00:54,640
+We can navigate to the views folder and create a view in category, or we have a shortcut on the action
+
+11
+00:00:54,640 --> 00:00:56,630
+method we have add view.
+
+12
+00:00:56,650 --> 00:01:04,180
+If we right click there, we can select that and we can add an empty razor view right there.
+
+13
+00:01:04,540 --> 00:01:06,910
+Change the name to be create.
+
+14
+00:01:08,370 --> 00:01:12,270
+That name must match the action method name that we have.
+
+15
+00:01:12,840 --> 00:01:18,930
+With that, let's hit the add button and remove everything that we have in there.
+
+16
+00:01:18,990 --> 00:01:24,240
+I will just add an H1 one and I will say create category.
+
+17
+00:01:26,330 --> 00:01:29,690
+Save that and let me run the application.
+
+18
+00:01:32,080 --> 00:01:36,970
+When we modify something in the controller, we have to restart the application.
+
+19
+00:01:37,540 --> 00:01:45,310
+So if we go to category here, we will not be able to navigate to the Create page because right now
+
+20
+00:01:45,310 --> 00:01:48,970
+if we click here, it takes us back to the home page.
+
+21
+00:01:49,360 --> 00:01:57,220
+And if I go back to the code here, inside the index view, we have not defined what controller or action
+
+22
+00:01:57,220 --> 00:01:59,380
+method should be invoked.
+
+23
+00:02:00,320 --> 00:02:05,990
+If you think about that, the controller is same in index, it is the category controller.
+
+24
+00:02:06,230 --> 00:02:12,380
+Because of that, if you want, you can skip the ASP controller and only define that.
+
+25
+00:02:12,380 --> 00:02:18,040
+Hey, when this button is clicked, I want you to go to the Create Action method.
+
+26
+00:02:18,050 --> 00:02:25,090
+It will look in the same controller and try to find that action method with that change.
+
+27
+00:02:25,100 --> 00:02:33,170
+If we go back to category, create new perfect, it takes us to the create category and that is exactly
+
+28
+00:02:33,200 --> 00:02:34,340
+what we want.
+
+29
+00:02:35,110 --> 00:02:39,910
+But I like to be explicit even though we are in the same controller.
+
+30
+00:02:39,970 --> 00:02:45,490
+I like to define the ASP controller name, which will be category controller.
+
+31
+00:02:46,390 --> 00:02:52,690
+Now, the reason behind that is when you have multiple files and folders, it is much easier to know
+
+32
+00:02:52,690 --> 00:02:59,200
+which controller and which action method is invoked rather than trying to find out the default controller.
+
+33
+00:02:59,650 --> 00:03:05,920
+And another point I will tell you is always try to write the controller name before the action name,
+
+34
+00:03:06,280 --> 00:03:13,270
+because when you have to find out or you identify some action method, it is always inside a controller.
+
+35
+00:03:13,570 --> 00:03:18,100
+So that is why I try to write the controller name before the action name.
+
+36
+00:03:18,100 --> 00:03:20,760
+But even if you switch that, that is fine.
+
+37
+00:03:20,770 --> 00:03:25,990
+It is something that I prefer and it is easier to read because of that.
+
+38
+00:03:25,990 --> 00:03:31,390
+I always write controller and then the action in that controller.
+
+39
+00:03:31,960 --> 00:03:40,300
+But with that, if we save everything here and go back category, create category that is working.
+
+40
+00:03:41,090 --> 00:03:42,900
+Inside create category.
+
+41
+00:03:42,920 --> 00:03:51,380
+We need a form where user can input name of the category and display order and we need a submit button.
+
+42
+00:03:52,340 --> 00:03:54,080
+So let me create that.
+
+43
+00:03:54,320 --> 00:04:01,190
+We will switch back to the code here and we will be working with Create View right here.
+
+44
+00:04:02,430 --> 00:04:08,820
+Now, typically when we are working with the View, first thing that I always answer is what is model
+
+45
+00:04:08,820 --> 00:04:09,900
+of that view?
+
+46
+00:04:10,470 --> 00:04:15,420
+So think about what will happen or what will be displayed on the page.
+
+47
+00:04:15,840 --> 00:04:22,320
+We will ask user for name of the category and display order and we will have a create button.
+
+48
+00:04:22,890 --> 00:04:26,280
+So basically we are working with category model.
+
+49
+00:04:26,700 --> 00:04:31,080
+So here our model will be the category itself.
+
+50
+00:04:31,840 --> 00:04:36,280
+We will be adding that category when user hits the submit button.
+
+51
+00:04:37,400 --> 00:04:44,180
+Now, you might be thinking if we have model here, we will also have to pass that when we are creating.
+
+52
+00:04:44,540 --> 00:04:50,240
+Well, if you want you can pass new category here, but that is not required.
+
+53
+00:04:50,420 --> 00:04:56,810
+If nothing is passed here and if we are defining the category, it will create a new object for that.
+
+54
+00:04:56,810 --> 00:05:00,080
+And by default, all the values will be empty.
+
+55
+00:05:00,080 --> 00:05:03,110
+And that is exactly what we want in this case.
+
+56
+00:05:03,620 --> 00:05:10,460
+So even if you do not pass anything in the view here and you have a model category here, it will think
+
+57
+00:05:10,460 --> 00:05:15,020
+of it as a new category object with the default values.
+
+58
+00:05:15,650 --> 00:05:20,080
+So with that, we need a form and we will be creating the category.
+
+59
+00:05:20,090 --> 00:05:22,820
+So we will have the method of post.
+
+60
+00:05:23,720 --> 00:05:31,340
+Next we will have some bootstrap classes for DIV with class of border padding, three margin top of
+
+61
+00:05:31,340 --> 00:05:32,180
+four.
+
+62
+00:05:32,360 --> 00:05:41,090
+And inside there we will add a div, give it a class of row and padding bottom of two simple bootstrap
+
+63
+00:05:41,090 --> 00:05:41,780
+classes.
+
+64
+00:05:41,810 --> 00:05:43,160
+Nothing fancy.
+
+65
+00:05:43,190 --> 00:05:52,400
+We will have the H2 with the class of text primary and we will say create category followed by a horizontal
+
+66
+00:05:52,400 --> 00:05:53,030
+line.
+
+67
+00:05:53,930 --> 00:05:56,990
+That is what we will have in the first row.
+
+68
+00:05:57,110 --> 00:06:04,280
+After that we will create a new div, give it a class of margin, bottom three and inside there we want
+
+69
+00:06:04,280 --> 00:06:05,030
+a label.
+
+70
+00:06:05,690 --> 00:06:06,530
+Now label.
+
+71
+00:06:06,530 --> 00:06:10,000
+We know we want to display the name so we can do that here.
+
+72
+00:06:10,010 --> 00:06:17,760
+Or rather we can also say category name and we have something for input field.
+
+73
+00:06:17,780 --> 00:06:22,340
+Let's add that and give it a type of text.
+
+74
+00:06:22,610 --> 00:06:28,910
+We will also add a bootstrap class here for form control to give it the full width here.
+
+75
+00:06:29,060 --> 00:06:30,350
+Copy this.
+
+76
+00:06:30,380 --> 00:06:32,370
+Paste it one more time.
+
+77
+00:06:32,390 --> 00:06:36,350
+Next thing that we want is display order.
+
+78
+00:06:37,430 --> 00:06:41,280
+Let me save that and go back to the application.
+
+79
+00:06:41,300 --> 00:06:42,170
+Perfect.
+
+80
+00:06:42,200 --> 00:06:46,100
+We have category name and we have display order.
+
+81
+00:06:46,760 --> 00:06:55,250
+After that div, we will add a button which will be of type submit and we will add some bootstrap classes
+
+82
+00:06:55,250 --> 00:06:58,670
+of BTN BTN primary.
+
+83
+00:06:59,350 --> 00:07:01,450
+And let me give it some width.
+
+84
+00:07:01,450 --> 00:07:05,590
+So style width of 150 pixels.
+
+85
+00:07:05,740 --> 00:07:07,180
+That looks good.
+
+86
+00:07:07,920 --> 00:07:10,070
+This will be the create button.
+
+87
+00:07:10,080 --> 00:07:11,580
+Let's add that.
+
+88
+00:07:13,640 --> 00:07:19,490
+After that, I want a button to go back to the previous page, which was category list.
+
+89
+00:07:19,610 --> 00:07:21,380
+So that will be a link.
+
+90
+00:07:21,380 --> 00:07:23,360
+So we will have anchor tag.
+
+91
+00:07:23,360 --> 00:07:30,380
+We will define what controller we want to go to, it will be category and what action method in that
+
+92
+00:07:30,380 --> 00:07:32,420
+category should be invoked.
+
+93
+00:07:32,570 --> 00:07:34,730
+That will be index action.
+
+94
+00:07:36,080 --> 00:07:45,410
+We will give it some classes, BTN, BTN secondary and we will give it the same width of 150 pixels.
+
+95
+00:07:47,110 --> 00:07:48,040
+The anchor tag.
+
+96
+00:07:48,040 --> 00:07:51,010
+Here we will display back to list.
+
+97
+00:07:51,190 --> 00:07:52,690
+Save that.
+
+98
+00:07:53,480 --> 00:07:54,290
+And perfect.
+
+99
+00:07:54,290 --> 00:07:59,420
+We have the button to go back to the list and that is working as expected.
+
+100
+00:07:59,900 --> 00:08:03,930
+Now let me work on designing of this button a little bit.
+
+101
+00:08:03,950 --> 00:08:12,530
+So right here we can create a div, give it a class of row, and inside that row we will add a div,
+
+102
+00:08:12,560 --> 00:08:15,440
+give it a class of column six.
+
+103
+00:08:16,880 --> 00:08:23,750
+And the other one will be the same column six Bootstrap divides it into 12 column.
+
+104
+00:08:24,600 --> 00:08:27,930
+First one will have the button to create.
+
+105
+00:08:27,960 --> 00:08:30,930
+Next one will have the link to go back.
+
+106
+00:08:31,880 --> 00:08:36,559
+We will remove the style element here for the width and the class.
+
+107
+00:08:36,559 --> 00:08:41,120
+Let me add form control to give it full width here.
+
+108
+00:08:42,230 --> 00:08:43,070
+Perfect.
+
+109
+00:08:43,070 --> 00:08:46,610
+Let's go back and we have both the buttons.
+
+110
+00:08:46,910 --> 00:08:54,800
+Now, rather than secondary here, let me change that to be BTN outline secondary and that looks much
+
+111
+00:08:54,800 --> 00:08:55,610
+better.
+
+112
+00:08:56,580 --> 00:08:58,620
+And with BTN secondary.
+
+113
+00:08:58,650 --> 00:09:03,480
+Let me also give it a little bit of border and perfect.
+
+114
+00:09:03,600 --> 00:09:05,490
+That looks much better.
+
+115
+00:09:06,600 --> 00:09:11,310
+Now when we are working, it is always good to make it responsive as well.
+
+116
+00:09:11,610 --> 00:09:17,400
+Because of that right here also, let me make this row.
+
+117
+00:09:17,520 --> 00:09:19,860
+That way it will be responsive.
+
+118
+00:09:20,040 --> 00:09:28,710
+Now if I press F12 here and perfect if I make it responsive, you can see everything is changing.
+
+119
+00:09:29,430 --> 00:09:33,660
+But when we are on the large screen, we do not want the big buttons.
+
+120
+00:09:34,110 --> 00:09:42,150
+What we can do for that is we can define if the screen is medium or large, you can take three columns.
+
+121
+00:09:43,220 --> 00:09:45,530
+Change that and paste it here.
+
+122
+00:09:45,680 --> 00:09:50,870
+That basically means if it is smaller than medium, it will take six columns.
+
+123
+00:09:50,990 --> 00:09:53,180
+Else it will take three columns.
+
+124
+00:09:54,040 --> 00:09:54,670
+Perfect.
+
+125
+00:09:54,670 --> 00:09:57,370
+You can see it is working good here.
+
+126
+00:09:57,370 --> 00:10:01,840
+And if we minimize this, then it takes the six column.
+
+127
+00:10:04,760 --> 00:10:09,920
+And last thing that we will do is you can see there is some space before the category name.
+
+128
+00:10:09,950 --> 00:10:14,030
+To fix that, we can add a class of padding zero.
+
+129
+00:10:15,650 --> 00:10:18,020
+Copy that for display order as well.
+
+130
+00:10:18,020 --> 00:10:21,050
+And here we can give padding one.
+
+131
+00:10:21,440 --> 00:10:23,300
+That should be good.
+
+132
+00:10:23,450 --> 00:10:24,440
+Let's see.
+
+133
+00:10:26,280 --> 00:10:26,850
+Great.
+
+134
+00:10:26,850 --> 00:10:29,730
+That looks much better with that.
+
+135
+00:10:29,730 --> 00:10:33,330
+Our UI is looking great and it is responsive.
+
+136
+00:10:33,600 --> 00:10:36,810
+Let me continue from the next video.
+

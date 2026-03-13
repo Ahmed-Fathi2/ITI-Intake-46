@@ -1,0 +1,424 @@
+1
+00:00:02,070 --> 00:00:03,300
+Instructor: Now we need to add
+
+2
+00:00:03,300 --> 00:00:05,820
+more properties to external login.
+
+3
+00:00:05,820 --> 00:00:07,320
+So let me do that.
+
+4
+00:00:07,320 --> 00:00:08,913
+That is inside account.
+
+5
+00:00:09,810 --> 00:00:12,810
+If I go back to the code here,
+
+6
+00:00:12,810 --> 00:00:15,690
+let me close all the tabs here,
+
+7
+00:00:15,690 --> 00:00:20,690
+stop the application and whoops, let me align that again.
+
+8
+00:00:23,190 --> 00:00:26,010
+We will search for external.
+
+9
+00:00:26,010 --> 00:00:28,590
+We have the external login.
+
+10
+00:00:28,590 --> 00:00:31,110
+We do not want to go inside manage.
+
+11
+00:00:31,110 --> 00:00:35,310
+We want the one inside account, which is external login,
+
+12
+00:00:35,310 --> 00:00:38,040
+and we have the page model.
+
+13
+00:00:38,040 --> 00:00:41,730
+So then let me also open the register that we have
+
+14
+00:00:41,730 --> 00:00:45,390
+where we have already configured more properties.
+
+15
+00:00:45,390 --> 00:00:49,260
+I will open both of them and perfect.
+
+16
+00:00:49,260 --> 00:00:53,520
+In the page model where we have the input model
+
+17
+00:00:53,520 --> 00:00:56,430
+we added all of these properties.
+
+18
+00:00:56,430 --> 00:01:00,900
+Let me copy that, go to the external login
+
+19
+00:01:00,900 --> 00:01:03,573
+and I will add them right there.
+
+20
+00:01:04,590 --> 00:01:06,750
+In order to keep things simple,
+
+21
+00:01:06,750 --> 00:01:09,870
+if someone is using external login
+
+22
+00:01:09,870 --> 00:01:12,930
+their role will be defaulted to customer
+
+23
+00:01:12,930 --> 00:01:17,930
+and they will not be able to get company, employee or admin.
+
+24
+00:01:17,970 --> 00:01:22,380
+We will keep things super simple with that requirement.
+
+25
+00:01:22,380 --> 00:01:25,110
+Then if we scroll down here
+
+26
+00:01:25,110 --> 00:01:28,980
+where we have the on post confirmation async,
+
+27
+00:01:28,980 --> 00:01:30,963
+it is creating that user.
+
+28
+00:01:32,250 --> 00:01:34,740
+But before that, let me scroll up
+
+29
+00:01:34,740 --> 00:01:38,610
+and here we have the on get callback async.
+
+30
+00:01:38,610 --> 00:01:42,420
+There, if you notice, it is populating input model
+
+31
+00:01:42,420 --> 00:01:46,320
+and it is getting email from info.principle,
+
+32
+00:01:46,320 --> 00:01:48,183
+which will be from Facebook.
+
+33
+00:01:49,440 --> 00:01:53,700
+Similar to that, Facebook will also have name of the user,
+
+34
+00:01:53,700 --> 00:01:57,840
+so we can copy and get the claim types of name
+
+35
+00:01:57,840 --> 00:02:01,020
+and we will populate name of the user
+
+36
+00:02:01,020 --> 00:02:03,603
+when we were on the registration page.
+
+37
+00:02:04,620 --> 00:02:08,252
+After that we have the on post confirmation async.
+
+38
+00:02:09,419 --> 00:02:12,510
+Right there we are setting the input.email.
+
+39
+00:02:12,510 --> 00:02:16,560
+On top of that, we will also set the other properties,
+
+40
+00:02:16,560 --> 00:02:21,393
+but if you try that, they do not exist on identity user,
+
+41
+00:02:22,350 --> 00:02:25,080
+so create user press F12.
+
+42
+00:02:25,080 --> 00:02:28,920
+We will modify that to be application user
+
+43
+00:02:28,920 --> 00:02:30,993
+and that will solve our problem.
+
+44
+00:02:32,580 --> 00:02:37,580
+So let me add that here and perfect, all the errors go away.
+
+45
+00:02:38,130 --> 00:02:41,193
+Now we are creating an application user.
+
+46
+00:02:42,210 --> 00:02:44,730
+Final thing, when the result is successful,
+
+47
+00:02:44,730 --> 00:02:49,730
+we want to await _user manager.add to roll async.
+
+48
+00:02:50,970 --> 00:02:55,393
+We want to add user.role of SD.customer.
+
+49
+00:02:58,920 --> 00:03:02,610
+With that, configured page model is looking great.
+
+50
+00:03:02,610 --> 00:03:06,630
+Let me work on external.cshtml.
+
+51
+00:03:06,630 --> 00:03:08,910
+There we have email.
+
+52
+00:03:08,910 --> 00:03:13,470
+Copy that and paste it six more times here
+
+53
+00:03:13,470 --> 00:03:16,380
+and then let me modify name.
+
+54
+00:03:16,380 --> 00:03:17,550
+We have that.
+
+55
+00:03:21,450 --> 00:03:23,973
+After name, let me add a phone number.
+
+56
+00:03:28,290 --> 00:03:31,083
+I will modify the placeholder as well.
+
+57
+00:03:33,660 --> 00:03:34,650
+Perfect.
+
+58
+00:03:34,650 --> 00:03:39,093
+Then we have the street address, copy and paste that.
+
+59
+00:03:41,250 --> 00:03:44,910
+We have city, state and postal code.
+
+60
+00:04:00,690 --> 00:04:01,898
+Perfect.
+
+61
+00:04:01,898 --> 00:04:02,731
+That looks good.
+
+62
+00:04:02,731 --> 00:04:04,653
+Let me modify this thing here.
+
+63
+00:04:06,150 --> 00:04:11,150
+We will have state and I believe that looks good.
+
+64
+00:04:11,640 --> 00:04:13,980
+Let me start the application
+
+65
+00:04:13,980 --> 00:04:16,773
+and try to register using Facebook.
+
+66
+00:04:20,100 --> 00:04:21,930
+Last time when we tried that,
+
+67
+00:04:21,930 --> 00:04:24,360
+we did not hit the register button.
+
+68
+00:04:24,360 --> 00:04:28,770
+Because of that we will be able to continue and perfect.
+
+69
+00:04:28,770 --> 00:04:32,670
+You can see it retrieves name as well as email
+
+70
+00:04:32,670 --> 00:04:35,190
+and that is looking great.
+
+71
+00:04:35,190 --> 00:04:37,780
+Now, if you enter everything else here
+
+72
+00:04:40,770 --> 00:04:43,020
+and submit the register pattern,
+
+73
+00:04:43,020 --> 00:04:46,080
+it will log you in automatically.
+
+74
+00:04:46,080 --> 00:04:46,920
+Perfect.
+
+75
+00:04:46,920 --> 00:04:49,410
+You can see that's working.
+
+76
+00:04:49,410 --> 00:04:53,820
+If you click on the hello here, the password does not exist
+
+77
+00:04:53,820 --> 00:04:56,400
+because we are using external login,
+
+78
+00:04:56,400 --> 00:04:59,400
+but if we want along with external login
+
+79
+00:04:59,400 --> 00:05:01,503
+we can add a password as well.
+
+80
+00:05:02,430 --> 00:05:04,050
+In the external logins here
+
+81
+00:05:04,050 --> 00:05:07,200
+you can see Facebook is already registered
+
+82
+00:05:07,200 --> 00:05:08,583
+and that looks good.
+
+83
+00:05:09,990 --> 00:05:13,800
+Now with that configured, next time when I have to log in,
+
+84
+00:05:13,800 --> 00:05:17,640
+if I go on the login page, I have Facebook here.
+
+85
+00:05:17,640 --> 00:05:22,230
+If I select that, it'll automatically sign me in.
+
+86
+00:05:22,230 --> 00:05:23,340
+So perfect.
+
+87
+00:05:23,340 --> 00:05:26,223
+You can see how easy and convenient it was.
+
+88
+00:05:27,180 --> 00:05:30,150
+One thing that I will change is on the register.
+
+89
+00:05:30,150 --> 00:05:33,030
+Let me bring this to the center.
+
+90
+00:05:33,030 --> 00:05:37,533
+So let me open the register.cshtml,
+
+91
+00:05:38,370 --> 00:05:42,720
+scroll down here where we have the div here.
+
+92
+00:05:42,720 --> 00:05:47,370
+Let me add padding three and text center.
+
+93
+00:05:47,370 --> 00:05:50,463
+I will also remove this use another service.
+
+94
+00:05:52,249 --> 00:05:53,520
+Let me go back.
+
+95
+00:05:53,520 --> 00:05:56,190
+This got misaligned here.
+
+96
+00:05:56,190 --> 00:05:59,193
+And I want to open login as well.
+
+97
+00:06:00,960 --> 00:06:02,070
+We have login.
+
+98
+00:06:02,070 --> 00:06:03,870
+Scroll down.
+
+99
+00:06:03,870 --> 00:06:05,523
+We do not need this.
+
+100
+00:06:06,390 --> 00:06:09,303
+Adding three, text center.
+
+101
+00:06:10,410 --> 00:06:14,040
+Save that and let me go back here.
+
+102
+00:06:14,040 --> 00:06:16,140
+Perfect, that looks much better.
+
+103
+00:06:16,140 --> 00:06:17,160
+Log in.
+
+104
+00:06:17,160 --> 00:06:18,570
+Perfect.
+
+105
+00:06:18,570 --> 00:06:19,403
+So with that,
+
+106
+00:06:19,403 --> 00:06:23,433
+external logins have been configured in our application.
+

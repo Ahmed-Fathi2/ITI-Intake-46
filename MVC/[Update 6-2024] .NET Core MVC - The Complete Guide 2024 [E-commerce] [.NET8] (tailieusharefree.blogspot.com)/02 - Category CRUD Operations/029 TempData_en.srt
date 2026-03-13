@@ -1,0 +1,180 @@
+1
+00:00:01,640 --> 00:00:08,540
+We have the CRUD functionality that is working, but whenever we create, edit or delete a category,
+
+2
+00:00:08,570 --> 00:00:11,540
+what if we want to display a notification here?
+
+3
+00:00:11,540 --> 00:00:16,219
+That record was created, updated or deleted successfully.
+
+4
+00:00:17,120 --> 00:00:21,440
+For that we have something special in .net core, which is temp data.
+
+5
+00:00:21,680 --> 00:00:27,610
+If you assign a value in temp data, it is only available for the next render.
+
+6
+00:00:27,620 --> 00:00:34,550
+So basically, let's say on the create button, we say if everything was successful, we can add a message
+
+7
+00:00:34,550 --> 00:00:40,790
+to temp data, then it will only be available to the next page that is rendered.
+
+8
+00:00:40,910 --> 00:00:48,250
+When we create, we redirect them to the category list so it will only be available on this render.
+
+9
+00:00:48,260 --> 00:00:52,070
+If you refresh that page, then temp data goes away.
+
+10
+00:00:52,910 --> 00:00:55,130
+Temp data has been created in the.
+
+11
+00:00:55,370 --> 00:01:02,910
+.Net framework with that sole purpose that if you have to display a notification on the next page, then
+
+12
+00:01:02,910 --> 00:01:05,880
+you add some value in temp data.
+
+13
+00:01:06,740 --> 00:01:09,110
+Let me show you on how that will work.
+
+14
+00:01:09,820 --> 00:01:12,160
+Let me switch back to the code here.
+
+15
+00:01:12,370 --> 00:01:16,330
+Stop the application and we have the index page.
+
+16
+00:01:16,630 --> 00:01:22,030
+Before we do that in the controller, we will assign something on post.
+
+17
+00:01:22,060 --> 00:01:30,280
+Once it is successful, before we redirect here, we can add something to temp data and there we have
+
+18
+00:01:30,280 --> 00:01:31,930
+to give that a key name.
+
+19
+00:01:32,530 --> 00:01:35,620
+Let me call that as success message.
+
+20
+00:01:35,830 --> 00:01:40,480
+In there we will add a message category created successfully.
+
+21
+00:01:40,870 --> 00:01:45,340
+That is the key name that we have given to something in temp data.
+
+22
+00:01:45,610 --> 00:01:49,870
+And based on that key name, we can access its value.
+
+23
+00:01:50,740 --> 00:01:55,750
+Let me copy that and do that in edit post before we redirect.
+
+24
+00:01:55,780 --> 00:02:04,420
+We will say category updated successfully and when we delete before we redirect, we will say category
+
+25
+00:02:04,450 --> 00:02:06,640
+deleted successfully.
+
+26
+00:02:07,720 --> 00:02:13,600
+Now we have added the message in our temp data with the key name of success.
+
+27
+00:02:13,600 --> 00:02:15,760
+But where do we display that?
+
+28
+00:02:16,370 --> 00:02:21,130
+We will display that on the index page at the very top here.
+
+29
+00:02:21,140 --> 00:02:29,210
+What I can do is add an if condition and check if temp data with the key name of success.
+
+30
+00:02:29,420 --> 00:02:36,410
+If that is not null, then we want to display that, let's say in an H2 for now.
+
+31
+00:02:37,410 --> 00:02:44,550
+To display that we will again use the razor syntax at sign and we can access the success.
+
+32
+00:02:44,850 --> 00:02:46,290
+Simple as that.
+
+33
+00:02:47,550 --> 00:02:49,340
+I have an extra s here.
+
+34
+00:02:49,350 --> 00:02:52,290
+Remove that and let's run that.
+
+35
+00:02:53,330 --> 00:02:55,310
+We go to category here?
+
+36
+00:02:55,400 --> 00:02:57,890
+Let me try to create a category.
+
+37
+00:02:57,920 --> 00:03:00,290
+Test category for.
+
+38
+00:03:00,980 --> 00:03:02,120
+And perfect.
+
+39
+00:03:02,120 --> 00:03:05,330
+We have category created successfully.
+
+40
+00:03:05,720 --> 00:03:08,840
+Now if you refresh here, that goes away.
+
+41
+00:03:09,020 --> 00:03:14,810
+So temp data only stays there for one request and then it goes away.
+
+42
+00:03:15,320 --> 00:03:23,120
+If you try to edit this to, let's say 44, we have category updated and if you refresh here, that
+
+43
+00:03:23,120 --> 00:03:24,110
+goes away.
+
+44
+00:03:25,370 --> 00:03:31,910
+So with that, we have seen temp data in action and that is a great feature when you have to display
+
+45
+00:03:31,910 --> 00:03:33,170
+notification.
+

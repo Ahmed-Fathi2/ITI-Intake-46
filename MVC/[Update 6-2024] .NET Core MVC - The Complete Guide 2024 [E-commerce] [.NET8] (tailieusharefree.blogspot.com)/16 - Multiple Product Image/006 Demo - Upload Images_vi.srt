@@ -1,0 +1,144 @@
+1
+00:00:01,620 --> 00:00:05,350
+Bây giờ chúng ta cần kiểm tra xem mọi thứ có hoạt động không.
+
+2
+00:00:05,370 --> 00:00:09,280
+Hãy để tôi phá vỡ điều này và mở w. w. w.
+
+3
+00:00:09,330 --> 00:00:11,430
+Thư mục gốc là tốt.
+
+4
+00:00:12,030 --> 00:00:17,010
+Mở nó ra và tôi sẽ thêm nó ngay tại đây.
+
+5
+00:00:17,310 --> 00:00:19,050
+tập tin ở đâu?
+
+6
+00:00:19,590 --> 00:00:20,520
+Hoàn hảo.
+
+7
+00:00:21,570 --> 00:00:27,780
+Vì vậy, ở đây, hãy để tôi đi đến sản phẩm quản lý nội dung và để tôi nhấp vào chỉnh sửa.
+
+8
+00:00:27,960 --> 00:00:29,310
+Kẹo Bông.
+
+9
+00:00:29,640 --> 00:00:33,720
+Nó sẽ tạo một thư mục mới với tên của các sản phẩm ở đây.
+
+10
+00:00:33,840 --> 00:00:35,460
+Chúng ta sẽ thấy rằng.
+
+11
+00:00:35,970 --> 00:00:42,210
+Trước tiên, hãy để tôi thử tải lên hai hình ảnh ở đây và cập nhật.
+
+12
+00:00:44,370 --> 00:00:45,020
+Hoàn hảo.
+
+13
+00:00:45,030 --> 00:00:48,550
+Nó báo sản phẩm đã tạo được cập nhật thành công.
+
+14
+00:00:48,570 --> 00:00:55,770
+Nếu tôi làm mới thư mục, tôi có thư mục đó ở đây và thật tuyệt, chúng ta có sản phẩm thứ tư.
+
+15
+00:00:55,800 --> 00:00:58,950
+Nếu tôi chỉnh sửa ở đây thì đó là ID sản phẩm.
+
+16
+00:00:59,670 --> 00:01:03,030
+Bên trong đó, chúng tôi có cả hình ảnh.
+
+17
+00:01:04,019 --> 00:01:08,730
+Hãy để tôi đi đến cơ sở dữ liệu ở đây và chúng tôi sẽ mở cồng kềnh mới.
+
+18
+00:01:08,760 --> 00:01:13,130
+Ở đây tôi sẽ kiểm tra bảng hình ảnh sản phẩm.
+
+19
+00:01:13,140 --> 00:01:15,240
+Nó nên có hai bản ghi.
+
+20
+00:01:15,600 --> 00:01:16,620
+Tuyệt vời.
+
+21
+00:01:17,010 --> 00:01:21,060
+Tất cả điều đó được thực hiện tự động bởi lõi khung thực thể.
+
+22
+00:01:21,900 --> 00:01:29,610
+Bây giờ, nếu tôi quay lại đây và nếu tôi chọn thêm một hình ảnh, nó sẽ tự động thêm hình ảnh đó vào cùng một
+
+23
+00:01:29,610 --> 00:01:30,420
+thư mục.
+
+24
+00:01:31,290 --> 00:01:34,320
+Tôi sẽ phải làm mới ở đây và tuyệt vời.
+
+25
+00:01:34,620 --> 00:01:39,630
+Cuối cùng, hãy để tôi thử tạo một sản phẩm mới ở đây.
+
+26
+00:01:40,110 --> 00:01:42,780
+Tôi sẽ có thông tin giả ở đây.
+
+27
+00:01:44,590 --> 00:01:47,230
+Và hãy để tôi tải lên hai hình ảnh ở đó.
+
+28
+00:01:48,130 --> 00:01:50,010
+Nó sẽ tạo ra sản phẩm.
+
+29
+00:01:50,020 --> 00:01:50,760
+Hãy để tôi xem.
+
+30
+00:01:50,770 --> 00:01:54,250
+ID của sản phẩm mới được tạo ở đây là gì?
+
+31
+00:01:54,370 --> 00:01:55,760
+Đó là bảy.
+
+32
+00:01:55,780 --> 00:02:00,550
+Nó sẽ tạo một thư mục mới sản phẩm bảy và hoàn hảo.
+
+33
+00:02:01,390 --> 00:02:06,670
+Nếu chúng ta vào cơ sở dữ liệu, chúng ta có các bản ghi mới ngay tại đây.
+
+34
+00:02:07,520 --> 00:02:08,570
+Quá tuyệt vời.
+
+35
+00:02:08,600 --> 00:02:15,890
+Cùng với đó, chúng tôi có thể tải lên tất cả các hình ảnh và khi chúng tôi tạo một sản phẩm mới, chúng tôi sẽ thấy tất cả các bản
+
+36
+00:02:15,890 --> 00:02:17,690
+ghi trong hình ảnh sản phẩm.
+

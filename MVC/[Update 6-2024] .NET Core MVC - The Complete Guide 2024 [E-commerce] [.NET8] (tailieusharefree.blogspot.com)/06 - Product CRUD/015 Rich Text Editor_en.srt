@@ -1,0 +1,296 @@
+1
+00:00:01,800 --> 00:00:05,939
+-: Before I work on anything else, if I go to product here
+
+2
+00:00:05,939 --> 00:00:08,160
+and try to create a product,
+
+3
+00:00:08,160 --> 00:00:12,150
+you can see the description here is a text box.
+
+4
+00:00:12,150 --> 00:00:16,079
+I want to convert that to a rich text area.
+
+5
+00:00:16,079 --> 00:00:20,380
+For that I will be using something called a TinyMCE here
+
+6
+00:00:21,648 --> 00:00:25,350
+and we have the editor right here.
+
+7
+00:00:25,350 --> 00:00:27,630
+You can see it is a fancy editor
+
+8
+00:00:27,630 --> 00:00:30,870
+and you can do quite a few things with description.
+
+9
+00:00:30,870 --> 00:00:33,303
+Make it as fancy as you want.
+
+10
+00:00:34,200 --> 00:00:37,260
+For pricing, if we go here, you'll see
+
+11
+00:00:37,260 --> 00:00:40,890
+that it is free forever, if you use the core version.
+
+12
+00:00:40,890 --> 00:00:43,473
+And that is good enough for our requirements.
+
+13
+00:00:44,790 --> 00:00:48,900
+So let me log in here and if you do not have an account
+
+14
+00:00:48,900 --> 00:00:51,363
+you can always continue with Google.
+
+15
+00:00:53,970 --> 00:00:57,630
+Once we log in here we have the cloud dashboard.
+
+16
+00:00:57,630 --> 00:00:59,948
+Now I already have registered for the account
+
+17
+00:00:59,948 --> 00:01:03,210
+so you can see some other usage that I have.
+
+18
+00:01:03,210 --> 00:01:07,290
+But if you sign up here, you'll see the cloud integration
+
+19
+00:01:07,290 --> 00:01:09,603
+and that is what we need to get started.
+
+20
+00:01:10,440 --> 00:01:12,210
+First thing is the script here.
+
+21
+00:01:12,210 --> 00:01:15,120
+So let me copy the script that is displayed
+
+22
+00:01:15,120 --> 00:01:17,910
+and we will go back to our application
+
+23
+00:01:17,910 --> 00:01:20,460
+where we'll open underscore layout
+
+24
+00:01:20,460 --> 00:01:23,527
+and where we have the Java script at the end here.
+
+25
+00:01:23,527 --> 00:01:25,593
+Let me paste that.
+
+26
+00:01:26,520 --> 00:01:28,349
+Once you do that, if you scroll down
+
+27
+00:01:28,349 --> 00:01:31,380
+that will be the TinyAPI key.
+
+28
+00:01:31,380 --> 00:01:34,770
+But that key is already included in the script here
+
+29
+00:01:34,770 --> 00:01:38,043
+so you can directly use the script right here.
+
+30
+00:01:38,880 --> 00:01:41,220
+Now that we have the script in place
+
+31
+00:01:41,220 --> 00:01:44,040
+we have the actual usage right here.
+
+32
+00:01:44,040 --> 00:01:46,800
+And let me copy the script tag here.
+
+33
+00:01:46,800 --> 00:01:50,220
+Only thing that we need is a text area on the page
+
+34
+00:01:50,220 --> 00:01:53,973
+because you can see the selector here is text area.
+
+35
+00:01:54,960 --> 00:01:57,432
+So let me go back here and in the product I will
+
+36
+00:01:57,432 --> 00:02:02,064
+open upsert where I have the description.
+
+37
+00:02:02,064 --> 00:02:05,280
+I will convert that to be a text area.
+
+38
+00:02:05,280 --> 00:02:09,603
+And with text area we need the explicit closing tag.
+
+39
+00:02:11,250 --> 00:02:13,466
+Now with description, we do not want any validation
+
+40
+00:02:13,466 --> 00:02:17,943
+so I can remove that and we have to add the Java script.
+
+41
+00:02:19,320 --> 00:02:22,770
+If you notice here we have a section for script.
+
+42
+00:02:22,770 --> 00:02:26,040
+Inside there we can paste the Java script code
+
+43
+00:02:26,040 --> 00:02:28,140
+and that should work.
+
+44
+00:02:28,140 --> 00:02:29,820
+With that configured,
+
+45
+00:02:29,820 --> 00:02:31,710
+let me save everything.
+
+46
+00:02:31,710 --> 00:02:34,980
+Go back and perfect.
+
+47
+00:02:34,980 --> 00:02:38,940
+You can see we have a nice editor right here.
+
+48
+00:02:38,940 --> 00:02:41,610
+Now with that, we do not see the description at the top.
+
+49
+00:02:41,610 --> 00:02:46,290
+So let me go back here and where I have the description
+
+50
+00:02:46,290 --> 00:02:51,070
+cut that and paste it and I will remove the form floating
+
+51
+00:02:53,820 --> 00:02:55,890
+and where we have the class
+
+52
+00:02:55,890 --> 00:03:00,890
+I will give it a class of text muted for the grayish color.
+
+53
+00:03:01,350 --> 00:03:04,110
+Perfect, that looks much better.
+
+54
+00:03:04,110 --> 00:03:07,590
+You can see we have fancy fonts here that could be applied
+
+55
+00:03:07,590 --> 00:03:11,073
+and our description can now be super fancy.
+
+56
+00:03:12,240 --> 00:03:15,810
+If we go back here and when we scroll down
+
+57
+00:03:15,810 --> 00:03:18,630
+you can see in the toolbox and plugins
+
+58
+00:03:18,630 --> 00:03:21,660
+we have quite a few plugins right here.
+
+59
+00:03:21,660 --> 00:03:24,360
+We might not need all of them.
+
+60
+00:03:24,360 --> 00:03:27,032
+We can remove the image here, link here,
+
+61
+00:03:27,032 --> 00:03:30,990
+media, search replace.
+
+62
+00:03:30,990 --> 00:03:35,990
+Let me remove that and let me remove the links here.
+
+63
+00:03:41,040 --> 00:03:43,620
+I guess that should be good enough.
+
+64
+00:03:43,620 --> 00:03:46,530
+Let me see how that looks like.
+
+65
+00:03:46,530 --> 00:03:51,530
+Save that, go back and, yep, that looks better.
+
+66
+00:03:52,230 --> 00:03:55,590
+You can always play around with what plugins you want
+
+67
+00:03:55,590 --> 00:03:58,113
+but I leave that selection to you.
+
+68
+00:03:59,070 --> 00:04:03,150
+With that, we have implemented TinyMCE right here
+
+69
+00:04:03,150 --> 00:04:05,160
+on the product page.
+
+70
+00:04:05,160 --> 00:04:08,130
+Now finally, what we want to work on is when
+
+71
+00:04:08,130 --> 00:04:11,790
+we select an image here and hit the create button
+
+72
+00:04:11,790 --> 00:04:15,420
+we need to save that image somewhere in our code here
+
+73
+00:04:15,420 --> 00:04:19,500
+and we need to also update the image URL.
+
+74
+00:04:19,500 --> 00:04:22,113
+Let me do that in the next video.
+

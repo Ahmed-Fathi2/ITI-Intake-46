@@ -1,0 +1,548 @@
+1
+00:00:01,950 --> 00:00:10,050
+Bây giờ, nếu chúng ta quay lại trang web cồng kềnh của mình trong bộ điều khiển giỏ hàng, hãy để tôi mở nó và đóng mọi thứ
+
+2
+00:00:10,050 --> 00:00:11,100
+khác ở đây.
+
+3
+00:00:11,520 --> 00:00:13,590
+Bên trong bài Tóm tắt.
+
+4
+00:00:13,620 --> 00:00:16,950
+Chúng tôi phải nắm bắt một khoản thanh toán bằng Stripe.
+
+5
+00:00:17,790 --> 00:00:20,450
+Nhưng chúng tôi không có ý tưởng làm thế nào để làm điều đó.
+
+6
+00:00:20,460 --> 00:00:25,440
+Vì vậy, điều tốt nhất là Google và truy cập tài liệu.
+
+7
+00:00:25,620 --> 00:00:28,230
+phiên sọc. mạng lưới.
+
+8
+00:00:28,710 --> 00:00:35,280
+Chúng tôi đã tạo phiên thanh toán cho Stripe và để tôi xem tài liệu trông như thế nào.
+
+9
+00:00:35,930 --> 00:00:42,800
+Điều đầu tiên chúng ta phải đặt khóa API mà chúng ta đã thực hiện bên trong Program. cs.
+
+10
+00:00:42,980 --> 00:00:45,440
+Vì vậy, phần đó được bảo hiểm ở đây.
+
+11
+00:00:45,470 --> 00:00:50,540
+Sau đó, chúng tôi cần tạo một tùy chọn và chúng tôi có dịch vụ dot tạo.
+
+12
+00:00:50,570 --> 00:00:52,880
+Hãy để tôi sao chép tất cả điều này.
+
+13
+00:00:53,740 --> 00:00:56,800
+Và hãy để tôi dán nó ngay tại đây.
+
+14
+00:00:57,820 --> 00:01:00,070
+Hãy để tôi căn chỉnh điều này một chút.
+
+15
+00:01:01,780 --> 00:01:02,860
+Hoàn hảo.
+
+16
+00:01:03,100 --> 00:01:10,180
+Một điều bạn nhận thấy ở đây là chúng tôi cần một URL thành công trong trường hợp mọi thứ đều thành công khi nó chuyển
+
+17
+00:01:10,180 --> 00:01:11,110
+hướng.
+
+18
+00:01:11,140 --> 00:01:19,480
+Chúng tôi có xác nhận đơn đặt hàng, nhưng chúng tôi cần URL hoàn chỉnh ở đây, vì vậy hãy để tôi chạy dự án ở đây
+
+19
+00:01:19,480 --> 00:01:21,610
+và lấy URL máy chủ cục bộ.
+
+20
+00:01:22,990 --> 00:01:24,640
+Tôi sẽ sao chép này.
+
+21
+00:01:24,940 --> 00:01:32,950
+Đóng nó lại và chúng ta sẽ tạo một miền biến bằng cách dán nó.
+
+22
+00:01:34,940 --> 00:01:38,350
+Hãy để tôi làm cho nó một chữ thường hoàn hảo.
+
+23
+00:01:38,360 --> 00:01:41,080
+Vậy URL thành công sẽ là gì?
+
+24
+00:01:41,090 --> 00:01:48,100
+Chúng tôi muốn chuyển đến miền và trên hết, chúng tôi muốn điều hướng đến khu vực khách hàng.
+
+25
+00:01:48,110 --> 00:01:55,150
+Chúng tôi có bộ điều khiển giỏ hàng và tên hành động là xác nhận đơn hàng.
+
+26
+00:01:55,160 --> 00:01:56,660
+Hãy để tôi sao chép điều đó.
+
+27
+00:01:56,660 --> 00:02:05,870
+Để tránh lỗi chính tả ở đây và ở đó, chúng tôi phải chuyển ID mà chúng tôi sẽ nhận được bằng cách sử dụng tiêu đề đơn
+
+28
+00:02:05,870 --> 00:02:06,590
+hàng.
+
+29
+00:02:07,280 --> 00:02:16,010
+Vì vậy, hãy để tôi thoát khỏi điều này ở đây và chúng tôi sẽ lấy điều đó từ tiêu đề đơn hàng theo mô hình xem giỏ hàng. nhận dạng.
+
+30
+00:02:16,760 --> 00:02:19,310
+Bây giờ ở đây chúng ta có một dấu gạch chéo về phía trước.
+
+31
+00:02:19,310 --> 00:02:22,970
+Vì vậy, hãy để tôi loại bỏ cái này và cái đó có vẻ tốt.
+
+32
+00:02:23,540 --> 00:02:27,020
+Trên hết, chúng tôi cũng có một URL hủy.
+
+33
+00:02:27,410 --> 00:02:34,250
+Trong trường hợp đó, hãy để tôi chuyển hướng họ đến khách hàng và trang chỉ mục giỏ hàng.
+
+34
+00:02:35,850 --> 00:02:36,660
+Hoàn hảo.
+
+35
+00:02:36,660 --> 00:02:40,200
+Vì vậy, URL thành công và hủy có vẻ tốt.
+
+36
+00:02:40,530 --> 00:02:45,810
+Sau đó, chúng tôi cần chi tiết đơn hàng về cơ bản sẽ có tất cả chi tiết sản phẩm.
+
+37
+00:02:46,350 --> 00:02:54,420
+Bây giờ, thay vì nhóm mọi thứ ở đây, hãy để tôi tạo danh sách tùy chọn mục hàng phiên mới và chúng tôi
+
+38
+00:02:54,420 --> 00:03:00,270
+sẽ định cấu hình các mục hàng ngay tại đây sau khi chúng tôi có tùy chọn.
+
+39
+00:03:00,300 --> 00:03:01,800
+Hãy để tôi làm điều đó.
+
+40
+00:03:02,190 --> 00:03:08,040
+Để có được tất cả các mặt hàng, chúng tôi sẽ phải lặp qua danh sách giỏ hàng.
+
+41
+00:03:08,040 --> 00:03:17,640
+Vì vậy, mục biến trong chế độ xem giỏ hàng mô hình chấm danh sách giỏ hàng và bạn có thể thấy đó là danh sách tùy
+
+42
+00:03:17,640 --> 00:03:19,320
+chọn mục hàng.
+
+43
+00:03:19,320 --> 00:03:21,210
+Vì vậy, hãy để tôi sao chép nó.
+
+44
+00:03:21,240 --> 00:03:31,140
+Nó là một lớp tích hợp trong gói sọc và chúng tôi sẽ phải tạo mục hàng phiên bằng với các tùy chọn
+
+45
+00:03:31,170 --> 00:03:33,840
+mục hàng phiên mới.
+
+46
+00:03:34,050 --> 00:03:36,910
+Ở đó chúng ta phải cấu hình một vài thứ.
+
+47
+00:03:37,210 --> 00:03:39,640
+Bây giờ có hai điều bạn có thể cấu hình.
+
+48
+00:03:39,640 --> 00:03:44,260
+Bạn có thể định cấu hình giá hoặc bạn có thể định cấu hình dữ liệu giá.
+
+49
+00:03:44,530 --> 00:03:49,540
+Dữ liệu giá về cơ bản là dữ liệu được sử dụng để tạo một đối tượng giá mới.
+
+50
+00:03:49,660 --> 00:03:58,240
+Vì vậy, đó chính xác là những gì chúng tôi muốn ở đây bằng mới và đó sẽ là tùy chọn dữ liệu giá mục
+
+51
+00:03:58,240 --> 00:03:59,890
+hàng loại phiên.
+
+52
+00:04:00,310 --> 00:04:07,360
+Một lần nữa, điều này được tích hợp sẵn với Stripe và bạn có thể thấy IntelliSense đã hiển thị tệp
+
+53
+00:04:07,360 --> 00:04:09,160
+lớp đó cho tôi trong đó.
+
+54
+00:04:09,160 --> 00:04:12,430
+Chúng tôi phải định cấu hình một số thứ như số lượng đơn vị.
+
+55
+00:04:12,640 --> 00:04:17,230
+Bây giờ số lượng đơn vị là dài, nó không ở dạng thập phân ở đây.
+
+56
+00:04:17,230 --> 00:04:21,700
+Vì vậy, những gì chúng ta sẽ phải làm là những gì chúng ta có trong item dot price.
+
+57
+00:04:21,730 --> 00:04:24,820
+Chúng ta sẽ phải nhân số đó với 100.
+
+58
+00:04:25,060 --> 00:04:32,590
+Vì vậy, về cơ bản nếu một cái gì đó là $20. 50, chúng ta phải chuyển đổi nó thành 2050.
+
+59
+00:04:33,610 --> 00:04:36,820
+Và đó là những gì chúng tôi đang làm ngay tại đây.
+
+60
+00:04:37,770 --> 00:04:47,460
+Bây giờ sau mục đơn vị, chúng tôi phải xác định đơn vị tiền tệ ở đây là USD và chúng tôi cần thêm dữ liệu sản phẩm vào
+
+61
+00:04:48,120 --> 00:04:49,740
+dữ liệu sản phẩm.
+
+62
+00:04:49,770 --> 00:04:58,890
+Đây sẽ là dữ liệu giá của mục hàng phiên mới, tùy chọn dữ liệu sản phẩm, tên lớp khá dài ở đây, nhưng ở đó chúng
+
+63
+00:04:58,890 --> 00:05:05,340
+tôi có thể cung cấp những thứ như hình ảnh, tên và mô tả của từng mục.
+
+64
+00:05:06,390 --> 00:05:09,600
+Tôi sẽ cho đó là mục chấm sản phẩm.
+
+65
+00:05:10,400 --> 00:05:11,570
+Tiêu đề.
+
+66
+00:05:12,930 --> 00:05:15,540
+Điều đó có vẻ tốt cho dữ liệu sản phẩm.
+
+67
+00:05:15,990 --> 00:05:21,240
+Bây giờ với điều đó, chúng tôi đang tạo dữ liệu giá và dữ liệu đó dành cho một mặt hàng.
+
+68
+00:05:21,480 --> 00:05:24,390
+Nhưng chúng ta cũng phải xác định số lượng.
+
+69
+00:05:24,390 --> 00:05:28,500
+Giống như nếu có một mặt hàng, số lượng cho mặt hàng đó là bao nhiêu?
+
+70
+00:05:28,530 --> 00:05:33,810
+Dựa trên sọc đó sẽ tự động xác định giá cuối cùng.
+
+71
+00:05:34,500 --> 00:05:42,420
+Với cấu hình đó, mục hàng phiên có vẻ phù hợp với một mục ngay bây giờ vì chúng ta đang ở trong vòng
+
+72
+00:05:42,420 --> 00:05:43,770
+lặp cho mỗi mục.
+
+73
+00:05:44,440 --> 00:05:54,070
+Chúng tôi phải thêm tất cả các mục trong mục hàng ngay tại đây để chúng tôi có thể truy cập chúng từ các tùy chọn,
+
+74
+00:05:54,070 --> 00:06:00,190
+mục hàng chấm, chấm THÊM và chúng tôi sẽ thêm mục hàng phiên riêng lẻ.
+
+75
+00:06:00,900 --> 00:06:07,920
+Vì vậy, nếu có mười mặt hàng trong giỏ hàng, nó sẽ lặp lại và thêm tất cả mười mặt hàng đó.
+
+76
+00:06:08,670 --> 00:06:15,480
+Vì vậy, bây giờ chúng tôi có thể loại bỏ logic này ở đây và chúng tôi sẽ tạo một danh sách có vẻ tốt.
+
+77
+00:06:15,600 --> 00:06:18,000
+Tiếp theo, chế độ là thanh toán.
+
+78
+00:06:18,030 --> 00:06:19,830
+Đó là chế độ mặc định.
+
+79
+00:06:20,340 --> 00:06:23,580
+Cùng với đó, chúng tôi đã định cấu hình các tùy chọn ở đây.
+
+80
+00:06:23,580 --> 00:06:29,220
+Và cuối cùng trên dòng 140, chúng tôi đang tạo một dịch vụ phiên mới.
+
+81
+00:06:29,220 --> 00:06:34,350
+Và trên dịch vụ, chúng tôi đang tạo ra điều đó với tất cả các tùy chọn.
+
+82
+00:06:35,010 --> 00:06:42,150
+Đây là tất cả các phương thức mặc định mà chúng tôi có trong tài liệu Stripe và chúng tôi phải sử dụng chúng
+
+83
+00:06:42,150 --> 00:06:43,890
+chính xác như vậy.
+
+84
+00:06:44,760 --> 00:06:50,760
+Nhưng khi chúng tôi tạo một phiên ở đây, chúng tôi có thể mong đợi phản hồi từ máy chủ.
+
+85
+00:06:51,000 --> 00:06:55,110
+Vì vậy, hãy để tôi lấy nó trong một biến phiên có sọc.
+
+86
+00:06:55,980 --> 00:07:03,600
+Bây giờ, khi chúng tôi nhận được phản hồi về phiên bên trong đó, chúng tôi có cả ID và ID mục đích thanh toán.
+
+87
+00:07:04,170 --> 00:07:08,970
+Nếu tôi làm F12 và kiểm tra lớp, bạn có thể thấy có ID.
+
+88
+00:07:09,570 --> 00:07:16,470
+Bạn cuộn xuống hoặc nếu chỉ tìm kiếm, bạn sẽ tìm thấy ID mục đích thanh toán.
+
+89
+00:07:16,980 --> 00:07:18,150
+Của bạn đi.
+
+90
+00:07:18,450 --> 00:07:25,380
+Vì vậy, chúng tôi có thể lấy cả hai và chúng tôi phải cập nhật thông tin đó trong bảng của mình trước khi chuyển hướng trở lại.
+
+91
+00:07:26,330 --> 00:07:30,920
+Vì vậy, chúng tôi sẽ nói đơn vị công việc chấm tiêu đề thứ tự trên đó.
+
+92
+00:07:30,920 --> 00:07:38,690
+Chúng tôi muốn ID thanh toán sọc cập nhật trong đó chúng tôi phải chuyển ID đơn đặt hàng bên trong tiêu đề
+
+93
+00:07:38,690 --> 00:07:49,640
+đơn hàng dạng dấu chấm của chế độ xem giỏ hàng. id và ID phiên nằm trong phiên. id và id mục đích thanh toán nằm bên trong ID mục
+
+94
+00:07:49,640 --> 00:07:52,190
+đích thanh toán dấu chấm phiên.
+
+95
+00:07:52,940 --> 00:07:56,390
+Bây giờ một điều tôi sẽ nói với bạn ngay bây giờ là mục đích thanh toán.
+
+96
+00:07:56,420 --> 00:07:57,440
+ID sẽ không có giá trị.
+
+97
+00:07:57,440 --> 00:08:05,510
+Hiện tại, ID mục đích thanh toán trong đối tượng phiên chỉ được điền sau khi thanh toán thành công.
+
+98
+00:08:05,900 --> 00:08:08,780
+Ngay bây giờ, thanh toán không thành công.
+
+99
+00:08:08,780 --> 00:08:15,290
+Hiện tại, chúng tôi đang tạo một phiên và sau đó chúng tôi sẽ chuyển hướng đến trang web Stripe.
+
+100
+00:08:15,770 --> 00:08:20,360
+Vì vậy, ngay bây giờ, ID mục đích thanh toán sẽ không có giá trị, nhưng điều đó không sao cả.
+
+101
+00:08:21,730 --> 00:08:25,300
+Với cấu hình đó, hãy để tôi lưu thay đổi ở đây.
+
+102
+00:08:25,300 --> 00:08:29,800
+Và sau đó chúng tôi phải chuyển hướng đến Stripe để xử lý thanh toán.
+
+103
+00:08:29,890 --> 00:08:37,720
+Bây giờ URL mà chúng ta phải chuyển hướng cũng có trong đối tượng phiên được trả về là gì.
+
+104
+00:08:39,250 --> 00:08:48,070
+Vì vậy, ngay tại đây, chúng tôi sẽ nói phản hồi, tiêu đề dấu chấm, dấu chấm thêm và chúng tôi sẽ đặt vị trí
+
+105
+00:08:48,070 --> 00:08:51,670
+với URL mới bên trong URL dấu chấm phiên.
+
+106
+00:08:52,920 --> 00:08:55,110
+Và cuối cùng chúng ta sẽ chuyển hướng.
+
+107
+00:08:55,110 --> 00:09:00,750
+Vì vậy, chúng tôi sẽ nói trả lại kết quả mã trạng thái mới là 303.
+
+108
+00:09:00,780 --> 00:09:09,510
+Về cơ bản, điều đó có nghĩa là chúng tôi đang chuyển hướng đến một URL mới do Stripe cung cấp ngay tại đây.
+
+109
+00:09:10,180 --> 00:09:18,460
+Vì vậy, với điều đó, chúng tôi đã thêm khá nhiều mã ngay tại đây, miễn là ID công ty bằng không.
+
+110
+00:09:19,120 --> 00:09:22,630
+Bây giờ hãy để tôi chạy cái này và xem điều gì sẽ xảy ra.
+
+111
+00:09:25,340 --> 00:09:27,960
+Chúng tôi đã đăng nhập như một công ty ở đây.
+
+112
+00:09:27,980 --> 00:09:32,720
+Hãy để tôi đăng xuất và tôi sẽ đăng nhập với tư cách là người dùng khách hàng.
+
+113
+00:09:33,650 --> 00:09:37,750
+Tôi tin rằng tôi đã có một vài mặt hàng trong giỏ hàng rồi.
+
+114
+00:09:37,820 --> 00:09:39,230
+Hãy để tôi xem.
+
+115
+00:09:39,570 --> 00:09:40,790
+Có vẻ tốt.
+
+116
+00:09:40,820 --> 00:09:42,890
+Tổng là 330.
+
+117
+00:09:42,920 --> 00:09:45,080
+Bây giờ hãy để tôi đặt hàng.
+
+118
+00:09:45,080 --> 00:09:53,030
+Và khi chúng tôi nhấn đặt hàng, bạn sẽ thấy nó tự động chuyển hướng chúng tôi đến Stripe và thật tuyệt.
+
+119
+00:09:53,060 --> 00:09:55,190
+Bạn có thể thấy tổng giá.
+
+120
+00:09:55,190 --> 00:09:57,740
+Chúng tôi có số lượng mặt hàng.
+
+121
+00:09:57,890 --> 00:10:02,030
+Và chúng tôi có một phiên kiểm tra tốt đẹp ngay tại đây.
+
+122
+00:10:03,060 --> 00:10:10,560
+Bây giờ, khi bạn làm việc với Stripe, họ có thẻ tín dụng thử nghiệm giống như bạn có thể sử dụng tất cả cho hai người
+
+123
+00:10:10,560 --> 00:10:12,450
+và CVV hợp lệ và hết hạn.
+
+124
+00:10:12,450 --> 00:10:16,320
+Và để tôi bỏ chọn cái này và nhấp vào nút thanh toán.
+
+125
+00:10:16,500 --> 00:10:19,560
+Điều gì sẽ xảy ra khi chúng ta nhấn nút thanh toán?
+
+126
+00:10:21,110 --> 00:10:27,200
+Nó thực sự sẽ chuyển hướng tôi trở lại URL thành công ngay tại đây.
+
+127
+00:10:27,770 --> 00:10:34,910
+Nhưng trước khi tôi làm điều đó, hãy để tôi vào cơ sở dữ liệu và xem ID phiên đã được điền chưa.
+
+128
+00:10:35,690 --> 00:10:38,150
+Chúng tôi có tiêu đề đơn đặt hàng mới ở đây.
+
+129
+00:10:38,150 --> 00:10:41,810
+Bạn có thể thấy trạng thái đơn hàng và trạng thái thanh toán đang chờ xử lý.
+
+130
+00:10:41,840 --> 00:10:44,330
+Đó là tốt và hoàn hảo.
+
+131
+00:10:44,360 --> 00:10:48,410
+Chúng tôi có ID phiên đã được điền.
+
+132
+00:10:48,740 --> 00:10:50,780
+Vì vậy, mọi thứ đang tìm kiếm tuyệt vời.
+
+133
+00:10:51,110 --> 00:10:57,890
+Bây giờ nếu tôi chọn nút quay lại ở đây và nếu tôi để nguyên, nó sẽ đưa tôi trở lại trang chỉ mục.
+
+134
+00:10:58,310 --> 00:11:03,980
+Vì vậy, điều đó có nghĩa là chúng tôi đã trở lại từ sọc ở đây và chúng tôi đã quay lại trang của mình.
+
+135
+00:11:04,310 --> 00:11:09,830
+Nếu chúng tôi nhấn đặt hàng, nó sẽ chỉ đưa chúng tôi đến trang xác nhận đơn hàng.
+
+136
+00:11:10,040 --> 00:11:15,860
+Nhưng trên trang đó, làm thế nào để chúng tôi biết liệu thanh toán có thành công hay không?
+
+137
+00:11:16,400 --> 00:11:19,430
+Hãy để tôi cho bạn thấy điều đó trong video tiếp theo.
+

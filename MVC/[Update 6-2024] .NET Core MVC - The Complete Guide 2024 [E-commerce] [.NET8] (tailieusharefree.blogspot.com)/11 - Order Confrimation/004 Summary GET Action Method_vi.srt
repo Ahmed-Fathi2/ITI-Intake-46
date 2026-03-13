@@ -1,0 +1,140 @@
+1
+00:00:01,740 --> 00:00:06,900
+Khi chúng tôi đang làm việc ở đây, về cơ bản chúng tôi cần điền vào tất cả các chi tiết.
+
+2
+00:00:07,260 --> 00:00:15,840
+Nếu tôi truy cập SQL Server thật nhanh tại đây và nếu tôi kiểm tra tệp ASP. NET, nếu bạn đi sang bên phải, tôi tin rằng chúng tôi đã
+
+3
+00:00:15,840 --> 00:00:19,260
+thêm nhiều thuộc tính hơn cho người dùng.
+
+4
+00:00:20,000 --> 00:00:23,150
+Vậy chúng ta phải điền những thông tin này ở đâu?
+
+5
+00:00:23,150 --> 00:00:29,390
+Chúng ta có thể vào cơ sở dữ liệu hoặc ASP. NET và cố gắng truy xuất thông tin từ đó.
+
+6
+00:00:29,420 --> 00:00:32,210
+Tất nhiên, họ có thể chỉnh sửa nó nếu họ muốn.
+
+7
+00:00:32,780 --> 00:00:37,040
+Vì vậy, hãy để tôi quay trở lại đây và dừng ứng dụng.
+
+8
+00:00:37,340 --> 00:00:43,450
+Chúng tôi đang ở trong bộ điều khiển thẻ để điều hướng đến người dùng ứng dụng.
+
+9
+00:00:43,460 --> 00:00:48,110
+Hãy để tôi sao chép mọi thứ chúng tôi có trong chỉ mục và dán nó.
+
+10
+00:00:48,110 --> 00:00:53,300
+Tóm lại, ở đây chúng ta cần đưa vào mô hình chế độ xem giỏ hàng.
+
+11
+00:00:54,540 --> 00:00:57,690
+Những gì chúng tôi có ở đây cho ID người dùng có vẻ tốt.
+
+12
+00:00:57,720 --> 00:01:05,010
+Chúng tôi sẽ điền vào mô hình chế độ xem giỏ hàng và sau đó trong tiêu đề thứ tự chấm của mô hình chế độ xem, chúng
+
+13
+00:01:05,010 --> 00:01:08,910
+tôi có người dùng ứng dụng mà chúng tôi muốn điền vào.
+
+14
+00:01:09,760 --> 00:01:17,260
+Để truy xuất thông tin đó, chúng tôi có thể truy cập ứng dụng unitofwork dot user dot get và chúng tôi có thể lấy thông tin đó dựa vào
+
+15
+00:01:17,260 --> 00:01:17,590
+bạn.
+
+16
+00:01:17,620 --> 00:01:20,410
+ID chấm bằng bằng.
+
+17
+00:01:20,440 --> 00:01:22,900
+Chúng tôi có điều đó bên trong ID người dùng.
+
+18
+00:01:24,450 --> 00:01:30,930
+Khi chúng tôi có người dùng ứng dụng ở đây, chúng tôi có thể cập nhật thủ công tất cả các thuộc tính
+
+19
+00:01:30,930 --> 00:01:37,500
+theo thứ tự tiêu đề như tên, số điện thoại, địa chỉ đường phố, thành phố, tiểu bang và mã bưu chính.
+
+20
+00:01:37,530 --> 00:01:41,400
+Dựa trên mọi thứ từ người dùng ứng dụng.
+
+21
+00:01:42,060 --> 00:01:44,850
+Vì vậy, điều đó sẽ phổ biến các giá trị mặc định.
+
+22
+00:01:44,850 --> 00:01:49,400
+Và sau đó chúng tôi đang tính toán tổng số đơn đặt hàng có vẻ tốt.
+
+23
+00:01:49,410 --> 00:01:54,510
+Khi chúng tôi quay lại Chế độ xem, chúng tôi sẽ trả lại mô hình chế độ xem giỏ hàng.
+
+24
+00:01:55,730 --> 00:02:03,020
+Với điều đó, hãy để tôi thêm một điểm sửa lỗi và chạy ứng dụng để xem ViewModel trông như thế nào
+
+25
+00:02:03,020 --> 00:02:04,580
+trên trang tóm tắt.
+
+26
+00:02:05,480 --> 00:02:10,100
+Chúng tôi sẽ chuyển đến GIỎ HÀNG tại đây và nhấn nút tóm tắt.
+
+27
+00:02:10,130 --> 00:02:12,380
+Hãy để tôi kiểm tra ViewModel.
+
+28
+00:02:13,060 --> 00:02:14,770
+Trong tiêu đề đơn hàng.
+
+29
+00:02:14,800 --> 00:02:15,700
+Hoàn hảo.
+
+30
+00:02:15,730 --> 00:02:19,300
+Bạn có thể thấy tên là thành phố đông dân cư.
+
+31
+00:02:19,330 --> 00:02:24,640
+Chúng tôi có mã bưu chính, số điện thoại, người dùng ứng dụng có vẻ tốt.
+
+32
+00:02:24,640 --> 00:02:27,190
+Và chúng tôi có danh sách giỏ hàng.
+
+33
+00:02:28,030 --> 00:02:31,590
+Dựa vào đó, chúng ta có thể điền tất cả các thông tin.
+
+34
+00:02:31,600 --> 00:02:36,820
+Nếu chúng ta chuyển sang chế độ xem ở đây và chúng ta phải làm cho điều này năng động hơn.
+
+35
+00:02:37,270 --> 00:02:40,190
+Hãy để tôi làm điều đó trong video tiếp theo.
+

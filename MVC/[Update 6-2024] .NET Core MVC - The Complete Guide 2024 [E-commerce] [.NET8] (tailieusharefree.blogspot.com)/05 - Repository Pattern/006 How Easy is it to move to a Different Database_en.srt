@@ -1,0 +1,248 @@
+1
+00:00:01,859 --> 00:00:03,510
+Instructor: In the last video,
+
+2
+00:00:03,510 --> 00:00:06,990
+you saw we were able to perform all the grad operations
+
+3
+00:00:06,990 --> 00:00:10,173
+on category using our repository.
+
+4
+00:00:11,040 --> 00:00:14,340
+But before the last video and current video
+
+5
+00:00:14,340 --> 00:00:17,220
+something has changed on my machine.
+
+6
+00:00:17,220 --> 00:00:18,570
+And what I mean by that
+
+7
+00:00:18,570 --> 00:00:23,430
+is if I go back and examine the appsettings.json file,
+
+8
+00:00:23,430 --> 00:00:25,833
+you remember the server name was a dot?
+
+9
+00:00:26,760 --> 00:00:28,470
+Now if I go here
+
+10
+00:00:28,470 --> 00:00:32,610
+and if I connect using dot, it does not work.
+
+11
+00:00:32,610 --> 00:00:35,820
+Well, I had to reset my laptop for some reason
+
+12
+00:00:35,820 --> 00:00:39,093
+and because of that, I encountered this issue.
+
+13
+00:00:40,440 --> 00:00:42,660
+So now what is the solution?
+
+14
+00:00:42,660 --> 00:00:47,370
+The LocalDB/MSSQLLocalDB,
+
+15
+00:00:47,370 --> 00:00:50,463
+I'm able to connect to that particular server.
+
+16
+00:00:51,510 --> 00:00:55,890
+For that, I can press the connect icon here and copy this
+
+17
+00:00:55,890 --> 00:01:00,890
+and we will update that inside the server right here.
+
+18
+00:01:01,230 --> 00:01:02,460
+If we examine that
+
+19
+00:01:02,460 --> 00:01:05,160
+you can see rather than one backward slash
+
+20
+00:01:05,160 --> 00:01:08,760
+it automatically added two backward slash,
+
+21
+00:01:08,760 --> 00:01:10,710
+and that looks good.
+
+22
+00:01:10,710 --> 00:01:12,420
+But now you might be wondering that,
+
+23
+00:01:12,420 --> 00:01:14,610
+hey, we had our migration,
+
+24
+00:01:14,610 --> 00:01:17,190
+we had our data inside the database.
+
+25
+00:01:17,190 --> 00:01:19,023
+What happens to all of that?
+
+26
+00:01:19,890 --> 00:01:23,100
+Well, because we are using Entity Framework Core
+
+27
+00:01:23,100 --> 00:01:25,320
+things are super simple.
+
+28
+00:01:25,320 --> 00:01:27,720
+We do not have a Bulky database here.
+
+29
+00:01:27,720 --> 00:01:31,590
+To create that inside the Package Manager Console,
+
+30
+00:01:31,590 --> 00:01:35,640
+all we have to write is the command update-database.
+
+31
+00:01:35,640 --> 00:01:38,010
+We do not have to add any migration.
+
+32
+00:01:38,010 --> 00:01:40,380
+We only have to update-database
+
+33
+00:01:40,380 --> 00:01:44,703
+because all the migration are already present in our code.
+
+34
+00:01:46,020 --> 00:01:47,460
+With that one line
+
+35
+00:01:47,460 --> 00:01:49,590
+if I run the application now
+
+36
+00:01:49,590 --> 00:01:51,543
+everything should work the same.
+
+37
+00:01:52,530 --> 00:01:56,100
+You can see category and we have the three categories
+
+38
+00:01:56,100 --> 00:01:59,343
+that we were seeding our database with.
+
+39
+00:01:59,343 --> 00:02:01,530
+With that, I want you to analyze
+
+40
+00:02:01,530 --> 00:02:03,660
+the importance of migrations
+
+41
+00:02:03,660 --> 00:02:07,860
+and how easy it is to get started with a project.
+
+42
+00:02:07,860 --> 00:02:10,020
+For an example, if a new developer
+
+43
+00:02:10,020 --> 00:02:13,020
+had to set up this code on their laptop,
+
+44
+00:02:13,020 --> 00:02:15,840
+they just have to clone the repository
+
+45
+00:02:15,840 --> 00:02:18,900
+and press the command update-database.
+
+46
+00:02:18,900 --> 00:02:23,880
+Right now it is a local SQL server, but if it was Azure SQL,
+
+47
+00:02:23,880 --> 00:02:27,390
+then they just have to run the command update-database
+
+48
+00:02:27,390 --> 00:02:30,783
+and the code should work automatically on their machine.
+
+49
+00:02:31,710 --> 00:02:34,740
+And that reminds me of my good old days
+
+50
+00:02:34,740 --> 00:02:38,520
+when I had to spend almost a day to set up a code
+
+51
+00:02:38,520 --> 00:02:43,200
+on my machine because back then we had many dependencies
+
+52
+00:02:43,200 --> 00:02:45,513
+and we had to handle all of them.
+
+53
+00:02:46,470 --> 00:02:48,510
+But with Entity Framework Core,
+
+54
+00:02:48,510 --> 00:02:50,910
+you can see if a database is different,
+
+55
+00:02:50,910 --> 00:02:52,860
+it does not take much time.
+
+56
+00:02:52,860 --> 00:02:55,530
+We only have to update connection string,
+
+57
+00:02:55,530 --> 00:02:57,750
+run the command update-database,
+
+58
+00:02:57,750 --> 00:03:00,510
+migrations get pushed automatically,
+
+59
+00:03:00,510 --> 00:03:02,253
+and we are up and running.
+
+60
+00:03:03,450 --> 00:03:05,700
+So I wanted to quickly show you
+
+61
+00:03:05,700 --> 00:03:09,000
+on how you can easily update connection string
+
+62
+00:03:09,000 --> 00:03:12,393
+and again bring your project with all the categories.
+

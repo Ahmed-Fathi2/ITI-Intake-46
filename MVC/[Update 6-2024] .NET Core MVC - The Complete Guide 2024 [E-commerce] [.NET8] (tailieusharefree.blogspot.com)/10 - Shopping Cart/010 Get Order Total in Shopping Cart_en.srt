@@ -1,0 +1,360 @@
+1
+00:00:01,503 --> 00:00:05,010
+Lecturer: Where we have the index get action method,
+
+2
+00:00:05,010 --> 00:00:08,163
+we are populating the shopping cart view model.
+
+3
+00:00:09,120 --> 00:00:10,770
+But in that view model,
+
+4
+00:00:10,770 --> 00:00:12,900
+if we press F12 here,
+
+5
+00:00:12,900 --> 00:00:17,220
+we have the OrderTotal that we have to calculate.
+
+6
+00:00:17,220 --> 00:00:21,423
+Calculating that OrderTotal is a little bit tricky,
+
+7
+00:00:22,770 --> 00:00:26,463
+because based on the quantity we have different price.
+
+8
+00:00:27,330 --> 00:00:30,120
+Like if we have this book for an example,
+
+9
+00:00:30,120 --> 00:00:32,670
+if the quantity is between one to 50,
+
+10
+00:00:32,670 --> 00:00:34,740
+the price is $30.00,
+
+11
+00:00:34,740 --> 00:00:37,140
+more than 50 it's $25.00,
+
+12
+00:00:37,140 --> 00:00:40,470
+and more than 100 it is $20.00.
+
+13
+00:00:40,470 --> 00:00:44,370
+When we display the OrderTotal we need a helper method,
+
+14
+00:00:44,370 --> 00:00:46,890
+that will calculate based on quantity,
+
+15
+00:00:46,890 --> 00:00:49,233
+which price should be utilized.
+
+16
+00:00:50,340 --> 00:00:52,560
+So let me create that helper
+
+17
+00:00:52,560 --> 00:00:56,073
+inside the Cart Controller right here.
+
+18
+00:00:57,000 --> 00:00:59,490
+We can make that method a private method.
+
+19
+00:00:59,490 --> 00:01:01,470
+Return type will be double,
+
+20
+00:01:01,470 --> 00:01:03,933
+and let me call that GetPriceBasedOnQuantity.
+
+21
+00:01:05,828 --> 00:01:10,230
+And the parameter here we will be passing ShoppingCart,
+
+22
+00:01:10,230 --> 00:01:12,540
+and that looks good.
+
+23
+00:01:12,540 --> 00:01:14,160
+Based on that we can check
+
+24
+00:01:14,160 --> 00:01:15,137
+if(ShoppingCart.Count <= 50).
+
+25
+00:01:20,419 --> 00:01:21,252
+In that case,
+
+26
+00:01:21,252 --> 00:01:23,910
+we want to return the default price,
+
+27
+00:01:23,910 --> 00:01:28,910
+so that we have inside ShoppingCart.Product.Price;
+
+28
+00:01:30,660 --> 00:01:34,110
+In the else part here we will have an if condition.
+
+29
+00:01:34,110 --> 00:01:35,177
+If (ShoppingCart.Count <= 100),
+
+30
+00:01:39,607 --> 00:01:42,480
+In that case we want to return
+
+31
+00:01:42,480 --> 00:01:46,890
+ShoppingCart.Product.Price50;
+
+32
+00:01:46,890 --> 00:01:49,380
+It has to be less than 100,
+
+33
+00:01:49,380 --> 00:01:52,590
+else if it is greater than 100 then we will
+
+34
+00:01:52,590 --> 00:01:56,883
+return ShoppingCart.Product.Price100;
+
+35
+00:01:58,200 --> 00:01:59,370
+Based on that,
+
+36
+00:01:59,370 --> 00:02:01,620
+whatever cart we pass here,
+
+37
+00:02:01,620 --> 00:02:04,803
+we will know what is the price that we have to use.
+
+38
+00:02:05,640 --> 00:02:08,460
+Right here where we have the ShoppingCart view model,
+
+39
+00:02:08,460 --> 00:02:11,550
+we have to iterate through each one of the cart.
+
+40
+00:02:11,550 --> 00:02:12,497
+So (variable cart in ShoppingCartVM.ShoppingCartList).
+
+41
+00:02:16,647 --> 00:02:19,080
+We have the ShoppingCartList there,
+
+42
+00:02:19,080 --> 00:02:23,070
+and we have to calculate the Cart.Price.
+
+43
+00:02:23,070 --> 00:02:24,480
+Right here we can add a
+
+44
+00:02:24,480 --> 00:02:29,480
+double price = GetPriceBasedOnQuantity,
+
+45
+00:02:29,640 --> 00:02:32,400
+and we will pass the shopping cart.
+
+46
+00:02:32,400 --> 00:02:33,990
+Now using that price,
+
+47
+00:02:33,990 --> 00:02:35,191
+we can calculate the
+
+48
+00:02:35,191 --> 00:02:39,168
+ShoppingCartVM.OrderTotal
+
+49
+00:02:39,168 --> 00:02:43,418
++= (price * cart.Count).
+
+50
+00:02:45,810 --> 00:02:46,643
+Perfect.
+
+51
+00:02:46,643 --> 00:02:48,150
+I believe that looks good.
+
+52
+00:02:48,150 --> 00:02:50,670
+Let me restart the application,
+
+53
+00:02:50,670 --> 00:02:54,363
+and see if we are able to calculate the total price.
+
+54
+00:02:56,010 --> 00:02:58,530
+Let me go to our shopping cart,
+
+55
+00:02:58,530 --> 00:03:01,440
+and we examine the view model.
+
+56
+00:03:01,440 --> 00:03:02,430
+Perfect.
+
+57
+00:03:02,430 --> 00:03:05,100
+We have an order total here based on
+
+58
+00:03:05,100 --> 00:03:08,343
+the price and the count that has been added.
+
+59
+00:03:09,240 --> 00:03:11,250
+So some number is coming up,
+
+60
+00:03:11,250 --> 00:03:12,810
+if that is true or false,
+
+61
+00:03:12,810 --> 00:03:15,300
+we will see in the upcoming lectures.
+
+62
+00:03:15,300 --> 00:03:18,600
+But right now this logic is working.
+
+63
+00:03:18,600 --> 00:03:20,880
+Now one thing that I want to modify is,
+
+64
+00:03:20,880 --> 00:03:23,673
+what if I want to display this price on the UI?
+
+65
+00:03:24,840 --> 00:03:27,363
+I do not have that in the view model.
+
+66
+00:03:28,350 --> 00:03:30,630
+We can add that to our view model,
+
+67
+00:03:30,630 --> 00:03:33,933
+but that will depend on each shopping cart item.
+
+68
+00:03:35,160 --> 00:03:36,750
+In a perfect situation,
+
+69
+00:03:36,750 --> 00:03:40,200
+we have to add that inside the shopping cart model.
+
+70
+00:03:40,200 --> 00:03:41,820
+Let me open that.
+
+71
+00:03:41,820 --> 00:03:44,760
+And we do not want to add that to the database.
+
+72
+00:03:44,760 --> 00:03:47,550
+We only want for display purposes,
+
+73
+00:03:47,550 --> 00:03:50,010
+so we will add a double price,
+
+74
+00:03:50,010 --> 00:03:52,680
+and we will add not mapped.
+
+75
+00:03:52,680 --> 00:03:53,550
+Because of that,
+
+76
+00:03:53,550 --> 00:03:56,580
+it will not create this column in the database,
+
+77
+00:03:56,580 --> 00:03:58,530
+and we are good.
+
+78
+00:03:58,530 --> 00:03:59,363
+Now here,
+
+79
+00:03:59,363 --> 00:04:02,460
+rather than storing that in double.price
+
+80
+00:04:02,460 --> 00:04:05,853
+I will store that in cart.Price.
+
+81
+00:04:06,960 --> 00:04:08,820
+We will use that here,
+
+82
+00:04:08,820 --> 00:04:10,650
+cart.Price.
+
+83
+00:04:10,650 --> 00:04:13,710
+And that way we will have that particular price
+
+84
+00:04:13,710 --> 00:04:17,343
+calculated and assigned inside the shopping cart.
+
+85
+00:04:18,510 --> 00:04:20,579
+We have spent quite some time
+
+86
+00:04:20,579 --> 00:04:24,480
+to get all the items for our shopping cart.
+
+87
+00:04:24,480 --> 00:04:25,920
+In the next video,
+
+88
+00:04:25,920 --> 00:04:30,300
+let me replace everything that we have with a static HTML,
+
+89
+00:04:30,300 --> 00:04:34,530
+with what we are passing here from the Index Action method.
+
+90
+00:04:34,530 --> 00:04:37,113
+Which is a shopping cart view model.
+

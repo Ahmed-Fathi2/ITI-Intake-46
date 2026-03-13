@@ -1,0 +1,180 @@
+1
+00:00:01,470 --> 00:00:08,460
+When we are working with a new website, typically we have a database and inside there we have multiple
+
+2
+00:00:08,460 --> 00:00:09,300
+tables.
+
+3
+00:00:09,300 --> 00:00:14,940
+And based on that table we perform some operation and display some data.
+
+4
+00:00:15,830 --> 00:00:22,400
+Before we get into all the complexities here, when we are working with Entity Framework Core and MVC
+
+5
+00:00:22,430 --> 00:00:27,590
+application, we do not create tables directly in the database.
+
+6
+00:00:28,010 --> 00:00:35,210
+Rather, we create a model in our project and we tell entity framework that, hey, based on the model
+
+7
+00:00:35,210 --> 00:00:43,520
+that I have created here, I want you to figure out and create table inside database and do that automatically.
+
+8
+00:00:43,970 --> 00:00:51,230
+Now, that might seem magical right now, but it is the power of entity framework core that will allow
+
+9
+00:00:51,230 --> 00:00:52,940
+us to do all of that.
+
+10
+00:00:53,510 --> 00:00:58,700
+Before we do anything like that in our models, we have to create a model.
+
+11
+00:00:59,030 --> 00:01:06,560
+So in the bulky web here we have the models folder, right click there and we will add a new class.
+
+12
+00:01:06,980 --> 00:01:10,180
+Now it does not have to be inside the models folder.
+
+13
+00:01:10,190 --> 00:01:12,010
+There are no rules about that.
+
+14
+00:01:12,020 --> 00:01:17,790
+It is one of those things that models we typically add them in the models folder.
+
+15
+00:01:18,000 --> 00:01:24,450
+You can rename that folder if you want, but I wanted to point out that models is not something that
+
+16
+00:01:24,450 --> 00:01:29,010
+is required, like we have the controllers and views folder.
+
+17
+00:01:29,040 --> 00:01:31,440
+Those names cannot be updated.
+
+18
+00:01:31,530 --> 00:01:35,400
+They have to be exactly the same name, but models.
+
+19
+00:01:35,400 --> 00:01:37,440
+You can change it if you want.
+
+20
+00:01:37,770 --> 00:01:45,990
+The first model that I want to work on is the category model, so I will write category .CS and
+
+21
+00:01:45,990 --> 00:01:47,760
+press the enter button.
+
+22
+00:01:48,590 --> 00:01:49,250
+Perfect.
+
+23
+00:01:49,250 --> 00:01:51,080
+It creates a class here.
+
+24
+00:01:51,080 --> 00:01:56,600
+And inside this class of category, we will be creating multiple properties.
+
+25
+00:01:57,050 --> 00:02:03,230
+Now, all the properties that we will create in the category class, they will basically be all the
+
+26
+00:02:03,230 --> 00:02:06,740
+columns that we want in category table.
+
+27
+00:02:07,490 --> 00:02:09,110
+How that mapping works.
+
+28
+00:02:09,110 --> 00:02:10,009
+Do not worry.
+
+29
+00:02:10,009 --> 00:02:14,260
+Right now I can write prop here and press tab.
+
+30
+00:02:14,270 --> 00:02:15,890
+It is a code snippet.
+
+31
+00:02:15,920 --> 00:02:21,650
+We have to press tab twice and it automatically creates a property.
+
+32
+00:02:21,740 --> 00:02:23,630
+I will call that as ID.
+
+33
+00:02:24,860 --> 00:02:32,150
+I have defined ID as the integer property and this will basically be the primary key of the table.
+
+34
+00:02:33,080 --> 00:02:40,520
+Next thing we have another property which will be string and let me call that name, which will be the
+
+35
+00:02:40,520 --> 00:02:41,750
+category name.
+
+36
+00:02:41,900 --> 00:02:46,880
+And last property that I want right now is display order.
+
+37
+00:02:47,270 --> 00:02:54,030
+If we have multiple categories, which category should be displayed first on the page that will define
+
+38
+00:02:54,030 --> 00:02:55,350
+the display order.
+
+39
+00:02:55,770 --> 00:02:56,820
+So perfect.
+
+40
+00:02:56,820 --> 00:02:59,610
+We have created a category class here.
+
+41
+00:02:59,610 --> 00:03:02,400
+In there we have added three properties.
+
+42
+00:03:02,790 --> 00:03:10,590
+Next item that I want to focus on is I already said that ID will be the primary key of the table, but
+
+43
+00:03:10,590 --> 00:03:13,770
+how can we explicitly define that in our model?
+
+44
+00:03:14,220 --> 00:03:18,750
+For that we have to use something called as data annotation.
+
+45
+00:03:19,170 --> 00:03:22,650
+Let me walk you through them in the next video.
+

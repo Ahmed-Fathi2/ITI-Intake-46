@@ -1,0 +1,124 @@
+1
+00:00:01,589 --> 00:00:08,730
+Bây giờ chúng tôi có dự án cồng kềnh và ở đó chúng tôi có thể thực hiện tất cả các thao tác CRUD trên các danh mục.
+
+2
+00:00:08,940 --> 00:00:13,080
+Và ngay bây giờ những gì chúng tôi đang làm là một dự án MVC.
+
+3
+00:00:13,440 --> 00:00:20,040
+Nhưng khi nói đến . net, thì cũng có một cách khác để bạn có thể viết
+
+4
+00:00:20,040 --> 00:00:26,940
+cùng mã đó là sử dụng các trang dao cạo thay vì sử dụng các mô hình, dạng xem và bộ điều khiển.
+
+5
+00:00:27,510 --> 00:00:34,830
+Và cách tiếp cận các trang dao cạo hơi giống với những gì chúng tôi đã làm trong các trang . net, nơi chúng tôi có mặt
+
+6
+00:00:34,830 --> 00:00:37,770
+sau và mặt trước.
+
+7
+00:00:38,490 --> 00:00:45,990
+Vì vậy, hãy để tôi dành chút thời gian và cố gắng sao chép cùng một dự án mà chúng tôi đã xây dựng bằng MVC, sử dụng các
+
+8
+00:00:45,990 --> 00:00:47,220
+trang dao cạo.
+
+9
+00:00:47,250 --> 00:00:54,420
+Bằng cách đó, trong một thời gian ngắn, bạn sẽ có một ý tưởng ngắn gọn về cách các trang dao cạo thực sự hoạt động.
+
+10
+00:00:55,230 --> 00:01:00,270
+Vì vậy, trong giải pháp hiện tại của chúng tôi ở đây, chúng tôi có thể có nhiều dự án.
+
+11
+00:01:00,550 --> 00:01:03,370
+Một dự án mà chúng tôi có là web cồng kềnh.
+
+12
+00:01:03,400 --> 00:01:09,970
+Hãy để tôi thêm một dự án mới ở đây và đó sẽ là loại trang dao cạo.
+
+13
+00:01:10,330 --> 00:01:15,970
+Nếu bạn gõ dao cạo ở đây, bạn có thể thấy chúng tôi có ASP. NET Core Web ứng dụng.
+
+14
+00:01:15,970 --> 00:01:19,840
+Và đây không phải là cái có chế độ xem mô hình hoặc bộ điều khiển.
+
+15
+00:01:20,020 --> 00:01:23,110
+Nó đang sử dụng nội dung các trang dao cạo.
+
+16
+00:01:23,620 --> 00:01:25,300
+Vì vậy, chúng tôi sẽ chọn đó.
+
+17
+00:01:25,330 --> 00:01:28,060
+Nhấn tên dự án nút tiếp theo.
+
+18
+00:01:28,060 --> 00:01:33,940
+Hãy để tôi gọi cái dao cạo web cồng kềnh đó, tạm thời gạch dưới và chọn nút tiếp theo.
+
+19
+00:01:34,090 --> 00:01:39,070
+Một lần nữa, xác thực sẽ không có ở đây và mọi thứ vẫn như cũ.
+
+20
+00:01:39,550 --> 00:01:47,320
+Chúng tôi sẽ nhấn nút tạo và điều đó sẽ thêm một dự án nữa vào giải pháp của chúng tôi, đó sẽ là dao cạo
+
+21
+00:01:47,320 --> 00:01:48,730
+web cồng kềnh.
+
+22
+00:01:49,700 --> 00:01:56,570
+Bây giờ, nếu tôi đặt dự án này là một dự án khởi động, thì nó sẽ chạy trang web cụ thể này chứ không phải trang web
+
+23
+00:01:56,570 --> 00:01:57,080
+kia.
+
+24
+00:01:57,080 --> 00:01:59,390
+Và hãy để tôi cố gắng chạy nó.
+
+25
+00:02:00,510 --> 00:02:07,110
+Khi bạn chạy dự án, bạn sẽ thấy trang mặc định trông giống hệt như chúng ta đã có đối với một
+
+26
+00:02:07,110 --> 00:02:07,950
+dự án MVC.
+
+27
+00:02:08,520 --> 00:02:12,030
+Nhưng lần này bạn sẽ nhận thấy một số điều khác biệt.
+
+28
+00:02:12,330 --> 00:02:16,200
+Nếu bạn để ý, URL ở đây trực tiếp là quyền riêng tư.
+
+29
+00:02:16,230 --> 00:02:23,370
+Trước đây nó là nhà, là bộ điều khiển và sau đó là quyền riêng tư, là phương thức hành động.
+
+30
+00:02:23,820 --> 00:02:28,470
+Nhưng khi chúng tôi sử dụng các trang dao cạo, chúng tôi không có bất kỳ bộ điều khiển nào.
+
+31
+00:02:29,460 --> 00:02:36,330
+Trong video tiếp theo, trước tiên hãy để tôi cho bạn thấy sự khác biệt giữa cả hai loại dự án.
+

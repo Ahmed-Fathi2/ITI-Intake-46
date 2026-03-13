@@ -1,0 +1,68 @@
+1
+00:00:01,890 --> 00:00:03,719
+Instructor: One thing that I want to show is
+
+2
+00:00:03,719 --> 00:00:08,720
+in UserController we are using application DbContext.
+
+3
+00:00:08,940 --> 00:00:10,680
+Typically throughout the application,
+
+4
+00:00:10,680 --> 00:00:13,080
+we have directly used unit of work
+
+5
+00:00:13,080 --> 00:00:17,340
+and we avoid using application DbContext directly
+
+6
+00:00:17,340 --> 00:00:18,513
+in the controller.
+
+7
+00:00:19,410 --> 00:00:22,530
+So I want you guys to take that as an assignment
+
+8
+00:00:22,530 --> 00:00:26,040
+and modify the code in this particular file.
+
+9
+00:00:26,040 --> 00:00:29,760
+That way you only have to deal with unit of work
+
+10
+00:00:29,760 --> 00:00:33,210
+and like we have helper method of UserManager,
+
+11
+00:00:33,210 --> 00:00:35,070
+we also have something called
+
+12
+00:00:35,070 --> 00:00:37,803
+as a role manager that we can use.
+
+13
+00:00:38,820 --> 00:00:40,320
+So take that assignment.
+
+14
+00:00:40,320 --> 00:00:42,630
+You might have to Google some things
+
+15
+00:00:42,630 --> 00:00:45,690
+on how to access roles and other properties
+
+16
+00:00:45,690 --> 00:00:49,140
+and I want you to figure out a way to use unit
+
+17
+00:00:49,140 --> 00:00:53,133
+of work rather than application DbContext here.
+

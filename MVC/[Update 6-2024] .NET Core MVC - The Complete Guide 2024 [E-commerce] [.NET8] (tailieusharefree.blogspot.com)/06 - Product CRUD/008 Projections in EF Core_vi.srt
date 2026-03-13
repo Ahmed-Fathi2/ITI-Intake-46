@@ -1,0 +1,180 @@
+1
+00:00:01,600 --> 00:00:09,100
+Điều chúng tôi muốn làm là khi chúng tôi chuyển đến sản phẩm và chúng tôi chỉnh sửa sản phẩm hoặc tạo sản phẩm, chúng tôi không
+
+2
+00:00:09,100 --> 00:00:10,600
+thể chuyển đổi danh mục.
+
+3
+00:00:10,870 --> 00:00:12,910
+Vì vậy, hãy để tôi sửa nó đầu tiên.
+
+4
+00:00:12,940 --> 00:00:15,970
+Chúng ta cần thêm một danh sách thả xuống ngay tại đây.
+
+5
+00:00:16,920 --> 00:00:19,140
+Trước khi chúng tôi thêm trình đơn thả xuống đó.
+
+6
+00:00:19,140 --> 00:00:24,060
+Chúng tôi cần một danh sách tất cả các danh mục mà chúng tôi có thể hiển thị trong danh sách thả xuống.
+
+7
+00:00:24,720 --> 00:00:28,180
+Vì vậy, trước tiên chúng ta cần truy xuất nó trong bộ điều khiển.
+
+8
+00:00:28,200 --> 00:00:35,460
+Nếu tôi mở bộ điều khiển sản phẩm khi chúng tôi chuyển nó trở lại chế độ xem, chúng tôi sẽ chuyển danh sách sản phẩm.
+
+9
+00:00:35,640 --> 00:00:42,600
+Trên hết, chúng tôi cần chuyển danh sách tất cả các danh mục hoặc chúng tôi có thể chuyển danh sách chọn lọc mà chúng tôi có thể sử
+
+10
+00:00:42,600 --> 00:00:44,730
+dụng để điền vào danh sách thả xuống.
+
+11
+00:00:45,300 --> 00:00:51,840
+Bây giờ có nhiều cách để truyền thứ đó, nhưng nếu chúng ta muốn truyền thứ đó cùng với đối tượng này, điều
+
+12
+00:00:51,840 --> 00:00:57,390
+đó là không thể bởi vì khi chúng ta quay lại, chúng ta chỉ có thể truyền một đối tượng.
+
+13
+00:00:57,600 --> 00:01:01,140
+Chúng ta sẽ xem cách vượt qua điều đó trong các video sắp tới.
+
+14
+00:01:01,140 --> 00:01:06,330
+Nhưng giả sử bạn chỉ muốn trả lại danh sách sản phẩm chứ không phải bất kỳ mẫu nào khác.
+
+15
+00:01:06,480 --> 00:01:12,120
+Trong trường hợp đó, nếu chúng ta phải vượt qua một số chức năng bổ sung, thì có nhiều cách khác.
+
+16
+00:01:12,120 --> 00:01:17,080
+Nhưng trước khi xem cách vượt qua nó, chúng ta thực sự phải truy xuất nó.
+
+17
+00:01:17,650 --> 00:01:24,280
+Vì vậy, để truy xuất nó, tôi sẽ lưu trữ nó trong vô số mục danh sách đã chọn.
+
+18
+00:01:25,080 --> 00:01:30,630
+Nếu tôi nhấn Ctrl dot, đây là bên trong hệ thống. bộ sưu tập. chung.
+
+19
+00:01:30,660 --> 00:01:40,050
+Đó là mục danh sách tôi liệt kê được và chọn bên trong Microsoft DOT, ASP. NET Core dot MVC dot rendering.
+
+20
+00:01:40,900 --> 00:01:47,770
+Bây giờ, nếu tôi nhấn F12 trên mục danh sách đã chọn, nó sẽ điều hướng tôi đến lớp ở đây và bạn có thể thấy với
+
+21
+00:01:47,770 --> 00:01:55,570
+mục danh sách đã chọn, chúng tôi có văn bản và giá trị và đó là những gì chúng tôi sẽ điền và sử dụng trong danh sách thả xuống
+
+22
+00:01:55,570 --> 00:01:56,770
+của mình.
+
+23
+00:01:58,170 --> 00:02:04,290
+Vì vậy, hãy để tôi gọi danh sách danh mục này bằng với việc chúng ta cần truy xuất tất cả các danh mục.
+
+24
+00:02:04,290 --> 00:02:07,710
+Vì vậy, đơn vị công việc, loại chấm, chấm, nhận tất cả.
+
+25
+00:02:07,800 --> 00:02:16,050
+Và sau đó nếu chúng tôi chỉ làm điều đó, nó sẽ không hoạt động vì ở đây nó đang truy xuất một tôi vô số danh mục và
+
+26
+00:02:16,050 --> 00:02:21,750
+chúng tôi phải chuyển đổi nó thành một tôi vô số mục danh sách được chọn.
+
+27
+00:02:23,020 --> 00:02:28,750
+Làm cách nào chúng tôi có thể thực hiện chuyển đổi động đó trong khi chúng tôi đang truy xuất một số thứ từ cơ sở dữ liệu?
+
+28
+00:02:29,200 --> 00:02:35,890
+Để làm được điều đó, chúng tôi có một thứ mạnh mẽ được gọi là phép chiếu trong lõi EF.
+
+29
+00:02:36,850 --> 00:02:43,560
+Để sử dụng các phép chiếu, chúng tôi sẽ nói DOT chọn và ở đó chúng tôi sẽ cung cấp cho nó một đối tượng ngẫu nhiên.
+
+30
+00:02:43,570 --> 00:02:45,100
+Hãy để tôi gọi đó là bạn.
+
+31
+00:02:45,100 --> 00:02:48,520
+Và đối tượng nào chúng ta muốn quay lại từ đây?
+
+32
+00:02:48,700 --> 00:02:54,370
+Chúng tôi muốn trả lại một mục danh sách chọn mới, vì vậy chúng tôi sẽ viết mục đó.
+
+33
+00:02:54,370 --> 00:02:58,750
+Và bên trong đó những thuộc tính nào nên được điền.
+
+34
+00:02:59,020 --> 00:03:01,810
+Hãy để tôi phá vỡ nó ra trong dòng khác nhau ở đây.
+
+35
+00:03:01,810 --> 00:03:07,480
+Chúng tôi muốn điền vào văn bản bên trong bạn. tên và giá trị.
+
+36
+00:03:07,510 --> 00:03:14,170
+Chúng tôi muốn ID của danh mục, vì vậy bạn. id chuyển đổi nó thành một chuỗi.
+
+37
+00:03:15,110 --> 00:03:22,520
+Bằng cách đó, điều sẽ xảy ra là mỗi đối tượng danh mục ở đây sẽ được chuyển đổi thành một mục danh sách chọn lọc và
+
+38
+00:03:22,520 --> 00:03:24,770
+nó sẽ có một văn bản và một giá trị.
+
+39
+00:03:25,040 --> 00:03:33,110
+Và đó là cách chúng ta có thể chuyển đổi một danh mục thành vô số mục danh sách được chọn bằng cách sử dụng phép chiếu.
+
+40
+00:03:33,800 --> 00:03:40,400
+Một lần nữa, đây là một tính năng rất mạnh mẽ bởi vì bạn có thể thấy trong một dòng khi bạn truy xuất một
+
+41
+00:03:40,400 --> 00:03:45,770
+cái gì đó, bạn có thể dễ dàng chỉ chọn một số cột chứ không phải tất cả các cột.
+
+42
+00:03:45,920 --> 00:03:50,630
+Bạn có thể chuyển đổi đối tượng đó thành một đối tượng mới và gán trực tiếp đối tượng đó.
+
+43
+00:03:51,200 --> 00:03:54,560
+Cùng với đó, chúng tôi có danh sách danh mục ngay tại đây.
+
+44
+00:03:54,770 --> 00:03:59,270
+Nhưng bây giờ câu hỏi là làm thế nào để chúng ta chuyển điều đó sang quan điểm của chúng ta?
+
+45
+00:03:59,690 --> 00:04:02,480
+Hãy để tôi làm điều đó trong video tiếp theo.
+

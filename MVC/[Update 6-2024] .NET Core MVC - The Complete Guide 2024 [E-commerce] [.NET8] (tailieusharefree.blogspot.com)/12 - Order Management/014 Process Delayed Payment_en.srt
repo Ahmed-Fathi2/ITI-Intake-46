@@ -1,0 +1,500 @@
+1
+00:00:02,040 --> 00:00:04,530
+Instructor: The last thing that I can think of right now
+
+2
+00:00:04,530 --> 00:00:09,530
+is pending, is if a order is shipped by a company,
+
+3
+00:00:09,750 --> 00:00:12,150
+then they need to make the payment,
+
+4
+00:00:12,150 --> 00:00:13,863
+which is a delayed payment.
+
+5
+00:00:15,030 --> 00:00:16,923
+So let me work on that.
+
+6
+00:00:18,000 --> 00:00:22,560
+So let me go back to the code and where we have that button,
+
+7
+00:00:22,560 --> 00:00:27,390
+we will handle that directly on the submit of the same form.
+
+8
+00:00:27,390 --> 00:00:30,180
+So we have button type = "submit."
+
+9
+00:00:30,180 --> 00:00:34,503
+We can create a post-action method with the name of detail.
+
+10
+00:00:37,290 --> 00:00:42,290
+Let me do that, right, well, I can add it anywhere.
+
+11
+00:00:43,230 --> 00:00:46,110
+Let me do that before the API CALLS.
+
+12
+00:00:46,110 --> 00:00:48,210
+I will create an action method
+
+13
+00:00:48,210 --> 00:00:52,710
+with the name of details, pay now but the action name,
+
+14
+00:00:52,710 --> 00:00:55,863
+I have explicitly defined that as details.
+
+15
+00:00:57,060 --> 00:01:01,380
+So if I save that and if I add a break point,
+
+16
+00:01:01,380 --> 00:01:05,519
+well, I will have to return back to the view.
+
+17
+00:01:05,519 --> 00:01:10,520
+Let me copy this and paste it here and let me try that.
+
+18
+00:01:13,080 --> 00:01:17,520
+If I go to manage order where we have the company,
+
+19
+00:01:17,520 --> 00:01:19,860
+hit pay now, perfect!
+
+20
+00:01:19,860 --> 00:01:23,793
+You can see it is hitting the endpoint and that looks good.
+
+21
+00:01:24,810 --> 00:01:26,580
+Right here what we want to do
+
+22
+00:01:26,580 --> 00:01:30,450
+is based on the order header id, I want to retrieve
+
+23
+00:01:30,450 --> 00:01:35,430
+and populate the order header and order details again
+
+24
+00:01:35,430 --> 00:01:40,140
+because when we are posting, we might lose some information.
+
+25
+00:01:40,140 --> 00:01:44,370
+So based on the ID, let me retrieve the order header
+
+26
+00:01:44,370 --> 00:01:46,983
+and order detail once again.
+
+27
+00:01:47,940 --> 00:01:50,850
+Then we want to work with Stripe.
+
+28
+00:01:50,850 --> 00:01:54,570
+So let me open the controller where we have Stripe,
+
+29
+00:01:54,570 --> 00:01:58,420
+inside the cart controller, scroll down
+
+30
+00:02:00,150 --> 00:02:05,150
+and let me copy everything right here with the Stripe logic.
+
+31
+00:02:07,290 --> 00:02:12,240
+Copy that and we will paste it right here.
+
+32
+00:02:12,240 --> 00:02:15,150
+This time when everything is successful,
+
+33
+00:02:15,150 --> 00:02:19,200
+let me create a new page for payment confirmation
+
+34
+00:02:19,200 --> 00:02:22,650
+and we will add the orderHeaderId.
+
+35
+00:02:22,650 --> 00:02:27,360
+So here let me say orderHeaderId is equal
+
+36
+00:02:27,360 --> 00:02:31,983
+to Order View Model.OrderHeader.Id.
+
+37
+00:02:33,060 --> 00:02:37,230
+Let me correct the case there and that looks good.
+
+38
+00:02:37,230 --> 00:02:41,490
+But if they cancel we want to redirect to the same page.
+
+39
+00:02:41,490 --> 00:02:43,680
+So that will be admin
+
+40
+00:02:43,680 --> 00:02:48,680
+and this payment confirmation will be in admin and order.
+
+41
+00:02:49,830 --> 00:02:54,830
+So cancel will be admin/order/details.
+
+42
+00:02:54,990 --> 00:02:59,250
+We need the order ID, that is again inside.
+
+43
+00:02:59,250 --> 00:03:02,850
+Whoops, let me add the dollar sign there
+
+44
+00:03:02,850 --> 00:03:05,863
+and Order View Model.OrderHeader.Id.
+
+45
+00:03:09,180 --> 00:03:10,860
+So that looks good.
+
+46
+00:03:10,860 --> 00:03:15,060
+Now for the line items, we need the shopping cart
+
+47
+00:03:15,060 --> 00:03:18,240
+and that is inside Order View Model.
+
+48
+00:03:18,240 --> 00:03:20,463
+Now we have the order detail.
+
+49
+00:03:21,450 --> 00:03:23,520
+Based on that we will get the price
+
+50
+00:03:23,520 --> 00:03:27,030
+and product title as well as the count.
+
+51
+00:03:27,030 --> 00:03:29,733
+We will add that. That looks good.
+
+52
+00:03:30,570 --> 00:03:34,860
+We scroll down, create session, that looks good.
+
+53
+00:03:34,860 --> 00:03:37,290
+Next, we have to update the ID,
+
+54
+00:03:37,290 --> 00:03:40,170
+once everything is successful.
+
+55
+00:03:40,170 --> 00:03:44,190
+So Order View Model.OrderHeader.Id
+
+56
+00:03:44,190 --> 00:03:48,993
+and we will pass the session ID and payment intent ID.
+
+57
+00:03:50,430 --> 00:03:54,210
+Perfect, I believe everything else looks good.
+
+58
+00:03:54,210 --> 00:03:57,240
+We do not need that redirect
+
+59
+00:03:57,240 --> 00:04:00,873
+and let me rebuild and apply the changes.
+
+60
+00:04:01,710 --> 00:04:03,330
+Before I test that,
+
+61
+00:04:03,330 --> 00:04:07,383
+let me create this payment confirmation real quick.
+
+62
+00:04:08,220 --> 00:04:11,580
+That will be similar to order confirmation.
+
+63
+00:04:11,580 --> 00:04:16,579
+So I can copy this, go to order controller
+
+64
+00:04:16,890 --> 00:04:19,983
+and paste it right here.
+
+65
+00:04:20,850 --> 00:04:25,083
+Rather than ID, I wrote that we will return orderHeaderId.
+
+66
+00:04:27,090 --> 00:04:29,190
+Let me modify that.
+
+67
+00:04:29,190 --> 00:04:33,120
+We will retrieve the order header based on that.
+
+68
+00:04:33,120 --> 00:04:36,870
+Well if you want, you can include the application user.
+
+69
+00:04:36,870 --> 00:04:38,973
+I do not think we will use that.
+
+70
+00:04:39,960 --> 00:04:42,160
+Then if the PaymentStatus == DelayedPayment,
+
+71
+00:04:45,330 --> 00:04:49,830
+we want to make sure that the payment actually went through.
+
+72
+00:04:49,830 --> 00:04:54,060
+So in this case this is an order by a company.
+
+73
+00:04:54,060 --> 00:04:57,900
+And then we will get the session, SessionId.
+
+74
+00:04:57,900 --> 00:05:01,290
+We will check if the payment status is paid.
+
+75
+00:05:01,290 --> 00:05:05,700
+In that case, we want to update the payment intent ID
+
+76
+00:05:05,700 --> 00:05:08,223
+and we want to update the status.
+
+77
+00:05:09,060 --> 00:05:14,060
+So status, we will add the ID there and that looks good.
+
+78
+00:05:15,330 --> 00:05:17,640
+But one thing that we have to modify is
+
+79
+00:05:17,640 --> 00:05:20,460
+we do not want to change the order status.
+
+80
+00:05:20,460 --> 00:05:22,530
+The only status we want to change
+
+81
+00:05:22,530 --> 00:05:24,570
+is the payment status
+
+82
+00:05:24,570 --> 00:05:27,480
+because the order might already be shipped.
+
+83
+00:05:27,480 --> 00:05:30,150
+So we do not want to modify that.
+
+84
+00:05:30,150 --> 00:05:35,150
+So here we will go to orderHeader.status
+
+85
+00:05:35,700 --> 00:05:37,773
+and we will use the same one.
+
+86
+00:05:38,700 --> 00:05:41,070
+I believe that looks good.
+
+87
+00:05:41,070 --> 00:05:45,060
+We do not worry about the shopping cart this time,
+
+88
+00:05:45,060 --> 00:05:47,880
+we only return back to the view
+
+89
+00:05:47,880 --> 00:05:50,550
+and we will return the orderHeaderId.
+
+90
+00:05:52,080 --> 00:05:55,020
+Let me create this view now.
+
+91
+00:05:55,020 --> 00:05:57,360
+This will be PaymentConfirmation,
+
+92
+00:05:57,360 --> 00:06:01,410
+let me copy that to avoid spelling mistake,
+
+93
+00:06:01,410 --> 00:06:04,380
+right-click, Add View
+
+94
+00:06:04,380 --> 00:06:06,273
+and we will paste that,
+
+95
+00:06:08,891 --> 00:06:10,980
+UI will be similar to what we have
+
+96
+00:06:10,980 --> 00:06:13,260
+for order confirmation.
+
+97
+00:06:13,260 --> 00:06:17,160
+Let me copy and paste that here
+
+98
+00:06:17,160 --> 00:06:20,283
+and here we will display Payment Successful.
+
+99
+00:06:21,270 --> 00:06:24,813
+We will display order number here, that looks good.
+
+100
+00:06:26,040 --> 00:06:28,350
+And right here we will display,
+
+101
+00:06:28,350 --> 00:06:31,050
+Payment has been applied successfully!
+
+102
+00:06:31,050 --> 00:06:35,103
+We will add a link to go back to the order details.
+
+103
+00:06:36,810 --> 00:06:38,880
+We have the asp route ID
+
+104
+00:06:38,880 --> 00:06:43,203
+and everything else that is needed for the order details.
+
+105
+00:06:44,370 --> 00:06:47,943
+Let me run this and see if everything works.
+
+106
+00:06:49,350 --> 00:06:52,830
+Now what we did so far is similar to what we learned
+
+107
+00:06:52,830 --> 00:06:55,770
+when we were processing the payment first time.
+
+108
+00:06:55,770 --> 00:06:58,533
+That is why I went a little bit fast.
+
+109
+00:06:59,520 --> 00:07:03,330
+Let me edit here and click pay now,
+
+110
+00:07:03,330 --> 00:07:07,440
+we hit our endpoint here, continue from there,
+
+111
+00:07:07,440 --> 00:07:09,930
+it should redirect to Stripe.
+
+112
+00:07:09,930 --> 00:07:11,400
+That works.
+
+113
+00:07:11,400 --> 00:07:12,813
+Let me make a payment.
+
+114
+00:07:13,710 --> 00:07:18,543
+We will hit the Pay button here and let's see what happens.
+
+115
+00:07:19,920 --> 00:07:21,930
+Perfect, payment successful.
+
+116
+00:07:21,930 --> 00:07:24,990
+And we have the order number eight.
+
+117
+00:07:24,990 --> 00:07:28,953
+Let me go to database and see if that works.
+
+118
+00:07:30,300 --> 00:07:32,583
+We need the order header here.
+
+119
+00:07:33,900 --> 00:07:36,450
+Perfect, payment status is approved
+
+120
+00:07:36,450 --> 00:07:39,450
+and order status remains as shipped
+
+121
+00:07:39,450 --> 00:07:43,593
+and we have the payment intent ID, that looks good.
+
+122
+00:07:44,760 --> 00:07:48,270
+So with that, we are now handling the delayed payment.
+
+123
+00:07:48,270 --> 00:07:51,810
+If we go back to that particular model,
+
+124
+00:07:51,810 --> 00:07:56,193
+to that same order, now we do not see the pay now button.
+
+125
+00:07:57,090 --> 00:08:00,903
+So all the logic and functionality are looking good.
+

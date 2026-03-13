@@ -1,0 +1,196 @@
+1
+00:00:01,680 --> 00:00:03,660
+Instructor: We created the interface for
+
+2
+00:00:03,660 --> 00:00:05,700
+category repository.
+
+3
+00:00:05,700 --> 00:00:09,690
+Let me add the implementation for that in repository
+
+4
+00:00:09,690 --> 00:00:14,493
+create a class, which will be category repository.
+
+5
+00:00:15,511 --> 00:00:17,460
+It'll be a public class
+
+6
+00:00:17,460 --> 00:00:21,873
+and that will implement the I category repository.
+
+7
+00:00:23,490 --> 00:00:28,490
+If we press control dot here, it'll implement the interface.
+
+8
+00:00:28,620 --> 00:00:30,795
+But when you see it implements, it is actually
+
+9
+00:00:30,795 --> 00:00:35,795
+implementing the add get, get all, remove, remove range.
+
+10
+00:00:36,450 --> 00:00:38,730
+Those implementation we already have
+
+11
+00:00:38,730 --> 00:00:41,340
+in our generic repository.
+
+12
+00:00:41,340 --> 00:00:43,440
+So we do not want to add that again.
+
+13
+00:00:43,440 --> 00:00:46,740
+We want to use the base functionality.
+
+14
+00:00:46,740 --> 00:00:50,790
+Because of that, along with the I category repository,
+
+15
+00:00:50,790 --> 00:00:54,210
+we also want to implement the repository
+
+16
+00:00:54,210 --> 00:00:56,880
+with the class of category
+
+17
+00:00:56,880 --> 00:01:01,683
+and that will come before the interface like this.
+
+18
+00:01:02,910 --> 00:01:06,349
+With that, you can see it does not give the error message
+
+19
+00:01:06,349 --> 00:01:10,533
+or the I category repository or other methods.
+
+20
+00:01:11,400 --> 00:01:14,070
+But now we have one error here which says there
+
+21
+00:01:14,070 --> 00:01:15,780
+is no argument that corresponds
+
+22
+00:01:15,780 --> 00:01:20,780
+to the required parameter DB of a repository category.
+
+23
+00:01:22,200 --> 00:01:26,130
+Well, if we go to the repository implementation here,
+
+24
+00:01:26,130 --> 00:01:29,747
+we are saying that application DB context will be provided
+
+25
+00:01:29,747 --> 00:01:34,020
+to you when the object will be created.
+
+26
+00:01:34,020 --> 00:01:36,181
+Typically, when we use dependency injection,
+
+27
+00:01:36,181 --> 00:01:39,120
+they are automatically injected,
+
+28
+00:01:39,120 --> 00:01:42,720
+but in this case, we are creating on line 12.
+
+29
+00:01:42,720 --> 00:01:47,160
+So what we can say is, Hey, our category repository
+
+30
+00:01:47,160 --> 00:01:49,950
+we want to get that application DB context
+
+31
+00:01:49,950 --> 00:01:52,680
+using dependency injection
+
+32
+00:01:52,680 --> 00:01:56,790
+and then we can add a constructor, get that here.
+
+33
+00:01:56,790 --> 00:01:59,490
+And when we get this implementation,
+
+34
+00:01:59,490 --> 00:02:04,470
+we want to pass this implementation to all the base class.
+
+35
+00:02:04,470 --> 00:02:07,680
+So here we can say base db.
+
+36
+00:02:07,680 --> 00:02:11,130
+That way, whatever DB context we get here,
+
+37
+00:02:11,130 --> 00:02:15,603
+we will pass to the repository and the error goes away.
+
+38
+00:02:16,680 --> 00:02:20,130
+The two methods that we have here are pretty simple.
+
+39
+00:02:20,130 --> 00:02:23,691
+When we have to save, we save that on underscore db
+
+40
+00:02:23,691 --> 00:02:25,950
+dot save changes.
+
+41
+00:02:25,950 --> 00:02:28,710
+And when we have to update the category,
+
+42
+00:02:28,710 --> 00:02:33,030
+we will say underscore db dot categories start update
+
+43
+00:02:33,030 --> 00:02:34,923
+and we pass the object.
+
+44
+00:02:36,780 --> 00:02:38,190
+Perfect.
+
+45
+00:02:38,190 --> 00:02:40,665
+So now we have a category repository
+
+46
+00:02:40,665 --> 00:02:43,710
+that has been implemented.
+
+47
+00:02:43,710 --> 00:02:46,430
+How can we replace the application TP context
+
+48
+00:02:46,430 --> 00:02:51,430
+that we are using here with our actual repository?
+
+49
+00:02:51,870 --> 00:02:54,783
+Let me show you that in the next video.
+

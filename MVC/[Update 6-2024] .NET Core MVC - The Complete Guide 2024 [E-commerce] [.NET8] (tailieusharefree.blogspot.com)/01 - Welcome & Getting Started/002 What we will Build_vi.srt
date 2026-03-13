@@ -1,0 +1,516 @@
+1
+00:00:01,650 --> 00:00:04,360
+Tôi cực kỳ phấn khích cho video này.
+
+2
+00:00:04,380 --> 00:00:10,620
+Trong video này, chúng ta sẽ thấy ứng dụng cuối cùng mà chúng ta sẽ xây dựng trong khóa học này.
+
+3
+00:00:11,490 --> 00:00:12,690
+Trên trang chủ đây.
+
+4
+00:00:12,690 --> 00:00:19,470
+Bạn có thể thấy chúng tôi có các sản phẩm đang được hiển thị bằng hình ảnh và chúng tôi có một số mức giá ngay tại đây.
+
+5
+00:00:19,800 --> 00:00:25,950
+Chúng tôi chưa đăng nhập vào ứng dụng ở đây và chúng tôi không có mặt hàng nào trong giỏ hàng.
+
+6
+00:00:26,610 --> 00:00:33,600
+Khi chúng tôi nhấp vào chi tiết ở đây, nó sẽ hiển thị một bản tóm tắt chi tiết đẹp mắt, dựa trên số lượng bạn đặt hàng,
+
+7
+00:00:33,630 --> 00:00:36,360
+bạn sẽ nhận được mức giá chiết khấu.
+
+8
+00:00:36,660 --> 00:00:41,630
+Vì vậy, nếu bạn đặt hàng số lượng 51 ở đây, giá sẽ là 85.
+
+9
+00:00:41,730 --> 00:00:43,860
+Hãy để tôi thêm nó vào giỏ hàng.
+
+10
+00:00:44,540 --> 00:00:48,110
+Khi chúng ta chọn Add to Cart, chúng ta cần đăng nhập.
+
+11
+00:00:48,650 --> 00:00:53,780
+Nếu bạn không có tài khoản, bạn sẽ phải đăng ký làm người dùng mới.
+
+12
+00:00:54,460 --> 00:00:56,470
+Khi bạn nhấn đăng ký tại đây.
+
+13
+00:00:56,470 --> 00:00:58,690
+Chúng tôi đã xây dựng trong xác nhận.
+
+14
+00:00:59,110 --> 00:01:04,720
+Bây giờ bạn có thể đăng ký tài khoản tại đây hoặc có thể sử dụng Facebook để đăng nhập.
+
+15
+00:01:05,319 --> 00:01:11,350
+Tôi đã đăng ký người dùng của mình bằng Facebook, vì vậy nó sẽ trực tiếp đăng nhập cho tôi.
+
+16
+00:01:12,010 --> 00:01:19,060
+Vì vậy, ở đây chúng tôi muốn đặt hàng với số lượng 51 thêm vào giỏ hàng và hoàn thiện.
+
+17
+00:01:19,090 --> 00:01:24,190
+Chúng tôi có một giỏ thông báo máy nướng bánh mì đẹp được cập nhật thành công.
+
+18
+00:01:25,020 --> 00:01:26,720
+Nếu chúng tôi ra tòa ở đây?
+
+19
+00:01:26,730 --> 00:01:27,630
+Hoàn hảo.
+
+20
+00:01:27,660 --> 00:01:30,930
+Bạn có thể thấy giá chúng tôi đang nhận được là 85.
+
+21
+00:01:30,930 --> 00:01:32,460
+Và điều đó có vẻ tốt.
+
+22
+00:01:33,540 --> 00:01:40,530
+Hãy để tôi đi đến nhà ở đây và để tôi thêm một vài mặt hàng vào giỏ hàng ở đây.
+
+23
+00:01:41,470 --> 00:01:42,970
+Trông tôt đây.
+
+24
+00:01:46,830 --> 00:01:47,580
+Hoàn hảo.
+
+25
+00:01:47,820 --> 00:01:51,450
+Bây giờ, trong giỏ hàng, chúng tôi hiển thị tổng số tiền lớn.
+
+26
+00:01:51,480 --> 00:01:54,720
+Người dùng có thể xóa bất kỳ mục nào nếu họ muốn.
+
+27
+00:01:54,810 --> 00:01:59,580
+Ngoài ra, họ có thể trực tiếp sửa đổi số lượng, như bạn có thể thấy.
+
+28
+00:01:59,820 --> 00:02:06,900
+Khi họ hài lòng với giỏ hàng ở đây, chúng tôi sẽ nhấp vào tóm tắt và dựa trên thông tin xác thực người dùng mà
+
+29
+00:02:06,900 --> 00:02:10,919
+chúng tôi có, nó sẽ hiển thị một số chi tiết về người dùng.
+
+30
+00:02:11,340 --> 00:02:16,290
+Người dùng sẽ điền chi tiết giao hàng của họ và chọn đặt hàng.
+
+31
+00:02:16,710 --> 00:02:22,380
+Bây giờ khi họ chọn đặt hàng, nó sẽ chuyển hướng họ đến Stripe để thanh toán.
+
+32
+00:02:22,890 --> 00:02:31,170
+Chúng tôi sẽ sử dụng thẻ tín dụng giả với Stripe, là 424242 và sẽ được sử dụng để thử nghiệm vì hiện tại chúng
+
+33
+00:02:31,170 --> 00:02:33,540
+tôi đang ở chế độ thử nghiệm.
+
+34
+00:02:34,230 --> 00:02:41,700
+Khi chúng tôi nhấn nút thanh toán tại đây, nó sẽ chấp nhận thanh toán và nó sẽ chuyển hướng chúng tôi trở lại trang
+
+35
+00:02:41,730 --> 00:02:46,960
+web nơi chúng tôi có thể thấy đơn hàng được đặt thành công cùng với ID đơn hàng.
+
+36
+00:02:48,100 --> 00:02:55,450
+Những việc khác mà người dùng có thể làm là vào phần quản lý đơn hàng và họ có thể xem đơn hàng của mình cũng như trạng thái đơn hàng.
+
+37
+00:02:55,780 --> 00:03:02,950
+Chúng tôi có thông tin theo dõi và nhà cung cấp dịch vụ sẽ hiển thị sau khi đơn đặt hàng được giao và họ có thể thấy
+
+38
+00:03:02,950 --> 00:03:05,560
+trạng thái đơn hàng được phê duyệt.
+
+39
+00:03:05,920 --> 00:03:10,750
+Đó là chức năng mà một khách hàng có thể làm từ trang web.
+
+40
+00:03:11,200 --> 00:03:14,770
+Nhưng trên hết, chúng tôi cũng có người dùng quản trị viên.
+
+41
+00:03:15,430 --> 00:03:21,610
+Vì vậy, bây giờ hãy để tôi đăng nhập với tư cách quản trị viên và cho bạn thấy mọi thứ mà quản trị viên có thể làm là gì.
+
+42
+00:03:22,340 --> 00:03:28,550
+Một điều mà bạn có thể nhận thấy ngay là khi quản trị viên đăng nhập, chúng tôi có một thứ gọi là
+
+43
+00:03:28,550 --> 00:03:30,620
+quản lý nội dung ngay tại đây.
+
+44
+00:03:31,670 --> 00:03:35,150
+Bên trong quản trị viên của họ có thể quản lý tất cả các danh mục.
+
+45
+00:03:35,360 --> 00:03:37,250
+Họ có thể tạo danh mục mới.
+
+46
+00:03:37,250 --> 00:03:41,060
+Họ có thể cập nhật các danh mục hiện có hoặc có thể xóa chúng.
+
+47
+00:03:41,810 --> 00:03:44,300
+Họ có thể làm điều tương tự cho sản phẩm.
+
+48
+00:03:44,450 --> 00:03:51,260
+Các chức năng thô sơ của sản phẩm phức tạp hơn một chút và ở đây chúng tôi có một bảng dữ liệu đẹp để họ có
+
+49
+00:03:51,260 --> 00:03:52,280
+thể tìm kiếm.
+
+50
+00:03:52,310 --> 00:03:56,540
+Họ có một số bộ lọc ưa thích ở đây cùng với việc sắp xếp.
+
+51
+00:03:57,430 --> 00:03:59,860
+Nếu họ cố gắng chỉnh sửa bất kỳ sản phẩm nào.
+
+52
+00:03:59,890 --> 00:04:00,850
+Hoàn hảo.
+
+53
+00:04:00,880 --> 00:04:07,840
+Chúng tôi có một trình soạn thảo văn bản đa dạng thức đẹp mắt ở đây, nơi họ có thể làm cho phần mô tả trở nên lạ mắt như họ muốn.
+
+54
+00:04:08,560 --> 00:04:15,370
+Chúng tôi thấy hình ảnh hiện có ở đây và chúng tôi có các chi tiết khác như giá niêm yết là gì?
+
+55
+00:04:15,370 --> 00:04:16,720
+Giá cả nên là bao nhiêu?
+
+56
+00:04:16,720 --> 00:04:22,060
+Nếu số lượng là 1 đến 50, hơn 50 và hơn 100.
+
+57
+00:04:22,730 --> 00:04:29,780
+Chúng tôi có một danh mục thả xuống từ đó chúng tôi có thể chỉ định một sản phẩm, một danh mục và sử dụng danh mục đó, chúng tôi có thể chỉ
+
+58
+00:04:29,780 --> 00:04:32,000
+định một danh mục cho sản phẩm của mình.
+
+59
+00:04:32,870 --> 00:04:39,110
+Cuối cùng, nếu người dùng muốn thay thế hình ảnh này bằng hình ảnh khác, họ có thể tải lên hình ảnh mới
+
+60
+00:04:39,110 --> 00:04:41,060
+tại đây và nhấn nút cập nhật.
+
+61
+00:04:42,370 --> 00:04:44,230
+Khi họ cố gắng xóa sản phẩm.
+
+62
+00:04:44,230 --> 00:04:50,170
+Chúng tôi có một thông báo cảnh báo thú vị, hấp dẫn khi họ yêu cầu xác nhận.
+
+63
+00:04:51,190 --> 00:04:55,360
+Vì vậy, đó là chức năng CRUD với sản phẩm và danh mục.
+
+64
+00:04:55,870 --> 00:05:00,130
+Trên hết, chúng tôi sẽ có một chức năng đặc biệt dành cho các công ty.
+
+65
+00:05:00,430 --> 00:05:03,820
+Vì vậy, sẽ có bốn loại người dùng trong trang web của chúng tôi.
+
+66
+00:05:03,850 --> 00:05:07,960
+Hãy để tôi chỉ ra rằng quản trị viên cũng có thể tạo người dùng.
+
+67
+00:05:08,470 --> 00:05:14,380
+Đây là tạo một tài khoản bởi quản trị viên nơi quản trị viên có thể chọn vai trò của người dùng.
+
+68
+00:05:14,650 --> 00:05:21,220
+Họ có thể tạo tài khoản quản trị viên, họ có thể tạo nhân viên, họ có thể tạo tài khoản công ty và người
+
+69
+00:05:21,220 --> 00:05:23,230
+dùng cuối là khách hàng.
+
+70
+00:05:24,090 --> 00:05:29,820
+Giờ đây, sự khác biệt giữa tài khoản công ty và tài khoản khách hàng là người dùng công ty có thể đặt hàng mà không
+
+71
+00:05:29,820 --> 00:05:30,990
+cần thanh toán.
+
+72
+00:05:31,350 --> 00:05:35,550
+Và đó là một kịch bản phổ biến khi các công ty đang đặt hàng.
+
+73
+00:05:35,640 --> 00:05:37,650
+Thông thường họ đặt hàng.
+
+74
+00:05:37,650 --> 00:05:42,030
+Sau khi đơn đặt hàng được vận chuyển, họ có 30 ngày để thực hiện thanh toán.
+
+75
+00:05:42,540 --> 00:05:49,290
+Nhưng một khách hàng như bạn và tôi, khi chúng tôi đặt hàng trên một số trang web, chúng tôi phải thanh
+
+76
+00:05:49,290 --> 00:05:54,060
+toán ngay lập tức và chúng tôi đã thấy khi khách hàng đặt hàng.
+
+77
+00:05:54,970 --> 00:05:56,500
+Bây giờ hãy để tôi làm một việc.
+
+78
+00:05:56,500 --> 00:05:58,540
+Đăng ký tài khoản công ty.
+
+79
+00:05:58,780 --> 00:06:05,260
+Ngay sau khi tôi chọn công ty ở đây, bạn có thể thấy một danh sách thả xuống mới xuất hiện ở đây nơi người dùng phải chọn
+
+80
+00:06:05,260 --> 00:06:07,540
+tài khoản này thuộc về công ty nào.
+
+81
+00:06:07,990 --> 00:06:13,090
+Vì vậy, quy trình mà chúng tôi đang hình dung là một công ty muốn mua hàng từ trang web của chúng tôi.
+
+82
+00:06:13,120 --> 00:06:19,480
+Trước tiên, chúng tôi sẽ đăng ký chúng trên tab công ty tại đây, nơi chúng tôi có thể tạo một công ty mới.
+
+83
+00:06:19,510 --> 00:06:25,600
+Khi công ty đó đã được tạo, thì chúng tôi sẽ tạo tài khoản cho công ty đó.
+
+84
+00:06:26,110 --> 00:06:30,160
+Vì vậy, giả sử chúng tôi đang tạo email này cho các giải pháp Công nghệ.
+
+85
+00:06:30,280 --> 00:06:31,840
+Cho em đăng ký với.
+
+86
+00:06:33,330 --> 00:06:39,840
+Khi chúng tôi đăng ký, chúng tôi nhận được thông báo về máy nướng bánh mì và ngay bây giờ chúng tôi đã đăng nhập với tư cách quản trị viên.
+
+87
+00:06:40,480 --> 00:06:45,940
+Vì vậy, tôi sẽ phải đăng xuất tại đây và tôi sẽ đăng nhập bằng tài khoản công ty.
+
+88
+00:06:45,940 --> 00:06:47,290
+Và hoàn hảo.
+
+89
+00:06:47,320 --> 00:06:52,360
+Chúng tôi không thấy bất kỳ quản lý nội dung nào chỉ hiển thị cho quản trị viên.
+
+90
+00:06:53,460 --> 00:06:55,930
+Chúng tôi có thể thêm các mặt hàng vào giỏ hàng ở đây.
+
+91
+00:06:55,950 --> 00:06:58,110
+Hãy để tôi làm điều đó thực sự nhanh chóng.
+
+92
+00:07:01,520 --> 00:07:05,600
+Và chúng tôi sẽ đặt hàng khi chúng tôi đi đến phần tóm tắt.
+
+93
+00:07:05,600 --> 00:07:12,890
+Lần này, các chi tiết được điền tự động dựa trên những gì chúng tôi có khi người dùng đăng ký.
+
+94
+00:07:12,920 --> 00:07:17,720
+Tất nhiên họ có thể thay đổi điều đó nếu họ muốn, nhưng chúng tôi sẽ không giữ nguyên điều đó.
+
+95
+00:07:17,720 --> 00:07:23,990
+Và đối với người dùng là công ty khi họ đặt hàng, chúng tôi trực tiếp hiển thị cho họ trang xác nhận với
+
+96
+00:07:23,990 --> 00:07:25,010
+số đơn đặt hàng.
+
+97
+00:07:25,280 --> 00:07:28,160
+Vậy là đơn hàng đã được đặt thành công.
+
+98
+00:07:28,520 --> 00:07:31,100
+Họ không yêu cầu bất kỳ khoản thanh toán nào.
+
+99
+00:07:31,850 --> 00:07:36,290
+Bây giờ để tôi đăng xuất lại và để tôi đăng nhập với tư cách quản trị viên.
+
+100
+00:07:37,160 --> 00:07:41,810
+Quản trị viên sẽ bắt đầu quản lý tất cả các đơn đặt hàng khi chúng bắt đầu đến.
+
+101
+00:07:42,320 --> 00:07:47,600
+Chúng tôi đã quản lý đơn đặt hàng ở đây cho quản trị viên và họ có thể xem tất cả các đơn đặt hàng.
+
+102
+00:07:48,140 --> 00:07:55,280
+Đơn đặt hàng đầu tiên được đặt ở đây, bạn có thể thấy đơn hàng đó đã được phê duyệt và ở đây chúng ta có thể thấy ID mục đích thanh toán.
+
+103
+00:07:55,640 --> 00:07:57,680
+Điều đó có nghĩa là thanh toán đã được thực hiện.
+
+104
+00:07:57,680 --> 00:08:05,400
+Bạn có thể thấy trạng thái thanh toán cũng được phê duyệt và ngay bây giờ trạng thái đơn hàng đã được phê duyệt, Quản trị viên có
+
+105
+00:08:05,400 --> 00:08:10,500
+thể nhấp vào bắt đầu xử lý và bạn có thể thấy trạng thái đơn hàng hiện đang được xử lý.
+
+106
+00:08:10,960 --> 00:08:13,990
+Trạng thái tiếp theo có thể là đơn đặt hàng.
+
+107
+00:08:14,260 --> 00:08:21,670
+Nhưng khi họ bấm đặt hàng, chúng tôi có thông báo nhập thông tin hãng vận chuyển và theo dõi.
+
+108
+00:08:22,150 --> 00:08:29,500
+Sau khi họ nhập vào đó và chọn đơn hàng giao hàng, hoàn hảo, đơn hàng sẽ được giao và một khi đơn hàng đã được giao,
+
+109
+00:08:29,500 --> 00:08:31,810
+đơn hàng sẽ không thể bị hủy nữa.
+
+110
+00:08:32,890 --> 00:08:39,520
+Ngoài ra, nếu quản trị viên muốn cập nhật bất kỳ thông tin nào trong đơn hàng, họ có thể làm điều đó và chọn cập nhật
+
+111
+00:08:39,520 --> 00:08:40,419
+đơn hàng.
+
+112
+00:08:40,419 --> 00:08:41,140
+Chi tiết.
+
+113
+00:08:41,799 --> 00:08:47,020
+Đây là tất cả các chức năng chỉ dành cho người dùng quản trị viên.
+
+114
+00:08:47,890 --> 00:08:49,360
+Hãy để tôi quay trở lại đây.
+
+115
+00:08:49,360 --> 00:08:53,860
+Và chúng tôi có đơn đặt hàng tiếp theo ở đây, dành cho tài khoản công ty.
+
+116
+00:08:53,890 --> 00:08:58,810
+Ở đó, chúng tôi không có bất kỳ khoản thanh toán, ý định, ID và trạng thái thanh toán nào.
+
+117
+00:08:58,840 --> 00:09:02,230
+Bạn có thể thấy nó được chấp thuận cho thanh toán chậm.
+
+118
+00:09:02,680 --> 00:09:06,770
+Vì vậy, trong trường hợp đó, quản trị viên sẽ bắt đầu xử lý.
+
+119
+00:09:06,790 --> 00:09:14,530
+Họ sẽ giao đơn hàng tại đây và sau khi đơn hàng được giao, họ có nút thanh toán ngay được kích hoạt.
+
+120
+00:09:15,480 --> 00:09:23,040
+Nếu chúng tôi quay lại đơn đặt hàng, quản trị viên có thể nhận thanh toán hoặc nếu người dùng công ty đăng nhập, họ có
+
+121
+00:09:23,040 --> 00:09:24,450
+thể tự thanh toán.
+
+122
+00:09:25,230 --> 00:09:31,470
+Họ có thể vào quản lý đơn đặt hàng tại đây và khi họ chỉnh sửa, họ có thể thanh toán.
+
+123
+00:09:31,920 --> 00:09:39,750
+Nó sẽ chuyển hướng họ trở lại Stripe và đó là cách chúng tôi sẽ nhận khoản thanh toán đó và hoàn tất đơn hàng.
+
+124
+00:09:40,760 --> 00:09:46,310
+Chúng tôi có thể quay lại nếu muốn và thực hiện khoản thanh toán đó sau nếu chúng tôi muốn.
+
+125
+00:09:47,470 --> 00:09:53,140
+Nhưng đó là quy trình chung mà chúng tôi có cho trang web của mình theo thời lượng của video.
+
+126
+00:09:53,170 --> 00:10:00,040
+Bạn có thể thấy có bao nhiêu điều chúng tôi sẽ trình bày trong trang web này và đó sẽ là một khóa học rất dài.
+
+127
+00:10:00,220 --> 00:10:03,070
+Nhưng điều đó không có nghĩa là bạn phải sợ hãi.
+
+128
+00:10:03,100 --> 00:10:10,780
+Đó là một điều tốt vì với khóa học dài đó, chúng tôi sẽ đề cập đến nhiều chủ đề khác nhau với . net để đảm bảo rằng khi xem hết video
+
+129
+00:10:10,780 --> 00:10:17,830
+này, bạn sẽ cảm thấy tự hào về ứng dụng mà mình đã xây dựng.
+

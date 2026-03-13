@@ -1,0 +1,740 @@
+1
+00:00:00,820 --> 00:00:06,220
+Bây giờ chúng tôi biết xem dữ liệu xem lại và chúng tôi đang sử dụng dữ liệu đó trong ứng dụng của mình.
+
+2
+00:00:06,430 --> 00:00:08,200
+Nhưng hãy nghĩ về điều đó.
+
+3
+00:00:08,230 --> 00:00:12,850
+Khi bạn có một ứng dụng và nếu nó phát triển, bạn sẽ có nhiều dữ liệu hơn.
+
+4
+00:00:12,880 --> 00:00:17,320
+Điều gì sẽ xảy ra nếu bạn có 10 dữ liệu lượt xem và 5 lượt xem lại mà bạn đang sử dụng?
+
+5
+00:00:17,650 --> 00:00:23,740
+Mọi thứ sẽ bắt đầu trở nên tồi tệ bởi vì khi bạn nhìn vào chế độ xem, bạn sẽ không thể dễ
+
+6
+00:00:23,740 --> 00:00:26,620
+dàng xác định được điều này đến từ đâu.
+
+7
+00:00:27,340 --> 00:00:33,030
+Và lý do tôi nói là quan điểm của chúng tôi bị ràng buộc chặt chẽ với mẫu sản phẩm này.
+
+8
+00:00:33,040 --> 00:00:36,790
+Nhưng mô hình sản phẩm không có tất cả dữ liệu cần thiết.
+
+9
+00:00:37,440 --> 00:00:43,410
+Vì vậy, thông thường tôi tránh sử dụng túi xem và xem dữ liệu càng nhiều càng tốt.
+
+10
+00:00:43,800 --> 00:00:49,740
+Giải pháp thay thế cho điều đó là liên kết chặt chẽ chế độ xem của bạn với đối tượng mà bạn muốn.
+
+11
+00:00:49,860 --> 00:00:56,790
+Nếu đối tượng không phải là một đối tượng đơn giản, bạn có thể tạo một sự kết hợp của đối tượng và được gọi là mô
+
+12
+00:00:56,790 --> 00:00:57,540
+hình xem.
+
+13
+00:00:58,020 --> 00:00:59,100
+Xem Mô hình.
+
+14
+00:00:59,100 --> 00:01:03,780
+Như tên gợi ý, nó là một mô hình dành riêng cho một chế độ xem.
+
+15
+00:01:04,650 --> 00:01:12,360
+Vì vậy, hãy để tôi chỉ cho bạn cách thực hiện điều đó và sau đó mọi thứ sẽ có ý nghĩa hơn nhiều trong thư mục mô hình của chúng ta.
+
+16
+00:01:12,390 --> 00:01:17,080
+Để tôi click chuột phải, thêm một thư mục mới với tên là View model.
+
+17
+00:01:17,100 --> 00:01:23,370
+Tôi sẽ phải dừng ứng dụng ở đây và tôi sẽ gọi chế độ xem đó là models.
+
+18
+00:01:24,240 --> 00:01:27,450
+Bên trong đó tôi sẽ thêm một tệp lớp mới.
+
+19
+00:01:28,260 --> 00:01:33,960
+Và tôi sẽ gọi đó là mô hình xem sản phẩm trong đó VM là viết tắt của Mô hình xem.
+
+20
+00:01:35,100 --> 00:01:42,300
+Nó sẽ là một lớp công khai và chúng tôi sẽ suy nghĩ về những gì sẽ là tất cả các thực thể mà chúng tôi muốn cho sản phẩm của mình.
+
+21
+00:01:42,540 --> 00:01:44,490
+Chúng tôi muốn một đối tượng sản phẩm.
+
+22
+00:01:44,490 --> 00:01:50,130
+Vì vậy, trước tiên hãy để tôi tạo thuộc tính đó, đây sẽ là sản phẩm.
+
+23
+00:01:53,670 --> 00:01:54,270
+Kế tiếp.
+
+24
+00:01:54,270 --> 00:01:57,990
+Những gì chúng tôi muốn là một AI có thể đếm được để giữ trình đơn thả xuống.
+
+25
+00:01:58,410 --> 00:02:05,160
+Vì vậy, chúng tôi sẽ nói chỗ dựa và đó sẽ là vô số AI của mục danh sách được chọn.
+
+26
+00:02:08,810 --> 00:02:15,110
+Khi chúng tôi cần mục danh sách chọn ở đây, chúng tôi sẽ phải cài đặt gói NuGet,
+
+27
+00:02:15,140 --> 00:02:19,250
+Microsoft DOT, ASP. NET Core DOT, MVC dot Vue.
+
+28
+00:02:20,930 --> 00:02:22,040
+Tên tài sản.
+
+29
+00:02:22,040 --> 00:02:24,710
+Chúng tôi sẽ gọi danh sách danh mục đó ở đây.
+
+30
+00:02:24,860 --> 00:02:28,010
+Chính xác những gì chúng tôi có trong bộ điều khiển sản phẩm.
+
+31
+00:02:28,830 --> 00:02:30,230
+Bây giờ bên trong tạo.
+
+32
+00:02:30,240 --> 00:02:36,360
+Chúng tôi đã không chuyển bất kỳ thứ gì đến Chế độ xem, nhưng nếu chúng tôi chuyển đến chế độ xem của mình, chúng tôi đang sử dụng sản phẩm.
+
+33
+00:02:36,390 --> 00:02:40,030
+Bây giờ những gì chúng ta sẽ sử dụng là mô hình xem sản phẩm.
+
+34
+00:02:40,050 --> 00:02:48,330
+Chúng tôi không thể truy cập trực tiếp vào đó, vì vậy chúng tôi sẽ sử dụng các mô hình chấm cuốn sách cồng kềnh, mô hình xem điểm dot Chúng
+
+35
+00:02:48,330 --> 00:02:50,100
+tôi có mô hình xem sản phẩm.
+
+36
+00:02:50,910 --> 00:02:55,680
+Bây giờ, ViewModel là thứ mà chúng tôi sẽ sử dụng trong nhiều chế độ xem.
+
+37
+00:02:55,860 --> 00:03:02,010
+Vì vậy, thật hợp lý khi thêm phần này vào câu lệnh nhập của chúng tôi bên trong khu vực quản trị.
+
+38
+00:03:02,040 --> 00:03:03,690
+Xem nhập khẩu.
+
+39
+00:03:04,020 --> 00:03:09,300
+Hãy để tôi thêm câu lệnh sử dụng đó và tôi cũng sẽ thêm câu lệnh này.
+
+40
+00:03:09,330 --> 00:03:12,840
+Sao chép nó để xem khách hàng của chúng tôi.
+
+41
+00:03:12,870 --> 00:03:14,820
+Xem nhập khẩu.
+
+42
+00:03:15,240 --> 00:03:18,510
+Và chúng tôi cũng có chế độ xem toàn cầu.
+
+43
+00:03:19,720 --> 00:03:20,840
+Hoàn hảo.
+
+44
+00:03:20,860 --> 00:03:23,530
+Hãy để tôi lưu và đóng tất cả điều đó.
+
+45
+00:03:23,530 --> 00:03:31,420
+Và bây giờ chúng tôi có thể xóa mô hình xem sản phẩm này sẽ được phát hiện khi chúng tôi thêm mô hình này vào đây, tiêu đề của chúng tôi là
+
+46
+00:03:31,420 --> 00:03:32,650
+bên trong sản phẩm.
+
+47
+00:03:32,650 --> 00:03:36,010
+Vì vậy, chúng tôi sẽ phải thêm nó ở tất cả các nơi.
+
+48
+00:03:36,700 --> 00:03:40,810
+Hãy để tôi sửa đổi điều đó cho tất cả các thuộc tính ở đây.
+
+49
+00:03:40,840 --> 00:03:41,980
+Rất tiếc.
+
+50
+00:04:10,660 --> 00:04:12,760
+Bạn có thể thấy các lỗi đã biến mất.
+
+51
+00:04:12,760 --> 00:04:18,180
+Và sau đó, nơi chúng tôi có các mục ASP, chúng tôi không muốn có bất kỳ dữ liệu xem nào.
+
+52
+00:04:18,190 --> 00:04:22,720
+Chúng tôi muốn truy cập trực tiếp từ mô hình xem sản phẩm của mình.
+
+53
+00:04:23,170 --> 00:04:26,860
+Nếu chúng ta quay trở lại, chúng ta có danh sách danh mục ở đây.
+
+54
+00:04:27,280 --> 00:04:32,770
+Bây giờ nếu bạn cố truy cập danh sách danh mục trực tiếp tại đây, nó sẽ không hoạt động.
+
+55
+00:04:32,980 --> 00:04:39,130
+Vì vậy, về cơ bản, khi bạn phải truy cập trực tiếp vào thứ gì đó từ mô hình và nếu nó không hoạt động,
+
+56
+00:04:39,130 --> 00:04:42,940
+bạn luôn có thể truy cập mô hình bằng cách sử dụng dấu hiệu.
+
+57
+00:04:43,240 --> 00:04:47,800
+Vì vậy, chúng tôi có thể nói thêm mô hình và ở đó chúng tôi có danh sách danh mục.
+
+58
+00:04:48,370 --> 00:04:50,470
+Bây giờ sản phẩm ở đây đang hoạt động.
+
+59
+00:04:50,470 --> 00:04:57,370
+Nhưng nếu vì lý do nào đó, điều này không hoạt động, bạn có thể truy cập sản phẩm bằng cách viết tại model dot product.
+
+60
+00:04:57,670 --> 00:05:00,460
+Cả hai đều giống hệt nhau.
+
+61
+00:05:01,720 --> 00:05:02,790
+Rất hoàn hảo.
+
+62
+00:05:02,800 --> 00:05:04,780
+Chúng tôi đang sử dụng mô hình xem của chúng tôi.
+
+63
+00:05:04,810 --> 00:05:06,250
+Hãy để tôi cuộn xuống.
+
+64
+00:05:06,340 --> 00:05:09,370
+Tôi tin rằng mọi thứ khác đang hoạt động.
+
+65
+00:05:09,400 --> 00:05:13,700
+Hãy để tôi xây dựng dự án ở đây và xem nó có hoạt động không.
+
+66
+00:05:14,060 --> 00:05:19,190
+Chúng tôi vẫn phải sửa đổi bộ điều khiển của mình, nhưng hãy để tôi làm điều đó ngay bây giờ.
+
+67
+00:05:19,310 --> 00:05:20,900
+Bộ điều khiển sản phẩm.
+
+68
+00:05:20,900 --> 00:05:25,580
+Nơi chúng tôi tạo, chúng tôi cần chuyển mô hình chế độ xem sản phẩm.
+
+69
+00:05:26,460 --> 00:05:29,880
+Vì vậy, ngay tại đây chúng ta sẽ nói mô hình xem sản phẩm.
+
+70
+00:05:30,960 --> 00:05:39,200
+Hãy để tôi gọi sản phẩm đó là VM bằng mới và sau đó chúng ta phải gán các thuộc tính ở đây.
+
+71
+00:05:39,210 --> 00:05:43,200
+Danh sách danh mục sẽ nằm trong danh sách danh mục, dấu phẩy.
+
+72
+00:05:43,200 --> 00:05:44,760
+Chúng tôi có sản phẩm.
+
+73
+00:05:44,790 --> 00:05:47,730
+Sản phẩm sẽ là sản phẩm mới.
+
+74
+00:05:49,200 --> 00:05:50,220
+Rất hoàn hảo.
+
+75
+00:05:50,220 --> 00:05:51,300
+Trông tôt đây.
+
+76
+00:05:51,300 --> 00:05:54,630
+Và sau đó chúng ta sẽ chuyển qua mô hình xem sản phẩm.
+
+77
+00:05:55,320 --> 00:06:02,400
+Nếu bạn muốn, bạn chỉ cần cắt cái này từ đây và gán cái đó vào danh sách danh mục như thế.
+
+78
+00:06:02,790 --> 00:06:04,470
+Nó cũng nên làm việc.
+
+79
+00:06:04,470 --> 00:06:07,440
+Chúng tôi không muốn xem dữ liệu hoặc xem lại.
+
+80
+00:06:07,470 --> 00:06:09,150
+Hãy để tôi loại bỏ điều đó.
+
+81
+00:06:10,410 --> 00:06:11,180
+Hoàn hảo.
+
+82
+00:06:11,190 --> 00:06:12,300
+Sạch sẽ hơn nhiều.
+
+83
+00:06:14,520 --> 00:06:18,960
+Cùng với đó, chúng tôi có một mô hình chế độ xem mà chúng tôi đang chuyển sang chế độ xem tạo của mình.
+
+84
+00:06:18,990 --> 00:06:22,050
+Để mình chạy thử xem có được không.
+
+85
+00:06:23,580 --> 00:06:28,230
+Chúng tôi đi đến sản phẩm ở đây và tạo ra sản phẩm mới.
+
+86
+00:06:28,560 --> 00:06:29,310
+Hoàn hảo.
+
+87
+00:06:29,310 --> 00:06:30,570
+Đó là làm việc.
+
+88
+00:06:30,960 --> 00:06:34,290
+Nhưng giờ nếu post lên đây thì không được.
+
+89
+00:06:34,290 --> 00:06:40,470
+Bởi vì nếu bạn kiểm tra trong bài đăng HTTP, chúng tôi đã nói rằng sẽ có một obj sản phẩm.
+
+90
+00:06:41,580 --> 00:06:49,680
+Điều này chúng tôi phải sửa đổi thành sản phẩm VM và khi chúng tôi thêm thứ gì đó, chúng tôi sẽ nói sản phẩm chấm OBJ.
+
+91
+00:06:50,100 --> 00:06:56,970
+Với cấu hình đó, hãy để tôi lưu và chạy ứng dụng và thử tạo một sản phẩm mới.
+
+92
+00:07:01,930 --> 00:07:06,100
+Tôi sẽ điền danh mục thông tin giả.
+
+93
+00:07:06,100 --> 00:07:08,950
+Hãy để tôi làm cho nó hành động và tạo ra.
+
+94
+00:07:09,760 --> 00:07:11,740
+Và chúng tôi thấy một ngoại lệ.
+
+95
+00:07:12,040 --> 00:07:16,540
+Bây giờ, bạn có thể thắc mắc tại sao chúng tôi lại nhận được ngoại lệ này.
+
+96
+00:07:16,840 --> 00:07:23,920
+Bởi vì ngoại lệ ở đây nằm trong trường chọn và nó cho biết tham chiếu đối tượng không được đặt thành phiên
+
+97
+00:07:23,920 --> 00:07:25,630
+bản của đối tượng.
+
+98
+00:07:25,870 --> 00:07:29,550
+Đó là một ngoại lệ phổ biến khi bạn làm việc với C Sharp.
+
+99
+00:07:29,560 --> 00:07:33,880
+Về cơ bản, mọi thứ đang được truy cập ở đây đều không có giá trị.
+
+100
+00:07:34,090 --> 00:07:38,830
+Nhưng tại sao khi chúng tôi đăng nó lại cố gắng truy cập vào các trường này.
+
+101
+00:07:39,610 --> 00:07:46,930
+Lý do đơn giản là một cái gì đó trong Trạng thái mô hình không hợp lệ và nó đang quay trở lại Chế độ xem.
+
+102
+00:07:47,110 --> 00:07:53,320
+Khi nó quay trở lại, chúng tôi sẽ không chuyển mô hình chế độ xem, do đó, danh sách thả xuống không được điền.
+
+103
+00:07:53,530 --> 00:07:54,910
+Hãy để tôi chỉ ra điều đó.
+
+104
+00:07:54,940 --> 00:08:01,330
+Tôi sẽ thêm một điểm sửa lỗi ở đây và để tôi nhấn tạo một lần nữa và xem.
+
+105
+00:08:01,360 --> 00:08:04,030
+Trạng thái mô hình hợp lệ là sai.
+
+106
+00:08:04,330 --> 00:08:08,680
+Bây giờ thuộc tính nào là sai ở đây, chúng ta có thể kiểm tra thuộc tính đó trong kết quả.
+
+107
+00:08:08,680 --> 00:08:11,950
+Xem và danh sách danh mục không hợp lệ.
+
+108
+00:08:11,960 --> 00:08:17,570
+URL hình ảnh không hợp lệ và danh mục dấu chấm sản phẩm không hợp lệ.
+
+109
+00:08:18,020 --> 00:08:21,700
+Bây giờ tại sao nó xác thực tất cả các thuộc tính đó?
+
+110
+00:08:21,710 --> 00:08:24,530
+Chúng tôi không muốn các xác nhận về chúng.
+
+111
+00:08:24,950 --> 00:08:31,940
+Vì vậy, về cơ bản, chúng tôi cần nói rằng này, khi bạn đang xác thực mô hình của chúng tôi, tôi không muốn xác
+
+112
+00:08:31,940 --> 00:08:33,860
+thực trên ba thực thể này.
+
+113
+00:08:34,809 --> 00:08:42,159
+Một cách để sửa URL hình ảnh ngay bây giờ là để tôi quay lại chế độ xem Tạo và để tôi sao chép và
+
+114
+00:08:42,159 --> 00:08:44,560
+dán URL này cho URL hình ảnh.
+
+115
+00:08:45,910 --> 00:08:51,310
+Bằng cách đó, chúng tôi sẽ không bị làm phiền với ngoại lệ đó và hãy để tôi chỉ ra điều đó.
+
+116
+00:08:52,990 --> 00:08:56,430
+Bây giờ, tất nhiên, chúng tôi sẽ sửa URL hình ảnh khi chúng tôi tiến hành.
+
+117
+00:08:56,440 --> 00:09:01,030
+Nhưng bây giờ hãy để tôi chỉ cho bạn vấn đề với hai thực thể khác.
+
+118
+00:09:02,660 --> 00:09:04,130
+Chúng tôi nhấn tạo ở đây.
+
+119
+00:09:04,130 --> 00:09:05,970
+Hãy để tôi nhấn tạo ở đây.
+
+120
+00:09:05,990 --> 00:09:08,210
+Trạng thái mô hình không hợp lệ.
+
+121
+00:09:08,210 --> 00:09:10,630
+Và bây giờ sẽ có hai thực thể.
+
+122
+00:09:10,640 --> 00:09:14,960
+Một sẽ là danh sách danh mục và một danh mục khác sẽ là danh mục.
+
+123
+00:09:15,440 --> 00:09:19,820
+Vì vậy, về cơ bản chúng tôi không muốn xác thực hai thuộc tính đó.
+
+124
+00:09:20,210 --> 00:09:22,460
+Làm điều đó là siêu đơn giản.
+
+125
+00:09:22,550 --> 00:09:30,290
+Tất cả những gì chúng ta phải làm là thêm một chú thích ở đầu danh sách danh mục, chú thích này không bao giờ xác thực và điều
+
+126
+00:09:30,290 --> 00:09:34,610
+đó sẽ đảm bảo rằng nó không xác thực thuộc tính này mà chúng ta có.
+
+127
+00:09:35,600 --> 00:09:43,460
+Tôi cũng sẽ phải thêm danh mục đó vào nơi chúng tôi có danh mục ngay tại đây và nếu muốn, bạn cũng có thể thêm danh mục
+
+128
+00:09:43,460 --> 00:09:45,080
+đó vào URL hình ảnh.
+
+129
+00:09:45,110 --> 00:09:48,230
+Bằng cách đó bạn cũng không bị làm phiền với điều đó.
+
+130
+00:09:49,310 --> 00:09:56,570
+Với cấu hình đó, hãy để tôi chạy lại ứng dụng và xem việc tạo sản phẩm có hoạt động không.
+
+131
+00:09:58,410 --> 00:10:00,370
+Chúng tôi đi đến sản phẩm ở đây?
+
+132
+00:10:00,390 --> 00:10:02,430
+Hãy để tôi thử điều đó một lần nữa.
+
+133
+00:10:03,270 --> 00:10:05,580
+Vâng, tôi đã mô tả hai lần.
+
+134
+00:10:05,590 --> 00:10:07,380
+Hãy để tôi loại bỏ nó đầu tiên.
+
+135
+00:10:07,380 --> 00:10:08,970
+Điều đó thật khó chịu.
+
+136
+00:10:12,580 --> 00:10:15,790
+Lưu nó và trang sẽ tải lại.
+
+137
+00:10:15,820 --> 00:10:16,810
+Hoàn hảo.
+
+138
+00:10:16,990 --> 00:10:18,010
+Hãy thử.
+
+139
+00:10:23,240 --> 00:10:24,290
+Tạo nên.
+
+140
+00:10:24,890 --> 00:10:26,690
+Bây giờ chúng ta quay lại.
+
+141
+00:10:26,720 --> 00:10:28,160
+Trạng thái mô hình là hợp lệ.
+
+142
+00:10:28,160 --> 00:10:31,220
+Điều đó tốt và nó sẽ tạo ra sản phẩm.
+
+143
+00:10:32,480 --> 00:10:34,030
+Tuyệt vời, nó hoạt động.
+
+144
+00:10:34,040 --> 00:10:39,230
+Nhưng nếu trạng thái mô hình không hợp lệ, chúng tôi không muốn ngoại lệ xấu xí đó.
+
+145
+00:10:39,620 --> 00:10:41,510
+Vì vậy, làm thế nào để chúng tôi khắc phục điều đó?
+
+146
+00:10:42,200 --> 00:10:45,890
+Để làm điều đó, hãy để tôi mang lại xác thực này.
+
+147
+00:10:45,920 --> 00:10:49,550
+Không bao giờ nhận xét ra chỉ trong một vài phút.
+
+148
+00:10:49,550 --> 00:10:55,910
+Và về cơ bản, khi chúng ta đi đến khối khác, nó mong đợi danh sách thả xuống được điền.
+
+149
+00:10:56,120 --> 00:11:06,410
+Vì vậy, bất cứ điều gì chúng tôi có ở đây, nếu tôi sao chép nó sang phần khác và dán nó vào đây và tôi chuyển mô hình chế độ xem này
+
+150
+00:11:06,440 --> 00:11:08,780
+trở lại thì nó sẽ hoạt động.
+
+151
+00:11:09,050 --> 00:11:12,380
+Hãy để tôi có tuyên bố trở lại này ở đây.
+
+152
+00:11:12,500 --> 00:11:16,730
+Bây giờ, nếu chúng ta đã làm điều này thì nó sẽ tạo ra một mô hình xem sản phẩm mới.
+
+153
+00:11:16,760 --> 00:11:18,410
+Chúng tôi không muốn điều đó.
+
+154
+00:11:18,440 --> 00:11:21,640
+Chúng tôi chỉ muốn danh sách thả xuống được điền.
+
+155
+00:11:21,650 --> 00:11:31,410
+Vì vậy, ngay tại đây, nơi chúng ta có đối tượng, chúng ta có thể nói danh sách danh mục dấu chấm obj và chỉ điền vào danh sách đó, không phải
+
+156
+00:11:31,440 --> 00:11:33,150
+bất kỳ thứ gì khác.
+
+157
+00:11:33,630 --> 00:11:40,820
+Khi chúng tôi quay trở lại, chúng tôi sẽ trả lại OBJ hoặc tôi nghĩ cái tên tốt hơn ở đây sẽ là mô hình xem sản phẩm.
+
+158
+00:11:40,830 --> 00:11:42,780
+Vì vậy, hãy để tôi đổi tên nó.
+
+159
+00:11:45,420 --> 00:11:47,550
+Hoàn hảo với điều đó.
+
+160
+00:11:47,580 --> 00:11:55,020
+Nếu tôi xóa điểm gỡ lỗi và chạy ứng dụng, nó sẽ chuyển hướng chúng tôi trở lại trang sản phẩm.
+
+161
+00:11:55,050 --> 00:11:56,430
+Hãy để tôi chỉ ra điều đó.
+
+162
+00:11:58,640 --> 00:12:00,060
+Chúng tôi chọn một số danh mục.
+
+163
+00:12:00,080 --> 00:12:03,410
+Nhấn, tạo và nó chuyển hướng chúng tôi trở lại.
+
+164
+00:12:03,410 --> 00:12:05,810
+Nhưng chúng tôi không thấy thông báo lỗi.
+
+165
+00:12:06,170 --> 00:12:12,170
+Điều tốt là chúng tôi không thấy ngoại lệ xấu xí đó, nhưng thông báo lỗi mà chúng tôi đã xử
+
+166
+00:12:12,170 --> 00:12:14,310
+lý với xác thực chưa bao giờ.
+
+167
+00:12:14,330 --> 00:12:16,400
+Vì vậy, hãy để tôi mang nó trở lại.
+
+168
+00:12:16,490 --> 00:12:23,630
+Tôi chỉ muốn cho bạn thấy rằng khi bạn quay lại, bạn phải điền vào danh sách thả xuống một lần nữa,
+
+169
+00:12:23,780 --> 00:12:28,800
+bởi vì khi nó được đăng, danh sách thả xuống đó sẽ không được điền.
+
+170
+00:12:28,820 --> 00:12:32,180
+Nếu bạn gặp bất kỳ lỗi nào trên trang.
+
+171
+00:12:32,770 --> 00:12:34,730
+Vì vậy, điều này có vẻ hoàn hảo.
+
+172
+00:12:34,750 --> 00:12:41,350
+Bằng cách đó, chúng tôi đang xử lý nếu trạng thái mô hình không hợp lệ, chúng tôi đảm bảo điền lại danh sách thả xuống
+
+173
+00:12:41,350 --> 00:12:45,760
+để chúng tôi không thấy ngoại lệ xấu mà chúng tôi đã thấy trước đây.
+
+174
+00:12:46,570 --> 00:12:52,180
+Nhưng cùng với đó, chức năng tạo cho sản phẩm của chúng tôi đang hoạt động như mong đợi.
+
+175
+00:12:52,570 --> 00:12:56,590
+Bây giờ chúng tôi có một mô hình xem cho sản phẩm của chúng tôi dựa trên đó.
+
+176
+00:12:56,590 --> 00:13:00,100
+Chúng tôi cũng đã ràng buộc danh mục của mình.
+
+177
+00:13:00,460 --> 00:13:06,010
+Nếu tôi trực tiếp nhấn tạo ở đây, chúng tôi cũng có tất cả các xác thực.
+
+178
+00:13:06,770 --> 00:13:10,760
+Và cùng với đó, chúng ta đã thấy cách thêm các mô hình xem.
+
+179
+00:13:11,120 --> 00:13:17,090
+Bây giờ để tóm tắt lại, Viewmodels là các mô hình được thiết kế đặc biệt cho một khung nhìn.
+
+180
+00:13:17,570 --> 00:13:24,830
+Và lợi thế mà chúng tôi có được nhờ đó là một chế độ xem sẽ được nhập mạnh vào một mô hình.
+
+181
+00:13:25,310 --> 00:13:31,100
+Và do đó, Viewmodels còn được gọi là chế độ xem được gõ mạnh.
+
+182
+00:13:31,220 --> 00:13:37,970
+Vì vậy, nếu ai đó sẽ hỏi bạn chế độ xem được nhập mạnh là gì, điều đó về cơ bản có nghĩa là có một mô hình
+
+183
+00:13:37,970 --> 00:13:40,080
+dành riêng cho chế độ xem đó.
+
+184
+00:13:40,100 --> 00:13:45,470
+Do đó, do đó, chế độ xem được đánh mạnh vào một mô hình.
+
+185
+00:13:46,290 --> 00:13:49,800
+Vì vậy, thật tốt khi nhớ thuật ngữ đó.
+

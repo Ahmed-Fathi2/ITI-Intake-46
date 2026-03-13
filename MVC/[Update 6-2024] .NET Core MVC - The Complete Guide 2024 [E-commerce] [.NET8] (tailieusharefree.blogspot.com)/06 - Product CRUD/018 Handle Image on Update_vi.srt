@@ -1,0 +1,188 @@
+1
+00:00:01,730 --> 00:00:06,170
+Chúng tôi muốn quản lý việc cập nhật một sản phẩm trong bộ điều khiển sản phẩm.
+
+2
+00:00:06,590 --> 00:00:11,600
+Nhưng để làm được điều đó, trước tiên hãy nghĩ xem điều gì sẽ xảy ra với hình ảnh.
+
+3
+00:00:11,870 --> 00:00:15,590
+Nếu chúng ta quay lại đây và để tôi quay trở lại.
+
+4
+00:00:15,620 --> 00:00:20,480
+Giả sử rằng khi một sản phẩm được tạo ra, họ phải tải lên một hình ảnh.
+
+5
+00:00:20,690 --> 00:00:26,780
+Vì vậy, lần tới khi họ cập nhật nội dung nào đó, giả sử họ chỉ cập nhật mô tả và nếu
+
+6
+00:00:26,780 --> 00:00:32,030
+họ nhấn nút cập nhật, thì chúng tôi không muốn cập nhật hình ảnh.
+
+7
+00:00:33,090 --> 00:00:40,110
+Vì vậy, về cơ bản khi họ đang cập nhật, nếu URL hình ảnh là null, thì chúng tôi không muốn cập nhật điều đó.
+
+8
+00:00:40,740 --> 00:00:48,030
+Nhưng nếu họ đang cập nhật một hình ảnh mới, thì chúng tôi muốn thay thế hình ảnh hiện có bằng hình ảnh mới.
+
+9
+00:00:48,480 --> 00:00:55,920
+Vì vậy, nếu một tệp xuất hiện khi họ đang cập nhật, thì chúng tôi muốn xóa tệp cũ và chúng tôi muốn
+
+10
+00:00:55,920 --> 00:00:57,570
+thêm tệp mới này.
+
+11
+00:00:57,930 --> 00:01:00,660
+Hãy để tôi xử lý tình huống đó trước.
+
+12
+00:01:01,290 --> 00:01:05,099
+Khi chúng tôi phải tải lên một tệp mới, tất cả logic vẫn giữ nguyên.
+
+13
+00:01:05,099 --> 00:01:10,310
+Nhưng điều duy nhất chúng ta phải thêm ở đây là chúng ta phải xóa tệp cũ.
+
+14
+00:01:10,320 --> 00:01:15,540
+Nếu có URL hình ảnh và một tệp mới đang được tải lên.
+
+15
+00:01:15,810 --> 00:01:21,360
+Vì vậy, nếu tệp không phải là null và nếu có URL hình ảnh.
+
+16
+00:01:21,480 --> 00:01:32,860
+Vì vậy, chúng tôi sẽ kiểm tra ở đây nếu mô hình xem sản phẩm chấm URL hình ảnh chấm sản phẩm và tôi có thể nói chuỗi. là null hoặc rỗng.
+
+17
+00:01:37,040 --> 00:01:45,710
+Vì vậy, nếu đó không phải là null hoặc trống, điều đó có nghĩa là có một URL hình ảnh và chúng tôi đang tải lên một hình ảnh mới
+
+18
+00:01:45,710 --> 00:01:47,690
+vì tệp không phải là null.
+
+19
+00:01:48,580 --> 00:01:56,320
+Trong trường hợp đó, chúng ta phải xóa hình ảnh cũ Để xóa hình ảnh cũ.
+
+20
+00:01:56,320 --> 00:01:59,440
+Chúng ta cần đường dẫn của hình ảnh cụ thể đó.
+
+21
+00:01:59,770 --> 00:02:06,670
+Vì vậy, chúng tôi sẽ nói đường dẫn hình ảnh cũ thay đổi bằng đường dẫn. kết hợp.
+
+22
+00:02:06,670 --> 00:02:11,710
+Chúng tôi cần thư mục tuyến đường bên trong đường dẫn tuyến đường W-w-w.
+
+23
+00:02:12,190 --> 00:02:19,330
+Và sau đó nếu chúng ta kiểm tra cơ sở dữ liệu của mình ở đây, các sản phẩm bàn cồng kềnh.
+
+24
+00:02:23,220 --> 00:02:27,720
+Bạn sẽ nhận thấy rằng chúng tôi có dấu gạch chéo lên trong URL hình ảnh.
+
+25
+00:02:27,930 --> 00:02:32,100
+Chúng tôi cần xóa nó vì chúng tôi đang sử dụng đường dẫn. kết hợp.
+
+26
+00:02:33,000 --> 00:02:35,550
+Vì vậy, tôi sẽ nói mô hình xem sản phẩm.
+
+27
+00:02:36,420 --> 00:02:40,350
+Chấm sản phẩm chấm URL hình ảnh chấm.
+
+28
+00:02:40,380 --> 00:02:46,440
+Chúng tôi có phần bắt đầu cắt và chúng tôi muốn xóa dấu gạch chéo về phía trước cho phần đó.
+
+29
+00:02:46,440 --> 00:02:50,160
+Chúng ta sẽ phải thoát khỏi điều đó bằng một nhát chém khác.
+
+30
+00:02:51,200 --> 00:02:55,940
+Điều đó về cơ bản sẽ kết hợp và cung cấp cho chúng ta đường dẫn của hình ảnh cũ.
+
+31
+00:02:57,250 --> 00:02:59,350
+Sau đó, xóa nó là đơn giản.
+
+32
+00:02:59,350 --> 00:03:03,040
+Chúng tôi có điều đó trong hệ thống. io tập tin dấu chấm.
+
+33
+00:03:03,160 --> 00:03:08,110
+Trước tiên chúng ta cần kiểm tra xem có gì tồn tại trong đường dẫn hình ảnh cũ đó không.
+
+34
+00:03:08,470 --> 00:03:15,640
+Nếu có, thì chúng tôi sẽ xóa system. io dot file dot xóa hình ảnh cũ.
+
+35
+00:03:16,550 --> 00:03:17,510
+Rất hoàn hảo.
+
+36
+00:03:17,540 --> 00:03:19,190
+Chúng tôi sẽ xóa hình ảnh đó.
+
+37
+00:03:19,190 --> 00:03:23,630
+Chúng tôi sẽ tải lên một hình ảnh mới và chúng tôi sẽ cập nhật URL hình ảnh.
+
+38
+00:03:24,170 --> 00:03:25,670
+Cái đó thật tuyệt.
+
+39
+00:03:25,910 --> 00:03:30,470
+Nhưng cuối cùng, nơi chúng tôi đang thêm vào đây, chúng tôi sẽ phải cập nhật.
+
+40
+00:03:30,500 --> 00:03:34,610
+Bây giờ làm cách nào để xác định xem đó là bản THÊM hay bản cập nhật?
+
+41
+00:03:35,060 --> 00:03:38,210
+Điều đó phụ thuộc vào việc có ID hay không.
+
+42
+00:03:38,360 --> 00:03:47,300
+Vì vậy, chúng tôi sẽ nói nếu mô hình xem sản phẩm. sản phẩm. id bằng 0, điều đó có nghĩa là nó là THÊM.
+
+43
+00:03:47,420 --> 00:03:50,860
+Dán cái khác nó là một bản cập nhật.
+
+44
+00:03:50,870 --> 00:03:59,180
+Vì vậy, gạch dưới đơn vị công việc dot product dot update product view model dot product.
+
+45
+00:04:00,280 --> 00:04:01,060
+Hoàn hảo.
+
+46
+00:04:01,090 --> 00:04:08,140
+Bây giờ, trước khi chúng tôi kiểm tra điều này, tôi muốn sửa đổi một số thứ trong bản cập nhật và để tôi hướng dẫn bạn về điều
+
+47
+00:04:08,140 --> 00:04:09,880
+đó trong video tiếp theo.
+

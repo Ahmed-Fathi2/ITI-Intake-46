@@ -1,0 +1,68 @@
+1
+00:00:01,980 --> 00:00:09,690
+Bây giờ, trước khi chúng ta tiến lên phía trước, hãy để tôi mở mô hình sản phẩm trong dự án mô hình ở đây
+
+2
+00:00:09,690 --> 00:00:16,170
+và tôi sẽ thêm một thuộc tính nữa, thuộc tính khá quan trọng và đó là URL hình ảnh.
+
+3
+00:00:16,560 --> 00:00:21,410
+Khi chúng tôi làm việc với bất kỳ sản phẩm nào ở đây, chúng thường sẽ có một hình ảnh.
+
+4
+00:00:21,420 --> 00:00:25,680
+Vì vậy, hãy để tôi gọi đó là URL hình ảnh.
+
+5
+00:00:26,040 --> 00:00:31,140
+Nó sẽ là một thuộc tính chuỗi ngay bây giờ và nó sẽ trống ngay bây giờ.
+
+6
+00:00:31,950 --> 00:00:36,690
+Cùng với đó, hãy để tôi lưu cái này và chúng ta sẽ phải thêm một lần di chuyển.
+
+7
+00:00:37,960 --> 00:00:41,530
+Tôi sẽ gọi URL hình ảnh quảng cáo đó tới sản phẩm.
+
+8
+00:00:44,300 --> 00:00:53,510
+Thực thể hạt giống không hoạt động tốt, bạn có thể vào đó trong dữ liệu và bạn có thể thêm một URL hình ảnh trống.
+
+9
+00:00:55,510 --> 00:00:57,250
+Điều đó nên làm việc ngay bây giờ.
+
+10
+00:00:57,280 --> 00:01:01,480
+Chúng tôi sẽ khắc phục điều đó khi chúng tôi tiến hành khóa học.
+
+11
+00:01:04,849 --> 00:01:05,750
+Đối với một thực tế.
+
+12
+00:01:05,840 --> 00:01:10,280
+Hãy để tôi thêm di chuyển một lần nữa và nó sẽ hoạt động.
+
+13
+00:01:11,040 --> 00:01:11,910
+Hoàn hảo.
+
+14
+00:01:12,060 --> 00:01:13,800
+Hãy cập nhật cơ sở dữ liệu.
+
+15
+00:01:19,260 --> 00:01:20,460
+Và tuyệt vời.
+
+16
+00:01:20,640 --> 00:01:27,180
+Bây giờ mô hình sản phẩm của chúng tôi đã hoàn tất và chúng tôi đã thêm tất cả các thuộc tính cần thiết.
+
+17
+00:01:27,450 --> 00:01:33,510
+URL hình ảnh này sẽ hoạt động như thế nào mà chúng tôi sẽ đề cập trong các video sắp tới.
+

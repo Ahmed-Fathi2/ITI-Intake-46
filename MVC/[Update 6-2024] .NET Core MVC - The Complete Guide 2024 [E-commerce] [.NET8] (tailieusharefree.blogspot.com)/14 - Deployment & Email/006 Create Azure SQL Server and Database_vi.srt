@@ -1,0 +1,308 @@
+1
+00:00:01,550 --> 00:00:06,260
+Bây giờ chức năng email và mọi thứ đều ổn trong dự án của chúng tôi.
+
+2
+00:00:06,410 --> 00:00:10,280
+Đã đến lúc triển khai ứng dụng lên Azure.
+
+3
+00:00:10,310 --> 00:00:13,190
+Một điều mà tôi có thể thay đổi ở đây là logo.
+
+4
+00:00:13,700 --> 00:00:16,490
+Vì vậy, hãy để tôi chuyển trở lại dự án ở đây.
+
+5
+00:00:16,490 --> 00:00:21,420
+Và nếu bạn kiểm tra, tôi nghĩ rằng chúng tôi đã sao chép hình ảnh ở đây.
+
+6
+00:00:21,440 --> 00:00:24,410
+Trong hình ảnh, chúng tôi có cuốn sách chấm PNG.
+
+7
+00:00:25,010 --> 00:00:28,040
+Hãy để tôi thêm điều đó trong bố cục được gạch dưới.
+
+8
+00:00:28,220 --> 00:00:31,940
+Trong chế độ xem được chia sẻ bố cục gạch dưới.
+
+9
+00:00:33,320 --> 00:00:41,480
+Nếu tôi cuộn xuống nơi chúng tôi có trang web sách cồng kềnh ngay tại đây, hãy để tôi thay thẻ đó bằng thẻ
+
+10
+00:00:41,480 --> 00:00:49,100
+hình ảnh và tôi sẽ nói img src hình ảnh cuốn sách chấm png và cho tôi xem giao diện người dùng.
+
+11
+00:00:49,940 --> 00:00:52,460
+Điều đó có vẻ tốt hơn nhiều cho dự án của tôi.
+
+12
+00:00:52,760 --> 00:00:56,660
+Bây giờ, với sự thay đổi đó, tôi muốn triển khai điều này lên Azure.
+
+13
+00:00:57,430 --> 00:01:03,610
+Bây giờ, khi chúng tôi phải triển khai mọi thứ lên Azure, hãy đảm bảo rằng bạn có đăng ký Azure đang hoạt động.
+
+14
+00:01:03,850 --> 00:01:09,520
+Bạn có thể đăng ký một tài khoản miễn phí và nhận khoảng 200 đô la tín dụng miễn phí.
+
+15
+00:01:10,030 --> 00:01:14,140
+Tôi đã có một tài khoản, vì vậy tôi sẽ trực tiếp sử dụng nó.
+
+16
+00:01:14,890 --> 00:01:20,350
+Tôi sẽ mở một trình duyệt mới và tôi sẽ viết cổng thông tin. màu xanh da trời. com.
+
+17
+00:01:21,180 --> 00:01:28,860
+Ở đó, tôi sẽ điều hướng đến tài khoản Azure của mình và tôi có đăng ký đang hoạt động cùng với các dịch vụ khác.
+
+18
+00:01:29,730 --> 00:01:32,460
+Đầu tiên, chúng ta cần tạo một cơ sở dữ liệu SQL.
+
+19
+00:01:32,730 --> 00:01:37,320
+Và đối với cơ sở dữ liệu SQL, chúng ta sẽ phải tạo một Máy chủ SQL.
+
+20
+00:01:37,940 --> 00:01:40,520
+Nhưng hãy để tôi tạo một cơ sở dữ liệu SQL.
+
+21
+00:01:40,550 --> 00:01:48,200
+Nếu bạn không có điều đó, bạn luôn có thể tìm kiếm SQL tại đây và bạn sẽ thấy cơ sở dữ liệu SQL.
+
+22
+00:01:48,230 --> 00:01:52,400
+Khi bạn vào đó, bạn sẽ nhấn nút tạo.
+
+23
+00:01:53,330 --> 00:01:56,330
+Bạn sẽ phải chọn đăng ký của mình ở đó.
+
+24
+00:01:56,360 --> 00:01:59,240
+Cuộn xuống và một nhóm tài nguyên.
+
+25
+00:01:59,690 --> 00:02:07,430
+Tôi sẽ tạo một nhóm tài nguyên mới ở đây sẽ là Dotnet Mastery Live Project.
+
+26
+00:02:09,990 --> 00:02:13,560
+Sau đó, chúng ta cần đặt cho cơ sở dữ liệu của mình một cái tên có ý nghĩa.
+
+27
+00:02:13,560 --> 00:02:17,760
+Chúng tôi có thể gọi đó là cồng kềnh và chúng tôi phải tạo một máy chủ.
+
+28
+00:02:18,380 --> 00:02:20,750
+Chúng ta cần tạo một máy chủ mới.
+
+29
+00:02:20,900 --> 00:02:27,980
+Vì vậy, hãy để tôi đặt cho nó một cái tên riêng là đồ sộ, đồ sộ. cơ sở dữ liệu. các cửa sổ. mạng lưới.
+
+30
+00:02:28,840 --> 00:02:29,680
+Bên trong đó.
+
+31
+00:02:29,680 --> 00:02:32,320
+Chúng tôi sẽ sử dụng xác thực SQL.
+
+32
+00:02:32,320 --> 00:02:36,850
+Vì vậy, ID người dùng sẽ là quản trị viên SQL và mật khẩu.
+
+33
+00:02:36,850 --> 00:02:39,760
+Bây giờ tôi sẽ sử dụng quản trị viên một, hai, ba sao.
+
+34
+00:02:40,580 --> 00:02:44,210
+Bây giờ, rõ ràng là trong tương lai tôi sẽ thay đổi mọi thứ xung quanh đây.
+
+35
+00:02:44,210 --> 00:02:46,110
+Nhưng đây là để thử nghiệm.
+
+36
+00:02:46,130 --> 00:02:47,690
+Vì vậy, mà có vẻ tốt.
+
+37
+00:02:49,000 --> 00:02:49,720
+Hoàn hảo.
+
+38
+00:02:49,720 --> 00:02:56,950
+Vì vậy, chúng tôi đang tạo một máy chủ, một cơ sở dữ liệu ở đây và chúng tôi không muốn sử dụng nhóm đàn hồi, môi trường khối lượng
+
+39
+00:02:56,950 --> 00:02:57,730
+công việc.
+
+40
+00:02:57,730 --> 00:03:04,180
+Chúng tôi sẽ coi đó là sự phát triển vì sản xuất có thể khá tốn kém và hiện tại chúng tôi đang học hỏi
+
+41
+00:03:04,180 --> 00:03:04,840
+mọi thứ.
+
+42
+00:03:05,820 --> 00:03:09,750
+Chúng tôi sẽ định cấu hình cơ sở dữ liệu ở đây và tầng dịch vụ.
+
+43
+00:03:09,870 --> 00:03:16,410
+Tôi sẽ sử dụng cái rẻ nhất, cái cơ bản, khoảng $5 mỗi tháng.
+
+44
+00:03:16,890 --> 00:03:21,060
+Điều đó là đủ cho thử nghiệm của tôi và điều đó có vẻ tốt.
+
+45
+00:03:21,840 --> 00:03:24,870
+Cùng với đó, chúng tôi có tổng chi phí hàng tháng ở đây.
+
+46
+00:03:24,900 --> 00:03:29,890
+Chúng tôi sẽ đánh giá cộng với tạo và có vẻ tốt.
+
+47
+00:03:29,910 --> 00:03:34,170
+Hãy để tôi tạo cơ sở dữ liệu SQL và SQL Server.
+
+48
+00:03:35,520 --> 00:03:39,450
+Việc triển khai sẽ mất một lúc, vì vậy hãy để tôi đợi điều đó.
+
+49
+00:03:42,420 --> 00:03:43,440
+Và hoàn hảo.
+
+50
+00:03:43,440 --> 00:03:47,520
+Việc triển khai hoàn tất tại đây nếu tôi truy cập Tài nguyên.
+
+51
+00:03:47,550 --> 00:03:50,070
+Chà, chúng ta có cơ sở dữ liệu SQL.
+
+52
+00:03:50,100 --> 00:03:55,860
+Hãy để tôi chuyển đến tab tổng quan và điều đầu tiên chúng ta phải thêm tường lửa máy chủ.
+
+53
+00:03:56,190 --> 00:04:03,210
+Nếu bạn không thêm điều đó, bạn sẽ không thể truy cập Máy chủ SQL từ địa chỉ IP của mình.
+
+54
+00:04:03,690 --> 00:04:06,730
+Vì vậy, hãy đảm bảo thêm tường lửa của bạn ở đây.
+
+55
+00:04:06,750 --> 00:04:13,320
+Chúng tôi sẽ nói mạng đã chọn và chúng tôi sẽ thêm địa chỉ IPv4 máy khách của bạn.
+
+56
+00:04:13,320 --> 00:04:20,820
+Và trước khi bạn nhấn nút lưu, hãy đảm bảo và đảm bảo một lần nữa để cho phép các dịch vụ và tài nguyên
+
+57
+00:04:20,820 --> 00:04:23,670
+Azure truy cập vào máy chủ này.
+
+58
+00:04:23,790 --> 00:04:30,930
+Bởi vì điều sẽ xảy ra là khi chúng ta triển khai ứng dụng Web, ứng dụng web đó phải truy cập vào
+
+59
+00:04:30,930 --> 00:04:31,650
+máy chủ.
+
+60
+00:04:32,010 --> 00:04:37,260
+Nếu bạn không cho phép điều đó, thì nó sẽ không thể truy cập cơ sở dữ liệu của bạn.
+
+61
+00:04:37,870 --> 00:04:40,960
+Vì vậy, với cả hai, nhấn nút lưu.
+
+62
+00:04:41,840 --> 00:04:45,560
+Chúng tôi gặp lỗi ở đây, vì vậy chúng tôi sẽ phải thử lại.
+
+63
+00:04:46,190 --> 00:04:48,540
+Hãy để tôi quay trở lại Bulky ở đây.
+
+64
+00:04:48,560 --> 00:04:52,940
+Đặt tường lửa máy chủ và chúng tôi sẽ lưu cái này.
+
+65
+00:04:53,150 --> 00:04:53,960
+Hoàn hảo.
+
+66
+00:04:53,960 --> 00:04:54,920
+Điều đó đã làm việc.
+
+67
+00:04:54,950 --> 00:04:57,380
+Bây giờ hãy để tôi thêm địa chỉ IP.
+
+68
+00:04:58,010 --> 00:04:58,750
+Hoàn hảo.
+
+69
+00:04:58,760 --> 00:05:01,400
+Cá nhân, cả hai đều hoạt động.
+
+70
+00:05:02,120 --> 00:05:08,210
+Bây giờ, ngay tại đây, nếu chúng ta kiểm tra chuỗi kết nối bên trong cơ sở dữ liệu SQL, chúng ta có chuỗi
+
+71
+00:05:08,210 --> 00:05:11,450
+kết nối để kết nối với Máy chủ SQL của chúng ta.
+
+72
+00:05:12,100 --> 00:05:14,860
+Vì vậy, chúng ta cần sử dụng chuỗi kết nối này.
+
+73
+00:05:14,860 --> 00:05:19,870
+Khi triển khai, chúng tôi sẽ triển khai mã của mình lên Azure như thế nào?
+
+74
+00:05:20,610 --> 00:05:22,680
+Chúng tôi sẽ dừng dịch vụ tại đây.
+
+75
+00:05:22,680 --> 00:05:28,170
+Và những gì chúng ta phải làm là để tôi thu gọn mọi thứ ở đây.
+
+76
+00:05:28,440 --> 00:05:30,580
+Nhấp chuột phải vào giải pháp.
+
+77
+00:05:30,600 --> 00:05:36,660
+Hãy để tôi đóng tất cả các tab ở đây và để tôi triển khai dự án Web trong video tiếp theo.
+

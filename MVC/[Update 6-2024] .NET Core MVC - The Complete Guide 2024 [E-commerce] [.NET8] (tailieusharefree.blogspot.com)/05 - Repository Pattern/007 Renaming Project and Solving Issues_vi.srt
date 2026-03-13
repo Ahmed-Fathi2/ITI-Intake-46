@@ -1,0 +1,336 @@
+1
+00:00:01,650 --> 00:00:04,200
+Mục tiếp theo mà tôi muốn giới thiệu với các bạn.
+
+2
+00:00:04,200 --> 00:00:08,970
+Bạn không cần phải làm điều đó, nhưng tôi muốn chỉ cho bạn cách làm điều đó.
+
+3
+00:00:09,060 --> 00:00:16,800
+Và điều tôi đang nói đến là đôi khi bạn có thể gặp phải tình huống phải đổi tên dự án của mình.
+
+4
+00:00:17,340 --> 00:00:24,300
+Giống như, giả sử chúng ta có chỗ cồng kềnh trong tên dự án ở đây, chúng tôi muốn sửa đổi tất cả chúng thành cuốn sách cồng
+
+5
+00:00:24,300 --> 00:00:24,930
+kềnh.
+
+6
+00:00:25,590 --> 00:00:27,300
+Vì vậy, làm thế nào để chúng tôi làm điều đó?
+
+7
+00:00:27,450 --> 00:00:33,510
+Chà, nó khá đơn giản, nhưng có một số thứ mà chúng ta sẽ phải sửa đổi trước.
+
+8
+00:00:33,540 --> 00:00:39,030
+Bất cứ nơi nào chúng tôi có cồng kềnh ở đây, chúng tôi sẽ đổi tên dự án thành cuốn sách cồng kềnh ở đây.
+
+9
+00:00:39,030 --> 00:00:42,570
+Và khi tôi làm điều đó, chúng tôi sẽ thấy một thông báo lỗi.
+
+10
+00:00:42,930 --> 00:00:49,650
+Bây giờ, thông thường bạn sẽ không thấy thông báo lỗi này, nhưng lý do tôi thấy thông báo đó là
+
+11
+00:00:49,650 --> 00:00:56,010
+trước đây tôi đã cố đổi tên thông báo đó và do đó đã có một người dùng dấu chấm ở vị trí này.
+
+12
+00:00:56,670 --> 00:01:02,830
+Vì vậy, những gì chúng ta sẽ làm là nhấp chuột phải và để tôi mở thư mục đó.
+
+13
+00:01:03,690 --> 00:01:06,920
+Bên trong đó, chúng tôi có người dùng web sách cồng kềnh.
+
+14
+00:01:06,930 --> 00:01:08,400
+Chúng tôi sẽ xóa nó.
+
+15
+00:01:08,400 --> 00:01:12,210
+Và sau đó nếu tôi cố đổi tên ở đây, nó sẽ hoạt động.
+
+16
+00:01:13,080 --> 00:01:16,140
+Bây giờ, một lần nữa, chúng tôi không muốn người dùng cồng kềnh.
+
+17
+00:01:16,140 --> 00:01:18,300
+Chúng tôi muốn web sách cồng kềnh.
+
+18
+00:01:19,030 --> 00:01:20,470
+Và hoàn hảo.
+
+19
+00:01:20,680 --> 00:01:22,690
+Vì vậy, một lần nữa, điểm số một.
+
+20
+00:01:22,720 --> 00:01:29,830
+Bạn sẽ không thấy thông báo lỗi đó, nhưng tôi muốn nó hiển thị rõ ràng rằng vì điều đó, tôi đã giới thiệu
+
+21
+00:01:29,830 --> 00:01:30,970
+người dùng đó.
+
+22
+00:01:31,660 --> 00:01:37,990
+Sau đó, chúng tôi phải đổi tên tất cả các dự án ở đây, để tôi làm tiện ích chấm sách cồng kềnh đó.
+
+23
+00:01:38,850 --> 00:01:43,440
+Mô hình cuốn sách cồng kềnh và chúng tôi có cuốn sách cồng kềnh.
+
+24
+00:01:44,100 --> 00:01:45,810
+Chấm truy cập dữ liệu.
+
+25
+00:01:46,320 --> 00:01:52,860
+Ngay bây giờ chúng tôi chỉ đổi tên dự án, nhưng tất cả các tệp như bộ điều khiển ở đây bạn có thể thấy
+
+26
+00:01:52,890 --> 00:02:02,010
+không gian tên đang sử dụng web cồng kềnh Để thay đổi tất cả điều đó, chúng tôi sẽ thực hiện Ctrl shift F, tìm và thay thế bất cứ nơi nào
+
+27
+00:02:02,100 --> 00:02:04,170
+chúng tôi thấy cồng kềnh.
+
+28
+00:02:04,200 --> 00:02:09,449
+Chúng tôi muốn thay thế nó bằng cuốn sách cồng kềnh và để tôi thay thế tất cả.
+
+29
+00:02:11,420 --> 00:02:12,080
+Hoàn hảo.
+
+30
+00:02:12,080 --> 00:02:13,160
+Điều đó hoạt động.
+
+31
+00:02:13,820 --> 00:02:20,980
+Nhưng bây giờ, nếu bạn nhận thấy bộ điều khiển, không gian tên được sửa đổi ở đây, nhưng kho lưu trữ và mọi thứ bạn
+
+32
+00:02:20,990 --> 00:02:23,990
+có thể thấy nó không phát hiện ra các dự án đó.
+
+33
+00:02:24,610 --> 00:02:28,260
+Chà, đôi khi nó có thể phát hiện ra dự án đó.
+
+34
+00:02:28,270 --> 00:02:31,030
+Tất cả phụ thuộc vào các phụ thuộc ở đây.
+
+35
+00:02:31,510 --> 00:02:37,750
+Tôi không thể mở các phần phụ thuộc, vì vậy hãy để tôi khởi động lại Visual Studio.
+
+36
+00:02:40,830 --> 00:02:44,910
+Khi tôi làm điều đó, nó sẽ tải lại mọi thứ và hoàn thiện.
+
+37
+00:02:44,940 --> 00:02:52,530
+Bây giờ trong phần phụ thuộc, khi bạn kiểm tra dự án, nó có quyền truy cập dữ liệu sách cồng kềnh và nó đang hoạt động
+
+38
+00:02:52,530 --> 00:02:53,460
+như mong đợi.
+
+39
+00:02:54,490 --> 00:02:57,680
+Nhưng bạn có thể thấy các mô hình ở đây không hoạt động.
+
+40
+00:02:57,700 --> 00:03:04,930
+Vì vậy, nếu chúng tôi kiểm tra các phần phụ thuộc trong dự án dữ liệu, bạn có thể thấy tên ở đây bị lộn xộn vì chúng
+
+41
+00:03:04,930 --> 00:03:06,670
+tôi đã đổi tên một vài thứ.
+
+42
+00:03:07,480 --> 00:03:09,640
+Thay đổi đó là siêu đơn giản.
+
+43
+00:03:09,640 --> 00:03:11,180
+Chỉnh sửa tệp dự án.
+
+44
+00:03:11,200 --> 00:03:18,970
+Chúng tôi sẽ xóa cả hai phần phụ thuộc ở đây và chúng tôi sẽ thêm tham chiếu dự án một lần nữa vào các
+
+45
+00:03:18,970 --> 00:03:20,650
+mô hình và tiện ích.
+
+46
+00:03:22,810 --> 00:03:23,680
+Hoàn hảo.
+
+47
+00:03:23,680 --> 00:03:26,370
+Cùng với đó, mọi thứ nên được sửa chữa ở đây.
+
+48
+00:03:26,380 --> 00:03:28,660
+Hãy để tôi xây dựng giải pháp.
+
+49
+00:03:28,900 --> 00:03:30,070
+Và tuyệt vời.
+
+50
+00:03:30,160 --> 00:03:31,390
+Điều đó đã làm việc.
+
+51
+00:03:31,870 --> 00:03:38,910
+Cuối cùng, hãy để tôi chạy ứng dụng và cho bạn thấy một điều kỳ lạ và tuyệt vời.
+
+52
+00:03:38,920 --> 00:03:42,940
+Ngay bây giờ bạn có thể thấy mọi thứ đang hoạt động như mong đợi.
+
+53
+00:03:43,060 --> 00:03:47,950
+Nhưng đối với một số bạn, footer ở đây sẽ không được thiết kế phù hợp.
+
+54
+00:03:48,370 --> 00:03:51,970
+Và để tôi chỉ cho bạn nó sẽ trông như thế nào.
+
+55
+00:03:51,970 --> 00:03:56,240
+Nếu chúng tôi chuyển đến chế độ xem bố cục gạch dưới được chia sẻ.
+
+56
+00:03:56,390 --> 00:04:00,110
+Hãy để tôi phá vỡ CSS và hoàn thiện.
+
+57
+00:04:00,110 --> 00:04:03,020
+Vì vậy, đây chính xác là nó sẽ trông như thế nào.
+
+58
+00:04:03,500 --> 00:04:05,030
+Bạn có thể tự hỏi điều đó.
+
+59
+00:04:05,030 --> 00:04:09,980
+Này, CSS này chính xác là gì và tại sao nó lại xuất hiện?
+
+60
+00:04:10,370 --> 00:04:16,310
+Chà, điều xảy ra là có quá trình bản địa hóa và gói tự động đang được thực hiện
+
+61
+00:04:16,310 --> 00:04:17,269
+với CSS.
+
+62
+00:04:17,660 --> 00:04:20,720
+Điều này đã được giới thiệu với DOTNET Six.
+
+63
+00:04:20,810 --> 00:04:29,720
+Nếu bạn kiểm tra html dấu chấm của bố cục được gạch dưới, thì có một tệp CSS dấu chấm và nó sẽ tự động nằm trong
+
+64
+00:04:29,720 --> 00:04:36,170
+phạm vi của bố cục dấu gạch dưới để tệp này được tự động thêm vào CSS.
+
+65
+00:04:36,200 --> 00:04:42,770
+Bên trong liên kết ở đây, chúng tôi cần href với tên dự án. kiểu dấu chấm CSS.
+
+66
+00:04:43,760 --> 00:04:50,150
+Đó là cách ly CSS đã được giới thiệu và tôi cũng muốn thể hiện điều đó.
+
+67
+00:04:51,100 --> 00:04:55,000
+Vì vậy, một khi điều đó phù hợp, nó sẽ tự động liên kết điều đó.
+
+68
+00:04:55,000 --> 00:04:59,560
+Và bạn có thể thấy phần chân trang hoạt động như mong đợi.
+
+69
+00:05:00,100 --> 00:05:04,660
+Nhưng nếu bạn vào danh mục ở đây, mọi thứ sẽ không hoạt động nữa.
+
+70
+00:05:05,350 --> 00:05:12,610
+Bạn có thể thấy ngoại lệ ở đây và đó là do vô tình hay cố ý, chúng tôi cũng đã cập nhật tên cơ sở dữ
+
+71
+00:05:12,610 --> 00:05:14,890
+liệu thành sách cồng kềnh.
+
+72
+00:05:15,130 --> 00:05:17,290
+Điều này phải được cồng kềnh.
+
+73
+00:05:17,320 --> 00:05:25,570
+Chúng tôi không có ý định cập nhật tên cơ sở dữ liệu bằng Ctrl shift F khi chúng tôi cập nhật nó, cập nhật cả
+
+74
+00:05:25,570 --> 00:05:27,010
+tên cơ sở dữ liệu.
+
+75
+00:05:27,040 --> 00:05:35,080
+Do đó, kết nối đã bị hỏng và khi chúng tôi sửa đổi lại, mọi thứ đều hoạt động như mong đợi.
+
+76
+00:05:35,740 --> 00:05:42,280
+Vì vậy, mặc dù chúng ta đã dành khoảng mười phút cho video này, nhưng chúng ta đã học được một số điều quan trọng.
+
+77
+00:05:42,430 --> 00:05:47,140
+Đầu tiên, chúng ta đã thấy cách ly CSS đi kèm với kiểu dáng ở đây.
+
+78
+00:05:47,140 --> 00:05:51,260
+Và tiếp theo chúng ta đã thấy làm thế nào chúng ta có thể sửa đổi tên dự án?
+
+79
+00:05:51,260 --> 00:05:59,450
+Và nếu chúng tôi sửa đổi một số phụ thuộc bị hỏng, làm thế nào chúng tôi có thể khắc phục điều đó và đảm bảo dự án của chúng tôi hoạt
+
+80
+00:05:59,450 --> 00:06:00,800
+động như mong đợi?
+
+81
+00:06:01,860 --> 00:06:06,420
+Bây giờ, theo truyền thống trong một khóa học lập trình, bạn sẽ không thấy vấn đề phổ biến này.
+
+82
+00:06:06,420 --> 00:06:13,530
+Nhưng khi bạn đang làm việc với một dự án trong thế giới thực, bản thân tôi cũng gặp phải những vấn đề này và đó
+
+83
+00:06:13,530 --> 00:06:20,700
+là lý do tại sao tôi muốn dành thời gian để giúp bạn tiếp xúc với những vấn đề này và cách giải quyết chúng.
+
+84
+00:06:21,420 --> 00:06:27,720
+Tôi hy vọng video này hữu ích và để tôi tiếp tục với khóa học từ video tiếp theo.
+

@@ -1,0 +1,108 @@
+1
+00:00:01,740 --> 00:00:05,670
+Bây giờ, làm thế nào chúng ta có thể kiểm tra xem mọi thứ có thực sự hoạt động không?
+
+2
+00:00:05,910 --> 00:00:09,610
+Vâng, làm điều đó, làm điều đó là siêu đơn giản.
+
+3
+00:00:09,630 --> 00:00:14,400
+Để tôi đóng tất cả các tab ở đây và mở appsettings. json.
+
+4
+00:00:14,850 --> 00:00:17,340
+Chúng tôi đã và đang sử dụng cơ sở dữ liệu cồng kềnh.
+
+5
+00:00:17,370 --> 00:00:21,000
+Nhưng bây giờ hãy để tôi đổi tên cơ sở dữ liệu thành tên cồng kềnh.
+
+6
+00:00:21,570 --> 00:00:28,470
+Thông thường khi chúng tôi làm điều đó, chúng tôi phải thêm di chuyển, nhưng bây giờ chúng tôi đang làm điều đó trong cơ sở dữ liệu C.
+
+7
+00:00:28,680 --> 00:00:31,510
+Vì vậy, chúng tôi không phải làm bất cứ điều gì ở đây.
+
+8
+00:00:31,530 --> 00:00:34,140
+Trực tiếp chạy ứng dụng.
+
+9
+00:00:34,560 --> 00:00:42,210
+Nó sẽ tự động tạo cơ sở dữ liệu đó, áp dụng tất cả người dùng quản trị hạt giống di chuyển và chỉ định vai trò
+
+10
+00:00:42,210 --> 00:00:43,740
+của quản trị viên.
+
+11
+00:00:45,090 --> 00:00:45,810
+Hoàn hảo.
+
+12
+00:00:45,810 --> 00:00:48,990
+Bạn có thể thấy ở đây tất cả các sản phẩm được tạo ra.
+
+13
+00:00:49,170 --> 00:00:55,050
+Bây giờ chúng tôi không có bất kỳ hình ảnh nào vì đó là phần bổ sung mà người dùng sẽ phải thực hiện.
+
+14
+00:00:55,440 --> 00:00:58,170
+Hãy để tôi đi đến trình khởi tạo db.
+
+15
+00:00:58,380 --> 00:01:02,170
+Đó là quản trị viên tại dotnet mastery dot com.
+
+16
+00:01:02,810 --> 00:01:05,510
+Và nếu thử quản trị viên một, hai, ba.
+
+17
+00:01:05,900 --> 00:01:10,130
+Nó sẽ có thể đăng nhập cho tôi và hoàn hảo.
+
+18
+00:01:10,730 --> 00:01:13,550
+Mọi thứ đang hoạt động như mong đợi.
+
+19
+00:01:14,390 --> 00:01:17,090
+Vì vậy, điều đó có nghĩa là nếu chúng ta quay trở lại đây.
+
+20
+00:01:17,890 --> 00:01:22,420
+Chúng ta nên có một cái cồng kềnh và nó phải có tất cả các bảng.
+
+21
+00:01:22,570 --> 00:01:24,520
+Mọi thứ đều được tạo ra.
+
+22
+00:01:25,210 --> 00:01:30,190
+Vì vậy, bạn có thể thấy với trình khởi tạo cơ sở dữ liệu, việc triển khai sẽ dễ dàng như thế nào.
+
+23
+00:01:31,680 --> 00:01:37,920
+Bây giờ, trước khi chúng tôi làm bất cứ điều gì khác ở đây, hãy để tôi hoàn nguyên tên cơ sở dữ liệu cũ, vì
+
+24
+00:01:37,920 --> 00:01:45,240
+tên đó có đơn đặt hàng và mọi thứ, và đó là những gì chúng tôi sẽ sử dụng nếu chúng tôi muốn xây dựng ứng dụng của mình.
+
+25
+00:01:46,200 --> 00:01:53,130
+Tôi cũng có thể quay lại và xóa cái cồng kềnh này chỉ để thử nghiệm.
+
+26
+00:01:53,900 --> 00:01:54,740
+Hoàn hảo.
+
+27
+00:01:55,040 --> 00:01:58,100
+Hãy để tôi tiếp tục từ video tiếp theo.
+

@@ -1,0 +1,84 @@
+1
+00:00:01,500 --> 00:00:06,630
+When you will be working with the course, you will require some project resources.
+
+2
+00:00:06,990 --> 00:00:13,200
+I have added all of the project resources in one place, which is .net mastery.com.
+
+3
+00:00:13,770 --> 00:00:18,270
+So there if you navigate to courses, go to the course detail.
+
+4
+00:00:18,270 --> 00:00:21,450
+Here we have a few things right here.
+
+5
+00:00:22,140 --> 00:00:28,710
+First, I have a live preview of the final project that you will be building if you want to navigate.
+
+6
+00:00:28,740 --> 00:00:30,900
+Next, I have GitHub code.
+
+7
+00:00:31,520 --> 00:00:36,290
+Well, let me go back and open that in a new tab here and there.
+
+8
+00:00:36,290 --> 00:00:41,080
+If you notice, I have all of the commit based on the lecture name.
+
+9
+00:00:41,090 --> 00:00:44,480
+So we have section and then the lecture name.
+
+10
+00:00:44,660 --> 00:00:50,090
+If you go there, you can exactly see in that lecture what was modified.
+
+11
+00:00:50,480 --> 00:00:57,530
+So if something does not work for you, you can go here and look at that exact commit to make sure that
+
+12
+00:00:57,530 --> 00:00:59,540
+you do not have anything else.
+
+13
+00:01:00,210 --> 00:01:02,190
+That is a great resource.
+
+14
+00:01:02,860 --> 00:01:04,989
+Then we have course content.
+
+15
+00:01:05,260 --> 00:01:09,340
+Make sure to download that and let me open that file.
+
+16
+00:01:09,730 --> 00:01:13,810
+Once you open that, you will see two folders inside there.
+
+17
+00:01:13,990 --> 00:01:20,710
+If you are taking the old course in .net six, there are all the resources based on the old course.
+
+18
+00:01:20,710 --> 00:01:27,370
+But if you are taking the .net eight course, there are all the project resources where we have all
+
+19
+00:01:27,370 --> 00:01:29,290
+the image that are being used.
+
+20
+00:01:29,380 --> 00:01:36,850
+We have code snippets for lecture and I have the final PowerPoint which you can use in your project.
+
+21
+00:01:37,670 --> 00:01:44,120
+So make sure to download all the project resource before you move forward in the next video.
+

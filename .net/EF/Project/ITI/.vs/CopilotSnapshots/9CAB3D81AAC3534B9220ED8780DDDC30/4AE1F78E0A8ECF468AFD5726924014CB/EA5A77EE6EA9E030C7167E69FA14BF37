@@ -1,0 +1,81 @@
+﻿using ITI.Application.Dtos;
+using ITI.Application.Interfaces.Services;
+using static System.Net.Mime.MediaTypeNames;
+
+namespace ITI.WinForms
+{
+    public partial class Form1 : Form
+    {
+        private readonly IStudentService studentService;
+
+        public Form1(IStudentService studentService)
+        {
+            InitializeComponent();
+            this.studentService = studentService;
+            GetAllStudent();
+        }
+
+        private void GetAllStudent()
+        {
+            var data = studentService.GetAll();
+
+            studentDataView.AutoGenerateColumns = true;
+
+            studentDataView.DataSource = data;
+            studentCombo.DataSource = data;
+            studentCombo.ValueMember = "Id";
+            studentCombo.DisplayMember = "FirstName";
+
+        }
+
+
+
+        private void CreateStudentBtn_Click(object sender, EventArgs e)
+        {
+            var student = new CreateStudentDto(
+                FirstName: FNameTxt.Text,
+                LastName: LNameTxt.Text,
+                Phone: PhoneTxt.Text
+                );
+
+            studentService.Add(student);
+            ClearText();
+            GetAllStudent();
+        }
+
+        private void ClearText()
+        {
+            FNameTxt.Clear();
+            LNameTxt.Clear();
+            PhoneTxt.Clear();
+
+        }
+
+
+
+        private void studentCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (studentCombo.SelectedValue is int id)
+            {
+                var student = studentService.GetById(id);
+
+                if (student == null)
+                {
+                    MessageBox.Show("Not Found");
+                }
+                else
+                {
+                    FNameTxt.Text = student.FirstName;
+                    LNameTxt.Text = student.LastName;
+                    PhoneTxt.Text = student.Phone;
+                }
+            }
+        }
+
+        private void UpdateStudentBtn_Click(object sender, EventArgs e)
+        {
+
+
+        }
+    }
+}

@@ -1,0 +1,276 @@
+1
+00:00:01,640 --> 00:00:05,030
+Chúng ta cần làm cho chế độ xem tóm tắt ở đây năng động hơn.
+
+2
+00:00:05,060 --> 00:00:10,640
+Điều đầu tiên, mô hình sẽ là mô hình xem giỏ hàng là gì?
+
+3
+00:00:11,680 --> 00:00:14,590
+Sau đó, chúng tôi có một liên kết ở đây để quay lại giỏ hàng.
+
+4
+00:00:14,620 --> 00:00:18,070
+Về cơ bản, chúng tôi sẽ chuyển hướng đến hành động lập chỉ mục.
+
+5
+00:00:18,070 --> 00:00:21,760
+Đó sẽ là trang chủ cho giỏ hàng của chúng tôi.
+
+6
+00:00:22,420 --> 00:00:28,360
+Hãy để tôi chạy ứng dụng và xem các thuộc tính khác trước khi tôi thực hiện cập nhật.
+
+7
+00:00:29,500 --> 00:00:32,920
+Vì vậy, hãy để tôi đi đến tòa án ở đây và tóm tắt.
+
+8
+00:00:34,900 --> 00:00:36,310
+Chúng tôi đạt đến điểm dừng của chúng tôi.
+
+9
+00:00:36,340 --> 00:00:38,920
+Hãy để tôi loại bỏ nó và tiếp tục.
+
+10
+00:00:39,400 --> 00:00:40,840
+Và hoàn hảo.
+
+11
+00:00:40,930 --> 00:00:44,230
+Tiếp theo, chúng ta cần điền các chi tiết vận chuyển.
+
+12
+00:00:44,860 --> 00:00:46,990
+Chúng tôi sẽ đi đến phần tóm tắt ở đây.
+
+13
+00:00:46,990 --> 00:00:50,680
+Và đầu tiên chúng ta có tên mà chúng ta có đầu vào.
+
+14
+00:00:50,710 --> 00:00:58,600
+Chúng tôi sẽ thêm ASP cho trình trợ giúp thẻ cho tiêu đề đơn hàng. tên và tôi cũng sẽ thêm xác thực.
+
+15
+00:00:59,740 --> 00:01:08,140
+Hãy để tôi sao chép hai tên này, dán nó vào đây và để tôi dán nó vào tất cả các vị trí và sau đó chúng ta có thể thay
+
+16
+00:01:08,140 --> 00:01:10,270
+đổi thuộc tính mô hình.
+
+17
+00:01:10,510 --> 00:01:13,090
+Điều đó sẽ dễ dàng hơn nhiều.
+
+18
+00:01:13,950 --> 00:01:14,550
+Hoàn hảo.
+
+19
+00:01:14,550 --> 00:01:16,170
+Chúng tôi có mã bưu chính.
+
+20
+00:01:17,280 --> 00:01:18,870
+Hãy để tôi sửa nó.
+
+21
+00:01:19,840 --> 00:01:22,330
+Tiếp theo ở đây chúng ta có nhà nước.
+
+22
+00:01:26,940 --> 00:01:28,710
+Chúng tôi có thành phố.
+
+23
+00:01:31,180 --> 00:01:32,260
+Cuộn lên.
+
+24
+00:01:32,260 --> 00:01:34,300
+Chúng tôi có địa chỉ đường phố.
+
+25
+00:01:37,970 --> 00:01:39,740
+Chúng tôi có số điện thoại.
+
+26
+00:01:39,740 --> 00:01:41,600
+Để tôi dán cái đó.
+
+27
+00:01:43,880 --> 00:01:45,090
+Cuộn lên.
+
+28
+00:01:45,110 --> 00:01:46,100
+Hoàn hảo.
+
+29
+00:01:46,280 --> 00:01:47,750
+Trông tôt đây.
+
+30
+00:01:47,780 --> 00:01:55,550
+Hãy để tôi quay lại đây và bạn có thể thấy nó tự động được điền dựa trên những gì người dùng có khi
+
+31
+00:01:55,550 --> 00:01:57,530
+họ đăng ký tài khoản.
+
+32
+00:01:57,920 --> 00:02:03,170
+Rõ ràng là họ có thể thay đổi điều đó thành bất cứ thứ gì họ muốn trước khi đặt hàng.
+
+33
+00:02:04,010 --> 00:02:10,850
+Tiếp theo, chúng ta phải hiển thị tóm tắt đơn hàng và điều này sẽ dành cho tất cả các đơn hàng trong giỏ hàng.
+
+34
+00:02:11,330 --> 00:02:17,930
+Vì vậy, hãy để tôi cuộn xuống nơi chúng tôi có nó ngay tại đây trong nhóm danh sách.
+
+35
+00:02:17,930 --> 00:02:26,060
+Ở đây, chúng tôi sẽ thêm một cho mỗi vì chúng tôi sẽ phải lặp lại thông qua các chi tiết biến trong danh sách giỏ hàng
+
+36
+00:02:26,060 --> 00:02:27,260
+của mô hình.
+
+37
+00:02:27,590 --> 00:02:30,590
+Tôi sẽ đóng nó ngay tại đây.
+
+38
+00:02:31,240 --> 00:02:34,900
+Hãy để tôi lưu nó và quay lại The View.
+
+39
+00:02:34,930 --> 00:02:35,680
+Hoàn hảo.
+
+40
+00:02:35,680 --> 00:02:37,180
+Chúng tôi có hai mặt hàng.
+
+41
+00:02:38,000 --> 00:02:38,510
+Đầu tiên.
+
+42
+00:02:38,510 --> 00:02:39,860
+Đây là tiêu đề.
+
+43
+00:02:39,860 --> 00:02:48,380
+Chúng tôi sẽ thêm chi tiết, dấu chấm, sản phẩm, tiêu đề dấu chấm và tương tự sẽ đúng với số lượng bên trong số lượng dấu chấm
+
+44
+00:02:48,380 --> 00:02:49,400
+chi tiết.
+
+45
+00:02:50,420 --> 00:02:54,470
+Bây giờ, tổng ở đây sẽ là giá nhân với số lượng.
+
+46
+00:02:54,590 --> 00:02:57,420
+Vì vậy, chúng tôi sẽ sử dụng cú pháp dao cạo.
+
+47
+00:02:57,440 --> 00:03:02,240
+Trong đó chúng tôi sẽ nói chi tiết giá chấm.
+
+48
+00:03:02,570 --> 00:03:06,050
+Nhân số đó với số lượng chấm chi tiết.
+
+49
+00:03:06,910 --> 00:03:12,790
+Và chúng tôi sẽ chuyển đổi chuỗi đó thành một chuỗi có định dạng tiền tệ.
+
+50
+00:03:13,640 --> 00:03:16,670
+Cuối cùng, chúng tôi có tổng số lớn ở đây là bên trong.
+
+51
+00:03:16,670 --> 00:03:19,970
+Mô hình chấm thứ tự tiêu đề, chấm thứ tự.
+
+52
+00:03:19,970 --> 00:03:20,930
+Tổng cộng.
+
+53
+00:03:21,870 --> 00:03:24,630
+Và chuyển đổi nó thành tiền tệ.
+
+54
+00:03:26,370 --> 00:03:30,870
+Hãy để tôi lưu nó và xem giao diện người dùng ở đây.
+
+55
+00:03:31,410 --> 00:03:32,270
+Hoàn hảo.
+
+56
+00:03:32,280 --> 00:03:33,420
+Trông rất tuyệt.
+
+57
+00:03:33,810 --> 00:03:36,150
+Bây giờ, ước tính ngày đến.
+
+58
+00:03:36,180 --> 00:03:38,010
+Điều này không có gì lạ mắt.
+
+59
+00:03:38,160 --> 00:03:43,470
+Tôi muốn hiển thị một ngày từ 7 đến 14 ngày kể từ ngày hôm nay.
+
+60
+00:03:43,500 --> 00:03:51,180
+Vì vậy, khi chúng tôi có ngày đến ước tính, chúng tôi có thể hiển thị thêm ngày, thêm bảy ngày vào đó
+
+61
+00:03:51,180 --> 00:03:53,610
+và chúng tôi sẽ thêm 14 ngày.
+
+62
+00:03:54,000 --> 00:03:59,520
+Dựa vào đó, nó sẽ hiển thị một ngày ước tính sơ bộ dựa trên ngày giờ của ngày hôm nay.
+
+63
+00:04:00,210 --> 00:04:01,360
+Rất hoàn hảo.
+
+64
+00:04:01,380 --> 00:04:07,890
+Với điều đó, giao diện người dùng của chúng tôi ở đây cho trang tóm tắt trông đẹp mắt hơn là giỏ hàng ở đây.
+
+65
+00:04:09,340 --> 00:04:10,690
+Tôi sẽ hiển thị thứ tự.
+
+66
+00:04:10,690 --> 00:04:11,530
+Bản tóm tắt.
+
+67
+00:04:13,400 --> 00:04:16,850
+Bạn có thể thay đổi điều đó nếu bạn muốn, nhưng tôi nghĩ điều đó có vẻ tốt.
+
+68
+00:04:17,540 --> 00:04:20,540
+Bây giờ, điều chính ở đây là đặt hàng.
+
+69
+00:04:21,110 --> 00:04:24,740
+Hãy để tôi tiếp tục với điều đó từ video tiếp theo.
+

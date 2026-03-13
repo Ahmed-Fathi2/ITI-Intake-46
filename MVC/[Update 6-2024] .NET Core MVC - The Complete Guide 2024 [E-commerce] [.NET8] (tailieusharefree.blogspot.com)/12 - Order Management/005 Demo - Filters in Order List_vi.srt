@@ -1,0 +1,300 @@
+1
+00:00:01,700 --> 00:00:03,350
+Ngay bây giờ trong danh sách đặt hàng.
+
+2
+00:00:03,380 --> 00:00:09,470
+Chúng tôi đang truy xuất tất cả các đơn đặt hàng nhưng chúng tôi muốn thêm bộ lọc dựa trên trạng thái.
+
+3
+00:00:10,170 --> 00:00:12,030
+Vì vậy, hãy để tôi làm điều đó.
+
+4
+00:00:12,060 --> 00:00:18,310
+Chúng tôi sẽ chuyển trở lại đây trong bộ điều khiển đơn đặt hàng nơi chúng tôi có tất cả.
+
+5
+00:00:18,330 --> 00:00:22,560
+Chúng tôi cũng sẽ nhận được một tham số, đó là trạng thái.
+
+6
+00:00:23,270 --> 00:00:30,410
+Và sau đó khi chúng tôi truy xuất tất cả các đơn đặt hàng ở đây, chúng tôi có thể thêm một điều kiện chuyển đổi dựa trên trạng thái.
+
+7
+00:00:31,190 --> 00:00:33,470
+Và tôi sẽ làm gì.
+
+8
+00:00:33,500 --> 00:00:35,870
+Rất tiếc, đây sẽ là công tắc.
+
+9
+00:00:36,290 --> 00:00:41,810
+Hãy để tôi đi đến mục lục ở đây và sao chép trường hợp này như nó được.
+
+10
+00:00:42,140 --> 00:00:43,610
+Dán nó ở đây.
+
+11
+00:00:43,880 --> 00:00:53,210
+Nếu nó đang chờ xử lý, chúng tôi sẽ lọc tiêu đề đơn hàng obj bằng với tiêu đề đơn hàng obj chấm ở đâu và chúng tôi sẽ nói
+
+12
+00:00:53,210 --> 00:01:02,660
+bạn xem ma trạng thái thanh toán chấm bằng c chấm trạng thái thanh toán bị trì hoãn đang chờ xử lý sẽ có tất cả các đơn
+
+13
+00:01:02,660 --> 00:01:07,880
+hàng đang chờ thanh toán cho khoản thanh toán bị chậm trễ.
+
+14
+00:01:08,090 --> 00:01:14,090
+Để điều này hoạt động, chúng tôi sẽ phải chuyển đổi điều này thành một tôi có thể đếm được.
+
+15
+00:01:14,180 --> 00:01:15,860
+Và có chúng tôi đi.
+
+16
+00:01:16,590 --> 00:01:19,410
+Tiếp theo chúng ta có quá trình trong.
+
+17
+00:01:20,010 --> 00:01:21,960
+Hãy để tôi dán nó ở đây.
+
+18
+00:01:22,140 --> 00:01:25,590
+Và chúng tôi có trạng thái trong quá trình.
+
+19
+00:01:25,920 --> 00:01:28,590
+Và đó sẽ không phải là trạng thái thanh toán.
+
+20
+00:01:28,590 --> 00:01:30,960
+Đó sẽ là trạng thái đơn hàng.
+
+21
+00:01:31,860 --> 00:01:38,650
+Sau đó, chúng tôi đã hoàn thành sẽ được chuyển trạng thái và phê duyệt.
+
+22
+00:01:38,670 --> 00:01:41,100
+Chúng tôi có trạng thái được phê duyệt.
+
+23
+00:01:41,490 --> 00:01:45,120
+Cuối cùng, đối với tất cả chúng tôi không muốn làm bất cứ điều gì.
+
+24
+00:01:45,120 --> 00:01:46,800
+Chúng ta có thể quay trở lại.
+
+25
+00:01:47,160 --> 00:01:51,690
+Vì vậy, điều đó có vẻ phù hợp để thêm tính năng lọc trong bộ điều khiển đơn hàng.
+
+26
+00:01:52,140 --> 00:02:00,540
+Bây giờ từ dấu chấm đơn hàng js khi chúng tôi chuyển đơn hàng, hãy lấy tất cả những gì chúng tôi cần để chuyển trạng thái ngay tại đây.
+
+27
+00:02:01,960 --> 00:02:11,260
+Những gì chúng ta có thể làm ở đây là trong Document. sẵn sàng, chúng tôi có thể lấy URL hoàn chỉnh bằng cách sử dụng Window. tìm kiếm dấu chấm vị trí.
+
+28
+00:02:11,740 --> 00:02:16,060
+Sau đó, chúng tôi sẽ thêm một điều kiện khó chịu nếu khác.
+
+29
+00:02:16,060 --> 00:02:18,460
+dấu chấm url của bạn bao gồm.
+
+30
+00:02:18,730 --> 00:02:21,730
+Nếu điều đó bao gồm trong process.
+
+31
+00:02:22,000 --> 00:02:28,000
+Tôi không muốn có bất kỳ lỗi chính tả nào, vì vậy hãy để tôi đi đến mục lục.
+
+32
+00:02:28,540 --> 00:02:29,860
+Sao chép trạng thái.
+
+33
+00:02:29,860 --> 00:02:30,940
+Chính xác.
+
+34
+00:02:31,090 --> 00:02:38,980
+Nếu điều đó đang được xử lý, thì khi chúng tôi đang tải bảng dữ liệu, chúng tôi sẽ chuyển vào quá trình.
+
+35
+00:02:39,850 --> 00:02:45,490
+Vì vậy, về cơ bản trong bảng dữ liệu tải, lần này chúng ta sẽ nhận được một trạng thái ở đây.
+
+36
+00:02:47,320 --> 00:02:49,000
+Hãy để tôi cắt cái này.
+
+37
+00:02:49,000 --> 00:02:54,340
+Sau đó, chúng tôi sẽ có một khối khác và chúng tôi sẽ lồng nhau nếu khác.
+
+38
+00:02:54,370 --> 00:02:57,580
+Hãy để tôi sao chép và dán này hai lần.
+
+39
+00:02:58,630 --> 00:02:59,920
+Trạng thái tiếp theo.
+
+40
+00:02:59,950 --> 00:03:02,860
+Hãy để tôi đi để được hoàn thành ở đây.
+
+41
+00:03:04,600 --> 00:03:05,770
+Hãy để tôi quay trở lại.
+
+42
+00:03:05,770 --> 00:03:07,300
+Chúng tôi đã chờ xử lý.
+
+43
+00:03:09,310 --> 00:03:12,430
+Và tôi sẽ phải dán nó một lần nữa.
+
+44
+00:03:12,640 --> 00:03:15,170
+Điều đó sẽ được chấp thuận.
+
+45
+00:03:16,880 --> 00:03:17,500
+Hoàn hảo.
+
+46
+00:03:17,500 --> 00:03:22,150
+Trong phần khác ở đây, chúng tôi sẽ tải tất cả bản ghi.
+
+47
+00:03:22,750 --> 00:03:23,900
+Rất hoàn hảo.
+
+48
+00:03:23,920 --> 00:03:28,930
+Chúng tôi đang gửi trạng thái ở đây khi chúng tôi đang gọi get all here.
+
+49
+00:03:28,960 --> 00:03:31,180
+Hãy để tôi nối trạng thái.
+
+50
+00:03:31,510 --> 00:03:34,240
+Vì vậy, trạng thái là bằng nhau.
+
+51
+00:03:34,750 --> 00:03:36,670
+Và chúng tôi sẽ thêm điều đó.
+
+52
+00:03:38,190 --> 00:03:38,820
+Với.
+
+53
+00:03:38,820 --> 00:03:41,550
+Tôi tin rằng mọi thứ sẽ tốt đẹp ngay bây giờ.
+
+54
+00:03:41,910 --> 00:03:44,100
+Và hãy để tôi làm mới ở đây.
+
+55
+00:03:44,490 --> 00:03:45,270
+Rất tiếc.
+
+56
+00:03:45,300 --> 00:03:46,740
+Nó không hoạt động.
+
+57
+00:03:46,770 --> 00:03:51,570
+Hãy để tôi khởi động lại để đảm bảo mọi thứ đều hoạt động.
+
+58
+00:03:51,810 --> 00:03:53,640
+Và hãy để tôi thấy điều đó.
+
+59
+00:03:54,870 --> 00:03:57,090
+Để tôi đi đặt hàng Quản lý.
+
+60
+00:03:57,270 --> 00:03:57,930
+Hoàn hảo.
+
+61
+00:03:57,930 --> 00:03:59,240
+Tất cả đã được chọn.
+
+62
+00:03:59,250 --> 00:04:01,050
+Hiển thị tất cả các thứ tự.
+
+63
+00:04:01,350 --> 00:04:04,980
+Nếu tôi tiếp tục phê duyệt, nó sẽ hiển thị cả hai.
+
+64
+00:04:05,010 --> 00:04:11,580
+Chúng tôi không có bất kỳ khoản thanh toán nào đã hoàn thành và khoản thanh toán đang chờ xử lý đang được hiển thị.
+
+65
+00:04:12,820 --> 00:04:14,110
+Rất hoàn hảo.
+
+66
+00:04:14,260 --> 00:04:18,310
+Cùng với đó, các bộ lọc của chúng tôi đang hoạt động như mong đợi.
+
+67
+00:04:18,459 --> 00:04:21,399
+Một thay đổi tôi sẽ làm là chỉnh sửa ở đây.
+
+68
+00:04:21,399 --> 00:04:33,190
+Hãy để tôi giảm chiều rộng ở đó để cái cuối cùng ở đây chúng ta sẽ tạo 10% đó và đặt tên.
+
+69
+00:04:33,190 --> 00:04:35,560
+Tôi sẽ tăng nó lên 20.
+
+70
+00:04:35,710 --> 00:04:38,470
+Số điện thoại 20 có vẻ tốt.
+
+71
+00:04:38,620 --> 00:04:41,530
+Điều này tôi cũng sẽ làm cho nó 20.
+
+72
+00:04:41,770 --> 00:04:44,380
+Và để tôi xem nó trông như thế nào.
+
+73
+00:04:45,220 --> 00:04:46,040
+Hoàn hảo.
+
+74
+00:04:46,060 --> 00:04:47,230
+Tốt hơn nhiều.
+
+75
+00:04:47,830 --> 00:04:51,370
+Với điều đó, hãy để tôi tiếp tục từ video tiếp theo.
+

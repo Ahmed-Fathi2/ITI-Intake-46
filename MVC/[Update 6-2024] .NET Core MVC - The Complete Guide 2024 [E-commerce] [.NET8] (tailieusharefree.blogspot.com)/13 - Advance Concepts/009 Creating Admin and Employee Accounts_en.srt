@@ -1,0 +1,404 @@
+1
+00:00:01,830 --> 00:00:04,080
+-: Now, let's say our application is done
+
+2
+00:00:04,080 --> 00:00:06,750
+and we are publishing it online.
+
+3
+00:00:06,750 --> 00:00:09,660
+There, on the signup or the register page,
+
+4
+00:00:09,660 --> 00:00:12,270
+we do not want them to select a role
+
+5
+00:00:12,270 --> 00:00:14,970
+because admin, employee cannot be created
+
+6
+00:00:14,970 --> 00:00:18,300
+by anyone that browses the website.
+
+7
+00:00:18,300 --> 00:00:20,040
+Also, based on the requirement,
+
+8
+00:00:20,040 --> 00:00:24,420
+a company account can only be created or registered
+
+9
+00:00:24,420 --> 00:00:27,303
+by an admin or an employee account.
+
+10
+00:00:28,620 --> 00:00:31,980
+So what we want to do is the same register page,
+
+11
+00:00:31,980 --> 00:00:35,160
+we want to add that in the content management
+
+12
+00:00:35,160 --> 00:00:37,473
+when an admin logs in.
+
+13
+00:00:38,520 --> 00:00:40,560
+So let me switch back here,
+
+14
+00:00:40,560 --> 00:00:43,050
+and let me go to register.
+
+15
+00:00:43,050 --> 00:00:45,870
+Well first, let me close everything,
+
+16
+00:00:45,870 --> 00:00:48,333
+and let me open underscore layout.
+
+17
+00:00:52,050 --> 00:00:55,350
+Inside there, in content management, right here,
+
+18
+00:00:55,350 --> 00:00:57,093
+I will add one more link.
+
+19
+00:00:57,930 --> 00:01:00,030
+Copy and paste that.
+
+20
+00:01:00,030 --> 00:01:02,550
+The area will be identity area,
+
+21
+00:01:02,550 --> 00:01:04,620
+but that is not a controller,
+
+22
+00:01:04,620 --> 00:01:06,300
+it is a Razor page,
+
+23
+00:01:06,300 --> 00:01:09,840
+so we have to use ESP page tag helper,
+
+24
+00:01:09,840 --> 00:01:12,900
+and we want to navigate to register,
+
+25
+00:01:12,900 --> 00:01:17,520
+which is inside account, and there we have register.
+
+26
+00:01:17,520 --> 00:01:20,643
+I will call that create user.
+
+27
+00:01:21,570 --> 00:01:23,790
+So based on that, if we go back,
+
+28
+00:01:23,790 --> 00:01:26,343
+we have the basic register page here.
+
+29
+00:01:27,390 --> 00:01:30,000
+One condition that I will add is the dropdown
+
+30
+00:01:30,000 --> 00:01:33,723
+will only be visible if the role is admin.
+
+31
+00:01:34,590 --> 00:01:37,083
+So let me go to register here,
+
+32
+00:01:39,750 --> 00:01:43,140
+and where we have that dropdown?
+
+33
+00:01:43,140 --> 00:01:44,670
+Right here.
+
+34
+00:01:44,670 --> 00:01:47,700
+We will add if the role is admin,
+
+35
+00:01:47,700 --> 00:01:51,390
+only then we will display both company,
+
+36
+00:01:51,390 --> 00:01:53,283
+as well as the role dropdown.
+
+37
+00:01:54,180 --> 00:01:58,530
+If I save this here and go back. Perfect.
+
+38
+00:01:58,530 --> 00:02:00,390
+Now on the register page,
+
+39
+00:02:00,390 --> 00:02:03,480
+user can no longer select a role.
+
+40
+00:02:03,480 --> 00:02:08,479
+That is the ideal situation in a production application.
+
+41
+00:02:08,550 --> 00:02:11,553
+But now, let me log in as an admin here,
+
+42
+00:02:12,660 --> 00:02:15,210
+and if I go to content management,
+
+43
+00:02:15,210 --> 00:02:17,553
+there is a tab to create a user.
+
+44
+00:02:18,450 --> 00:02:19,283
+Perfect.
+
+45
+00:02:19,283 --> 00:02:21,690
+This time we have the role that is working
+
+46
+00:02:21,690 --> 00:02:24,330
+because it knows that the logged in user
+
+47
+00:02:24,330 --> 00:02:26,043
+is an admin user.
+
+48
+00:02:26,880 --> 00:02:29,850
+To be explicit, rather than register here,
+
+49
+00:02:29,850 --> 00:02:33,660
+let me display register an admin portal.
+
+50
+00:02:33,660 --> 00:02:38,610
+If the role is admin, so let me copy this.
+
+51
+00:02:38,610 --> 00:02:40,890
+We can add an if condition.
+
+52
+00:02:40,890 --> 00:02:45,890
+If user dot is in role SD dot admin,
+
+53
+00:02:48,120 --> 00:02:50,970
+then we want to display an h2
+
+54
+00:02:50,970 --> 00:02:55,323
+where we will display register admin portal.
+
+55
+00:02:56,850 --> 00:02:58,200
+In the else part,
+
+56
+00:02:58,200 --> 00:03:00,753
+we will keep things as it is.
+
+57
+00:03:02,310 --> 00:03:05,250
+Perfect. If I go back, great.
+
+58
+00:03:05,250 --> 00:03:06,933
+We have admin portal.
+
+59
+00:03:07,860 --> 00:03:11,310
+When admin is creating an account for someone else,
+
+60
+00:03:11,310 --> 00:03:15,843
+we do not want this Facebook, so I will hide that as well.
+
+61
+00:03:16,710 --> 00:03:17,973
+Where is that?
+
+62
+00:03:19,260 --> 00:03:21,150
+Right here, I believe.
+
+63
+00:03:21,150 --> 00:03:23,103
+Yep. This is the div.
+
+64
+00:03:24,630 --> 00:03:29,630
+So if user dot is enrolled SD dot admin,
+
+65
+00:03:31,950 --> 00:03:35,820
+basically we want if the user is not an admin,
+
+66
+00:03:35,820 --> 00:03:37,803
+then we want to display this.
+
+67
+00:03:38,820 --> 00:03:43,820
+So if I save that, perfect, that also goes away.
+
+68
+00:03:43,980 --> 00:03:47,670
+Now the final changes, if we register for a user,
+
+69
+00:03:47,670 --> 00:03:52,020
+it typically signs me in with the new user.
+
+70
+00:03:52,020 --> 00:03:53,340
+Let me show that.
+
+71
+00:03:53,340 --> 00:03:56,250
+If I am registering an employee,
+
+72
+00:03:56,250 --> 00:04:00,630
+let me change that to be employee one, register.
+
+73
+00:04:00,630 --> 00:04:03,330
+You will notice it signs out the admin
+
+74
+00:04:03,330 --> 00:04:05,760
+and signs in the employee.
+
+75
+00:04:05,760 --> 00:04:09,570
+We do not want that when an admin is registering
+
+76
+00:04:09,570 --> 00:04:10,533
+for an account.
+
+77
+00:04:11,610 --> 00:04:15,183
+We have to modify that in the register page model.
+
+78
+00:04:16,079 --> 00:04:20,190
+Let me go to the post-action, right here.
+
+79
+00:04:20,190 --> 00:04:24,960
+If I scroll down, we have the if else condition,
+
+80
+00:04:24,960 --> 00:04:28,530
+and then let me see where it is signing in.
+
+81
+00:04:28,530 --> 00:04:30,783
+It signs in right here.
+
+82
+00:04:31,680 --> 00:04:34,080
+So, in there, we can add an if condition
+
+83
+00:04:34,080 --> 00:04:38,100
+that if a user is already in role of admin,
+
+84
+00:04:38,100 --> 00:04:40,680
+that means that user is signed in
+
+85
+00:04:40,680 --> 00:04:43,980
+and admin is creating that account.
+
+86
+00:04:43,980 --> 00:04:47,640
+If that is the case, then we do not want to sign in.
+
+87
+00:04:47,640 --> 00:04:50,043
+Else we want to sign in the user.
+
+88
+00:04:51,120 --> 00:04:54,750
+So cut and paste it right here
+
+89
+00:04:54,750 --> 00:04:58,560
+and in the if condition, we can add a temp data,
+
+90
+00:04:58,560 --> 00:05:01,113
+new user created successfully.
+
+91
+00:05:02,070 --> 00:05:04,380
+So, perfect. That looks good.
+
+92
+00:05:04,380 --> 00:05:08,310
+Let me go back, and try that one more time.
+
+93
+00:05:08,310 --> 00:05:12,390
+We will have to log out and log in as admin again.
+
+94
+00:05:12,390 --> 00:05:13,630
+Let me do that
+
+95
+00:05:16,800 --> 00:05:18,903
+and let me try to create a user.
+
+96
+00:05:19,980 --> 00:05:22,410
+We have dummy information.
+
+97
+00:05:22,410 --> 00:05:26,400
+Let me hit register, and perfect.
+
+98
+00:05:26,400 --> 00:05:28,380
+It did not sign in the user
+
+99
+00:05:28,380 --> 00:05:31,173
+and we get the toaster notification.
+
+100
+00:05:32,760 --> 00:05:33,930
+So perfect.
+
+101
+00:05:33,930 --> 00:05:38,673
+That looks good for creating a new user from the admin side.
+

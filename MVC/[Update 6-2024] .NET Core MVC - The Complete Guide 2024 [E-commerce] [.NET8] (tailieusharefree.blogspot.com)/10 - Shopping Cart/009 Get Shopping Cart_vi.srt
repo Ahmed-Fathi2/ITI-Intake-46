@@ -1,0 +1,280 @@
+1
+00:00:01,910 --> 00:00:08,570
+Chúng tôi cần hiển thị tất cả các mặt hàng trong giỏ hàng và trang này phải được cấp quyền.
+
+2
+00:00:09,470 --> 00:00:15,770
+Vì vậy, hãy để tôi quay lại ứng dụng và nơi chúng tôi có bộ điều khiển giỏ hàng với khu vực.
+
+3
+00:00:15,800 --> 00:00:20,870
+Tôi sẽ nói rằng chỉ những người dùng được ủy quyền mới có thể truy cập trang.
+
+4
+00:00:21,990 --> 00:00:28,800
+Bây giờ, bên trong hành động lập chỉ mục ở đây, chúng tôi phải truy xuất giỏ hàng và chuyển nó đến chế độ xem của chúng tôi.
+
+5
+00:00:29,610 --> 00:00:37,530
+Nhưng nếu tôi kiểm tra mô hình giỏ hàng mà tôi có, tôi chỉ có ID sản phẩm và ID người dùng cùng với
+
+6
+00:00:37,530 --> 00:00:40,500
+chi tiết sản phẩm trong giỏ hàng.
+
+7
+00:00:40,530 --> 00:00:47,970
+Chúng tôi cũng muốn hiển thị tổng số đơn đặt hàng, vì vậy chúng tôi cần thuộc tính bổ sung cùng với tôi đếm được
+
+8
+00:00:47,970 --> 00:00:49,890
+hoặc danh sách giỏ hàng.
+
+9
+00:00:51,050 --> 00:00:59,720
+Để làm được điều đó, chúng ta sẽ phải tạo một mô hình xem và để tôi tạo và gọi VM giỏ hàng đó.
+
+10
+00:01:00,800 --> 00:01:03,470
+Chúng tôi sẽ biến nó thành một lớp công khai ở đây.
+
+11
+00:01:03,470 --> 00:01:05,960
+Và tất cả các thuộc tính sẽ là gì?
+
+12
+00:01:06,290 --> 00:01:11,480
+Một thuộc tính mà tôi có thể nghĩ đến là vô số giỏ hàng.
+
+13
+00:01:11,480 --> 00:01:18,470
+Và hãy để tôi gọi đó là danh sách giỏ hàng sẽ có ý nghĩa hơn.
+
+14
+00:01:19,100 --> 00:01:23,960
+Cùng với đó, tôi có thể có một cú đúp sẽ là tổng số đơn đặt hàng.
+
+15
+00:01:24,410 --> 00:01:28,090
+Đó là hai tài sản tôi có thể nghĩ đến ngay bây giờ.
+
+16
+00:01:28,100 --> 00:01:33,710
+Nhưng khi chúng tôi tiếp tục, chúng tôi sẽ thay đổi mô hình chế độ xem dựa trên yêu cầu của chúng tôi.
+
+17
+00:01:34,370 --> 00:01:36,290
+Hiện tại, điều này có vẻ tốt.
+
+18
+00:01:36,740 --> 00:01:41,600
+Nếu tôi đi đến bộ điều khiển giỏ hàng, tôi cần điền vào giỏ hàng.
+
+19
+00:01:41,990 --> 00:01:44,990
+Đối với điều đó tôi sẽ phải có được đơn vị công việc.
+
+20
+00:01:44,990 --> 00:01:48,200
+Vì vậy, hãy để tôi có được điều đó với tiêm phụ thuộc.
+
+21
+00:01:48,200 --> 00:01:52,730
+Và trên hết, chúng ta sẽ có mô hình xem giỏ hàng.
+
+22
+00:01:53,360 --> 00:01:58,220
+Sau đó, trong phần chỉ mục, chúng tôi phải lấy giỏ hàng cho người dùng.
+
+23
+00:01:58,700 --> 00:02:03,740
+Để làm được điều đó, chúng tôi sẽ yêu cầu ID người dùng và chúng tôi biết cách lấy ID đó.
+
+24
+00:02:03,770 --> 00:02:06,500
+Chúng tôi đã làm điều đó trong bộ điều khiển gia đình.
+
+25
+00:02:06,650 --> 00:02:09,120
+Chúng tôi có danh tính yêu cầu bồi thường.
+
+26
+00:02:09,139 --> 00:02:14,120
+Hãy để tôi sao chép hai dòng này và dán nó ngay tại đây.
+
+27
+00:02:14,510 --> 00:02:22,640
+Dựa trên ID người dùng, chúng tôi có thể điền mô hình xem giỏ hàng bằng mới và ở đó chúng
+
+28
+00:02:22,640 --> 00:02:31,160
+tôi sẽ điền danh sách bằng gạch dưới đơn vị công việc chấm giỏ hàng chấm nhận tất cả.
+
+29
+00:02:31,980 --> 00:02:40,890
+Chúng tôi muốn lấy tất cả dựa trên ID người dùng ứng dụng của bạn và vì lý do nào đó, nó không hoạt động.
+
+30
+00:02:41,070 --> 00:02:44,970
+Hãy để tôi kiểm tra kho lưu trữ mà chúng tôi có.
+
+31
+00:02:47,620 --> 00:02:54,000
+Và tôi sẽ mở kho lưu trữ và rất tiếc là nơi chúng tôi có tất cả.
+
+32
+00:02:54,010 --> 00:02:58,000
+Chúng tôi không truy cập chức năng liên kết cho bộ lọc.
+
+33
+00:02:58,480 --> 00:03:00,400
+Tôi sẽ thêm logic đó.
+
+34
+00:03:00,970 --> 00:03:03,100
+Đóng giao diện.
+
+35
+00:03:05,060 --> 00:03:09,800
+Và trong quá trình triển khai, chúng tôi sẽ phải thêm bộ lọc.
+
+36
+00:03:11,030 --> 00:03:12,020
+Hoàn hảo.
+
+37
+00:03:12,320 --> 00:03:17,840
+Cùng với đó, nếu tôi đóng mọi thứ khác ngoài bộ điều khiển thẻ, hãy để tôi làm điều đó.
+
+38
+00:03:17,840 --> 00:03:19,820
+Và hành động chỉ mục.
+
+39
+00:03:20,730 --> 00:03:26,850
+Bây giờ chúng ta có thể nói ID người dùng ứng dụng bằng ID người dùng.
+
+40
+00:03:28,950 --> 00:03:33,390
+Khi chúng tôi truy xuất giỏ hàng, chúng tôi cũng muốn bao gồm sản phẩm.
+
+41
+00:03:33,630 --> 00:03:38,130
+Vì vậy, chúng tôi sẽ nói bao gồm các thuộc tính và đây sẽ là sản phẩm.
+
+42
+00:03:38,370 --> 00:03:41,580
+Ở đây bạn phải chắc chắn rằng nó phân biệt chữ hoa chữ thường.
+
+43
+00:03:41,610 --> 00:03:44,340
+Nó phải là tên mô hình chính xác.
+
+44
+00:03:45,120 --> 00:03:52,620
+Vì vậy, hãy để tôi lưu nó và chúng ta sẽ chuyển ViewModel trở lại The View.
+
+45
+00:03:54,090 --> 00:04:00,630
+Bây giờ ở đây, hãy để tôi thêm một điểm sửa lỗi và chạy ứng dụng để xem nó có hoạt động không.
+
+46
+00:04:01,410 --> 00:04:03,120
+Chúng tôi đã thêm vào đây.
+
+47
+00:04:03,120 --> 00:04:08,520
+Hãy để tôi xem đó là gì và để tôi mở lại lỗi.
+
+48
+00:04:13,190 --> 00:04:15,680
+Chúng tôi quên thêm bộ lọc.
+
+49
+00:04:16,950 --> 00:04:18,870
+Hãy để tôi làm điều đó.
+
+50
+00:04:19,920 --> 00:04:21,209
+Và hoàn hảo.
+
+51
+00:04:21,209 --> 00:04:22,380
+Cần làm việc.
+
+52
+00:04:26,100 --> 00:04:32,340
+Chà, chúng tôi sẽ phải biến điều đó thành một tùy chọn vì nó sẽ không được yêu cầu mọi lúc.
+
+53
+00:04:33,540 --> 00:04:35,610
+Và điều đó có ý nghĩa hoàn hảo.
+
+54
+00:04:35,820 --> 00:04:44,490
+Để mình mở giao diện luôn và chỗ chúng ta có bộ lọc get all sẽ tùy chọn vì nếu muốn lấy tất cả các danh
+
+55
+00:04:44,490 --> 00:04:49,290
+mục thì chúng ta không muốn pass bộ lọc nào cả.
+
+56
+00:04:49,710 --> 00:04:55,590
+Vì vậy, bộ lọc sẽ chỉ được áp dụng nếu bộ lọc không rỗng.
+
+57
+00:05:01,080 --> 00:05:02,160
+Và hoàn hảo.
+
+58
+00:05:02,160 --> 00:05:05,580
+Chúng tôi đang làm cho kho lưu trữ của chúng tôi năng động hơn.
+
+59
+00:05:06,770 --> 00:05:09,440
+Hãy để tôi chạy cái này và xem.
+
+60
+00:05:09,490 --> 00:05:10,490
+Rất tiếc.
+
+61
+00:05:10,700 --> 00:05:12,560
+Điều đó đã không xảy ra.
+
+62
+00:05:13,010 --> 00:05:21,320
+Tôi đã cập nhật kho lưu trữ và nơi chúng tôi có bộ lọc, chúng tôi sẽ phải xác định rõ ràng null ở đó.
+
+63
+00:05:24,390 --> 00:05:25,260
+Hoàn hảo.
+
+64
+00:05:25,290 --> 00:05:27,480
+Cho toi vao Giỏ hang.
+
+65
+00:05:30,030 --> 00:05:32,910
+Khi chúng tôi đăng nhập, chúng tôi đã đạt đến điểm ngắt của mình.
+
+66
+00:05:33,060 --> 00:05:35,130
+Và để tôi kiểm tra.
+
+67
+00:05:36,950 --> 00:05:43,310
+Chúng tôi có danh sách thẻ ở đây và thật tuyệt, nó có các mục.
+
+68
+00:05:43,670 --> 00:05:45,380
+Vì vậy, mà có vẻ tốt.
+
+69
+00:05:45,830 --> 00:05:51,770
+Dựa vào đó, chúng tôi sẽ phải điền tổng số đơn đặt hàng ở đây trước khi tiếp tục.
+
+70
+00:05:52,430 --> 00:05:55,190
+Hãy để tôi làm điều đó trong video tiếp theo.
+

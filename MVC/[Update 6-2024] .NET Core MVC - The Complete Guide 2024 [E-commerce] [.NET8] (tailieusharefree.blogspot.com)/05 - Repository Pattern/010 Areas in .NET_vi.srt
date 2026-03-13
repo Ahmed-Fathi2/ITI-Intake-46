@@ -1,0 +1,400 @@
+1
+00:00:01,560 --> 00:00:08,160
+Bây giờ, tôi hy vọng bạn cảm thấy thoải mái với các hành động của bộ điều khiển và chúng tôi sẽ thêm một hệ thống phân
+
+2
+00:00:08,160 --> 00:00:09,420
+cấp nữa trên đó.
+
+3
+00:00:09,630 --> 00:00:16,350
+Và lý do duy nhất tôi đang chỉ ra đó là nó thực sự là một tính năng tuyệt vời nếu bạn phải phân chia một
+
+4
+00:00:16,350 --> 00:00:20,100
+số thứ trong dự án của mình và đó được gọi là khu vực.
+
+5
+00:00:20,610 --> 00:00:26,340
+Thông thường khi chúng ta làm việc với định tuyến, chúng ta có bộ điều khiển và sau đó là phương thức hành động.
+
+6
+00:00:26,520 --> 00:00:33,300
+Nhưng nhóm Dotnet cũng đã cung cấp một số thứ đặc biệt để phân chia một số thứ trong các lĩnh vực khác nhau.
+
+7
+00:00:33,600 --> 00:00:40,620
+Giống như nếu bạn có một trang web đối mặt với khách hàng, một bảng quản trị, bạn có thể chia dự án của mình thành hai
+
+8
+00:00:40,620 --> 00:00:41,490
+khu vực đó.
+
+9
+00:00:42,330 --> 00:00:45,090
+Bây giờ làm thế nào để bạn thêm nó vào một dự án?
+
+10
+00:00:45,540 --> 00:00:52,320
+Chúng tôi sẽ nhấp chuột phải vào web sách cồng kềnh ở đây Thêm và chúng tôi sẽ nhấp vào mục giàn giáo mới.
+
+11
+00:00:53,550 --> 00:00:57,240
+Bên trong đó, bạn có thể thấy chúng tôi có một khu vực MVC.
+
+12
+00:00:57,690 --> 00:00:59,130
+Hãy thêm điều đó.
+
+13
+00:00:59,130 --> 00:01:01,710
+Và chúng ta cần đặt tên cho khu vực.
+
+14
+00:01:02,250 --> 00:01:05,280
+Giả sử chúng ta có hai phần trong trang web của mình.
+
+15
+00:01:05,310 --> 00:01:07,740
+Một là dành cho phần quản trị.
+
+16
+00:01:07,740 --> 00:01:10,610
+Vì vậy, hãy để tôi thêm một khu vực cho quản trị viên.
+
+17
+00:01:10,620 --> 00:01:14,910
+Nó sẽ thêm gói NuGet và giàn giáo cho khu vực đó.
+
+18
+00:01:15,780 --> 00:01:23,070
+Một khu vực khác mà chúng tôi sẽ thêm vào sẽ là khu vực khách hàng sẽ có mã liên quan đến khách hàng
+
+19
+00:01:23,070 --> 00:01:26,460
+như chi tiết trang chủ và nhiều hơn nữa.
+
+20
+00:01:27,300 --> 00:01:29,130
+Hoàn hảo ngay tại đây.
+
+21
+00:01:29,130 --> 00:01:34,380
+Khi chúng tôi dàn dựng điều đó, bạn có thể thấy nó thêm một thư mục có tên của các khu vực.
+
+22
+00:01:34,410 --> 00:01:38,430
+Sau đó, nó có quản trị viên, đó là khu vực mà chúng tôi đã thêm.
+
+23
+00:01:38,430 --> 00:01:42,420
+Và bên trong đó, chúng ta có bộ điều khiển, mô hình và chế độ xem.
+
+24
+00:01:43,230 --> 00:01:50,970
+Vì vậy, về cơ bản, tất cả mã trước đây chỉ ở một vị trí, giờ đây chúng tôi có thể chia nhỏ mã đó ở các khu vực khác
+
+25
+00:01:50,970 --> 00:01:51,810
+nhau.
+
+26
+00:01:52,140 --> 00:02:00,570
+Nhưng khi chúng tôi thêm khu vực, bạn có thể thấy định tuyến ở đây cũng thay đổi trong sct txt của giàn giáo, nó hiển thị
+
+27
+00:02:00,570 --> 00:02:05,100
+rằng, bây giờ bạn cũng phải thêm các khu vực trong định tuyến.
+
+28
+00:02:05,730 --> 00:02:07,500
+Vì vậy, hãy để tôi làm điều đó.
+
+29
+00:02:07,530 --> 00:02:12,870
+Hãy để tôi sao chép điều này và chúng tôi sẽ đi đến Chương trình của chúng tôi. cs.
+
+30
+00:02:12,960 --> 00:02:15,450
+Chúng tôi có tuyến đường điều khiển ở đây.
+
+31
+00:02:15,450 --> 00:02:20,160
+Để tôi dán nó vào đây và chúng ta sẽ thêm một dấu gạch chéo về phía trước.
+
+32
+00:02:21,510 --> 00:02:25,920
+Vì vậy, bây giờ chúng ta cần nói khu vực nào sẽ được gọi theo mặc định.
+
+33
+00:02:25,950 --> 00:02:28,380
+Tôi sẽ gọi đó là khách hàng.
+
+34
+00:02:28,680 --> 00:02:30,270
+Chúng tôi không có điều đó.
+
+35
+00:02:30,270 --> 00:02:33,120
+Vì vậy, hãy để tôi thêm khu vực đó.
+
+36
+00:02:35,880 --> 00:02:39,000
+Và chúng ta sẽ gọi khu vực khách hàng đó.
+
+37
+00:02:40,160 --> 00:02:41,840
+Và hãy để tôi thêm điều đó.
+
+38
+00:02:43,730 --> 00:02:44,300
+Hoàn hảo.
+
+39
+00:02:44,300 --> 00:02:45,320
+Trông tôt đây.
+
+40
+00:02:45,800 --> 00:02:51,320
+Bây giờ, với điều đó, chúng ta sẽ phải di chuyển bộ điều khiển của mình vào bên trong các thư mục khu vực.
+
+41
+00:02:51,440 --> 00:02:58,280
+Bây giờ trong khu vực bạn có thể thấy chúng tôi có các thư mục dành cho dữ liệu và mô hình, nhưng chúng tôi đã chuyển thư mục đó sang dự
+
+42
+00:02:58,280 --> 00:02:59,000
+án riêng lẻ.
+
+43
+00:02:59,000 --> 00:03:01,520
+Vì vậy, chúng tôi không cần hai điều này ở đây.
+
+44
+00:03:01,550 --> 00:03:05,720
+Hãy để tôi xóa nó khỏi cả hai khu vực.
+
+45
+00:03:05,900 --> 00:03:10,880
+Chúng tôi sẽ chỉ có bộ điều khiển và chế độ xem bên trong thư mục khu vực.
+
+46
+00:03:11,800 --> 00:03:19,810
+Bộ điều khiển danh mục thuộc về chức năng quản trị viên, vì vậy tôi sẽ chuyển chức năng đó sang bộ điều khiển quản trị.
+
+47
+00:03:20,470 --> 00:03:28,300
+Bộ điều khiển gia đình là đối tượng của khách hàng, vì vậy tôi sẽ thay đổi điều đó và chuyển nó vào bên trong khu vực khách hàng cùng với
+
+48
+00:03:28,810 --> 00:03:29,560
+điều đó.
+
+49
+00:03:29,560 --> 00:03:35,530
+Lộ trình mặc định của chúng tôi bây giờ là khu vực khách hàng, bộ điều khiển gia đình và hành động lập chỉ mục.
+
+50
+00:03:36,130 --> 00:03:43,600
+Bây giờ khi tôi di chuyển cái này, không gian tên cũng được cập nhật, nhưng nếu trong trường hợp của bạn, bạn đã chọn không và
+
+51
+00:03:43,600 --> 00:03:48,190
+bạn không cập nhật không gian tên, hãy đảm bảo cập nhật không gian tên đó.
+
+52
+00:03:49,380 --> 00:03:55,470
+Trên hết, làm thế nào để bạn nói với bộ điều khiển rằng bộ điều khiển này thuộc về một khu vực cụ thể?
+
+53
+00:03:55,950 --> 00:04:01,320
+Đối với điều đó, chúng ta có thuộc tính khu vực ở đây và chúng ta cần đặt tên.
+
+54
+00:04:01,470 --> 00:04:10,380
+Bộ điều khiển danh mục đó nằm trong khu vực quản trị và bộ điều khiển gia đình nằm trong khu vực khách hàng.
+
+55
+00:04:12,850 --> 00:04:16,360
+Với cấu hình đó, hãy để tôi chạy dự án.
+
+56
+00:04:17,750 --> 00:04:19,790
+Và mọi thứ không hoạt động.
+
+57
+00:04:19,790 --> 00:04:23,770
+Cái nhìn sâu sắc về khách hàng ràng buộc, tùy chọn gốc.
+
+58
+00:04:23,780 --> 00:04:26,690
+Hãy để tôi xem tùy chọn gốc là gì.
+
+59
+00:04:26,690 --> 00:04:31,640
+Và tất nhiên điều này sẽ bằng và không phải là dấu hai chấm.
+
+60
+00:04:33,540 --> 00:04:39,150
+Bây giờ chúng tôi có một ngoại lệ thân thiện với người dùng hơn cho biết chế độ xem không được tìm thấy.
+
+61
+00:04:39,360 --> 00:04:46,230
+Và điều đó thực sự đúng bởi vì chúng tôi đã di chuyển bộ điều khiển, nhưng chúng tôi không di chuyển các chế độ xem
+
+62
+00:04:46,230 --> 00:04:46,980
+tương ứng.
+
+63
+00:04:47,700 --> 00:04:50,970
+Vì vậy, hãy để tôi đi đến danh mục lượt xem ở đây.
+
+64
+00:04:50,970 --> 00:05:00,660
+Chúng tôi sẽ di chuyển nội dung đó vào bên trong quản trị viên tại đây và trang chủ, di chuyển nội dung đó đến chế độ xem của khách hàng ngay tại đây.
+
+65
+00:05:01,650 --> 00:05:07,440
+Khi bạn di chuyển nó và nếu bạn chạy dự án, mọi thứ vẫn không hoạt động.
+
+66
+00:05:08,100 --> 00:05:09,660
+Không gian tên ở đâu?
+
+67
+00:05:09,660 --> 00:05:11,010
+Hãy để tôi xem.
+
+68
+00:05:11,520 --> 00:05:14,640
+Nó nằm trong chế độ xem danh mục.
+
+69
+00:05:15,490 --> 00:05:23,200
+Và vâng, chúng ta có mô hình danh mục, nhưng làm thế nào chúng ta biết chính xác danh mục này ở đâu?
+
+70
+00:05:23,770 --> 00:05:30,820
+Nếu bạn kiểm tra, chúng tôi đã có điều đó trước đây trong lần nhập chế độ xem, chúng tôi đã có các mô hình đó.
+
+71
+00:05:31,810 --> 00:05:38,380
+Vì vậy, cùng với đó, chúng tôi cũng phải di chuyển chế độ xem bắt đầu và chế độ xem nhập cả hai tệp.
+
+72
+00:05:38,380 --> 00:05:44,860
+Chúng tôi sẽ dán nó vào trong thư mục xem ở cả hai khu vực.
+
+73
+00:05:45,340 --> 00:05:46,390
+Hoàn hảo.
+
+74
+00:05:47,020 --> 00:05:50,440
+Với điều đó, hãy để tôi chạy dự án một lần nữa.
+
+75
+00:05:52,370 --> 00:05:53,300
+Và hoàn hảo.
+
+76
+00:05:53,300 --> 00:05:56,960
+Trang web xuất hiện và mọi thứ đều ổn.
+
+77
+00:05:57,200 --> 00:06:04,100
+Nhưng khi bạn nhấp vào trang chủ và quyền riêng tư, điều đó đang hoạt động vì cả hai đều ở trong khu vực khách
+
+78
+00:06:04,100 --> 00:06:04,850
+hàng.
+
+79
+00:06:05,150 --> 00:06:08,320
+Nhưng danh mục nằm trong khu vực quản trị.
+
+80
+00:06:08,330 --> 00:06:15,470
+Khi bạn nhấp vào đó, nó sẽ cố gắng tìm bộ điều khiển danh mục và khách hàng, không tồn tại.
+
+81
+00:06:16,010 --> 00:06:18,230
+Vì vậy, chúng ta phải sửa đổi điều đó.
+
+82
+00:06:18,740 --> 00:06:27,590
+Vì vậy, điều sẽ xảy ra là nơi chúng ta có bộ điều khiển ASP, bây giờ chúng ta cũng sẽ phải xác định vùng ASP.
+
+83
+00:06:28,380 --> 00:06:34,860
+Vì vậy, danh mục nằm trong quản trị viên và bộ điều khiển gia đình nằm trong khách hàng.
+
+84
+00:06:39,300 --> 00:06:46,110
+Nếu bạn không viết khu vực, nó sẽ tìm kiếm bộ điều khiển đó trong khu vực hiện có nơi
+
+85
+00:06:46,110 --> 00:06:47,910
+trang đang cư trú.
+
+86
+00:06:48,570 --> 00:06:50,050
+Trông tôt đây.
+
+87
+00:06:50,070 --> 00:06:53,790
+Hãy để tôi chạy dự án và xem nó có hoạt động không.
+
+88
+00:06:54,930 --> 00:06:55,830
+Hoàn hảo.
+
+89
+00:06:55,860 --> 00:06:58,500
+Danh mục quản trị hoạt động.
+
+90
+00:06:58,620 --> 00:07:05,340
+Nếu bạn nhấp vào tạo danh mục mới, nó sẽ hoạt động vì ngay cả khi bạn chưa xác định khu vực, chúng tôi đang
+
+91
+00:07:05,340 --> 00:07:09,450
+tìm kiếm bên trong cùng khu vực quản trị mà chúng tôi đang ở.
+
+92
+00:07:09,780 --> 00:07:12,660
+Vì vậy, bạn có thể thấy tạo lại danh sách.
+
+93
+00:07:12,660 --> 00:07:13,450
+Biên tập.
+
+94
+00:07:13,470 --> 00:07:18,810
+Mọi thứ đang hoạt động vì chúng tôi đang làm việc trong cùng một khu vực.
+
+95
+00:07:19,350 --> 00:07:26,790
+Bây giờ, thông thường trong tương lai, tôi sẽ viết rõ ràng tất cả các lĩnh vực, nhưng đối với danh mục, tôi nghĩ
+
+96
+00:07:26,790 --> 00:07:34,020
+chúng ta nên bỏ qua phần đó vì chúng ta sẽ luôn thực hiện các thao tác CRUD từ trang chỉ mục danh mục.
+
+97
+00:07:35,070 --> 00:07:36,270
+Nhưng hoàn hảo.
+
+98
+00:07:36,300 --> 00:07:41,350
+Cùng với đó, bạn có thể thấy cách các khu vực sẽ thêm một lớp nữa trong điều hướng.
+
+99
+00:07:41,350 --> 00:07:48,280
+Và bây giờ khi chúng ta đang làm việc với định tuyến, trước tiên chúng ta sẽ xác định khu vực, sau đó là bộ điều khiển và sau đó
+
+100
+00:07:48,280 --> 00:07:49,300
+là tên hành động.
+

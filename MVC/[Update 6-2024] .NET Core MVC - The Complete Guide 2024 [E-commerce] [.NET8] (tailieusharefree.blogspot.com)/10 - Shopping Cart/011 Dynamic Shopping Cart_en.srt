@@ -1,0 +1,280 @@
+1
+00:00:01,859 --> 00:00:03,420
+Instructor: From the index section
+
+2
+00:00:03,420 --> 00:00:06,480
+we are returning a shopping cart view model.
+
+3
+00:00:06,480 --> 00:00:08,010
+That will be the model
+
+4
+00:00:08,010 --> 00:00:11,283
+for our index page inside the cart views.
+
+5
+00:00:12,120 --> 00:00:13,890
+So we will define model
+
+6
+00:00:13,890 --> 00:00:17,610
+and that will be shopping cart view model.
+
+7
+00:00:17,610 --> 00:00:20,940
+Based on that, let me modify other things here
+
+8
+00:00:20,940 --> 00:00:22,650
+and let me run this.
+
+9
+00:00:22,650 --> 00:00:26,253
+That way we can see everything that needs to be updated.
+
+10
+00:00:27,420 --> 00:00:30,270
+And let me go to the shopping cart here.
+
+11
+00:00:30,270 --> 00:00:31,410
+Perfect.
+
+12
+00:00:31,410 --> 00:00:33,990
+First, when we click continue shopping
+
+13
+00:00:33,990 --> 00:00:37,170
+it should take us back to the homepage.
+
+14
+00:00:37,170 --> 00:00:41,370
+We have continue shopping here rather than href.
+
+15
+00:00:41,370 --> 00:00:46,320
+We will say ASP area will be the customer area.
+
+16
+00:00:46,320 --> 00:00:50,550
+ASP controller will be home controller
+
+17
+00:00:50,550 --> 00:00:55,260
+and ASP action will be index action.
+
+18
+00:00:55,260 --> 00:00:59,370
+Then let me go back and whatever we see right here
+
+19
+00:00:59,370 --> 00:01:01,800
+that we will have to repeat every time
+
+20
+00:01:01,800 --> 00:01:05,489
+for all the items in our shopping cart.
+
+21
+00:01:05,489 --> 00:01:07,530
+So we need a for each loop
+
+22
+00:01:07,530 --> 00:01:10,440
+and we will have to iterate through that.
+
+23
+00:01:10,440 --> 00:01:13,560
+That is inside the column medium 10 here.
+
+24
+00:01:13,560 --> 00:01:17,760
+We will add a for each loop variable item
+
+25
+00:01:17,760 --> 00:01:21,480
+in model dot shopping cart list,
+
+26
+00:01:21,480 --> 00:01:23,040
+and the closing bracket.
+
+27
+00:01:23,040 --> 00:01:25,020
+Let me remove that.
+
+28
+00:01:25,020 --> 00:01:27,663
+We will add that right here.
+
+29
+00:01:29,220 --> 00:01:30,180
+Perfect.
+
+30
+00:01:30,180 --> 00:01:33,420
+Now if I save this and if I go back,
+
+31
+00:01:33,420 --> 00:01:34,830
+we have two items
+
+32
+00:01:34,830 --> 00:01:38,343
+and you can see it is being duplicated two times.
+
+33
+00:01:39,600 --> 00:01:41,550
+Let me fix the image here.
+
+34
+00:01:41,550 --> 00:01:46,477
+That will be inside item dot product dot image URL.
+
+35
+00:01:47,640 --> 00:01:51,210
+Let me see and great.
+
+36
+00:01:51,210 --> 00:01:52,083
+Looking good.
+
+37
+00:01:53,130 --> 00:01:58,083
+The title here will be inside item dot product dot title.
+
+38
+00:01:59,400 --> 00:02:00,960
+Let me copy this.
+
+39
+00:02:00,960 --> 00:02:03,510
+Next, we have the description.
+
+40
+00:02:03,510 --> 00:02:07,000
+For description, we need HTML dot raw
+
+41
+00:02:07,890 --> 00:02:12,890
+and we will paste the item dot product dot description.
+
+42
+00:02:13,800 --> 00:02:16,080
+Next, we have the price here.
+
+43
+00:02:16,080 --> 00:02:18,480
+That will be item dot price.
+
+44
+00:02:18,480 --> 00:02:23,040
+We'll use dot to string and see for the currency count
+
+45
+00:02:23,040 --> 00:02:25,533
+will be inside item dot count.
+
+46
+00:02:26,460 --> 00:02:28,170
+The price that we see here
+
+47
+00:02:28,170 --> 00:02:31,260
+will be the price based on the quantity
+
+48
+00:02:31,260 --> 00:02:33,960
+because that is the price in shopping cart
+
+49
+00:02:33,960 --> 00:02:38,190
+that we are calculating based on the count that we have.
+
+50
+00:02:38,190 --> 00:02:41,583
+If I open that, it is right here.
+
+51
+00:02:43,200 --> 00:02:46,413
+So let me save that and let's go back.
+
+52
+00:02:48,540 --> 00:02:49,470
+Perfect.
+
+53
+00:02:49,470 --> 00:02:51,750
+UI is looking good here.
+
+54
+00:02:51,750 --> 00:02:54,870
+After that, we have the patterns to update the quantity
+
+55
+00:02:54,870 --> 00:02:59,460
+or remove an item that we will cover in the upcoming video.
+
+56
+00:02:59,460 --> 00:03:00,480
+But before that,
+
+57
+00:03:00,480 --> 00:03:02,403
+let me display order total.
+
+58
+00:03:03,480 --> 00:03:06,060
+We will go back, let me scroll down.
+
+59
+00:03:06,060 --> 00:03:07,740
+Where is the total?
+
+60
+00:03:07,740 --> 00:03:09,180
+Right here.
+
+61
+00:03:09,180 --> 00:03:10,440
+We need to display that
+
+62
+00:03:10,440 --> 00:03:15,440
+from model dot order total dot to stringing,
+
+63
+00:03:15,780 --> 00:03:17,853
+convert that to currency.
+
+64
+00:03:19,290 --> 00:03:20,820
+Let me see.
+
+65
+00:03:20,820 --> 00:03:22,650
+And great.
+
+66
+00:03:22,650 --> 00:03:23,850
+With that in place
+
+67
+00:03:23,850 --> 00:03:26,970
+everything is looking much better.
+
+68
+00:03:26,970 --> 00:03:28,620
+Now, in the next video,
+
+69
+00:03:28,620 --> 00:03:31,050
+let me work on the plus, minus,
+
+70
+00:03:31,050 --> 00:03:34,293
+and delete here to update our shopping cart.
+

@@ -1,0 +1,372 @@
+1
+00:00:02,009 --> 00:00:04,950
+Tôi hy vọng bạn có thể hoàn thành nhiệm vụ.
+
+2
+00:00:05,460 --> 00:00:12,060
+Để làm được điều đó, chúng tôi sẽ phải cập nhật kho lưu trữ người dùng ứng dụng và bộ điều khiển người dùng.
+
+3
+00:00:12,660 --> 00:00:17,580
+Trong bộ điều khiển người dùng, chúng tôi không muốn ngữ cảnh DB của ứng dụng nữa.
+
+4
+00:00:17,700 --> 00:00:23,010
+Và trong hàm tạo ở đây, chúng ta sẽ nhận được vai trò quản lý người dùng.
+
+5
+00:00:23,040 --> 00:00:29,140
+Điều đó sẽ dựa trên danh tính, vai trò và đơn vị công việc thay vì db gạch dưới.
+
+6
+00:00:29,160 --> 00:00:36,150
+Ở đây chúng tôi sẽ nói đơn vị công việc gạch dưới bằng đơn vị công việc và người quản lý vai trò.
+
+7
+00:00:37,470 --> 00:00:43,920
+Sau đó, hãy để tôi chuyển đến giao diện ở đây và chúng tôi sẽ thêm một phương thức cập nhật sẽ nhận ứng dụng.
+
+8
+00:00:43,920 --> 00:00:48,810
+Người dùng thực hiện điều đó là khá đơn giản.
+
+9
+00:00:48,810 --> 00:00:52,470
+Ngay tại đây, chúng tôi sẽ thêm bản cập nhật.
+
+10
+00:00:52,500 --> 00:00:57,540
+Chúng tôi sẽ gọi dấu gạch dưới ứng dụng dấu chấm DB do người dùng cập nhật.
+
+11
+00:00:58,410 --> 00:01:00,510
+Đó là những gì chúng tôi đã làm cho đến nay.
+
+12
+00:01:00,510 --> 00:01:02,160
+Và điều đó có vẻ tốt.
+
+13
+00:01:03,040 --> 00:01:06,700
+Bây giờ hãy để tôi cuộn xuống bất cứ nơi nào chúng tôi có dấu gạch dưới DB.
+
+14
+00:01:06,970 --> 00:01:09,760
+Chúng ta cần thay thế nó bằng đơn vị công việc.
+
+15
+00:01:10,500 --> 00:01:17,550
+Chúng tôi có thể nói đơn vị công việc, người dùng ứng dụng chấm và nơi chúng tôi có dấu chấm bao gồm, về cơ bản chúng tôi
+
+16
+00:01:17,550 --> 00:01:19,650
+phải cắt giảm công ty này tại đây.
+
+17
+00:01:21,110 --> 00:01:28,940
+Và thay vì đầu tiên hoặc mặc định, chúng tôi đã đạt được điều đó, chúng tôi có thể thêm các thuộc tính bao gồm của công ty.
+
+18
+00:01:29,890 --> 00:01:32,920
+Điều đó có vẻ tốt cho danh sách vai trò ở đây.
+
+19
+00:01:32,920 --> 00:01:40,600
+Chúng tôi cần truy cập vào tất cả các vai trò và chúng tôi có thể truy cập trực tiếp từ các vai trò của người quản lý vai trò.
+
+20
+00:01:41,350 --> 00:01:48,250
+Bây giờ, một lần nữa, đây là điều mà bạn có thể phải tìm trên Google về cách truy cập các vai trò bằng trình quản lý vai trò.
+
+21
+00:01:49,190 --> 00:01:52,010
+Bằng cách đó chúng ta có thể tránh đi đến một đơn vị công việc.
+
+22
+00:01:52,010 --> 00:01:58,040
+Nhưng nếu muốn, bạn có thể mở rộng bảng quy tắc như chúng tôi đã làm với người dùng ứng dụng.
+
+23
+00:01:58,820 --> 00:02:05,480
+Tiếp theo, chúng tôi có danh sách công ty ở đây sẽ là đơn vị công việc. công ty chấm lấy hết.
+
+24
+00:02:06,820 --> 00:02:10,330
+Cuối cùng, chúng ta cần xác định vai trò của người dùng.
+
+25
+00:02:10,960 --> 00:02:13,480
+Chúng ta có thể làm điều đó một cách thú vị.
+
+26
+00:02:13,480 --> 00:02:15,040
+Và hãy để tôi cho bạn thấy điều đó.
+
+27
+00:02:15,340 --> 00:02:18,230
+Đầu tiên, chúng tôi sẽ sử dụng trình quản lý người dùng.
+
+28
+00:02:18,250 --> 00:02:25,300
+Ở đó, chúng tôi có phương thức nhận vai trò không đồng bộ sẽ nhận vai trò được gán cho người dùng.
+
+29
+00:02:25,990 --> 00:02:33,190
+Bây giờ, trong trường hợp của chúng tôi, chúng tôi chỉ gán một vai trò cho người dùng để chúng tôi có thể thực hiện mặc định trước và nhận vai trò
+
+30
+00:02:33,190 --> 00:02:33,760
+đầu tiên.
+
+31
+00:02:34,150 --> 00:02:38,560
+Nhưng bên trong đây, bạn có thể thấy nó mong đợi đối tượng người dùng.
+
+32
+00:02:38,860 --> 00:02:45,550
+Vì vậy, về cơ bản, chúng tôi cần truy xuất đơn vị công việc của người dùng mà người dùng ứng dụng không nhận được.
+
+33
+00:02:46,420 --> 00:02:52,900
+Chúng tôi sẽ nhận được điều đó dựa trên ID người dùng, vì vậy bạn. id bằng với.
+
+34
+00:02:52,930 --> 00:02:55,420
+Và ID người dùng đó ở đâu?
+
+35
+00:02:55,990 --> 00:03:01,120
+Chúng tôi có thông số đó trong tham số ở đây để chúng tôi có thể chuyển thông số đó.
+
+36
+00:03:01,570 --> 00:03:08,680
+Và đây là phương thức async nên chúng ta sẽ phải gọi get Waiter dot get result.
+
+37
+00:03:08,950 --> 00:03:15,340
+Hãy để tôi ngắt dòng đó trong một dòng riêng biệt và sau đó chúng ta có thể thực hiện mặc định đầu tiên.
+
+38
+00:03:15,730 --> 00:03:20,290
+Điều đó sẽ tự động truy xuất vai trò của người dùng đã đăng nhập.
+
+39
+00:03:21,050 --> 00:03:26,750
+Và điều đó sẽ cung cấp cho chúng tôi cuộn ID người dùng mà chúng tôi cung cấp ngay tại đây.
+
+40
+00:03:27,770 --> 00:03:30,620
+Vì vậy, chúng tôi không cần ID cuộn này nữa.
+
+41
+00:03:30,650 --> 00:03:32,300
+Hãy để tôi loại bỏ điều đó.
+
+42
+00:03:32,780 --> 00:03:38,160
+Bây giờ, nếu tôi cuộn xuống trong bài đăng, chúng tôi lại cần truy xuất cuộn cũ.
+
+43
+00:03:38,180 --> 00:03:42,770
+Vì vậy, hãy để tôi sao chép nó, dán nó ngay tại đây.
+
+44
+00:03:43,310 --> 00:03:46,100
+Và hãy để tôi sửa đổi điều đó.
+
+45
+00:03:46,400 --> 00:03:47,280
+Hoàn hảo.
+
+46
+00:03:47,300 --> 00:03:55,010
+Chúng tôi cần ID người dùng bên trong Chế độ xem quản lý cuộn Người dùng ứng dụng. nhận dạng.
+
+47
+00:03:56,210 --> 00:03:59,510
+Bằng cách đó, chúng tôi sẽ truy xuất quy tắc cũ của người dùng.
+
+48
+00:03:59,630 --> 00:04:05,090
+Sau đó, hãy để tôi truy xuất người dùng ứng dụng mà chúng tôi đang thực hiện trong điều kiện NẾU.
+
+49
+00:04:05,120 --> 00:04:06,680
+Hãy để tôi loại bỏ điều đó.
+
+50
+00:04:06,920 --> 00:04:12,800
+Và ngay tại đây, chúng tôi sẽ truy xuất đơn vị công việc đó bằng cách sử dụng thay vì db gạch dưới.
+
+51
+00:04:14,040 --> 00:04:21,930
+Khi chúng tôi thực hiện điều đó, nơi chúng tôi có dấu gạch dưới DB lưu các thay đổi sẽ là đơn vị công việc lưu dấu chấm.
+
+52
+00:04:22,320 --> 00:04:29,430
+Và bây giờ chúng tôi không làm việc với DB gạch dưới vì điều đó chúng tôi sẽ phải gọi rõ ràng đơn vị
+
+53
+00:04:29,430 --> 00:04:33,360
+công việc cập nhật dấu chấm của ứng dụng người dùng.
+
+54
+00:04:33,750 --> 00:04:40,860
+Và chúng tôi sẽ chuyển người dùng ứng dụng mà chúng tôi đã truy xuất và sửa đổi ngay tại đây.
+
+55
+00:04:41,800 --> 00:04:42,850
+Rất hoàn hảo.
+
+56
+00:04:42,850 --> 00:04:44,050
+Điều đó có ý nghĩa.
+
+57
+00:04:44,050 --> 00:04:50,950
+Nhưng theo logic hiện tại ở đây, chúng tôi có một lỗi và đó là chúng tôi chỉ thực hiện điều kiện if nếu một
+
+58
+00:04:50,950 --> 00:04:52,630
+quy tắc được cập nhật.
+
+59
+00:04:52,930 --> 00:05:00,280
+Nhưng điều gì sẽ xảy ra nếu người dùng chưa cập nhật quy tắc nhưng họ đã sửa đổi một công ty để tài khoản thuộc về
+
+60
+00:05:00,280 --> 00:05:04,920
+một công ty và người dùng chỉ muốn thay đổi công ty của người dùng đó.
+
+61
+00:05:04,930 --> 00:05:07,570
+Làm thế nào chúng ta có thể xử lý nó ngay đây?
+
+62
+00:05:08,230 --> 00:05:14,920
+Bây giờ tôi biết tôi đang thêm một số điều mới ở đây, nhưng chúng ta có thể làm điều đó trong một điều kiện khác và tôi sẽ chỉ
+
+63
+00:05:14,920 --> 00:05:15,610
+ra điều đó.
+
+64
+00:05:15,640 --> 00:05:25,120
+Chúng tôi sẽ nói nếu quy tắc cũ bằng với công ty quy tắc chấm SG và chúng tôi có thể kiểm tra ID công ty nếu ID công ty của người
+
+65
+00:05:25,120 --> 00:05:33,100
+dùng ứng dụng không bằng ID công ty được chọn trong danh sách thả xuống được điền từ trường đầu vào,
+
+66
+00:05:33,100 --> 00:05:36,910
+điều đó có nghĩa là họ đã cập nhật công ty.
+
+67
+00:05:37,390 --> 00:05:45,310
+Vì vậy, trong trường hợp đó, chúng tôi cần chỉ định ID công ty mới, cập nhật người dùng ứng dụng và lưu các thay đổi.
+
+68
+00:05:46,230 --> 00:05:47,390
+Rằng sẽ rất tốt.
+
+69
+00:05:47,400 --> 00:05:50,070
+Hãy để tôi mở lệnh gọi API tại đây.
+
+70
+00:05:50,740 --> 00:05:57,850
+Và ngay tại đây, chúng ta sẽ phải sử dụng đơn vị công việc với các thuộc tính bao gồm và sau đó chúng ta phải thực hiện
+
+71
+00:05:57,850 --> 00:05:58,990
+một số việc ở đây.
+
+72
+00:05:59,410 --> 00:06:04,030
+Chúng tôi đang truy xuất vai trò của người dùng và sau đó chúng tôi có bảng vai trò.
+
+73
+00:06:04,030 --> 00:06:09,400
+Chúng tôi đang tìm ID vai trò của người dùng và chúng tôi đang sửa đổi mọi thứ ở đây.
+
+74
+00:06:10,090 --> 00:06:17,770
+Mục tiêu cuối cùng mà chúng tôi có ở đây là xác định vai trò của người dùng Khi chúng tôi hiển thị điều đó, chúng tôi có thể thực hiện
+
+75
+00:06:17,770 --> 00:06:19,660
+điều đó theo cách đơn giản hơn.
+
+76
+00:06:19,990 --> 00:06:25,900
+Sử dụng trình quản lý người dùng của chúng tôi, chúng tôi có phương thức trợ giúp nhận vai trò không đồng bộ ở đó.
+
+77
+00:06:25,900 --> 00:06:28,090
+Chúng ta cần truyền đối tượng người dùng.
+
+78
+00:06:28,420 --> 00:06:36,220
+Chúng tôi sẽ phải chờ và nhận kết quả vì nó không đồng bộ và chúng tôi có thể gọi trước hoặc mặc định.
+
+79
+00:06:36,370 --> 00:06:40,110
+Cùng với đó, chúng tôi không còn yêu cầu tất cả mã này nữa.
+
+80
+00:06:40,120 --> 00:06:41,710
+Hãy để tôi loại bỏ điều đó.
+
+81
+00:06:42,740 --> 00:06:45,260
+Sau đó, chúng tôi sẽ cuộn xuống đây.
+
+82
+00:06:45,260 --> 00:06:52,430
+Chúng ta sẽ có đơn vị công việc, ứng dụng chấm, người dùng chấm, trông ổn đấy.
+
+83
+00:06:52,430 --> 00:06:58,940
+Và nơi chúng tôi phải lưu các thay đổi, trước tiên chúng tôi sẽ phải gọi cập nhật vì trước đây chúng tôi
+
+84
+00:06:58,940 --> 00:07:02,630
+đang làm việc trên DB gạch dưới nhưng không phải vậy.
+
+85
+00:07:03,290 --> 00:07:06,380
+Vì vậy, cập nhật và sau đó lưu các thay đổi.
+
+86
+00:07:07,240 --> 00:07:08,000
+Hoàn hảo.
+
+87
+00:07:08,020 --> 00:07:14,050
+Cùng với đó, hãy để tôi chạy ứng dụng và xem mọi thứ có hoạt động như mong đợi không.
+
+88
+00:07:16,510 --> 00:07:22,690
+Hãy để tôi đăng nhập ở đây với tư cách là người dùng quản trị viên và tôi sẽ vào phần quản lý người dùng.
+
+89
+00:07:22,900 --> 00:07:25,030
+Chúng tôi có một tài khoản công ty.
+
+90
+00:07:25,150 --> 00:07:29,290
+Hãy để tôi sửa đổi công ty ở đây và hoàn thiện.
+
+91
+00:07:29,290 --> 00:07:32,200
+Bạn có thể thấy công ty mới được chỉ định ở đây.
+
+92
+00:07:32,230 --> 00:07:33,580
+Trông tôt đây.
+
+93
+00:07:34,410 --> 00:07:43,170
+Vì vậy, cùng với đó, người dùng quản lý hay đúng hơn là bộ điều khiển người dùng của chúng tôi có đầy đủ chức năng với đơn vị kho lưu trữ công việc của chúng tôi.
+

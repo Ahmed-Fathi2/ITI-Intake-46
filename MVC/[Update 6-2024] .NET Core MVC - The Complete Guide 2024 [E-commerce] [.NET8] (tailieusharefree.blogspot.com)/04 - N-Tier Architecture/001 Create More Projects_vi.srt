@@ -1,0 +1,124 @@
+1
+00:00:01,750 --> 00:00:06,939
+Bây giờ, dự án Razer mà chúng tôi thực hiện chỉ dành cho mục đích học tập.
+
+2
+00:00:07,120 --> 00:00:10,990
+Chúng tôi không muốn điều đó xảy ra trong dự án chính của mình cho Bulky.
+
+3
+00:00:11,020 --> 00:00:13,840
+Vì vậy, hãy để tôi loại bỏ dự án đó ở đây.
+
+4
+00:00:15,310 --> 00:00:16,710
+Và hoàn hảo.
+
+5
+00:00:16,720 --> 00:00:18,480
+Nó không còn ở đó nữa.
+
+6
+00:00:18,490 --> 00:00:22,510
+Và trong sự cồng kềnh, hãy để tôi tạo thêm dự án.
+
+7
+00:00:22,810 --> 00:00:29,920
+Thông thường, khi chúng tôi đang làm việc với một dự án trong thế giới thực, chúng tôi không muốn nhóm mọi thứ lại với nhau.
+
+8
+00:00:30,310 --> 00:00:35,160
+Giống như ngay bây giờ bạn có thể thấy chúng tôi có dữ liệu ở đây, chúng tôi có tất cả các mô hình ở đây.
+
+9
+00:00:35,170 --> 00:00:38,470
+Nếu chúng tôi có bất kỳ hằng số nào, chúng tôi sẽ thêm chúng vào đây.
+
+10
+00:00:38,680 --> 00:00:45,850
+Nhưng trong một ứng dụng trong thế giới thực, tốt nhất là giữ mọi thứ riêng biệt trong dự án của chính nó.
+
+11
+00:00:46,390 --> 00:00:54,310
+Vì vậy, chúng tôi sẽ tạo các dự án lớp trong giải pháp, chọn một dự án mới và chúng tôi sẽ tìm kiếm một thư
+
+12
+00:00:54,310 --> 00:00:55,390
+viện lớp.
+
+13
+00:00:56,470 --> 00:01:02,530
+Cái đầu tiên mà chúng tôi muốn tạo sẽ là quyền truy cập dữ liệu dấu chấm cồng kềnh.
+
+14
+00:01:04,739 --> 00:01:10,790
+Dự án này sẽ có mọi thứ liên quan đến cơ sở dữ liệu, giống như chúng ta có ngữ cảnh DB.
+
+15
+00:01:10,800 --> 00:01:15,420
+Chúng tôi sẽ di chuyển điều đó trong quyền truy cập dữ liệu cùng với quá trình di chuyển.
+
+16
+00:01:16,140 --> 00:01:19,860
+Vì vậy, hãy để tôi chọn cái đó với. nền tảng NET.
+
+17
+00:01:20,310 --> 00:01:21,390
+Hoàn hảo.
+
+18
+00:01:21,630 --> 00:01:29,040
+Tiếp theo, hãy để tôi tạo cùng một thư viện lớp ở đây và thư viện đó sẽ cồng kềnh.
+
+19
+00:01:29,070 --> 00:01:30,690
+Hãy để tôi đảm bảo tên.
+
+20
+00:01:30,690 --> 00:01:37,320
+Yep, nó sẽ là một chấm cồng kềnh và sau đó chúng ta sẽ di chuyển tất cả các mô hình trong dự án của chính nó.
+
+21
+00:01:38,220 --> 00:01:40,770
+Chọn cái đó và tạo.
+
+22
+00:01:41,770 --> 00:01:48,790
+Cuối cùng, tôi muốn thêm một dự án nữa sẽ là tiện ích dấu chấm cồng kềnh.
+
+23
+00:01:49,430 --> 00:01:56,870
+Đối với tất cả các tiện ích mà chúng tôi sẽ thêm vào dự án của mình, như chức năng email hoặc có thể là các hằng số cho ứng
+
+24
+00:01:56,870 --> 00:01:58,340
+dụng của chúng tôi.
+
+25
+00:01:58,340 --> 00:02:02,390
+Chúng tôi sẽ có tất cả chúng trong dự án tiện ích.
+
+26
+00:02:03,290 --> 00:02:08,750
+Hãy để tôi tạo dự án đó và tôi sẽ xóa tất cả các tệp lớp.
+
+27
+00:02:12,670 --> 00:02:17,530
+Chúng tôi sẽ tạo các tệp lớp mới khi cần, nhưng hoàn hảo.
+
+28
+00:02:17,560 --> 00:02:20,080
+Bây giờ trở lại dự án MVC.
+
+29
+00:02:20,110 --> 00:02:27,220
+Chúng tôi có tiện ích cồng kềnh, web, cồng kềnh, mô hình cồng kềnh và truy cập dữ liệu cồng kềnh.
+
+30
+00:02:28,250 --> 00:02:35,540
+Trong video tiếp theo, hãy để tôi loại bỏ tất cả logic được gói gọn trong trang web cồng kềnh vào các thư viện
+
+31
+00:02:35,540 --> 00:02:36,560
+lớp riêng lẻ.
+

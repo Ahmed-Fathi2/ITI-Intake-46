@@ -1,0 +1,380 @@
+1
+00:00:02,009 --> 00:00:04,290
+Instructor: We need to display all the items
+
+2
+00:00:04,290 --> 00:00:08,553
+in the shopping cart and this page must be authorized.
+
+3
+00:00:09,900 --> 00:00:12,480
+Let me switch back to the application
+
+4
+00:00:12,480 --> 00:00:16,110
+and where we have the cart controller with the area,
+
+5
+00:00:16,110 --> 00:00:16,943
+I will say
+
+6
+00:00:16,943 --> 00:00:20,883
+that only authorized user are able to access the page.
+
+7
+00:00:22,230 --> 00:00:25,050
+Now inside the index action here, we have to
+
+8
+00:00:25,050 --> 00:00:28,803
+retrieve the shopping cart and pass that to our review.
+
+9
+00:00:29,940 --> 00:00:33,810
+But if I examine the shopping cart model that I have
+
+10
+00:00:33,810 --> 00:00:35,580
+I only have product ID
+
+11
+00:00:35,580 --> 00:00:39,600
+and user ID along with the product details.
+
+12
+00:00:39,600 --> 00:00:43,620
+In shopping cart, we also want to show the order total.
+
+13
+00:00:43,620 --> 00:00:45,960
+We need additional property along
+
+14
+00:00:45,960 --> 00:00:49,863
+with an I innumerable or a list of shopping cart.
+
+15
+00:00:50,907 --> 00:00:54,270
+For that, we will have to create a view model,
+
+16
+00:00:54,270 --> 00:00:58,873
+and let me create and call that shopping cart VM.
+
+17
+00:01:00,840 --> 00:01:03,513
+We will make that a public class here,
+
+18
+00:01:04,601 --> 00:01:06,630
+and what will be all the properties?
+
+19
+00:01:06,630 --> 00:01:10,050
+One property that I can think of is an I innumerable
+
+20
+00:01:10,050 --> 00:01:13,560
+of shopping cart, and let me call that
+
+21
+00:01:13,560 --> 00:01:18,560
+shopping cart list. That will be more meaningful.
+
+22
+00:01:19,140 --> 00:01:21,930
+Along with that, I can have a double
+
+23
+00:01:21,930 --> 00:01:24,750
+which will be order total.
+
+24
+00:01:24,750 --> 00:01:28,410
+Those are the two properties I can think of right now
+
+25
+00:01:28,410 --> 00:01:30,030
+but when we move ahead
+
+26
+00:01:30,030 --> 00:01:34,440
+we will change the view model based on our requirement.
+
+27
+00:01:34,440 --> 00:01:36,990
+For now, this looks good.
+
+28
+00:01:36,990 --> 00:01:39,030
+If I go to cart controller
+
+29
+00:01:39,030 --> 00:01:42,300
+I need to populate the shopping cart.
+
+30
+00:01:42,300 --> 00:01:45,420
+For that I will have to get the unit of work.
+
+31
+00:01:45,420 --> 00:01:48,480
+Let me get that with dependency injection.
+
+32
+00:01:48,480 --> 00:01:49,313
+And on top
+
+33
+00:01:49,313 --> 00:01:53,550
+of that we will have the shopping cart view model.
+
+34
+00:01:53,550 --> 00:01:57,180
+Then in the index section we have to retrieve shopping cart
+
+35
+00:01:57,180 --> 00:01:58,770
+for a user.
+
+36
+00:01:58,770 --> 00:02:01,800
+For that, we will require the user ID,
+
+37
+00:02:01,800 --> 00:02:04,050
+and we know how to get that.
+
+38
+00:02:04,050 --> 00:02:06,584
+We did that in the home controller.
+
+39
+00:02:06,584 --> 00:02:09,419
+We have the claims identity.
+
+40
+00:02:09,419 --> 00:02:14,133
+Let me copy these two lines and paste it right here.
+
+41
+00:02:15,480 --> 00:02:17,850
+Based on the user ID we can populate the shopping
+
+42
+00:02:17,850 --> 00:02:20,733
+cart view model is equal to new,
+
+43
+00:02:21,600 --> 00:02:25,380
+and there we will populate the list is equal to
+
+44
+00:02:25,380 --> 00:02:26,980
+_unitofwork.shoppingcart.getall.
+
+45
+00:02:32,220 --> 00:02:36,153
+We want to get all based on u.applicationuserID.
+
+46
+00:02:37,740 --> 00:02:41,340
+and for some reason it is not working.
+
+47
+00:02:41,340 --> 00:02:44,883
+Let me examine the repository that we have.
+
+48
+00:02:47,760 --> 00:02:51,450
+And I will open the I repository.
+
+49
+00:02:51,450 --> 00:02:54,240
+And whoops, where we have the get all,
+
+50
+00:02:54,240 --> 00:02:58,650
+we are not accessing the link function for our filter.
+
+51
+00:02:58,650 --> 00:03:03,123
+I will add that logic, close the interface.
+
+52
+00:03:05,340 --> 00:03:09,843
+And in the implementation we will have to add the filter.
+
+53
+00:03:11,310 --> 00:03:15,180
+Perfect. With that, if I close everything other
+
+54
+00:03:15,180 --> 00:03:18,120
+than the cart controller, let me do that.
+
+55
+00:03:18,120 --> 00:03:19,893
+And the index action.
+
+56
+00:03:20,910 --> 00:03:25,620
+Now we can say application user ID is equal equal
+
+57
+00:03:25,620 --> 00:03:27,213
+to the user id.
+
+58
+00:03:29,160 --> 00:03:31,110
+When we retrieve shopping cart,
+
+59
+00:03:31,110 --> 00:03:34,200
+we also want to include product.
+
+60
+00:03:34,200 --> 00:03:38,430
+We will say include properties, and this will be product.
+
+61
+00:03:38,430 --> 00:03:41,880
+Here, you have to make sure it is case sensitive.
+
+62
+00:03:41,880 --> 00:03:44,403
+It must be the exact model name.
+
+63
+00:03:45,540 --> 00:03:49,950
+With that, let me save that and we will pass
+
+64
+00:03:49,950 --> 00:03:52,653
+the view model back to the view.
+
+65
+00:03:54,330 --> 00:03:57,570
+Now here, let me add a debugging point and run
+
+66
+00:03:57,570 --> 00:04:00,633
+the application to see if that works.
+
+67
+00:04:01,650 --> 00:04:03,120
+We have error here.
+
+68
+00:04:03,120 --> 00:04:08,120
+Let me see what that is, and let me open the error again.
+
+69
+00:04:13,290 --> 00:04:15,723
+We forgot to add the filter.
+
+70
+00:04:17,827 --> 00:04:21,329
+Let me do that. And perfect.
+
+71
+00:04:21,329 --> 00:04:22,383
+That should work.
+
+72
+00:04:26,220 --> 00:04:29,250
+Well, we will have to make that an optional
+
+73
+00:04:29,250 --> 00:04:32,343
+because it will not be required every time.
+
+74
+00:04:33,720 --> 00:04:36,060
+And that makes perfect sense.
+
+75
+00:04:36,060 --> 00:04:39,870
+Let me open the interface as well, and where
+
+76
+00:04:39,870 --> 00:04:43,710
+we have the get all filter will be optional.
+
+77
+00:04:43,710 --> 00:04:47,070
+Because if we want to retrieve all the categories, then
+
+78
+00:04:47,070 --> 00:04:49,353
+we do not want to pass any filter.
+
+79
+00:04:50,280 --> 00:04:52,920
+Filter will be only applied
+
+80
+00:04:52,920 --> 00:04:55,653
+if filter is not null.
+
+81
+00:05:01,170 --> 00:05:02,310
+And perfect.
+
+82
+00:05:02,310 --> 00:05:05,613
+We are making our repository more dynamic.
+
+83
+00:05:06,930 --> 00:05:09,513
+Let me run this and see.
+
+84
+00:05:10,645 --> 00:05:13,110
+Whoops, that did not happen.
+
+85
+00:05:13,110 --> 00:05:17,160
+I did update the repository. And where we have
+
+86
+00:05:17,160 --> 00:05:21,363
+the filter, we will have to explicitly define null there.
+
+87
+00:05:24,720 --> 00:05:27,483
+Perfect. Let me go to shopping cart.
+
+88
+00:05:30,491 --> 00:05:33,390
+When we log in, we hit our break point.
+
+89
+00:05:33,390 --> 00:05:35,133
+And let me examine.
+
+90
+00:05:37,080 --> 00:05:40,110
+We have the cart list here.
+
+91
+00:05:40,110 --> 00:05:43,323
+and great. It has the items.
+
+92
+00:05:44,310 --> 00:05:46,080
+That looks good.
+
+93
+00:05:46,080 --> 00:05:49,980
+Based on that, we will have to populate the order total here
+
+94
+00:05:49,980 --> 00:05:51,813
+before we proceed further.
+
+95
+00:05:52,650 --> 00:05:55,203
+Let me do that in the next video.
+

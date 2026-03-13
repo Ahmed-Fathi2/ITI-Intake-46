@@ -1,0 +1,152 @@
+1
+00:00:02,020 --> 00:00:08,050
+Bây giờ chúng ta phải thay thế kho lưu trữ danh mục bằng đơn vị công việc trong dự án web.
+
+2
+00:00:08,680 --> 00:00:15,280
+Đầu tiên, chúng ta sẽ đi đến chương trình. cs và chúng tôi sẽ phải đăng ký nó để tiêm phụ thuộc.
+
+3
+00:00:15,640 --> 00:00:19,240
+Chúng tôi không còn yêu cầu kho lưu trữ danh mục.
+
+4
+00:00:19,270 --> 00:00:21,940
+Chúng tôi cần đơn vị công việc thời gian này.
+
+5
+00:00:22,810 --> 00:00:23,830
+Rất hoàn hảo.
+
+6
+00:00:23,830 --> 00:00:31,390
+Chúng tôi có đơn vị công việc và sau đó đơn vị công việc tạo một đối tượng hoặc triển khai kho lưu trữ danh mục
+
+7
+00:00:31,390 --> 00:00:32,470
+trong nội bộ.
+
+8
+00:00:32,860 --> 00:00:39,430
+Vì vậy, ở đây chúng tôi sẽ có đơn vị công việc và hãy để tôi gọi đó là đơn vị công việc gạch dưới.
+
+9
+00:00:40,490 --> 00:00:46,250
+Chúng tôi sẽ nhận được điều đó bằng cách sử dụng phép nội xạ phụ thuộc và chúng tôi sẽ gọi đơn vị công việc đó.
+
+10
+00:00:47,540 --> 00:00:52,940
+Và ngay tại đây gạch dưới đơn vị công việc bằng với đơn vị công việc.
+
+11
+00:00:54,380 --> 00:00:59,270
+Bây giờ trong đơn vị công việc, chúng tôi có danh mục và ở đó chúng tôi có tất cả mèo.
+
+12
+00:00:59,600 --> 00:01:05,570
+Vì vậy, trước đây khi chúng tôi đang sử dụng kho lưu trữ danh mục, chúng tôi không phải truy cập vào đó.
+
+13
+00:01:05,570 --> 00:01:12,650
+Nhưng bây giờ trong đơn vị công việc, chúng tôi phải viết đối tượng mà chúng tôi đang làm việc hoặc kho lưu trữ mà chúng tôi
+
+14
+00:01:12,650 --> 00:01:16,730
+đang làm việc, và sau đó chúng tôi có thể làm mọi thứ như trước đây.
+
+15
+00:01:17,730 --> 00:01:21,930
+Tôi sẽ sao chép cái này, dán nó vào tất cả những nơi ở đây.
+
+16
+00:01:21,930 --> 00:01:29,430
+Và khi chúng tôi có bản lưu, chúng tôi không có bản lưu đó trong kho lưu trữ trực tiếp bên trong đơn vị công việc.
+
+17
+00:01:29,430 --> 00:01:32,100
+Vì vậy, chúng tôi không cần tên kho lưu trữ.
+
+18
+00:01:32,910 --> 00:01:38,340
+Sau đó, trong phần chỉnh sửa ở đây, chúng tôi sẽ dán đơn vị của danh mục công việc.
+
+19
+00:01:38,370 --> 00:01:41,580
+Tương tự với cập nhật hoặc lưu.
+
+20
+00:01:41,580 --> 00:01:43,860
+Chúng tôi chỉ có đơn vị công việc.
+
+21
+00:01:44,220 --> 00:01:45,420
+Hoàn hảo.
+
+22
+00:01:45,420 --> 00:01:48,450
+Hãy để tôi sửa đổi ở tất cả các nơi.
+
+23
+00:01:49,770 --> 00:01:51,050
+Và tuyệt vời.
+
+24
+00:01:51,060 --> 00:01:52,470
+Trông tôt đây.
+
+25
+00:01:53,600 --> 00:01:59,510
+Cùng với đó, hãy để tôi chạy lại dự án và xem mọi thứ có hoạt động như mong đợi không.
+
+26
+00:02:01,100 --> 00:02:01,850
+Hoàn hảo.
+
+27
+00:02:01,850 --> 00:02:04,730
+Chúng tôi có thể nhận được tất cả các loại ở đây.
+
+28
+00:02:04,940 --> 00:02:12,230
+Hãy để tôi thử tạo một cái hoạt động và chức năng xóa cũng hoạt động.
+
+29
+00:02:12,590 --> 00:02:15,800
+Vì vậy, mọi thứ đang hoạt động như mong đợi.
+
+30
+00:02:15,800 --> 00:02:21,080
+Nhưng bây giờ chúng tôi đang sử dụng đơn vị công việc thay vì trực tiếp kho lưu trữ.
+
+31
+00:02:22,000 --> 00:02:29,170
+Điều này mang lại cho chúng tôi một lợi thế Trong đơn vị công việc, chúng tôi sẽ có quyền truy cập vào tất cả các kho lưu trữ mà chúng tôi muốn.
+
+32
+00:02:29,500 --> 00:02:32,530
+Nhưng cùng với đó chúng ta cũng có một bất lợi.
+
+33
+00:02:32,620 --> 00:02:39,820
+Giống như trong bộ điều khiển danh mục, chúng tôi chỉ muốn kho lưu trữ danh mục, nhưng trong đơn vị công việc, nó
+
+34
+00:02:39,820 --> 00:02:43,880
+sẽ tạo ra việc triển khai tất cả các kho lưu trữ đã được đăng ký.
+
+35
+00:02:43,900 --> 00:02:48,760
+Giống như nếu chúng tôi có sản phẩm, nếu chúng tôi có đơn đặt hàng hoặc giỏ hàng.
+
+36
+00:02:49,180 --> 00:02:52,210
+Vì vậy, có những ưu và nhược điểm trong cả hai.
+
+37
+00:02:52,210 --> 00:02:59,050
+Nhưng cá nhân tôi nói, tôi thích đơn vị thực hiện công việc vì nó sạch sẽ hơn nhiều.
+
+38
+00:02:59,410 --> 00:03:04,390
+Vì vậy, với cấu hình đó, hãy để tôi tiếp tục từ video tiếp theo.
+

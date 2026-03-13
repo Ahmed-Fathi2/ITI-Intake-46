@@ -1,0 +1,92 @@
+1
+00:00:02,160 --> 00:00:05,460
+Narrator: Now in our project, let me add authorization
+
+2
+00:00:05,460 --> 00:00:10,440
+in all the correct places, like in the admin controller.
+
+3
+00:00:10,440 --> 00:00:13,110
+I will bring back the authorized keyword there
+
+4
+00:00:13,110 --> 00:00:15,330
+in category.
+
+5
+00:00:15,330 --> 00:00:16,983
+We have company.
+
+6
+00:00:17,820 --> 00:00:20,430
+Order is authorized
+
+7
+00:00:20,430 --> 00:00:24,480
+and role admin for the product controller.
+
+8
+00:00:24,480 --> 00:00:28,380
+On top of that, if you remember in the underscored layout
+
+9
+00:00:28,380 --> 00:00:33,060
+of master page, we had the role of admin.
+
+10
+00:00:33,060 --> 00:00:35,730
+So only if a user is admin,
+
+11
+00:00:35,730 --> 00:00:39,330
+then they will be able to perform current operation
+
+12
+00:00:39,330 --> 00:00:43,440
+on the content management right here.
+
+13
+00:00:43,440 --> 00:00:45,813
+So we will bring that back as well.
+
+14
+00:00:46,650 --> 00:00:49,050
+With that, if I run the application,
+
+15
+00:00:49,050 --> 00:00:51,240
+when the application starts
+
+16
+00:00:51,240 --> 00:00:54,423
+they will not see anything with content management.
+
+17
+00:00:56,640 --> 00:00:59,760
+So for fact, they see manage order, they have home,
+
+18
+00:00:59,760 --> 00:01:02,400
+and they can see the shopping cart.
+
+19
+00:01:02,400 --> 00:01:05,190
+If a admin user logs in here,
+
+20
+00:01:05,190 --> 00:01:08,670
+then they will be able to see content management
+
+21
+00:01:08,670 --> 00:01:10,863
+and that works as expected.
+
+22
+00:01:11,760 --> 00:01:16,470
+So that looks good for authorization in our website.
+
+23
+00:01:16,470 --> 00:01:19,203
+Let me continue from the next video.
+

@@ -1,0 +1,272 @@
+1
+00:00:01,800 --> 00:00:03,600
+-: Right now in our application,
+
+2
+00:00:03,600 --> 00:00:08,460
+if we run the project everything is working as expected.
+
+3
+00:00:08,460 --> 00:00:11,160
+But what we want to do next is,
+
+4
+00:00:11,160 --> 00:00:14,040
+where we have one product in our project,
+
+5
+00:00:14,040 --> 00:00:16,710
+I want to basically display,
+
+6
+00:00:16,710 --> 00:00:21,060
+I want to basically display a list of products.
+
+7
+00:00:21,060 --> 00:00:24,300
+So in here, if we log in as admin,
+
+8
+00:00:24,300 --> 00:00:27,690
+you can see we have one image per product.
+
+9
+00:00:27,690 --> 00:00:30,390
+What I want is here we should be able
+
+10
+00:00:30,390 --> 00:00:33,633
+to upload multiple images for a product.
+
+11
+00:00:34,650 --> 00:00:37,230
+In order to handle that situation
+
+12
+00:00:37,230 --> 00:00:40,410
+we will have to update quite a few things,
+
+13
+00:00:40,410 --> 00:00:43,830
+but first thing will be inside the product model
+
+14
+00:00:43,830 --> 00:00:46,080
+where we have the image URL,
+
+15
+00:00:46,080 --> 00:00:47,733
+we will have to remove that.
+
+16
+00:00:48,570 --> 00:00:50,130
+But because if you remember,
+
+17
+00:00:50,130 --> 00:00:55,130
+I'm upgrading from .NET 8 preview downgraded that to .NET 7
+
+18
+00:00:55,350 --> 00:00:57,723
+there is some issue with the migration.
+
+19
+00:00:58,770 --> 00:01:01,410
+First, what I will do is in product here,
+
+20
+00:01:01,410 --> 00:01:05,340
+let me try to add one more property here,
+
+21
+00:01:05,340 --> 00:01:08,793
+prop int TestProperty.
+
+22
+00:01:09,990 --> 00:01:12,900
+We'll open the package manager console
+
+23
+00:01:12,900 --> 00:01:16,330
+and let me add a migration, addTestProperty.
+
+24
+00:01:20,790 --> 00:01:24,300
+You can see it gives a weird error object reference
+
+25
+00:01:24,300 --> 00:01:27,510
+not set to an instance of an object.
+
+26
+00:01:27,510 --> 00:01:29,910
+If you are facing this error message,
+
+27
+00:01:29,910 --> 00:01:32,910
+I have already reported this to Microsoft.
+
+28
+00:01:32,910 --> 00:01:35,160
+But this solution this time is,
+
+29
+00:01:35,160 --> 00:01:38,043
+we can start fresh with our migration.
+
+30
+00:01:39,030 --> 00:01:41,610
+So if we go to DataAccess here,
+
+31
+00:01:41,610 --> 00:01:44,490
+I can delete the Migrations folder.
+
+32
+00:01:44,490 --> 00:01:46,410
+Let me remove that.
+
+33
+00:01:46,410 --> 00:01:50,880
+And once we remove that, we can add a new migration here.
+
+34
+00:01:50,880 --> 00:01:53,313
+And this will be initial migration.
+
+35
+00:01:54,690 --> 00:01:57,360
+Because now there are no migrations here,
+
+36
+00:01:57,360 --> 00:01:59,610
+it'll create a new migration,
+
+37
+00:01:59,610 --> 00:02:02,643
+where it'll basically create all the tables.
+
+38
+00:02:03,600 --> 00:02:05,880
+So let me do add migration
+
+39
+00:02:05,880 --> 00:02:08,463
+with the name of initial migration.
+
+40
+00:02:13,800 --> 00:02:16,860
+Perfect. You can see that is done.
+
+41
+00:02:16,860 --> 00:02:19,680
+But with that we have one more issue.
+
+42
+00:02:19,680 --> 00:02:22,020
+We already have a database.
+
+43
+00:02:22,020 --> 00:02:25,620
+So if you directly try to say update database here,
+
+44
+00:02:25,620 --> 00:02:26,853
+it will not work.
+
+45
+00:02:28,530 --> 00:02:30,690
+It'll say that ASP NET roles
+
+46
+00:02:30,690 --> 00:02:33,870
+and all the other tables are already present,
+
+47
+00:02:33,870 --> 00:02:35,373
+so you cannot proceed.
+
+48
+00:02:36,300 --> 00:02:39,240
+And for that, what we will have to do is,
+
+49
+00:02:39,240 --> 00:02:41,370
+let me go back here.
+
+50
+00:02:41,370 --> 00:02:44,520
+I will have to change the connection string here
+
+51
+00:02:44,520 --> 00:02:46,860
+to be Bulky New.
+
+52
+00:02:46,860 --> 00:02:51,270
+With that new connection if I just run the project here,
+
+53
+00:02:51,270 --> 00:02:55,110
+it'll automatically push all the pending migration
+
+54
+00:02:55,110 --> 00:02:58,533
+because we have that in the DB initializer.
+
+55
+00:03:00,480 --> 00:03:03,450
+Perfect. You can see it is up and running.
+
+56
+00:03:03,450 --> 00:03:06,450
+In the Content Management, we are already logged in,
+
+57
+00:03:06,450 --> 00:03:08,340
+but you can log out here
+
+58
+00:03:08,340 --> 00:03:10,740
+and log in back with the admin account.
+
+59
+00:03:10,740 --> 00:03:14,550
+That will work where we have the product.
+
+60
+00:03:14,550 --> 00:03:19,290
+Let me add it here and I can upload an image.
+
+61
+00:03:19,290 --> 00:03:24,290
+Let me do that real quick for Dark Skies as well.
+
+62
+00:03:24,570 --> 00:03:27,360
+I can upload one more image.
+
+63
+00:03:27,360 --> 00:03:30,363
+And let me upload the lawn leaf image.
+
+64
+00:03:33,060 --> 00:03:35,310
+And perfect. That looks good.
+
+65
+00:03:35,310 --> 00:03:38,610
+Right now I do not want to add image to all the product
+
+66
+00:03:38,610 --> 00:03:41,700
+because we will be removing them and erase.
+
+67
+00:03:41,700 --> 00:03:45,510
+So in the next video, let me work on the product model
+
+68
+00:03:45,510 --> 00:03:48,333
+and remove image URL from there.
+

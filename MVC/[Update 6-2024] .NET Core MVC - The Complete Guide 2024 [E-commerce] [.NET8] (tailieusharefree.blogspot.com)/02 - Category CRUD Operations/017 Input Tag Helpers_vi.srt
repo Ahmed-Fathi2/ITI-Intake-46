@@ -1,0 +1,232 @@
+1
+00:00:01,660 --> 00:00:08,770
+Bây giờ chúng ta có biểu mẫu để tạo danh mục, nhưng với . net, chúng tôi có các trình trợ giúp thẻ mà chúng tôi có thể sử
+
+2
+00:00:08,770 --> 00:00:15,910
+dụng để làm cho các trường nhập này trở nên năng động hơn vì về cơ bản, chúng tôi phải liên kết ở đâu đó rằng trường nhập này
+
+3
+00:00:15,910 --> 00:00:17,410
+dành cho tên danh mục.
+
+4
+00:00:17,410 --> 00:00:20,380
+Và cái tiếp theo ở đây là thứ tự hiển thị.
+
+5
+00:00:20,800 --> 00:00:25,450
+Trong các phiên bản cũ hơn của . net, chúng tôi đã từng liên kết chúng với thuộc tính tên.
+
+6
+00:00:25,480 --> 00:00:29,320
+Khi chúng tôi gửi biểu mẫu, chúng tôi đã sử dụng để truy xuất và chỉ định chúng.
+
+7
+00:00:29,320 --> 00:00:32,800
+Nhưng . net đã làm cho mọi thứ trở nên siêu đơn giản.
+
+8
+00:00:33,250 --> 00:00:41,860
+Chúng tôi có mô hình mà chúng tôi đã xác định ở đây, vì vậy với đầu vào, chúng tôi có trình trợ giúp thẻ là dấu gạch
+
+9
+00:00:41,860 --> 00:00:42,790
+nối ASP.
+
+10
+00:00:43,890 --> 00:00:44,730
+Bên trong đó.
+
+11
+00:00:44,730 --> 00:00:50,820
+Chúng ta phải xác định trường đầu vào này sẽ chịu trách nhiệm về cái gì và đó là tên.
+
+12
+00:00:51,300 --> 00:00:58,260
+Bây giờ, nếu bạn nghĩ tên đang hoạt động như thế nào ở đây, thì đó là bởi vì chúng ta có mô hình danh mục và mô hình
+
+13
+00:00:58,260 --> 00:01:00,990
+đó có một thuộc tính có giá trị là tên.
+
+14
+00:01:01,380 --> 00:01:04,620
+Nếu bạn viết tên một ở đây, nó sẽ không hoạt động.
+
+15
+00:01:04,709 --> 00:01:11,820
+Bạn có thể thấy danh mục không chứa định nghĩa cho tên, vì vậy nó sẽ chỉ có những thuộc tính được xác
+
+16
+00:01:11,820 --> 00:01:14,130
+định trong mô hình của bạn.
+
+17
+00:01:14,580 --> 00:01:20,350
+Và phần tốt nhất là nếu bạn có ASP bốn, thì bạn cũng không phải xác định loại.
+
+18
+00:01:20,370 --> 00:01:24,990
+Nó sẽ tự động tìm ra loại dựa trên tên thuộc tính.
+
+19
+00:01:25,900 --> 00:01:32,050
+Vì vậy, phần tiếp theo ở đây, chúng tôi sẽ nói ASP cho thứ tự hiển thị.
+
+20
+00:01:32,080 --> 00:01:36,160
+Chúng tôi nhập nội dung đó và IntelliSense đã hiển thị nội dung đó.
+
+21
+00:01:37,210 --> 00:01:40,240
+Điều tương tự chúng tôi cũng có cho tên nhãn.
+
+22
+00:01:40,660 --> 00:01:49,300
+Vì vậy, nếu chúng tôi sử dụng ASP để chúng tôi không phải xác định thứ tự hiển thị ở đây, nó sẽ tự động thêm thứ đó và để tôi
+
+23
+00:01:49,300 --> 00:01:50,500
+chỉ ra điều đó.
+
+24
+00:01:51,880 --> 00:01:54,550
+Chúng tôi sẽ xóa tên danh mục tại đây.
+
+25
+00:01:54,610 --> 00:01:58,090
+Lưu chúng và chúng ta hãy quay trở lại.
+
+26
+00:01:58,630 --> 00:01:59,250
+Tuyệt vời.
+
+27
+00:01:59,260 --> 00:02:02,380
+Bạn có thể thấy tên và thứ tự hiển thị.
+
+28
+00:02:02,950 --> 00:02:05,230
+Nhưng sau đó chúng tôi có một vấn đề khác.
+
+29
+00:02:05,440 --> 00:02:08,740
+Tên thuộc tính mà chúng tôi có không có khoảng trắng.
+
+30
+00:02:08,860 --> 00:02:12,340
+Nếu chúng ta muốn thêm một khoảng trắng theo thứ tự hiển thị thì sao?
+
+31
+00:02:13,580 --> 00:02:14,210
+Vì điều đó.
+
+32
+00:02:14,210 --> 00:02:18,690
+Chúng tôi có các chú thích dữ liệu mà chúng tôi phải thêm vào mô hình của mình.
+
+33
+00:02:18,710 --> 00:02:20,060
+Đó là đâu?
+
+34
+00:02:20,090 --> 00:02:22,220
+Chúng tôi có mô hình danh mục.
+
+35
+00:02:22,880 --> 00:02:25,520
+Tôi xin dừng ứng dụng tại đây.
+
+36
+00:02:26,590 --> 00:02:33,010
+Chúng ta đã thấy chú thích dữ liệu cần thiết cho lõi khung thực thể, nhưng chúng ta cũng có thể thêm
+
+37
+00:02:33,010 --> 00:02:39,640
+chú thích dữ liệu hữu ích cho giao diện người dùng phía máy khách hoặc xác thực phía máy khách.
+
+38
+00:02:40,370 --> 00:02:43,190
+Chúng tôi có một cái gì đó gọi là tên hiển thị.
+
+39
+00:02:43,460 --> 00:02:46,790
+Và ở đó chúng ta phải viết tên mà chúng ta muốn.
+
+40
+00:02:46,970 --> 00:02:51,800
+Vì vậy, khi nó đang được hiển thị, chúng tôi muốn thứ tự hiển thị có khoảng trắng.
+
+41
+00:02:51,800 --> 00:02:56,660
+Và nơi chúng tôi có tên, giả sử chúng tôi muốn hiển thị tên.
+
+42
+00:02:58,860 --> 00:03:00,450
+Của tên thể loại.
+
+43
+00:03:01,500 --> 00:03:05,250
+Với cấu hình đó, hãy để tôi chạy lại ứng dụng.
+
+44
+00:03:06,260 --> 00:03:10,760
+Vì vậy, hãy để tôi vào danh mục một lần nữa và tạo danh mục mới.
+
+45
+00:03:11,060 --> 00:03:11,660
+Hoàn hảo.
+
+46
+00:03:11,690 --> 00:03:14,960
+Bây giờ chúng ta có tên danh mục và thứ tự hiển thị.
+
+47
+00:03:15,110 --> 00:03:17,750
+Hộp văn bản ở đây bị tắt.
+
+48
+00:03:17,750 --> 00:03:19,730
+Hãy để tôi quay trở lại đây.
+
+49
+00:03:19,910 --> 00:03:20,780
+Rất tiếc.
+
+50
+00:03:21,810 --> 00:03:29,470
+Đôi khi bạn cũng sẽ phải dừng và khởi động lại để thay đổi giao diện người dùng, nhưng điều đó sẽ không sao cả.
+
+51
+00:03:29,490 --> 00:03:34,120
+Hãy quay lại đây và hoàn thiện ngay bây giờ.
+
+52
+00:03:34,140 --> 00:03:40,620
+Điều tốt nhất khi chúng tôi đang sử dụng ASP bốn và tên thuộc tính giống nhau cho nhãn và đầu vào.
+
+53
+00:03:40,650 --> 00:03:46,080
+Nếu bạn nhấp vào nhãn, nó sẽ tự động tô sáng trường nhập liệu.
+
+54
+00:03:46,650 --> 00:03:50,760
+Vì vậy, điều đó cũng được thực hiện với sự trợ giúp của Tag Helper.
+
+55
+00:03:51,360 --> 00:03:53,100
+Bạn có thể thấy thứ tự hiển thị.
+
+56
+00:03:53,100 --> 00:03:59,370
+Nó tự động biết đó là một giá trị số nguyên và nó xác định giá trị đó ngay tại đây.
+
+57
+00:03:59,670 --> 00:04:03,660
+Vì vậy, đó là vẻ đẹp của việc làm việc với những người trợ giúp thẻ.
+
+58
+00:04:04,630 --> 00:04:08,980
+Với cấu hình đó, hãy để tôi tiếp tục từ video tiếp theo.
+

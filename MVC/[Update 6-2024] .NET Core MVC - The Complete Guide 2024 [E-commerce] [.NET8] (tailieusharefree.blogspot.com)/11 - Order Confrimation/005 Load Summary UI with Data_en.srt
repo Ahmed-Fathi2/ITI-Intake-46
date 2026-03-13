@@ -1,0 +1,312 @@
+1
+00:00:01,859 --> 00:00:02,700
+Instructor: We need to make
+
+2
+00:00:02,700 --> 00:00:05,340
+our summary view here more dynamic.
+
+3
+00:00:05,340 --> 00:00:07,860
+First thing, what will be the model?
+
+4
+00:00:07,860 --> 00:00:10,563
+That will be shopping cart view model.
+
+5
+00:00:11,850 --> 00:00:14,820
+Then we have a link here to go back to the cart.
+
+6
+00:00:14,820 --> 00:00:18,300
+We will basically redirect to the index action.
+
+7
+00:00:18,300 --> 00:00:21,783
+That will be the homepage for our shopping cart.
+
+8
+00:00:22,710 --> 00:00:24,690
+Let me run the application
+
+9
+00:00:24,690 --> 00:00:28,413
+and see the other properties before I make the updates.
+
+10
+00:00:29,760 --> 00:00:32,943
+So let me go to cart here and summary.
+
+11
+00:00:35,100 --> 00:00:36,420
+We hit our break point.
+
+12
+00:00:36,420 --> 00:00:39,720
+Let me remove that and continue.
+
+13
+00:00:39,720 --> 00:00:41,280
+And perfect.
+
+14
+00:00:41,280 --> 00:00:43,893
+Next, we need to populate the shipping details.
+
+15
+00:00:45,150 --> 00:00:47,250
+We will go to summary here
+
+16
+00:00:47,250 --> 00:00:50,910
+and first we have the name where we have the input.
+
+17
+00:00:50,910 --> 00:00:55,910
+We will be adding ASP-4 tag helper for order header.name
+
+18
+00:00:56,250 --> 00:00:58,593
+and I will also add validation.
+
+19
+00:00:59,910 --> 00:01:03,750
+Let me copy these two for name, paste it here,
+
+20
+00:01:03,750 --> 00:01:07,650
+and let me paste it actually in all the places.
+
+21
+00:01:07,650 --> 00:01:10,830
+And then we can change the model property.
+
+22
+00:01:10,830 --> 00:01:13,083
+That will be much easier.
+
+23
+00:01:14,250 --> 00:01:15,083
+Perfect.
+
+24
+00:01:15,083 --> 00:01:16,203
+We have postal code.
+
+25
+00:01:17,310 --> 00:01:18,783
+Let me fix that.
+
+26
+00:01:19,890 --> 00:01:22,353
+Next here we have the state.
+
+27
+00:01:27,000 --> 00:01:28,713
+We have the city.
+
+28
+00:01:31,230 --> 00:01:34,353
+Scroll up, we have the street address.
+
+29
+00:01:38,160 --> 00:01:39,810
+We have the phone number.
+
+30
+00:01:39,810 --> 00:01:41,673
+Let me paste that.
+
+31
+00:01:43,860 --> 00:01:45,360
+Scroll up.
+
+32
+00:01:45,360 --> 00:01:46,560
+Perfect.
+
+33
+00:01:46,560 --> 00:01:47,940
+That looks good.
+
+34
+00:01:47,940 --> 00:01:49,560
+Let me go back here.
+
+35
+00:01:49,560 --> 00:01:53,310
+And you can see it is automatically being populated
+
+36
+00:01:53,310 --> 00:01:58,230
+based on what a user had when they signed up for an account.
+
+37
+00:01:58,230 --> 00:01:59,910
+They can obviously change that
+
+38
+00:01:59,910 --> 00:02:03,183
+to whatever they want before they place the order.
+
+39
+00:02:04,290 --> 00:02:07,170
+Next, we have to display the order summary
+
+40
+00:02:07,170 --> 00:02:11,580
+and this will be for all the orders in the shopping cart.
+
+41
+00:02:11,580 --> 00:02:16,580
+So let me scroll down where we have that right here.
+
+42
+00:02:16,590 --> 00:02:20,340
+Inside the list group here, we will add a foreach
+
+43
+00:02:20,340 --> 00:02:22,080
+because we will have to iterate
+
+44
+00:02:22,080 --> 00:02:27,080
+through variable details in model.shopping cart list.
+
+45
+00:02:27,780 --> 00:02:30,573
+I will close that right here.
+
+46
+00:02:31,440 --> 00:02:35,220
+Let me save that and go back to the view.
+
+47
+00:02:35,220 --> 00:02:37,173
+Perfect, we have two items.
+
+48
+00:02:38,040 --> 00:02:39,990
+First one here is the title.
+
+49
+00:02:39,990 --> 00:02:43,530
+We will add details.product.titles
+
+50
+00:02:43,530 --> 00:02:46,380
+and same will be true for quantity.
+
+51
+00:02:46,380 --> 00:02:49,383
+That is inside details.count.
+
+52
+00:02:50,460 --> 00:02:54,900
+Now the total here will be price multiplied by the quantity.
+
+53
+00:02:54,900 --> 00:02:57,690
+So we will be using grazer syntax.
+
+54
+00:02:57,690 --> 00:03:02,690
+In there, we will say detail.price.
+
+55
+00:03:02,880 --> 00:03:05,890
+Multiply that by details.count
+
+56
+00:03:07,080 --> 00:03:10,560
+and we will convert that to a string,
+
+57
+00:03:10,560 --> 00:03:12,723
+which will be currency format.
+
+58
+00:03:13,680 --> 00:03:15,900
+Finally, we have the grand total here.
+
+59
+00:03:15,900 --> 00:03:20,860
+That is inside model.orderheader.ordertotal
+
+60
+00:03:22,050 --> 00:03:24,663
+and convert that to currency.
+
+61
+00:03:26,610 --> 00:03:30,903
+Let me save that and take a look at the UI here.
+
+62
+00:03:31,770 --> 00:03:34,110
+Perfect, looks great.
+
+63
+00:03:34,110 --> 00:03:38,340
+Now, estimated arrival date, this is nothing fancy.
+
+64
+00:03:38,340 --> 00:03:40,320
+I want to display a date that
+
+65
+00:03:40,320 --> 00:03:43,800
+is seven to 14 days from today's date.
+
+66
+00:03:43,800 --> 00:03:46,830
+So where we have the estimated arrival date
+
+67
+00:03:46,830 --> 00:03:48,750
+we can display add days,
+
+68
+00:03:48,750 --> 00:03:53,750
+add seven days there - and we will add 14 days.
+
+69
+00:03:54,270 --> 00:03:57,780
+Based on that, it'll display a rough estimated date
+
+70
+00:03:57,780 --> 00:03:59,523
+based on today's date time.
+
+71
+00:04:00,480 --> 00:04:01,500
+So perfect.
+
+72
+00:04:01,500 --> 00:04:05,820
+With that, RUI here for the summary page is looking good.
+
+73
+00:04:05,820 --> 00:04:07,983
+Rather than shopping cart here,
+
+74
+00:04:09,360 --> 00:04:11,523
+I will display order summary.
+
+75
+00:04:13,530 --> 00:04:15,270
+You can change that if you want
+
+76
+00:04:15,270 --> 00:04:16,833
+but I think that looks good.
+
+77
+00:04:17,730 --> 00:04:20,553
+Now the main thing here is place an order.
+
+78
+00:04:21,450 --> 00:04:24,783
+Let me continue with that from the next video.
+

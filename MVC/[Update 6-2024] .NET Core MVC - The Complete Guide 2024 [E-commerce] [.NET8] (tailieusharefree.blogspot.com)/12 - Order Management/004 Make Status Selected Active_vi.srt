@@ -1,0 +1,184 @@
+1
+00:00:01,530 --> 00:00:07,620
+Bây giờ, dựa trên trạng thái ở đây, chúng tôi muốn chuyển đổi trạng thái nào đang hoạt động.
+
+2
+00:00:08,100 --> 00:00:10,320
+Làm điều đó là siêu đơn giản.
+
+3
+00:00:10,350 --> 00:00:18,090
+Giả sử nếu trong quá trình được chọn, về cơ bản, chúng tôi phải thêm một lớp đang hoạt động và cùng với đó, bạn
+
+4
+00:00:18,090 --> 00:00:22,140
+có thể thấy nó hiển thị rằng trong quá trình được chọn.
+
+5
+00:00:22,830 --> 00:00:27,270
+Nhưng chúng ta phải làm điều đó một cách linh hoạt dựa trên trạng thái ở đây.
+
+6
+00:00:27,270 --> 00:00:32,189
+Chúng ta phải thêm biến đó vào từng phần tử này.
+
+7
+00:00:32,880 --> 00:00:38,100
+Vì vậy, những gì chúng ta có thể làm là ngay tại đây, hãy để tôi thêm một số mã dao cạo.
+
+8
+00:00:39,500 --> 00:00:46,090
+Điều đầu tiên, chúng ta phải truy xuất trạng thái dựa trên chuỗi truy vấn mà chúng ta có trong URL.
+
+9
+00:00:46,100 --> 00:00:48,480
+Vì vậy, chúng tôi sẽ nói trạng thái biến.
+
+10
+00:00:48,500 --> 00:00:53,000
+Chúng tôi muốn truy xuất điều đó từ truy vấn dấu chấm yêu cầu dấu chấm ngữ cảnh.
+
+11
+00:00:53,000 --> 00:00:55,460
+Và tên là trạng thái.
+
+12
+00:00:56,460 --> 00:01:03,810
+Sau đó, hãy để tôi tạo thêm năm biến ở đây cho tất cả trạng thái mà chúng ta có ngay tại đây và nó
+
+13
+00:01:03,810 --> 00:01:10,290
+phải khớp với tên chính xác mà bạn thấy bên trong trạng thái tuyến đường ASP.
+
+14
+00:01:10,830 --> 00:01:14,610
+Chúng tôi đang cung cấp cho họ một lớp văn bản chính mặc định.
+
+15
+00:01:15,400 --> 00:01:22,930
+Sau đó, chúng tôi muốn chuyển đổi trường hợp ở đây dựa trên trạng thái, chúng tôi sẽ chuyển đổi các lớp bootstrap.
+
+16
+00:01:23,830 --> 00:01:30,350
+Vì vậy, trường hợp đầu tiên sẽ được chờ xử lý và chúng tôi sẽ sao chép và dán vào đây.
+
+17
+00:01:30,370 --> 00:01:38,470
+Nếu trường hợp đang chờ xử lý, biến đang chờ xử lý, chúng tôi sẽ thay đổi các lớp bootstrap thành văn bản hoạt động
+
+18
+00:01:38,470 --> 00:01:42,250
+có màu trắng và chúng tôi có thể cho nó là BG chính.
+
+19
+00:01:43,700 --> 00:01:45,500
+Chúng tôi sẽ phá án ở đó.
+
+20
+00:01:45,500 --> 00:01:48,800
+Và điều đó có vẻ tốt cho lớp đang chờ xử lý.
+
+21
+00:01:49,760 --> 00:01:53,690
+Hãy để tôi sao chép và dán nó khoảng bốn lần nữa.
+
+22
+00:01:54,490 --> 00:01:57,100
+Tôi sẽ sao chép nó trong quá trình xử lý.
+
+23
+00:01:57,340 --> 00:01:59,050
+Tôi đã hoàn thành.
+
+24
+00:01:59,200 --> 00:02:01,090
+Tôi đã chấp thuận.
+
+25
+00:02:01,420 --> 00:02:07,060
+Và sau đó đối với mặc định, chúng tôi sẽ nói tất cả đều bằng hoạt động.
+
+26
+00:02:07,970 --> 00:02:08,380
+Chữ.
+
+27
+00:02:08,419 --> 00:02:09,289
+Trắng.
+
+28
+00:02:10,539 --> 00:02:12,550
+Và BG tiểu học.
+
+29
+00:02:15,490 --> 00:02:23,170
+Vì vậy, dựa trên bất cứ điều gì được chọn ở đây, chúng tôi đang chuyển đổi các lớp bootstrap và chúng tôi đã quên một điều.
+
+30
+00:02:23,290 --> 00:02:26,590
+Chúng ta cũng cần thay đổi tên biến.
+
+31
+00:02:28,490 --> 00:02:29,270
+Hoàn hảo.
+
+32
+00:02:29,270 --> 00:02:30,350
+Trông tôt đây.
+
+33
+00:02:30,650 --> 00:02:36,560
+Bây giờ, những tên biến này, chúng ta có thể tự động gán chúng cho phần tử.
+
+34
+00:02:36,590 --> 00:02:38,930
+Giống như trong quá trình.
+
+35
+00:02:39,650 --> 00:02:40,250
+Kế tiếp.
+
+36
+00:02:40,250 --> 00:02:42,380
+Chúng tôi có một cái đang chờ xử lý ở đây.
+
+37
+00:02:44,270 --> 00:02:46,340
+Sau đó, chúng tôi đã hoàn thành.
+
+38
+00:02:48,590 --> 00:02:49,670
+Cuộn xuống.
+
+39
+00:02:49,670 --> 00:02:53,540
+Chúng tôi đã phê duyệt và chúng tôi có tất cả.
+
+40
+00:02:56,850 --> 00:02:57,510
+Với.
+
+41
+00:02:57,510 --> 00:03:02,010
+Nếu bạn lưu và quay lại, bạn có thể thấy thời điểm chờ xử lý được chọn.
+
+42
+00:03:02,010 --> 00:03:03,480
+Chúng tôi có một lớp học ở đó.
+
+43
+00:03:03,510 --> 00:03:08,760
+Khi chúng tôi thay đổi thành hoàn thành, các liên kết đang hoạt động như mong đợi.
+
+44
+00:03:09,150 --> 00:03:15,030
+Vì vậy, phần giao diện người dùng trông ổn, nhưng chúng ta cần chuyển đổi chức năng theo cách đó.
+
+45
+00:03:15,030 --> 00:03:20,640
+Danh sách đơn hàng cũng được cập nhật dựa trên trạng thái được chọn.
+
+46
+00:03:21,120 --> 00:03:24,090
+Hãy để tôi làm điều đó trong video tiếp theo.
+

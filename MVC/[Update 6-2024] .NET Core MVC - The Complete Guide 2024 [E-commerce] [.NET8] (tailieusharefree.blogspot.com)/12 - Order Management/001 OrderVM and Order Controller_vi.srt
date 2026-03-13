@@ -1,0 +1,184 @@
+1
+00:00:01,510 --> 00:00:07,540
+Chúng tôi có thể đặt hàng bằng cả tài khoản của công ty cũng như người dùng của khách hàng.
+
+2
+00:00:08,290 --> 00:00:12,880
+Với điều đó hiện tại, chúng tôi muốn làm việc về quản lý đơn hàng.
+
+3
+00:00:13,150 --> 00:00:17,530
+Giống như cách chúng tôi sẽ cập nhật trạng thái đơn hàng thành xử lý đã vận chuyển?
+
+4
+00:00:17,530 --> 00:00:21,310
+Và làm thế nào một người dùng công ty có thể thực hiện thanh toán sau này?
+
+5
+00:00:21,970 --> 00:00:28,870
+Đầu tiên, chúng ta cần thêm một bộ điều khiển đơn hàng, nơi chúng ta sẽ có các hành động khác nhau để hiển thị tất cả
+
+6
+00:00:28,870 --> 00:00:29,860
+các đơn hàng.
+
+7
+00:00:30,850 --> 00:00:38,170
+Vì vậy, điều đầu tiên, hãy để tôi quay lại mã và chúng tôi sẽ dừng ứng dụng tại đây.
+
+8
+00:00:38,200 --> 00:00:40,030
+Rất tiếc, tôi đã khởi động lại.
+
+9
+00:00:40,270 --> 00:00:41,830
+Hãy để tôi dừng lại điều đó.
+
+10
+00:00:41,980 --> 00:00:46,360
+Và bên trong admin chúng ta sẽ có phần quản lý đơn hàng.
+
+11
+00:00:46,720 --> 00:00:54,940
+Vì vậy, trong các đơn đặt hàng của quản trị viên, hãy để tôi tạo một bộ điều khiển mới với tên của bộ điều khiển đơn hàng.
+
+12
+00:00:55,720 --> 00:00:57,920
+Chúng tôi sẽ đi với bộ điều khiển trống.
+
+13
+00:00:57,940 --> 00:00:59,350
+Trông tôt đây.
+
+14
+00:00:59,830 --> 00:01:07,750
+Bây giờ để hiển thị tất cả các đơn đặt hàng, chúng tôi sẽ sử dụng bảng dữ liệu để có thể chuyển đến bộ điều khiển sản phẩm
+
+15
+00:01:07,750 --> 00:01:09,640
+và nơi chúng tôi có API.
+
+16
+00:01:09,670 --> 00:01:15,220
+Hãy để tôi sao chép này và tôi sẽ dán nó ngay tại đây.
+
+17
+00:01:16,980 --> 00:01:17,690
+Hoàn hảo.
+
+18
+00:01:17,700 --> 00:01:19,960
+Cuộc gọi API có vẻ tốt.
+
+19
+00:01:19,980 --> 00:01:21,510
+Chúng tôi không muốn xóa.
+
+20
+00:01:21,510 --> 00:01:26,010
+Hãy để tôi loại bỏ nó và chúng ta cần thêm đơn vị công việc.
+
+21
+00:01:26,910 --> 00:01:33,090
+Vì vậy, ngay tại đây chúng ta sẽ có private read only một đơn vị công việc.
+
+22
+00:01:34,180 --> 00:01:36,220
+Gạch dưới đơn vị công việc.
+
+23
+00:01:39,220 --> 00:01:43,720
+Trong hàm tạo, chúng ta sẽ để đơn vị công việc I.
+
+24
+00:01:44,740 --> 00:01:49,360
+Và gạch dưới đơn vị công việc bằng với đơn vị công việc.
+
+25
+00:01:50,490 --> 00:01:52,200
+Trong nhận được tất cả ở đây.
+
+26
+00:01:52,200 --> 00:01:57,360
+Chúng tôi sẽ nhận được một danh sách hoặc tôi vô số tiêu đề đơn hàng.
+
+27
+00:01:57,840 --> 00:02:01,560
+Vì vậy, obj tôi sẽ gọi thứ tự đó.
+
+28
+00:02:01,560 --> 00:02:08,370
+Các tiêu đề bằng với đơn vị công việc tiêu đề thứ tự chấm chấm lấy tất cả.
+
+29
+00:02:08,370 --> 00:02:11,670
+Và chúng tôi muốn bao gồm người dùng ứng dụng.
+
+30
+00:02:14,260 --> 00:02:15,250
+Trông tôt đây.
+
+31
+00:02:15,250 --> 00:02:19,240
+Và chúng tôi sẽ trả lại các tiêu đề đơn hàng.
+
+32
+00:02:19,900 --> 00:02:20,670
+Tuyệt vời.
+
+33
+00:02:20,680 --> 00:02:26,080
+Vì vậy, bộ điều khiển đơn đặt hàng của chúng tôi có vẻ ổn với điểm cuối API get all.
+
+34
+00:02:27,080 --> 00:02:34,070
+Nhưng trước khi tôi kết thúc video, thông thường khi chúng tôi truy xuất bất kỳ thứ gì liên quan đến đơn hàng, chúng tôi phải
+
+35
+00:02:34,070 --> 00:02:37,130
+truy xuất tiêu đề đơn hàng cũng như chi tiết đơn hàng.
+
+36
+00:02:37,730 --> 00:02:41,780
+Vì vậy, thật hợp lý khi tạo ra một mô hình mới.
+
+37
+00:02:42,380 --> 00:02:44,200
+Và hãy để tôi làm điều đó.
+
+38
+00:02:44,210 --> 00:02:46,130
+Nó sẽ là một mô hình xem.
+
+39
+00:02:46,790 --> 00:02:54,680
+Tôi sẽ gọi thứ tự VM đó cho mô hình xem thứ tự và nó sẽ là một lớp công khai.
+
+40
+00:02:55,130 --> 00:03:01,240
+Bây giờ sẽ có tiêu đề đơn hàng và nó sẽ có một bộ sưu tập chi tiết đơn hàng.
+
+41
+00:03:01,250 --> 00:03:06,530
+Vì vậy, chỗ dựa đó sẽ là vô số chi tiết đặt hàng.
+
+42
+00:03:07,370 --> 00:03:10,040
+Và hãy để tôi gọi chi tiết thứ tự đó.
+
+43
+00:03:11,920 --> 00:03:12,670
+Hoàn hảo.
+
+44
+00:03:12,670 --> 00:03:20,740
+Vì vậy, chúng tôi có một mô hình đánh giá tự động có tiêu đề đơn hàng và tất cả các chi tiết đơn hàng liên quan đến mô hình đó.
+
+45
+00:03:21,880 --> 00:03:23,020
+Với điều đó tại chỗ.
+
+46
+00:03:23,020 --> 00:03:26,080
+Hãy để tôi tiếp tục từ video tiếp theo.
+

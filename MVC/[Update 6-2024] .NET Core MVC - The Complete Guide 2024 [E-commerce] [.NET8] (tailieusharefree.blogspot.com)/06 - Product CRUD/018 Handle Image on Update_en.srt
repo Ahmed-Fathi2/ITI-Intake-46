@@ -1,0 +1,300 @@
+1
+00:00:02,009 --> 00:00:04,500
+Instructor: We want to manage updating a product
+
+2
+00:00:04,500 --> 00:00:06,930
+in the product controller.
+
+3
+00:00:06,930 --> 00:00:09,660
+But for that, first let's think about
+
+4
+00:00:09,660 --> 00:00:12,150
+what should happen to the image.
+
+5
+00:00:12,150 --> 00:00:16,710
+If we go back here and let me go back, let's assume
+
+6
+00:00:16,710 --> 00:00:21,030
+that when a product is created, they must upload an image.
+
+7
+00:00:21,030 --> 00:00:23,670
+So next time when they are updating something
+
+8
+00:00:23,670 --> 00:00:26,550
+let's say they are only updating the description
+
+9
+00:00:26,550 --> 00:00:29,040
+and if they hit the update button
+
+10
+00:00:29,040 --> 00:00:32,073
+then we do not want to update the image.
+
+11
+00:00:33,180 --> 00:00:35,430
+So basically when they are updating
+
+12
+00:00:35,430 --> 00:00:37,860
+if the image URL is no
+
+13
+00:00:37,860 --> 00:00:40,113
+then we do not want to update that.
+
+14
+00:00:40,950 --> 00:00:43,920
+But if they are updating a new image,
+
+15
+00:00:43,920 --> 00:00:46,650
+then we want to replace the existing image
+
+16
+00:00:46,650 --> 00:00:48,780
+with the new image.
+
+17
+00:00:48,780 --> 00:00:52,530
+So if a file is present when they are updating
+
+18
+00:00:52,530 --> 00:00:54,960
+then we want to delete the old file
+
+19
+00:00:54,960 --> 00:00:58,230
+and we want to add this new file.
+
+20
+00:00:58,230 --> 00:01:00,693
+Let me handle that scenario first.
+
+21
+00:01:01,560 --> 00:01:03,390
+When we have to upload a new file
+
+22
+00:01:03,390 --> 00:01:06,270
+all the logic stays the same, but the only thing
+
+23
+00:01:06,270 --> 00:01:10,530
+that we have to add here is we have to delete the old file.
+
+24
+00:01:10,530 --> 00:01:15,530
+If image URL is present and a new file is being uploaded.
+
+25
+00:01:16,140 --> 00:01:21,140
+So if the file is not null, and if image URL is present
+
+26
+00:01:21,840 --> 00:01:23,700
+so we will check here,
+
+27
+00:01:23,700 --> 00:01:28,700
+if product view model dot product dot imageUrl
+
+28
+00:01:29,160 --> 00:01:32,943
+and I can say string dot is null or empty.
+
+29
+00:01:37,290 --> 00:01:40,350
+So if that is not null or empty
+
+30
+00:01:40,350 --> 00:01:43,620
+that means that there is an image URL
+
+31
+00:01:43,620 --> 00:01:47,733
+and we are uploading a new image because file is not null.
+
+32
+00:01:48,810 --> 00:01:53,223
+In that case, we have to delete the old image.
+
+33
+00:01:54,270 --> 00:01:56,430
+In order to remove the old image
+
+34
+00:01:56,430 --> 00:02:00,060
+we need the path of that particular image.
+
+35
+00:02:00,060 --> 00:02:04,680
+So we will say variable old image path is equal
+
+36
+00:02:04,680 --> 00:02:06,930
+to path dot combine.
+
+37
+00:02:06,930 --> 00:02:10,750
+We need the root folder, which is inside wwwRootPath
+
+38
+00:02:12,510 --> 00:02:15,690
+and then if we examine our database here
+
+39
+00:02:15,690 --> 00:02:19,353
+bulky, table, products,
+
+40
+00:02:23,310 --> 00:02:24,143
+you will notice
+
+41
+00:02:24,143 --> 00:02:28,260
+that we have a forward slash in the image URL.
+
+42
+00:02:28,260 --> 00:02:29,640
+We need to remove that
+
+43
+00:02:29,640 --> 00:02:32,283
+because we are using patent dot combined.
+
+44
+00:02:33,210 --> 00:02:34,043
+So I will say,
+
+45
+00:02:34,043 --> 00:02:38,930
+product view model dot product dot image URL dot.
+
+46
+00:02:40,500 --> 00:02:42,930
+We have the trim start
+
+47
+00:02:42,930 --> 00:02:45,930
+and we want to remove the forward slash.
+
+48
+00:02:45,930 --> 00:02:48,090
+For that, we will have to escape that
+
+49
+00:02:48,090 --> 00:02:50,163
+with another forward slash.
+
+50
+00:02:51,300 --> 00:02:53,100
+That will basically combine
+
+51
+00:02:53,100 --> 00:02:55,953
+and give us the path of the old image.
+
+52
+00:02:57,450 --> 00:02:59,460
+Then deleting that is simple.
+
+53
+00:02:59,460 --> 00:03:03,480
+We have that in system dot io dot file.
+
+54
+00:03:03,480 --> 00:03:04,920
+We first need to check
+
+55
+00:03:04,920 --> 00:03:08,790
+if anything exists in that old image path.
+
+56
+00:03:08,790 --> 00:03:11,610
+If it does, then we will delete
+
+57
+00:03:11,610 --> 00:03:15,693
+system dot io dot file dot delete the old image.
+
+58
+00:03:16,740 --> 00:03:19,320
+So perfect, we will delete that image.
+
+59
+00:03:19,320 --> 00:03:23,613
+We will upload a new image and we'll update the image URL.
+
+60
+00:03:24,450 --> 00:03:26,250
+That is great.
+
+61
+00:03:26,250 --> 00:03:28,410
+But finally where we are adding here
+
+62
+00:03:28,410 --> 00:03:30,780
+we will rather have to update.
+
+63
+00:03:30,780 --> 00:03:35,280
+Now how will we identify whether it is an add or an update?
+
+64
+00:03:35,280 --> 00:03:38,670
+That depends on if the ID is present.
+
+65
+00:03:38,670 --> 00:03:39,503
+So we'll say
+
+66
+00:03:39,503 --> 00:03:43,590
+if product view model dot product dot Id is equally equal
+
+67
+00:03:43,590 --> 00:03:47,730
+to zero, that means it is an add.
+
+68
+00:03:47,730 --> 00:03:49,260
+Paste that.
+
+69
+00:03:49,260 --> 00:03:51,090
+Else, it is an update.
+
+70
+00:03:51,090 --> 00:03:55,900
+So underscore unit of work dot product dot update
+
+71
+00:03:56,760 --> 00:03:59,163
+product view model dot product.
+
+72
+00:04:00,330 --> 00:04:01,410
+Perfect.
+
+73
+00:04:01,410 --> 00:04:03,360
+Now before we test this
+
+74
+00:04:03,360 --> 00:04:06,420
+I want to modify something in the update
+
+75
+00:04:06,420 --> 00:04:09,843
+and let me walk you through that in the next video.
+

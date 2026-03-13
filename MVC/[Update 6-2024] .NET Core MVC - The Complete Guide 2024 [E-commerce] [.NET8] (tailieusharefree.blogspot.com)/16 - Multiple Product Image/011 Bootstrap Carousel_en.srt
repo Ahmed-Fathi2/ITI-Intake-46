@@ -1,0 +1,512 @@
+1
+00:00:01,950 --> 00:00:03,360
+Instructor: Now what I want to do is
+
+2
+00:00:03,360 --> 00:00:05,160
+if I go to product here,
+
+3
+00:00:05,160 --> 00:00:08,310
+let me add image for all the product.
+
+4
+00:00:08,310 --> 00:00:12,060
+Like in "Cotton Candy" we have the front image.
+
+5
+00:00:12,060 --> 00:00:15,720
+I have added more images in the project resource,
+
+6
+00:00:15,720 --> 00:00:18,000
+so if you go there in the images,
+
+7
+00:00:18,000 --> 00:00:21,450
+you will see two image for "Cotton Candy."
+
+8
+00:00:21,450 --> 00:00:24,513
+I will add the back one here, hit update.
+
+9
+00:00:25,620 --> 00:00:27,780
+Let me see, that looks good.
+
+10
+00:00:27,780 --> 00:00:31,770
+Let me go back here, "Dark Skies,"
+
+11
+00:00:31,770 --> 00:00:35,557
+I will add the back image, update that.
+
+12
+00:00:35,557 --> 00:00:37,077
+"Fortune of Time."
+
+13
+00:00:38,700 --> 00:00:41,250
+Let me select front and back here.
+
+14
+00:00:41,250 --> 00:00:45,600
+Update that and let me go to the homepage.
+
+15
+00:00:45,600 --> 00:00:47,343
+Perfect! That looks good.
+
+16
+00:00:48,180 --> 00:00:50,430
+Let me go to product.
+
+17
+00:00:50,430 --> 00:00:52,920
+Next, we have "Leaves and Wonder."
+
+18
+00:00:52,920 --> 00:00:54,330
+Now when you select,
+
+19
+00:00:54,330 --> 00:00:57,750
+make sure that in here you see "Leaves and Wonder" comes
+
+20
+00:00:57,750 --> 00:01:00,180
+before the back image.
+
+21
+00:01:00,180 --> 00:01:03,030
+That particular image will be displayed
+
+22
+00:01:03,030 --> 00:01:05,040
+before the other one.
+
+23
+00:01:05,040 --> 00:01:06,307
+Which one is this?
+
+24
+00:01:06,307 --> 00:01:08,097
+"Rock in the Ocean."
+
+25
+00:01:09,120 --> 00:01:13,027
+Let me update that and the final one is,
+
+26
+00:01:13,027 --> 00:01:14,667
+"Vanish in the Sunset."
+
+27
+00:01:15,990 --> 00:01:17,190
+Perfect.
+
+28
+00:01:17,190 --> 00:01:21,990
+Let's hit the update and we go to the homepage.
+
+29
+00:01:21,990 --> 00:01:23,040
+Great!
+
+30
+00:01:23,040 --> 00:01:27,390
+Well, "Leaves and Wonder," we have the back image first,
+
+31
+00:01:27,390 --> 00:01:31,890
+so we will go to product here, delete this one
+
+32
+00:01:31,890 --> 00:01:34,533
+and upload the back one again.
+
+33
+00:01:37,740 --> 00:01:39,663
+Great! That should fix it.
+
+34
+00:01:40,920 --> 00:01:44,220
+If you want to take this one step advance,
+
+35
+00:01:44,220 --> 00:01:46,590
+what you can do is you can have a page
+
+36
+00:01:46,590 --> 00:01:48,930
+where you can manage all the image
+
+37
+00:01:48,930 --> 00:01:52,710
+and basically set an order or set a main image
+
+38
+00:01:52,710 --> 00:01:54,840
+that needs to be displayed.
+
+39
+00:01:54,840 --> 00:01:57,930
+You can create a new column in the database for that
+
+40
+00:01:57,930 --> 00:02:01,713
+and track which one is the main image for a product.
+
+41
+00:02:02,820 --> 00:02:06,210
+But we will not go into those complexities.
+
+42
+00:02:06,210 --> 00:02:09,060
+What we have right now looks good.
+
+43
+00:02:09,060 --> 00:02:12,390
+What I want to do now is on the details here,
+
+44
+00:02:12,390 --> 00:02:15,960
+I want to display both the image that we have added.
+
+45
+00:02:15,960 --> 00:02:20,610
+So we will have a carousel here and display all the image.
+
+46
+00:02:20,610 --> 00:02:25,473
+To get started, we can search for bootstrap 5 carousel.
+
+47
+00:02:27,960 --> 00:02:29,673
+Let me scroll down.
+
+48
+00:02:30,750 --> 00:02:32,640
+This one looks good.
+
+49
+00:02:32,640 --> 00:02:36,000
+Let me copy the step altogether.
+
+50
+00:02:36,000 --> 00:02:37,660
+Go back to our code
+
+51
+00:02:39,180 --> 00:02:41,190
+and we will go to home controller.
+
+52
+00:02:41,190 --> 00:02:45,120
+We have the details action, go to that view.
+
+53
+00:02:45,120 --> 00:02:47,700
+We have image right here,
+
+54
+00:02:47,700 --> 00:02:52,700
+remove that, make some space and let me paste that code.
+
+55
+00:02:53,910 --> 00:02:56,580
+Here we will have to get creative.
+
+56
+00:02:56,580 --> 00:02:59,340
+In order for carousel to work you can see,
+
+57
+00:02:59,340 --> 00:03:01,950
+we have to give the data-bs-slide
+
+58
+00:03:01,950 --> 00:03:05,820
+and we have to give it zero, one and two.
+
+59
+00:03:05,820 --> 00:03:08,790
+And then where we have the image src here,
+
+60
+00:03:08,790 --> 00:03:12,993
+if the index is zero, we have to give it a class of active.
+
+61
+00:03:13,920 --> 00:03:17,460
+So first what I can do is add an if condition.
+
+62
+00:03:17,460 --> 00:03:21,690
+If Model.Product.ProductImages is not null
+
+63
+00:03:21,690 --> 00:03:25,770
+and Model.Product.ProductImages.Count
+
+64
+00:03:25,770 --> 00:03:30,060
+is greater than zero, then we want a carousel.
+
+65
+00:03:30,060 --> 00:03:32,730
+So let me cut this carousel,
+
+66
+00:03:32,730 --> 00:03:35,043
+paste it inside the if condition.
+
+67
+00:03:36,210 --> 00:03:38,610
+After that for all the product image
+
+68
+00:03:38,610 --> 00:03:41,703
+we will have to iterate in a loop right here.
+
+69
+00:03:42,780 --> 00:03:46,740
+So we will have a foreach loop, variable,
+
+70
+00:03:46,740 --> 00:03:49,013
+let me call that imageWithIndex.
+
+71
+00:03:50,160 --> 00:03:55,160
+Inside we have Model.Product.ProductImages.Select.
+
+72
+00:03:57,990 --> 00:04:00,240
+And now we need projection
+
+73
+00:04:00,240 --> 00:04:03,660
+because we also want index of the image.
+
+74
+00:04:03,660 --> 00:04:07,080
+So we can project using select here that hey,
+
+75
+00:04:07,080 --> 00:04:10,110
+what we want from select is the image itself,
+
+76
+00:04:10,110 --> 00:04:14,070
+on top of that I want something like an index
+
+77
+00:04:14,070 --> 00:04:17,399
+and we want to convert that to a new object.
+
+78
+00:04:17,399 --> 00:04:20,040
+That object will be a custom object,
+
+79
+00:04:20,040 --> 00:04:23,137
+where first will be of the type, productImage
+
+80
+00:04:24,420 --> 00:04:27,330
+and that is image.
+
+81
+00:04:27,330 --> 00:04:30,570
+Next, what we want is the index itself.
+
+82
+00:04:30,570 --> 00:04:33,933
+So Index = index.
+
+83
+00:04:34,950 --> 00:04:38,430
+This index will automatically give us zero, one
+
+84
+00:04:38,430 --> 00:04:42,810
+and two values based on whatever index this image is
+
+85
+00:04:42,810 --> 00:04:45,693
+in the product images right here.
+
+86
+00:04:47,130 --> 00:04:50,010
+So let me go to the right here,
+
+87
+00:04:50,010 --> 00:04:54,990
+I have to add one more closing bracket here and perfect.
+
+88
+00:04:54,990 --> 00:04:57,180
+I believe that looks good.
+
+89
+00:04:57,180 --> 00:04:59,430
+Let me break it out in different lines,
+
+90
+00:04:59,430 --> 00:05:03,723
+so it is easier to read and perfect.
+
+91
+00:05:05,340 --> 00:05:08,250
+Inside there let me cut the button here,
+
+92
+00:05:08,250 --> 00:05:11,850
+paste it one time, scroll to the right.
+
+93
+00:05:11,850 --> 00:05:14,040
+We want the index here.
+
+94
+00:05:14,040 --> 00:05:18,963
+So I will add the @imageWithIndex.Index.
+
+95
+00:05:19,830 --> 00:05:21,630
+Now next thing that you notice here
+
+96
+00:05:21,630 --> 00:05:23,820
+is there is a class of active
+
+97
+00:05:23,820 --> 00:05:27,450
+and that only applies if the index is zero.
+
+98
+00:05:27,450 --> 00:05:31,503
+You do not see that on index one and two right here.
+
+99
+00:05:32,340 --> 00:05:37,080
+So we have to be more dynamic on how we assign class here.
+
+100
+00:05:37,080 --> 00:05:40,083
+We will say @imageWithIndex.Index,
+
+101
+00:05:41,640 --> 00:05:45,430
+if that is zero, then we want a class of active
+
+102
+00:05:46,740 --> 00:05:48,873
+else we do not want any class.
+
+103
+00:05:50,190 --> 00:05:52,920
+That looks good for the button.
+
+104
+00:05:52,920 --> 00:05:54,600
+We have to do something similar
+
+105
+00:05:54,600 --> 00:05:57,033
+with the carousel item as well.
+
+106
+00:05:58,680 --> 00:06:00,570
+Let me remove these two div.
+
+107
+00:06:00,570 --> 00:06:03,360
+We need a foreach right here.
+
+108
+00:06:03,360 --> 00:06:07,980
+Copy this, paste it here, add the closing bracket.
+
+109
+00:06:07,980 --> 00:06:11,970
+Active again will be based on the index.
+
+110
+00:06:11,970 --> 00:06:13,980
+So let me cut this here
+
+111
+00:06:13,980 --> 00:06:18,420
+and we'll say @imageWithIndex.Index., if that is zero
+
+112
+00:06:21,480 --> 00:06:25,500
+then we want the class of carousel item an active,
+
+113
+00:06:25,500 --> 00:06:29,073
+else we only want the class of carousel item.
+
+114
+00:06:30,270 --> 00:06:32,940
+Finally, we need the src here,
+
+115
+00:06:32,940 --> 00:06:36,187
+that will be inside imageWithIndex.ProductImage.
+
+116
+00:06:38,040 --> 00:06:40,863
+Inside there we have the ImageURL.
+
+117
+00:06:42,540 --> 00:06:44,430
+Now if you want for simplicity,
+
+118
+00:06:44,430 --> 00:06:46,860
+we can directly call this Image.
+
+119
+00:06:46,860 --> 00:06:49,083
+We can use whatever name we want.
+
+120
+00:06:49,920 --> 00:06:54,630
+So let me modify that and I believe this looks good.
+
+121
+00:06:54,630 --> 00:06:59,160
+We will have to save and go back here and perfect.
+
+122
+00:06:59,160 --> 00:07:02,430
+We have a slider here with the carousel
+
+123
+00:07:02,430 --> 00:07:05,670
+and if I move forward I can see the image.
+
+124
+00:07:05,670 --> 00:07:07,650
+That looks great!
+
+125
+00:07:07,650 --> 00:07:09,510
+We will have the same functionality
+
+126
+00:07:09,510 --> 00:07:13,620
+for the other products as well and perfect.
+
+127
+00:07:13,620 --> 00:07:17,430
+With that we have a nice carousel that we have implemented
+
+128
+00:07:17,430 --> 00:07:20,793
+to display all the image in product detail.
+

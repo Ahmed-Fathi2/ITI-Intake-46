@@ -1,0 +1,348 @@
+1
+00:00:00,960 --> 00:00:02,550
+-: We are parsing the category
+
+2
+00:00:02,550 --> 00:00:05,160
+that we retrieve to our view.
+
+3
+00:00:05,160 --> 00:00:07,350
+We need to create this view,
+
+4
+00:00:07,350 --> 00:00:12,350
+so we can right click here, add view, empty view.
+
+5
+00:00:12,660 --> 00:00:16,023
+We will have to rename this to be added here,
+
+6
+00:00:17,880 --> 00:00:21,480
+and we will remove everything right here.
+
+7
+00:00:21,480 --> 00:00:24,780
+Now let me also show you one thing different.
+
+8
+00:00:24,780 --> 00:00:29,760
+Let me delete this view and let me add that once again.
+
+9
+00:00:29,760 --> 00:00:33,300
+We also have something called as Razor view.
+
+10
+00:00:33,300 --> 00:00:36,063
+Let's add that and see what is different.
+
+11
+00:00:36,990 --> 00:00:40,050
+Now, when we add this, there are quite a few properties
+
+12
+00:00:40,050 --> 00:00:41,613
+that needs to be scaffolded.
+
+13
+00:00:42,510 --> 00:00:45,540
+First, we have the view name, which is added.
+
+14
+00:00:45,540 --> 00:00:49,200
+Now, I have changed the default font of visual studio.
+
+15
+00:00:49,200 --> 00:00:53,100
+Because of that, it is enlarged and difficult to read,
+
+16
+00:00:53,100 --> 00:00:56,130
+but here we have the view name of edit,
+
+17
+00:00:56,130 --> 00:00:57,840
+and with the Razor view,
+
+18
+00:00:57,840 --> 00:01:02,430
+we can have different template for create, details, edit,
+
+19
+00:01:02,430 --> 00:01:04,470
+and much more.
+
+20
+00:01:04,470 --> 00:01:06,840
+We will go with the empty one here,
+
+21
+00:01:06,840 --> 00:01:09,780
+and if you go with create or something else,
+
+22
+00:01:09,780 --> 00:01:11,760
+you have more configuration,
+
+23
+00:01:11,760 --> 00:01:15,720
+which we will see in the upcoming videos.
+
+24
+00:01:15,720 --> 00:01:19,080
+Now this is not a partial view, so we will skip that,
+
+25
+00:01:19,080 --> 00:01:22,680
+and you can also skip the underscored layout page
+
+26
+00:01:22,680 --> 00:01:25,803
+because it already gets added by default.
+
+27
+00:01:26,640 --> 00:01:29,730
+When you add that, it will scaffold few things
+
+28
+00:01:29,730 --> 00:01:33,900
+and sometimes I have seen the scaffolding is corrupted
+
+29
+00:01:33,900 --> 00:01:38,103
+and it does not works and gives you random error message.
+
+30
+00:01:38,940 --> 00:01:42,480
+Now, because we selected the underscored layout as null,
+
+31
+00:01:42,480 --> 00:01:46,500
+you can see it rendered like a new HTML page.
+
+32
+00:01:46,500 --> 00:01:48,480
+That is not what we want.
+
+33
+00:01:48,480 --> 00:01:50,500
+So, let me delete that again
+
+34
+00:01:52,260 --> 00:01:54,930
+and let's try that once again.
+
+35
+00:01:54,930 --> 00:01:57,303
+Add view, Razor view,
+
+36
+00:01:58,440 --> 00:02:03,440
+Razor view, and we will say use layout page.
+
+37
+00:02:04,080 --> 00:02:06,510
+When we use the default layout page,
+
+38
+00:02:06,510 --> 00:02:09,600
+you can see that is more close to what we have
+
+39
+00:02:09,600 --> 00:02:12,540
+and it got added in the right place.
+
+40
+00:02:12,540 --> 00:02:14,913
+Now of course, we will remove everything.
+
+41
+00:02:16,050 --> 00:02:18,150
+We will leave the edit here,
+
+42
+00:02:18,150 --> 00:02:21,240
+but actually what we can do is copy everything
+
+43
+00:02:21,240 --> 00:02:25,410
+that we have in create, and paste it for edit
+
+44
+00:02:25,410 --> 00:02:27,993
+because it will look exactly the same.
+
+45
+00:02:28,860 --> 00:02:33,153
+Rather than create category, it will be added category.
+
+46
+00:02:34,440 --> 00:02:37,920
+With that configured, let me change this from create
+
+47
+00:02:37,920 --> 00:02:42,453
+to update and let me run the project.
+
+48
+00:02:43,680 --> 00:02:46,770
+We will come back and modify this added page,
+
+49
+00:02:46,770 --> 00:02:50,403
+but let me see how the application looks right now.
+
+50
+00:02:51,390 --> 00:02:55,500
+Perfect. To your surprise, when you hit edit category,
+
+51
+00:02:55,500 --> 00:03:00,120
+it automatically populates the name and display order.
+
+52
+00:03:00,120 --> 00:03:02,760
+The reason behind that is the category model
+
+53
+00:03:02,760 --> 00:03:05,340
+that is being parsed from the edit
+
+54
+00:03:05,340 --> 00:03:07,800
+already has those populated,
+
+55
+00:03:07,800 --> 00:03:11,310
+and in the edit we are using tag helpers,
+
+56
+00:03:11,310 --> 00:03:13,740
+so if name has some value,
+
+57
+00:03:13,740 --> 00:03:16,530
+it will automatically be displayed.
+
+58
+00:03:16,530 --> 00:03:19,353
+And same applies for display order,
+
+59
+00:03:20,220 --> 00:03:22,590
+so that is great news.
+
+60
+00:03:22,590 --> 00:03:25,530
+We have validations that were already added,
+
+61
+00:03:25,530 --> 00:03:28,260
+so if you try to remove display order,
+
+62
+00:03:28,260 --> 00:03:30,693
+we have the client side validation.
+
+63
+00:03:31,560 --> 00:03:32,970
+So with that configured,
+
+64
+00:03:32,970 --> 00:03:37,560
+our edit category view is looking good right now.
+
+65
+00:03:37,560 --> 00:03:39,480
+We will have to change one thing,
+
+66
+00:03:39,480 --> 00:03:42,813
+but I will show you that in the next video.
+
+67
+00:03:43,740 --> 00:03:47,580
+But what we have to focus on is the post-action method
+
+68
+00:03:47,580 --> 00:03:51,300
+in category, where we will retrieve an object
+
+69
+00:03:51,300 --> 00:03:54,360
+and we have to update the category.
+
+70
+00:03:54,360 --> 00:03:57,120
+We have seen how to create a new category
+
+71
+00:03:57,120 --> 00:03:59,850
+using entity framework core,
+
+72
+00:03:59,850 --> 00:04:03,150
+but now how do we update that category?
+
+73
+00:04:03,150 --> 00:04:06,480
+We will remove this validation, that is not needed.
+
+74
+00:04:06,480 --> 00:04:10,440
+When we are updating, we will do the client side validation.
+
+75
+00:04:10,440 --> 00:04:12,240
+That looks good.
+
+76
+00:04:12,240 --> 00:04:16,320
+On top of that, rather than add, EF Core has a method
+
+77
+00:04:16,320 --> 00:04:20,010
+for update and there we have to parse the obj
+
+78
+00:04:20,010 --> 00:04:22,950
+and it will update that category.
+
+79
+00:04:22,950 --> 00:04:24,990
+Now, how will that update?
+
+80
+00:04:24,990 --> 00:04:28,830
+Based on the ID that is populated in the object here,
+
+81
+00:04:28,830 --> 00:04:32,550
+it will automatically update all the other properties
+
+82
+00:04:32,550 --> 00:04:37,050
+that are there for that category in the database.
+
+83
+00:04:37,050 --> 00:04:38,310
+It is super simple,
+
+84
+00:04:38,310 --> 00:04:40,980
+but you can see how entity framework goal
+
+85
+00:04:40,980 --> 00:04:43,440
+has reduced all the heavy lifting
+
+86
+00:04:43,440 --> 00:04:47,640
+that we have to do when we were updating a record.
+
+87
+00:04:47,640 --> 00:04:51,063
+With that, let me continue from the next video.
+

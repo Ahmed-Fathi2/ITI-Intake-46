@@ -1,0 +1,184 @@
+1
+00:00:01,870 --> 00:00:08,530
+Bây giờ chúng tôi đã làm việc để thực hiện các thao tác CRUD trên danh mục, nhưng trong trang web của chúng
+
+2
+00:00:08,530 --> 00:00:15,550
+tôi, chúng tôi sẽ bán sách và về cơ bản, chúng tôi cần sản phẩm chứa tất cả sách trên trang web của chúng tôi và
+
+3
+00:00:15,550 --> 00:00:16,840
+sẽ có danh mục.
+
+4
+00:00:17,290 --> 00:00:24,490
+Vì vậy, chúng tôi cần tạo một mô hình cho sản phẩm của mình, đó là đặt và thực hiện các thao tác CRUD trên đó.
+
+5
+00:00:25,550 --> 00:00:29,990
+Điều đầu tiên mà chúng ta phải làm là tạo ra một mô hình.
+
+6
+00:00:30,320 --> 00:00:32,700
+Hãy để tôi đóng tất cả các tab ở đây.
+
+7
+00:00:32,720 --> 00:00:36,500
+Chúng tôi sẽ làm điều đó trong các mô hình chấm sách cồng kềnh ở đây.
+
+8
+00:00:36,560 --> 00:00:43,400
+Nhấp chuột phải, thêm một lớp mới và tôi có thể gọi đó là sản phẩm.
+
+9
+00:00:45,120 --> 00:00:50,490
+Chúng tôi sẽ đặt lớp này thành lớp công khai và tất cả các thuộc tính của sản phẩm sẽ là gì.
+
+10
+00:00:50,850 --> 00:00:58,920
+Nếu bạn nhớ lại bên trong danh mục, chúng tôi đã sử dụng chú thích dữ liệu và chúng tôi có ID làm khóa chính.
+
+11
+00:00:59,580 --> 00:01:07,950
+Chúng tôi có thể sao chép chúng để dán vào sản phẩm ở đây vì chúng tôi sẽ có ID và thay vì tên, khi chúng tôi làm việc
+
+12
+00:01:07,950 --> 00:01:10,830
+với cuốn sách, chúng tôi có tiêu đề.
+
+13
+00:01:11,460 --> 00:01:13,740
+Chúng tôi không muốn chiều dài tối đa ở đó.
+
+14
+00:01:13,770 --> 00:01:15,210
+Nhìn có vẻ tốt.
+
+15
+00:01:16,780 --> 00:01:22,990
+Sau đó, hãy để tôi thêm mô tả, ISBN và tác giả cho sản phẩm của chúng tôi.
+
+16
+00:01:24,000 --> 00:01:28,410
+Bây giờ Watch Door là một cửa hàng cồng kềnh, nơi chúng tôi sẽ bán sách với số lượng lớn.
+
+17
+00:01:28,410 --> 00:01:33,290
+Vì vậy, nếu họ mua nhiều sách hơn, họ sẽ được giảm giá nhiều hơn.
+
+18
+00:01:33,300 --> 00:01:41,370
+Hãy để tôi thêm thuộc tính đầu tiên, đó sẽ là giá niêm yết và tôi sẽ thêm thuộc tính hiển thị ở đây vì
+
+19
+00:01:41,370 --> 00:01:44,430
+nếu bạn để ý ở đây, nó có giá niêm yết.
+
+20
+00:01:44,760 --> 00:01:47,280
+Tôi muốn hiển thị nó với một khoảng trắng.
+
+21
+00:01:48,530 --> 00:01:54,830
+Cho đến nay chúng tôi có chú thích dữ liệu hiển thị và tôi sẽ gọi đó là giá niêm yết.
+
+22
+00:01:55,220 --> 00:01:58,280
+Và tất nhiên, tôi quên tên ở đây.
+
+23
+00:01:58,310 --> 00:01:59,690
+Trông tôt đây.
+
+24
+00:02:00,780 --> 00:02:08,250
+Ngoài ra, tôi muốn xác thực phạm vi mà giá phải nằm trong khoảng từ 1 đến 1.000 đô la.
+
+25
+00:02:09,060 --> 00:02:16,410
+Giá niêm yết có vẻ ổn, nhưng cửa hàng của chúng tôi là cửa hàng số lượng lớn nên tùy theo số lượng khác nhau mà
+
+26
+00:02:16,440 --> 00:02:18,630
+chúng tôi sẽ có giá khác nhau.
+
+27
+00:02:18,660 --> 00:02:21,150
+Hãy để tôi dán nó ba lần.
+
+28
+00:02:21,750 --> 00:02:24,570
+Người đầu tiên, hãy để tôi gọi giá đó.
+
+29
+00:02:24,690 --> 00:02:32,040
+Cái tiếp theo, tôi sẽ gọi giá này là 50 và cái cuối cùng sẽ là giá 100.
+
+30
+00:02:32,780 --> 00:02:38,000
+Giá 100 sẽ là giá sách nếu mua số lượng trên 100 cuốn.
+
+31
+00:02:38,120 --> 00:02:47,420
+Giá 50 sẽ là giá cho hơn 50 số lượng và nó sẽ là giá từ 1 đến 50.
+
+32
+00:02:48,820 --> 00:02:56,170
+Vì vậy, giá niêm yết sẽ là một mức giá khác và giá ở đây sẽ là giá thành sản phẩm cho số lượng
+
+33
+00:02:56,170 --> 00:02:57,400
+từ 1 đến 50.
+
+34
+00:02:57,430 --> 00:03:01,480
+Nếu họ mua hơn 50 cái, thì chúng tôi sẽ báo giá cho họ.
+
+35
+00:03:01,480 --> 00:03:03,940
+50 cho hơn 100.
+
+36
+00:03:03,970 --> 00:03:05,410
+Chúng tôi sẽ cung cấp cho họ giá.
+
+37
+00:03:05,410 --> 00:03:06,190
+100.
+
+38
+00:03:06,910 --> 00:03:11,440
+Bây giờ, điều này có vẻ tốt cho tất cả các thuộc tính mà chúng tôi muốn ngay bây giờ.
+
+39
+00:03:11,950 --> 00:03:19,180
+Tất nhiên, chúng tôi cần danh mục bên trong sản phẩm của mình và chúng tôi cũng muốn thêm hình ảnh vào sản phẩm của mình, nhưng
+
+40
+00:03:19,180 --> 00:03:21,220
+chúng tôi sẽ làm điều đó sau.
+
+41
+00:03:21,340 --> 00:03:24,490
+Đầu tiên, tôi muốn giữ mọi thứ siêu đơn giản.
+
+42
+00:03:24,520 --> 00:03:32,200
+Hiện tại, mô hình của chúng tôi có một số chuỗi và một số loại kép tương tự như những gì chúng tôi có đối với danh mục.
+
+43
+00:03:32,980 --> 00:03:40,210
+Và với điều đó, tôi muốn các bạn thực hành các thao tác CRUD trên sản phẩm tương tự như những gì chúng tôi đã
+
+44
+00:03:40,210 --> 00:03:41,410
+làm với danh mục.
+
+45
+00:03:41,410 --> 00:03:44,170
+Và đó sẽ là nhiệm vụ tiếp theo của bạn.
+
+46
+00:03:44,710 --> 00:03:48,130
+Hãy để tôi hướng dẫn bạn qua điều đó trong video tiếp theo.
+

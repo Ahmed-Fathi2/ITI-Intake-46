@@ -1,0 +1,188 @@
+1
+00:00:01,800 --> 00:00:04,720
+Chúng tôi đã thấy xem lại trong video cuối cùng.
+
+2
+00:00:04,740 --> 00:00:10,020
+Tiếp theo, chúng tôi muốn xem làm thế nào chúng tôi có thể thực hiện những điều tương tự với dữ liệu xem.
+
+3
+00:00:10,350 --> 00:00:16,350
+Dữ liệu xem cũng chuyển dữ liệu từ bộ điều khiển sang chế độ xem chứ không phải ngược lại.
+
+4
+00:00:16,350 --> 00:00:24,060
+Và một lần nữa, đó là lý tưởng cho trường hợp dữ liệu tạm thời không có trong chế độ xem mô hình.
+
+5
+00:00:24,090 --> 00:00:30,120
+Dữ liệu được lấy từ dạng xem Từ điển dữ liệu, là dạng xem kiểu từ điển.
+
+6
+00:00:30,150 --> 00:00:33,540
+Giá trị dữ liệu phải được đánh máy trước khi sử dụng.
+
+7
+00:00:33,900 --> 00:00:40,520
+Giống như nếu chúng tôi quay lại khi chúng tôi đang sử dụng túi xem ngay tại đây, chúng tôi không phải lưu trữ dữ liệu đó vào bộ đệm.
+
+8
+00:00:40,530 --> 00:00:42,270
+Đó là tất cả năng động.
+
+9
+00:00:42,420 --> 00:00:48,540
+Nhưng khi chúng tôi sử dụng dữ liệu chế độ xem, chúng tôi sẽ phải lưu trữ dữ liệu đó trước khi sử dụng giá trị.
+
+10
+00:00:49,260 --> 00:00:56,880
+Và cuối cùng, các túi xem chỉ tồn tại trong yêu cầu HTTP hiện tại và giá trị dữ liệu xem sẽ không có giá
+
+11
+00:00:56,880 --> 00:00:59,200
+trị nếu chuyển hướng xảy ra.
+
+12
+00:00:59,220 --> 00:01:00,930
+Tương tự với xem túi.
+
+13
+00:01:01,320 --> 00:01:06,880
+Vì vậy, có khá nhiều điều tương tự ở đây, nhưng chúng ta hãy xem điều đó với một ví dụ.
+
+14
+00:01:07,450 --> 00:01:10,220
+Đầu tiên chúng ta phải quay lại bộ điều khiển.
+
+15
+00:01:10,240 --> 00:01:12,220
+Hãy để tôi nhận xét điều này ra.
+
+16
+00:01:12,250 --> 00:01:14,540
+Sao chép và dán nó ở đây.
+
+17
+00:01:14,560 --> 00:01:18,580
+Thay vì xem túi, chúng tôi muốn sử dụng dữ liệu xem.
+
+18
+00:01:18,760 --> 00:01:21,730
+Nếu bạn sử dụng DOT ở đó, nó sẽ không hoạt động.
+
+19
+00:01:21,760 --> 00:01:24,760
+Bạn phải xác định điều đó trong một dấu ngoặc vuông.
+
+20
+00:01:24,760 --> 00:01:28,480
+Và giá trị chính như trong từ điển là gì?
+
+21
+00:01:29,280 --> 00:01:32,670
+Đó là cách bạn chỉ định một giá trị để xem dữ liệu.
+
+22
+00:01:33,530 --> 00:01:37,310
+Bây giờ câu hỏi là làm cách nào để bạn truy cập chế độ xem bên trong đó?
+
+23
+00:01:37,670 --> 00:01:44,120
+Khi chúng tôi đang sử dụng Chế độ xem lại, chúng tôi không phải thực hiện chuyển đổi nhưng với dữ liệu chế độ xem, chúng tôi sẽ phải
+
+24
+00:01:44,120 --> 00:01:46,010
+thực hiện một số chuyển đổi tại đây.
+
+25
+00:01:46,010 --> 00:01:52,010
+Vì vậy, chúng tôi sẽ sử dụng dấu hiệu THÊM và chúng tôi sẽ nói xem dữ liệu ở đây, phải không?
+
+26
+00:01:52,010 --> 00:01:52,970
+Tên khóa.
+
+27
+00:01:52,970 --> 00:02:00,410
+Hãy để tôi quay lại và sao chép nó để tránh bất kỳ lỗi chính tả nào và sau đó chúng tôi phải chuyển đổi nó một cách rõ ràng.
+
+28
+00:02:00,620 --> 00:02:07,760
+Vì vậy, chúng tôi sẽ nói as và đây sẽ là một trong vô số mục danh sách được chọn.
+
+29
+00:02:09,090 --> 00:02:16,650
+Cùng với đó, các lỗi sẽ biến mất và bạn có thể thấy chế độ xem dữ liệu có thể hơi bất tiện như thế nào so với
+
+30
+00:02:16,650 --> 00:02:18,030
+chế độ xem ngược.
+
+31
+00:02:18,570 --> 00:02:21,780
+Nhưng cùng với đó, mọi thứ sẽ hoạt động như cũ.
+
+32
+00:02:21,930 --> 00:02:26,220
+Hãy để tôi khởi động lại ứng dụng và xem nó hoạt động.
+
+33
+00:02:27,870 --> 00:02:32,940
+Chúng tôi đi để tạo ra sản phẩm mới và hoàn thiện chức năng đó.
+
+34
+00:02:33,270 --> 00:02:36,750
+Nhưng có một điều nữa mà bạn nên biết.
+
+35
+00:02:36,900 --> 00:02:41,970
+Xem lại nội bộ chèn dữ liệu vào từ điển Xem lại.
+
+36
+00:02:42,120 --> 00:02:49,680
+Vì vậy, khóa của dữ liệu chế độ xem và thuộc tính của chế độ xem ngược không được khớp vì cả hai sẽ chuyển đến cùng
+
+37
+00:02:49,680 --> 00:02:50,910
+một thực thể.
+
+38
+00:02:52,580 --> 00:02:59,570
+Bây giờ, trước khi tôi kết thúc video này, trước đây chúng ta đã thấy dữ liệu tạm thời được sử dụng để tạo cảnh
+
+39
+00:02:59,570 --> 00:03:05,660
+báo và dữ liệu tạm thời có thể được sử dụng để lưu trữ dữ liệu giữa hai yêu cầu liên tiếp.
+
+40
+00:03:06,170 --> 00:03:10,400
+Dữ liệu tạm thời sử dụng phiên nội bộ để lưu trữ dữ liệu.
+
+41
+00:03:10,400 --> 00:03:16,580
+Vì vậy, hãy nghĩ về nó như một phiên tồn tại trong thời gian ngắn, phiên này sẽ chỉ tồn tại cho một yêu cầu.
+
+42
+00:03:17,060 --> 00:03:25,340
+Bây giờ giá trị dữ liệu tạm thời cũng phải được đánh máy trước khi sử dụng, vì vậy hãy kiểm tra các giá trị null để tránh bất kỳ lỗi thời gian
+
+43
+00:03:25,340 --> 00:03:26,180
+chạy nào.
+
+44
+00:03:26,810 --> 00:03:34,520
+Cuối cùng, như bạn đã biết, dữ liệu tạm thời có thể được sử dụng để lưu trữ thông báo chỉ một lần như thông báo lỗi hoặc
+
+45
+00:03:34,520 --> 00:03:36,170
+thông báo xác thực.
+
+46
+00:03:36,170 --> 00:03:40,520
+Và nếu bạn làm mới trang sau đó thì nó sẽ biến mất.
+
+47
+00:03:40,880 --> 00:03:48,350
+Vì vậy, điều đó cung cấp cho bạn một ý tưởng ngắn gọn về tất cả sự khác biệt giữa dữ liệu Vue back Vue và dữ liệu tạm thời.
+

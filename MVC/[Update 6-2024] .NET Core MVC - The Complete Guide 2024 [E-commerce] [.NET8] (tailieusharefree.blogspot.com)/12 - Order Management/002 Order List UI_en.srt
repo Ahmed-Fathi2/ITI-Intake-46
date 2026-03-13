@@ -1,0 +1,312 @@
+1
+00:00:01,830 --> 00:00:03,180
+Narrator: Now we need to display
+
+2
+00:00:03,180 --> 00:00:06,120
+all the orders in the index page.
+
+3
+00:00:06,120 --> 00:00:09,210
+So right click on index, add view,
+
+4
+00:00:09,210 --> 00:00:12,120
+it will be empty, looks good.
+
+5
+00:00:12,120 --> 00:00:13,323
+Let me add that,
+
+6
+00:00:15,240 --> 00:00:19,860
+the code we can copy that from product index,
+
+7
+00:00:19,860 --> 00:00:23,280
+copy everything, paste it here.
+
+8
+00:00:23,280 --> 00:00:27,993
+And we need to create a new js which will be order js.
+
+9
+00:00:28,830 --> 00:00:31,350
+When we are working with order here,
+
+10
+00:00:31,350 --> 00:00:35,190
+I want to display id, name, phone number,
+
+11
+00:00:35,190 --> 00:00:39,390
+email the order status and order total.
+
+12
+00:00:39,390 --> 00:00:42,210
+So we will update all of those properties in
+
+13
+00:00:42,210 --> 00:00:45,180
+the detach right here.
+
+14
+00:00:45,180 --> 00:00:48,390
+We do not want a link here to create a new product.
+
+15
+00:00:48,390 --> 00:00:53,390
+Let me remove that and I will remove this div altogether.
+
+16
+00:00:53,820 --> 00:00:55,803
+This will be order list,
+
+17
+00:00:57,870 --> 00:01:02,160
+and the model here will be order view model.
+
+18
+00:01:02,160 --> 00:01:03,990
+Well, when we are working here,
+
+19
+00:01:03,990 --> 00:01:06,000
+we do not want a model because
+
+20
+00:01:06,000 --> 00:01:08,700
+we are getting that from data table.
+
+21
+00:01:08,700 --> 00:01:13,700
+So let me remove that and I believe that looks good.
+
+22
+00:01:13,860 --> 00:01:16,800
+Next I want to work on the JavaScript.
+
+23
+00:01:16,800 --> 00:01:20,250
+So copy and paste the product JavaScript,
+
+24
+00:01:20,250 --> 00:01:23,283
+rename that to be order.js.
+
+25
+00:01:24,480 --> 00:01:27,450
+Perfect, we are on the order.js,
+
+26
+00:01:27,450 --> 00:01:31,170
+and there we have to retrieve all the columns.
+
+27
+00:01:31,170 --> 00:01:36,000
+The first one here is the id, followed by name,
+
+28
+00:01:36,000 --> 00:01:38,403
+and then we have phone number.
+
+29
+00:01:40,620 --> 00:01:43,680
+After that if I go back to index,
+
+30
+00:01:43,680 --> 00:01:45,783
+email status and total.
+
+31
+00:01:46,620 --> 00:01:50,753
+So email is inside application user.email.
+
+32
+00:01:52,770 --> 00:01:55,413
+Next we have order status,
+
+33
+00:01:57,510 --> 00:01:59,640
+and let me copy and paste this.
+
+34
+00:01:59,640 --> 00:02:02,973
+Once again, we have order total.
+
+35
+00:02:04,320 --> 00:02:07,260
+The render button here we will leave that as it is
+
+36
+00:02:07,260 --> 00:02:10,889
+right now and we do not want anything to delete,
+
+37
+00:02:10,889 --> 00:02:13,350
+so I will remove that as well
+
+38
+00:02:13,350 --> 00:02:16,503
+as the delete link right here.
+
+39
+00:02:17,550 --> 00:02:21,960
+Perfect, let me save that and we will work on
+
+40
+00:02:21,960 --> 00:02:26,960
+underscored layout where it is right here.
+
+41
+00:02:27,600 --> 00:02:29,520
+Where we have the privacy.
+
+42
+00:02:29,520 --> 00:02:32,340
+Let me change that to be admin,
+
+43
+00:02:32,340 --> 00:02:35,970
+controller will be order controller,
+
+44
+00:02:35,970 --> 00:02:40,970
+index action, and I will call that manage order.
+
+45
+00:02:43,050 --> 00:02:46,413
+Save that and let me run the project.
+
+46
+00:02:48,840 --> 00:02:51,750
+We will navigate to manage order,
+
+47
+00:02:51,750 --> 00:02:55,350
+and it does not find that admin order.
+
+48
+00:02:55,350 --> 00:02:57,060
+What is incorrect?
+
+49
+00:02:57,060 --> 00:02:59,883
+Whoops, we forgot the area here.
+
+50
+00:03:01,350 --> 00:03:03,453
+Area is admin.
+
+51
+00:03:05,280 --> 00:03:09,783
+With that, let me restart here and make sure that works.
+
+52
+00:03:10,920 --> 00:03:14,460
+Now when we go on the page, we will see a common error
+
+53
+00:03:14,460 --> 00:03:17,913
+with the data table and that looks good.
+
+54
+00:03:18,810 --> 00:03:22,260
+The reason behind that is when I was adding this
+
+55
+00:03:22,260 --> 00:03:26,070
+I did not care about the casing that we have here.
+
+56
+00:03:26,070 --> 00:03:28,980
+I have told you many times that you must always
+
+57
+00:03:28,980 --> 00:03:32,190
+remember what is the jason that is returned
+
+58
+00:03:32,190 --> 00:03:36,570
+and based on that you have to make it the exact case.
+
+59
+00:03:36,570 --> 00:03:38,760
+So now let me correct that.
+
+60
+00:03:38,760 --> 00:03:41,760
+That way you always remember to make sure
+
+61
+00:03:41,760 --> 00:03:44,520
+that this is case sensitive.
+
+62
+00:03:44,520 --> 00:03:49,520
+With that, if I go back and we still see the error here,
+
+63
+00:03:51,450 --> 00:03:54,930
+And of course we are not going to order.
+
+64
+00:03:54,930 --> 00:03:56,880
+That is the reason.
+
+65
+00:03:56,880 --> 00:03:59,610
+Save that and perfect.
+
+66
+00:03:59,610 --> 00:04:03,600
+Now we have all the details in our data table.
+
+67
+00:04:03,600 --> 00:04:06,450
+With here, let me change that
+
+68
+00:04:06,450 --> 00:04:09,693
+and phone number, make it a little bigger.
+
+69
+00:04:11,040 --> 00:04:16,040
+Perfect, that looks much better for our order data table.
+
+70
+00:04:16,290 --> 00:04:19,649
+With that in place, before I end the video.
+
+71
+00:04:19,649 --> 00:04:23,130
+In admin, we have the order controller
+
+72
+00:04:23,130 --> 00:04:25,320
+and there I will create an action
+
+73
+00:04:25,320 --> 00:04:29,850
+for details where we will pass the order id.
+
+74
+00:04:29,850 --> 00:04:34,680
+Let me call that order id and pass the data.
+
+75
+00:04:34,680 --> 00:04:38,133
+That looks good and we do not want added here.
+
+76
+00:04:39,150 --> 00:04:42,003
+Perfect, this looks much better.
+
+77
+00:04:42,900 --> 00:04:46,380
+Now before we work on the details, let me continue
+
+78
+00:04:46,380 --> 00:04:50,073
+and modify a few things here in the next video.
+

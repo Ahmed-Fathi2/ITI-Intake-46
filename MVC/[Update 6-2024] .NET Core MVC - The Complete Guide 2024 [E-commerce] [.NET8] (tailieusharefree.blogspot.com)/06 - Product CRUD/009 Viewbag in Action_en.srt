@@ -1,0 +1,376 @@
+1
+00:00:02,250 --> 00:00:03,870
+-: Now we have to pass some data
+
+2
+00:00:03,870 --> 00:00:06,600
+from our controller to our view.
+
+3
+00:00:06,600 --> 00:00:08,910
+And for that, we have multiple items,
+
+4
+00:00:08,910 --> 00:00:12,240
+or multiple routes, that are available.
+
+5
+00:00:12,240 --> 00:00:14,820
+First one here is a ViewBag.
+
+6
+00:00:14,820 --> 00:00:18,630
+ViewBag transfers data from controller to view,
+
+7
+00:00:18,630 --> 00:00:20,760
+and not vice versa.
+
+8
+00:00:20,760 --> 00:00:23,040
+And that is exactly what we want.
+
+9
+00:00:23,040 --> 00:00:25,950
+We want to pass the data that we have in our controller
+
+10
+00:00:25,950 --> 00:00:27,240
+to our view,
+
+11
+00:00:27,240 --> 00:00:29,910
+and it is ideal for a situation
+
+12
+00:00:29,910 --> 00:00:33,183
+in which the temporary data is not in a model.
+
+13
+00:00:34,170 --> 00:00:37,380
+Like in our example, we need the dropdown list,
+
+14
+00:00:37,380 --> 00:00:39,930
+and that is not within our model.
+
+15
+00:00:39,930 --> 00:00:42,870
+We do not have a property to store that.
+
+16
+00:00:42,870 --> 00:00:46,260
+So in that case, we can store this in a ViewBag,
+
+17
+00:00:46,260 --> 00:00:48,363
+and pass that to our view.
+
+18
+00:00:50,910 --> 00:00:54,600
+ViewBag is a dynamic property that takes advantage
+
+19
+00:00:54,600 --> 00:00:59,460
+of the new dynamic features in C# 4.0.
+
+20
+00:00:59,460 --> 00:01:01,770
+Any number of properties and values
+
+21
+00:01:01,770 --> 00:01:04,050
+can be assigned to a ViewBag,
+
+22
+00:01:04,050 --> 00:01:06,930
+and the ViewBag's life only exists
+
+23
+00:01:06,930 --> 00:01:10,170
+during the current HTTP request.
+
+24
+00:01:10,170 --> 00:01:14,400
+ViewBag values will be null if there is any redirection.
+
+25
+00:01:14,400 --> 00:01:15,570
+Like in our case,
+
+26
+00:01:15,570 --> 00:01:18,870
+we will be passing the value from controller to view,
+
+27
+00:01:18,870 --> 00:01:21,240
+and we will not be redirecting,
+
+28
+00:01:21,240 --> 00:01:24,093
+that is why the ViewBag value will persist.
+
+29
+00:01:25,530 --> 00:01:27,360
+Last point is that ViewBag
+
+30
+00:01:27,360 --> 00:01:29,823
+is actually a wrapper around ViewData.
+
+31
+00:01:31,140 --> 00:01:33,630
+Now, you might think, "What is ViewData?"
+
+32
+00:01:33,630 --> 00:01:37,080
+But we will cover one thing at a time.
+
+33
+00:01:37,080 --> 00:01:38,700
+First, let me switch back
+
+34
+00:01:38,700 --> 00:01:41,463
+and show you how we can use ViewBag.
+
+35
+00:01:42,540 --> 00:01:44,130
+Right here in the code,
+
+36
+00:01:44,130 --> 00:01:46,470
+we are getting all the category list,
+
+37
+00:01:46,470 --> 00:01:49,470
+but I am inside the Index action.
+
+38
+00:01:49,470 --> 00:01:50,790
+Let me cut this.
+
+39
+00:01:50,790 --> 00:01:54,303
+We actually need that inside the Create action.
+
+40
+00:01:55,200 --> 00:01:58,200
+So right here, let me paste that here.
+
+41
+00:01:58,200 --> 00:01:59,640
+And now, you might be thinking
+
+42
+00:01:59,640 --> 00:02:01,920
+that we are not passing anything here.
+
+43
+00:02:01,920 --> 00:02:04,950
+Why don't we pass the category list?
+
+44
+00:02:04,950 --> 00:02:06,690
+But if I go to the view,
+
+45
+00:02:06,690 --> 00:02:09,449
+you can see we have defined a model at the top,
+
+46
+00:02:09,449 --> 00:02:11,103
+which is the Product model.
+
+47
+00:02:12,000 --> 00:02:16,110
+So now we need to pass this category list to our view,
+
+48
+00:02:16,110 --> 00:02:19,110
+and we want to use ViewBag.
+
+49
+00:02:19,110 --> 00:02:22,440
+So far that we can say ViewBag.CategoryList
+
+50
+00:02:22,440 --> 00:02:24,397
+is equal to CategoryList.
+
+51
+00:02:25,440 --> 00:02:27,600
+We can give any name that we want,
+
+52
+00:02:27,600 --> 00:02:29,790
+and this name that we give here
+
+53
+00:02:29,790 --> 00:02:32,430
+will basically act as a key value,
+
+54
+00:02:32,430 --> 00:02:34,680
+where key will be CategoryList,
+
+55
+00:02:34,680 --> 00:02:37,593
+and value will be whatever we assign here.
+
+56
+00:02:38,670 --> 00:02:42,180
+Once we add this here, then inside the create
+
+57
+00:02:42,180 --> 00:02:45,513
+we can fetch that and display that in a dropdown.
+
+58
+00:02:46,620 --> 00:02:51,000
+Let me scroll down, and there we have the Price100,
+
+59
+00:02:51,000 --> 00:02:54,450
+after that let me copy and paste it one more time.
+
+60
+00:02:54,450 --> 00:02:57,750
+The label will be for CategoryId,
+
+61
+00:02:57,750 --> 00:03:01,620
+ASP validation, we can change that to be CategoryId,
+
+62
+00:03:01,620 --> 00:03:04,800
+but here, we want the select field.
+
+63
+00:03:04,800 --> 00:03:07,830
+Now when we are using select rather than input,
+
+64
+00:03:07,830 --> 00:03:10,230
+we cannot use the self-closing tag.
+
+65
+00:03:10,230 --> 00:03:13,050
+We have to explicitly close that.
+
+66
+00:03:13,050 --> 00:03:17,190
+And after that, I will add one more default option here,
+
+67
+00:03:17,190 --> 00:03:21,090
+which will be disabled selected by default,
+
+68
+00:03:21,090 --> 00:03:25,287
+and there we will display "Select Category."
+
+69
+00:03:27,000 --> 00:03:31,110
+Now asp-for, we have that as CategoryId,
+
+70
+00:03:31,110 --> 00:03:35,130
+but we need to display all the items in the dropdown.
+
+71
+00:03:35,130 --> 00:03:38,910
+For that we have a special tag helper, asp-items,
+
+72
+00:03:38,910 --> 00:03:43,910
+and this expects an IEnumerable of select list item.
+
+73
+00:03:44,070 --> 00:03:48,060
+We have that in our ViewBag, so in order to extract that
+
+74
+00:03:48,060 --> 00:03:52,680
+we will write, ViewBag, dot, and we need the key name.
+
+75
+00:03:52,680 --> 00:03:54,570
+Now key name, if you write here,
+
+76
+00:03:54,570 --> 00:03:56,970
+it will not help with IntelliSense,
+
+77
+00:03:56,970 --> 00:03:59,070
+because it is not dynamic.
+
+78
+00:03:59,070 --> 00:04:01,200
+You can give any key name here,
+
+79
+00:04:01,200 --> 00:04:04,200
+and IntelliSense cannot detect what you gave,
+
+80
+00:04:04,200 --> 00:04:08,340
+so you have to type that and make sure that it matches.
+
+81
+00:04:08,340 --> 00:04:10,290
+If there is any spelling mistake,
+
+82
+00:04:10,290 --> 00:04:11,673
+things will not work.
+
+83
+00:04:12,600 --> 00:04:13,433
+For the class here,
+
+84
+00:04:13,433 --> 00:04:17,130
+we will give it a Bootstrap class of form-select,
+
+85
+00:04:17,130 --> 00:04:20,192
+and with that, let me run the application.
+
+86
+00:04:22,470 --> 00:04:24,990
+We go to Product here,
+
+87
+00:04:24,990 --> 00:04:27,930
+and we will have to go to Create New Product,
+
+88
+00:04:27,930 --> 00:04:30,180
+scroll down, perfect.
+
+89
+00:04:30,180 --> 00:04:32,130
+We have Select Category,
+
+90
+00:04:32,130 --> 00:04:35,673
+and there we have Action, SciFi, and History.
+
+91
+00:04:36,540 --> 00:04:40,353
+So our dropdown is looking great with Create Product.
+
+92
+00:04:41,250 --> 00:04:45,870
+Now that is one way of doing things with ViewBag.
+
+93
+00:04:45,870 --> 00:04:49,110
+Let me continue and show you the alternative
+
+94
+00:04:49,110 --> 00:04:50,463
+in the next video.
+

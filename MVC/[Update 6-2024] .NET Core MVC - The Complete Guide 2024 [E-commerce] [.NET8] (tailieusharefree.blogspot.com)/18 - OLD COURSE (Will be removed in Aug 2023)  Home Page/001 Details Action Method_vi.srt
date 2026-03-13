@@ -1,0 +1,144 @@
+1
+00:00:01,670 --> 00:00:07,820
+Bây giờ chúng tôi muốn làm việc trên trang chi tiết cho điều đó, những gì chúng tôi sẽ làm là hiển thị tất
+
+2
+00:00:07,820 --> 00:00:14,870
+cả các chi tiết sản phẩm trên trang đó và sau đó đối với các chi tiết sản phẩm đó, chúng tôi sẽ hỏi người dùng bạn muốn thêm
+
+3
+00:00:14,870 --> 00:00:17,090
+bao nhiêu sản phẩm vào giỏ hàng .
+
+4
+00:00:18,020 --> 00:00:22,160
+Vì vậy, hãy quay lại bộ điều khiển của chúng ta bên trong bộ điều khiển gia đình.
+
+5
+00:00:22,340 --> 00:00:23,390
+Hãy để tôi dừng việc này lại.
+
+6
+00:00:23,740 --> 00:00:31,520
+Chúng tôi sẽ sao chép phương thức hành động chỉ mục và chúng tôi sẽ tạo một phương thức hành động chi tiết bên trong chi tiết.
+
+7
+00:00:31,610 --> 00:00:32,960
+Chúng tôi không đảm bảo một danh sách.
+
+8
+00:00:32,960 --> 00:00:34,940
+Chúng tôi chỉ muốn một sản phẩm duy nhất.
+
+9
+00:00:35,330 --> 00:00:41,560
+Vì vậy, chúng tôi sẽ lấy nó và tôi có thể gọi đây là một sản phẩm hơn là lấy tất cả.
+
+10
+00:00:41,930 --> 00:00:44,330
+Chúng tôi sẽ phải lấy mặc định đầu tiên của chúng tôi.
+
+11
+00:00:45,310 --> 00:00:50,860
+Trong phương thức hành động ở đây, chúng tôi sẽ nhận được một I. Đ. mà chúng tôi sẽ không xem chi tiết.
+
+12
+00:00:51,420 --> 00:00:53,080
+Vì vậy, bên trong cổng đầu tiên của chúng tôi.
+
+13
+00:00:54,010 --> 00:01:02,530
+Ta sẽ có biểu thức liên kết của ta bạn gần với bạn là nó bằng nhau, bằng cái Tôi. Đ. Chúng tôi sẽ trả lại mô hình sản phẩm
+
+14
+00:01:02,530 --> 00:01:04,060
+của chúng tôi.
+
+15
+00:01:04,900 --> 00:01:06,490
+Không ai kiểm tra trang chi tiết.
+
+16
+00:01:06,490 --> 00:01:12,130
+Chúng tôi cũng cần số lượng tài khoản mà người dùng muốn cho sản phẩm đó trong giỏ hàng của họ.
+
+17
+00:01:12,940 --> 00:01:17,710
+Vì vậy, chúng tôi cần tạo ra một vài mô hình vì sản phẩm sẽ không đủ.
+
+18
+00:01:18,310 --> 00:01:22,630
+Và một khi người dùng thêm điều đó, chúng tôi sẽ thêm điều đó vào giỏ hàng.
+
+19
+00:01:23,590 --> 00:01:26,050
+Vì vậy, thật hợp lý khi tạo một mô hình xem.
+
+20
+00:01:27,400 --> 00:01:35,170
+Tôi nhớ rằng với tư cách là một giỏ hàng, chúng ta có thể biến nó thành chỗ dựa cho lớp công khai ở đây.
+
+21
+00:01:35,260 --> 00:01:38,290
+Chúng tôi sẽ có một sản phẩm và chúng tôi sẽ thu thập như nhau.
+
+22
+00:01:39,100 --> 00:01:41,650
+Tiếp theo, những gì chúng tôi muốn được tính cho sản phẩm đó.
+
+23
+00:01:42,220 --> 00:01:49,930
+Vì vậy, chúng tôi sẽ thực hiện số nguyên prop nơi chúng tôi sẽ đếm ở đây và chúng tôi sẽ hành động sắp xếp xác thực rằng nó
+
+24
+00:01:49,930 --> 00:01:52,570
+phải nằm trong khoảng từ một đến 2000.
+
+25
+00:01:53,350 --> 00:01:54,730
+Điều đó có vẻ rất xa bây giờ.
+
+26
+00:01:55,240 --> 00:02:01,080
+Có khả năng chúng tôi sẽ quay lại và sửa đổi giỏ hàng của mình trong các bộ đàm trong tương lai ngay bây giờ.
+
+27
+00:02:01,180 --> 00:02:06,400
+Nếu chúng ta truy cập bộ điều khiển gia đình tại đây, chúng ta có thể tạo một đối tượng giỏ hàng.
+
+28
+00:02:07,360 --> 00:02:09,070
+Hãy để tôi nhấn phím điều khiển.
+
+29
+00:02:10,810 --> 00:02:11,880
+Đó là ý chí của chúng tôi.
+
+30
+00:02:11,890 --> 00:02:14,230
+OPG bằng không.
+
+31
+00:02:15,490 --> 00:02:19,600
+Và trong các tham số ở đây, chúng tôi sẽ chỉ định chúng cho sản phẩm.
+
+32
+00:02:20,440 --> 00:02:27,490
+Vì vậy, sản phẩm bằng với sản phẩm ở đây và tôi muốn số lượng được đặt mặc định là một.
+
+33
+00:02:28,090 --> 00:02:31,480
+Vì vậy, ngay tại đây, chúng ta có thể đặt số đếm bằng một.
+
+34
+00:02:31,840 --> 00:02:32,680
+Điều đó thật hoàn hảo.
+
+35
+00:02:33,490 --> 00:02:41,200
+Liệu nó có biến thẻ OPG thành Chế độ xem hay không và tôi sẽ nói điều này trong video tiếp theo, hãy tạo chế độ xem
+
+36
+00:02:41,200 --> 00:02:44,260
+chi tiết và hiển thị tất cả các chi tiết.
+

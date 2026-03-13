@@ -19,89 +19,89 @@ build_property.TargetFrameworkIdentifier = .NETCoreApp
 build_property.TargetFrameworkVersion = v10.0
 build_property.RootNamespace = WebApplication2
 build_property.RootNamespace = WebApplication2
-build_property.ProjectDir = F:\ITI\.net\mvc\Labs\Lab2\WebApplication2\WebApplication2\
+build_property.ProjectDir = F:\ITI\.Net\mvc\Labs\Lab2\WebApplication2\WebApplication2\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = F:\ITI\.net\mvc\Labs\Lab2\WebApplication2\WebApplication2
+build_property.MSBuildProjectDirectory = F:\ITI\.Net\mvc\Labs\Lab2\WebApplication2\WebApplication2
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[F:/ITI/.net/mvc/Labs/Lab2/WebApplication2/WebApplication2/Views/Category/create.cshtml]
+[F:/ITI/.Net/mvc/Labs/Lab2/WebApplication2/WebApplication2/Views/Category/create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcY3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ITI/.net/mvc/Labs/Lab2/WebApplication2/WebApplication2/Views/Category/Edit.cshtml]
+[F:/ITI/.Net/mvc/Labs/Lab2/WebApplication2/WebApplication2/Views/Category/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ITI/.net/mvc/Labs/Lab2/WebApplication2/WebApplication2/Views/Category/GetById.cshtml]
+[F:/ITI/.Net/mvc/Labs/Lab2/WebApplication2/WebApplication2/Views/Category/GetById.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcR2V0QnlJZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ITI/.net/mvc/Labs/Lab2/WebApplication2/WebApplication2/Views/Category/Index.cshtml]
+[F:/ITI/.Net/mvc/Labs/Lab2/WebApplication2/WebApplication2/Views/Category/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ITI/.net/mvc/Labs/Lab2/WebApplication2/WebApplication2/Views/Home/Index.cshtml]
+[F:/ITI/.Net/mvc/Labs/Lab2/WebApplication2/WebApplication2/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ITI/.net/mvc/Labs/Lab2/WebApplication2/WebApplication2/Views/Home/Privacy.cshtml]
+[F:/ITI/.Net/mvc/Labs/Lab2/WebApplication2/WebApplication2/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ITI/.net/mvc/Labs/Lab2/WebApplication2/WebApplication2/Views/ProductCategory/GetAllCateory.cshtml]
+[F:/ITI/.Net/mvc/Labs/Lab2/WebApplication2/WebApplication2/Views/ProductCategory/GetAllCateory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdENhdGVnb3J5XEdldEFsbENhdGVvcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ITI/.net/mvc/Labs/Lab2/WebApplication2/WebApplication2/Views/ProductCategory/_ProductDetailsPartial.cshtml]
+[F:/ITI/.Net/mvc/Labs/Lab2/WebApplication2/WebApplication2/Views/ProductCategory/_ProductDetailsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdENhdGVnb3J5XF9Qcm9kdWN0RGV0YWlsc1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ITI/.net/mvc/Labs/Lab2/WebApplication2/WebApplication2/Views/Product/Create.cshtml]
+[F:/ITI/.Net/mvc/Labs/Lab2/WebApplication2/WebApplication2/Views/Product/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ITI/.net/mvc/Labs/Lab2/WebApplication2/WebApplication2/Views/Product/Edit.cshtml]
+[F:/ITI/.Net/mvc/Labs/Lab2/WebApplication2/WebApplication2/Views/Product/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ITI/.net/mvc/Labs/Lab2/WebApplication2/WebApplication2/Views/Product/GetById.cshtml]
+[F:/ITI/.Net/mvc/Labs/Lab2/WebApplication2/WebApplication2/Views/Product/GetById.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxHZXRCeUlkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ITI/.net/mvc/Labs/Lab2/WebApplication2/WebApplication2/Views/Product/Index.cshtml]
+[F:/ITI/.Net/mvc/Labs/Lab2/WebApplication2/WebApplication2/Views/Product/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ITI/.net/mvc/Labs/Lab2/WebApplication2/WebApplication2/Views/Shared/Error.cshtml]
+[F:/ITI/.Net/mvc/Labs/Lab2/WebApplication2/WebApplication2/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ITI/.net/mvc/Labs/Lab2/WebApplication2/WebApplication2/Views/Shared/_HeaderPartial.cshtml]
+[F:/ITI/.Net/mvc/Labs/Lab2/WebApplication2/WebApplication2/Views/Shared/_HeaderPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9IZWFkZXJQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ITI/.net/mvc/Labs/Lab2/WebApplication2/WebApplication2/Views/Shared/_MyLayout.cshtml]
+[F:/ITI/.Net/mvc/Labs/Lab2/WebApplication2/WebApplication2/Views/Shared/_MyLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NeUxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ITI/.net/mvc/Labs/Lab2/WebApplication2/WebApplication2/Views/Shared/_ValidationScriptsPartial.cshtml]
+[F:/ITI/.Net/mvc/Labs/Lab2/WebApplication2/WebApplication2/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ITI/.net/mvc/Labs/Lab2/WebApplication2/WebApplication2/Views/_ViewImports.cshtml]
+[F:/ITI/.Net/mvc/Labs/Lab2/WebApplication2/WebApplication2/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ITI/.net/mvc/Labs/Lab2/WebApplication2/WebApplication2/Views/_ViewStart.cshtml]
+[F:/ITI/.Net/mvc/Labs/Lab2/WebApplication2/WebApplication2/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ITI/.net/mvc/Labs/Lab2/WebApplication2/WebApplication2/Views/Shared/_Layout.cshtml]
+[F:/ITI/.Net/mvc/Labs/Lab2/WebApplication2/WebApplication2/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-amt9qciysm

@@ -1,0 +1,232 @@
+1
+00:00:01,880 --> 00:00:08,480
+Bây giờ chúng ta có ngữ cảnh DB ứng dụng đang được định cấu hình trong dự án của mình, làm thế nào để chúng ta thực
+
+2
+00:00:08,480 --> 00:00:09,950
+sự tạo cơ sở dữ liệu?
+
+3
+00:00:10,370 --> 00:00:16,219
+Và tôi đã nói trước đây, tất cả thiết lập cần thiết cho lõi khung thực thể đã hoàn tất.
+
+4
+00:00:16,490 --> 00:00:18,770
+Vì vậy, về cơ bản nó không phải là nhiều.
+
+5
+00:00:18,800 --> 00:00:26,060
+Nếu bạn thấy, chúng tôi phải thêm một vài dòng trong Program. cs và về cơ bản, chúng tôi phải tạo một tệp lớp
+
+6
+00:00:26,060 --> 00:00:31,820
+sẽ triển khai ngữ cảnh DB mặc định có trong lõi khung thực thể.
+
+7
+00:00:32,119 --> 00:00:38,930
+Đó là tất cả những gì chúng ta phải làm và mã khung thực thể được định cấu hình và sẵn sàng để sử dụng.
+
+8
+00:00:39,380 --> 00:00:41,390
+Nhưng chúng ta sẽ sử dụng nó như thế nào?
+
+9
+00:00:41,900 --> 00:00:47,750
+Điều đầu tiên chúng ta sẽ làm là tạo một cơ sở dữ liệu dựa trên chuỗi kết nối.
+
+10
+00:00:47,780 --> 00:00:51,560
+Tôi muốn tạo một cơ sở dữ liệu có tên Bulky.
+
+11
+00:00:53,020 --> 00:01:00,610
+Hãy để tôi quay lại SQL Server tại đây và kết nối với máy chủ của tôi, đó là tệp . ở đây, và kiểm tra cơ sở dữ liệu.
+
+12
+00:01:00,640 --> 00:01:02,800
+Chúng tôi không có nó ngay tại đây.
+
+13
+00:01:03,600 --> 00:01:09,640
+Hãy để tôi quay lại Visual Studio và chúng tôi sẽ chuyển đến Trình quản lý gói Công cụ NuGet.
+
+14
+00:01:09,660 --> 00:01:12,120
+Chúng tôi có bảng điều khiển quản lý gói.
+
+15
+00:01:13,190 --> 00:01:13,830
+Ngay chỗ này.
+
+16
+00:01:13,830 --> 00:01:17,820
+Chúng ta phải viết một vài lệnh để làm việc với lõi khung thực thể.
+
+17
+00:01:17,820 --> 00:01:22,620
+Và do đó, nếu bạn còn nhớ, chúng tôi cũng đã cài đặt gói NuGet.
+
+18
+00:01:23,190 --> 00:01:30,090
+Bây giờ khi chúng ta thay đổi điều gì đó chẳng hạn như nếu chúng ta thêm một mô hình và nếu chúng ta muốn tạo một bảng của mô hình
+
+19
+00:01:30,090 --> 00:01:33,540
+đó, chúng ta phải thực hiện một việc gọi là thêm di chuyển.
+
+20
+00:01:33,930 --> 00:01:36,900
+Nhưng ngay bây giờ chúng tôi không muốn làm bất cứ điều gì.
+
+21
+00:01:36,900 --> 00:01:40,440
+Chúng tôi muốn tạo cơ sở dữ liệu đơn giản mà chúng tôi có.
+
+22
+00:01:41,200 --> 00:01:48,040
+Và để làm được điều đó, tất cả những gì chúng ta phải làm là viết lệnh cập nhật cơ sở dữ liệu và nhấn enter.
+
+23
+00:01:48,940 --> 00:01:53,800
+Khi chúng tôi nhấn enter, bạn sẽ thấy chúng tôi gặp thông báo lỗi.
+
+24
+00:01:54,010 --> 00:01:55,220
+Và hoàn hảo.
+
+25
+00:01:55,240 --> 00:01:59,320
+Nó báo thuộc tính chuỗi kết nối chưa được khởi tạo.
+
+26
+00:01:59,410 --> 00:02:05,780
+Và điều đó đúng vì trong Program. cs, chúng tôi có một kết nối mặc định.
+
+27
+00:02:05,800 --> 00:02:08,080
+Nó phải là kết nối mặc định.
+
+28
+00:02:08,139 --> 00:02:11,830
+Đó là những gì chúng tôi có trong Cài đặt ứng dụng. json.
+
+29
+00:02:13,100 --> 00:02:21,080
+Vì vậy, với cấu hình đó, nếu tôi mở bảng điều khiển trình quản lý gói và chạy lại lệnh đó một lần nữa, nó sẽ hiển
+
+30
+00:02:21,080 --> 00:02:23,480
+thị một thông báo lỗi khác.
+
+31
+00:02:24,230 --> 00:02:25,160
+Và hoàn hảo.
+
+32
+00:02:25,160 --> 00:02:29,330
+Lần này nó nói từ khóa không được hỗ trợ, đó là máy chủ.
+
+33
+00:02:29,870 --> 00:02:33,980
+Tôi cũng đã giới thiệu một thông báo lỗi trong chuỗi kết nối.
+
+34
+00:02:34,010 --> 00:02:41,030
+Theo cách đó, nếu một cái gì đó không hoạt động, bạn biết rằng nó không thể đọc kết nối hoặc một
+
+35
+00:02:41,030 --> 00:02:44,630
+cái gì đó trong chuỗi kết nối không hợp lệ.
+
+36
+00:02:45,450 --> 00:02:47,050
+Thay vì dấu hai chấm ở đây.
+
+37
+00:02:47,070 --> 00:02:55,650
+Điều này sẽ tương đương với việc bạn lưu nó và sau đó nếu bạn chạy lại nó một lần nữa, nó sẽ tạo cơ sở dữ liệu
+
+38
+00:02:55,650 --> 00:02:56,910
+thành công.
+
+39
+00:02:57,720 --> 00:02:58,380
+Hoàn hảo.
+
+40
+00:02:58,380 --> 00:03:03,350
+Bạn có thể thấy ở đây và nó nói điều gì đó mà không có sự di chuyển nào được áp dụng.
+
+41
+00:03:03,360 --> 00:03:05,940
+Cơ sở dữ liệu đã được cập nhật.
+
+42
+00:03:06,210 --> 00:03:08,220
+Điều đó có nghĩa là gì?
+
+43
+00:03:08,700 --> 00:03:10,080
+Đừng lo.
+
+44
+00:03:10,290 --> 00:03:14,850
+Hãy để tôi quay lại SQL Server và làm mới cơ sở dữ liệu.
+
+45
+00:03:15,000 --> 00:03:19,950
+Chúng tôi có một cơ sở dữ liệu mới với tên bảng cồng kềnh và bên trong.
+
+46
+00:03:19,950 --> 00:03:22,110
+Chúng tôi sẽ có một bảng.
+
+47
+00:03:22,710 --> 00:03:27,240
+Cái bàn đó là DBO. Lịch sử EFMigration.
+
+48
+00:03:27,850 --> 00:03:28,270
+Hiện nay.
+
+49
+00:03:28,270 --> 00:03:30,010
+Lịch sử di cư là gì?
+
+50
+00:03:30,040 --> 00:03:31,570
+Di cư là gì?
+
+51
+00:03:31,600 --> 00:03:32,650
+Đừng lo.
+
+52
+00:03:32,680 --> 00:03:40,270
+Ngay bây giờ đối với video này, tôi muốn bạn nhớ những gì chúng ta đã làm dựa trên chuỗi kết nối mà chúng
+
+53
+00:03:40,270 --> 00:03:40,900
+ta có.
+
+54
+00:03:40,930 --> 00:03:45,460
+Chúng tôi đã sử dụng cơ sở dữ liệu cập nhật lệnh để tạo cơ sở dữ liệu.
+
+55
+00:03:45,550 --> 00:03:47,710
+Đó là tất cả những gì chúng tôi đã làm ngay bây giờ.
+
+56
+00:03:48,340 --> 00:03:55,660
+Bây giờ, nhiệm vụ tiếp theo mà chúng tôi muốn thực hiện là nếu bạn kiểm tra Solution Explorer, chúng tôi có mô hình danh mục.
+
+57
+00:03:55,990 --> 00:04:02,530
+Tôi muốn tạo một bảng cho danh mục và bảng đó sẽ có ba cột này.
+
+58
+00:04:03,410 --> 00:04:06,770
+Hãy để tôi chỉ cho bạn cách làm điều đó trong video tiếp theo.
+

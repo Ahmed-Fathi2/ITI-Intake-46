@@ -1,0 +1,472 @@
+1
+00:00:02,029 --> 00:00:04,360
+Bây giờ là lúc để xem một số phép thuật.
+
+2
+00:00:04,370 --> 00:00:06,050
+Chà, nó không phải là ma thuật.
+
+3
+00:00:06,050 --> 00:00:12,110
+Về cơ bản, đó là sức mạnh của lõi khung thực thể mà chúng ta sẽ thấy trong video này.
+
+4
+00:00:12,470 --> 00:00:17,780
+Chúng tôi muốn tạo một bảng danh mục và chúng tôi muốn thêm ba cột này.
+
+5
+00:00:18,230 --> 00:00:27,380
+Trước khi tôi làm điều đó thay vì ID ở đây, hãy để tôi gọi ID danh mục 21 đó và xóa chú thích dữ liệu chính mà chúng tôi đã
+
+6
+00:00:27,380 --> 00:00:34,790
+thêm vì tôi muốn hiển thị cho bạn một thông báo lỗi trước khi chúng tôi tiếp tục với video.
+
+7
+00:00:35,580 --> 00:00:41,760
+Bây giờ, tôi đã nói trước đây, nếu bạn sử dụng chú thích dữ liệu chính, đó là cách lõi khung
+
+8
+00:00:41,760 --> 00:00:45,540
+thực thể sẽ biết rằng cột này sẽ là khóa chính của bảng.
+
+9
+00:00:45,900 --> 00:00:48,450
+Nhưng ngay bây giờ nó không được xác định.
+
+10
+00:00:48,450 --> 00:00:56,100
+Và tên cột, nếu là ID danh mục, về cơ bản là tên kiểu máy, theo sau là ID hoặc
+
+11
+00:00:56,100 --> 00:01:02,910
+nếu chỉ là ID, thì nó cũng sẽ tự động mặc định đó là khóa chính.
+
+12
+00:01:03,210 --> 00:01:07,290
+Nhưng cố ý, tôi gọi đó là ID 21.
+
+13
+00:01:08,310 --> 00:01:13,080
+Với cấu hình đó, chúng tôi muốn tạo bảng này trong cơ sở dữ liệu của mình.
+
+14
+00:01:13,350 --> 00:01:15,390
+Bây giờ, cơ sở dữ liệu của chúng tôi ở đâu?
+
+15
+00:01:15,420 --> 00:01:19,950
+Nếu chúng ta phải tìm nó trong hồ sơ của mình, bạn nghĩ nó ở đâu?
+
+16
+00:01:21,020 --> 00:01:25,040
+Bất cứ điều gì chúng tôi phải làm với cơ sở dữ liệu của mình đều nằm trong ứng dụng.
+
+17
+00:01:25,040 --> 00:01:27,860
+Bối cảnh DB, bởi vì đó là nơi chúng tôi có.
+
+18
+00:01:27,890 --> 00:01:31,610
+Bối cảnh DB, sử dụng lõi khung thực thể.
+
+19
+00:01:32,330 --> 00:01:39,290
+Khi chúng ta phải tạo một bảng ở đây, chúng ta phải tạo một thứ gọi là DB set bên trong Bối cảnh
+
+20
+00:01:39,290 --> 00:01:40,550
+DB của ứng dụng.
+
+21
+00:01:41,280 --> 00:01:46,890
+Nên mình sẽ viết prop ở đây press tab và type ở đây sẽ là DB set.
+
+22
+00:01:46,890 --> 00:01:51,000
+Và ở đó chúng ta phải định nghĩa thực thể là một lớp.
+
+23
+00:01:51,030 --> 00:01:54,180
+Vậy thực thể của bộ DB này là gì?
+
+24
+00:01:54,330 --> 00:02:02,340
+Chúng tôi muốn tạo một bảng thể loại, vì vậy tôi sẽ thêm thể loại ở đây và sau đó thuộc tính của tôi
+
+25
+00:02:02,340 --> 00:02:08,100
+về cơ bản sẽ là tên bảng mà bạn muốn cho bảng đó bên trong SQL Server.
+
+26
+00:02:08,100 --> 00:02:14,190
+Nếu bạn muốn gọi các danh mục đó, thì bạn có thể viết các danh mục ở đây và đó sẽ là bảng
+
+27
+00:02:14,190 --> 00:02:16,620
+sẽ được tạo trong cơ sở dữ liệu.
+
+28
+00:02:17,250 --> 00:02:25,110
+Một dòng đơn giản này sẽ tự động tạo bảng và đó là sức mạnh của lõi khung thực thể.
+
+29
+00:02:25,920 --> 00:02:33,510
+Để tạo bảng, chúng ta phải thực hiện một thao tác gọi là di chuyển để thêm mà chúng ta phải chuyển đến công cụ Trình
+
+30
+00:02:33,510 --> 00:02:37,830
+quản lý gói NuGet và bảng điều khiển Trình quản lý gói.
+
+31
+00:02:38,670 --> 00:02:45,180
+Ở đây, chúng ta sẽ phải viết một lệnh mới, đó là thêm di chuyển, và sau đó chúng ta phải đặt cho quá trình di chuyển của mình
+
+32
+00:02:45,180 --> 00:02:46,620
+một cái tên có ý nghĩa.
+
+33
+00:02:47,330 --> 00:02:48,650
+Trong cuộc di cư này.
+
+34
+00:02:48,650 --> 00:02:52,460
+Chúng tôi biết những gì chúng tôi đang làm là chúng tôi đang thêm bảng danh mục.
+
+35
+00:02:53,200 --> 00:03:00,070
+Chúng tôi sẽ đặt tên cho quá trình di chuyển của mình là bảng danh mục THÊM vào DB và chúng tôi sẽ nhấn enter.
+
+36
+00:03:00,640 --> 00:03:07,270
+Bây giờ, khi bạn nhấn enter ngay bây giờ, bạn sẽ thấy thông báo lỗi do chúng tôi không có khóa
+
+37
+00:03:07,270 --> 00:03:07,900
+chính.
+
+38
+00:03:09,370 --> 00:03:10,550
+Và hoàn hảo.
+
+39
+00:03:10,570 --> 00:03:18,160
+Bạn có thể thấy nếu chúng tôi mở rộng điều này ở đây, danh mục loại thực thể yêu cầu khóa chính được xác định.
+
+40
+00:03:18,850 --> 00:03:21,220
+Chúng tôi không có điều đó được xác định ở đây.
+
+41
+00:03:21,220 --> 00:03:24,160
+Do đó, chúng tôi đã thấy thông báo lỗi đó.
+
+42
+00:03:24,580 --> 00:03:32,110
+Nếu tôi viết khóa ở đây và sau đó chạy di chuyển, nó sẽ tạo một lệnh để tạo bảng với khóa
+
+43
+00:03:32,110 --> 00:03:33,820
+chính cụ thể này.
+
+44
+00:03:34,510 --> 00:03:35,890
+Tôi không muốn điều đó.
+
+45
+00:03:35,890 --> 00:03:43,570
+Tôi muốn gọi nó là một ID, vì vậy tôi sẽ đổi nó thành một ID và sau đó chúng ta sẽ chạy lại lệnh đó một
+
+46
+00:03:43,570 --> 00:03:46,060
+lần nữa, đó là thêm di chuyển.
+
+47
+00:03:48,140 --> 00:03:48,860
+Hoàn hảo.
+
+48
+00:03:48,860 --> 00:03:51,500
+Lần này vừa mới xảy ra chuyện.
+
+49
+00:03:52,040 --> 00:03:54,800
+Chúng ta có thể thấy quá trình xây dựng đã bắt đầu, quá trình xây dựng, đã thành công.
+
+50
+00:03:54,800 --> 00:03:56,800
+Và chúng ta phải hoàn tác hành động này.
+
+51
+00:03:56,810 --> 00:03:58,910
+Sử dụng loại bỏ di chuyển.
+
+52
+00:03:58,910 --> 00:04:01,370
+Nhưng chính xác những gì vừa xảy ra?
+
+53
+00:04:01,370 --> 00:04:05,540
+Và cuối cùng ở đây, một tệp mới đã được tạo.
+
+54
+00:04:06,920 --> 00:04:14,180
+Nếu chúng ta truy cập Solution Explorer tại đây, hãy để tôi ghim điều này trong giây lát tại đây và cho bạn thấy điều gì đã xảy ra.
+
+55
+00:04:14,630 --> 00:04:22,370
+Nếu bạn kiểm tra, có một thư mục mới đã được tạo tự động với tên di chuyển và ở đó chúng tôi có một số thực
+
+56
+00:04:22,700 --> 00:04:30,410
+thể ngẫu nhiên ở đây về cơ bản là ngày, dấu thời gian và sau đó là tên của quá trình di chuyển, được
+
+57
+00:04:30,410 --> 00:04:32,930
+thêm bảng danh mục vào DB.
+
+58
+00:04:33,620 --> 00:04:36,740
+Đó là tập tin được mở ngay tại đây.
+
+59
+00:04:37,870 --> 00:04:40,300
+Bây giờ, tập tin này chính xác là gì?
+
+60
+00:04:40,810 --> 00:04:48,070
+Chà, nếu bạn kiểm tra ở đây, lõi khung thực thể đã viết một số mã bằng ngôn ngữ riêng của nó để tạo bảng danh
+
+61
+00:04:48,070 --> 00:04:49,570
+mục của chúng ta.
+
+62
+00:04:50,050 --> 00:04:53,500
+Bạn có thể thấy có một thứ gọi là trình tạo di chuyển.
+
+63
+00:04:53,500 --> 00:04:56,700
+Và trên đó có lệnh tạo bảng.
+
+64
+00:04:56,710 --> 00:05:03,850
+Nó đang tạo một bảng có tên của các danh mục, sau đó trong các cột, nó đang tạo ba
+
+65
+00:05:03,880 --> 00:05:06,820
+cột, ID, tên và thứ tự hiển thị.
+
+66
+00:05:07,240 --> 00:05:08,530
+Trong các ràng buộc.
+
+67
+00:05:08,530 --> 00:05:16,750
+Ở đây chúng tôi có một cái gì đó giống như bảng Khóa chính sẽ là cột ID mà bạn có thể thấy ngay tại đây.
+
+68
+00:05:17,560 --> 00:05:23,410
+Và một điều nữa là chúng ta có thứ được gọi là tăng và chúng ta có thứ được gọi là giảm.
+
+69
+00:05:23,770 --> 00:05:28,090
+Vì vậy, nếu mọi thứ thành công, chúng tôi muốn tạo bảng này.
+
+70
+00:05:28,090 --> 00:05:34,870
+Nhưng nếu có điều gì đó không ổn trong phương thức down ở đây, nó sẽ báo drop table mà bạn đang
+
+71
+00:05:34,870 --> 00:05:35,770
+cố tạo.
+
+72
+00:05:36,660 --> 00:05:44,310
+Vì vậy, xuống về cơ bản là khôi phục bất cứ điều gì chúng ta đang làm bên trong chức năng lên ở đây.
+
+73
+00:05:44,940 --> 00:05:50,550
+Bây giờ, một lần nữa, bạn có thể nghĩ rằng, được rồi, chúng ta có một cái gì đó với Migration Builder, nhưng
+
+74
+00:05:50,550 --> 00:05:52,350
+bảng này sẽ được tạo như thế nào?
+
+75
+00:05:52,380 --> 00:05:59,530
+Chúng tôi không có câu lệnh SQL tạo bảng và chúng tôi không có bất cứ điều gì để xác định cột nhận dạng.
+
+76
+00:05:59,550 --> 00:06:03,630
+Chỉ có một thứ gọi là SQLServer. danh tính.
+
+77
+00:06:04,390 --> 00:06:08,260
+Đó là nơi cốt lõi của khung thực thể lại xuất hiện.
+
+78
+00:06:08,410 --> 00:06:15,460
+Bây giờ chúng ta đã thêm di chuyển ở đây trong bảng điều khiển của trình quản lý gói, nếu chúng ta chạy cơ
+
+79
+00:06:15,460 --> 00:06:22,510
+sở dữ liệu cập nhật lệnh, lõi khung thực thể sẽ làm gì là nó sẽ kiểm tra, này, có bất kỳ di chuyển nào chưa được
+
+80
+00:06:22,510 --> 00:06:24,970
+áp dụng cho cơ sở dữ liệu không?
+
+81
+00:06:25,210 --> 00:06:26,920
+Câu trả lời sẽ là có.
+
+82
+00:06:26,920 --> 00:06:33,190
+Di chuyển mới mà chúng tôi đã thêm chưa được áp dụng cho cơ sở dữ liệu vì nếu chúng tôi quay lại cơ
+
+83
+00:06:33,190 --> 00:06:38,650
+sở dữ liệu, chúng tôi không có bảng đó ngay bây giờ, mặc dù điều này có liên quan.
+
+84
+00:06:38,650 --> 00:06:44,710
+Nói thêm về khía cạnh khung thực thể, tôi muốn dành vài phút để giải thích cách nó sẽ tìm ra
+
+85
+00:06:44,710 --> 00:06:47,740
+những lần di chuyển nào chưa được áp dụng.
+
+86
+00:06:48,100 --> 00:06:53,320
+Nếu bạn thấy trong bảng, nó đã tạo nếu bảng lịch sử di chuyển.
+
+87
+00:06:53,620 --> 00:07:01,810
+Nếu tôi chọn top 1000 ở đây, tôi đã chỉnh sửa do nhầm lẫn, nhưng nếu tôi chọn top 1000, thì nó trống.
+
+88
+00:07:01,990 --> 00:07:05,960
+Nó có nghĩa là không có di chuyển đã được áp dụng trên cơ sở dữ liệu.
+
+89
+00:07:07,070 --> 00:07:08,060
+Bởi vì điều đó.
+
+90
+00:07:08,060 --> 00:07:14,300
+Khi chúng tôi áp dụng cơ sở dữ liệu cập nhật lệnh ở đây, nó sẽ kiểm tra trong cơ sở dữ liệu đó xem lần
+
+91
+00:07:14,300 --> 00:07:21,470
+di chuyển cuối cùng nào được áp dụng vì không có gì được áp dụng, nó sẽ chuyển đến thư mục di chuyển và bất kỳ lần
+
+92
+00:07:21,470 --> 00:07:25,400
+di chuyển nào ở đó, nó sẽ áp dụng điều đó trên cơ sở dữ liệu.
+
+93
+00:07:25,670 --> 00:07:33,500
+Vì vậy, nó sẽ lấy mã này ở đây, chuyển mã đó thành mã SQL tương đương và nó sẽ tạo bảng đó.
+
+94
+00:07:33,830 --> 00:07:35,990
+Hãy để tôi thấy điều đó trong hành động.
+
+95
+00:07:36,170 --> 00:07:45,260
+Vì vậy, chúng tôi quay lại và chúng tôi sẽ nhấn enter tại đây và nó thực hiện điều gì đó hoàn hảo mà chúng tôi đã làm ở đây.
+
+96
+00:07:46,040 --> 00:07:47,270
+Một khi nó được thực hiện.
+
+97
+00:07:47,270 --> 00:07:55,460
+Nếu tôi quay lại máy chủ và nếu tôi làm mới ở đây ngay bây giờ, bạn có thể thấy trong lịch sử di chuyển, nó đang theo
+
+98
+00:07:55,460 --> 00:08:01,340
+dõi rằng quá trình di chuyển cụ thể này tại bảng danh mục sang DB đã được áp dụng.
+
+99
+00:08:01,940 --> 00:08:09,050
+Nếu tôi làm mới bảng ở đây, bạn sẽ thấy bảng danh mục mới đã được tạo
+
+100
+00:08:09,050 --> 00:08:10,430
+và có ba cột.
+
+101
+00:08:11,210 --> 00:08:17,810
+Tên bảng là các danh mục và đó là những gì chúng ta có làm tên thuộc tính bộ DB.
+
+102
+00:08:18,560 --> 00:08:25,280
+Ngay bây giờ, nếu bạn đang bối rối và nếu bạn nghĩ rằng một điều kỳ diệu nào đó vừa xảy ra và
+
+103
+00:08:25,310 --> 00:08:32,390
+nó đã tạo ra bảng, đừng lo lắng, bạn chỉ mới bắt đầu với lõi khung thực thể và đó là sức mạnh của mã
+
+104
+00:08:32,419 --> 00:08:37,010
+khung thực thể mà bạn có thể thực hiện bằng cách di chuyển .
+
+105
+00:08:38,120 --> 00:08:44,840
+Khi chúng tôi tiếp tục khóa học, bạn sẽ thấy điều này chi tiết hơn nhiều và bạn sẽ yêu thích việc
+
+106
+00:08:44,840 --> 00:08:46,050
+di chuyển.
+
+107
+00:08:46,050 --> 00:08:53,160
+Bằng cách đó, bạn không phải xử lý việc viết các lệnh SQL hoặc làm việc trực tiếp với cơ sở dữ liệu.
+
+108
+00:08:53,400 --> 00:09:00,090
+Bạn sẽ làm một việc mà bạn yêu thích, đó là viết mã và mã đó sẽ tự động thực hiện tất cả các
+
+109
+00:09:00,090 --> 00:09:03,630
+công việc nặng nhọc cho cơ sở dữ liệu của bạn.
+
+110
+00:09:04,410 --> 00:09:11,100
+Nhưng trước khi kết thúc video, hãy để tôi tóm tắt lại những gì chúng ta phải làm khi tạo một bảng.
+
+111
+00:09:11,580 --> 00:09:14,940
+Đầu tiên chúng ta phải tạo một mô hình bên trong đó.
+
+112
+00:09:14,940 --> 00:09:16,830
+Chúng tôi sẽ có ít tài sản.
+
+113
+00:09:17,100 --> 00:09:22,890
+Tiếp theo trong bối cảnh cơ sở dữ liệu ứng dụng, chúng ta phải tạo một bộ cơ sở dữ liệu cho điều đó.
+
+114
+00:09:22,920 --> 00:09:28,050
+Sau đó, trong bảng điều khiển của trình quản lý gói, chúng tôi phải thêm một di chuyển.
+
+115
+00:09:28,740 --> 00:09:36,240
+Khi chúng tôi thêm di chuyển, thì chúng tôi phải chạy cơ sở dữ liệu cập nhật lệnh và điều đó sẽ đẩy quá trình di chuyển vào
+
+116
+00:09:36,240 --> 00:09:37,830
+cơ sở dữ liệu của bạn.
+
+117
+00:09:38,490 --> 00:09:43,530
+Và với điều đó, chúng tôi đã tạo bảng danh mục trong cơ sở dữ liệu của mình.
+
+118
+00:09:44,750 --> 00:09:47,480
+Hãy để tôi tiếp tục từ video tiếp theo.
+

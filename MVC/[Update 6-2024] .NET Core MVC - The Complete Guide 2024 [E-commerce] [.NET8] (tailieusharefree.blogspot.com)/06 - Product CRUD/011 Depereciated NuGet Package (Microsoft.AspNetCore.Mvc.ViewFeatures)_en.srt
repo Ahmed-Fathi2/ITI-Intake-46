@@ -1,0 +1,140 @@
+1
+00:00:01,830 --> 00:00:03,120
+Instructor: Now, in the next video,
+
+2
+00:00:03,120 --> 00:00:05,370
+we will be adding ViewModels here
+
+3
+00:00:05,370 --> 00:00:07,590
+and the code that you see on the screen
+
+4
+00:00:07,590 --> 00:00:10,620
+that has not been added to your project yet,
+
+5
+00:00:10,620 --> 00:00:13,530
+but because there has been an update with .NET,
+
+6
+00:00:13,530 --> 00:00:18,420
+I wanted to show you what will not work in the next video
+
+7
+00:00:18,420 --> 00:00:22,383
+and a solution to that before you get to that issue.
+
+8
+00:00:23,280 --> 00:00:26,700
+So in the next video, when you add the Product View Model,
+
+9
+00:00:26,700 --> 00:00:28,710
+you will have a Product object
+
+10
+00:00:28,710 --> 00:00:33,093
+and there we will have an IEnumerable of SelectListItem.
+
+11
+00:00:33,960 --> 00:00:36,300
+If you press Contorl + dot here,
+
+12
+00:00:36,300 --> 00:00:38,700
+typically, we will install the NuGet package
+
+13
+00:00:38,700 --> 00:00:43,700
+Microsoft.AspNetCore.Mvc.Views.
+
+14
+00:00:43,890 --> 00:00:46,800
+But that NuGet package is depreciated,
+
+15
+00:00:46,800 --> 00:00:51,060
+so I do not want you to follow that in the next video.
+
+16
+00:00:51,060 --> 00:00:55,350
+What you should rather do is you will open the project here.
+
+17
+00:00:55,350 --> 00:00:58,950
+In the models project, wWe will be adding that ViewModel.
+
+18
+00:00:58,950 --> 00:01:02,703
+So in the models project, you will edit the project file.
+
+19
+00:01:04,620 --> 00:01:07,920
+And the reason that Nuget package is depreciated
+
+20
+00:01:07,920 --> 00:01:11,040
+is because that functionality has been moved
+
+21
+00:01:11,040 --> 00:01:14,910
+to the default framework of ASP.NET Core.
+
+22
+00:01:14,910 --> 00:01:18,690
+So in the ItemGroup here, you will have to add this line
+
+23
+00:01:18,690 --> 00:01:21,450
+and that will include all the default packages
+
+24
+00:01:21,450 --> 00:01:24,153
+that are there in AspNetCore.
+
+25
+00:01:25,440 --> 00:01:28,710
+With that, if you save it here and go back,
+
+26
+00:01:28,710 --> 00:01:30,510
+you will press Control + dot
+
+27
+00:01:30,510 --> 00:01:33,033
+and we directly have the using statement.
+
+28
+00:01:33,930 --> 00:01:37,500
+So make sure when you face the issue in next video,
+
+29
+00:01:37,500 --> 00:01:40,230
+do not install the NuGet package,
+
+30
+00:01:40,230 --> 00:01:42,510
+rather you will have to add that framework
+
+31
+00:01:42,510 --> 00:01:46,440
+in the project file of the model's project.
+
+32
+00:01:46,440 --> 00:01:48,990
+And if you end up using SelectListItem
+
+33
+00:01:48,990 --> 00:01:50,790
+in any other project,
+
+34
+00:01:50,790 --> 00:01:53,730
+do not install any depreciated package.
+
+35
+00:01:53,730 --> 00:01:56,703
+You have to add the framework in project file.
+

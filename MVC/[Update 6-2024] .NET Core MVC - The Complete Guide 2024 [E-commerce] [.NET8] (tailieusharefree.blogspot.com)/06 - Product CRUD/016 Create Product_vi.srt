@@ -1,0 +1,480 @@
+1
+00:00:02,340 --> 00:00:08,520
+Bây giờ khi chúng tôi chọn một hình ảnh ở đây và nhấn nút tạo, chúng tôi cần lưu hình ảnh đó.
+
+2
+00:00:08,940 --> 00:00:13,830
+Tất cả các tệp tĩnh của mã của chúng tôi phải luôn đi vào một thư mục.
+
+3
+00:00:13,830 --> 00:00:16,710
+Và bạn có thể cho tôi biết đó là thư mục nào không?
+
+4
+00:00:17,820 --> 00:00:23,100
+Nếu bạn đặt W. w. w thư mục gốc, bạn đã đúng 100%.
+
+5
+00:00:23,400 --> 00:00:29,020
+Vì vậy, bên trong W. w. w thư mục gốc, để tôi dừng ứng dụng.
+
+6
+00:00:29,040 --> 00:00:33,090
+Chúng tôi sẽ thêm một thư mục nữa cho hình ảnh.
+
+7
+00:00:33,570 --> 00:00:39,450
+Trong thư mục đó, tôi sẽ tạo một thư mục con với tên của sản phẩm.
+
+8
+00:00:40,170 --> 00:00:46,620
+Khi đã xong, hãy để tôi mở lại bộ điều khiển và để tôi xóa thư mục bộ điều khiển này
+
+9
+00:00:46,620 --> 00:00:47,650
+vì nó trống.
+
+10
+00:00:47,670 --> 00:00:51,120
+Tất cả các bộ điều khiển nằm trong thư mục khu vực.
+
+11
+00:00:51,450 --> 00:00:52,980
+Vì vậy, hãy để tôi xóa cái này.
+
+12
+00:00:53,010 --> 00:01:00,420
+Chúng tôi không cần điều đó nữa và chúng tôi có bộ điều khiển sản phẩm nơi chúng tôi có phương pháp đăng hành động
+
+13
+00:01:00,420 --> 00:01:01,170
+vô lý.
+
+14
+00:01:01,620 --> 00:01:08,070
+Ngay bây giờ chúng tôi không xử lý, tạo và chỉnh sửa vì chúng tôi đã xử lý việc đó ở đây, nhưng chúng
+
+15
+00:01:08,070 --> 00:01:12,240
+tôi vẫn phải xử lý cả hai kịch bản khi chúng tôi đang quan sát.
+
+16
+00:01:12,780 --> 00:01:18,280
+Nhưng bên trong tệp biểu mẫu tôi, chúng tôi sẽ nhận được tệp đã được tải lên.
+
+17
+00:01:18,610 --> 00:01:25,420
+Vì vậy, chúng tôi phải chụp tệp đó và chúng tôi phải lưu tệp đó bên trong đường dẫn sản phẩm hình ảnh.
+
+18
+00:01:26,100 --> 00:01:33,300
+Vì vậy, bây giờ câu hỏi của chúng tôi là làm thế nào để chúng tôi truy cập đường dẫn gốc này của ứng dụng của chúng tôi, đó là W. w. w.
+
+19
+00:01:33,330 --> 00:01:34,500
+Thư mục gốc.
+
+20
+00:01:35,470 --> 00:01:43,030
+Để làm điều đó, chúng tôi phải đưa vào một thứ gọi là môi trường lưu trữ web và được cung cấp theo
+
+21
+00:01:43,060 --> 00:01:45,580
+mặc định với dự án Dotnet.
+
+22
+00:01:46,270 --> 00:01:51,460
+Vì vậy, về cơ bản, chúng tôi phải tiêm giống như chúng tôi đang tiêm đơn vị công việc.
+
+23
+00:01:51,460 --> 00:01:54,640
+Nhưng điều tốt là chúng tôi không phải đăng ký điều đó.
+
+24
+00:01:54,640 --> 00:01:59,650
+Đó là chức năng tích hợp được cung cấp cùng với dự án Dotnet.
+
+25
+00:02:00,070 --> 00:02:02,940
+Vì vậy, tôi sẽ nói chỉ đọc riêng tư.
+
+26
+00:02:02,950 --> 00:02:09,160
+Tôi là môi trường máy chủ web và để tôi gọi đó là môi trường máy chủ web gạch dưới.
+
+27
+00:02:09,190 --> 00:02:16,870
+Chúng tôi phải tiêm nó bằng cách sử dụng tính năng tiêm phụ thuộc và sau đó sử dụng môi trường máy chủ web này.
+
+28
+00:02:16,900 --> 00:02:21,520
+Chúng tôi sẽ có thể truy cập W. w. w thư mục gốc.
+
+29
+00:02:22,090 --> 00:02:32,590
+Vì vậy, nếu trạng thái mô hình hợp lệ, chúng ta có thể nói chuỗi W. w. w đường dẫn gốc bằng với dấu gạch dưới môi trường máy chủ lưu
+
+30
+00:02:32,650 --> 00:02:35,410
+trữ web, chúng ta có đường dẫn gốc của web.
+
+31
+00:02:35,410 --> 00:02:41,620
+Đường dẫn đó về cơ bản sẽ cung cấp cho chúng ta thư mục gốc, đó là W. w. w thư mục gốc.
+
+32
+00:02:42,660 --> 00:02:48,060
+Sau khi chúng tôi nhận được đường dẫn gốc ở đây, trước tiên chúng tôi có thể kiểm tra xem tệp có phải là null hay không.
+
+33
+00:02:48,330 --> 00:02:55,890
+Vì vậy, về cơ bản, nếu tệp không phải là null, thì chúng tôi muốn tải tệp lên và lưu tệp đó vào thư mục sản phẩm.
+
+34
+00:02:57,480 --> 00:03:01,830
+Bây giờ khi tệp được tải lên, tệp có thể có một số tên lạ.
+
+35
+00:03:02,190 --> 00:03:07,590
+Vì vậy, thay vì giữ nguyên tên, chúng ta có thể đổi tên thành một lưới ngẫu nhiên.
+
+36
+00:03:08,370 --> 00:03:16,110
+Vì vậy, ngay tại đây chúng ta có thể nói tên tệp chuỗi bằng lưới. lưới mới chấm hai chuỗi.
+
+37
+00:03:16,200 --> 00:03:19,620
+Điều đó sẽ cung cấp cho chúng tôi một tên ngẫu nhiên cho tệp của chúng tôi.
+
+38
+00:03:20,130 --> 00:03:23,580
+Sau đó, ngay bây giờ chúng ta có đường dẫn tuyến đường W.
+
+39
+00:03:23,610 --> 00:03:26,370
+Chúng ta cần điều hướng đến đường dẫn sản phẩm.
+
+40
+00:03:26,640 --> 00:03:28,680
+Vì vậy, tôi sẽ nói string.
+
+41
+00:03:29,770 --> 00:03:33,790
+Đường dẫn sản phẩm bằng đường dẫn. kết hợp.
+
+42
+00:03:33,790 --> 00:03:41,140
+Và tôi muốn kết hợp đường dẫn gốc của WW với một đường dẫn khác, đó là hình ảnh.
+
+43
+00:03:41,170 --> 00:03:43,600
+Chuyển tiếp gạch chéo sản phẩm.
+
+44
+00:03:44,440 --> 00:03:51,280
+Điều đó sẽ cho tôi đường dẫn bên trong thư mục sản phẩm này, nơi chúng tôi phải thực sự tải tệp này lên.
+
+45
+00:03:51,730 --> 00:03:58,570
+Tên tệp ở đây chỉ là một lưới ngẫu nhiên, nhưng chúng ta cần giữ lại phần mở rộng có trong
+
+46
+00:03:58,570 --> 00:03:59,350
+tệp này.
+
+47
+00:03:59,530 --> 00:04:06,130
+Vì vậy, nơi chúng tôi có tên tệp ở đây, tôi có thể nói dấu cộng và chúng tôi phải lấy phần mở rộng.
+
+48
+00:04:06,130 --> 00:04:07,210
+Vì vậy, con đường.
+
+49
+00:04:07,300 --> 00:04:14,500
+Bên trong đó, chúng tôi có một phương thức trợ giúp là phần mở rộng và chúng tôi sẽ chuyển tệp vào đó, chúng tôi
+
+50
+00:04:14,500 --> 00:04:15,490
+có tên tệp.
+
+51
+00:04:16,089 --> 00:04:23,380
+Vì vậy, hình ảnh mà chúng tôi sẽ lưu sẽ có lưới và nó sẽ có cùng phần mở rộng đã được tải lên.
+
+52
+00:04:24,010 --> 00:04:29,950
+Chúng tôi có tên hình ảnh cuối cùng ở đây và chúng tôi có vị trí mà chúng tôi phải lưu nó.
+
+53
+00:04:30,250 --> 00:04:34,120
+Với cả hai cấu hình đó, hãy để tôi lưu hình ảnh đó.
+
+54
+00:04:34,510 --> 00:04:36,400
+Chúng tôi sẽ thêm một sử dụng ở đây.
+
+55
+00:04:36,400 --> 00:04:42,730
+Chúng tôi sẽ nói luồng tệp biến đổi bằng luồng tệp mới.
+
+56
+00:04:44,220 --> 00:04:48,660
+Và ở đó chúng ta phải cung cấp đường dẫn cuối cùng cũng như tên tệp.
+
+57
+00:04:48,660 --> 00:04:57,810
+Vì vậy, về cơ bản là URL hoàn chỉnh, vì vậy tôi có thể tạo đường dẫn. kết hợp ở đó và chúng tôi có thể kết hợp đường dẫn sản phẩm với
+
+58
+00:04:57,810 --> 00:05:04,260
+tên tệp sẽ cung cấp cho chúng tôi vị trí cuối cùng nơi chúng tôi phải lưu tệp đó.
+
+59
+00:05:05,390 --> 00:05:12,800
+Khi chúng tôi đang sử dụng luồng tệp ở đây, chúng tôi phải chuyển thêm một thuộc tính ở đây, đó là chế độ tệp và chúng
+
+60
+00:05:12,800 --> 00:05:14,540
+tôi sẽ nói chế độ tệp.
+
+61
+00:05:15,280 --> 00:05:19,270
+Phi tiêu tạo vì chúng tôi đang tạo một tệp mới ở đó.
+
+62
+00:05:19,990 --> 00:05:27,610
+Để sao chép tệp, chúng tôi sẽ nói tệp sao chép hai và chúng tôi muốn sao chép tệp vào luồng tệp mà chúng
+
+63
+00:05:27,610 --> 00:05:29,530
+tôi có ngay tại đây.
+
+64
+00:05:30,260 --> 00:05:38,870
+Điều đó sẽ sao chép tệp ở vị trí mới mà chúng tôi đã thêm hoặc định cấu hình ngay tại đây trên dòng 60 và 61.
+
+65
+00:05:39,590 --> 00:05:41,230
+Bây giờ điều đó thật tuyệt.
+
+66
+00:05:41,240 --> 00:05:48,950
+Nhưng trong mô hình chế độ xem sản phẩm, nếu chúng tôi kiểm tra, chúng tôi có sản phẩm mà chúng tôi cần lưu URL hình ảnh.
+
+67
+00:05:49,400 --> 00:05:56,780
+Vì vậy, bất cứ nơi nào trong thư mục ở đây chúng tôi đang lưu hình ảnh đó, chúng tôi nên lưu hình ảnh đó trong URL hình ảnh sản phẩm.
+
+68
+00:05:57,230 --> 00:06:06,500
+Vì vậy, ngay tại đây, chúng tôi sẽ nói mô hình chế độ xem sản phẩm. URL hình ảnh dấu chấm sản phẩm bằng và chúng tôi biết rằng nó
+
+69
+00:06:06,500 --> 00:06:08,900
+sẽ nằm trong thư mục hình ảnh.
+
+70
+00:06:08,900 --> 00:06:16,640
+Tôi sẽ thêm dấu gạch chéo lên ở đó chúng ta có thư mục sản phẩm và sau đó tôi muốn tên tệp và phần mở rộng.
+
+71
+00:06:16,640 --> 00:06:22,160
+Cả hai đều nằm trong biến tên tệp, vì vậy chúng tôi sẽ lưu nó.
+
+72
+00:06:22,980 --> 00:06:26,860
+Với cấu hình đó, chức năng tạo của chúng tôi có vẻ tốt.
+
+73
+00:06:26,880 --> 00:06:34,200
+Sau đó, chúng tôi sẽ thêm sản phẩm ở đây, lưu sản phẩm đó và chúng tôi đã tạo thành công sản phẩm dữ
+
+74
+00:06:34,200 --> 00:06:35,400
+liệu tạm thời.
+
+75
+00:06:35,820 --> 00:06:43,020
+Ngay bây giờ, mặc dù điều này là vô lý, nhưng chúng tôi chỉ xử lý việc tạo ra một sản phẩm với một hình ảnh
+
+76
+00:06:43,020 --> 00:06:43,740
+cụ thể.
+
+77
+00:06:44,310 --> 00:06:52,530
+Vì vậy, hãy để tôi chạy ứng dụng và đảm bảo rằng nó hoạt động trước khi chúng tôi cập nhật bất kỳ sản phẩm nào và cập nhật hình
+
+78
+00:06:52,530 --> 00:06:53,610
+ảnh của chúng.
+
+79
+00:06:54,870 --> 00:06:57,210
+Chúng tôi sẽ đi đến sản phẩm ở đây.
+
+80
+00:06:58,360 --> 00:07:01,030
+Và hãy để tôi thử tạo ra một sản phẩm.
+
+81
+00:07:02,790 --> 00:07:07,440
+Hãy để tôi chọn một hình ảnh ở đây và chúng tôi sẽ nhấn nút tạo.
+
+82
+00:07:09,970 --> 00:07:15,130
+Và chúng tôi có một ngoại lệ không thể chèn null vào URL hình ảnh.
+
+83
+00:07:15,610 --> 00:07:17,920
+Hãy để tôi xem tại sao điều đó xảy ra.
+
+84
+00:07:17,950 --> 00:07:21,070
+Bởi vì chúng tôi đang cập nhật điều đó ngay tại đây.
+
+85
+00:07:21,700 --> 00:07:25,990
+Hãy để tôi thêm một điểm gỡ lỗi và xem điều gì đang xảy ra.
+
+86
+00:07:26,560 --> 00:07:28,030
+Hãy để tôi tiếp tục.
+
+87
+00:07:28,060 --> 00:07:29,410
+Quay lại đây.
+
+88
+00:07:30,520 --> 00:07:34,060
+Chúng tôi thêm hình ảnh và nhấn nút tạo.
+
+89
+00:07:34,330 --> 00:07:36,360
+Trạng thái mô hình là hợp lệ.
+
+90
+00:07:36,370 --> 00:07:40,090
+Hãy để tôi xem nếu tập tin đi qua mà không.
+
+91
+00:07:41,570 --> 00:07:43,770
+Vì một số lý do đó là null.
+
+92
+00:07:43,790 --> 00:07:46,040
+Để mình vào Upsert xem sao.
+
+93
+00:07:46,040 --> 00:07:49,610
+Chúng tôi có dữ liệu biểu mẫu nhiều phần có vẻ đúng.
+
+94
+00:07:50,150 --> 00:07:51,950
+Form nhập liệu ở đâu?
+
+95
+00:07:51,950 --> 00:07:53,240
+Ngay chỗ này.
+
+96
+00:07:53,360 --> 00:07:56,190
+Vâng, chúng tôi có loại bằng với tập tin.
+
+97
+00:07:56,210 --> 00:08:00,140
+Nhưng nếu chúng ta vào bộ điều khiển, nó sẽ yêu cầu một tên tệp.
+
+98
+00:08:00,530 --> 00:08:02,460
+Chúng tôi không có điều đó ở đây.
+
+99
+00:08:02,480 --> 00:08:05,490
+Chúng ta cũng phải đặt cho nó một tên tệp.
+
+100
+00:08:05,510 --> 00:08:12,890
+Đó là cách nó sẽ liên kết biến đó với biến này và chúng tôi sẽ phải xây dựng lại và áp dụng các thay đổi.
+
+101
+00:08:13,160 --> 00:08:14,600
+Hãy để tôi thử điều đó.
+
+102
+00:08:19,510 --> 00:08:21,610
+Hãy để tôi chọn lại hình ảnh.
+
+103
+00:08:21,640 --> 00:08:25,990
+Nhấn nút tạo và tập tin hoàn hảo xuất hiện.
+
+104
+00:08:25,990 --> 00:08:32,350
+Lần này hãy để tôi gỡ lỗi và cũng cho bạn thấy sản phẩm đang được điền vào thư mục.
+
+105
+00:08:33,070 --> 00:08:34,309
+Tệp không rỗng.
+
+106
+00:08:34,330 --> 00:08:39,130
+Chúng tôi nhận được tên tệp mới với đường dẫn sản phẩm mở rộng ở đây.
+
+107
+00:08:39,159 --> 00:08:40,809
+Trông tôt đây.
+
+108
+00:08:41,049 --> 00:08:42,390
+Tập hồ sơ.
+
+109
+00:08:42,400 --> 00:08:50,160
+Bây giờ, khi chúng tôi thực hiện sao chép này vào thư mục ở đây cùng với sản phẩm, bạn có thể thấy nó đã có hình ảnh đó.
+
+110
+00:08:50,170 --> 00:08:55,450
+Nhưng nếu bạn mở nó trong File Explorer, nó sẽ trống ngay bây giờ.
+
+111
+00:08:56,080 --> 00:09:03,400
+Tôi có thể chỉ ra rằng các thuộc tính mà bạn có thể thấy nó là 0 byte vì hiện tại luồng tệp đang mở nhưng
+
+112
+00:09:03,400 --> 00:09:05,200
+nó chưa được sao chép.
+
+113
+00:09:05,230 --> 00:09:07,480
+Bây giờ nó đã sao chép thông qua.
+
+114
+00:09:07,510 --> 00:09:13,630
+Vì vậy, nếu chúng ta xem lại các thuộc tính, chúng ta có kích thước của sản phẩm.
+
+115
+00:09:15,240 --> 00:09:21,060
+Khi chúng tôi làm điều đó, chúng tôi điền URL hình ảnh và chúng tôi thêm sản phẩm đó.
+
+116
+00:09:21,090 --> 00:09:25,530
+Chúng tôi nhấn F năm sản phẩm được tạo thành công.
+
+117
+00:09:26,070 --> 00:09:27,240
+Rất hoàn hảo.
+
+118
+00:09:27,240 --> 00:09:34,290
+Cùng với đó, chức năng tạo sản phẩm của chúng tôi đang hoạt động, nhưng khi chúng tôi chỉnh sửa sản phẩm đó, chúng
+
+119
+00:09:34,290 --> 00:09:36,480
+tôi cần xem hình ảnh đó ở đâu đó.
+
+120
+00:09:37,050 --> 00:09:39,990
+Hãy để tôi thêm điều đó trong video tiếp theo.
+

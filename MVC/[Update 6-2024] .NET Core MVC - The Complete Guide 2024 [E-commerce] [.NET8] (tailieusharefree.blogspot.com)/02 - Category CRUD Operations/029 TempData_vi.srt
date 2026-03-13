@@ -1,0 +1,176 @@
+1
+00:00:01,640 --> 00:00:08,540
+Chúng tôi có chức năng CRUD đang hoạt động, nhưng bất cứ khi nào chúng tôi tạo, chỉnh sửa hoặc xóa một danh mục, nếu
+
+2
+00:00:08,570 --> 00:00:11,540
+chúng tôi muốn hiển thị thông báo ở đây thì sao?
+
+3
+00:00:11,540 --> 00:00:16,219
+Bản ghi đó đã được tạo, cập nhật hoặc xóa thành công.
+
+4
+00:00:17,120 --> 00:00:21,440
+Vì điều đó, chúng tôi có một cái gì đó đặc biệt trong . net, là dữ liệu tạm thời.
+
+5
+00:00:21,680 --> 00:00:27,610
+Nếu bạn chỉ định một giá trị trong dữ liệu tạm thời, giá trị đó chỉ khả dụng cho lần kết xuất tiếp theo.
+
+6
+00:00:27,620 --> 00:00:34,550
+Vì vậy, về cơ bản, giả sử trên nút tạo, chúng tôi nói nếu mọi thứ thành công, chúng tôi có thể thêm thông
+
+7
+00:00:34,550 --> 00:00:40,790
+báo vào dữ liệu tạm thời, sau đó thông báo sẽ chỉ khả dụng cho trang tiếp theo được hiển thị.
+
+8
+00:00:40,910 --> 00:00:48,250
+Khi chúng tôi tạo, chúng tôi chuyển hướng chúng đến danh sách danh mục để nó sẽ chỉ khả dụng trên kết xuất này.
+
+9
+00:00:48,260 --> 00:00:52,070
+Nếu bạn làm mới trang đó thì dữ liệu tạm thời sẽ biến mất.
+
+10
+00:00:52,910 --> 00:00:55,130
+Dữ liệu tạm thời đã được tạo trong. Net với mục đích duy nhất là nếu
+
+11
+00:00:55,370 --> 00:01:02,910
+bạn phải hiển thị thông báo trên trang tiếp theo, thì bạn sẽ thêm một số giá trị vào dữ liệu tạm thời.
+
+12
+00:01:02,910 --> 00:01:05,880
+Hãy để tôi chỉ cho bạn cách nó sẽ hoạt động.
+
+13
+00:01:06,740 --> 00:01:09,110
+Hãy để tôi chuyển trở lại mã ở đây.
+
+14
+00:01:09,820 --> 00:01:12,160
+Dừng ứng dụng và chúng tôi có trang chỉ mục.
+
+15
+00:01:12,370 --> 00:01:16,330
+Trước khi chúng tôi làm điều đó trong bộ điều khiển, chúng tôi sẽ chỉ định một cái gì đó trên bài đăng.
+
+16
+00:01:16,630 --> 00:01:22,030
+Sau khi thành công, trước khi chúng tôi chuyển hướng đến đây,
+
+17
+00:01:22,060 --> 00:01:30,280
+chúng tôi có thể thêm thứ gì đó vào dữ liệu tạm thời và ở đó chúng tôi phải đặt tên cho khóa đó.
+
+18
+00:01:30,280 --> 00:01:31,930
+Hãy để tôi gọi đó là thông báo thành công.
+
+19
+00:01:32,530 --> 00:01:35,620
+Trong đó, chúng tôi sẽ thêm một danh mục tin nhắn được tạo thành công.
+
+20
+00:01:35,830 --> 00:01:40,480
+Đó là tên khóa mà chúng tôi đã đặt cho thứ gì đó trong dữ liệu tạm thời.
+
+21
+00:01:40,870 --> 00:01:45,340
+Và dựa trên tên khóa đó, chúng ta có thể truy cập giá trị của nó.
+
+22
+00:01:45,610 --> 00:01:49,870
+Hãy để tôi sao chép nó và làm điều đó trong bài chỉnh sửa trước khi chúng tôi chuyển hướng.
+
+23
+00:01:50,740 --> 00:01:55,750
+Chúng tôi sẽ nói danh mục được cập nhật thành công và khi
+
+24
+00:01:55,780 --> 00:02:04,420
+chúng tôi xóa trước khi chuyển hướng, chúng tôi sẽ thông báo danh mục đã xóa thành công.
+
+25
+00:02:04,450 --> 00:02:06,640
+Bây giờ chúng tôi đã thêm thông báo vào dữ liệu tạm thời của mình với tên khóa là thành công.
+
+26
+00:02:07,720 --> 00:02:13,600
+Nhưng chúng ta hiển thị nó ở đâu?
+
+27
+00:02:13,600 --> 00:02:15,760
+Chúng tôi sẽ hiển thị điều đó trên trang chỉ mục ở trên cùng ở đây.
+
+28
+00:02:16,370 --> 00:02:21,130
+Điều tôi có thể làm là thêm điều kiện if và kiểm tra xem dữ liệu tạm thời có tên khóa là thành công hay không.
+
+29
+00:02:21,140 --> 00:02:29,210
+Nếu đó không phải là null, thì chúng tôi muốn hiển thị nó, giả sử bây giờ là trong H2.
+
+30
+00:02:29,420 --> 00:02:36,410
+Để hiển thị rằng chúng tôi sẽ sử dụng lại cú pháp dao cạo tại dấu hiệu và chúng tôi có thể truy cập thành công.
+
+31
+00:02:37,410 --> 00:02:44,550
+Đơn giản như thế.
+
+32
+00:02:44,850 --> 00:02:46,290
+Tôi có thêm s ở đây.
+
+33
+00:02:47,550 --> 00:02:49,340
+Loại bỏ nó và hãy chạy nó.
+
+34
+00:02:49,350 --> 00:02:52,290
+Chúng tôi đi đến danh mục ở đây?
+
+35
+00:02:53,330 --> 00:02:55,310
+Hãy để tôi thử tạo một danh mục.
+
+36
+00:02:55,400 --> 00:02:57,890
+Thể loại thử nghiệm cho.
+
+37
+00:02:57,920 --> 00:03:00,290
+Và hoàn hảo.
+
+38
+00:03:00,980 --> 00:03:02,120
+Chúng tôi đã tạo danh mục thành công.
+
+39
+00:03:02,120 --> 00:03:05,330
+Bây giờ nếu bạn làm mới ở đây, điều đó sẽ biến mất.
+
+40
+00:03:05,720 --> 00:03:08,840
+Vì vậy, dữ liệu tạm thời chỉ ở đó cho một yêu cầu và sau đó nó sẽ biến mất.
+
+41
+00:03:09,020 --> 00:03:14,810
+Nếu bạn cố gắng chỉnh sửa mục này, giả sử là 44, chúng tôi
+
+42
+00:03:15,320 --> 00:03:23,120
+đã cập nhật danh mục và nếu bạn làm mới ở đây, danh mục đó sẽ biến mất.
+
+43
+00:03:23,120 --> 00:03:24,110
+Vì vậy, cùng với đó,
+
+44
+00:03:25,370 --> 00:03:31,910
+chúng tôi đã thấy dữ liệu tạm thời đang hoạt động và đó là một tính năng tuyệt vời khi bạn phải hiển thị thông báo.
+

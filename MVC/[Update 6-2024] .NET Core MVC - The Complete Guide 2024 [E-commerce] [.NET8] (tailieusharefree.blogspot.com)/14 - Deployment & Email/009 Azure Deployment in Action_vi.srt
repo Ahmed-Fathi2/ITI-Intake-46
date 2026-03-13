@@ -1,0 +1,236 @@
+1
+00:00:01,460 --> 00:00:08,930
+Bây giờ khi trang web sản xuất, chúng tôi có thể đăng nhập bằng người dùng mà chúng tôi đã tạo trong trình khởi tạo DB.
+
+2
+00:00:09,410 --> 00:00:15,770
+Vì vậy, hãy để tôi nhấn nút đăng nhập và tôi sẽ đăng nhập với tư cách quản trị viên tại dotnet mastery. com.
+
+3
+00:00:16,990 --> 00:00:24,160
+Khi chúng tôi làm điều đó, chúng tôi có thể sửa đổi sản phẩm nếu muốn và chúng tôi có thể thêm hình ảnh vào đó.
+
+4
+00:00:24,760 --> 00:00:30,310
+Vậy kẹo bông gòn, để em up hình cập nhật nhé.
+
+5
+00:00:31,090 --> 00:00:33,250
+Hãy để tôi làm điều đó cho tất cả bọn họ.
+
+6
+00:00:51,150 --> 00:00:51,900
+Hoàn hảo.
+
+7
+00:00:51,930 --> 00:00:54,060
+Bây giờ, nếu tôi vào trang chủ.
+
+8
+00:00:54,480 --> 00:00:55,230
+Tuyệt vời.
+
+9
+00:00:55,380 --> 00:00:57,570
+Tất cả các hình ảnh đang đến đây.
+
+10
+00:00:57,930 --> 00:01:01,680
+Và hãy để tôi thử đặt hàng với tư cách là người dùng quản trị.
+
+11
+00:01:02,100 --> 00:01:03,840
+Một cái gì đó sẽ không hoạt động.
+
+12
+00:01:03,840 --> 00:01:05,459
+Và hãy để tôi chỉ ra điều đó.
+
+13
+00:01:07,900 --> 00:01:13,470
+Khi chúng tôi chuyển đến một đơn đặt hàng tóm tắt, nó sẽ chuyển hướng tôi đến một sọc.
+
+14
+00:01:13,480 --> 00:01:21,490
+Điều đó không sao, nhưng nếu tôi nhấp vào nút quay lại ở đây, nó sẽ không hoạt động vì chúng tôi có URL đã được mã
+
+15
+00:01:21,490 --> 00:01:25,600
+hóa cứng vào máy chủ cục bộ và điều đó không nên xảy ra.
+
+16
+00:01:25,870 --> 00:01:30,460
+Vì vậy, về cơ bản, chúng tôi phải lấy URL này một cách linh hoạt hơn.
+
+17
+00:01:31,180 --> 00:01:38,080
+Hãy để tôi quay lại mã ở đây và để tôi thực hiện Ctrl shift F và tìm kiếm localhost.
+
+18
+00:01:38,590 --> 00:01:41,230
+Tôi có nó ở hai nơi.
+
+19
+00:01:42,130 --> 00:01:44,230
+Hãy để tôi mở cả hai.
+
+20
+00:01:45,360 --> 00:01:52,290
+Vì vậy, trước tiên chúng tôi cần lấy https này và chúng tôi có thể nhận được từ lược đồ dấu chấm yêu cầu.
+
+21
+00:01:52,960 --> 00:01:56,830
+Điều đó sẽ cung cấp cho chúng tôi, cho dù đó là HTTP https.
+
+22
+00:01:56,950 --> 00:02:04,720
+Sau đó, chúng ta sẽ phải thêm dấu hai chấm này và hai dấu gạch chéo lên và phần sau ở đây, chúng ta có thể nhận
+
+23
+00:02:04,720 --> 00:02:09,430
+yêu cầu đó bằng cách sử dụng. giá trị chấm máy chủ.
+
+24
+00:02:11,540 --> 00:02:14,910
+Cuối cùng, chúng ta sẽ phải thêm dấu gạch chéo ở cuối.
+
+25
+00:02:14,930 --> 00:02:17,780
+Vì vậy, điều này sẽ nhận được miền động.
+
+26
+00:02:17,780 --> 00:02:20,150
+Nếu là localhost thì nó sẽ lấy cái đó.
+
+27
+00:02:20,180 --> 00:02:25,570
+Nếu nó là một trang web, nó sẽ nhận được điều đó trong bộ điều khiển ở đây.
+
+28
+00:02:25,580 --> 00:02:27,560
+Hãy để tôi thêm điều đó là tốt.
+
+29
+00:02:27,560 --> 00:02:32,030
+Và với sự thay đổi đó, chúng tôi sẽ phải cam kết và triển khai.
+
+30
+00:02:32,870 --> 00:02:40,790
+Vì vậy, ở đây tôi sẽ đặt tên cho cam kết git là cài đặt URL triển khai bài đăng và để tôi đẩy nó.
+
+31
+00:02:42,730 --> 00:02:43,500
+Hoàn hảo.
+
+32
+00:02:43,510 --> 00:02:44,920
+Trông tôt đây.
+
+33
+00:02:44,950 --> 00:02:51,610
+Bây giờ, khi nó được đẩy, điều đó sẽ kích hoạt thêm một lần triển khai nữa.
+
+34
+00:02:52,480 --> 00:02:55,150
+Tôi đã thấy điều đó trên trang chủ.
+
+35
+00:02:55,300 --> 00:02:56,230
+Hoàn hảo.
+
+36
+00:02:56,260 --> 00:03:00,820
+Chúng ta sẽ phải đợi một lần nữa để xem tất cả những thay đổi trong hành động.
+
+37
+00:03:06,170 --> 00:03:06,690
+Hoàn hảo.
+
+38
+00:03:06,690 --> 00:03:08,150
+Việc triển khai hoàn tất.
+
+39
+00:03:08,180 --> 00:03:10,650
+Bây giờ, nếu chúng ta mở lại miền.
+
+40
+00:03:10,670 --> 00:03:18,230
+Lần này, chúng tôi có thể đặt hàng và Stripe có thể chuyển hướng chúng tôi dựa trên URL
+
+41
+00:03:18,260 --> 00:03:21,130
+động mà chúng tôi đã đăng nhập.
+
+42
+00:03:21,140 --> 00:03:23,240
+Cho mình vào GIỎ HÀNG đây.
+
+43
+00:03:23,600 --> 00:03:25,250
+Đặt hàng.
+
+44
+00:03:25,700 --> 00:03:28,240
+Chúng tôi điều hướng đến giỏ hàng.
+
+45
+00:03:28,250 --> 00:03:32,960
+Nếu chúng tôi chọn quay lại đây, nó sẽ đưa chúng tôi đến đúng giỏ hàng.
+
+46
+00:03:32,960 --> 00:03:35,090
+Vì vậy, đó là làm việc.
+
+47
+00:03:35,920 --> 00:03:39,850
+Và để tôi thử đặt hàng bằng thẻ tín dụng giả.
+
+48
+00:03:41,240 --> 00:03:41,780
+Hoàn hảo.
+
+49
+00:03:41,780 --> 00:03:42,830
+Điều đó đã làm việc.
+
+50
+00:03:42,860 --> 00:03:45,980
+Nếu chúng ta đến quản lý đơn hàng, thật tuyệt.
+
+51
+00:03:46,130 --> 00:03:48,430
+Chúng tôi có ba đơn đặt hàng và tất cả chúng.
+
+52
+00:03:48,440 --> 00:03:55,370
+Nhưng bạn có thể thấy một số trong số chúng đang chờ xử lý vì chúng tôi đã truy cập trang thanh toán và sau đó chúng tôi quay lại.
+
+53
+00:03:55,730 --> 00:04:02,630
+Vì vậy, những gì bạn có thể làm là khi xác thực, bạn có thể thêm một trạng thái tùy chỉnh, đó là, nó đã vào GIỎ HÀNG, nhưng đơn
+
+54
+00:04:02,630 --> 00:04:07,910
+đặt hàng không được thực hiện và có thể có một công việc dọn dẹp để xóa các đơn đặt hàng đó.
+
+55
+00:04:08,270 --> 00:04:14,090
+Vì vậy, đó là thứ mà bạn có thể làm việc và sửa đổi dựa trên yêu cầu của mình.
+
+56
+00:04:14,210 --> 00:04:19,490
+Nhưng chúng tôi có một đơn đặt hàng thành công ở đây và trạng thái thanh toán đã được phê duyệt.
+
+57
+00:04:19,519 --> 00:04:22,610
+Trạng thái đơn hàng cũng được duyệt.
+
+58
+00:04:23,350 --> 00:04:27,310
+Chúng tôi có thể bắt đầu xử lý, giao hàng và hoàn thiện.
+
+59
+00:04:27,310 --> 00:04:30,910
+Tất cả các xác nhận đang hoạt động như mong đợi.
+

@@ -1,0 +1,7 @@
+﻿namespace ITI.Application.Dtos
+{
+    public record AllInstractorDto(int Id, string? FirstName, string? LastName, string? Phone)
+    {
+        public string FullName => $"{FirstName} {LastName}".Trim();
+    }
+}

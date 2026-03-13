@@ -1,0 +1,252 @@
+1
+00:00:02,280 --> 00:00:04,140
+Instructor: Now we want to work on one
+
+2
+00:00:04,140 --> 00:00:06,480
+of the main functionalities of how
+
+3
+00:00:06,480 --> 00:00:09,840
+to add an item to the shopping cart.
+
+4
+00:00:09,840 --> 00:00:12,060
+If I run the application here,
+
+5
+00:00:12,060 --> 00:00:14,460
+and if we go to the details here,
+
+6
+00:00:14,460 --> 00:00:17,070
+we have count and based on that
+
+7
+00:00:17,070 --> 00:00:19,863
+we can add item to the shopping cart.
+
+8
+00:00:20,910 --> 00:00:25,113
+So we have to enable the button here and work on that.
+
+9
+00:00:26,430 --> 00:00:28,710
+Let me stop the application.
+
+10
+00:00:28,710 --> 00:00:33,710
+That button was inside customer area views details.
+
+11
+00:00:35,640 --> 00:00:38,193
+Controller is the home controller.
+
+12
+00:00:39,450 --> 00:00:43,800
+So in the details here where we have the button,
+
+13
+00:00:43,800 --> 00:00:48,600
+I will remove the coming soon and where it's disabled.
+
+14
+00:00:48,600 --> 00:00:50,550
+That looks good.
+
+15
+00:00:50,550 --> 00:00:54,600
+I have a form here so it should be able to post
+
+16
+00:00:54,600 --> 00:00:57,603
+what is the count and what is the product.
+
+17
+00:00:59,100 --> 00:01:03,090
+But in order to post where we have the count input
+
+18
+00:01:03,090 --> 00:01:06,720
+we need to add the ASP4 tag helper
+
+19
+00:01:06,720 --> 00:01:08,943
+and that requires a model.
+
+20
+00:01:09,900 --> 00:01:14,280
+If I go to the top here, we do not have a model.
+
+21
+00:01:14,280 --> 00:01:18,270
+We have the product model but in product model
+
+22
+00:01:18,270 --> 00:01:19,833
+we do not have the count.
+
+23
+00:01:21,000 --> 00:01:24,060
+So what we basically need is we want a model
+
+24
+00:01:24,060 --> 00:01:26,190
+where we will have product
+
+25
+00:01:26,190 --> 00:01:30,153
+and we will also have a counter for our input.
+
+26
+00:01:31,140 --> 00:01:33,270
+If you examine the shopping cart
+
+27
+00:01:33,270 --> 00:01:36,513
+that we created in our models,
+
+28
+00:01:37,470 --> 00:01:41,820
+it has a product which will have to be populated
+
+29
+00:01:41,820 --> 00:01:44,673
+and on top of that it has the count as well.
+
+30
+00:01:45,510 --> 00:01:49,050
+So we have to modify the model in our details
+
+31
+00:01:49,050 --> 00:01:51,843
+from product to shopping cart.
+
+32
+00:01:52,680 --> 00:01:56,280
+When we do that, everything here will be broken
+
+33
+00:01:56,280 --> 00:01:58,290
+because rather than model,
+
+34
+00:01:58,290 --> 00:02:02,190
+it will have to navigate to model that product.
+
+35
+00:02:02,190 --> 00:02:04,263
+So let me modify that.
+
+36
+00:02:16,350 --> 00:02:17,940
+And perfect.
+
+37
+00:02:17,940 --> 00:02:22,940
+Now with that for ASP4, we can directly access the count.
+
+38
+00:02:23,070 --> 00:02:25,293
+And perfect, that looks good.
+
+39
+00:02:26,430 --> 00:02:30,600
+With that configured, let me run the application.
+
+40
+00:02:30,600 --> 00:02:33,270
+Now this time when you go on details
+
+41
+00:02:33,270 --> 00:02:36,120
+you will see an error message.
+
+42
+00:02:36,120 --> 00:02:38,970
+The error message is self-explanatory
+
+43
+00:02:38,970 --> 00:02:41,823
+so try to find out on what is wrong here.
+
+44
+00:02:42,960 --> 00:02:45,840
+I hope you were able to figure that out.
+
+45
+00:02:45,840 --> 00:02:49,740
+The issue is what we are passing on to the view.
+
+46
+00:02:49,740 --> 00:02:52,740
+If we go to home controller in details,
+
+47
+00:02:52,740 --> 00:02:55,500
+we are passing product, but in details,
+
+48
+00:02:55,500 --> 00:02:57,300
+we are telling that hey,
+
+49
+00:02:57,300 --> 00:02:59,973
+it should expect a shopping cart model.
+
+50
+00:03:00,810 --> 00:03:02,880
+To solve that, we will have to pass
+
+51
+00:03:02,880 --> 00:03:05,070
+a shopping cart object here.
+
+52
+00:03:05,070 --> 00:03:10,070
+Cart is equal to new and inside there we have the product.
+
+53
+00:03:11,670 --> 00:03:15,480
+I can cut this, paste it here.
+
+54
+00:03:15,480 --> 00:03:19,680
+On top of that, I can set the default count to B1
+
+55
+00:03:19,680 --> 00:03:23,100
+and I can also populate the product ID.
+
+56
+00:03:23,100 --> 00:03:24,783
+That is the product ID.
+
+57
+00:03:25,920 --> 00:03:27,840
+When we return back to the view,
+
+58
+00:03:27,840 --> 00:03:32,373
+we have to pass the cart here and that looks good.
+
+59
+00:03:33,300 --> 00:03:37,170
+With that configured, if I go back, perfect.
+
+60
+00:03:37,170 --> 00:03:41,730
+The details is now visible and we have the count.
+
+61
+00:03:41,730 --> 00:03:43,110
+In the next video,
+
+62
+00:03:43,110 --> 00:03:46,680
+let me work on the post action method for details.
+
+63
+00:03:46,680 --> 00:03:51,003
+That way we will be able to add items to the shopping cart.
+

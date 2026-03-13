@@ -1,0 +1,236 @@
+1
+00:00:01,890 --> 00:00:05,939
+Nhưng chúng tôi có chuỗi kết nối và cài đặt ứng dụng. tập tin json.
+
+2
+00:00:06,210 --> 00:00:12,090
+Những gì chúng tôi muốn làm tiếp theo về cơ bản là tạo cơ sở dữ liệu trong SQL Server.
+
+3
+00:00:12,630 --> 00:00:19,410
+Nhưng cơ sở dữ liệu mà chúng tôi muốn tạo, chúng tôi muốn tạo bằng cách sử dụng mã mà chúng tôi có trong ứng dụng
+
+4
+00:00:19,410 --> 00:00:21,030
+bằng khung thực thể.
+
+5
+00:00:21,030 --> 00:00:29,910
+Cốt lõi của khung thực thể cốt lõi là khung cho phép chúng tôi thực hiện tất cả những việc liên quan đến cơ sở dữ liệu trực
+
+6
+00:00:29,910 --> 00:00:31,830
+tiếp từ mã ngay tại đây.
+
+7
+00:00:32,890 --> 00:00:40,540
+Bây giờ trở lại những ngày cũ của . net để trỏ đến lõi khung thực thể đã được bao gồm trong gói chính
+
+8
+00:00:40,540 --> 00:00:40,870
+của. ứng dụng mạng.
+
+9
+00:00:41,090 --> 00:00:42,490
+Nhưng với tư cách là . net đã được cải tiến,
+
+10
+00:00:42,790 --> 00:00:50,470
+ứng dụng cơ bản đi kèm với các gói cần thiết và mọi
+
+11
+00:00:50,470 --> 00:00:58,210
+thứ khác phải được thêm thủ công vào dự án để thêm gói get mới vào dự án của chúng tôi.
+
+12
+00:00:58,210 --> 00:00:58,900
+Chúng tôi sẽ chuyển đến web cồng kềnh ở đây, nhấp chuột phải và chúng tôi sẽ chọn Quản lý các gói NuGet.
+
+13
+00:00:58,930 --> 00:01:05,890
+Gói đầu tiên mà chúng tôi cần là Microsoft. Lõi khung thực thể.
+
+14
+00:01:08,800 --> 00:01:13,580
+Nó đã được hỗ trợ dựa trên IntelliSense, nhưng nếu không, bạn cũng có thể tìm kiếm nó.
+
+15
+00:01:13,660 --> 00:01:19,570
+Bây giờ phiên bản mà bạn thấy ở đây là 7. 0. 3, nhưng chúng tôi đang sử dụng . net tám trong bản xem trước.
+
+16
+00:01:20,050 --> 00:01:27,250
+Vì vậy, chúng tôi phải bật hộp kiểm này bao gồm bản phát hành trước.
+
+17
+00:01:27,250 --> 00:01:31,390
+Nếu như . Net 8 đã được phát hành, sau đó nếu bạn không bật hộp kiểm này, bạn sẽ thấy phiên bản mới nhất.
+
+18
+00:01:32,850 --> 00:01:39,480
+Chúng tôi muốn phiên bản xem trước.
+
+19
+00:01:39,960 --> 00:01:42,000
+Vì vậy, chọn cái đó và chúng tôi sẽ chọn Microsoft. Gói Entity Framework Core NuGet.
+
+20
+00:01:42,000 --> 00:01:48,330
+Hãy để tôi cài đặt gói đó ở đây.
+
+21
+00:01:49,680 --> 00:01:51,900
+Chấp nhận giấy phép và.
+
+22
+00:01:52,080 --> 00:01:54,270
+Hoàn hảo.
+
+23
+00:01:54,270 --> 00:01:54,870
+Trông tôt đây.
+
+24
+00:01:54,870 --> 00:01:56,070
+Chúng tôi sẽ sử dụng lõi khung thực thể, nhưng đối với cơ sở dữ liệu, chúng tôi sẽ sử dụng SQL Server.
+
+25
+00:01:57,250 --> 00:02:03,670
+Vì vậy, điều đó cũng được hiển thị ngay tại đây.
+
+26
+00:02:03,670 --> 00:02:06,600
+Chúng tôi cần gói Microsoft. Entity FrameworkCore. Máy chủ SQL.
+
+27
+00:02:06,610 --> 00:02:12,250
+Chúng tôi có phiên bản ở đây.
+
+28
+00:02:12,370 --> 00:02:14,410
+Hãy để tôi cài đặt nó.
+
+29
+00:02:14,530 --> 00:02:16,240
+Một điều mà tôi sẽ luôn nhắc bạn là nếu bạn cài đặt một phiên bản xem trước hoặc thậm chí với bất kỳ phiên bản . net, hãy đảm bảo rằng
+
+30
+00:02:17,480 --> 00:02:25,310
+tất cả các gói Microsoft đều có cùng phiên bản.
+
+31
+00:02:25,310 --> 00:02:29,750
+Giống như nếu bạn cài đặt lõi khung thực thể với . net 8 và sau đó nếu bạn cài đặt gói khác với
+
+32
+00:02:30,470 --> 00:02:36,950
+7, mọi thứ sẽ không hoạt động.
+
+33
+00:02:36,950 --> 00:02:39,470
+Vì vậy, hãy đảm bảo rằng mọi gói bạn cài đặt đều có cùng một bản phát hành.
+
+34
+00:02:39,680 --> 00:02:44,630
+Giả sử ở giữa khóa học, nếu xem trước hai hoặc xem trước chín trong số . net 8 được phát hành khi bạn cài đặt tại đây, bạn luôn
+
+35
+00:02:44,660 --> 00:02:51,020
+có thể cài đặt phiên bản mình muốn
+
+36
+00:02:51,020 --> 00:02:57,440
+và không phải lúc nào bạn cũng phải cài đặt phiên bản mới nhất.
+
+37
+00:02:57,440 --> 00:02:59,240
+Vì vậy, hãy chắc chắn để nhớ điều đó.
+
+38
+00:03:00,020 --> 00:03:02,110
+Nhưng sau hai gói mà chúng tôi đã cài đặt, chúng tôi cũng phải cài đặt Microsoft. Lõi khung
+
+39
+00:03:02,120 --> 00:03:08,750
+thực thể. công cụ.
+
+40
+00:03:08,750 --> 00:03:10,100
+Gói này sẽ kích hoạt các lệnh mà chúng tôi sẽ sử dụng để di chuyển.
+
+41
+00:03:10,910 --> 00:03:15,350
+Bây giờ, di cư là gì?
+
+42
+00:03:15,830 --> 00:03:17,350
+Đừng hoảng sợ khi đến đúng thời điểm.
+
+43
+00:03:17,360 --> 00:03:20,060
+Tôi sẽ giải thích mọi thứ cho bạn.
+
+44
+00:03:20,060 --> 00:03:22,250
+Nhưng ngay bây giờ hãy đảm bảo cài đặt Microsoft. Lõi khung thực thể. công cụ cho dự án.
+
+45
+00:03:22,250 --> 00:03:29,780
+Và hoàn hảo.
+
+46
+00:03:32,020 --> 00:03:33,160
+Bây giờ chúng tôi đã cài đặt ba gói.
+
+47
+00:03:33,190 --> 00:03:35,800
+Nếu bạn chuyển đến tab đã cài đặt tại đây, bạn có thể thấy tất cả các gói.
+
+48
+00:03:35,980 --> 00:03:40,720
+Một lần nữa, nếu giả sử phiên bản mới được phát hành, bạn
+
+49
+00:03:41,020 --> 00:03:47,980
+có thể cập nhật tại đây và cập nhật tất cả các gói thay vì cập nhật một gói duy nhất.
+
+50
+00:03:47,980 --> 00:03:50,590
+Nhưng ngay bây giờ, mọi thứ có vẻ tốt.
+
+51
+00:03:50,890 --> 00:03:54,070
+Bây giờ vì chúng tôi thêm các gói
+
+52
+00:03:55,140 --> 00:04:02,160
+này bên trong gói Quản lý NuGet nên chúng cũng được thêm vào tệp dự án.
+
+53
+00:04:02,160 --> 00:04:02,790
+Vì vậy, nếu
+
+54
+00:04:03,060 --> 00:04:11,100
+tôi nhấp vào chỉnh sửa tại đây, bạn có thể thấy trong tham chiếu gói nó đã thêm cả ba gói ngay tại đây.
+
+55
+00:04:11,100 --> 00:04:11,820
+Đây là vị trí thực tế rất quan trọng.
+
+56
+00:04:12,210 --> 00:04:15,870
+Bất cứ khi nào bạn thêm gói NuGet, một mục nhập sẽ được thêm vào bên trong tệp dự án của dự án đó.
+
+57
+00:04:15,870 --> 00:04:23,190
+Và theo cách đó, dự án biết tất cả các gói đang được sử dụng và nó sẽ tải tất cả chúng.
+
+58
+00:04:23,430 --> 00:04:30,240
+Cùng với đó, chúng tôi đã thêm các gói NuGet.
+
+59
+00:04:32,180 --> 00:04:35,060
+Hãy để tôi tiếp tục từ video tiếp theo.
+

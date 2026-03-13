@@ -1,0 +1,232 @@
+1
+00:00:01,990 --> 00:00:09,340
+Chúng tôi có bộ điều khiển danh mục nơi chúng tôi đang sử dụng bối cảnh DB của ứng dụng, nhưng bây giờ chúng tôi không phải sử
+
+2
+00:00:09,340 --> 00:00:10,970
+dụng trực tiếp điều này.
+
+3
+00:00:10,990 --> 00:00:14,050
+Chúng tôi có thể truy cập kho lưu trữ danh mục.
+
+4
+00:00:14,590 --> 00:00:16,180
+Làm thế nào chúng ta sẽ làm điều đó?
+
+5
+00:00:16,720 --> 00:00:18,130
+Thay vì ứng dụng?
+
+6
+00:00:18,130 --> 00:00:25,780
+bối cảnh DB, chúng tôi sẽ nói rằng chúng tôi muốn triển khai kho lưu trữ danh mục và chúng tôi đang yêu cầu phép
+
+7
+00:00:25,780 --> 00:00:28,900
+nội xạ phụ thuộc để cung cấp triển khai đó.
+
+8
+00:00:30,120 --> 00:00:35,700
+Sau đó, trên DB gạch dưới, chúng tôi có tất cả các phương thức trợ giúp mà chúng tôi đã tạo.
+
+9
+00:00:36,710 --> 00:00:43,010
+Chà, thay vì gạch dưới DB, thật hợp lý khi gọi kho lưu trữ danh mục này.
+
+10
+00:00:44,740 --> 00:00:45,460
+Theo cách đó.
+
+11
+00:00:45,460 --> 00:00:48,910
+Nó có ý nghĩa hơn khi chúng ta đang tiêu thụ điều đó.
+
+12
+00:00:49,800 --> 00:00:50,610
+Hoàn hảo.
+
+13
+00:00:50,820 --> 00:00:57,570
+Vì vậy, khi chúng tôi phải truy xuất mọi thứ, chúng tôi có dấu chấm repo danh mục gạch dưới, hãy lấy tất cả.
+
+14
+00:00:58,080 --> 00:01:03,840
+Chúng tôi đã tạo cuộn xuống nơi chúng tôi phải tạo.
+
+15
+00:01:03,870 --> 00:01:09,000
+Chúng tôi đã có phương thức thêm dấu chấm repo mèo gạch dưới.
+
+16
+00:01:09,000 --> 00:01:16,290
+Và khi chúng ta phải lưu các thay đổi, chúng ta sẽ nói dấu gạch dưới cat repo dot save.
+
+17
+00:01:18,050 --> 00:01:18,650
+Tuyệt vời.
+
+18
+00:01:18,650 --> 00:01:19,930
+Trông tôt đây.
+
+19
+00:01:19,940 --> 00:01:21,940
+Hãy để tôi cuộn xuống hơn nữa.
+
+20
+00:01:21,950 --> 00:01:29,690
+Khi chúng tôi phải truy xuất danh mục để chỉnh sửa, chúng tôi sẽ chuyển đến dấu chấm repo danh mục gạch dưới.
+
+21
+00:01:29,720 --> 00:01:33,050
+Chúng tôi có con mèo và chúng tôi sẽ chuyển liên kết.
+
+22
+00:01:33,050 --> 00:01:39,080
+Toán tử u đi đến u. id bằng với id.
+
+23
+00:01:41,090 --> 00:01:41,720
+Theo cách đó.
+
+24
+00:01:41,720 --> 00:01:44,630
+Chúng tôi đang sử dụng kho lưu trữ danh mục ở đây.
+
+25
+00:01:44,660 --> 00:01:46,700
+Tiếp theo chúng tôi có bản cập nhật.
+
+26
+00:01:46,880 --> 00:01:50,210
+Hãy để tôi sao chép những gì chúng tôi có cho ADD ở đây.
+
+27
+00:01:50,720 --> 00:01:54,800
+Dán nó ngay tại đây và chúng tôi có bản cập nhật.
+
+28
+00:01:55,160 --> 00:01:56,750
+Trông tôt đây.
+
+29
+00:01:56,780 --> 00:01:58,880
+Chúng tôi đã xác định lại.
+
+30
+00:01:59,270 --> 00:02:06,380
+Hãy sao chép bản chỉnh sửa, dán nó vào đây và chúng tôi đã xác định lại.
+
+31
+00:02:06,590 --> 00:02:16,190
+Dán nó ngay tại đó và chúng tôi có danh mục dấu gạch dưới repo dot remove và lưu các thay đổi.
+
+32
+00:02:18,220 --> 00:02:18,970
+Hoàn hảo.
+
+33
+00:02:19,180 --> 00:02:23,140
+Vì vậy, bạn có thể thấy với điều này, chúng tôi có kho lưu trữ của mình.
+
+34
+00:02:23,590 --> 00:02:30,040
+Nếu chúng tôi lưu mọi thứ, chúng tôi không còn ngữ cảnh DB ứng dụng ngay tại đây.
+
+35
+00:02:30,660 --> 00:02:35,790
+Khi chúng tôi chạy ứng dụng, chúng tôi sẽ gặp một thông báo lỗi.
+
+36
+00:02:36,120 --> 00:02:41,220
+Tôi muốn chỉ cho bạn vì đây là một thông báo lỗi phổ biến nhiều lần.
+
+37
+00:02:41,840 --> 00:02:50,570
+Bạn có thể thấy tôi nhấp vào danh mục và thông báo Không thể giải quyết cho kho lưu trữ danh mục loại I trong khi cố gắng
+
+38
+00:02:50,600 --> 00:02:53,150
+kích hoạt bộ điều khiển danh mục.
+
+39
+00:02:53,720 --> 00:02:59,990
+Bất cứ khi nào bạn thấy không thể giải quyết dịch vụ cho loại, điều đầu tiên bạn nên nghĩ
+
+40
+00:02:59,990 --> 00:03:04,490
+đến là có một số vấn đề khi đăng ký dịch vụ đó vào vùng chứa.
+
+41
+00:03:05,270 --> 00:03:12,770
+Bởi vì ở đây bạn đang yêu cầu tiêm phụ thuộc để cung cấp triển khai kho lưu trữ danh mục I.
+
+42
+00:03:13,190 --> 00:03:19,130
+Nhưng bạn thậm chí đã đăng ký dịch vụ đó trong vùng chứa tiêm phụ thuộc chưa?
+
+43
+00:03:19,160 --> 00:03:20,480
+Chúng tôi chưa từng.
+
+44
+00:03:21,150 --> 00:03:24,360
+Vì vậy, đó là một điều mà bạn nên luôn nhớ.
+
+45
+00:03:24,360 --> 00:03:30,300
+Nếu có bất kỳ dịch vụ nào, bạn phải đăng ký dịch vụ đó để tiêm phụ thuộc.
+
+46
+00:03:31,330 --> 00:03:33,240
+Bây giờ, những gì sẽ là cuộc sống?
+
+47
+00:03:33,250 --> 00:03:40,570
+Thông thường, phạm vi là phổ biến nhất và nên được sử dụng để đối với một yêu cầu, nó sẽ sử dụng cùng
+
+48
+00:03:40,570 --> 00:03:41,890
+một dịch vụ.
+
+49
+00:03:42,610 --> 00:03:51,730
+Vì vậy, ở đây chúng tôi có giao diện như kho lưu trữ danh mục và việc triển khai là trong kho lưu trữ danh mục.
+
+50
+00:03:52,150 --> 00:03:56,620
+Thêm câu lệnh sử dụng vào đó và hoàn thiện.
+
+51
+00:03:57,340 --> 00:04:02,110
+Bây giờ chúng tôi đã thêm kho lưu trữ danh mục trong nội dung phụ thuộc.
+
+52
+00:04:02,110 --> 00:04:09,550
+Vì vậy, trong bộ điều khiển, khi chúng tôi muốn triển khai, chương trình biết rằng tôi phải cung cấp cho việc
+
+53
+00:04:09,550 --> 00:04:11,860
+triển khai kho lưu trữ danh mục.
+
+54
+00:04:13,180 --> 00:04:19,570
+Hãy để tôi chạy cái này và mọi thứ sẽ hoạt động chính xác như trước đây.
+
+55
+00:04:19,600 --> 00:04:25,040
+Với bối cảnh DB ứng dụng, chúng ta có thể thấy tất cả các danh mục ở đây.
+
+56
+00:04:25,060 --> 00:04:30,880
+Nếu tôi cố gắng tạo một cái đã hoạt động, tôi có thể xóa cái đó.
+
+57
+00:04:31,780 --> 00:04:32,950
+Và hoàn hảo.
+
+58
+00:04:33,340 --> 00:04:39,670
+Tất cả các hoạt động CRUD đang hoạt động, nhưng bây giờ chúng tôi đang thực hiện điều đó với kho lưu trữ của mình.
+

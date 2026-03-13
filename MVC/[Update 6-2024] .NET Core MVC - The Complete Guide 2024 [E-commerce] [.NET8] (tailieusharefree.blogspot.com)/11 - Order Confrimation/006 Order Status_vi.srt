@@ -1,0 +1,128 @@
+1
+00:00:02,000 --> 00:00:08,450
+Trước khi bắt tay vào đặt hàng, hãy để tôi hướng dẫn bạn cách quản lý trạng thái đơn hàng về những gì xảy ra
+
+2
+00:00:08,450 --> 00:00:12,770
+khi một đơn hàng được đặt, trạng thái sẽ được cập nhật như thế nào.
+
+3
+00:00:13,580 --> 00:00:19,880
+Vì vậy, điều đầu tiên sẽ xảy ra là khi khách hàng đặt hàng, họ sẽ phải thanh toán.
+
+4
+00:00:20,030 --> 00:00:26,480
+Trước khi họ thực hiện thanh toán, trạng thái đơn hàng sẽ là chờ xử lý và trạng thái thanh toán sẽ là chờ xử lý.
+
+5
+00:00:26,810 --> 00:00:34,430
+Khi thanh toán thành công trên trang xác nhận đơn hàng, trạng thái đơn hàng sẽ được duyệt và trạng
+
+6
+00:00:34,430 --> 00:00:37,670
+thái thanh toán cũng sẽ được duyệt.
+
+7
+00:00:38,480 --> 00:00:45,020
+Sau đó, quản trị sẽ bắt đầu xử lý đơn hàng nên trạng thái đơn hàng sẽ được cập nhật thành đang xử lý,
+
+8
+00:00:45,020 --> 00:00:48,750
+nhưng trạng thái thanh toán luôn ở trạng thái duyệt.
+
+9
+00:00:48,770 --> 00:00:55,700
+Sau khi được phê duyệt, khi đơn hàng được vận chuyển, trạng thái sẽ được cập nhật thành đã vận chuyển và trạng thái
+
+10
+00:00:55,700 --> 00:00:58,310
+thanh toán sẽ vẫn như đã được phê duyệt.
+
+11
+00:00:58,700 --> 00:01:04,129
+Bây giờ đây là quy trình mà chúng tôi có cho một khách hàng đặt hàng.
+
+12
+00:01:04,489 --> 00:01:11,360
+Nhưng trên trang web của chúng tôi, chúng tôi cũng có một tình huống khác trong đó người dùng công ty đang đặt hàng.
+
+13
+00:01:12,620 --> 00:01:19,190
+Khi người dùng của công ty đặt hàng, họ không phải thực hiện bất kỳ khoản thanh toán nào vì họ sẽ có 30 ngày
+
+14
+00:01:19,190 --> 00:01:20,990
+để thực hiện thanh toán.
+
+15
+00:01:21,020 --> 00:01:27,530
+Vì vậy, họ sẽ trực tiếp truy cập trang xác nhận đơn đặt hàng và họ sẽ thấy trạng thái của mình là đã được phê duyệt và trạng
+
+16
+00:01:27,530 --> 00:01:31,820
+thái thanh toán sẽ được chấp thuận cho khoản thanh toán bị trì hoãn.
+
+17
+00:01:32,750 --> 00:01:36,980
+Trạng thái tiếp theo sẽ được xử lý, giống như vậy và đã vận chuyển.
+
+18
+00:01:36,980 --> 00:01:38,570
+Điều đó cũng giống nhau.
+
+19
+00:01:38,570 --> 00:01:43,670
+Nhưng trạng thái thanh toán cho tất cả chúng sẽ được chấp thuận cho thanh toán chậm.
+
+20
+00:01:44,230 --> 00:01:51,370
+Sau đó, giả sử sau mười ngày hoặc 20 ngày, bất cứ khi nào công ty thực hiện thanh toán, tại thời điểm đó, trạng
+
+21
+00:01:51,370 --> 00:02:00,040
+thái thanh toán của họ sẽ được cập nhật thành đã phê duyệt và người dùng của công ty sẽ có 30 ngày để thực hiện thanh toán sau khi đơn
+
+22
+00:02:00,040 --> 00:02:01,570
+đặt hàng được giao.
+
+23
+00:02:02,550 --> 00:02:07,710
+Vì vậy, đó là quy trình mặc định mà chúng tôi sẽ có khi đặt hàng.
+
+24
+00:02:07,980 --> 00:02:12,180
+Nếu là khách hàng, họ sẽ được điều hướng để thực hiện thanh toán.
+
+25
+00:02:12,210 --> 00:02:19,380
+Nếu là công ty thì tư cách của họ sẽ được duyệt trực tiếp và duyệt tư cách
+
+26
+00:02:19,380 --> 00:02:20,910
+nộp chậm.
+
+27
+00:02:21,830 --> 00:02:28,580
+Bây giờ, tất cả các trạng thái đơn hàng này ở đây, thay vì đặt chúng trong một chuỗi ma thuật, bạn nên
+
+28
+00:02:28,580 --> 00:02:31,040
+thêm chúng vào tệp chi tiết tĩnh.
+
+29
+00:02:32,190 --> 00:02:36,900
+Vì vậy, hãy để tôi quay lại đây và điều hướng đến các chi tiết tĩnh.
+
+30
+00:02:36,900 --> 00:02:41,070
+Và tôi sẽ tạo ra tất cả các hằng số ngay tại đây.
+
+31
+00:02:41,670 --> 00:02:48,000
+Tôi đã thêm hằng số cho trạng thái đơn hàng ở đây và ở đây chúng ta có trạng thái thanh toán.
+
+32
+00:02:48,900 --> 00:02:53,310
+Với cấu hình đó, hãy để tôi tiếp tục từ video tiếp theo.
+

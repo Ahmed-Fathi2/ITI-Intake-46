@@ -1,0 +1,784 @@
+1
+00:00:02,130 --> 00:00:05,190
+Instructor: Now, if we go back to our BulkyWeb
+
+2
+00:00:05,190 --> 00:00:08,550
+in the CartController, let me open that,
+
+3
+00:00:08,550 --> 00:00:11,790
+and close everything else here.
+
+4
+00:00:11,790 --> 00:00:13,950
+Inside SummaryPOST,
+
+5
+00:00:13,950 --> 00:00:16,983
+we have to capture a payment using Stripe,
+
+6
+00:00:18,000 --> 00:00:20,700
+but we have no idea how to do that.
+
+7
+00:00:20,700 --> 00:00:23,220
+So, best thing is to Google,
+
+8
+00:00:23,220 --> 00:00:28,220
+and go to the documentation stripe session.net.
+
+9
+00:00:29,040 --> 00:00:32,100
+We have create a checkout session for Stripe,
+
+10
+00:00:32,100 --> 00:00:35,283
+and let me see how the documentation looks like.
+
+11
+00:00:36,150 --> 00:00:39,150
+First thing we have to set the API key,
+
+12
+00:00:39,150 --> 00:00:43,290
+that we already did inside program.cs,
+
+13
+00:00:43,290 --> 00:00:45,780
+so that part is covered here.
+
+14
+00:00:45,780 --> 00:00:48,210
+Then we need to create option,
+
+15
+00:00:48,210 --> 00:00:50,850
+and we have service.Create.
+
+16
+00:00:50,850 --> 00:00:55,850
+Let me copy all of this and let me paste that right here.
+
+17
+00:00:57,930 --> 00:00:59,913
+Let me align this a little bit.
+
+18
+00:01:02,040 --> 00:01:03,390
+Perfect.
+
+19
+00:01:03,390 --> 00:01:04,800
+One thing you'll notice here,
+
+20
+00:01:04,800 --> 00:01:07,080
+is we need a SuccessURL
+
+21
+00:01:07,080 --> 00:01:11,310
+in case everything is successful where it should redirect.
+
+22
+00:01:11,310 --> 00:01:14,070
+We have an OrderConfirmation,
+
+23
+00:01:14,070 --> 00:01:16,710
+but we need the complete URL here.
+
+24
+00:01:16,710 --> 00:01:19,290
+So let me run the project here,
+
+25
+00:01:19,290 --> 00:01:21,873
+and get the local host URL.
+
+26
+00:01:23,160 --> 00:01:26,700
+I will copy this, close that.
+
+27
+00:01:26,700 --> 00:01:31,700
+And we will create a variable DOMAIN is equal to,
+
+28
+00:01:31,950 --> 00:01:32,853
+paste that,
+
+29
+00:01:34,980 --> 00:01:38,313
+let me make it a lowercase, perfect.
+
+30
+00:01:39,432 --> 00:01:41,340
+So what will be the SuccessUrl?
+
+31
+00:01:41,340 --> 00:01:45,030
+We want to go to domain, and on top of that,
+
+32
+00:01:45,030 --> 00:01:48,390
+we want to navigate to customer area,
+
+33
+00:01:48,390 --> 00:01:50,820
+we have the cart controller,
+
+34
+00:01:50,820 --> 00:01:55,440
+and the action name is OrderConfirmation.
+
+35
+00:01:55,440 --> 00:02:00,440
+Let me copy that to avoid spelling mistake, right here.
+
+36
+00:02:00,930 --> 00:02:03,780
+And there, we have to pass the Id,
+
+37
+00:02:03,780 --> 00:02:06,603
+that we will get using order header.
+
+38
+00:02:07,620 --> 00:02:10,110
+So let me escape this here,
+
+39
+00:02:10,110 --> 00:02:11,280
+and we will get that
+
+40
+00:02:11,280 --> 00:02:16,033
+from ShoppingCart ViewModel dot OrderHeader dot id.
+
+41
+00:02:17,070 --> 00:02:19,560
+Now here, we have a forward slash,
+
+42
+00:02:19,560 --> 00:02:23,640
+so let me remove this one, and that looks good.
+
+43
+00:02:23,640 --> 00:02:27,750
+On top of that, we also have a cancelUrl,
+
+44
+00:02:27,750 --> 00:02:29,820
+in that case let me redirect them
+
+45
+00:02:29,820 --> 00:02:34,293
+to customer and the shopping cart index page.
+
+46
+00:02:35,940 --> 00:02:36,930
+Perfect.
+
+47
+00:02:36,930 --> 00:02:40,830
+So success and cancelUrl looks good.
+
+48
+00:02:40,830 --> 00:02:42,840
+Then we need LineItem,
+
+49
+00:02:42,840 --> 00:02:46,650
+which will basically have all the product detail.
+
+50
+00:02:46,650 --> 00:02:49,770
+Now rather than clustering everything here,
+
+51
+00:02:49,770 --> 00:02:52,623
+let me create new List of SessionLineItemOptions,
+
+52
+00:02:54,180 --> 00:02:58,380
+and we will configure the LineItems right here,
+
+53
+00:02:58,380 --> 00:03:02,490
+after we have the Option, let me do that.
+
+54
+00:03:02,490 --> 00:03:04,140
+To get all the items,
+
+55
+00:03:04,140 --> 00:03:08,280
+we will have to iterate through the shopping cart list.
+
+56
+00:03:08,280 --> 00:03:10,320
+So variable item
+
+57
+00:03:10,320 --> 00:03:14,223
+in ShoppingCart ViewModel dot ShoppingCartList.
+
+58
+00:03:15,630 --> 00:03:18,213
+And you can see it is a list of LineItemOptions.
+
+59
+00:03:19,560 --> 00:03:21,390
+So let me copy that,
+
+60
+00:03:21,390 --> 00:03:24,420
+it is a built-in class Stipe package,
+
+61
+00:03:24,420 --> 00:03:26,516
+and we will have to create
+
+62
+00:03:26,516 --> 00:03:31,516
+SessionLineItem is equal to new SessionLineItemOptions.
+
+63
+00:03:34,320 --> 00:03:37,439
+There, we have to configure a few things.
+
+64
+00:03:37,439 --> 00:03:39,750
+Now, there are two things you can configure.
+
+65
+00:03:39,750 --> 00:03:44,730
+You can configure a price or you can configure a price data.
+
+66
+00:03:44,730 --> 00:03:47,730
+Price data is basically data used to create
+
+67
+00:03:47,730 --> 00:03:49,860
+a new price object.
+
+68
+00:03:49,860 --> 00:03:54,660
+So that is exactly what we want here, is equal to new,
+
+69
+00:03:54,660 --> 00:03:56,836
+and that will be of the type
+
+70
+00:03:56,836 --> 00:03:59,503
+SessionLineItemPriceDataOptions.
+
+71
+00:04:00,546 --> 00:04:03,006
+Again, this is built in with Stripe,
+
+72
+00:04:03,006 --> 00:04:06,408
+and you can see IntelliSense already displayed
+
+73
+00:04:06,408 --> 00:04:08,637
+that class file to me.
+
+74
+00:04:08,637 --> 00:04:09,507
+In there,
+
+75
+00:04:09,507 --> 00:04:12,961
+we have to configure a few things like UnitAmount.
+
+76
+00:04:12,961 --> 00:04:17,704
+Now UnitAmount is in long, it is not in decimal here.
+
+77
+00:04:17,704 --> 00:04:19,350
+So what we will have to do,
+
+78
+00:04:19,350 --> 00:04:21,930
+is what we have in item dot Price.
+
+79
+00:04:21,930 --> 00:04:25,290
+We will have to multiply that by a hundred.
+
+80
+00:04:25,290 --> 00:04:29,550
+So basically if something is $20.50,
+
+81
+00:04:29,550 --> 00:04:32,463
+we have to convert that to be 2050,
+
+82
+00:04:33,780 --> 00:04:36,843
+and that is what we are doing right here.
+
+83
+00:04:37,950 --> 00:04:39,963
+Now after unit item,
+
+84
+00:04:41,076 --> 00:04:44,970
+we have to define the Currency here, that is USD,
+
+85
+00:04:44,970 --> 00:04:47,383
+and we need to add ProductData.
+
+86
+00:04:48,450 --> 00:04:50,700
+In ProductData this will be
+
+87
+00:04:50,700 --> 00:04:55,187
+of new SessionLineItemPriceDataProductDataOptions.
+
+88
+00:04:56,940 --> 00:04:59,160
+pretty long class names here.
+
+89
+00:04:59,160 --> 00:05:02,520
+But there, we can give things like images,
+
+90
+00:05:02,520 --> 00:05:05,373
+name and description of each item.
+
+91
+00:05:06,390 --> 00:05:09,893
+I will give that to be item.Product.Title,
+
+92
+00:05:12,990 --> 00:05:16,320
+that looks good for the product data.
+
+93
+00:05:16,320 --> 00:05:19,320
+Now, with that we are generating the price data,
+
+94
+00:05:19,320 --> 00:05:21,810
+and that is for one item.
+
+95
+00:05:21,810 --> 00:05:24,600
+But we also have to define the quantity
+
+96
+00:05:24,600 --> 00:05:28,800
+like if there is one item, what is the quantity for that?
+
+97
+00:05:28,800 --> 00:05:29,850
+Based on that,
+
+98
+00:05:29,850 --> 00:05:33,843
+Stripe will automatically determine the final price.
+
+99
+00:05:34,800 --> 00:05:36,300
+With that configured,
+
+100
+00:05:36,300 --> 00:05:41,220
+the sessionLineItem looks good for one item right now
+
+101
+00:05:41,220 --> 00:05:43,773
+because we are inside the foreach loop,
+
+102
+00:05:44,610 --> 00:05:49,610
+we have to add all the items in the LineItems right here.
+
+103
+00:05:50,520 --> 00:05:54,577
+So we can access them from options.LineItems.Add,
+
+104
+00:05:56,280 --> 00:05:59,553
+and we will add the individual sessionLineItem.
+
+105
+00:06:01,110 --> 00:06:04,170
+So if there are 10 items in the shopping cart,
+
+106
+00:06:04,170 --> 00:06:07,983
+it'll iterate and add all of those 10 items.
+
+107
+00:06:08,940 --> 00:06:12,000
+So now we can remove this logic here,
+
+108
+00:06:12,000 --> 00:06:15,960
+and we will create a list that looks good.
+
+109
+00:06:15,960 --> 00:06:20,640
+Next, the Mode is payment, that is the default Mode.
+
+110
+00:06:20,640 --> 00:06:23,880
+With that we have configured the options here.
+
+111
+00:06:23,880 --> 00:06:26,340
+And finally, on line 140,
+
+112
+00:06:26,340 --> 00:06:29,490
+we are creating a new SessionService.
+
+113
+00:06:29,490 --> 00:06:31,140
+And on the Service,
+
+114
+00:06:31,140 --> 00:06:35,190
+we are creating that with all the options.
+
+115
+00:06:35,190 --> 00:06:37,080
+These are all default methods
+
+116
+00:06:37,080 --> 00:06:40,620
+that we had inside the Stripe documentation
+
+117
+00:06:40,620 --> 00:06:43,833
+and we have to use them exactly like that.
+
+118
+00:06:45,030 --> 00:06:47,520
+But when we create a session here,
+
+119
+00:06:47,520 --> 00:06:51,330
+we can expect a response back from the server.
+
+120
+00:06:51,330 --> 00:06:55,143
+So let me get that in a session variable of Stripe.
+
+121
+00:06:56,160 --> 00:07:00,000
+Now, when we get a response of session inside there,
+
+122
+00:07:00,000 --> 00:07:04,440
+we have both the Id and the PaymentIntent Id.
+
+123
+00:07:04,440 --> 00:07:07,410
+If I do F12 and examine the Class,
+
+124
+00:07:07,410 --> 00:07:09,840
+you can see there is an Id.
+
+125
+00:07:09,840 --> 00:07:11,610
+You scroll down
+
+126
+00:07:11,610 --> 00:07:14,100
+or if you just search for that,
+
+127
+00:07:14,100 --> 00:07:18,750
+you will find a PaymentIntent Id, there you go.
+
+128
+00:07:18,750 --> 00:07:20,880
+So we can get both of them
+
+129
+00:07:20,880 --> 00:07:23,670
+and we have to update that in our table
+
+130
+00:07:23,670 --> 00:07:25,443
+before we redirect back.
+
+131
+00:07:26,550 --> 00:07:31,050
+So we will say unitOfWork.OrderHeader on there,
+
+132
+00:07:31,050 --> 00:07:34,440
+we want the UpdateStripePaymentID,
+
+133
+00:07:34,440 --> 00:07:37,950
+where we have to pass the Order Id that is inside
+
+134
+00:07:37,950 --> 00:07:42,720
+ShoppingCart ViewModel dot OrderHeader dot Id,
+
+135
+00:07:42,720 --> 00:07:45,933
+and the session Id is inside session.Id,
+
+136
+00:07:47,448 --> 00:07:51,917
+and PaymentIntent Id is inside session.PaymentIntentId.
+
+137
+00:07:53,250 --> 00:07:55,410
+Now one thing I will tell you right now is
+
+138
+00:07:55,410 --> 00:07:59,010
+PaymentIntent Id will be Null right now.
+
+139
+00:07:59,010 --> 00:08:03,420
+PaymentIntent Id in a session object is only populated
+
+140
+00:08:03,420 --> 00:08:06,180
+once the payment is successful.
+
+141
+00:08:06,180 --> 00:08:08,970
+Right now, the payment is not successful.
+
+142
+00:08:08,970 --> 00:08:11,430
+Right now, we are creating a session,
+
+143
+00:08:11,430 --> 00:08:15,243
+and after that we will redirect to the Stripe website.
+
+144
+00:08:16,080 --> 00:08:19,170
+So right now, the PaymentIntent Id will be Null,
+
+145
+00:08:19,170 --> 00:08:20,403
+but that's okay.
+
+146
+00:08:21,960 --> 00:08:25,650
+With that configured, let me say if the change here,
+
+147
+00:08:25,650 --> 00:08:30,180
+and then we have to redirect to Stripe to process payment.
+
+148
+00:08:30,180 --> 00:08:34,049
+Now what is the URL where we have to redirect?
+
+149
+00:08:34,049 --> 00:08:37,712
+That is also present in session object that is returned.
+
+150
+00:08:39,510 --> 00:08:44,010
+So right here, we will say Response.Headers.Add,
+
+151
+00:08:44,010 --> 00:08:48,300
+and we will set location with the new URL
+
+152
+00:08:48,300 --> 00:08:51,693
+that is inside session.Url.
+
+153
+00:08:53,100 --> 00:08:55,200
+And finally we will redirect,
+
+154
+00:08:55,200 --> 00:09:00,127
+so we will say return new StatusCodeResult of 303,
+
+155
+00:09:01,080 --> 00:09:05,560
+that basically means that we are redirecting to a new URL
+
+156
+00:09:06,450 --> 00:09:09,513
+which is provided by Stripe right here.
+
+157
+00:09:10,440 --> 00:09:12,060
+So with that in place,
+
+158
+00:09:12,060 --> 00:09:15,540
+we have added quite some code right here
+
+159
+00:09:15,540 --> 00:09:18,483
+provided the CompanyId is zero.
+
+160
+00:09:19,380 --> 00:09:22,683
+Now let me run this and see what happens.
+
+161
+00:09:25,560 --> 00:09:28,170
+We are logged in as a company here,
+
+162
+00:09:28,170 --> 00:09:32,733
+let me log out and I will log in as a customer user.
+
+163
+00:09:33,690 --> 00:09:38,010
+I believe I have few items in the shopping cart already,
+
+164
+00:09:38,010 --> 00:09:39,750
+let me see.
+
+165
+00:09:39,750 --> 00:09:43,230
+Looks good, the total is 330.
+
+166
+00:09:43,230 --> 00:09:45,360
+Now let me place order.
+
+167
+00:09:45,360 --> 00:09:47,460
+And when we hit PLACE ORDER,
+
+168
+00:09:47,460 --> 00:09:52,170
+you will see it automatically redirects us to Stripe.
+
+169
+00:09:52,170 --> 00:09:53,370
+And great.
+
+170
+00:09:53,370 --> 00:09:55,380
+You can see the total price.
+
+171
+00:09:55,380 --> 00:09:58,170
+We have the item quantity,
+
+172
+00:09:58,170 --> 00:10:02,043
+and we have a nice checkout session right here.
+
+173
+00:10:03,300 --> 00:10:05,190
+Now when you work with Stripe,
+
+174
+00:10:05,190 --> 00:10:09,630
+they have test credit cards like you can use all four two,
+
+175
+00:10:09,630 --> 00:10:12,750
+and a valid CVV and expiration.
+
+176
+00:10:12,750 --> 00:10:16,830
+And let me uncheck this and click the Pay button.
+
+177
+00:10:16,830 --> 00:10:19,533
+What will happen when we hit the Pay button,
+
+178
+00:10:21,240 --> 00:10:24,270
+it'll actually redirect me back
+
+179
+00:10:24,270 --> 00:10:27,213
+to the SuccessURL right here.
+
+180
+00:10:28,080 --> 00:10:29,610
+But before I do that,
+
+181
+00:10:29,610 --> 00:10:31,500
+let me go to the database
+
+182
+00:10:31,500 --> 00:10:34,893
+and see if the session Id has been populated.
+
+183
+00:10:35,910 --> 00:10:38,340
+We have the new OrderHeader here,
+
+184
+00:10:38,340 --> 00:10:42,060
+you can see OrderStatus and PaymentStatus are pending,
+
+185
+00:10:42,060 --> 00:10:43,940
+that is good and perfect.
+
+186
+00:10:43,940 --> 00:10:48,940
+We have the session Id that has been populated,
+
+187
+00:10:49,050 --> 00:10:51,420
+so things are looking great.
+
+188
+00:10:51,420 --> 00:10:54,060
+Now, if I select Back button here,
+
+189
+00:10:54,060 --> 00:10:58,620
+and if I leave, it takes me back to the index page.
+
+190
+00:10:58,620 --> 00:11:01,830
+So that means that we are back from the Stripe here
+
+191
+00:11:01,830 --> 00:11:04,620
+and we are back on our page.
+
+192
+00:11:04,620 --> 00:11:06,330
+If we hit PLACE ORDER,
+
+193
+00:11:06,330 --> 00:11:10,350
+it'll only take us to the OrderConfirmation page.
+
+194
+00:11:10,350 --> 00:11:11,610
+But on that page,
+
+195
+00:11:11,610 --> 00:11:15,813
+how will we know whether the payment was successful or not,
+
+196
+00:11:16,680 --> 00:11:19,383
+let me show you that in the next video.
+

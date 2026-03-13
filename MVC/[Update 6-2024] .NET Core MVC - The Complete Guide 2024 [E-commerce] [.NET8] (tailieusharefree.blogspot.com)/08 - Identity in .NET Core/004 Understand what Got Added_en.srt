@@ -1,0 +1,592 @@
+1
+00:00:01,460 --> 00:00:03,600
+Instructor: Before we proceed further,
+
+2
+00:00:03,600 --> 00:00:06,900
+let me walk you through some of the changes that we have.
+
+3
+00:00:06,900 --> 00:00:09,450
+I know there are quite a few changes,
+
+4
+00:00:09,450 --> 00:00:12,300
+but, thankfully, I have committed the changes
+
+5
+00:00:12,300 --> 00:00:15,270
+so we can exactly see what is going on
+
+6
+00:00:15,270 --> 00:00:16,863
+and what got updated.
+
+7
+00:00:18,243 --> 00:00:19,620
+Perfect.
+
+8
+00:00:19,620 --> 00:00:23,550
+So first thing in the ApplicationDbContext here,
+
+9
+00:00:23,550 --> 00:00:26,010
+we added the OnModelCreating,
+
+10
+00:00:26,010 --> 00:00:29,733
+and these are the changes that we did, so that looks good.
+
+11
+00:00:30,750 --> 00:00:32,340
+Then the next thing here,
+
+12
+00:00:32,340 --> 00:00:37,340
+let me take a look at Program.cs in the BulkyWeb project.
+
+13
+00:00:37,680 --> 00:00:41,460
+There, you can see in the green what got added.
+
+14
+00:00:41,460 --> 00:00:46,050
+Basically, when we scaffolded Identity, it added a Service
+
+15
+00:00:46,050 --> 00:00:50,190
+which is AddDefaultIdentity for IdentityUser,
+
+16
+00:00:50,190 --> 00:00:53,280
+and there it has option where it is saying
+
+17
+00:00:53,280 --> 00:00:56,040
+that, "Hey, if you want to sign in,
+
+18
+00:00:56,040 --> 00:00:59,160
+your email account should be confirmed."
+
+19
+00:00:59,160 --> 00:01:02,850
+This is one of the option which is not required.
+
+20
+00:01:02,850 --> 00:01:07,230
+So if you remove that, then if your email is not confirmed,
+
+21
+00:01:07,230 --> 00:01:09,690
+even then the user can log in,
+
+22
+00:01:09,690 --> 00:01:12,547
+and we will go with that option.
+
+23
+00:01:12,547 --> 00:01:16,110
+But on top of that, we have something special here
+
+24
+00:01:16,110 --> 00:01:18,960
+which says AddEntityFrameworkStores,
+
+25
+00:01:18,960 --> 00:01:22,847
+and then it has the ApplicationDbContext.
+
+26
+00:01:22,847 --> 00:01:25,500
+So what happens this time?
+
+27
+00:01:25,500 --> 00:01:28,080
+When we add Identity to the project,
+
+28
+00:01:28,080 --> 00:01:31,440
+it basically also adds all the database tables
+
+29
+00:01:31,440 --> 00:01:34,230
+that are needed for the Identity,
+
+30
+00:01:34,230 --> 00:01:37,530
+like we have users table, we have roles table,
+
+31
+00:01:37,530 --> 00:01:42,388
+we have user roles table, claims table, and many more.
+
+32
+00:01:42,388 --> 00:01:46,110
+On this line 14, we are telling Entity Framework
+
+33
+00:01:46,110 --> 00:01:49,530
+that, "Hey, all of those tables will be managed
+
+34
+00:01:49,530 --> 00:01:53,727
+with the help of DbContext which is ApplicationDbContext."
+
+35
+00:01:54,899 --> 00:01:57,930
+That is where we are binding Entity Framework
+
+36
+00:01:57,930 --> 00:02:00,600
+with the Identity tables.
+
+37
+00:02:00,600 --> 00:02:05,302
+And with that, Identity is added in Program.cs.
+
+38
+00:02:05,302 --> 00:02:09,509
+One thing that we shall also add here is in the middleware,
+
+39
+00:02:09,509 --> 00:02:12,420
+we should be adding UseAuthentication,
+
+40
+00:02:12,420 --> 00:02:16,697
+and that, we must add before authorization.
+
+41
+00:02:16,697 --> 00:02:20,190
+And the reason behind that is authentication
+
+42
+00:02:20,190 --> 00:02:25,170
+is basically checking if username or password is valid.
+
+43
+00:02:25,170 --> 00:02:28,230
+If the username and password is valid,
+
+44
+00:02:28,230 --> 00:02:31,290
+then authorization comes into picture.
+
+45
+00:02:31,290 --> 00:02:33,300
+Authorization basically tells
+
+46
+00:02:33,300 --> 00:02:37,140
+that, "Hey, now you have access to the website,
+
+47
+00:02:37,140 --> 00:02:39,030
+but based on your role,
+
+48
+00:02:39,030 --> 00:02:43,710
+you might have access to some pages and not all the pages."
+
+49
+00:02:43,710 --> 00:02:46,890
+Like where we are updating the product and everything,
+
+50
+00:02:46,890 --> 00:02:50,820
+maybe role of admin has access to that page.
+
+51
+00:02:50,820 --> 00:02:53,820
+But if role of a logged-in user is customer,
+
+52
+00:02:53,820 --> 00:02:57,480
+they can only access Home page and Details page.
+
+53
+00:02:57,480 --> 00:03:00,210
+They cannot access the Product page.
+
+54
+00:03:00,210 --> 00:03:02,940
+But in order to check role of a user,
+
+55
+00:03:02,940 --> 00:03:06,180
+they must be first authenticated.
+
+56
+00:03:06,180 --> 00:03:07,500
+So always remember
+
+57
+00:03:07,500 --> 00:03:12,270
+that authentication will come before authorization.
+
+58
+00:03:12,270 --> 00:03:15,056
+That looks good for Program.cs.
+
+59
+00:03:15,056 --> 00:03:19,440
+Let me see what is updated in appsettings.json.
+
+60
+00:03:19,440 --> 00:03:23,190
+It added a new DB connection. We do not need that.
+
+61
+00:03:23,190 --> 00:03:24,840
+It added that line
+
+62
+00:03:24,840 --> 00:03:28,860
+because it was trying to add a new DB connection.
+
+63
+00:03:28,860 --> 00:03:31,743
+We do not need that so let me remove that,
+
+64
+00:03:32,580 --> 00:03:35,313
+and perfect, the comma as well,
+
+65
+00:03:36,540 --> 00:03:38,493
+and perfect, that looks good.
+
+66
+00:03:40,650 --> 00:03:43,470
+We do not have any change in appsettings.
+
+67
+00:03:43,470 --> 00:03:45,753
+I can revert that back as well.
+
+68
+00:03:46,740 --> 00:03:51,660
+Next, we have a change in LoginPartial.cshtml.
+
+69
+00:03:51,660 --> 00:03:55,350
+Now, this is not a change. You can see an A here.
+
+70
+00:03:55,350 --> 00:04:00,090
+That means a new file, _LoginPartial, has been added,
+
+71
+00:04:00,090 --> 00:04:01,980
+and in that partial view,
+
+72
+00:04:01,980 --> 00:04:05,550
+we basically have the Login and Register button.
+
+73
+00:04:05,550 --> 00:04:08,130
+If a user is already signed in,
+
+74
+00:04:08,130 --> 00:04:10,230
+then we have the Logout link,
+
+75
+00:04:10,230 --> 00:04:14,305
+and we have a Details link to manage that user.
+
+76
+00:04:14,305 --> 00:04:17,040
+We are injecting few things here.
+
+77
+00:04:17,040 --> 00:04:20,279
+Do not worry about any of them right now.
+
+78
+00:04:20,279 --> 00:04:24,180
+Basically, a new partial view has been added here,
+
+79
+00:04:24,180 --> 00:04:28,740
+and let me see what we have in the Areas, Account.
+
+80
+00:04:28,740 --> 00:04:32,687
+Quite a few files have been added right here.
+
+81
+00:04:32,687 --> 00:04:34,950
+But with all of that configured,
+
+82
+00:04:34,950 --> 00:04:39,060
+if we go to Solution Explorer, inside Areas,
+
+83
+00:04:39,060 --> 00:04:42,690
+we have a new folder with the name of Identity.
+
+84
+00:04:42,690 --> 00:04:44,320
+We can remove the Data
+
+85
+00:04:45,210 --> 00:04:48,645
+because there we had the ApplicationDbContext.
+
+86
+00:04:48,645 --> 00:04:50,850
+But in Identity, Pages,
+
+87
+00:04:50,850 --> 00:04:54,060
+it added all the pages that we selected,
+
+88
+00:04:54,060 --> 00:04:57,750
+and we selected all of the pages that were available
+
+89
+00:04:57,750 --> 00:05:00,210
+with the Identity package.
+
+90
+00:05:00,210 --> 00:05:04,380
+So you can see there are quite a few pages right here,
+
+91
+00:05:04,380 --> 00:05:08,340
+and all of these pages are not MVC pages.
+
+92
+00:05:08,340 --> 00:05:10,350
+They are Razor Pages
+
+93
+00:05:10,350 --> 00:05:13,080
+that we saw in the beginning of the course.
+
+94
+00:05:13,080 --> 00:05:17,253
+I gave you a brief idea on how Razor Pages work.
+
+95
+00:05:18,240 --> 00:05:20,460
+For example, we have the Login,
+
+96
+00:05:20,460 --> 00:05:25,460
+then we have the .cshtml.cs for the PageModel.
+
+97
+00:05:25,809 --> 00:05:27,960
+So right here in the page,
+
+98
+00:05:27,960 --> 00:05:31,650
+we have the PageModel, we have Log in,
+
+99
+00:05:31,650 --> 00:05:35,450
+we have Email, Password, and a Submit button.
+
+100
+00:05:35,450 --> 00:05:40,450
+On the PageModel here, we have few details,
+
+101
+00:05:40,770 --> 00:05:43,680
+but then we have the OnGet handler,
+
+102
+00:05:43,680 --> 00:05:46,830
+and we have the OnPost handler.
+
+103
+00:05:46,830 --> 00:05:48,960
+So that must feel familiar
+
+104
+00:05:48,960 --> 00:05:52,886
+to what we have already seen in Razor Pages.
+
+105
+00:05:52,886 --> 00:05:56,760
+Now, when the Identity was implemented by Microsoft
+
+106
+00:05:56,760 --> 00:06:00,270
+in initial version of .NET Core 2,
+
+107
+00:06:00,270 --> 00:06:04,530
+there were both MVC and Razor Page implementation,
+
+108
+00:06:04,530 --> 00:06:09,530
+but later on, Microsoft moved Identity only to Razor Pages.
+
+109
+00:06:10,500 --> 00:06:12,720
+That way, they do not have to maintain that
+
+110
+00:06:12,720 --> 00:06:14,880
+in both the places.
+
+111
+00:06:14,880 --> 00:06:17,880
+So, unfortunately, the Identity that we have
+
+112
+00:06:17,880 --> 00:06:21,270
+is only in Razor Pages.
+
+113
+00:06:21,270 --> 00:06:24,840
+But good thing is Razor Pages are not that different,
+
+114
+00:06:24,840 --> 00:06:26,700
+and we have seen how to perform
+
+115
+00:06:26,700 --> 00:06:29,550
+CRUD operation in Razor Pages,
+
+116
+00:06:29,550 --> 00:06:32,850
+so you should also have a basic understanding
+
+117
+00:06:32,850 --> 00:06:35,043
+on how Razor Pages work.
+
+118
+00:06:35,970 --> 00:06:37,980
+But if we're on the application,
+
+119
+00:06:37,980 --> 00:06:41,640
+how can we see the Login and Register page?
+
+120
+00:06:41,640 --> 00:06:43,650
+Because if I run right now,
+
+121
+00:06:43,650 --> 00:06:45,420
+you will notice on the Home page,
+
+122
+00:06:45,420 --> 00:06:48,990
+we do not see anything in the navigation.
+
+123
+00:06:48,990 --> 00:06:51,390
+Adding that is super simple.
+
+124
+00:06:51,390 --> 00:06:56,130
+If you remember, it already added one of the partial view,
+
+125
+00:06:56,130 --> 00:06:58,980
+let me show that in the web project,
+
+126
+00:06:58,980 --> 00:07:02,850
+which was LoginPartial right here.
+
+127
+00:07:02,850 --> 00:07:07,170
+So basically, if I go to Pages, well, not here.
+
+128
+00:07:07,170 --> 00:07:11,640
+In the default views, Shared, we have LoginPartial,
+
+129
+00:07:11,640 --> 00:07:14,523
+and that has the Login and Register button.
+
+130
+00:07:15,600 --> 00:07:18,510
+What we can do is in _layout,
+
+131
+00:07:18,510 --> 00:07:21,573
+we can add call to that partial view.
+
+132
+00:07:22,530 --> 00:07:27,530
+So right here, after the ul, this ul is the navbar-nav.
+
+133
+00:07:27,810 --> 00:07:32,810
+And rather than flex-grow-1, let me make it me-auto.
+
+134
+00:07:33,600 --> 00:07:38,600
+And after that ul here, we will be adding partial.
+
+135
+00:07:38,797 --> 00:07:43,797
+name is equal to, and name of that view is LoginPartial.
+
+136
+00:07:44,940 --> 00:07:48,750
+Make sure there is no spelling mistake there, save that,
+
+137
+00:07:48,750 --> 00:07:50,193
+and let me go back.
+
+138
+00:07:52,044 --> 00:07:54,900
+Perfect, you can see when we save it,
+
+139
+00:07:54,900 --> 00:07:57,840
+we have REGISTER and LOGIN right here.
+
+140
+00:07:57,840 --> 00:08:00,630
+We have to toggle the text there.
+
+141
+00:08:00,630 --> 00:08:04,950
+So if I go back here, I will remove the text-dark.
+
+142
+00:08:04,950 --> 00:08:08,403
+We do not need that in any place here.
+
+143
+00:08:10,098 --> 00:08:13,833
+Perfect. Save that and let me see.
+
+144
+00:08:15,303 --> 00:08:19,650
+Perfect. Now, we have the REGISTER and LOGIN buttons here.
+
+145
+00:08:19,650 --> 00:08:23,760
+And when we click on them, it is taking us to Identity,
+
+146
+00:08:23,760 --> 00:08:27,420
+and then it has page, Account, Register.
+
+147
+00:08:27,420 --> 00:08:30,539
+Now, why is this not working?
+
+148
+00:08:30,539 --> 00:08:33,393
+Let me explain that in the next video.
+

@@ -1,0 +1,524 @@
+1
+00:00:01,650 --> 00:00:04,360
+I am super excited for this video.
+
+2
+00:00:04,380 --> 00:00:10,620
+In this video, we will see the final application that we will build in this course.
+
+3
+00:00:11,490 --> 00:00:12,690
+On the home page here.
+
+4
+00:00:12,690 --> 00:00:19,470
+You can see we have products that are being displayed with image and we have some pricing right here.
+
+5
+00:00:19,800 --> 00:00:25,950
+We are not logged in to the application here and we have zero items in the shopping cart.
+
+6
+00:00:26,610 --> 00:00:33,600
+When we click on the details here, it displays a nice detailed summary where based on the quantity
+
+7
+00:00:33,630 --> 00:00:36,360
+you order, you get a discounted price.
+
+8
+00:00:36,660 --> 00:00:41,630
+So if you order 51 quantity here, the price will be 85.
+
+9
+00:00:41,730 --> 00:00:43,860
+Let me add that to the cart.
+
+10
+00:00:44,540 --> 00:00:48,110
+When we select Add to Cart, we need to log in.
+
+11
+00:00:48,650 --> 00:00:53,780
+If you do not have an account, you will have to register as a new user.
+
+12
+00:00:54,460 --> 00:00:56,470
+When you click register here.
+
+13
+00:00:56,470 --> 00:00:58,690
+We have built in validations.
+
+14
+00:00:59,110 --> 00:01:04,720
+Now you can register for an account here or you can use Facebook to log in.
+
+15
+00:01:05,319 --> 00:01:11,350
+I have already registered my user using Facebook, so it will directly sign me in.
+
+16
+00:01:12,010 --> 00:01:19,060
+So here we want to order a quantity of 51 add to cart and perfect.
+
+17
+00:01:19,090 --> 00:01:24,190
+We have a nice toaster notification cart updated successfully.
+
+18
+00:01:25,020 --> 00:01:26,720
+If we go to court here?
+
+19
+00:01:26,730 --> 00:01:27,630
+Perfect.
+
+20
+00:01:27,660 --> 00:01:30,930
+You can see the price we are getting is 85.
+
+21
+00:01:30,930 --> 00:01:32,460
+And that looks good.
+
+22
+00:01:33,540 --> 00:01:40,530
+Let me go to home here and let me add a few more items to the shopping cart here.
+
+23
+00:01:41,470 --> 00:01:42,970
+That looks good.
+
+24
+00:01:46,830 --> 00:01:47,580
+Perfect.
+
+25
+00:01:47,820 --> 00:01:51,450
+Now, in the shopping cart, we display grand total.
+
+26
+00:01:51,480 --> 00:01:54,720
+A user can remove any item if they want.
+
+27
+00:01:54,810 --> 00:01:59,580
+Also, they can modify the quantity directly, as you can see.
+
+28
+00:01:59,820 --> 00:02:06,900
+Once they are happy with the shopping cart here we will click summary and based on the user credentials
+
+29
+00:02:06,900 --> 00:02:10,919
+that we have, it will display some of the details about the user.
+
+30
+00:02:11,340 --> 00:02:16,290
+User will populate their shipping details and select place order.
+
+31
+00:02:16,710 --> 00:02:22,380
+Now when they select place order, it redirects them to Stripe for payment.
+
+32
+00:02:22,890 --> 00:02:31,170
+We will be using dummy credit card with Stripe, which is 424242 and that will be used for testing because
+
+33
+00:02:31,170 --> 00:02:33,540
+right now we are in the test mode.
+
+34
+00:02:34,230 --> 00:02:41,700
+When we hit the pay button here, it will accept the payment and it will redirect us back to the website
+
+35
+00:02:41,730 --> 00:02:46,960
+where we can see order placed successfully along with the order ID.
+
+36
+00:02:48,100 --> 00:02:55,450
+Other things that user can do is go to manage order and they can see their order and the order status.
+
+37
+00:02:55,780 --> 00:03:02,950
+We have carrier and tracking information that will be visible once the order is shipped and they can
+
+38
+00:03:02,950 --> 00:03:05,560
+see the order status is approved.
+
+39
+00:03:05,920 --> 00:03:10,750
+That is the functionality that a customer can do from the website.
+
+40
+00:03:11,200 --> 00:03:14,770
+But on top of that we have admin user as well.
+
+41
+00:03:15,430 --> 00:03:21,610
+So now let me log in as an admin and show you what is everything that an admin can do.
+
+42
+00:03:22,340 --> 00:03:28,550
+One thing that you can notice right away is when an admin logs in, we have something called as content
+
+43
+00:03:28,550 --> 00:03:30,620
+management right here.
+
+44
+00:03:31,670 --> 00:03:35,150
+Inside their admin can manage all the categories.
+
+45
+00:03:35,360 --> 00:03:37,250
+They can create new categories.
+
+46
+00:03:37,250 --> 00:03:41,060
+They can update existing categories, or they can delete them.
+
+47
+00:03:41,810 --> 00:03:44,300
+They can do the same thing for the product.
+
+48
+00:03:44,450 --> 00:03:51,260
+Product crud functionalities are a little bit more tricky and here we have a nice data table where they
+
+49
+00:03:51,260 --> 00:03:52,280
+can search.
+
+50
+00:03:52,310 --> 00:03:56,540
+They have some fancy filterings here along with sorting.
+
+51
+00:03:57,430 --> 00:03:59,860
+If they try to edit any product.
+
+52
+00:03:59,890 --> 00:04:00,850
+Perfect.
+
+53
+00:04:00,880 --> 00:04:07,840
+We have a nice rich text editor here where they can make the description as fancy as they want.
+
+54
+00:04:08,560 --> 00:04:15,370
+We see the existing image here and we have other details like what is the list price?
+
+55
+00:04:15,370 --> 00:04:16,720
+What should be the price?
+
+56
+00:04:16,720 --> 00:04:22,060
+If the quantity is 1 to 50, more than 50 and more than 100.
+
+57
+00:04:22,730 --> 00:04:29,780
+We have a category drop down from where we can assign a product, a category, and using that, we can
+
+58
+00:04:29,780 --> 00:04:32,000
+assign a category to our product.
+
+59
+00:04:32,870 --> 00:04:39,110
+Finally, if user wants to replace this image with something else, they can upload a new image here
+
+60
+00:04:39,110 --> 00:04:41,060
+and hit the update button.
+
+61
+00:04:42,370 --> 00:04:44,230
+When they try to delete product.
+
+62
+00:04:44,230 --> 00:04:50,170
+We have a nice, sweet alert notification where they are asking for the confirmation.
+
+63
+00:04:51,190 --> 00:04:55,360
+So that is the CRUD functionality with product and category.
+
+64
+00:04:55,870 --> 00:05:00,130
+On top of that, we will have a special functionality for companies.
+
+65
+00:05:00,430 --> 00:05:03,820
+So there will be four types of user in our website.
+
+66
+00:05:03,850 --> 00:05:07,960
+Let me show that admin can create a user as well.
+
+67
+00:05:08,470 --> 00:05:14,380
+This is creating an account by admin where admin can select role of a user.
+
+68
+00:05:14,650 --> 00:05:21,220
+They can create an admin account, they can create an employee, they can create a company account and
+
+69
+00:05:21,220 --> 00:05:23,230
+the end user is  customer.
+
+70
+00:05:24,090 --> 00:05:29,820
+Now, the difference between a company and a customer account is that a company user can place order
+
+71
+00:05:29,820 --> 00:05:30,990
+without payment.
+
+72
+00:05:31,350 --> 00:05:35,550
+And that is a common scenario when companies are placing order.
+
+73
+00:05:35,640 --> 00:05:37,650
+Typically they place the order.
+
+74
+00:05:37,650 --> 00:05:42,030
+Once the order is shipped, then they have 30 days to make the payment.
+
+75
+00:05:42,540 --> 00:05:49,290
+But a customer like you and me, when we place order on some website, we are expected to make the payment
+
+76
+00:05:49,290 --> 00:05:54,060
+right away and that we saw when customer was placing an order.
+
+77
+00:05:54,970 --> 00:05:56,500
+Now let me do one thing.
+
+78
+00:05:56,500 --> 00:05:58,540
+Register a company account.
+
+79
+00:05:58,780 --> 00:06:05,260
+As soon as I will select company here you can see a new dropdown comes here where user has to select
+
+80
+00:06:05,260 --> 00:06:07,540
+which company this account belongs to.
+
+81
+00:06:07,990 --> 00:06:13,090
+So the flow that we are envisioning is a company wants to buy from our website.
+
+82
+00:06:13,120 --> 00:06:19,480
+We will first register them on the company tab here where we can create a new company.
+
+83
+00:06:19,510 --> 00:06:25,600
+Once that company has been created, then we will create accounts for that company.
+
+84
+00:06:26,110 --> 00:06:30,160
+So let's say we are creating this email for Tech solutions.
+
+85
+00:06:30,280 --> 00:06:31,840
+Let me register.
+
+86
+00:06:33,330 --> 00:06:39,840
+Once we register, we got the toaster notification and right now we are logged in as admin.
+
+87
+00:06:40,480 --> 00:06:45,940
+So I will have to log out here and I will log in as the company account.
+
+88
+00:06:45,940 --> 00:06:47,290
+And perfect.
+
+89
+00:06:47,320 --> 00:06:52,360
+We do not see any content management that is only visible for admin.
+
+90
+00:06:53,460 --> 00:06:55,930
+We can add items to the cart here.
+
+91
+00:06:55,950 --> 00:06:58,110
+Let me do that real quick.
+
+92
+00:07:01,520 --> 00:07:05,600
+And we will place order when we go to summary.
+
+93
+00:07:05,600 --> 00:07:12,890
+This time the details are automatically populated based on what we had when the user was registered.
+
+94
+00:07:12,920 --> 00:07:17,720
+They can of course change that if they want, but we will not keep that.
+
+95
+00:07:17,720 --> 00:07:23,990
+And for a company user when they place order, we directly show them the confirmation page with the
+
+96
+00:07:23,990 --> 00:07:25,010
+order number.
+
+97
+00:07:25,280 --> 00:07:28,160
+So order has been placed successfully.
+
+98
+00:07:28,520 --> 00:07:31,100
+They did not require any payment.
+
+99
+00:07:31,850 --> 00:07:36,290
+Now let me log out again and let me log in as admin.
+
+100
+00:07:37,160 --> 00:07:41,810
+Admin will start managing all the orders as they start coming in.
+
+101
+00:07:42,320 --> 00:07:47,600
+We have manage order here for admin and they can see all the orders.
+
+102
+00:07:48,140 --> 00:07:54,920
+The first order that was placed here, you can see that is approved and here we can see payment intent
+
+103
+00:07:54,950 --> 00:07:55,280
+ID.
+
+104
+00:07:55,640 --> 00:07:57,680
+That means payment was done.
+
+105
+00:07:57,680 --> 00:08:05,400
+You can see payment status is also approved and right now the order status is approved, Admin can click
+
+106
+00:08:05,400 --> 00:08:10,500
+start processing and you can see the order status is now processing.
+
+107
+00:08:10,960 --> 00:08:13,990
+Next status that it can be is ship order.
+
+108
+00:08:14,260 --> 00:08:21,670
+But when they click ship order, we have notification to enter the carrier and tracking information.
+
+109
+00:08:22,150 --> 00:08:29,500
+Once they enter that and select ship order, perfect, the order is shipped and once the order is shipped,
+
+110
+00:08:29,500 --> 00:08:31,810
+it can no longer be cancelled.
+
+111
+00:08:32,890 --> 00:08:39,520
+On top of that, if admin wants to update any information in the order, they can do that and select
+
+112
+00:08:39,520 --> 00:08:40,419
+update order.
+
+113
+00:08:40,419 --> 00:08:41,140
+Detail.
+
+114
+00:08:41,799 --> 00:08:47,020
+These are all the functionalities that are only available to admin user.
+
+115
+00:08:47,890 --> 00:08:49,360
+Let me go back here.
+
+116
+00:08:49,360 --> 00:08:53,860
+And we have the next order here, which is for a company account.
+
+117
+00:08:53,890 --> 00:08:58,810
+There we do not have any payment, intent, ID and payment status.
+
+118
+00:08:58,840 --> 00:09:02,230
+You can see it is approved for delayed payment.
+
+119
+00:09:02,680 --> 00:09:06,770
+So in that scenario, admin will start processing.
+
+120
+00:09:06,790 --> 00:09:14,530
+They will ship the order here and once the order is shipped they have a pay now button that gets enabled.
+
+121
+00:09:15,480 --> 00:09:23,040
+If we go back to the orders, admin can take the payment or if the company user logs in, they can make
+
+122
+00:09:23,040 --> 00:09:24,450
+the payment themselves.
+
+123
+00:09:25,230 --> 00:09:31,470
+They can go to the manage order here and when they go to edit, they can make the payment.
+
+124
+00:09:31,920 --> 00:09:39,750
+It will redirect them back to Stripe and that is how we will capture that payment and complete the order.
+
+125
+00:09:40,760 --> 00:09:46,310
+We can go back if we want and make that payment later if we want that.
+
+126
+00:09:47,470 --> 00:09:53,140
+But that is the general flow that we have for our website by the length of the video.
+
+127
+00:09:53,170 --> 00:10:00,040
+You can see how many things we are going to cover in this website and it will be a very lengthy course.
+
+128
+00:10:00,220 --> 00:10:03,070
+But that does not mean you have to get scared.
+
+129
+00:10:03,100 --> 00:10:10,780
+That is a good thing because with that lengthy course we will cover a wide variety of topics with .net
+
+130
+00:10:10,780 --> 00:10:17,230
+core to make sure that by the end of this video you will feel proud of the application that you have
+
+131
+00:10:17,230 --> 00:10:17,830
+built.
+

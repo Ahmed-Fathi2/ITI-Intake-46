@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "F:\\ITI\\.net\\mvc\\Labs\\Lab2\\WebApplication2\\WebApplication2\\WebApplication2.csproj": {}
+    "F:\\ITI\\.Net\\mvc\\Labs\\Lab2\\WebApplication2\\WebApplication2\\WebApplication2.csproj": {}
   },
   "projects": {
-    "F:\\ITI\\.net\\mvc\\Labs\\Lab2\\WebApplication2\\WebApplication2\\WebApplication2.csproj": {
+    "F:\\ITI\\.Net\\mvc\\Labs\\Lab2\\WebApplication2\\WebApplication2\\WebApplication2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\ITI\\.net\\mvc\\Labs\\Lab2\\WebApplication2\\WebApplication2\\WebApplication2.csproj",
+        "projectUniqueName": "F:\\ITI\\.Net\\mvc\\Labs\\Lab2\\WebApplication2\\WebApplication2\\WebApplication2.csproj",
         "projectName": "WebApplication2",
-        "projectPath": "F:\\ITI\\.net\\mvc\\Labs\\Lab2\\WebApplication2\\WebApplication2\\WebApplication2.csproj",
+        "projectPath": "F:\\ITI\\.Net\\mvc\\Labs\\Lab2\\WebApplication2\\WebApplication2\\WebApplication2.csproj",
         "packagesPath": "C:\\Users\\dell\\.nuget\\packages\\",
         "outputPath": "F:\\ITI\\.net\\mvc\\Labs\\Lab2\\WebApplication2\\WebApplication2\\obj\\",
         "projectStyle": "PackageReference",

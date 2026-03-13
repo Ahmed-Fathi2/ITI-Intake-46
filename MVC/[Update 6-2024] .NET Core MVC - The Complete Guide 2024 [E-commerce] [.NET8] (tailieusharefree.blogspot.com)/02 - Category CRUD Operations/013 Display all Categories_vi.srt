@@ -1,0 +1,280 @@
+1
+00:00:01,790 --> 00:00:04,730
+Tải lại nóng hiện đang hoạt động trong dự án của chúng tôi.
+
+2
+00:00:04,730 --> 00:00:11,870
+Nhưng những gì chúng tôi thực sự phải làm là từ bộ điều khiển ở đây, chúng tôi cần truy xuất danh sách danh mục và chúng tôi phải
+
+3
+00:00:11,870 --> 00:00:14,600
+hiển thị danh sách đó trong chế độ xem của mình.
+
+4
+00:00:14,990 --> 00:00:22,910
+Bây giờ bạn đã quen với các thuật ngữ khi tôi sử dụng các hành động, khung nhìn và mô hình của bộ điều khiển để lặp
+
+5
+00:00:22,910 --> 00:00:30,020
+lại, chúng ta có bộ điều khiển ở đây bên trong, chúng ta sẽ có các phương thức hành động sẽ được gọi và
+
+6
+00:00:30,020 --> 00:00:37,640
+chúng ta sẽ có các khung nhìn tương ứng liên quan đến điều đó bên trong thư mục lượt xem có cùng tên với bộ điều
+
+7
+00:00:37,640 --> 00:00:38,600
+khiển.
+
+8
+00:00:39,440 --> 00:00:40,490
+Rất hoàn hảo.
+
+9
+00:00:40,520 --> 00:00:43,190
+Chúng tôi có tất cả các danh mục ngay tại đây.
+
+10
+00:00:43,220 --> 00:00:45,530
+Làm cách nào để chúng tôi chuyển chúng đến chế độ xem?
+
+11
+00:00:45,890 --> 00:00:47,090
+Khá đơn giản.
+
+12
+00:00:47,090 --> 00:00:50,840
+Chúng tôi sao chép nó và dán nó vào khung tròn.
+
+13
+00:00:51,290 --> 00:00:59,030
+Bằng cách đó, nó sẽ tự động chuyển đối tượng này sang chế độ xem và sau đó chúng ta phải chụp hoặc truy xuất đối tượng đó
+
+14
+00:00:59,030 --> 00:01:00,260
+trong chế độ xem.
+
+15
+00:01:00,830 --> 00:01:04,760
+Vì vậy, ở đây chúng tôi làm điều đó bằng cách sử dụng từ khóa mô hình.
+
+16
+00:01:05,269 --> 00:01:13,070
+Khi chúng tôi viết rằng chúng tôi phải viết @model và đảm bảo lần này mọi thứ đều là chữ thường.
+
+17
+00:01:14,440 --> 00:01:17,830
+Vì khi ta phải truy xuất model sẽ khác.
+
+18
+00:01:17,830 --> 00:01:24,850
+Nhưng khi chúng tôi đang truy xuất hoặc xác định mô hình ở trên cùng ở đây, mọi thứ sẽ là chữ thường.
+
+19
+00:01:25,240 --> 00:01:29,650
+Và sau đó chúng ta phải xác định loại mô hình này sẽ là gì.
+
+20
+00:01:30,250 --> 00:01:35,380
+Nếu chúng ta chuyển đến bộ điều khiển, đó là danh sách danh mục đang được chuyển.
+
+21
+00:01:35,620 --> 00:01:40,690
+Vì vậy, chúng tôi có thể sao chép nó và chúng tôi có thể dán nó ngay tại đây.
+
+22
+00:01:41,720 --> 00:01:48,260
+Bằng cách đó, chúng tôi đang xác định rằng chế độ xem của chúng tôi sẽ nhận được một mô hình sẽ là danh sách danh mục.
+
+23
+00:01:48,920 --> 00:01:55,370
+Khi chúng tôi xác định điều đó, thì chúng tôi có thể sử dụng mô hình này bên trong mã HTML của mình.
+
+24
+00:01:55,940 --> 00:02:03,380
+Khi chúng tôi đang làm việc với ứng dụng MVC, chúng tôi có chế độ xem ở đây và bên trong đó, chúng tôi có một cái gì
+
+25
+00:02:03,380 --> 00:02:04,250
+đó đặc biệt.
+
+26
+00:02:04,400 --> 00:02:06,560
+Chúng ta có thể viết mã C#.
+
+27
+00:02:06,830 --> 00:02:11,210
+Nếu bạn đến từ . net, điều này là không thể.
+
+28
+00:02:11,540 --> 00:02:17,510
+Nhưng ở đây chúng ta có thể có mã C# như điều kiện cho các vòng lặp và hơn thế nữa.
+
+29
+00:02:18,220 --> 00:02:21,250
+Để viết bất kỳ mã C-sharp nào bên trong The View.
+
+30
+00:02:21,280 --> 00:02:23,260
+Chúng ta phải sử dụng dấu hiệu THÊM.
+
+31
+00:02:26,730 --> 00:02:32,010
+Và hãy để tôi thêm điều đó vào bên trong và chúng ta sẽ có một bữa tiệc Trà.
+
+32
+00:02:34,020 --> 00:02:38,400
+Đây là HTML cơ bản và không liên quan gì đến . lõi mạng.
+
+33
+00:02:38,640 --> 00:02:47,550
+Nhưng bây giờ khi chúng ta có tbody, chúng ta sẽ có tr ở đây và tôi sẽ thêm thẻ td vào nơi chúng ta muốn hiển thị
+
+34
+00:02:47,550 --> 00:02:48,870
+tên danh mục.
+
+35
+00:02:49,290 --> 00:02:54,960
+Chúng tôi sẽ thêm một td khác vào nơi chúng tôi muốn hiển thị thứ tự hiển thị.
+
+36
+00:02:55,760 --> 00:02:58,370
+Tên và thứ tự hiển thị sẽ ở bên trong.
+
+37
+00:02:58,370 --> 00:02:59,990
+Danh sách thể loại.
+
+38
+00:03:00,660 --> 00:03:04,980
+Vì vậy, chúng tôi sẽ phải lặp qua chúng và hiển thị tất cả chúng.
+
+39
+00:03:05,490 --> 00:03:09,540
+Về cơ bản, chúng ta cần một vòng lặp for cho phần tử tr này.
+
+40
+00:03:10,120 --> 00:03:17,410
+Để thêm một vòng lặp for, chúng ta có ký hiệu ADD, chúng ta có for mỗi câu lệnh và bạn có thể thấy chúng ta có thể dễ dàng viết
+
+41
+00:03:17,410 --> 00:03:22,450
+mã C# bên trong thành phần giao diện người dùng, đó là chế độ xem của chúng ta.
+
+42
+00:03:23,110 --> 00:03:28,300
+Vì vậy, đối với mỗi chúng ta sẽ nói biến obj trong mô hình.
+
+43
+00:03:28,660 --> 00:03:35,200
+Bây giờ ở đây, để truy cập mô hình mà chúng ta đã định nghĩa ở trên cùng ở đây, chúng ta không thể
+
+44
+00:03:35,200 --> 00:03:40,420
+viết mô hình bằng chữ thường, mà chúng ta phải viết bằng chữ hoa Pascal.
+
+45
+00:03:40,420 --> 00:03:47,860
+Vì vậy, M sẽ là vốn và theo cách đó, nó sẽ lặp lại thông qua mô hình mà chúng tôi đã xác định trên trang
+
+46
+00:03:47,860 --> 00:03:51,010
+và đó sẽ là danh sách tất cả các danh mục.
+
+47
+00:03:51,980 --> 00:03:52,970
+Rất hoàn hảo.
+
+48
+00:03:52,970 --> 00:03:54,500
+Chúng tôi đang lặp qua chúng.
+
+49
+00:03:54,500 --> 00:04:02,030
+Chúng ta sẽ có dấu ngoặc nhọn và tôi sẽ đóng dấu ngoặc nhọn sau tr như vậy.
+
+50
+00:04:05,450 --> 00:04:06,080
+Hoàn hảo.
+
+51
+00:04:06,350 --> 00:04:14,060
+Nếu tôi lưu tất cả ở đây và nếu tôi quay lại chế độ xem do tải lại nóng, bạn có thể thấy nó đang hiển thị
+
+52
+00:04:14,060 --> 00:04:16,670
+tên và thứ tự hiển thị ba lần.
+
+53
+00:04:16,940 --> 00:04:20,720
+Đó là bởi vì chúng tôi có ba loại trong cơ sở dữ liệu.
+
+54
+00:04:20,870 --> 00:04:28,520
+Nhưng để hiển thị lại giá trị bên trong OBJ, chúng ta phải sử dụng dấu ADD, chúng ta có thể truy cập OBJ.
+
+55
+00:04:28,940 --> 00:04:34,880
+Nếu chúng ta viết . tương tự như mã C#, chúng ta có thể truy cập tất cả các thuộc tính.
+
+56
+00:04:34,880 --> 00:04:40,100
+Vì vậy, chúng tôi có tên và chúng tôi có obj. displayorder.
+
+57
+00:04:40,880 --> 00:04:45,620
+Lưu lại, quay lại và hoàn thiện với điều đó.
+
+58
+00:04:45,620 --> 00:04:48,380
+Mọi thứ đang hoạt động như mong đợi.
+
+59
+00:04:48,530 --> 00:04:52,550
+Chúng tôi đang hiển thị tên cũng như thứ tự hiển thị.
+
+60
+00:04:53,450 --> 00:04:56,810
+Một điều mà bạn có thể làm ở đây là nơi chúng tôi có mô hình.
+
+61
+00:04:56,810 --> 00:05:00,980
+Chúng tôi có thể viết mã C# vì chúng tôi đang ở trong câu lệnh ADD.
+
+62
+00:05:00,980 --> 00:05:09,920
+Vì vậy, chúng ta có thể sắp xếp thứ tự đó theo và ở đây chúng ta có thể xác định thuộc tính sẽ là u đến u. displayorder.
+
+63
+00:05:10,710 --> 00:05:12,170
+Nếu tôi tiết kiệm mà?
+
+64
+00:05:12,180 --> 00:05:13,020
+Hoàn hảo.
+
+65
+00:05:13,050 --> 00:05:16,140
+Bây giờ chúng ta có thứ tự hiển thị tăng dần.
+
+66
+00:05:16,680 --> 00:05:24,270
+Bạn có thể thấy các chế độ xem mạnh mẽ như thế nào khi chúng tôi có thể kết hợp mã c# trong các chế độ xem của mình và chúng tôi có thể thực hiện một số phép
+
+67
+00:05:24,270 --> 00:05:30,390
+tính phức tạp không thể thực hiện được trong phiên bản . khung mạng.
+
+68
+00:05:30,810 --> 00:05:31,980
+Rất hoàn hảo.
+
+69
+00:05:31,980 --> 00:05:34,050
+Chúng tôi đã đạt được tiến bộ lớn.
+
+70
+00:05:34,170 --> 00:05:37,230
+Hãy để tôi tiếp tục từ video tiếp theo.
+

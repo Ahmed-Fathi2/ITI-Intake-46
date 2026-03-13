@@ -1,0 +1,264 @@
+1
+00:00:01,780 --> 00:00:08,170
+Bây giờ chúng ta có ba bản ghi trong bảng danh mục, làm cách nào chúng ta có thể truy xuất và hiển thị chúng
+
+2
+00:00:08,170 --> 00:00:11,080
+trong chế độ xem chỉ mục cho danh mục của mình?
+
+3
+00:00:11,810 --> 00:00:18,830
+Để chuyển nó tới chế độ xem, chúng tôi phải truy xuất nó trong bộ điều khiển của mình bởi vì bất cứ điều gì chúng tôi chuyển
+
+4
+00:00:18,830 --> 00:00:24,260
+tới chế độ xem ở đây, đó là những gì nó sẽ sử dụng và hiển thị trong giao diện người dùng.
+
+5
+00:00:24,680 --> 00:00:28,280
+Vì vậy, trước tiên chúng ta phải làm việc trên bộ điều khiển ở đây.
+
+6
+00:00:29,400 --> 00:00:29,910
+Vì điều đó.
+
+7
+00:00:29,910 --> 00:00:32,070
+Hãy để tôi đóng mọi thứ khác ở đây.
+
+8
+00:00:32,070 --> 00:00:39,270
+Và khi chúng ta phải làm việc, như truy xuất dữ liệu, thêm dữ liệu hoặc cập nhật dữ liệu, chúng ta sẽ làm
+
+9
+00:00:39,270 --> 00:00:42,540
+việc với một thứ đó là ngữ cảnh DB ứng dụng.
+
+10
+00:00:43,530 --> 00:00:50,130
+Bây giờ, nếu đây không phải là một ứng dụng lõi mạng, những gì chúng ta thường làm là chúng ta sẽ có một ngữ cảnh
+
+11
+00:00:50,130 --> 00:00:51,540
+DB ứng dụng ở đây.
+
+12
+00:00:51,690 --> 00:00:54,480
+Chúng tôi sẽ tạo một đối tượng mới của điều đó.
+
+13
+00:00:54,510 --> 00:00:57,330
+Hãy để tôi gọi đó là một cái gì đó giống như DB ở đây.
+
+14
+00:00:57,330 --> 00:01:03,120
+Và sau đó trên DB đó, chúng ta sẽ phải mở kết nối, đóng kết nối và tất cả những thứ đó.
+
+15
+00:01:04,010 --> 00:01:06,920
+Nhưng chúng tôi không làm việc với di sản. ứng dụng mạng.
+
+16
+00:01:07,190 --> 00:01:08,450
+Chúng tôi đang làm việc với. lõi ròng.
+
+17
+00:01:08,570 --> 00:01:10,070
+Điều gì xảy ra với. Net là khi bạn thêm thứ gì đó vào vùng chứa dịch vụ ngay tại đây, theo cách đó
+
+18
+00:01:10,310 --> 00:01:11,210
+bạn đang thêm thứ đó vào nội dung phụ thuộc.
+
+19
+00:01:11,630 --> 00:01:12,830
+Ngay chỗ này.
+
+20
+00:01:13,070 --> 00:01:20,270
+Bạn đã nói với. Net đó, này, bất cứ khi nào ai đó yêu cầu triển khai ngữ cảnh DB của ứng dụng, đây là cấu hình
+
+21
+00:01:20,270 --> 00:01:22,130
+mà bạn phải thực hiện.
+
+22
+00:01:22,670 --> 00:01:23,600
+Và dựa vào đó, bạn phải tạo một đối tượng và cung cấp đối tượng đó.
+
+23
+00:01:23,600 --> 00:01:24,380
+Do đó, chúng ta không còn phải làm việc với việc tạo các đối tượng đó nữa.
+
+24
+00:01:24,590 --> 00:01:32,150
+Những gì chúng ta có thể làm ở đây là chúng ta có thể nói trực tiếp với ứng dụng rằng, này, hãy cho
+
+25
+00:01:32,150 --> 00:01:34,490
+tôi một triển khai ứng dụng.
+
+26
+00:01:34,490 --> 00:01:38,870
+Bối cảnh DB.
+
+27
+00:01:39,290 --> 00:01:44,000
+Tôi biết bạn có điều đó vì tôi đã đăng ký bên trong tệp services.
+
+28
+00:01:44,390 --> 00:01:51,350
+Chúng ta sẽ lấy hàm tạo bên trong đó.
+
+29
+00:01:51,350 --> 00:01:52,070
+Vì vậy, tôi sẽ viết CTOR và nhấn tab ở đây và bên trong
+
+30
+00:01:52,070 --> 00:01:53,400
+tham số ở đây, chúng ta có thể cho biết đối tượng nào hoặc cách triển khai mà chúng ta muốn.
+
+31
+00:01:53,420 --> 00:01:58,880
+Chúng tôi muốn triển khai Bối cảnh DB của ứng dụng.
+
+32
+00:01:59,600 --> 00:02:02,240
+Hãy để tôi gọi đó là DB.
+
+33
+00:02:02,240 --> 00:02:10,100
+Sau đó, ngay tại đây, hãy để tôi tạo một trường chỉ đọc riêng tư, đó là bối cảnh cơ sở dữ liệu ứng dụng.
+
+34
+00:02:10,100 --> 00:02:12,140
+Gọi DB gạch dưới đó và bất kỳ cách triển khai nào
+
+35
+00:02:12,380 --> 00:02:16,760
+chúng tôi nhận được bên trong hàm tạo ở đây, chúng tôi sẽ gán nó cho biến cục bộ của chúng tôi.
+
+36
+00:02:16,790 --> 00:02:18,710
+Bằng cách đó, chúng ta sẽ có thể sử dụng điều này bên trong bất kỳ phương thức hành động nào khác.
+
+37
+00:02:19,490 --> 00:02:25,850
+Tiếp theo, những gì chúng tôi muốn làm là trong chỉ mục ở đây, chúng tôi muốn truy xuất tất cả các danh mục.
+
+38
+00:02:25,880 --> 00:02:33,350
+Bạn không cần phải viết bất kỳ SQL nào cho việc sử dụng lõi khung thực thể.
+
+39
+00:02:33,350 --> 00:02:35,480
+Bạn có thể lấy tất cả những thứ đó.
+
+40
+00:02:36,110 --> 00:02:41,660
+Vì vậy, ở đây, hãy để tôi gọi đây là var và tôi sẽ gọi danh sách danh mục OBJ đó bằng với chúng
+
+41
+00:02:42,290 --> 00:02:48,350
+tôi sẽ sử dụng dấu gạch dưới DB IntelliSense ở đây đang hiển thị toàn bộ lệnh cần thiết.
+
+42
+00:02:48,650 --> 00:02:53,690
+Nhưng hãy để tôi nhập điều đó trên DB gạch dưới này, chúng tôi có thể truy cập tất cả các bộ DB mà chúng tôi đã thêm.
+
+43
+00:02:53,720 --> 00:02:55,670
+Tập hợp DB mà chúng tôi muốn truy xuất lần này là các danh mục.
+
+44
+00:02:56,620 --> 00:03:05,710
+Vì vậy, nếu chúng tôi nhập các danh mục, chúng tôi sẽ truy xuất danh mục đó và trên đó chúng tôi có một phương thức. to list sẽ chuyển nó thành một danh sách và chỉ
+
+45
+00:03:05,710 --> 00:03:10,750
+định nó ngay tại đây.
+
+46
+00:03:10,750 --> 00:03:18,340
+Do đó, chúng ta cũng có thể gọi đây là danh sách danh mục.
+
+47
+00:03:18,730 --> 00:03:22,930
+Cá nhân tôi không thích sử dụng VAR, vì vậy bạn có thể nói rõ rằng
+
+48
+00:03:23,320 --> 00:03:31,270
+danh sách các danh mục sẽ được truy xuất bằng lệnh này.
+
+49
+00:03:31,270 --> 00:03:34,840
+Bạn có thể thấy nó đơn giản như thế nào với lõi khung thực thể.
+
+50
+00:03:35,640 --> 00:03:40,810
+Bạn chỉ phải viết ba từ ở đây.
+
+51
+00:03:40,830 --> 00:03:48,180
+Nó sẽ đi tới cơ sở dữ liệu, chạy lệnh, chọn dấu sao từ danh mục, truy xuất và gán nó cho đối tượng
+
+52
+00:03:48,210 --> 00:03:49,860
+ngay tại đây.
+
+53
+00:03:50,220 --> 00:03:53,790
+Hãy để tôi thêm một điểm gỡ lỗi ở đây và xem nó hoạt động.
+
+54
+00:03:54,120 --> 00:03:57,100
+Chúng tôi sẽ nhấp vào danh mục ở đây.
+
+55
+00:03:57,120 --> 00:04:03,900
+Và hoàn hảo.
+
+56
+00:04:03,900 --> 00:04:06,420
+Chúng tôi đạt đến điểm dừng của chúng tôi.
+
+57
+00:04:07,170 --> 00:04:11,910
+Nếu tôi nhấn f10, nó sẽ chuyển sang dòng tiếp theo ở đây.
+
+58
+00:04:14,290 --> 00:04:16,420
+Và nếu chúng ta kiểm tra danh sách danh mục ở đây, thật tuyệt.
+
+59
+00:04:17,610 --> 00:04:18,600
+Nó có ba đối tượng.
+
+60
+00:04:18,600 --> 00:04:20,220
+Chúng tôi có hành động, khoa học viễn tưởng và lịch sử.
+
+61
+00:04:20,250 --> 00:04:24,510
+Vì vậy, bạn có thể thấy việc truy xuất mọi thứ từ cơ sở dữ liệu bằng cách
+
+62
+00:04:24,840 --> 00:04:28,940
+sử dụng lõi khung thực thể cho bảng danh mục dễ dàng như thế nào.
+
+63
+00:04:28,950 --> 00:04:30,690
+Nhưng khi chúng tôi quay lại chế độ xem, chúng tôi không hiển thị điều đó.
+
+64
+00:04:30,720 --> 00:04:34,440
+Những gì chúng ta phải làm là chúng ta phải chuyển đối tượng này cho chế độ xem.
+
+65
+00:04:35,340 --> 00:04:43,230
+Và sau đó trong chế độ xem, chúng tôi phải tìm nạp và trích xuất và hiển thị tất cả các danh mục.
+
+66
+00:04:43,230 --> 00:04:44,700
+Hãy để tôi làm điều đó trong video tiếp theo.
+

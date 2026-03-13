@@ -1,0 +1,236 @@
+1
+00:00:01,730 --> 00:00:08,630
+Những gì chúng tôi đã làm trước đây là chúng tôi đã hạ cấp ứng dụng của mình xuống mạng bảy để triển khai ứng dụng đó từ
+
+2
+00:00:08,630 --> 00:00:15,770
+cổng Azure, nhưng chúng tôi cũng có thể triển khai ứng dụng đó trực tiếp từ Visual Studio, như tôi đã nói trước đây.
+
+3
+00:00:16,550 --> 00:00:19,400
+Và để làm điều đó, hãy để tôi đi đến cơ sở dữ liệu SQL.
+
+4
+00:00:19,400 --> 00:00:21,980
+Ở đây chúng ta có MVC cồng kềnh.
+
+5
+00:00:22,400 --> 00:00:24,740
+Hãy để tôi xóa cơ sở dữ liệu đó.
+
+6
+00:00:28,260 --> 00:00:30,540
+Chúng tôi sẽ xóa nó ở đây.
+
+7
+00:00:31,080 --> 00:00:32,369
+Chờ đó.
+
+8
+00:00:32,369 --> 00:00:36,930
+Và trong khi điều đó đang bị xóa, hãy để tôi chuyển đến Dịch vụ ứng dụng.
+
+9
+00:00:37,380 --> 00:00:43,050
+Tôi có thể tìm kiếm ở đây và chúng tôi có khả năng làm chủ dotnet MVC cồng kềnh.
+
+10
+00:00:43,080 --> 00:00:44,910
+Xóa cái đó là tốt.
+
+11
+00:00:45,240 --> 00:00:47,670
+Chúng ta cần sao chép tên ở đây.
+
+12
+00:00:48,460 --> 00:00:51,130
+Dán vào đó và xóa.
+
+13
+00:00:51,620 --> 00:00:51,930
+Phải.
+
+14
+00:00:51,940 --> 00:00:52,990
+Trông tôt đây.
+
+15
+00:00:53,350 --> 00:01:01,060
+Hãy để tôi quay lại đây và từ Visual Studio, nếu chúng tôi nhấp chuột phải vào dự án Web, Chọn xuất bản
+
+16
+00:01:01,060 --> 00:01:01,750
+ở đó.
+
+17
+00:01:01,870 --> 00:01:07,750
+Chà, trước khi chúng tôi làm điều đó, hãy để tôi nâng cấp phiên bản 2 của chúng tôi. 08.
+
+18
+00:01:08,500 --> 00:01:10,480
+Vì vậy, hãy để tôi nhấp chuột phải vào đây.
+
+19
+00:01:10,480 --> 00:01:12,160
+Chỉnh sửa tệp dự án.
+
+20
+00:01:12,310 --> 00:01:14,620
+Làm điều này. mạng tám.
+
+21
+00:01:14,830 --> 00:01:17,560
+Hãy để tôi mở tất cả các tập tin dự án.
+
+22
+00:01:22,960 --> 00:01:25,720
+Làm tất cả lúc tám giờ ở đây.
+
+23
+00:01:28,360 --> 00:01:29,830
+Và lưu lại.
+
+24
+00:01:30,910 --> 00:01:40,090
+Đóng tất cả các tab ở đây và sau đó chúng tôi có thể mở các gói NuGet quản lý riêng lẻ bao gồm bản phát hành trước tại
+
+25
+00:01:40,450 --> 00:01:42,730
+đây và để tôi cập nhật gói.
+
+26
+00:01:45,850 --> 00:01:47,090
+Trông tôt đây.
+
+27
+00:01:47,110 --> 00:01:52,240
+Chúng tôi có các mô hình ở đây bao gồm tiền phát hành.
+
+28
+00:01:55,100 --> 00:01:58,910
+Hoàn hảo khi chúng tôi có quyền truy cập dữ liệu.
+
+29
+00:02:01,590 --> 00:02:03,660
+Hãy để tôi cập nhật tất cả chúng.
+
+30
+00:02:07,850 --> 00:02:10,580
+Và cuối cùng, chúng ta cần dự án web.
+
+31
+00:02:10,729 --> 00:02:12,440
+Hãy để tôi xử lý việc đó.
+
+32
+00:02:12,470 --> 00:02:13,340
+Rất tiếc.
+
+33
+00:02:14,030 --> 00:02:18,680
+Quản lý gói NuGet, cập nhật tất cả các gói.
+
+34
+00:02:20,030 --> 00:02:22,030
+Chúng tôi đã cập nhật sai ở đây.
+
+35
+00:02:22,040 --> 00:02:23,210
+Đã từ chối điều đó.
+
+36
+00:02:24,680 --> 00:02:28,100
+Tôi cần phát hành trước ở đó và cập nhật.
+
+37
+00:02:28,130 --> 00:02:28,910
+Rất tiếc.
+
+38
+00:02:28,940 --> 00:02:30,530
+Từ chối điều đó một lần nữa.
+
+39
+00:02:31,190 --> 00:02:34,630
+Tôi không muốn sọc, nhưng tôi muốn Microsoft.
+
+40
+00:02:34,640 --> 00:02:36,140
+Trông tôt đây.
+
+41
+00:02:36,170 --> 00:02:37,340
+Tiếp tục.
+
+42
+00:02:38,690 --> 00:02:39,500
+Hoàn hảo.
+
+43
+00:02:40,100 --> 00:02:42,680
+Với điều đó, hãy để tôi đóng tất cả các tab.
+
+44
+00:02:43,040 --> 00:02:45,080
+Xây dựng lại giải pháp.
+
+45
+00:02:46,950 --> 00:02:47,900
+Và tuyệt vời.
+
+46
+00:02:47,910 --> 00:02:54,780
+Hãy để tôi chạy cái này để đảm bảo rằng dự án hoạt động tốt và chúng tôi đang gặp lỗi ở đây.
+
+47
+00:02:54,780 --> 00:03:00,960
+Khi tôi Google điều đó, nó nói rằng phiên bản Dotnet 8 mới không được cài đặt tự động.
+
+48
+00:03:00,990 --> 00:03:04,260
+Vì vậy, hãy để tôi tải về bản xem trước ở đây.
+
+49
+00:03:05,350 --> 00:03:07,000
+Và để tôi tải nó về.
+
+50
+00:03:07,990 --> 00:03:13,310
+Khi tôi khởi động ứng dụng, tôi đã xem trước một và xem trước hai đã được phát hành.
+
+51
+00:03:13,330 --> 00:03:19,150
+Vì vậy, mặc dù chúng tôi đang thêm gói đó vào gói NuGet, nhưng nó vẫn chưa được cài đặt trên máy của tôi.
+
+52
+00:03:19,180 --> 00:03:21,910
+Đó là lý do tại sao chúng tôi thấy thông báo lỗi đó.
+
+53
+00:03:22,830 --> 00:03:27,210
+Hãy để tôi cài đặt nó và tôi sẽ đóng Visual Studio.
+
+54
+00:03:32,260 --> 00:03:32,800
+Hoàn hảo.
+
+55
+00:03:32,800 --> 00:03:34,060
+Thế là xong.
+
+56
+00:03:34,090 --> 00:03:39,880
+Hãy để tôi mở lại dự án và thử chạy nó với Dotnet 8.
+
+57
+00:03:41,320 --> 00:03:42,210
+Hoàn hảo.
+
+58
+00:03:42,220 --> 00:03:46,720
+Lần này nó đang hoạt động và mọi thứ đều ổn.
+
+59
+00:03:47,200 --> 00:03:51,460
+Trong video tiếp theo, hãy để tôi triển khai ứng dụng.
+

@@ -1,0 +1,240 @@
+1
+00:00:01,890 --> 00:00:05,939
+But we have the connection string and appsettings.json file.
+
+2
+00:00:06,210 --> 00:00:12,090
+What we want to do next is basically create database in SQL Server.
+
+3
+00:00:12,630 --> 00:00:19,410
+But the database that we want to create, we want to create using code that we have in the application
+
+4
+00:00:19,410 --> 00:00:21,030
+using entity framework.
+
+5
+00:00:21,030 --> 00:00:29,910
+Core entity framework core is the framework that will let us do all the things related to database directly
+
+6
+00:00:29,910 --> 00:00:31,830
+from the code right here.
+
+7
+00:00:32,890 --> 00:00:40,540
+Now back in the old days of .net to point to entity framework core was already included in the main package
+
+8
+00:00:40,540 --> 00:00:40,870
+of.
+
+9
+00:00:41,090 --> 00:00:42,490
+.Net application.
+
+10
+00:00:42,790 --> 00:00:50,470
+But as the .net framework has enhanced, the basic application comes with the packages that are needed
+
+11
+00:00:50,470 --> 00:00:58,210
+and everything else have to be added manually to the project in order to add a new get package to our
+
+12
+00:00:58,210 --> 00:00:58,900
+project.
+
+13
+00:00:58,930 --> 00:01:05,890
+We will go to bulky web here, right click and we will select Manage NuGet packages.
+
+14
+00:01:08,800 --> 00:01:13,580
+The first package that we need is Microsoft.Entity Framework Core.
+
+15
+00:01:13,660 --> 00:01:19,570
+It is already supported based on IntelliSense, but if not, you can search that as well.
+
+16
+00:01:20,050 --> 00:01:27,250
+Now the version that you see here is 7.0.3, but we are using the .net eight in preview.
+
+17
+00:01:27,250 --> 00:01:31,390
+So we have to enable this checkbox include pre-release.
+
+18
+00:01:32,850 --> 00:01:39,480
+If .Net eight was released, then if you do not have this checkbox on, you will see the latest version.
+
+19
+00:01:39,960 --> 00:01:42,000
+We want the preview version.
+
+20
+00:01:42,000 --> 00:01:48,330
+So select that and we will select Microsoft.Entity Framework Core NuGet Package.
+
+21
+00:01:49,680 --> 00:01:51,900
+Let me install that package here.
+
+22
+00:01:52,080 --> 00:01:54,270
+Accept the license and.
+
+23
+00:01:54,270 --> 00:01:54,870
+Perfect.
+
+24
+00:01:54,870 --> 00:01:56,070
+That looks good.
+
+25
+00:01:57,250 --> 00:02:03,670
+We will be using entity framework core, but for the database we will be using SQL Server.
+
+26
+00:02:03,670 --> 00:02:06,600
+So that is also displayed right here.
+
+27
+00:02:06,610 --> 00:02:12,250
+We need the package Microsoft.Entity FrameworkCore.SQL Server.
+
+28
+00:02:12,370 --> 00:02:14,410
+We have the version here.
+
+29
+00:02:14,530 --> 00:02:16,240
+Let me install that.
+
+30
+00:02:17,480 --> 00:02:25,310
+One thing that I will always remind you is if you install one preview version or even with any .net version,
+
+31
+00:02:25,310 --> 00:02:29,750
+make sure all the Microsoft packages are of the same version.
+
+32
+00:02:30,470 --> 00:02:36,950
+Like if you install entity framework core with .net eight and then if you install other package with
+
+33
+00:02:36,950 --> 00:02:39,470
+seven, things will not work.
+
+34
+00:02:39,680 --> 00:02:44,630
+So make sure that every package that you install is of the same release.
+
+35
+00:02:44,660 --> 00:02:51,020
+Let's say in middle of the course, if preview two or preview nine of .net eight is released when
+
+36
+00:02:51,020 --> 00:02:57,440
+you are installing here, you can always install the version that you want and you do not always have
+
+37
+00:02:57,440 --> 00:02:59,240
+to install the latest one.
+
+38
+00:03:00,020 --> 00:03:02,110
+So make sure to remember that.
+
+39
+00:03:02,120 --> 00:03:08,750
+But after the two packages that we installed, we also have to install Microsoft.Entity Framework
+
+40
+00:03:08,750 --> 00:03:10,100
+core.tools.
+
+41
+00:03:10,910 --> 00:03:15,350
+This package will enable the commands that we will use for migration.
+
+42
+00:03:15,830 --> 00:03:17,350
+Now, what is migration?
+
+43
+00:03:17,360 --> 00:03:20,060
+Do not panic when the time is right.
+
+44
+00:03:20,060 --> 00:03:22,250
+I will explain everything to you.
+
+45
+00:03:22,250 --> 00:03:29,780
+But right now make sure to install Microsoft.Entity Framework core.tools to the project.
+
+46
+00:03:32,020 --> 00:03:33,160
+And perfect.
+
+47
+00:03:33,190 --> 00:03:35,800
+Now we have installed three packages.
+
+48
+00:03:35,980 --> 00:03:40,720
+If you go to the installed tab here, you can see all of the packages.
+
+49
+00:03:41,020 --> 00:03:47,980
+Again, if let's say new version is released, you can go to update here and update all of the packages
+
+50
+00:03:47,980 --> 00:03:50,590
+rather than updating a single package.
+
+51
+00:03:50,890 --> 00:03:54,070
+But right now, everything looks good.
+
+52
+00:03:55,140 --> 00:04:02,160
+Now because we add these packages inside the Manage NuGet package, they are also added in the project
+
+53
+00:04:02,160 --> 00:04:02,790
+file.
+
+54
+00:04:03,060 --> 00:04:11,100
+So if I click edit here, you can see in the package reference it has added all three packages right
+
+55
+00:04:11,100 --> 00:04:11,820
+here.
+
+56
+00:04:12,210 --> 00:04:15,870
+This is the actual location that is very important.
+
+57
+00:04:15,870 --> 00:04:23,190
+Anytime you add a NuGet package, an entry will be added inside the project file of that project.
+
+58
+00:04:23,430 --> 00:04:30,240
+And that way project knows which are all the packages that are being used and it will load all of them.
+
+59
+00:04:32,180 --> 00:04:35,060
+With that, we have added the NuGet packages.
+
+60
+00:04:35,390 --> 00:04:38,360
+Let me continue from the next video.
+

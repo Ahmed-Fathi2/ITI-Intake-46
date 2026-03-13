@@ -1,81 +1,133 @@
 using ITI.Application.Dtos;
 using ITI.Application.Interfaces.Services;
-using static System.Net.Mime.MediaTypeNames;
+using System.ComponentModel;
 
 namespace ITI.WinForms
 {
     public partial class Form1 : Form
     {
         private readonly IStudentService studentService;
+        private readonly IStudentCourseService studentCourseService;
+        private readonly ICourseService courseService;
 
-        public Form1(IStudentService studentService)
+        public Form1(IStudentService studentService, IStudentCourseService studentCourseService, ICourseService courseService)
         {
-            InitializeComponent();
             this.studentService = studentService;
-            GetAllStudent();
+            this.studentCourseService = studentCourseService;
+            this.courseService = courseService;
+
+            InitializeComponent();
+
+            UpdateStudentBtn.Click += UpdateStudentBtn_Click;
+            DeleteStudentBtn.Click += DeleteStudentBtn_Click;
+            studentDataView.SelectionChanged += StudentDataView_SelectionChanged;
+
+            LoadCourses();
+            LoadStudents();
         }
 
-        private void GetAllStudent()
+        private void LoadCourses()
         {
-            var data = studentService.GetAll();
-
-            studentDataView.AutoGenerateColumns = true;
-
-            studentDataView.DataSource = data;
-            studentCombo.DataSource = data;
-            studentCombo.ValueMember = "Id";
-            studentCombo.DisplayMember = "FirstName";
-
-        }
-
-
-
-        private void CreateStudentBtn_Click(object sender, EventArgs e)
-        {
-            var student = new CreateStudentDto(
-                FirstName: FNameTxt.Text,
-                LastName: LNameTxt.Text,
-                Phone: PhoneTxt.Text
-                );
-
-            studentService.Add(student);
-            ClearText();
-            GetAllStudent();
-        }
-
-        private void ClearText()
-        {
-            FNameTxt.Clear();
-            LNameTxt.Clear();
-            PhoneTxt.Clear();
-
-        }
-
-
-
-        private void studentCombo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (studentCombo.SelectedValue is int id)
+            var courses = courseService.GetAll().ToList();
+            courseChecklist.Items.Clear();
+            foreach (var c in courses)
             {
-                var student = studentService.GetById(id);
+                courseChecklist.Items.Add(new { Id = c.Id, Name = c.Name }, false);
+            }
+            courseChecklist.DisplayMember = "Name";
+            courseChecklist.ValueMember = "Id";
+        }
 
-                if (student == null)
+        private void LoadStudents()
+        {
+            var students = studentService.GetAll().ToList();
+
+            studentDataView.DataSource = null;
+            studentDataView.DataSource = new BindingList<AllStudentDto>(students);
+        }
+
+        private void CreateStudentBtn_Click(object? sender, EventArgs e)
+        {
+            var dto = new CreateStudentDto(FNameTxt.Text, LNameTxt.Text, PhoneTxt.Text);
+            var newId = studentService.Add(dto);
+
+            // assign selected courses
+            for (int i = 0; i < courseChecklist.Items.Count; i++)
+            {
+                if (courseChecklist.GetItemChecked(i))
                 {
-                    MessageBox.Show("Not Found");
+                    var item = courseChecklist.Items[i];
+                    var idProp = item.GetType().GetProperty("Id");
+                    if (idProp != null)
+                    {
+                        var courseId = (int)idProp.GetValue(item)!;
+                        var scDto = new CreateStudentCourseDto(newId, courseId);
+                        studentCourseService.Add(scDto);
+                    }
                 }
-                else
+            }
+
+            ClearInputs();
+            LoadStudents();
+        }
+
+        private void StudentDataView_SelectionChanged(object? sender, EventArgs e)
+        {
+            if (studentDataView.CurrentRow?.DataBoundItem is AllStudentDto dto)
+            {
+                FNameTxt.Text = dto.FirstName ?? string.Empty;
+                LNameTxt.Text = dto.LastName ?? string.Empty;
+                PhoneTxt.Text = dto.Phone ?? string.Empty;
+                // show assigned course names
+                try
                 {
-                    FNameTxt.Text = student.FirstName;
-                    LNameTxt.Text = student.LastName;
-                    PhoneTxt.Text = student.Phone;
+                    var assignments = studentCourseService.GetAll()
+                        .Where(sc => sc.StudentId == dto.Id)
+                        .Select(sc => sc.CourseName)
+                        .Where(n => !string.IsNullOrWhiteSpace(n))
+                        .ToList();
+
+                    assignedCoursesLbl.Text = assignments.Any() ? string.Join(", ", assignments) : "-";
+                }
+                catch
+                {
+                    assignedCoursesLbl.Text = string.Empty;
                 }
             }
         }
 
-        private void UpdateStudentBtn_Click(object sender, EventArgs e)
+        private void UpdateStudentBtn_Click(object? sender, EventArgs e)
         {
+            if (studentDataView.CurrentRow?.DataBoundItem is AllStudentDto dto)
+            {
+                var updateDto = new UpdateStudentDto(dto.Id, FNameTxt.Text, LNameTxt.Text, PhoneTxt.Text);
+                studentService.Update(updateDto);
+                LoadStudents();
+            }
+        }
 
+        private void DeleteStudentBtn_Click(object? sender, EventArgs e)
+        {
+            if (studentDataView.CurrentRow?.DataBoundItem is AllStudentDto dto)
+            {
+                var result = MessageBox.Show("Are you sure you want to delete this student?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    studentService.Delete(dto.Id);
+                    ClearInputs();
+                    LoadStudents();
+                }
+            }
+        }
 
+        private void ClearInputs()
+        {
+            FNameTxt.Text = string.Empty;
+            LNameTxt.Text = string.Empty;
+            PhoneTxt.Text = string.Empty;
+            for (int i = 0; i < courseChecklist.Items.Count; i++)
+                courseChecklist.SetItemChecked(i, false);
+            assignedCoursesLbl.Text = string.Empty;
         }
     }
 }

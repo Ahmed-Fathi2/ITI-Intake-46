@@ -1,0 +1,216 @@
+1
+00:00:01,859 --> 00:00:02,693
+Instructor: One last thing
+
+2
+00:00:02,693 --> 00:00:05,280
+that we have to work on is on product.
+
+3
+00:00:05,280 --> 00:00:07,080
+When we delete any product
+
+4
+00:00:07,080 --> 00:00:10,773
+we have to make sure that we remove those images as well.
+
+5
+00:00:11,940 --> 00:00:13,380
+If we go back to the code
+
+6
+00:00:13,380 --> 00:00:17,550
+and scroll down where we have the delete action method
+
+7
+00:00:17,550 --> 00:00:21,390
+we had some logic to remove the old image,
+
+8
+00:00:21,390 --> 00:00:22,500
+but now we will have
+
+9
+00:00:22,500 --> 00:00:25,440
+to basically delete the complete directory.
+
+10
+00:00:25,440 --> 00:00:28,743
+And in that directory we can delete all the files.
+
+11
+00:00:29,730 --> 00:00:33,900
+We will know that directory from the product ID here.
+
+12
+00:00:33,900 --> 00:00:35,643
+So, let me scroll up.
+
+13
+00:00:37,060 --> 00:00:41,370
+Here, we had the code where we were creating that directory.
+
+14
+00:00:41,370 --> 00:00:46,370
+I will copy that and paste it right here.
+
+15
+00:00:46,530 --> 00:00:50,100
+We do not care about the file name, the product path.
+
+16
+00:00:50,100 --> 00:00:51,900
+We need the ID here.
+
+17
+00:00:51,900 --> 00:00:54,120
+We get that in the parameter.
+
+18
+00:00:54,120 --> 00:00:56,040
+That looks good.
+
+19
+00:00:56,040 --> 00:00:59,190
+The www route path we can get using
+
+20
+00:00:59,190 --> 00:01:00,990
+webHostEnvironment.the WebRoutePath.
+
+21
+00:01:03,920 --> 00:01:08,220
+So we will have the final path with the product ID.
+
+22
+00:01:08,220 --> 00:01:11,370
+We can check if that directory exists.
+
+23
+00:01:11,370 --> 00:01:15,813
+If it does, then we want to do some calculations here.
+
+24
+00:01:16,770 --> 00:01:20,520
+Rather than create directory, we want to delete that.
+
+25
+00:01:20,520 --> 00:01:23,820
+But before we delete the directory, we have to retrieve
+
+26
+00:01:23,820 --> 00:01:27,753
+all the files in that directory and remove each file.
+
+27
+00:01:28,680 --> 00:01:32,040
+We will retrieve all the files in a string array,
+
+28
+00:01:32,040 --> 00:01:34,500
+and I will call that file path,
+
+29
+00:01:34,500 --> 00:01:37,470
+where we will set Directory.GetFiles.
+
+30
+00:01:37,470 --> 00:01:40,800
+And then for each file in the file path,
+
+31
+00:01:40,800 --> 00:01:42,720
+we want to remove file.
+
+32
+00:01:42,720 --> 00:01:46,593
+So, we can save file.delete, and file path.
+
+33
+00:01:47,820 --> 00:01:52,820
+We will have to add system.io.File.Delete, and perfect.
+
+34
+00:01:54,330 --> 00:01:58,080
+So we are deleting the individual files here in that folder.
+
+35
+00:01:58,080 --> 00:02:00,933
+And finally we are deleting that directory.
+
+36
+00:02:02,520 --> 00:02:05,340
+Everything else here looks good.
+
+37
+00:02:05,340 --> 00:02:10,199
+Let me remove the commented code here and save that.
+
+38
+00:02:10,199 --> 00:02:13,410
+We are already running the application.
+
+39
+00:02:13,410 --> 00:02:15,453
+Let me create a new product.
+
+40
+00:02:19,500 --> 00:02:22,053
+I will upload three image here.
+
+41
+00:02:23,190 --> 00:02:24,023
+Perfect.
+
+42
+00:02:24,023 --> 00:02:26,400
+Let me go to the folder.
+
+43
+00:02:26,400 --> 00:02:28,318
+Refresh here.
+
+44
+00:02:28,318 --> 00:02:29,187
+Perfect.
+
+45
+00:02:29,187 --> 00:02:31,950
+10, 10 is the product.
+
+46
+00:02:31,950 --> 00:02:35,370
+If we edit here, that is the product.
+
+47
+00:02:35,370 --> 00:02:38,193
+Let me go back and delete that.
+
+48
+00:02:39,390 --> 00:02:40,800
+It got removed.
+
+49
+00:02:40,800 --> 00:02:43,740
+If I press F five here, perfect.
+
+50
+00:02:43,740 --> 00:02:45,753
+The folder is also deleted.
+
+51
+00:02:46,800 --> 00:02:48,600
+So all the credit functionalities
+
+52
+00:02:48,600 --> 00:02:52,442
+for product is working as expected.
+
+53
+00:02:52,442 --> 00:02:54,390
+In the next video,
+
+54
+00:02:54,390 --> 00:02:57,873
+let me work on displaying image right here.
+

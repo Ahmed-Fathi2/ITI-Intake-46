@@ -1,0 +1,312 @@
+1
+00:00:01,560 --> 00:00:06,300
+Bây giờ chúng ta đang bước vào phần thú vị của việc triển khai kho lưu trữ của mình.
+
+2
+00:00:06,570 --> 00:00:15,510
+Vì vậy, trong thư mục kho lưu trữ, tôi sẽ thêm một lớp gọi là Kho lưu trữ đó và lớp đó sẽ triển khai
+
+3
+00:00:15,510 --> 00:00:17,130
+kho lưu trữ I.
+
+4
+00:00:18,760 --> 00:00:21,040
+Tôi sẽ biến nó thành một lớp công khai.
+
+5
+00:00:21,950 --> 00:00:24,800
+Chúng ta cần triển khai giao diện ở đây.
+
+6
+00:00:24,800 --> 00:00:31,730
+Và không phát hiện ra rằng có thể đó là thay đổi nội bộ được công khai ở đây.
+
+7
+00:00:32,270 --> 00:00:40,220
+Nếu tôi nhấn dấu chấm điều khiển, tôi đang gặp một số vấn đề ở đây và lý do là vì tôi có kho lưu trữ
+
+8
+00:00:40,220 --> 00:00:41,570
+và tôi lưu trữ.
+
+9
+00:00:41,810 --> 00:00:49,790
+Nếu muốn, bạn có thể đổi tên nó, nhưng tôi sẽ thêm câu lệnh sử dụng cho kho lưu trữ dấu chấm truy cập dữ liệu dấu
+
+10
+00:00:49,790 --> 00:00:51,170
+chấm cồng kềnh.
+
+11
+00:00:51,290 --> 00:00:53,360
+Kho chấm.
+
+12
+00:00:54,680 --> 00:00:57,380
+Cùng với đó, chúng tôi sẽ nhận được kho lưu trữ.
+
+13
+00:00:57,380 --> 00:01:04,340
+Nhưng một điều mà chúng ta phải xác định trong kho lưu trữ là lớp hiện tại là gì.
+
+14
+00:01:04,340 --> 00:01:11,330
+Ngoài ra, chúng tôi đang làm việc với chung ở đây, vì vậy chúng tôi sẽ nói T trong đó T là lớp.
+
+15
+00:01:12,530 --> 00:01:17,070
+Và cùng với đó, lớp Kho lưu trữ đang triển khai một kho lưu trữ.
+
+16
+00:01:17,090 --> 00:01:21,500
+Nếu bạn nhấn dấu chấm điều khiển, chúng tôi có giao diện thực hiện.
+
+17
+00:01:22,440 --> 00:01:29,040
+Khi chúng tôi thêm cái chung ở đây, chúng tôi cần làm cho lớp chung chung và hoàn hảo.
+
+18
+00:01:29,040 --> 00:01:30,300
+Điều đó hoạt động.
+
+19
+00:01:31,280 --> 00:01:31,820
+Với.
+
+20
+00:01:31,820 --> 00:01:34,130
+Chúng tôi có tất cả các phương pháp ngay tại đây.
+
+21
+00:01:34,160 --> 00:01:35,870
+Hãy thực hiện điều đó.
+
+22
+00:01:36,670 --> 00:01:38,800
+Khi chúng tôi thêm một thực thể.
+
+23
+00:01:38,830 --> 00:01:44,590
+Chúng tôi đã từng thêm điều đó vào DB gạch dưới, thêm dấu chấm và sau đó chúng tôi đã sử dụng để thêm thực thể.
+
+24
+00:01:45,040 --> 00:01:48,880
+Vì vậy, chúng tôi sẽ cần điều đó bằng cách sử dụng phép nội xạ phụ thuộc.
+
+25
+00:01:49,790 --> 00:01:57,290
+Tôi sẽ có ngữ cảnh DB ứng dụng chỉ đọc riêng tư và trong hàm tạo, chúng tôi sẽ lấy ngữ cảnh DB
+
+26
+00:01:57,290 --> 00:02:01,310
+ứng dụng và chỉ định ngữ cảnh đó ngay tại đây.
+
+27
+00:02:02,000 --> 00:02:04,460
+Nhưng bây giờ có một điều sẽ khác.
+
+28
+00:02:04,580 --> 00:02:11,330
+Trước đây, khi chúng tôi đang làm việc gì đó, chúng tôi có các danh mục dấu chấm DB gạch dưới và sau đó chúng tôi có
+
+29
+00:02:11,330 --> 00:02:11,810
+THÊM.
+
+30
+00:02:12,170 --> 00:02:14,300
+Nhưng ngay bây giờ chúng ta không biết điều đó.
+
+31
+00:02:14,300 --> 00:02:17,870
+Và ở đây chúng ta không thể sử dụng chung chung như thế này.
+
+32
+00:02:18,050 --> 00:02:23,720
+Vì vậy, chúng tôi không thể nói DB dot t bởi vì nó không biết điều đó có nghĩa là gì.
+
+33
+00:02:24,520 --> 00:02:27,010
+Chúng tôi muốn đảm bảo rằng chúng tôi sử dụng chung chung.
+
+34
+00:02:27,040 --> 00:02:30,370
+Bằng cách đó, chúng tôi có thể truy cập trực tiếp vào bộ cơ sở dữ liệu.
+
+35
+00:02:30,790 --> 00:02:40,390
+Vì vậy, ngay tại đây, tôi có thể tạo một bộ DB nội bộ trên loại chung T và gọi đó là bộ DB.
+
+36
+00:02:41,470 --> 00:02:47,800
+Sau đó, chúng ta có thể đặt tập hợp db dấu chấm này bằng với dấu chấm DB gạch dưới.
+
+37
+00:02:47,830 --> 00:02:55,570
+Chúng tôi có thể đặt cái hiện tại là cái chung mà chúng tôi nhận được ở đây sẽ được đặt thành bộ DB.
+
+38
+00:02:55,780 --> 00:03:02,230
+Vì vậy, khi chúng tôi tạo lớp chung này trên danh mục, bộ DB sẽ được đặt thành danh mục.
+
+39
+00:03:03,100 --> 00:03:10,900
+Vì vậy, nói một cách đơn giản, nơi chúng tôi có các danh mục dấu chấm db gạch dưới, điều này sẽ tương đương với tập hợp DB
+
+40
+00:03:10,930 --> 00:03:12,070
+mà chúng tôi có.
+
+41
+00:03:13,120 --> 00:03:20,440
+Vì vậy, khi chúng tôi đang nói các danh mục dấu chấm db gạch dưới, dấu chấm thêm và chúng tôi đã chuyển một số thực thể ở đây.
+
+42
+00:03:20,470 --> 00:03:24,670
+Bây giờ tất cả những gì chúng ta phải nói là db set dot add.
+
+43
+00:03:26,130 --> 00:03:27,970
+Tôi hy vọng điều đó có ý nghĩa ở đây.
+
+44
+00:03:27,990 --> 00:03:29,610
+Vậy chúng ta có quảng cáo ở đâu?
+
+45
+00:03:29,610 --> 00:03:34,650
+Chúng tôi sẽ nói bộ DB gạch dưới. quảng cáo và chúng tôi có thực thể.
+
+46
+00:03:35,800 --> 00:03:44,530
+Bằng cách đó, chúng tôi có thể sử dụng bộ DB và nó sẽ chung chung dựa trên loại kho lưu trữ ở đây được triển khai.
+
+47
+00:03:45,600 --> 00:03:48,330
+Vì vậy, hoàn hảo và có vẻ tốt ở đây.
+
+48
+00:03:49,430 --> 00:03:51,140
+Tiếp theo những gì chúng ta có ở đây.
+
+49
+00:03:51,140 --> 00:03:54,620
+Hãy để tôi loại bỏ điều này và thêm một câu lệnh sử dụng.
+
+50
+00:03:54,650 --> 00:03:56,350
+Nó sạch hơn nhiều.
+
+51
+00:03:56,360 --> 00:03:58,370
+Chúng tôi có con mèo riêng lẻ.
+
+52
+00:03:59,680 --> 00:04:03,660
+Và để làm được điều đó, chúng ta sẽ làm việc trên biến mắt của T.
+
+53
+00:04:04,030 --> 00:04:06,040
+Chúng tôi sẽ gọi truy vấn đó.
+
+54
+00:04:06,070 --> 00:04:09,250
+Và chúng tôi sẽ chỉ định bộ DB hoàn chỉnh ở đây.
+
+55
+00:04:09,520 --> 00:04:14,560
+Vì vậy, về cơ bản ngay bây giờ chúng tôi có bộ DB hoàn chỉnh mà chúng tôi đã chỉ định ở đây.
+
+56
+00:04:14,590 --> 00:04:20,589
+Sau đó, trên truy vấn, chúng tôi có thể áp dụng điều kiện where và tôi có thể vượt qua bộ lọc.
+
+57
+00:04:21,310 --> 00:04:25,810
+Bất cứ điều gì chúng tôi nhận được ở đây, chúng tôi sẽ chỉ định điều đó trở lại truy vấn.
+
+58
+00:04:26,670 --> 00:04:32,940
+Vì vậy, theo cách đó, bất kể điều kiện nào chúng ta có, nó sẽ áp dụng điều kiện đó trong điều kiện hao mòn và nó sẽ
+
+59
+00:04:32,940 --> 00:04:34,920
+có truy vấn sẵn sàng cho điều đó.
+
+60
+00:04:35,160 --> 00:04:38,790
+Bây giờ get phải luôn trả về một thực thể.
+
+61
+00:04:39,150 --> 00:04:45,120
+Vì vậy, khi chúng tôi quay lại, chúng tôi có thể nói từ truy vấn chúng tôi muốn cái đầu tiên hoặc mặc định.
+
+62
+00:04:46,210 --> 00:04:52,870
+Những gì chúng tôi đã làm ở đây giống hệt như những gì tôi đã có trong nhận xét ngay tại đây.
+
+63
+00:04:53,540 --> 00:05:00,890
+Đầu tiên trên tập hợp, chúng tôi có điều kiện ở đâu và sau đó chúng tôi sẽ nhận được điều kiện đầu tiên hoặc mặc định từ
+
+64
+00:05:00,890 --> 00:05:01,670
+bản ghi đó.
+
+65
+00:05:01,700 --> 00:05:05,840
+Đó là logic mà chúng tôi đã thực hiện ngay tại đây.
+
+66
+00:05:06,440 --> 00:05:08,330
+Sau đó, chúng tôi có được tất cả.
+
+67
+00:05:08,360 --> 00:05:19,460
+Chúng tôi có thể sao chép biến I ở đó và chúng tôi có thể trả lại truy vấn. để liệt kê vì Dbset về cơ bản sẽ có tất cả các bản ghi như danh
+
+68
+00:05:19,460 --> 00:05:22,860
+mục trong ví dụ của chúng tôi.
+
+69
+00:05:22,880 --> 00:05:26,180
+Chúng tôi phải chuyển đổi nó và quay trở lại.
+
+70
+00:05:27,300 --> 00:05:30,160
+Cuối cùng, chúng tôi đã loại bỏ nó trên trang web.
+
+71
+00:05:30,240 --> 00:05:33,390
+Chúng tôi đã xóa và chúng tôi có thể vượt qua thực thể.
+
+72
+00:05:34,300 --> 00:05:39,430
+Tương tự để xóa, chúng tôi cũng có một phương thức tích hợp, đó là loại bỏ phạm vi.
+
+73
+00:05:39,760 --> 00:05:44,260
+Hãy để tôi thêm điều đó và đó cũng là bên trong lõi F.
+
+74
+00:05:44,500 --> 00:05:52,150
+Phạm vi loại bỏ đó mong đợi một vô số và nó sẽ loại bỏ tất cả các danh mục được chuyển
+
+75
+00:05:52,150 --> 00:05:53,590
+đến vô số.
+
+76
+00:05:56,050 --> 00:05:57,040
+Rất hoàn hảo.
+
+77
+00:05:57,070 --> 00:06:03,370
+Cùng với đó, giao diện kho lưu trữ của chúng tôi đã được triển khai và giao diện này trông gọn gàng hơn nhiều.
+
+78
+00:06:04,180 --> 00:06:07,210
+Hãy để tôi tiếp tục từ video tiếp theo.
+

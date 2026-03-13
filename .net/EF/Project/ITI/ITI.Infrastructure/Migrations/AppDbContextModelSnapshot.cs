@@ -123,7 +123,7 @@ namespace ITI.Infrastructure.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
-                    b.Property<int>("ManagerId")
+                    b.Property<int?>("ManagerId")
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
@@ -134,7 +134,8 @@ namespace ITI.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("ManagerId")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("[ManagerId] IS NOT NULL");
 
                     b.ToTable("Departments");
                 });
@@ -271,8 +272,7 @@ namespace ITI.Infrastructure.Migrations
                     b.HasOne("ITI.Domain.Entities.Instractor", "Instractor")
                         .WithOne("MangedDepartment")
                         .HasForeignKey("ITI.Domain.Entities.Department", "ManagerId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.NoAction);
 
                     b.Navigation("Instractor");
                 });

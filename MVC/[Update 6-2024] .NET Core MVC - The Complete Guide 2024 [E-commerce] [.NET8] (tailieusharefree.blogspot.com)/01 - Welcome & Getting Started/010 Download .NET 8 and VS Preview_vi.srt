@@ -1,0 +1,68 @@
+1
+00:00:01,630 --> 00:00:02,620
+Trong khóa học này.
+
+2
+00:00:02,620 --> 00:00:05,710
+Chúng tôi sẽ sử dụng mạng tám ngay bây giờ.
+
+3
+00:00:05,980 --> 00:00:07,510
+Net 8 đang ở chế độ xem trước.
+
+4
+00:00:07,510 --> 00:00:08,830
+Vì vậy, nếu bạn tải xuống.
+
+5
+00:00:09,070 --> 00:00:12,400
+Net tám bản xem trước hiện tại đã được phát hành.
+
+6
+00:00:13,000 --> 00:00:16,720
+Trước tiên, bạn phải tải xuống phiên bản dựa trên hệ thống của mình.
+
+7
+00:00:16,780 --> 00:00:24,880
+Tôi đã tải xuống Windows X64 và sau khi bạn tải xuống net 8 thì bạn phải tải xuống bản xem trước Visual
+
+8
+00:00:24,880 --> 00:00:26,620
+Studio 2022.
+
+9
+00:00:27,100 --> 00:00:33,520
+Bạn cần có phiên bản xem trước nếu muốn làm việc với Dotnet 8 vì nó chưa được phát
+
+10
+00:00:33,520 --> 00:00:34,120
+hành.
+
+11
+00:00:35,050 --> 00:00:37,890
+Phiên bản xem trước có thể được tải xuống miễn phí.
+
+12
+00:00:37,900 --> 00:00:45,190
+Chỉ cần truy cập Visual Studio chấm Microsoft. com chuyển tiếp dấu gạch chéo vs chuyển tiếp dấu gạch chéo xem trước.
+
+13
+00:00:45,670 --> 00:00:52,330
+Đảm bảo cài đặt bản xem trước Dotnet 8 và Visual Studio trước khi bạn tiếp tục khóa học.
+
+14
+00:00:52,630 --> 00:00:59,800
+Bây giờ nếu bạn muốn làm theo Dotnet 7, rõ ràng bạn có thể làm điều đó và mọi thứ sẽ hoạt động.
+
+15
+00:00:59,830 --> 00:01:07,090
+Khác với một thay đổi đã được giới thiệu trong Dotnet 8, nơi chúng có loại mới chỉ dành
+
+16
+00:01:07,090 --> 00:01:08,740
+cho ngày và giờ.
+
+17
+00:01:09,100 --> 00:01:15,350
+Nhưng ngoài ra, mọi thứ cũng sẽ hoạt động hoàn toàn tốt với Dotnet 7.
+

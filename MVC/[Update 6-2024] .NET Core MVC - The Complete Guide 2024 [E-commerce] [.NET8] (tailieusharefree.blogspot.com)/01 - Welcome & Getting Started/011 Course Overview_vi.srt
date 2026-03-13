@@ -1,0 +1,96 @@
+1
+00:00:01,500 --> 00:00:06,000
+Hãy để tôi cung cấp cho bạn một cái nhìn tổng quan ngắn gọn về những gì chúng ta sẽ đề cập trong khóa học này.
+
+2
+00:00:06,420 --> 00:00:12,630
+Bây giờ, như chúng ta đã biết, chúng ta đang xây dựng một ứng dụng trong thế giới thực, vì vậy dự án cuối cùng của chúng ta sẽ
+
+3
+00:00:12,630 --> 00:00:13,770
+có toàn bộ kiến trúc.
+
+4
+00:00:14,280 --> 00:00:21,450
+Khi chúng tôi làm việc với khung thực thể cho cơ sở dữ liệu, chúng tôi sẽ sử dụng mẫu kho lưu trữ và đơn vị công việc.
+
+5
+00:00:22,080 --> 00:00:26,860
+Sau đó, chúng ta sẽ thấy dữ liệu tạm thời xem lại dữ liệu xem lại trong . lõi mạng.
+
+6
+00:00:26,880 --> 00:00:32,640
+Sự khác biệt giữa chúng là gì và lý tưởng nhất là khi nào bạn nên sử dụng từng cái trong số chúng?
+
+7
+00:00:33,030 --> 00:00:38,130
+Chúng ta cũng sẽ thấy các bộ điều khiển API cùng với các trang dao cạo.
+
+8
+00:00:38,750 --> 00:00:45,380
+Sau đó, chúng tôi sẽ tích hợp nhiều tính năng nâng cao như cảnh báo ngọt ngào, trình soạn thảo văn bản phong phú, bảng dữ liệu với. lõi mạng.
+
+9
+00:00:45,620 --> 00:00:46,330
+Vì vậy, về cơ bản có nhiều gói JavaScript.
+
+10
+00:00:46,340 --> 00:00:49,670
+Sau đó, chúng tôi sẽ tích hợp bảo mật trong ứng dụng của mình.
+
+11
+00:00:51,020 --> 00:00:54,780
+Đối với điều đó, chúng tôi sẽ sử dụng . net và chúng tôi sẽ triển khai vai trò và ủy quyền trong ứng dụng của mình.
+
+12
+00:00:54,800 --> 00:01:02,720
+Để nắm bắt các khoản thanh toán, chúng tôi sẽ sử dụng
+
+13
+00:01:03,290 --> 00:01:10,340
+thanh toán Stripe và chúng tôi cũng sẽ xem cách xử lý khoản tiền hoàn lại bằng Stripe.
+
+14
+00:01:10,370 --> 00:01:11,840
+Sau đó, chúng ta sẽ thấy các phiên trong . net và cách gửi email bằng SendGrid.
+
+15
+00:01:11,870 --> 00:01:18,140
+Chúng tôi cũng sẽ xây dựng quản lý người dùng trong trang web của mình, nơi về cơ bản chúng tôi sẽ quản lý tất cả người dùng.
+
+16
+00:01:18,560 --> 00:01:25,340
+Chúng ta có thể chuyển đổi vai trò của họ một cách linh hoạt.
+
+17
+00:01:25,340 --> 00:01:27,980
+Trên hết, chúng tôi sẽ triển khai đăng nhập xã hội bằng Facebook.
+
+18
+00:01:29,160 --> 00:01:33,330
+Bằng cách đó, họ không phải nhập tất cả các chi tiết khi đăng ký.
+
+19
+00:01:33,360 --> 00:01:37,530
+Chúng ta cũng sẽ xem xét một số khái niệm nâng cao như xem các thành phần trong . net và cách xem cơ sở dữ liệu
+
+20
+00:01:37,950 --> 00:01:45,270
+bằng trình khởi tạo DB.
+
+21
+00:01:45,270 --> 00:01:47,400
+Sau khi ứng dụng hoàn tất, chúng tôi sẽ
+
+22
+00:01:48,920 --> 00:01:55,760
+triển khai ứng dụng hoàn chỉnh lên Azure và bằng cách đó, bạn sẽ có được kinh nghiệm về cách triển khai ứng dụng của mình.
+
+23
+00:01:55,760 --> 00:01:59,570
+Bây giờ những gì tôi đã đề cập ngay bây giờ là ở độ cao tổng quan 10.000 ft.
+
+24
+00:01:59,960 --> 00:02:04,190
+Vì vậy, hãy để tôi tiếp tục cuộc hành trình của chúng ta từ video tiếp theo.
+

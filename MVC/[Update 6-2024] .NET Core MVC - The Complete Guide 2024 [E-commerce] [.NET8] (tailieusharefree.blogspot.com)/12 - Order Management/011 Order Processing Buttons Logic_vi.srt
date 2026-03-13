@@ -1,0 +1,176 @@
+1
+00:00:01,850 --> 00:00:06,260
+Bây giờ, nếu chúng ta đi vào chi tiết ở đây, chúng ta có ít nút.
+
+2
+00:00:06,530 --> 00:00:10,640
+Hãy để tôi làm việc khi các nút này sẽ được hiển thị.
+
+3
+00:00:10,820 --> 00:00:13,490
+Nút đầu tiên ở đây là thanh toán ngay bây giờ.
+
+4
+00:00:13,850 --> 00:00:21,350
+Nút đó chỉ nên được hiển thị cho người dùng công ty có trạng thái thanh toán bằng thanh toán bị trì hoãn và trạng
+
+5
+00:00:21,350 --> 00:00:29,300
+thái đơn hàng được vận chuyển do công ty chúng tôi cung cấp cho họ net 30 và họ có thể thực hiện thanh toán sau khi đơn
+
+6
+00:00:29,300 --> 00:00:31,670
+hàng đã được vận chuyển.
+
+7
+00:00:32,420 --> 00:00:38,060
+Vì vậy, hãy để tôi nói thêm rằng nếu có điều kiện trước, chúng ta sẽ quay lại chi tiết.
+
+8
+00:00:38,330 --> 00:00:44,750
+Cuộn xuống và ở đây thay vì nhập liệu, hãy để tôi thay đổi tất cả chúng thành nút.
+
+9
+00:00:50,380 --> 00:00:53,250
+Chúng tôi cũng sẽ có các thẻ đóng ở đó.
+
+10
+00:00:53,260 --> 00:00:55,900
+Vì vậy, hãy để tôi thực hiện thay đổi đó.
+
+11
+00:00:58,170 --> 00:01:00,840
+Và chúng tôi sẽ thêm văn bản giữa chúng.
+
+12
+00:01:00,840 --> 00:01:04,769
+Vì vậy, trả tiền ngay bây giờ, bắt đầu xử lý.
+
+13
+00:01:05,069 --> 00:01:07,830
+Tiếp theo chúng ta có thứ tự tàu.
+
+14
+00:01:08,900 --> 00:01:11,510
+Và chúng tôi đã hủy đơn đặt hàng.
+
+15
+00:01:13,100 --> 00:01:13,970
+Hoàn hảo.
+
+16
+00:01:13,970 --> 00:01:15,920
+Hãy để tôi loại bỏ giá trị.
+
+17
+00:01:21,720 --> 00:01:23,520
+Và điều đó có vẻ tốt.
+
+18
+00:01:24,380 --> 00:01:32,840
+Giờ đây, khoản thanh toán chỉ hiển thị nếu trạng thái thanh toán bằng với thanh toán bị trì hoãn và trạng thái đơn hàng
+
+19
+00:01:32,870 --> 00:01:34,280
+được vận chuyển.
+
+20
+00:01:34,760 --> 00:01:39,230
+Vì vậy, đó là điều kiện nếu đầu tiên ngay tại đây.
+
+21
+00:01:40,430 --> 00:01:44,510
+Hãy để tôi làm ctrl, một ctrl D để căn chỉnh đó.
+
+22
+00:01:44,750 --> 00:01:47,420
+Tiếp theo chúng ta bắt đầu xử lý.
+
+23
+00:01:47,990 --> 00:01:53,570
+Bây giờ tất cả các nút này ở đây để bắt đầu xử lý lệnh giao hàng hoặc hủy lệnh.
+
+24
+00:01:53,570 --> 00:01:58,760
+Chúng tôi muốn chúng chỉ có thể được truy cập bởi quản trị viên hoặc nhân viên.
+
+25
+00:01:59,150 --> 00:02:01,830
+Vì vậy, chúng tôi sẽ thêm điều kiện if.
+
+26
+00:02:01,850 --> 00:02:09,169
+Nếu người dùng chỉ là quản trị viên hoặc nhân viên thì họ sẽ có thể truy cập các nút này.
+
+27
+00:02:09,979 --> 00:02:13,850
+Nhưng ngay cả khi đó chúng tôi không muốn hiển thị tất cả các nút.
+
+28
+00:02:14,330 --> 00:02:19,310
+Bắt đầu xử lý sẽ được hiển thị nếu trạng thái được phê duyệt.
+
+29
+00:02:19,640 --> 00:02:26,460
+Như vậy ngay tại đây, nếu trạng thái được duyệt thì chúng ta sẽ hiển thị bắt đầu xử lý.
+
+30
+00:02:26,850 --> 00:02:32,940
+Bây giờ, nếu đơn hàng chỉ đang được xử lý thì đơn hàng sẽ được hiển thị.
+
+31
+00:02:33,600 --> 00:02:39,960
+Như vậy nếu trạng thái đơn hàng đang xử lý thì chúng ta sẽ hiển thị đơn hàng ship.
+
+32
+00:02:40,290 --> 00:02:49,350
+Cái cuối cùng mà chúng ta có ở đây là thứ tự dấu chấm của mô hình, tiêu đề, trạng thái thứ tự dấu chấm.
+
+33
+00:02:49,620 --> 00:02:57,810
+Nếu điều đó không bằng trạng thái chấm C được hoàn trả và chúng tôi sẽ bổ sung thêm điều kiện.
+
+34
+00:02:57,810 --> 00:02:59,540
+Hãy để tôi sao chép cái này.
+
+35
+00:02:59,550 --> 00:03:05,940
+Vì vậy, nếu nó không được hoàn trả và nó không nên bị hủy trạng thái.
+
+36
+00:03:06,570 --> 00:03:09,720
+Và nó cũng không nên được vận chuyển.
+
+37
+00:03:10,850 --> 00:03:17,900
+Vì vậy, nếu cả ba điều kiện này đều đúng, thì chúng tôi mới cho phép họ hủy đơn hàng.
+
+38
+00:03:17,900 --> 00:03:26,150
+Và một lần nữa, để hủy đơn hàng, họ sẽ phải liên hệ và chỉ quản trị viên hoặc nhân viên mới có thể hủy đơn hàng.
+
+39
+00:03:27,150 --> 00:03:30,310
+Vì vậy, điều kiện này có vẻ tốt.
+
+40
+00:03:30,330 --> 00:03:32,130
+Hãy để tôi quay trở lại và.
+
+41
+00:03:32,130 --> 00:03:32,880
+Hoàn hảo.
+
+42
+00:03:32,910 --> 00:03:41,310
+Bây giờ chúng tôi chỉ thấy bắt đầu xử lý và hủy đơn hàng vì trạng thái thanh toán và trạng thái đơn hàng đã được phê duyệt.
+
+43
+00:03:41,760 --> 00:03:45,780
+Vì vậy, logic mà chúng tôi đã thêm ở đây có vẻ tốt.
+
+44
+00:03:46,110 --> 00:03:49,290
+Hãy để tôi tiếp tục từ video tiếp theo.
+

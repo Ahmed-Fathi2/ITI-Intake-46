@@ -1,0 +1,188 @@
+1
+00:00:01,620 --> 00:00:07,720
+Bây giờ trên trang danh sách đơn hàng, tôi muốn thêm một bộ lọc ở đây trên trạng thái đơn hàng.
+
+2
+00:00:07,740 --> 00:00:09,900
+Tất nhiên, bạn có thể tìm kiếm điều đó.
+
+3
+00:00:09,900 --> 00:00:17,520
+Nhưng điều tôi muốn làm là thêm một tab ở đây và hiển thị nhiều trạng thái để người dùng có thể nhấp vào đó và chuyển đổi
+
+4
+00:00:17,520 --> 00:00:19,860
+danh sách đơn hàng ngay tại đây.
+
+5
+00:00:20,990 --> 00:00:21,560
+Vì điều đó.
+
+6
+00:00:21,560 --> 00:00:22,760
+Để tôi chuyển lại.
+
+7
+00:00:22,760 --> 00:00:26,720
+Và chúng tôi đang ở trên chỉ mục bên trong thân thẻ.
+
+8
+00:00:26,750 --> 00:00:34,940
+Hãy để tôi thêm một div, cung cấp cho nó một số lớp bootstrap của d flex và chứng minh nội dung giữa.
+
+9
+00:00:35,120 --> 00:00:39,860
+Cung cấp cho nó phần đệm dưới cùng của năm và phần đệm trên cùng của hai.
+
+10
+00:00:40,850 --> 00:00:48,440
+Trong đó tôi sẽ thêm một khoảng trống và sau đó tôi sẽ thêm một phần tử ul nơi chúng tôi sẽ hiển thị tất cả
+
+11
+00:00:48,440 --> 00:00:50,900
+trạng thái trong một phần tử.
+
+12
+00:00:51,690 --> 00:00:52,830
+Đối với UL.
+
+13
+00:00:52,860 --> 00:00:58,820
+Tôi sẽ thêm một số lớp bootstrap của list group và list group ngang nhỏ.
+
+14
+00:00:58,830 --> 00:01:03,300
+Trong đó tôi sẽ thêm nhiều yếu tố.
+
+15
+00:01:04,010 --> 00:01:08,750
+Bây giờ tôi là phần tử, tôi sẽ thêm chúng vào bên trong thẻ neo.
+
+16
+00:01:09,310 --> 00:01:15,850
+Vì vậy thẻ anchor đầu tiên, hãy để tôi tạo cho nó một phong cách trang trí văn bản như không.
+
+17
+00:01:18,110 --> 00:01:20,080
+Và những gì sẽ là tuyến đường.
+
+18
+00:01:20,120 --> 00:01:28,640
+Vì vậy, tên bộ điều khiển ASP sẽ là bộ điều khiển thứ tự và tên hành động sẽ là cùng một hành động chỉ mục.
+
+19
+00:01:28,640 --> 00:01:32,300
+Vì vậy, về cơ bản nó sẽ đưa họ trở lại cùng một trang.
+
+20
+00:01:32,300 --> 00:01:36,340
+Nhưng trên hết, chúng tôi sẽ thêm một tuyến đường ASP.
+
+21
+00:01:36,350 --> 00:01:42,140
+Vì vậy, gạch nối tuyến đường ASP, chúng tôi muốn đưa ra một số trạng thái.
+
+22
+00:01:42,320 --> 00:01:48,110
+Vì vậy, trạng thái bằng để tôi gọi cái đầu tiên trong process.
+
+23
+00:01:49,050 --> 00:01:51,870
+Vậy thì ngay tại đây, hãy để tôi thêm một đồng minh.
+
+24
+00:01:52,200 --> 00:01:55,470
+Cung cấp cho nó một lớp của mục nhóm danh sách.
+
+25
+00:01:56,160 --> 00:01:59,040
+Và tôi sẽ hiển thị trong process.
+
+26
+00:02:00,510 --> 00:02:03,180
+Vì vậy, đó là yếu tố đầu tiên.
+
+27
+00:02:03,210 --> 00:02:06,810
+Sao chép và dán bốn lần nữa.
+
+28
+00:02:07,290 --> 00:02:12,420
+Giả sử chúng ta muốn hiển thị tất cả các đơn đặt hàng đang chờ thanh toán.
+
+29
+00:02:12,570 --> 00:02:21,090
+Sau đó, ta muốn hiển thị tất cả những cái đã hoàn thành, tất cả những cái đã duyệt, ta sẽ có tất cả để hiển
+
+30
+00:02:21,270 --> 00:02:23,640
+thị tất cả trạng thái.
+
+31
+00:02:23,970 --> 00:02:28,500
+Bây giờ, đối với mỗi người trong số họ, chúng tôi sẽ phải cung cấp cho họ một trạng thái duy nhất.
+
+32
+00:02:29,450 --> 00:02:31,000
+Cho đến nay tất cả.
+
+33
+00:02:31,010 --> 00:02:32,810
+Hãy để tôi cho tất cả.
+
+34
+00:02:33,110 --> 00:02:35,420
+Tiếp theo, chúng tôi cần được phê duyệt.
+
+35
+00:02:36,080 --> 00:02:38,570
+Sau đó, chúng tôi đã hoàn thành.
+
+36
+00:02:39,480 --> 00:02:41,220
+Và thanh toán đang chờ xử lý.
+
+37
+00:02:41,220 --> 00:02:44,160
+Chúng ta có thể gọi đó chỉ là chờ xử lý.
+
+38
+00:02:45,310 --> 00:02:46,150
+Hoàn hảo.
+
+39
+00:02:46,180 --> 00:02:49,450
+Cùng với đó, nếu tôi lưu và quay lại.
+
+40
+00:02:50,270 --> 00:02:51,130
+Tuyệt vời.
+
+41
+00:02:51,140 --> 00:02:52,670
+Chúng tôi có cái đó ở đây.
+
+42
+00:02:52,670 --> 00:02:55,790
+Và khi chúng tôi nhấp vào, bạn có thể thấy URL.
+
+43
+00:02:55,790 --> 00:02:59,270
+Nó đang nối thêm trạng thái như mong đợi.
+
+44
+00:03:00,050 --> 00:03:04,730
+Nhiệm vụ tiếp theo mà tôi muốn thực hiện dựa trên những gì được chọn ở đây.
+
+45
+00:03:04,730 --> 00:03:08,720
+Chúng tôi muốn tạo kiểu dáng cho chiếc hộp cụ thể đó.
+
+46
+00:03:08,930 --> 00:03:13,610
+Bằng cách đó, chúng tôi có thể biết trạng thái nào được chọn.
+
+47
+00:03:14,750 --> 00:03:17,630
+Hãy để tôi làm điều đó trong video tiếp theo.
+

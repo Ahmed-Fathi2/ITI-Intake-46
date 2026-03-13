@@ -1,0 +1,188 @@
+1
+00:00:01,740 --> 00:00:05,120
+Một điều cuối cùng mà chúng tôi phải làm là trên sản phẩm.
+
+2
+00:00:05,130 --> 00:00:10,770
+Khi chúng tôi xóa bất kỳ sản phẩm nào, chúng tôi phải đảm bảo rằng chúng tôi cũng xóa những hình ảnh đó.
+
+3
+00:00:11,940 --> 00:00:18,780
+Nếu chúng ta quay lại mã và cuộn xuống nơi chúng ta có phương thức hành động xóa, chúng ta có một số
+
+4
+00:00:18,780 --> 00:00:20,550
+logic để xóa hình ảnh cũ.
+
+5
+00:00:21,170 --> 00:00:25,190
+Nhưng bây giờ về cơ bản chúng ta sẽ phải xóa toàn bộ thư mục.
+
+6
+00:00:25,190 --> 00:00:28,730
+Và trong thư mục đó, chúng ta có thể xóa tất cả các tệp.
+
+7
+00:00:29,510 --> 00:00:33,560
+Chúng tôi sẽ biết thư mục đó từ ID sản phẩm ở đây.
+
+8
+00:00:33,590 --> 00:00:35,630
+Vì vậy, hãy để tôi cuộn lên.
+
+9
+00:00:35,990 --> 00:00:40,640
+Ở đây chúng tôi có mã mà chúng tôi đã tạo thư mục đó.
+
+10
+00:00:41,270 --> 00:00:45,740
+Tôi sẽ sao chép nó và dán nó ngay tại đây.
+
+11
+00:00:46,450 --> 00:00:49,900
+Chúng tôi không quan tâm đến tên tệp, đường dẫn sản phẩm.
+
+12
+00:00:49,930 --> 00:00:51,730
+Chúng tôi cần ID ở đây.
+
+13
+00:00:51,730 --> 00:00:53,830
+Chúng tôi nhận được điều đó trong tham số.
+
+14
+00:00:53,860 --> 00:00:55,300
+Trông tôt đây.
+
+15
+00:00:55,720 --> 00:01:02,950
+Đường dẫn tuyến đường W-w-w mà chúng ta có thể nhận được bằng cách sử dụng môi trường máy chủ web chấm đường dẫn tuyến đường web.
+
+16
+00:01:03,760 --> 00:01:07,030
+Vì vậy, chúng tôi sẽ có đường dẫn cuối cùng với ID sản phẩm.
+
+17
+00:01:08,020 --> 00:01:11,050
+Chúng tôi có thể kiểm tra xem thư mục đó có tồn tại không.
+
+18
+00:01:11,080 --> 00:01:15,820
+Nếu đúng như vậy, thì chúng tôi muốn thực hiện một số tính toán ở đây.
+
+19
+00:01:16,660 --> 00:01:20,290
+Thay vì tạo thư mục, chúng tôi muốn xóa thư mục đó.
+
+20
+00:01:20,290 --> 00:01:27,010
+Nhưng trước khi xóa thư mục, chúng ta phải lấy tất cả các tệp trong thư mục đó và xóa từng
+
+21
+00:01:27,040 --> 00:01:27,760
+tệp.
+
+22
+00:01:28,510 --> 00:01:35,260
+Chúng tôi sẽ truy xuất tất cả các tệp trong một mảng chuỗi và tôi sẽ gọi đường dẫn tệp đó, nơi chúng
+
+23
+00:01:35,290 --> 00:01:42,970
+tôi sẽ nói thư mục, dấu chấm, lấy tệp, sau đó với mỗi tệp trong đường dẫn tệp, chúng tôi muốn xóa tệp để chúng tôi
+
+24
+00:01:42,970 --> 00:01:46,570
+có thể nói tệp dấu chấm xóa và đường dẫn tập tin.
+
+25
+00:01:47,760 --> 00:01:53,990
+Chúng tôi sẽ phải thêm system. io dot tập tin dot xóa và hoàn thiện.
+
+26
+00:01:54,000 --> 00:01:57,840
+Vì vậy, chúng tôi đang xóa các tệp riêng lẻ ở đây trong thư mục đó.
+
+27
+00:01:57,840 --> 00:02:00,930
+Và cuối cùng chúng tôi đang xóa thư mục đó.
+
+28
+00:02:02,510 --> 00:02:05,070
+Mọi thứ khác ở đây có vẻ tốt.
+
+29
+00:02:05,090 --> 00:02:09,860
+Hãy để tôi xóa mã nhận xét ở đây và lưu mã đó.
+
+30
+00:02:09,889 --> 00:02:13,040
+Chúng tôi đã chạy ứng dụng.
+
+31
+00:02:13,130 --> 00:02:15,440
+Hãy để tôi tạo ra một sản phẩm mới.
+
+32
+00:02:19,480 --> 00:02:22,000
+Tôi sẽ tải lên ba hình ảnh ở đây.
+
+33
+00:02:22,890 --> 00:02:23,760
+Hoàn hảo.
+
+34
+00:02:23,790 --> 00:02:25,770
+Cho em vao muc.
+
+35
+00:02:26,370 --> 00:02:27,780
+Làm mới ở đây.
+
+36
+00:02:28,580 --> 00:02:29,360
+Hoàn hảo.
+
+37
+00:02:29,390 --> 00:02:29,750
+Mười.
+
+38
+00:02:29,750 --> 00:02:31,220
+Mười là phẩm.
+
+39
+00:02:31,730 --> 00:02:35,030
+Nếu chúng ta thêm nó vào đây, đó là sản phẩm.
+
+40
+00:02:35,120 --> 00:02:38,300
+Hãy để tôi quay lại và xóa nó.
+
+41
+00:02:39,140 --> 00:02:40,650
+Nó đã được gỡ bỏ.
+
+42
+00:02:40,670 --> 00:02:42,650
+Nếu tôi nhấn F5 ở đây.
+
+43
+00:02:42,740 --> 00:02:43,540
+Hoàn hảo.
+
+44
+00:02:43,550 --> 00:02:45,770
+Thư mục cũng bị xóa.
+
+45
+00:02:46,550 --> 00:02:51,770
+Vì vậy, tất cả các chức năng CRUD cho sản phẩm đều hoạt động như mong đợi.
+
+46
+00:02:52,640 --> 00:02:54,260
+Trong video tiếp theo.
+
+47
+00:02:54,260 --> 00:02:57,860
+Hãy để tôi làm việc để hiển thị hình ảnh ngay tại đây.
+

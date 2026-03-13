@@ -1,0 +1,396 @@
+1
+00:00:02,090 --> 00:00:05,380
+Bây giờ chúng tôi muốn hiển thị tên danh mục ở đây.
+
+2
+00:00:05,390 --> 00:00:09,560
+Nếu chúng tôi chỉ phải hiển thị ID, điều đó cực kỳ đơn giản.
+
+3
+00:00:09,740 --> 00:00:17,060
+Nếu tôi truy cập bộ điều khiển tại đây và để tôi thêm điểm gỡ lỗi vào hành động chỉ mục của bộ điều khiển sản phẩm,
+
+4
+00:00:17,270 --> 00:00:18,760
+hãy làm mới điểm đó.
+
+5
+00:00:18,770 --> 00:00:27,440
+Nếu tôi kiểm tra danh sách sản phẩm OBJ, bạn sẽ nhận thấy rằng chúng tôi có ID danh mục được điền cho các sản phẩm của mình, nhưng
+
+6
+00:00:27,710 --> 00:00:35,120
+chúng tôi cần điền thuộc tính điều hướng danh mục này vì bên trong đó chúng tôi có tên danh mục mà chúng tôi
+
+7
+00:00:35,120 --> 00:00:36,860
+có thể truy cập.
+
+8
+00:00:37,280 --> 00:00:43,580
+Vì vậy, về cơ bản dựa trên quan hệ khóa ngoại, chúng ta cần điền danh mục này.
+
+9
+00:00:44,120 --> 00:00:48,320
+Làm thế nào chúng ta có thể làm điều đó một cách thông minh bằng cách sử dụng lõi EF?
+
+10
+00:00:49,440 --> 00:00:49,890
+Vì điều đó.
+
+11
+00:00:49,890 --> 00:00:56,490
+Chúng tôi có một thứ được gọi là bao gồm sẽ tự động bao gồm các thuộc tính điều hướng
+
+12
+00:00:56,490 --> 00:01:01,440
+dựa trên quan hệ khóa ngoại và nó được cung cấp bởi nhóm lõi F.
+
+13
+00:01:02,490 --> 00:01:04,680
+Vậy làm thế nào chúng ta có thể sử dụng nó?
+
+14
+00:01:05,160 --> 00:01:11,880
+Chúng tôi sẽ phải thêm nó vào kho lưu trữ cốt lõi của mình vì đó là phương pháp mà chúng tôi đang sử dụng trong
+
+15
+00:01:11,880 --> 00:01:14,610
+bộ điều khiển để lấy tất cả sản phẩm.
+
+16
+00:01:14,640 --> 00:01:18,420
+Đó là nơi đó là ngay tại đây.
+
+17
+00:01:18,990 --> 00:01:25,560
+Bây giờ trước khi tôi thêm nó vào logic nhận tất cả, hãy để tôi chỉ cho bạn cách nó sẽ hoạt động với ứng dụng trực tiếp.
+
+18
+00:01:25,560 --> 00:01:31,770
+Bối cảnh DB ngay tại đây, chúng tôi có các sản phẩm dấu chấm DB gạch dưới ở đó.
+
+19
+00:01:31,770 --> 00:01:39,030
+Chúng tôi có một thứ được gọi là bao gồm và bạn có thể thấy ngay tại đây nó chỉ định các thực thể liên quan
+
+20
+00:01:39,030 --> 00:01:41,040
+để đưa vào chuỗi truy vấn.
+
+21
+00:01:41,700 --> 00:01:51,180
+Vì vậy, hãy để tôi thêm điều đó và những gì chúng tôi muốn đưa vào, chúng tôi có thể viết điều đó bằng cách nói u đi đến dấu chấm và chúng
+
+22
+00:01:51,180 --> 00:01:53,340
+tôi muốn đưa danh mục vào.
+
+23
+00:01:53,340 --> 00:02:00,660
+Đó là cách điều sẽ xảy ra là danh mục đó sẽ tự động được điền khi nó truy xuất tất cả sản
+
+24
+00:02:00,660 --> 00:02:04,090
+phẩm dựa trên quan hệ khóa ngoại.
+
+25
+00:02:04,870 --> 00:02:06,280
+Vì vậy, điều này là tuyệt vời.
+
+26
+00:02:06,280 --> 00:02:12,220
+Nhưng làm thế nào chúng ta có thể thêm cùng logic này vào bên trong get all mà chúng ta có ngay tại đây?
+
+27
+00:02:12,940 --> 00:02:15,610
+Đối với điều đó, chúng ta sẽ phải thêm một logic.
+
+28
+00:02:15,610 --> 00:02:18,130
+Nhưng tôi muốn cho bạn thấy một điều nữa.
+
+29
+00:02:18,160 --> 00:02:21,860
+Ngay bây giờ, chúng tôi chỉ có danh mục mà chúng tôi muốn đưa vào.
+
+30
+00:02:21,880 --> 00:02:28,960
+Nhưng nếu bạn phải bao gồm nhiều thuộc tính hơn, bạn có thể thêm nhiều câu lệnh bao gồm và thay vì danh
+
+31
+00:02:28,960 --> 00:02:29,620
+mục.
+
+32
+00:02:29,620 --> 00:02:33,550
+Nếu đây là một cái gì đó khác, bạn cũng có thể bao gồm nó.
+
+33
+00:02:34,310 --> 00:02:42,440
+Vì vậy, bao gồm có thể có nhiều biến như ID danh mục, có thể bạn có loại bìa hoặc thứ gì khác
+
+34
+00:02:42,440 --> 00:02:45,020
+cũng có thể được bao gồm.
+
+35
+00:02:45,800 --> 00:02:50,150
+Chúng tôi muốn đảm bảo rằng kho lưu trữ của chúng tôi có thể xử lý tình huống đó.
+
+36
+00:02:50,690 --> 00:02:58,250
+Đối với điều đó, những gì tôi sẽ làm là chúng ta có thể có một thuộc tính bao gồm nullable và đó sẽ là chuỗi.
+
+37
+00:02:58,760 --> 00:03:01,400
+Bây giờ ngay tại đây nó là một toán tử liên kết.
+
+38
+00:03:01,400 --> 00:03:05,300
+Khi chúng ta nói nó sẽ là một chuỗi, chúng ta mong đợi điều gì?
+
+39
+00:03:05,570 --> 00:03:12,320
+Về cơ bản, chúng tôi đang nói rằng nếu ai đó cung cấp cho chúng tôi danh mục hoặc ID danh mục dựa trên điều đó, thì chúng tôi có thể xây
+
+40
+00:03:12,320 --> 00:03:13,880
+dựng các thuộc tính bao gồm.
+
+41
+00:03:14,030 --> 00:03:18,090
+Bây giờ ID danh mục chỉ là một ID, vì vậy mọi thứ sẽ không hoạt động.
+
+42
+00:03:18,110 --> 00:03:25,430
+Vì vậy, ví dụ, tôi đang nói giả sử có hai loại nội dung và loại bìa mà người dùng phải
+
+43
+00:03:25,430 --> 00:03:26,390
+đưa vào.
+
+44
+00:03:26,960 --> 00:03:33,800
+Vì vậy, nếu các thuộc tính bao gồm, chúng cung cấp chuỗi đó bằng một chuỗi được phân tách bằng dấu phẩy, thì chúng ta có thể thêm chuỗi
+
+45
+00:03:33,800 --> 00:03:35,130
+đó vào câu lệnh bao gồm.
+
+46
+00:03:35,150 --> 00:03:43,100
+Khi chúng tôi xây dựng truy vấn ở đây, một điều rất, rất quan trọng ở đây là danh mục này phải khớp chính
+
+47
+00:03:43,130 --> 00:03:46,550
+xác với những gì bạn thấy ngay tại đây.
+
+48
+00:03:46,730 --> 00:03:54,260
+Nếu bạn sử dụng chữ thường C ở đây, mọi thứ sẽ không hoạt động vì giả sử nếu chúng tôi thử danh mục chữ thường, bạn
+
+49
+00:03:54,290 --> 00:03:56,540
+có thể thấy nó không hoạt động.
+
+50
+00:03:56,630 --> 00:04:01,730
+Vì vậy, nó phải khớp với những gì bạn thấy trong câu lệnh bao gồm đang hoạt động ở đây.
+
+51
+00:04:01,730 --> 00:04:07,820
+Và đó chính xác là những gì bạn nên chuyển vào tham số chuỗi ngay tại đây.
+
+52
+00:04:08,390 --> 00:04:12,120
+Hãy để tôi thêm cái này vào bên trong giao diện.
+
+53
+00:04:12,140 --> 00:04:20,180
+Chúng tôi có kho lưu trữ giao diện interface get all và khi chúng tôi nhận được thứ gì đó tại thời điểm đó, chúng tôi
+
+54
+00:04:20,180 --> 00:04:22,580
+cũng muốn đưa vào các thuộc tính.
+
+55
+00:04:22,580 --> 00:04:26,090
+Vì vậy, chúng tôi sẽ thêm logic đó ở cả hai nơi.
+
+56
+00:04:27,180 --> 00:04:34,860
+Sau đó, chúng tôi cần logic thực tế của việc thêm rằng về cơ bản, trước tiên chúng tôi sẽ kiểm tra ở đây nếu các thuộc tính
+
+57
+00:04:34,890 --> 00:04:36,450
+bao gồm không rỗng.
+
+58
+00:04:37,800 --> 00:04:38,970
+Trong trường hợp đó.
+
+59
+00:04:38,970 --> 00:04:44,070
+Chà, thay vì null ở đây, tôi muốn kiểm tra string. là null hoặc rỗng.
+
+60
+00:04:47,890 --> 00:04:52,060
+Vì vậy, nếu nó không rỗng và trống, chúng tôi sẽ thêm dấu không.
+
+61
+00:04:52,090 --> 00:04:57,970
+Sau đó, chúng tôi muốn bao gồm các thuộc tính như những gì chúng tôi thấy ở trên cùng ngay tại đây.
+
+62
+00:04:58,990 --> 00:05:02,880
+Nhưng chúng tôi sẽ nhận chúng dưới dạng dấu phẩy, các giá trị được phân tách.
+
+63
+00:05:02,890 --> 00:05:05,090
+Vì vậy, chúng ta sẽ phải chia chúng ra.
+
+64
+00:05:05,110 --> 00:05:09,130
+Chúng tôi sẽ có một cho mỗi và tôi sẽ nói bao gồm.
+
+65
+00:05:09,990 --> 00:05:13,770
+Thả vào bao gồm các thuộc tính chấm tách.
+
+66
+00:05:14,390 --> 00:05:19,700
+Và chúng tôi sẽ chia chúng bằng một ký tự mới, ký tự này sẽ là dấu phẩy.
+
+67
+00:05:20,630 --> 00:05:27,190
+Và ở đây tôi sẽ nói các tùy chọn tách chuỗi chấm loại bỏ các mục trống.
+
+68
+00:05:27,200 --> 00:05:31,750
+Vì vậy, nếu bất kỳ mục nào trống, nó sẽ xóa những mục đó.
+
+69
+00:05:31,760 --> 00:05:38,720
+Và hãy để tôi chia phần này thành một dòng riêng để dễ đọc và dễ hiểu hơn.
+
+70
+00:05:39,940 --> 00:05:47,620
+Sau đó, khi chúng tôi có truy vấn, chúng tôi sẽ nói truy vấn bằng với truy vấn bao gồm dấu chấm và chúng tôi muốn bao
+
+71
+00:05:47,620 --> 00:05:50,740
+gồm chỗ dựa bao gồm mà chúng tôi đang tách.
+
+72
+00:05:51,070 --> 00:05:54,430
+Nếu chỉ có một, thì nó cũng sẽ hoạt động.
+
+73
+00:05:54,430 --> 00:06:00,220
+Nhưng chúng tôi đã đảm bảo rằng nếu có nhiều hơn một thuộc tính bao gồm, chúng tôi có thể thêm chúng
+
+74
+00:06:00,220 --> 00:06:08,380
+dưới dạng danh sách được phân tách bằng dấu phẩy và kho lưu trữ của chúng tôi là động để xử lý cùng logic mà chúng tôi có trong get all,
+
+75
+00:06:08,380 --> 00:06:10,780
+chúng tôi cũng sẽ thêm nó vào get.
+
+76
+00:06:11,020 --> 00:06:16,660
+Vì vậy, hãy để tôi thêm nó vào đây và chúng tôi sẽ thêm các thuộc tính bao gồm.
+
+77
+00:06:18,080 --> 00:06:18,920
+Hoàn hảo.
+
+78
+00:06:19,460 --> 00:06:24,950
+Chúng tôi đã thêm các thuộc tính bao gồm trong cả kho lưu trữ cat và get all.
+
+79
+00:06:25,280 --> 00:06:28,670
+Với cấu hình đó, hãy để tôi đóng mọi thứ.
+
+80
+00:06:28,700 --> 00:06:30,920
+Mở bộ điều khiển sản phẩm.
+
+81
+00:06:30,950 --> 00:06:38,470
+Chúng tôi không cần bất cứ điều gì khác ở đây và khi chúng tôi nhận được tất cả, chúng tôi có thể xác định các thuộc
+
+82
+00:06:38,480 --> 00:06:41,840
+tính bao gồm, chúng tôi muốn bao gồm danh mục.
+
+83
+00:06:42,350 --> 00:06:49,130
+Ngay bây giờ tôi đang cố ý thêm chữ thường vì tôi muốn cho bạn thấy điều này sẽ không hoạt động.
+
+84
+00:06:49,610 --> 00:06:55,580
+Vì vậy, hãy để tôi chạy ứng dụng với danh mục chữ thường và xem điều gì sẽ xảy ra.
+
+85
+00:06:56,790 --> 00:07:02,700
+Chúng tôi đi đến sản phẩm ở đây và chúng tôi nhận được một ngoại lệ với các thuộc tính bao gồm.
+
+86
+00:07:02,880 --> 00:07:09,630
+Bạn có thể thấy không thể tìm thấy danh mục điều hướng trong danh mục đường dẫn bao gồm dựa trên chuỗi.
+
+87
+00:07:10,380 --> 00:07:14,190
+Đó là bởi vì nó không tìm thấy thuộc tính điều hướng đó.
+
+88
+00:07:14,190 --> 00:07:18,570
+Nếu bạn sửa trường hợp đó ở đây và chạy nó, nó sẽ hoạt động.
+
+89
+00:07:22,610 --> 00:07:23,120
+Hoàn hảo.
+
+90
+00:07:23,150 --> 00:07:24,740
+Lần này cũng không ngoại lệ.
+
+91
+00:07:24,740 --> 00:07:31,640
+Và nếu bạn kiểm tra kết quả ở đây, danh mục sẽ được điền và chúng tôi có tên danh mục.
+
+92
+00:07:32,480 --> 00:07:38,120
+Vì vậy, cuối cùng chúng ta có thể hiển thị điều đó một cách vô lý trong chỉ mục ở đây.
+
+93
+00:07:38,150 --> 00:07:42,350
+Hãy để tôi đến xem nơi chúng tôi có thể loại.
+
+94
+00:07:42,380 --> 00:07:47,210
+Chúng ta có thể điều hướng chúng bằng obj. loại. tên.
+
+95
+00:07:48,180 --> 00:07:50,370
+Lưu nó và tiếp tục.
+
+96
+00:07:50,700 --> 00:07:52,200
+Và hoàn hảo.
+
+97
+00:07:52,470 --> 00:07:58,170
+Danh mục của chúng tôi đang được phổ biến và mọi thứ đang hoạt động như mong đợi.
+
+98
+00:07:58,680 --> 00:08:04,680
+Nhưng cùng với đó, chúng ta đã học được một khái niệm quan trọng trong khung thực thể, đó là cách
+
+99
+00:08:04,680 --> 00:08:08,340
+điền thuộc tính điều hướng bằng cách sử dụng bao gồm DOT.
+

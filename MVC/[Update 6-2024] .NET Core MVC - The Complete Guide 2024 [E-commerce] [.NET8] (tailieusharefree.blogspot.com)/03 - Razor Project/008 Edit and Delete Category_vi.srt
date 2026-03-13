@@ -1,0 +1,460 @@
+1
+00:00:01,640 --> 00:00:05,210
+Chúng tôi muốn làm việc, chỉnh sửa và xóa chức năng.
+
+2
+00:00:05,210 --> 00:00:09,350
+Vì vậy, hãy để tôi tạo các trang dao cạo đó trong danh mục.
+
+3
+00:00:09,380 --> 00:00:15,290
+Thêm một trang dao cạo trống và tôi sẽ gọi phần chỉnh sửa đó ở đây.
+
+4
+00:00:16,470 --> 00:00:18,780
+Cái tiếp theo mà tôi muốn tạo.
+
+5
+00:00:18,810 --> 00:00:19,650
+Rất tiếc.
+
+6
+00:00:19,890 --> 00:00:21,540
+Ngay chỗ này.
+
+7
+00:00:21,750 --> 00:00:28,650
+Thêm một trang dao cạo và đó sẽ là xóa dấu chấm css, html.
+
+8
+00:00:30,180 --> 00:00:39,060
+Trước tiên, hãy để tôi ghim cái này ở đây và nơi chúng tôi đã tạo, hãy để tôi sao chép mọi thứ và chúng tôi sẽ dán
+
+9
+00:00:39,060 --> 00:00:39,690
+nó vào.
+
+10
+00:00:39,690 --> 00:00:42,600
+Chỉnh sửa ngay tại đây.
+
+11
+00:00:42,900 --> 00:00:48,330
+Chúng tôi cũng sẽ phải liên kết các thuộc tính vì chúng tôi sẽ đăng một số dữ liệu.
+
+12
+00:00:49,630 --> 00:00:57,910
+Tôi sẽ thay đổi tên hàm tạo thành mô hình được thêm vào và thêm cả câu lệnh sử dụng cho danh mục.
+
+13
+00:00:58,610 --> 00:00:59,510
+Hoàn hảo.
+
+14
+00:00:59,840 --> 00:01:05,690
+Bây giờ, khi chúng tôi đang chỉnh sửa, chúng tôi phải truy xuất danh mục mà người dùng muốn chỉnh sửa.
+
+15
+00:01:05,690 --> 00:01:08,120
+Và ngay tại đây chúng ta sẽ lấy được ID.
+
+16
+00:01:09,470 --> 00:01:18,860
+Dựa trên ID mà chúng tôi nhận được ở đây, chúng tôi có thể kiểm tra xem ID có phải là null hay không và liệu ID có phải là 0 hay không.
+
+17
+00:01:20,380 --> 00:01:23,890
+Trong trường hợp đó, chúng tôi có thể điền các danh mục ở đây.
+
+18
+00:01:23,890 --> 00:01:26,080
+Và hãy để tôi biến cái này thành nullable.
+
+19
+00:01:26,080 --> 00:01:27,190
+Không sao đâu.
+
+20
+00:01:27,340 --> 00:01:30,130
+Vì vậy, chúng tôi sẽ tải danh mục khác.
+
+21
+00:01:30,130 --> 00:01:36,820
+Chúng tôi không muốn làm bất cứ điều gì, vì vậy chúng tôi sẽ tải danh mục trên trình xử lý get và trên bài đăng ở đây, chúng
+
+22
+00:01:36,820 --> 00:01:38,020
+tôi phải cập nhật.
+
+23
+00:01:38,530 --> 00:01:46,330
+Nếu tôi truy cập dự án web tại đây, bộ điều khiển danh mục trên bài đăng, chúng tôi đang kiểm tra Trạng thái mô hình.
+
+24
+00:01:46,360 --> 00:01:49,480
+Chúng tôi có thể làm mọi thứ giống hệt nhau.
+
+25
+00:01:50,110 --> 00:01:51,930
+Vâng, chúng tôi đang tạo ra.
+
+26
+00:01:51,940 --> 00:01:58,630
+Hãy để tôi sao chép cái mà chúng tôi có để chỉnh sửa ở đây và dán nó ngay tại đây.
+
+27
+00:01:59,170 --> 00:02:06,790
+Vì vậy, nếu Trạng thái mô hình hợp lệ, chúng tôi muốn cập nhật, chúng tôi có thuộc tính liên kết, vì vậy chúng tôi sẽ
+
+28
+00:02:06,790 --> 00:02:08,979
+có danh mục đó ở đây và hoàn hảo.
+
+29
+00:02:08,979 --> 00:02:10,180
+Trông tôt đây.
+
+30
+00:02:10,330 --> 00:02:13,390
+Hãy để tôi bình luận ra các dữ liệu tạm thời cho bây giờ.
+
+31
+00:02:14,290 --> 00:02:19,300
+Chúng tôi sẽ chuyển hướng đến trang và hoàn thiện.
+
+32
+00:02:19,300 --> 00:02:20,570
+Trông tôt đây.
+
+33
+00:02:21,540 --> 00:02:28,290
+Trong phần khác ở đây, chúng ta chỉ có thể quay lại trang nếu Trạng thái mô hình không hợp lệ.
+
+34
+00:02:29,980 --> 00:02:32,870
+Vì vậy, logic chỉnh sửa của chúng tôi có vẻ tốt.
+
+35
+00:02:32,890 --> 00:02:35,410
+Hãy để tôi làm việc trên giao diện người dùng chỉnh sửa.
+
+36
+00:02:36,100 --> 00:02:39,460
+Vì vậy, hãy để tôi sao chép những gì chúng tôi có để xem.
+
+37
+00:02:40,030 --> 00:02:44,890
+Đóng cái này và bộ điều khiển thu nhỏ dự án web.
+
+38
+00:02:45,100 --> 00:02:49,660
+Đi đến chỉnh sửa ở đây và dán nó.
+
+39
+00:02:50,020 --> 00:02:54,700
+Xóa mô hình ở đây và mọi thứ sẽ ở bên trong.
+
+40
+00:02:54,700 --> 00:02:56,770
+loại. nhận dạng.
+
+41
+00:02:58,340 --> 00:03:01,040
+Hãy để tôi sửa đổi tất cả chúng.
+
+42
+00:03:05,460 --> 00:03:07,860
+Bây giờ chúng tôi có tất cả các cảnh báo ở đây.
+
+43
+00:03:07,860 --> 00:03:12,660
+Tôi có thể sửa nó rất nhanh, nhưng chúng ta cần trang ở đây.
+
+44
+00:03:13,110 --> 00:03:18,090
+Trang Aspx sẽ là danh mục và sau đó là chỉ mục.
+
+45
+00:03:22,340 --> 00:03:23,060
+Hoàn hảo.
+
+46
+00:03:23,060 --> 00:03:24,240
+Trông tôt đây.
+
+47
+00:03:24,260 --> 00:03:33,200
+Nếu chúng tôi chuyển sang chỉnh sửa mô hình trang, tôi có thể xóa phần này và sau đó chúng tôi sẽ chỉ có một cảnh báo nếu không tìm
+
+48
+00:03:33,200 --> 00:03:33,790
+thấy.
+
+49
+00:03:33,800 --> 00:03:35,570
+Nhưng nó ổn.
+
+50
+00:03:36,900 --> 00:03:38,040
+Chúng ta có thể khắc phục điều đó.
+
+51
+00:03:38,040 --> 00:03:41,580
+Nhưng đó là một cảnh báo và chúng tôi biết nó sẽ đúng.
+
+52
+00:03:41,580 --> 00:03:43,980
+Nếu không, chúng tôi có thể hiển thị không tìm thấy.
+
+53
+00:03:44,830 --> 00:03:51,550
+Nhưng với cấu hình đó, hãy để tôi chạy cái này và xem tính năng chỉnh sửa có hoạt động không.
+
+54
+00:03:53,460 --> 00:03:54,750
+Chúng tôi sẽ cố gắng chỉnh sửa.
+
+55
+00:03:54,780 --> 00:03:58,920
+Thử nghiệm với bài kiểm tra 33 và tuyệt vời.
+
+56
+00:03:58,920 --> 00:04:00,270
+Đó là làm việc.
+
+57
+00:04:00,450 --> 00:04:03,290
+Chúng ta cũng nên có xác nhận ở đây.
+
+58
+00:04:03,300 --> 00:04:04,910
+Trông tôt đây.
+
+59
+00:04:04,980 --> 00:04:09,510
+Tôi nghĩ trong giao diện người dùng, tôi có một sai lầm ở đây.
+
+60
+00:04:10,710 --> 00:04:13,470
+Tôi sẽ phải dừng lại và khởi động lại.
+
+61
+00:04:16,320 --> 00:04:17,640
+Loại.
+
+62
+00:04:17,910 --> 00:04:18,690
+Biên tập.
+
+63
+00:04:18,870 --> 00:04:19,890
+Hoàn hảo.
+
+64
+00:04:19,920 --> 00:04:24,300
+Hãy để tôi xem nếu tôi có lỗi tương tự trong dự án MVC.
+
+65
+00:04:25,270 --> 00:04:27,160
+Làm thế nào chúng ta không có điều đó ở đây.
+
+66
+00:04:27,160 --> 00:04:28,390
+Vậy là được rồi.
+
+67
+00:04:28,510 --> 00:04:30,580
+Nhưng mọi thứ đang hoạt động.
+
+68
+00:04:30,580 --> 00:04:32,440
+Chúng tôi có quá nhiều tệp đang mở.
+
+69
+00:04:32,440 --> 00:04:33,910
+Đóng tất cả chúng lại.
+
+70
+00:04:33,910 --> 00:04:36,220
+Và hãy để tôi làm việc trên xóa.
+
+71
+00:04:36,430 --> 00:04:40,090
+Sao chép chế độ xem từ dự án MVC tại đây.
+
+72
+00:04:41,410 --> 00:04:44,920
+Nơi chúng tôi có dự án Razer mở xóa.
+
+73
+00:04:45,220 --> 00:04:54,250
+Dán nó ngay tại đó Trước khi chúng ta làm việc với bất kỳ thứ gì khác ở đây, hãy để tôi dừng việc này lại và tôi sẽ làm việc trên mô hình
+
+74
+00:04:54,250 --> 00:04:55,060
+trang.
+
+75
+00:04:55,480 --> 00:04:58,690
+Tôi có thể sao chép những gì tôi có cho mô hình chỉnh sửa.
+
+76
+00:04:59,740 --> 00:05:07,930
+Nếu bạn sao chép và dán, hãy đảm bảo thay đổi tên lớp thành mô hình xóa, nó phải khớp chính xác nếu không mọi
+
+77
+00:05:07,960 --> 00:05:12,520
+thứ sẽ không hoạt động vì liên kết sẽ không hoạt động.
+
+78
+00:05:12,550 --> 00:05:15,550
+Ở đây nó đang tìm model xóa đó.
+
+79
+00:05:16,270 --> 00:05:20,050
+Vì vậy, chúng tôi có thêm câu lệnh sử dụng.
+
+80
+00:05:21,740 --> 00:05:24,800
+Và tên constructor Xóa mô hình.
+
+81
+00:05:25,390 --> 00:05:28,450
+Khi chúng tôi đang xóa, chúng tôi sẽ phải tìm thấy điều đó.
+
+82
+00:05:28,450 --> 00:05:34,240
+Nhưng trên bài đăng ở đây, trước tiên chúng ta phải lấy danh mục đó và sau đó xóa.
+
+83
+00:05:34,570 --> 00:05:42,250
+Vì vậy, hãy để tôi sao chép nó từ bộ điều khiển thay vì gõ nó ngay tại đây.
+
+84
+00:05:43,180 --> 00:05:47,770
+Sao chép nó và sẽ dán nó ngay tại đây.
+
+85
+00:05:49,550 --> 00:05:50,300
+Hoàn hảo.
+
+86
+00:05:50,300 --> 00:05:51,670
+Trông tôt đây.
+
+87
+00:05:51,680 --> 00:05:54,260
+Hãy để tôi xác nhận ID.
+
+88
+00:05:54,290 --> 00:05:58,490
+Chúng tôi sẽ nhận được điều đó từ danh mục. id ở đây.
+
+89
+00:05:59,360 --> 00:06:01,860
+Nếu đó là null, chúng tôi trả về không tìm thấy.
+
+90
+00:06:01,880 --> 00:06:04,400
+Nếu không, chúng tôi xóa và lưu các thay đổi.
+
+91
+00:06:05,000 --> 00:06:05,860
+Hoàn hảo.
+
+92
+00:06:05,870 --> 00:06:07,640
+Chúng tôi đã chuyển hướng đến trang.
+
+93
+00:06:07,640 --> 00:06:10,100
+Điều đó cũng có vẻ tốt.
+
+94
+00:06:10,220 --> 00:06:11,900
+Hãy để tôi lưu nó.
+
+95
+00:06:11,900 --> 00:06:14,420
+Và bây giờ chúng ta sẽ sửa lỗi xóa UI.
+
+96
+00:06:15,510 --> 00:06:18,030
+Hãy để tôi thu nhỏ dự án web.
+
+97
+00:06:19,110 --> 00:06:19,830
+Hoàn hảo.
+
+98
+00:06:19,950 --> 00:06:21,570
+Mọi thứ sẽ ở bên trong.
+
+99
+00:06:21,570 --> 00:06:23,010
+loại. nhận dạng.
+
+100
+00:06:23,980 --> 00:06:25,400
+Tiểu thể loại chấm.
+
+101
+00:06:25,420 --> 00:06:26,980
+Tôi sẽ thêm vào đó.
+
+102
+00:06:27,130 --> 00:06:30,250
+Và chúng ta cần trang Aspx ở đây.
+
+103
+00:06:33,260 --> 00:06:35,060
+Đó sẽ là danh mục.
+
+104
+00:06:35,860 --> 00:06:38,110
+Chuyển tiếp dấu gạch chéo chỉ số.
+
+105
+00:06:39,990 --> 00:06:40,620
+Tuyệt vời.
+
+106
+00:06:40,830 --> 00:06:44,310
+Cùng với đó, hãy để tôi xem liệu mọi thứ có hoạt động không.
+
+107
+00:06:46,250 --> 00:06:47,330
+Loại.
+
+108
+00:06:48,210 --> 00:06:50,100
+Hãy để tôi thử lại lần nữa.
+
+109
+00:06:50,130 --> 00:06:51,450
+Ba, ba, ba.
+
+110
+00:06:51,750 --> 00:06:52,530
+Để tôi thử.
+
+111
+00:06:52,560 --> 00:06:53,700
+Xóa ở đây.
+
+112
+00:06:53,850 --> 00:06:55,080
+Điều đó hoạt động.
+
+113
+00:06:55,910 --> 00:07:01,380
+Vì vậy, các chức năng CRUD của chúng tôi hiện đang hoạt động cho nhiệm vụ tiếp theo.
+
+114
+00:07:01,400 --> 00:07:07,400
+Tôi muốn các bạn hoàn thành thông báo máy nướng bánh mì và triển khai chế độ xem một phần.
+
+115
+00:07:08,180 --> 00:07:13,100
+Chúc bạn may mắn với điều đó và chúng tôi sẽ hoàn thành điều đó trong video tiếp theo.
+

@@ -1,0 +1,540 @@
+1
+00:00:01,790 --> 00:00:05,360
+Bây giờ chúng tôi muốn làm việc để tạo một danh mục mới.
+
+2
+00:00:05,930 --> 00:00:08,060
+Đối với điều đó, nó sẽ là một trang mới.
+
+3
+00:00:08,630 --> 00:00:14,540
+Nhưng khi chúng tôi làm việc với việc tạo một trang mới, chúng tôi không trực tiếp tạo chế độ xem.
+
+4
+00:00:14,840 --> 00:00:20,600
+Trước tiên chúng ta phải tạo một phương thức hành động sẽ được gọi và phương thức đó sẽ gọi Chế độ xem.
+
+5
+00:00:21,630 --> 00:00:26,400
+Phương thức hành động đó, chúng tôi sẽ thêm vào bên trong bộ điều khiển danh mục.
+
+6
+00:00:26,640 --> 00:00:30,150
+Tạo một phương thức hành động mới là siêu đơn giản.
+
+7
+00:00:30,300 --> 00:00:37,590
+Chúng tôi sẽ nói loại trả về công khai sẽ là kết quả hành động của tôi và hãy để tôi gọi đó là tạo.
+
+8
+00:00:39,360 --> 00:00:42,480
+Tất cả những gì sẽ làm bây giờ là quay trở lại The View.
+
+9
+00:00:43,150 --> 00:00:46,090
+Bước tiếp theo sẽ là tạo chế độ xem.
+
+10
+00:00:46,750 --> 00:00:54,640
+Chúng tôi có thể điều hướng đến thư mục chế độ xem và tạo chế độ xem trong danh mục hoặc chúng tôi có lối tắt trên phương thức hành động
+
+11
+00:00:54,640 --> 00:00:56,630
+mà chúng tôi đã thêm chế độ xem.
+
+12
+00:00:56,650 --> 00:01:04,180
+Nếu chúng tôi nhấp chuột phải vào đó, chúng tôi có thể chọn nó và chúng tôi có thể thêm chế độ xem dao cạo trống ngay tại đó.
+
+13
+00:01:04,540 --> 00:01:06,910
+Thay đổi tên được tạo.
+
+14
+00:01:08,370 --> 00:01:12,270
+Tên đó phải khớp với tên phương thức hành động mà chúng ta có.
+
+15
+00:01:12,840 --> 00:01:18,930
+Cùng với đó, hãy nhấn nút thêm và xóa mọi thứ chúng tôi có trong đó.
+
+16
+00:01:18,990 --> 00:01:24,240
+Tôi sẽ chỉ thêm một H1 và tôi sẽ nói tạo danh mục.
+
+17
+00:01:26,330 --> 00:01:29,690
+Lưu nó và để tôi chạy ứng dụng.
+
+18
+00:01:32,080 --> 00:01:36,970
+Khi chúng tôi sửa đổi một cái gì đó trong bộ điều khiển, chúng tôi phải khởi động lại ứng dụng.
+
+19
+00:01:37,540 --> 00:01:45,310
+Vì vậy, nếu chúng tôi đi đến danh mục ở đây, chúng tôi sẽ không thể điều hướng đến trang Tạo vì ngay bây giờ nếu chúng tôi
+
+20
+00:01:45,310 --> 00:01:48,970
+nhấp vào đây, nó sẽ đưa chúng tôi trở lại trang chủ.
+
+21
+00:01:49,360 --> 00:01:57,220
+Và nếu tôi quay lại mã ở đây, bên trong chế độ xem chỉ mục, chúng tôi chưa xác định trình điều khiển hoặc phương thức
+
+22
+00:01:57,220 --> 00:01:59,380
+hành động nào sẽ được gọi.
+
+23
+00:02:00,320 --> 00:02:05,990
+Nếu bạn nghĩ về điều đó, bộ điều khiển giống nhau về chỉ mục, nó là bộ điều khiển danh mục.
+
+24
+00:02:06,230 --> 00:02:12,380
+Do đó, nếu muốn, bạn có thể bỏ qua bộ điều khiển ASP và chỉ xác định điều đó.
+
+25
+00:02:12,380 --> 00:02:18,040
+Này, khi nhấp vào nút này, tôi muốn bạn chuyển sang phương thức Tạo hành động.
+
+26
+00:02:18,050 --> 00:02:25,090
+Nó sẽ tìm trong cùng một bộ điều khiển và cố gắng tìm phương thức hành động đó với thay đổi đó.
+
+27
+00:02:25,100 --> 00:02:33,170
+Nếu chúng ta quay lại danh mục, tạo hoàn hảo mới, nó sẽ đưa chúng ta đến danh mục tạo và đó chính xác là những gì
+
+28
+00:02:33,200 --> 00:02:34,340
+chúng ta muốn.
+
+29
+00:02:35,110 --> 00:02:39,910
+Nhưng tôi muốn rõ ràng mặc dù chúng ta đang ở trong cùng một bộ điều khiển.
+
+30
+00:02:39,970 --> 00:02:45,490
+Tôi muốn xác định tên bộ điều khiển ASP, sẽ là bộ điều khiển danh mục.
+
+31
+00:02:46,390 --> 00:02:52,690
+Bây giờ, lý do đằng sau đó là khi bạn có nhiều tệp và thư mục, việc biết bộ điều khiển nào và phương
+
+32
+00:02:52,690 --> 00:02:59,200
+thức hành động nào được gọi sẽ dễ dàng hơn nhiều so với việc cố gắng tìm ra bộ điều khiển mặc định.
+
+33
+00:02:59,650 --> 00:03:05,920
+Và một điểm nữa tôi sẽ nói với bạn là luôn cố gắng viết tên bộ điều khiển trước tên hành động, bởi vì
+
+34
+00:03:06,280 --> 00:03:13,270
+khi bạn phải tìm hiểu hoặc bạn xác định một phương thức hành động nào đó, nó luôn nằm trong bộ điều khiển.
+
+35
+00:03:13,570 --> 00:03:18,100
+Vì vậy, đó là lý do tại sao tôi cố gắng viết tên bộ điều khiển trước tên hành động.
+
+36
+00:03:18,100 --> 00:03:20,760
+Nhưng ngay cả khi bạn chuyển đổi điều đó, điều đó vẫn ổn.
+
+37
+00:03:20,770 --> 00:03:25,990
+Đó là thứ mà tôi thích hơn và nó dễ đọc hơn vì điều đó.
+
+38
+00:03:25,990 --> 00:03:31,390
+Tôi luôn viết bộ điều khiển và sau đó là hành động trong bộ điều khiển đó.
+
+39
+00:03:31,960 --> 00:03:40,300
+Nhưng cùng với đó, nếu chúng ta lưu mọi thứ ở đây và quay lại danh mục, hãy tạo danh mục đang hoạt động.
+
+40
+00:03:41,090 --> 00:03:42,900
+Bên trong tạo danh mục.
+
+41
+00:03:42,920 --> 00:03:51,380
+Chúng tôi cần một biểu mẫu nơi người dùng có thể nhập tên của danh mục và thứ tự hiển thị và chúng tôi cần một nút gửi.
+
+42
+00:03:52,340 --> 00:03:54,080
+Vì vậy, hãy để tôi tạo ra điều đó.
+
+43
+00:03:54,320 --> 00:04:01,190
+Chúng tôi sẽ quay lại mã ở đây và chúng tôi sẽ làm việc với Tạo Chế độ xem ngay tại đây.
+
+44
+00:04:02,430 --> 00:04:08,820
+Bây giờ, thông thường khi chúng ta làm việc với Chế độ xem, điều đầu tiên mà tôi luôn trả lời là mô hình của chế
+
+45
+00:04:08,820 --> 00:04:09,900
+độ xem đó là gì?
+
+46
+00:04:10,470 --> 00:04:15,420
+Vì vậy, hãy nghĩ về những gì sẽ xảy ra hoặc những gì sẽ được hiển thị trên trang.
+
+47
+00:04:15,840 --> 00:04:22,320
+Chúng tôi sẽ hỏi người dùng tên của danh mục và thứ tự hiển thị và chúng tôi sẽ có một nút tạo.
+
+48
+00:04:22,890 --> 00:04:26,280
+Vì vậy, về cơ bản, chúng tôi đang làm việc với mô hình danh mục.
+
+49
+00:04:26,700 --> 00:04:31,080
+Vì vậy, ở đây mô hình của chúng tôi sẽ là chính danh mục đó.
+
+50
+00:04:31,840 --> 00:04:36,280
+Chúng tôi sẽ thêm danh mục đó khi người dùng nhấn nút gửi.
+
+51
+00:04:37,400 --> 00:04:44,180
+Bây giờ, bạn có thể nghĩ nếu chúng ta có mô hình ở đây, chúng ta cũng sẽ phải chuyển mô hình đó khi tạo.
+
+52
+00:04:44,540 --> 00:04:50,240
+Chà, nếu bạn muốn, bạn có thể chuyển danh mục mới ở đây, nhưng điều đó là không bắt buộc.
+
+53
+00:04:50,420 --> 00:04:56,810
+Nếu không có gì được chuyển vào đây và nếu chúng ta đang xác định danh mục, thì nó sẽ tạo một đối tượng mới cho danh mục đó.
+
+54
+00:04:56,810 --> 00:05:00,080
+Và theo mặc định, tất cả các giá trị sẽ trống.
+
+55
+00:05:00,080 --> 00:05:03,110
+Và đó chính xác là những gì chúng tôi muốn trong trường hợp này.
+
+56
+00:05:03,620 --> 00:05:10,460
+Vì vậy, ngay cả khi bạn không chuyển bất kỳ thứ gì trong chế độ xem ở đây và bạn có một danh mục mô hình ở đây,
+
+57
+00:05:10,460 --> 00:05:15,020
+nó sẽ coi đó là một đối tượng danh mục mới với các giá trị mặc định.
+
+58
+00:05:15,650 --> 00:05:20,080
+Vì vậy, với điều đó, chúng tôi cần một biểu mẫu và chúng tôi sẽ tạo danh mục.
+
+59
+00:05:20,090 --> 00:05:22,820
+Vì vậy, chúng tôi sẽ có phương pháp gửi bài.
+
+60
+00:05:23,720 --> 00:05:31,340
+Tiếp theo chúng ta sẽ có một số lớp bootstrap cho DIV với lớp đệm viền, ba trên
+
+61
+00:05:31,340 --> 00:05:32,180
+bốn lề.
+
+62
+00:05:32,360 --> 00:05:41,090
+Và bên trong đó, chúng ta sẽ thêm một div, tạo cho nó một lớp hàng và đệm dưới cùng của hai lớp bootstrap đơn
+
+63
+00:05:41,090 --> 00:05:41,780
+giản.
+
+64
+00:05:41,810 --> 00:05:43,160
+Không có gì lạ mắt.
+
+65
+00:05:43,190 --> 00:05:53,030
+Chúng ta sẽ có H2 với lớp văn bản chính và chúng ta sẽ nói tạo danh mục theo sau là một đường kẻ ngang.
+
+66
+00:05:53,930 --> 00:05:56,990
+Đó là những gì chúng ta sẽ có trong hàng đầu tiên.
+
+67
+00:05:57,110 --> 00:06:04,280
+Sau đó, chúng tôi sẽ tạo một div mới, tạo cho nó một lớp lề, ba phần dưới cùng và bên trong đó chúng tôi muốn có
+
+68
+00:06:04,280 --> 00:06:05,030
+một nhãn.
+
+69
+00:06:05,690 --> 00:06:06,530
+Bây giờ dán nhãn.
+
+70
+00:06:06,530 --> 00:06:10,000
+Chúng tôi biết chúng tôi muốn hiển thị tên để chúng tôi có thể làm điều đó ở đây.
+
+71
+00:06:10,010 --> 00:06:17,760
+Hay đúng hơn là chúng ta cũng có thể nói tên danh mục và chúng ta có một cái gì đó cho trường nhập liệu.
+
+72
+00:06:17,780 --> 00:06:22,340
+Hãy thêm nó và đặt cho nó một loại văn bản.
+
+73
+00:06:22,610 --> 00:06:28,910
+Chúng tôi cũng sẽ thêm một lớp bootstrap ở đây để kiểm soát biểu mẫu để cung cấp cho nó chiều rộng đầy đủ ở đây.
+
+74
+00:06:29,060 --> 00:06:30,350
+Sao chép cái này.
+
+75
+00:06:30,380 --> 00:06:32,370
+Dán nó một lần nữa.
+
+76
+00:06:32,390 --> 00:06:36,350
+Điều tiếp theo mà chúng tôi muốn là thứ tự hiển thị.
+
+77
+00:06:37,430 --> 00:06:41,280
+Hãy để tôi lưu nó và quay lại ứng dụng.
+
+78
+00:06:41,300 --> 00:06:42,170
+Hoàn hảo.
+
+79
+00:06:42,200 --> 00:06:46,100
+Chúng tôi có tên danh mục và chúng tôi có thứ tự hiển thị.
+
+80
+00:06:46,760 --> 00:06:55,250
+Sau div đó, chúng tôi sẽ thêm một nút sẽ thuộc loại gửi và chúng tôi sẽ thêm một số lớp
+
+81
+00:06:55,250 --> 00:06:58,670
+bootstrap của BTN BTN chính.
+
+82
+00:06:59,350 --> 00:07:01,450
+Và hãy để tôi cho nó một số chiều rộng.
+
+83
+00:07:01,450 --> 00:07:05,590
+Vì vậy, chiều rộng kiểu là 150 pixel.
+
+84
+00:07:05,740 --> 00:07:07,180
+Trông tôt đây.
+
+85
+00:07:07,920 --> 00:07:10,070
+Đây sẽ là nút tạo.
+
+86
+00:07:10,080 --> 00:07:11,580
+Hãy thêm điều đó.
+
+87
+00:07:13,640 --> 00:07:19,490
+Sau đó, tôi muốn có một nút để quay lại trang trước, đó là danh sách danh mục.
+
+88
+00:07:19,610 --> 00:07:21,380
+Vì vậy, đó sẽ là một liên kết.
+
+89
+00:07:21,380 --> 00:07:23,360
+Vì vậy, chúng tôi sẽ có thẻ neo.
+
+90
+00:07:23,360 --> 00:07:30,380
+Chúng tôi sẽ xác định bộ điều khiển nào chúng tôi muốn chuyển đến, nó sẽ là danh mục nào và phương thức hành động nào
+
+91
+00:07:30,380 --> 00:07:32,420
+trong danh mục đó sẽ được gọi.
+
+92
+00:07:32,570 --> 00:07:34,730
+Đó sẽ là hành động lập chỉ mục.
+
+93
+00:07:36,080 --> 00:07:45,410
+Chúng tôi sẽ cung cấp cho nó một số lớp, BTN, BTN thứ cấp và chúng tôi sẽ cung cấp cho nó cùng chiều rộng 150 pixel.
+
+94
+00:07:47,110 --> 00:07:48,040
+Thẻ neo.
+
+95
+00:07:48,040 --> 00:07:51,010
+Ở đây chúng tôi sẽ hiển thị trở lại danh sách.
+
+96
+00:07:51,190 --> 00:07:52,690
+Lưu vào đó.
+
+97
+00:07:53,480 --> 00:07:54,290
+Và hoàn hảo.
+
+98
+00:07:54,290 --> 00:07:59,420
+Chúng tôi có nút để quay lại danh sách và nút đó đang hoạt động như mong đợi.
+
+99
+00:07:59,900 --> 00:08:03,930
+Bây giờ hãy để tôi thiết kế nút này một chút.
+
+100
+00:08:03,950 --> 00:08:12,530
+Vì vậy, ngay tại đây chúng ta có thể tạo một div, gán cho nó một lớp hàng, và bên trong hàng đó, chúng ta sẽ thêm
+
+101
+00:08:12,560 --> 00:08:15,440
+một div, gán cho nó một lớp cột sáu.
+
+102
+00:08:16,880 --> 00:08:23,750
+Và cái còn lại sẽ giống cột 6 Bootstrap chia nó thành 12 cột.
+
+103
+00:08:24,600 --> 00:08:27,930
+Đầu tiên sẽ có nút để tạo.
+
+104
+00:08:27,960 --> 00:08:30,930
+Người tiếp theo sẽ có liên kết để quay lại.
+
+105
+00:08:31,880 --> 00:08:36,559
+Chúng tôi sẽ xóa phần tử kiểu ở đây cho chiều rộng và lớp.
+
+106
+00:08:36,559 --> 00:08:41,120
+Hãy để tôi thêm kiểm soát biểu mẫu để cung cấp cho nó chiều rộng đầy đủ ở đây.
+
+107
+00:08:42,230 --> 00:08:43,070
+Hoàn hảo.
+
+108
+00:08:43,070 --> 00:08:46,610
+Hãy quay lại và chúng ta có cả hai nút.
+
+109
+00:08:46,910 --> 00:08:54,800
+Bây giờ, thay vì thứ cấp ở đây, hãy để tôi thay đổi nó thành BTN phác thảo thứ cấp và điều đó có vẻ tốt hơn
+
+110
+00:08:54,800 --> 00:08:55,610
+nhiều.
+
+111
+00:08:56,580 --> 00:08:58,620
+Và với BTN thứ cấp.
+
+112
+00:08:58,650 --> 00:09:03,480
+Hãy để tôi cũng cho nó một chút đường viền và hoàn hảo.
+
+113
+00:09:03,600 --> 00:09:05,490
+Điều đó có vẻ tốt hơn nhiều.
+
+114
+00:09:06,600 --> 00:09:11,310
+Bây giờ khi chúng tôi đang làm việc, thật tốt khi làm cho nó phản hồi tốt.
+
+115
+00:09:11,610 --> 00:09:17,400
+Vì điều đó ngay tại đây, hãy để tôi thực hiện hàng này.
+
+116
+00:09:17,520 --> 00:09:19,860
+Bằng cách đó nó sẽ được đáp ứng.
+
+117
+00:09:20,040 --> 00:09:28,710
+Bây giờ nếu tôi nhấn F12 ở đây và hoàn thiện nếu tôi làm cho nó phản hồi nhanh, bạn có thể thấy mọi thứ đang thay đổi.
+
+118
+00:09:29,430 --> 00:09:33,660
+Nhưng khi chúng tôi ở trên màn hình lớn, chúng tôi không muốn các nút lớn.
+
+119
+00:09:34,110 --> 00:09:42,150
+Những gì chúng tôi có thể làm cho điều đó là chúng tôi có thể xác định xem màn hình là vừa hay lớn, bạn có thể lấy ba cột.
+
+120
+00:09:43,220 --> 00:09:45,530
+Thay đổi nó và dán nó ở đây.
+
+121
+00:09:45,680 --> 00:09:50,870
+Về cơ bản, điều đó có nghĩa là nếu nó nhỏ hơn mức trung bình, nó sẽ có sáu cột.
+
+122
+00:09:50,990 --> 00:09:53,180
+Nếu không, nó sẽ mất ba cột.
+
+123
+00:09:54,040 --> 00:09:54,670
+Hoàn hảo.
+
+124
+00:09:54,670 --> 00:09:57,370
+Bạn có thể thấy nó đang hoạt động tốt ở đây.
+
+125
+00:09:57,370 --> 00:10:01,840
+Và nếu chúng ta giảm thiểu điều này, thì nó sẽ chiếm sáu cột.
+
+126
+00:10:04,760 --> 00:10:09,920
+Và điều cuối cùng mà chúng tôi sẽ làm là bạn có thể thấy có một khoảng trống trước tên danh mục.
+
+127
+00:10:09,950 --> 00:10:14,030
+Để khắc phục điều đó, chúng ta có thể thêm một lớp đệm số không.
+
+128
+00:10:15,650 --> 00:10:18,020
+Sao chép nó cho thứ tự hiển thị là tốt.
+
+129
+00:10:18,020 --> 00:10:21,050
+Và ở đây chúng ta có thể đưa ra một phần đệm.
+
+130
+00:10:21,440 --> 00:10:23,300
+Điều đó sẽ tốt.
+
+131
+00:10:23,450 --> 00:10:24,440
+Hãy xem nào.
+
+132
+00:10:26,280 --> 00:10:26,850
+Tuyệt vời.
+
+133
+00:10:26,850 --> 00:10:29,730
+Điều đó có vẻ tốt hơn nhiều với điều đó.
+
+134
+00:10:29,730 --> 00:10:33,330
+Giao diện người dùng của chúng tôi trông tuyệt vời và phản hồi nhanh.
+
+135
+00:10:33,600 --> 00:10:36,810
+Hãy để tôi tiếp tục từ video tiếp theo.
+

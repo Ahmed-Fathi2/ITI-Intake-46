@@ -33,11 +33,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\ITI\\.net\\EF\\Project\\ITI\\ITI.Application\\ITI.Application.csproj",
+      "projectUniqueName": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\ITI.Application.csproj",
       "projectName": "ITI.Application",
-      "projectPath": "F:\\ITI\\.net\\EF\\Project\\ITI\\ITI.Application\\ITI.Application.csproj",
+      "projectPath": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\ITI.Application.csproj",
       "packagesPath": "C:\\Users\\dell\\.nuget\\packages\\",
-      "outputPath": "F:\\ITI\\.net\\EF\\Project\\ITI\\ITI.Application\\obj\\",
+      "outputPath": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -58,8 +58,8 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "F:\\ITI\\.net\\EF\\Project\\ITI\\ITI.Domain\\ITI.Domain.csproj": {
-              "projectPath": "F:\\ITI\\.net\\EF\\Project\\ITI\\ITI.Domain\\ITI.Domain.csproj"
+            "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Domain\\ITI.Domain.csproj": {
+              "projectPath": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Domain\\ITI.Domain.csproj"
             }
           }
         }
@@ -95,7 +95,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.104/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",

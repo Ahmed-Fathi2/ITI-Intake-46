@@ -1,0 +1,68 @@
+1
+00:00:01,690 --> 00:00:07,689
+Bây giờ, nếu người dùng không phải là công ty và nếu đó là khách hàng, chúng tôi cần xử lý thanh toán.
+
+2
+00:00:08,170 --> 00:00:11,740
+Vì vậy, chúng tôi sẽ sử dụng tích hợp Stripe.
+
+3
+00:00:12,310 --> 00:00:18,460
+Để tích hợp điều đó trong dự án của chúng tôi, điều đầu tiên chúng tôi cần đăng ký tài khoản.
+
+4
+00:00:18,580 --> 00:00:23,500
+Nếu bạn không có tài khoản, hãy nhớ đăng ký một tài khoản miễn phí.
+
+5
+00:00:23,590 --> 00:00:27,370
+Tôi đã có một cái, vì vậy hãy để tôi tiếp tục.
+
+6
+00:00:29,520 --> 00:00:33,960
+Khi bạn đã ở trong tài khoản, bạn có thể có một tài khoản ngay tại đây.
+
+7
+00:00:34,380 --> 00:00:36,790
+Chúng tôi sẽ tạo một tài khoản mới.
+
+8
+00:00:36,810 --> 00:00:39,960
+Bằng cách đó bạn có thể nhìn thấy mọi thứ từ đầu.
+
+9
+00:00:39,990 --> 00:00:44,100
+Tôi sẽ gọi đó là cồng kềnh và tạo tài khoản.
+
+10
+00:00:46,270 --> 00:00:47,050
+Hoàn hảo.
+
+11
+00:00:47,080 --> 00:00:52,930
+Khi chúng tôi có nó ở đây ngay bây giờ, chúng tôi đang ở chế độ thử nghiệm và thế là đủ.
+
+12
+00:00:53,670 --> 00:01:01,380
+Nếu bạn đến phần dành cho nhà phát triển tại đây và nếu bạn tìm khóa API, chúng tôi cần hai khóa API cho Stripe.
+
+13
+00:01:01,560 --> 00:01:06,330
+Một là khóa có thể xuất bản và khóa còn lại là khóa bí mật.
+
+14
+00:01:07,360 --> 00:01:14,110
+Bây giờ đừng cố sử dụng các khóa giống nhau ở đây vì tôi sẽ cập nhật chúng sau các video vì mục đích
+
+15
+00:01:14,140 --> 00:01:15,040
+bảo mật.
+
+16
+00:01:16,160 --> 00:01:22,460
+Nhưng bạn có thể đăng ký tài khoản của mình và nhận miễn phí các khóa bí mật và có thể xuất bản của riêng bạn.
+
+17
+00:01:22,970 --> 00:01:28,790
+Vì vậy, hãy đảm bảo đăng ký tài khoản trước khi bạn tiếp tục từ video tiếp theo.
+

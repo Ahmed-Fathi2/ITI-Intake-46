@@ -1,0 +1,176 @@
+1
+00:00:01,710 --> 00:00:03,870
+Instructor: Scaffolding identity is one
+
+2
+00:00:03,870 --> 00:00:07,080
+of those things that has always some issues
+
+3
+00:00:07,080 --> 00:00:09,330
+from what I have encountered,
+
+4
+00:00:09,330 --> 00:00:12,420
+and this time also it is no different.
+
+5
+00:00:12,420 --> 00:00:14,460
+When we scaffold identity,
+
+6
+00:00:14,460 --> 00:00:16,920
+if I directly run the application,
+
+7
+00:00:16,920 --> 00:00:19,560
+you will notice we have an exception here,
+
+8
+00:00:19,560 --> 00:00:23,283
+where we are seeing a weird exception with unit of work.
+
+9
+00:00:24,180 --> 00:00:26,340
+Now, because I have worked with identity
+
+10
+00:00:26,340 --> 00:00:29,520
+and I know what exactly they are doing, basically
+
+11
+00:00:29,520 --> 00:00:33,570
+they have added a new application DbContext rather
+
+12
+00:00:33,570 --> 00:00:37,740
+than using the existing application DbContext.
+
+13
+00:00:37,740 --> 00:00:40,950
+Now, why they are doing that, I have no idea,
+
+14
+00:00:40,950 --> 00:00:44,223
+but identity has always had these issues.
+
+15
+00:00:45,210 --> 00:00:47,100
+So, to fix that, you can just search
+
+16
+00:00:47,100 --> 00:00:49,860
+for application DbContext
+
+17
+00:00:49,860 --> 00:00:53,040
+and you can see in areas identity
+
+18
+00:00:53,040 --> 00:00:56,883
+they have added a new application DbContext, as well,
+
+19
+00:00:57,720 --> 00:00:59,820
+which is not needed.
+
+20
+00:00:59,820 --> 00:01:03,360
+This application, DbContext, is basically implementing
+
+21
+00:01:03,360 --> 00:01:05,640
+the identity DbContext.
+
+22
+00:01:05,640 --> 00:01:10,320
+That is what we had in our application DbContext, as well.
+
+23
+00:01:10,320 --> 00:01:12,370
+And you can see the base.OnModelCreating.
+
+24
+00:01:14,010 --> 00:01:16,740
+That is what we added, as well.
+
+25
+00:01:16,740 --> 00:01:18,510
+The only thing that we do not have
+
+26
+00:01:18,510 --> 00:01:23,510
+in our application DbContext is the identity DbContext.
+
+27
+00:01:24,120 --> 00:01:27,000
+We have not defined the default user.
+
+28
+00:01:27,000 --> 00:01:29,940
+That is not required, it is optional,
+
+29
+00:01:29,940 --> 00:01:34,200
+but you can always define that and perfect.
+
+30
+00:01:34,200 --> 00:01:36,513
+With that, it is exactly the same.
+
+31
+00:01:37,410 --> 00:01:40,950
+So what we can do is close everything here,
+
+32
+00:01:40,950 --> 00:01:44,340
+and let me delete the application DbContext
+
+33
+00:01:44,340 --> 00:01:47,800
+that is inside the bulky book web project.
+
+34
+00:01:47,800 --> 00:01:49,863
+We do not need that.
+
+35
+00:01:50,700 --> 00:01:54,543
+With that deleted, let me try to build the solution.
+
+36
+00:01:56,700 --> 00:01:57,533
+Perfect.
+
+37
+00:01:57,533 --> 00:01:59,190
+Everything is successful.
+
+38
+00:01:59,190 --> 00:02:03,243
+Let me try to run the project and see if that works.
+
+39
+00:02:04,350 --> 00:02:05,640
+And perfect.
+
+40
+00:02:05,640 --> 00:02:07,413
+Everything is functional.
+
+41
+00:02:08,280 --> 00:02:12,180
+So, now, our application is working as expected
+
+42
+00:02:12,180 --> 00:02:14,690
+with identity being scaffolded.
+
+43
+00:02:15,660 --> 00:02:18,630
+And with that configured now let me walk you
+
+44
+00:02:18,630 --> 00:02:21,633
+through all the changes in the next video.
+

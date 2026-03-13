@@ -1,0 +1,15 @@
+F:\ITI\.Net\mvc\Labs\Layerd Arch\Ecom\Ecom.DAL\bin\Debug\net10.0\Ecom.DAL.deps.json
+F:\ITI\.Net\mvc\Labs\Layerd Arch\Ecom\Ecom.DAL\bin\Debug\net10.0\Ecom.DAL.runtimeconfig.json
+F:\ITI\.Net\mvc\Labs\Layerd Arch\Ecom\Ecom.DAL\bin\Debug\net10.0\Ecom.DAL.dll
+F:\ITI\.Net\mvc\Labs\Layerd Arch\Ecom\Ecom.DAL\bin\Debug\net10.0\Ecom.DAL.pdb
+F:\ITI\.Net\mvc\Labs\Layerd Arch\Ecom\Ecom.DAL\obj\Debug\net10.0\Ecom.DAL.csproj.AssemblyReference.cache
+F:\ITI\.Net\mvc\Labs\Layerd Arch\Ecom\Ecom.DAL\obj\Debug\net10.0\Ecom.DAL.GeneratedMSBuildEditorConfig.editorconfig
+F:\ITI\.Net\mvc\Labs\Layerd Arch\Ecom\Ecom.DAL\obj\Debug\net10.0\Ecom.DAL.AssemblyInfoInputs.cache
+F:\ITI\.Net\mvc\Labs\Layerd Arch\Ecom\Ecom.DAL\obj\Debug\net10.0\Ecom.DAL.AssemblyInfo.cs
+F:\ITI\.Net\mvc\Labs\Layerd Arch\Ecom\Ecom.DAL\obj\Debug\net10.0\Ecom.DAL.csproj.CoreCompileInputs.cache
+F:\ITI\.Net\mvc\Labs\Layerd Arch\Ecom\Ecom.DAL\obj\Debug\net10.0\Ecom.DAL.sourcelink.json
+F:\ITI\.Net\mvc\Labs\Layerd Arch\Ecom\Ecom.DAL\obj\Debug\net10.0\Ecom.DAL.dll
+F:\ITI\.Net\mvc\Labs\Layerd Arch\Ecom\Ecom.DAL\obj\Debug\net10.0\refint\Ecom.DAL.dll
+F:\ITI\.Net\mvc\Labs\Layerd Arch\Ecom\Ecom.DAL\obj\Debug\net10.0\Ecom.DAL.pdb
+F:\ITI\.Net\mvc\Labs\Layerd Arch\Ecom\Ecom.DAL\obj\Debug\net10.0\Ecom.DAL.genruntimeconfig.cache
+F:\ITI\.Net\mvc\Labs\Layerd Arch\Ecom\Ecom.DAL\obj\Debug\net10.0\ref\Ecom.DAL.dll

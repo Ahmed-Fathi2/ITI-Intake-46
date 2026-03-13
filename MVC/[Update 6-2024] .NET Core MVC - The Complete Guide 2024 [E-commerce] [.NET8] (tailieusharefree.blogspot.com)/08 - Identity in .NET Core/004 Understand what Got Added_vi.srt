@@ -1,0 +1,436 @@
+1
+00:00:01,730 --> 00:00:06,790
+Trước khi chúng tôi tiếp tục, hãy để tôi hướng dẫn bạn một số thay đổi mà chúng tôi có.
+
+2
+00:00:06,800 --> 00:00:13,310
+Tôi biết có khá nhiều thay đổi, nhưng rất may là tôi đã cam kết thay đổi để chúng tôi có thể biết chính
+
+3
+00:00:13,310 --> 00:00:16,880
+xác điều gì đang diễn ra và điều gì đã được cập nhật.
+
+4
+00:00:18,500 --> 00:00:19,300
+Hoàn hảo.
+
+5
+00:00:19,310 --> 00:00:26,720
+Vì vậy, điều đầu tiên trong bối cảnh cơ sở dữ liệu ứng dụng ở đây, chúng tôi đã thêm tính năng tạo mô hình và đây là những thay đổi mà
+
+6
+00:00:26,720 --> 00:00:28,110
+chúng tôi đã thực hiện.
+
+7
+00:00:28,130 --> 00:00:29,750
+Vì vậy, mà có vẻ tốt.
+
+8
+00:00:30,660 --> 00:00:37,050
+Sau đó, điều tiếp theo ở đây, hãy để tôi xem qua Program. cs trong dự án web cồng kềnh.
+
+9
+00:00:37,380 --> 00:00:40,890
+Ở đó bạn có thể thấy trong màu xanh lá cây những gì đã được thêm vào.
+
+10
+00:00:41,190 --> 00:00:47,940
+Về cơ bản, khi chúng tôi tạo ra danh tính, nó đã thêm một dịch vụ có danh tính mặc định.
+
+11
+00:00:47,970 --> 00:00:49,890
+Đối với người dùng nhận dạng.
+
+12
+00:00:49,890 --> 00:00:57,330
+Và ở đó, nó có tùy chọn nói rằng này, nếu bạn muốn đăng nhập, tài khoản email của bạn phải được
+
+13
+00:00:57,330 --> 00:00:58,440
+xác nhận.
+
+14
+00:00:58,860 --> 00:01:02,500
+Đây là một trong những tùy chọn không bắt buộc.
+
+15
+00:01:02,520 --> 00:01:10,290
+Vì vậy, nếu bạn xóa nó, thì nếu email của bạn không được xác nhận, thì ngay cả khi đó người dùng vẫn có thể đăng nhập và chúng tôi
+
+16
+00:01:10,290 --> 00:01:11,850
+sẽ sử dụng tùy chọn đó.
+
+17
+00:01:12,740 --> 00:01:19,490
+Nhưng trên hết, chúng tôi có một điều đặc biệt ở đây có nội dung Thêm các cửa hàng khung thực thể
+
+18
+00:01:19,490 --> 00:01:22,220
+và sau đó nó có Bối cảnh DB ứng dụng.
+
+19
+00:01:22,850 --> 00:01:27,920
+Vì vậy, điều gì xảy ra lần này khi chúng tôi thêm danh tính vào dự án?
+
+20
+00:01:27,920 --> 00:01:33,710
+Về cơ bản, nó cũng bổ sung tất cả các bảng cơ sở dữ liệu cần thiết cho danh tính.
+
+21
+00:01:33,920 --> 00:01:41,300
+Giống như chúng tôi có bảng người dùng, chúng tôi có bảng vai trò, chúng tôi có vai trò người dùng, yêu cầu bảng, bảng,
+
+22
+00:01:41,300 --> 00:01:41,990
+v.v.
+
+23
+00:01:42,530 --> 00:01:49,700
+Trên dòng 14 này, chúng tôi đang nói với khung thực thể rằng này, tất cả các bảng đó sẽ được quản lý với sự trợ
+
+24
+00:01:49,700 --> 00:01:54,410
+giúp của bối cảnh cơ sở dữ liệu, đó là bối cảnh cơ sở dữ liệu ứng dụng.
+
+25
+00:01:55,020 --> 00:01:59,910
+Đó là nơi chúng tôi đang ràng buộc khung thực thể với các bảng nhận dạng.
+
+26
+00:02:00,300 --> 00:02:04,740
+Và cùng với đó, danh tính được thêm vào Program. cs.
+
+27
+00:02:05,310 --> 00:02:12,660
+Một điều mà chúng ta cũng nên thêm ở đây là trong phần mềm trung gian, chúng ta nên thêm xác thực sử dụng
+
+28
+00:02:12,660 --> 00:02:16,050
+và chúng ta phải thêm trước khi ủy quyền.
+
+29
+00:02:16,970 --> 00:02:24,560
+Và lý do đằng sau đó là xác thực về cơ bản là kiểm tra xem tên người dùng hoặc mật khẩu có hợp lệ hay không.
+
+30
+00:02:24,860 --> 00:02:30,950
+Nếu tên người dùng và mật khẩu hợp lệ, thì ủy quyền sẽ có hiệu lực.
+
+31
+00:02:31,070 --> 00:02:38,810
+Ủy quyền về cơ bản nói rằng này, bây giờ bạn có quyền truy cập vào trang web, nhưng dựa trên vai trò của bạn, bạn có thể có quyền
+
+32
+00:02:38,810 --> 00:02:45,980
+truy cập vào một số trang chứ không phải tất cả các trang như nơi chúng tôi đang cập nhật sản phẩm và mọi thứ có thể
+
+33
+00:02:45,980 --> 00:02:50,330
+là vai trò của quản trị viên có quyền truy cập vào đó trang.
+
+34
+00:02:50,510 --> 00:02:57,210
+Nhưng nếu vai trò của người dùng đã đăng nhập là khách hàng, họ chỉ có thể truy cập trang chủ và trang chi tiết.
+
+35
+00:02:57,230 --> 00:02:59,570
+Họ không thể truy cập trang sản phẩm.
+
+36
+00:02:59,900 --> 00:03:05,360
+Nhưng để kiểm tra vai trò của người dùng, trước tiên họ phải được xác thực.
+
+37
+00:03:05,870 --> 00:03:11,420
+Vì vậy, hãy luôn nhớ rằng xác thực sẽ đến trước khi ủy quyền.
+
+38
+00:03:11,990 --> 00:03:14,720
+Điều đó có vẻ tốt cho chương trình. cs.
+
+39
+00:03:15,050 --> 00:03:19,080
+Hãy để tôi xem những gì được cập nhật trong cài đặt ứng dụng. json.
+
+40
+00:03:19,290 --> 00:03:21,570
+Nó đã thêm một kết nối DB mới.
+
+41
+00:03:21,570 --> 00:03:22,950
+Chúng tôi không cần điều đó.
+
+42
+00:03:22,980 --> 00:03:28,350
+Nó đã thêm dòng đó vì nó đang cố thêm một kết nối DB mới.
+
+43
+00:03:28,770 --> 00:03:31,830
+Chúng tôi không cần điều đó, vì vậy hãy để tôi xóa điều đó.
+
+44
+00:03:32,470 --> 00:03:35,260
+Và hoàn thiện dấu phẩy là tốt.
+
+45
+00:03:36,410 --> 00:03:37,430
+Và hoàn hảo.
+
+46
+00:03:37,430 --> 00:03:38,540
+Trông tôt đây.
+
+47
+00:03:40,390 --> 00:03:43,360
+Chúng tôi không có bất kỳ thay đổi nào trong cài đặt ứng dụng.
+
+48
+00:03:43,360 --> 00:03:45,730
+Tôi có thể hoàn nguyên điều đó trở lại là tốt.
+
+49
+00:03:46,500 --> 00:03:51,180
+Tiếp theo chúng ta có sự thay đổi về đăng nhập, một phần CSS, HTML.
+
+50
+00:03:51,750 --> 00:03:53,430
+Bây giờ, đây không phải là một sự thay đổi.
+
+51
+00:03:53,430 --> 00:03:55,140
+Bạn có thể thấy chữ A ở đây.
+
+52
+00:03:55,140 --> 00:03:57,750
+Điều đó có nghĩa là đăng nhập gạch dưới tệp mới.
+
+53
+00:03:57,750 --> 00:04:05,280
+Một phần đã được thêm vào và trong chế độ xem một phần đó, về cơ bản chúng ta có nút đăng nhập và đăng ký.
+
+54
+00:04:05,280 --> 00:04:12,480
+Nếu người dùng đã đăng nhập, thì chúng tôi có liên kết đăng xuất và chúng tôi có liên kết chi tiết để quản lý
+
+55
+00:04:12,480 --> 00:04:13,560
+người dùng đó.
+
+56
+00:04:14,430 --> 00:04:16,860
+Chúng tôi đang tiêm vài thứ ở đây.
+
+57
+00:04:16,860 --> 00:04:19,589
+Đừng lo lắng về bất kỳ trong số họ ngay bây giờ.
+
+58
+00:04:20,100 --> 00:04:23,700
+Về cơ bản, một chế độ xem từng phần mới đã được thêm vào đây.
+
+59
+00:04:23,850 --> 00:04:28,350
+Và hãy để tôi xem những gì chúng ta có trong tài khoản khu vực.
+
+60
+00:04:28,470 --> 00:04:31,860
+Khá nhiều tệp đã được thêm ngay tại đây.
+
+61
+00:04:32,980 --> 00:04:40,360
+Nhưng với tất cả những gì đã được định cấu hình, nếu chúng ta chuyển đến các khu vực bên trong Solution Explorer, chúng ta có
+
+62
+00:04:40,360 --> 00:04:42,320
+một thư mục mới có tên danh tính.
+
+63
+00:04:42,370 --> 00:04:51,490
+Chúng tôi có thể xóa dữ liệu vì ở đó chúng tôi có ngữ cảnh DB ứng dụng, nhưng trong các trang nhận dạng, nó đã thêm
+
+64
+00:04:51,490 --> 00:04:58,780
+tất cả các trang mà chúng tôi đã chọn và chúng tôi đã chọn tất cả các trang có sẵn với gói nhận
+
+65
+00:04:58,810 --> 00:04:59,650
+dạng.
+
+66
+00:04:59,890 --> 00:05:08,090
+Vì vậy, bạn có thể thấy có khá nhiều trang ngay tại đây và tất cả các trang này không phải là trang MVC.
+
+67
+00:05:08,110 --> 00:05:12,910
+Chúng là những trang dao cạo mà chúng ta đã thấy khi bắt đầu khóa học.
+
+68
+00:05:12,940 --> 00:05:17,230
+Tôi đã cung cấp cho bạn một ý tưởng ngắn gọn về cách hoạt động của các trang dao cạo.
+
+69
+00:05:17,950 --> 00:05:25,390
+Ví dụ ta có login thì ta có CSS, HTML dot CSS cho page model.
+
+70
+00:05:25,810 --> 00:05:34,310
+Vì vậy, ngay tại đây trong trang, chúng tôi có mô hình trang, chúng tôi đã đăng nhập, chúng tôi có mật khẩu email và
+
+71
+00:05:34,310 --> 00:05:35,060
+nút gửi.
+
+72
+00:05:35,790 --> 00:05:37,680
+Trên mô hình trang ở đây.
+
+73
+00:05:38,040 --> 00:05:46,110
+Chúng tôi có một vài chi tiết, nhưng sau đó chúng tôi có trình xử lý on get và chúng tôi có trình xử lý on post.
+
+74
+00:05:46,500 --> 00:05:52,500
+Vì vậy, điều đó phải cảm thấy quen thuộc với những gì chúng ta đã thấy trên các trang dao cạo râu.
+
+75
+00:05:52,920 --> 00:06:00,840
+Giờ đây, khi danh tính được Microsoft triển khai trong phiên bản đầu tiên của Dotnet Core hai, đã
+
+76
+00:06:00,840 --> 00:06:04,230
+có cả việc triển khai trang MVC và Razor.
+
+77
+00:06:04,230 --> 00:06:10,170
+Nhưng sau đó, Microsoft chỉ chuyển danh tính sang các trang dao cạo.
+
+78
+00:06:10,200 --> 00:06:14,250
+Bằng cách đó, họ không phải duy trì điều đó ở cả hai nơi.
+
+79
+00:06:14,580 --> 00:06:20,520
+Vì vậy, thật không may, danh tính mà chúng tôi có chỉ là trong các trang dao cạo.
+
+80
+00:06:21,090 --> 00:06:27,660
+Nhưng điều tốt là các trang dao cạo không khác nhau và chúng tôi đã thấy cách thực hiện thao tác CRUD trong
+
+81
+00:06:27,660 --> 00:06:29,160
+các trang dao cạo.
+
+82
+00:06:29,250 --> 00:06:35,010
+Vì vậy, bạn cũng nên có hiểu biết cơ bản về cách hoạt động của các trang dao cạo.
+
+83
+00:06:35,760 --> 00:06:41,190
+Nhưng nếu chúng ta chạy ứng dụng, làm thế nào chúng ta có thể thấy trang đăng nhập và đăng ký?
+
+84
+00:06:41,340 --> 00:06:48,150
+Bởi vì nếu tôi chạy ngay bây giờ, bạn sẽ nhận thấy trên trang chủ, chúng tôi không thấy bất cứ điều gì trong điều hướng.
+
+85
+00:06:48,910 --> 00:06:51,050
+Thêm, đó là siêu đơn giản.
+
+86
+00:06:51,070 --> 00:06:55,810
+Nếu bạn còn nhớ, nó đã thêm một phần của chế độ xem.
+
+87
+00:06:55,960 --> 00:07:02,110
+Hãy để tôi chỉ ra điều đó trong dự án web đã đăng nhập một phần ngay tại đây.
+
+88
+00:07:02,500 --> 00:07:11,350
+Vì vậy, về cơ bản nếu tôi truy cập các trang, không phải ở đây trong chế độ xem mặc định được chia sẻ, chúng tôi đã đăng nhập
+
+89
+00:07:11,350 --> 00:07:14,500
+một phần và có nút đăng nhập và đăng ký.
+
+90
+00:07:15,410 --> 00:07:21,560
+Những gì chúng tôi có thể làm là trong bố cục được gạch dưới, chúng tôi có thể thêm lệnh gọi vào chế độ xem từng phần đó.
+
+91
+00:07:22,300 --> 00:07:27,580
+Vì vậy, ngay sau UL và UL này là thanh điều hướng.
+
+92
+00:07:27,580 --> 00:07:32,830
+Và thay vì uốn cong một cái, hãy để tôi biến nó thành tự động.
+
+93
+00:07:33,280 --> 00:07:37,990
+Và sau đó bạn sẽ nghe thấy chúng tôi sẽ thêm một phần.
+
+94
+00:07:39,070 --> 00:07:44,380
+Tên bằng và tên của chế độ xem đó là đăng nhập một phần?
+
+95
+00:07:44,680 --> 00:07:47,440
+Hãy chắc chắn rằng không có lỗi chính tả ở đó.
+
+96
+00:07:47,470 --> 00:07:50,170
+Lưu nó và để tôi quay trở lại.
+
+97
+00:07:52,320 --> 00:07:52,970
+Hoàn hảo.
+
+98
+00:07:52,980 --> 00:07:57,560
+Bạn có thể thấy khi chúng tôi lưu nó, chúng tôi đã đăng ký và đăng nhập ngay tại đây.
+
+99
+00:07:57,570 --> 00:07:59,940
+Chúng ta phải chuyển văn bản ở đó.
+
+100
+00:08:00,330 --> 00:08:03,810
+Vì vậy, nếu tôi quay lại đây, tôi sẽ xóa văn bản.
+
+101
+00:08:03,810 --> 00:08:04,620
+Tối tăm.
+
+102
+00:08:04,650 --> 00:08:08,340
+Chúng tôi không cần điều đó ở bất kỳ nơi nào ở đây.
+
+103
+00:08:10,290 --> 00:08:11,220
+Hoàn hảo.
+
+104
+00:08:11,220 --> 00:08:13,830
+Lưu nó và cho tôi xem.
+
+105
+00:08:15,550 --> 00:08:16,210
+Hoàn hảo.
+
+106
+00:08:16,240 --> 00:08:23,530
+Bây giờ chúng tôi có các nút đăng ký và đăng nhập ở đây và khi chúng tôi nhấp vào chúng, nó sẽ đưa chúng tôi đến danh
+
+107
+00:08:23,530 --> 00:08:26,710
+tính và sau đó nó có trang đăng ký tài khoản.
+
+108
+00:08:27,100 --> 00:08:30,010
+Bây giờ tại sao điều này không làm việc?
+
+109
+00:08:30,550 --> 00:08:33,789
+Hãy để tôi giải thích điều đó trong video tiếp theo.
+

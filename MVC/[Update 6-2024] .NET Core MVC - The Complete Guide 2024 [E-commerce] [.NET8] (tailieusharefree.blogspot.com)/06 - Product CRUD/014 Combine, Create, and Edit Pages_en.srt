@@ -1,0 +1,500 @@
+1
+00:00:01,950 --> 00:00:03,510
+Instructor: Right now, we have been working
+
+2
+00:00:03,510 --> 00:00:05,340
+on create new product.
+
+3
+00:00:05,340 --> 00:00:07,860
+And I said before, we are only working there
+
+4
+00:00:07,860 --> 00:00:10,830
+and not on edit because I want to show you
+
+5
+00:00:10,830 --> 00:00:13,260
+one thing in the scenario.
+
+6
+00:00:13,260 --> 00:00:15,420
+When you look at the create page,
+
+7
+00:00:15,420 --> 00:00:18,600
+it looks exactly same to what we have for edit
+
+8
+00:00:18,600 --> 00:00:22,353
+but the details are populated when you select edit.
+
+9
+00:00:23,790 --> 00:00:25,470
+Many times in the application,
+
+10
+00:00:25,470 --> 00:00:28,260
+what user have is they have a single page
+
+11
+00:00:28,260 --> 00:00:32,850
+for create and edit, and paste on if there is an ID here,
+
+12
+00:00:32,850 --> 00:00:34,800
+they retrieve and display that,
+
+13
+00:00:34,800 --> 00:00:38,460
+and the display update rather than create.
+
+14
+00:00:38,460 --> 00:00:41,850
+That way, there is a single page for create an update,
+
+15
+00:00:41,850 --> 00:00:45,063
+and that is exactly what we want to do as well.
+
+16
+00:00:45,990 --> 00:00:48,930
+We have seen the different pages for create an update
+
+17
+00:00:48,930 --> 00:00:51,210
+when we were working with category,
+
+18
+00:00:51,210 --> 00:00:54,660
+but for product, I want to combine both of them
+
+19
+00:00:54,660 --> 00:00:56,133
+in a single page.
+
+20
+00:00:57,120 --> 00:00:59,340
+Before we work on the view here,
+
+21
+00:00:59,340 --> 00:01:02,190
+we need to modify the controller.
+
+22
+00:01:02,190 --> 00:01:04,560
+Where we have the create controller
+
+23
+00:01:04,560 --> 00:01:08,670
+rather than create a more meaningful name is upsert.
+
+24
+00:01:08,670 --> 00:01:12,690
+And what I mean by upsert is UP stands for update
+
+25
+00:01:12,690 --> 00:01:16,980
+and SERT is basically combination of insert.
+
+26
+00:01:16,980 --> 00:01:20,400
+So if you have update and insert,
+
+27
+00:01:20,400 --> 00:01:23,940
+you remove this thing and you come up with upsert
+
+28
+00:01:23,940 --> 00:01:26,130
+and that name is commonly used
+
+29
+00:01:26,130 --> 00:01:30,483
+when you combine update and insert in one functionality.
+
+30
+00:01:31,680 --> 00:01:36,300
+In upsert you might have or you might not have an ID.
+
+31
+00:01:36,300 --> 00:01:39,240
+If you are creating then you will not have an ID.
+
+32
+00:01:39,240 --> 00:01:43,140
+But if you are updating, then you will get an ID.
+
+33
+00:01:43,140 --> 00:01:47,520
+The functionality that you have here looks good for create,
+
+34
+00:01:47,520 --> 00:01:49,680
+but if ID is present,
+
+35
+00:01:49,680 --> 00:01:52,770
+then basically we have to retrieve that product
+
+36
+00:01:52,770 --> 00:01:57,393
+and assign it to this product inside the product view model.
+
+37
+00:01:58,710 --> 00:02:02,790
+So what we can do is right here have an if condition
+
+38
+00:02:02,790 --> 00:02:07,790
+and if ID is null or if ID is equal equal to zero,
+
+39
+00:02:08,729 --> 00:02:10,560
+that means it is a create
+
+40
+00:02:10,560 --> 00:02:13,533
+and we can directly return back to the view.
+
+41
+00:02:14,610 --> 00:02:15,960
+In the else part,
+
+42
+00:02:15,960 --> 00:02:18,690
+that means it is an update functionality
+
+43
+00:02:18,690 --> 00:02:23,580
+because ID is present, this will be equal equal to,
+
+44
+00:02:23,580 --> 00:02:25,140
+and if we have update,
+
+45
+00:02:25,140 --> 00:02:29,370
+then we will have to populate product view model dot product
+
+46
+00:02:29,370 --> 00:02:34,370
+is equal to underscore unit of work dot product dot,
+
+47
+00:02:34,860 --> 00:02:37,080
+we have the get functionality,
+
+48
+00:02:37,080 --> 00:02:39,900
+and we need to pass the link operator,
+
+49
+00:02:39,900 --> 00:02:44,900
+u goes to u dot ID is equal equal to the ID.
+
+50
+00:02:46,590 --> 00:02:49,320
+We are using get here and not get all
+
+51
+00:02:49,320 --> 00:02:51,870
+because we know this will only return
+
+52
+00:02:51,870 --> 00:02:55,320
+or ideally it should only return one record
+
+53
+00:02:55,320 --> 00:02:56,823
+and that is the product.
+
+54
+00:02:58,050 --> 00:03:01,410
+Once we retrieve that, we can return back to the view
+
+55
+00:03:01,410 --> 00:03:04,113
+and return back product view model.
+
+56
+00:03:05,670 --> 00:03:08,940
+So the first functionality here is for create
+
+57
+00:03:08,940 --> 00:03:11,073
+and later one is for update.
+
+58
+00:03:12,030 --> 00:03:15,960
+With that, the absurd controller here looks good.
+
+59
+00:03:15,960 --> 00:03:20,760
+We need to modify the post action method for absurd as well.
+
+60
+00:03:20,760 --> 00:03:24,060
+And when we are updating, if you remember,
+
+61
+00:03:24,060 --> 00:03:28,323
+let me go to create, we added multi-part form data.
+
+62
+00:03:29,400 --> 00:03:31,410
+When a file is uploaded here,
+
+63
+00:03:31,410 --> 00:03:35,313
+we will get that here in the iform file.
+
+64
+00:03:36,300 --> 00:03:38,340
+We will make that another field.
+
+65
+00:03:38,340 --> 00:03:40,773
+And let me call that as file.
+
+66
+00:03:42,030 --> 00:03:44,040
+Now, right now I do not want to focus
+
+67
+00:03:44,040 --> 00:03:49,040
+on what we will do here or rather any functionality in here.
+
+68
+00:03:49,080 --> 00:03:51,030
+We will do that later on.
+
+69
+00:03:51,030 --> 00:03:52,590
+We do not need edit.
+
+70
+00:03:52,590 --> 00:03:54,693
+I can remove them altogether.
+
+71
+00:03:56,820 --> 00:04:00,660
+Perfect, so upsert post, we will come back to that.
+
+72
+00:04:00,660 --> 00:04:02,880
+But let me modify the view.
+
+73
+00:04:02,880 --> 00:04:07,880
+So if I go back to the views of admin, product, create,
+
+74
+00:04:09,180 --> 00:04:14,040
+we will modify that to be upsert, and we will remove edit.
+
+75
+00:04:14,040 --> 00:04:15,363
+We do not need that.
+
+76
+00:04:17,130 --> 00:04:21,149
+Alright, let me open upsert and work on that.
+
+77
+00:04:21,149 --> 00:04:23,010
+When we are in the form,
+
+78
+00:04:23,010 --> 00:04:26,040
+we should have the ID in the hidden property.
+
+79
+00:04:26,040 --> 00:04:30,183
+That way when we post, we always have that populated.
+
+80
+00:04:31,620 --> 00:04:35,160
+After that where we have the title, create product here,
+
+81
+00:04:35,160 --> 00:04:38,970
+if ID is present, this should be update product,
+
+82
+00:04:38,970 --> 00:04:41,700
+so we have to make that dynamic.
+
+83
+00:04:41,700 --> 00:04:43,740
+We will use the at sign here,
+
+84
+00:04:43,740 --> 00:04:48,000
+and we can check model dot product dot ID.
+
+85
+00:04:48,000 --> 00:04:52,740
+If that is not zero, then we will display update,
+
+86
+00:04:52,740 --> 00:04:55,293
+else we will display create.
+
+87
+00:04:56,190 --> 00:04:58,590
+We can remove this create product
+
+88
+00:04:58,590 --> 00:05:00,480
+and that should be dynamic.
+
+89
+00:05:00,480 --> 00:05:02,433
+Let me run the application.
+
+90
+00:05:04,320 --> 00:05:07,470
+We will not be able to navigate that directly
+
+91
+00:05:07,470 --> 00:05:09,570
+because when we go to product,
+
+92
+00:05:09,570 --> 00:05:12,210
+this is going to the create action.
+
+93
+00:05:12,210 --> 00:05:14,223
+We will have to modify that.
+
+94
+00:05:15,090 --> 00:05:18,063
+That is inside and dress code layout here.
+
+95
+00:05:20,130 --> 00:05:23,700
+Product controller, we have the index action.
+
+96
+00:05:23,700 --> 00:05:25,080
+That looks good.
+
+97
+00:05:25,080 --> 00:05:29,640
+Whoops, it is inside index there.
+
+98
+00:05:29,640 --> 00:05:31,007
+It will be upsert.
+
+99
+00:05:32,460 --> 00:05:35,520
+Let me scroll down where we have edit.
+
+100
+00:05:35,520 --> 00:05:38,910
+It will be the same action, upsert.
+
+101
+00:05:38,910 --> 00:05:40,470
+Save that.
+
+102
+00:05:40,470 --> 00:05:43,833
+And we need to stop and restart.
+
+103
+00:05:46,590 --> 00:05:49,710
+Let me navigate to product here.
+
+104
+00:05:49,710 --> 00:05:51,930
+And we hit create new.
+
+105
+00:05:51,930 --> 00:05:54,720
+Perfect, goes to upsert here.
+
+106
+00:05:54,720 --> 00:05:59,040
+If I go back and try to edit, it goes to the same view,
+
+107
+00:05:59,040 --> 00:06:04,023
+but you can see data is populated and we see update product.
+
+108
+00:06:05,100 --> 00:06:08,070
+Let me also modify the button text here.
+
+109
+00:06:08,070 --> 00:06:10,623
+So let me go back to upsert.
+
+110
+00:06:11,760 --> 00:06:13,770
+We have the button.
+
+111
+00:06:13,770 --> 00:06:16,860
+Here, we can also add an if condition,
+
+112
+00:06:16,860 --> 00:06:21,210
+and be like if model dot product dot id,
+
+113
+00:06:21,210 --> 00:06:26,010
+if that is not zero, then we want update,
+
+114
+00:06:26,010 --> 00:06:27,933
+else we will keep create.
+
+115
+00:06:28,800 --> 00:06:33,693
+Copy this, paste it here, and call that as update.
+
+116
+00:06:34,620 --> 00:06:37,530
+Now, right now I am keeping things super simple
+
+117
+00:06:37,530 --> 00:06:40,020
+but we have if else condition.
+
+118
+00:06:40,020 --> 00:06:41,460
+Moving down the road,
+
+119
+00:06:41,460 --> 00:06:44,880
+we will be adding some more validation on update.
+
+120
+00:06:44,880 --> 00:06:48,420
+That is why I have added an if else condition
+
+121
+00:06:48,420 --> 00:06:51,090
+rather than an inline functionality
+
+122
+00:06:51,090 --> 00:06:53,373
+of just renaming the text here.
+
+123
+00:06:54,930 --> 00:06:57,000
+So perfect, with that configured,
+
+124
+00:06:57,000 --> 00:06:59,580
+if I go back, we have update,
+
+125
+00:06:59,580 --> 00:07:00,783
+and that looks good.
+

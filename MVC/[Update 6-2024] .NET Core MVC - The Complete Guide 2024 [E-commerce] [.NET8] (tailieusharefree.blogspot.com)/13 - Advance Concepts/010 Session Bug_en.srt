@@ -1,0 +1,88 @@
+1
+00:00:01,890 --> 00:00:05,010
+Instructor: Now let me show you one small bug.
+
+2
+00:00:05,010 --> 00:00:07,680
+If we log in as a customer here
+
+3
+00:00:07,680 --> 00:00:10,500
+and we have two items in the cart,
+
+4
+00:00:10,500 --> 00:00:12,123
+let me place order.
+
+5
+00:00:14,730 --> 00:00:16,680
+When we hit the pay button
+
+6
+00:00:16,680 --> 00:00:19,290
+you will notice the order is placed
+
+7
+00:00:19,290 --> 00:00:22,830
+but the cart here is not getting cleared.
+
+8
+00:00:22,830 --> 00:00:25,350
+Well, the cart is actually clear
+
+9
+00:00:25,350 --> 00:00:27,723
+but we are not clearing the session.
+
+10
+00:00:29,100 --> 00:00:31,590
+So let me do that real quick.
+
+11
+00:00:31,590 --> 00:00:34,950
+That is inside the CartController.
+
+12
+00:00:34,950 --> 00:00:36,753
+We have OrderConfirmation.
+
+13
+00:00:39,270 --> 00:00:42,810
+Let me look that up right here.
+
+14
+00:00:42,810 --> 00:00:45,120
+Once everything is done here
+
+15
+00:00:45,120 --> 00:00:50,120
+we can set HttpContext.Session.Clear.
+
+16
+00:00:50,910 --> 00:00:54,750
+Now, I know that I only have one session in the application.
+
+17
+00:00:54,750 --> 00:00:56,940
+That is why I am clearing that.
+
+18
+00:00:56,940 --> 00:00:59,820
+But typically you will empty the session
+
+19
+00:00:59,820 --> 00:01:01,293
+based on the key name.
+
+20
+00:01:02,310 --> 00:01:05,040
+But this will work for our situation.
+
+21
+00:01:05,040 --> 00:01:08,940
+And with that, if you try it once again, it should work.
+
+22
+00:01:08,940 --> 00:01:12,513
+And I believe with that, everything looks good.
+

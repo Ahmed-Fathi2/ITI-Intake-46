@@ -1,0 +1,404 @@
+1
+00:00:01,420 --> 00:00:07,990
+Now that we have seen routing, we know how the views are being displayed based on the URL.
+
+2
+00:00:08,230 --> 00:00:14,320
+But if I run the application again, that is not the only thing that is being displayed on the page,
+
+3
+00:00:14,710 --> 00:00:23,290
+because if I open the index.cshtml, you can see there is a welcome text and a learn about that we see
+
+4
+00:00:23,320 --> 00:00:24,460
+right here.
+
+5
+00:00:24,790 --> 00:00:30,070
+But what about this header that we have on the top and we also have a footer.
+
+6
+00:00:30,250 --> 00:00:32,439
+How is that getting loaded?
+
+7
+00:00:32,950 --> 00:00:37,390
+And for that we have to go to solution in Views folder.
+
+8
+00:00:37,390 --> 00:00:44,800
+We have seen what is there in the home view, but we have something called as shared and we have something
+
+9
+00:00:44,800 --> 00:00:50,350
+called as underscore view imports and underscore view start.
+
+10
+00:00:51,110 --> 00:00:57,500
+If you have worked with older .net application, you might remember something called as Master page and
+
+11
+00:00:57,500 --> 00:01:04,040
+a child page underscore layout is the master page of your complete application.
+
+12
+00:01:04,610 --> 00:01:09,850
+If I open underscore layout here you can see we have doctype html.
+
+13
+00:01:09,860 --> 00:01:12,770
+We have a head here with some styling.
+
+14
+00:01:12,770 --> 00:01:16,310
+We have a body and there we have the header.
+
+15
+00:01:16,460 --> 00:01:24,650
+In header you can see we have the home and privacy links here and we scroll down, we have something
+
+16
+00:01:24,650 --> 00:01:26,600
+called as render body.
+
+17
+00:01:26,930 --> 00:01:34,220
+This render body is a built in helper in the MVC and that will display anything that we want in the
+
+18
+00:01:34,220 --> 00:01:34,940
+body.
+
+19
+00:01:35,950 --> 00:01:41,890
+Now what that body will be, that will be determined by what is returned from the controller.
+
+20
+00:01:42,160 --> 00:01:47,410
+If we return the index view, it will display that view right here.
+
+21
+00:01:48,710 --> 00:01:50,180
+After the render party.
+
+22
+00:01:50,180 --> 00:01:54,230
+We have a footer here where we are displaying the bulky web.
+
+23
+00:01:54,260 --> 00:01:59,330
+If we go back to the application, that is what we have right here.
+
+24
+00:02:00,770 --> 00:02:07,950
+So underscored layout will be the master page of your application or the main page of your application.
+
+25
+00:02:07,970 --> 00:02:09,650
+Always remember that.
+
+26
+00:02:09,949 --> 00:02:18,200
+And in underscored layout, we will add all the JavaScript, all the CSS that we want to use globally
+
+27
+00:02:18,200 --> 00:02:19,760
+in the application.
+
+28
+00:02:20,690 --> 00:02:26,270
+With that, we have something in the anchor tags like ASP controller, ASP action.
+
+29
+00:02:26,300 --> 00:02:31,480
+These are called tag helpers, but ignore them when the time is right.
+
+30
+00:02:31,490 --> 00:02:35,170
+I will explain you why we need them right now.
+
+31
+00:02:35,180 --> 00:02:42,470
+Underscore layout is the master page of your application and whatever view we return from the controller
+
+32
+00:02:42,470 --> 00:02:48,080
+that will be displayed in the render body content of underscored layout.
+
+33
+00:02:49,720 --> 00:02:55,660
+After that, let's go back and we have something called as validation scripts partial.
+
+34
+00:02:55,690 --> 00:02:59,470
+There we have basically included to JavaScript.
+
+35
+00:02:59,770 --> 00:03:05,620
+Now when we progress with the course, we want to add client side validation and for that we will be
+
+36
+00:03:05,620 --> 00:03:12,160
+using this JavaScript because of that on all pages, validations are not needed.
+
+37
+00:03:12,220 --> 00:03:19,960
+So what the .net team has done is it has added some of the basic JavaScript here and then on the pages
+
+38
+00:03:19,960 --> 00:03:21,580
+where validations are needed.
+
+39
+00:03:21,580 --> 00:03:29,080
+It has separated that out in a different file and we can use them in our file only if needed.
+
+40
+00:03:29,710 --> 00:03:32,240
+We will see that in action down the road.
+
+41
+00:03:32,260 --> 00:03:36,790
+But here we have something called as validation script Partial.
+
+42
+00:03:38,480 --> 00:03:42,320
+Now, one thing that you notice here is in validation scripts partial.
+
+43
+00:03:42,320 --> 00:03:43,820
+We have an underscore.
+
+44
+00:03:44,030 --> 00:03:49,640
+This underscore is not required in layout or validation scripts partial.
+
+45
+00:03:50,030 --> 00:03:57,860
+But typically, if that is a page or component that is used throughout the application, then we typically
+
+46
+00:03:57,860 --> 00:03:59,600
+like to add an underscore.
+
+47
+00:03:59,630 --> 00:04:05,540
+That way, when we look at the name, we can know that, okay, this view will be used throughout the
+
+48
+00:04:05,540 --> 00:04:11,480
+application and there is also a special name for that, which is partial view.
+
+49
+00:04:11,840 --> 00:04:16,640
+Partial view basically means that they cannot be displayed on the page by itself.
+
+50
+00:04:16,670 --> 00:04:24,710
+They will be incorporated as a part of some main view, but that is a little too technical or a little
+
+51
+00:04:24,710 --> 00:04:26,090
+too early for now.
+
+52
+00:04:26,120 --> 00:04:32,630
+But just keep that terminology in mind that there is something called As View and there are partial
+
+53
+00:04:32,630 --> 00:04:34,400
+views by the name.
+
+54
+00:04:34,400 --> 00:04:39,540
+Partial views are basically the views that you do not use by themselves.
+
+55
+00:04:39,570 --> 00:04:42,930
+They will be consumed inside the main view.
+
+56
+00:04:43,590 --> 00:04:45,990
+The next we have a view for error.
+
+57
+00:04:45,990 --> 00:04:47,670
+Dot Cshtml.
+
+58
+00:04:47,700 --> 00:04:50,850
+This is the view where we display the error message.
+
+59
+00:04:50,850 --> 00:04:55,200
+If anything is encountered and we can ignore that for now.
+
+60
+00:04:56,140 --> 00:05:03,640
+Now, one main question that I had when I was learning MVC was how does the application know that this
+
+61
+00:05:03,640 --> 00:05:07,960
+underscored layout is the master page of the application?
+
+62
+00:05:08,830 --> 00:05:10,010
+That is simple.
+
+63
+00:05:10,030 --> 00:05:15,720
+We define that inside the file which is view start dot cshtml.
+
+64
+00:05:16,090 --> 00:05:21,580
+There we are telling that the layout of the application is underscored layout.
+
+65
+00:05:21,940 --> 00:05:26,680
+If I change this to be layout here, let me stop that and run it.
+
+66
+00:05:26,710 --> 00:05:28,390
+Things will not work.
+
+67
+00:05:29,470 --> 00:05:31,030
+We have an exception here.
+
+68
+00:05:31,030 --> 00:05:37,300
+The layout cannot be located and you can see where it is actually looking for the layout.
+
+69
+00:05:38,880 --> 00:05:39,810
+To fix that.
+
+70
+00:05:39,840 --> 00:05:46,140
+What we can do is I can rename this to be layout and then it will start working again.
+
+71
+00:05:48,460 --> 00:05:49,240
+Perfect.
+
+72
+00:05:49,600 --> 00:05:56,380
+So you can see that is how the application is configured to know what is the default layout or master
+
+73
+00:05:56,380 --> 00:05:58,390
+page of your application.
+
+74
+00:05:58,540 --> 00:06:01,330
+Let me revert back the change here.
+
+75
+00:06:01,750 --> 00:06:04,300
+I will keep it underscore layout.
+
+76
+00:06:04,450 --> 00:06:08,470
+That is the name you should be familiar with and not layout.
+
+77
+00:06:09,650 --> 00:06:10,430
+Perfect.
+
+78
+00:06:10,580 --> 00:06:14,990
+Let me run the application and it should work the same.
+
+79
+00:06:15,530 --> 00:06:16,340
+Great.
+
+80
+00:06:16,940 --> 00:06:23,630
+So you start will define what is the master page or what is the layout of your web application.
+
+81
+00:06:24,410 --> 00:06:28,370
+Then we also have something called as View Imports.
+
+82
+00:06:28,940 --> 00:06:33,560
+Here we have defined bulky web and bulky web models.
+
+83
+00:06:33,800 --> 00:06:36,360
+We have added using statements here.
+
+84
+00:06:36,380 --> 00:06:42,560
+If you are working with .net, you know the using statements are used rather than typing that every
+
+85
+00:06:42,560 --> 00:06:43,220
+time.
+
+86
+00:06:43,790 --> 00:06:45,110
+If not, do not worry.
+
+87
+00:06:45,110 --> 00:06:49,400
+When the time comes, I will show you why using statements are needed.
+
+88
+00:06:49,820 --> 00:06:57,230
+But on top of that it has added something called as tag helpers that also we will cover in upcoming
+
+89
+00:06:57,230 --> 00:06:58,070
+videos.
+
+90
+00:06:58,070 --> 00:07:02,780
+But view import, you can think about that as a global import file.
+
+91
+00:07:02,930 --> 00:07:10,440
+Rather than importing or writing the using statement in all file, you can add that here and that will
+
+92
+00:07:10,440 --> 00:07:13,860
+automatically be available in all the views.
+
+93
+00:07:14,770 --> 00:07:21,280
+Now again, the view import or the using statements that we have added here will only be available in
+
+94
+00:07:21,280 --> 00:07:24,820
+the views and not in controllers or models.
+
+95
+00:07:25,330 --> 00:07:31,990
+When the time is right in the future videos, I will show you the importance of view imports and we
+
+96
+00:07:31,990 --> 00:07:35,410
+will also be adding more imports in the file.
+
+97
+00:07:36,010 --> 00:07:38,140
+Let me close all the tabs here.
+
+98
+00:07:38,140 --> 00:07:42,650
+And with that, I believe we have covered all the files in the views.
+
+99
+00:07:42,670 --> 00:07:46,750
+We have a model controller and perfect.
+
+100
+00:07:47,140 --> 00:07:53,710
+Now, with the overview that we have covered with all the files and folder, it is the perfect time
+
+101
+00:07:53,710 --> 00:07:57,100
+to get our hands dirty from the next video.
+

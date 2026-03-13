@@ -1,0 +1,208 @@
+1
+00:00:01,811 --> 00:00:03,289
+Instructor: Right now we will not worry
+
+2
+00:00:03,289 --> 00:00:06,450
+about the update or the details button
+
+3
+00:00:06,450 --> 00:00:09,810
+but basically this button will only be visible
+
+4
+00:00:09,810 --> 00:00:13,380
+if user is admin or employee.
+
+5
+00:00:13,380 --> 00:00:15,750
+So we can add that same logic.
+
+6
+00:00:15,750 --> 00:00:18,300
+Let me switch back here,
+
+7
+00:00:18,300 --> 00:00:19,133
+and I will copy the
+
+8
+00:00:19,133 --> 00:00:24,060
+if condition where I have the button here.
+
+9
+00:00:24,060 --> 00:00:26,370
+I will paste that,
+
+10
+00:00:26,370 --> 00:00:29,310
+so if it is admin or employee
+
+11
+00:00:29,310 --> 00:00:32,729
+only then we will display that button.
+
+12
+00:00:32,729 --> 00:00:34,380
+Perfect.
+
+13
+00:00:34,380 --> 00:00:38,550
+Now next thing we need to display the order summary.
+
+14
+00:00:38,550 --> 00:00:40,470
+Let me do that.
+
+15
+00:00:40,470 --> 00:00:41,315
+In order summary,
+
+16
+00:00:41,315 --> 00:00:44,920
+we have to display the current order status
+
+17
+00:00:45,840 --> 00:00:49,560
+so that is insight model dot order header
+
+18
+00:00:49,560 --> 00:00:52,680
+dot we have the order status.
+
+19
+00:00:52,680 --> 00:00:54,270
+Then if we go back,
+
+20
+00:00:54,270 --> 00:00:56,970
+we need to display each product here
+
+21
+00:00:56,970 --> 00:00:59,913
+based on what we have in order detail.
+
+22
+00:01:01,020 --> 00:01:03,360
+So right here in the ul,
+
+23
+00:01:03,360 --> 00:01:05,744
+I will add a for each loop
+
+24
+00:01:05,744 --> 00:01:08,430
+variable detail
+
+25
+00:01:08,430 --> 00:01:12,120
+in model dot order detail
+
+26
+00:01:12,120 --> 00:01:16,650
+and I will close that right here.
+
+27
+00:01:16,650 --> 00:01:20,220
+For each one of them, we need to display the title
+
+28
+00:01:20,220 --> 00:01:25,220
+so that is insight detail dot product dot title
+
+29
+00:01:25,380 --> 00:01:28,560
+and we need to display the individual price
+
+30
+00:01:28,560 --> 00:01:32,073
+which is insight detail dot price.
+
+31
+00:01:33,750 --> 00:01:37,762
+We will convert that to currency format here.
+
+32
+00:01:37,762 --> 00:01:39,840
+Perfect. That looks good.
+
+33
+00:01:39,840 --> 00:01:41,640
+Let me copy that.
+
+34
+00:01:41,640 --> 00:01:46,180
+Next we have the quantity that is inside detail
+
+35
+00:01:47,400 --> 00:01:48,573
+dot count.
+
+36
+00:01:49,482 --> 00:01:52,200
+Then we want to display the multiplication
+
+37
+00:01:52,200 --> 00:01:54,780
+of count and price here.
+
+38
+00:01:54,780 --> 00:01:57,000
+We will use the add sign.
+
+39
+00:01:57,000 --> 00:02:01,140
+We want to go to detail dot count
+
+40
+00:02:01,140 --> 00:02:05,220
+multiply that by detail dot price
+
+41
+00:02:05,220 --> 00:02:08,913
+and we will convert that to the currency format.
+
+42
+00:02:10,320 --> 00:02:12,480
+Then we need the grand total here.
+
+43
+00:02:12,480 --> 00:02:15,900
+That is inside model dot order header
+
+44
+00:02:15,900 --> 00:02:18,000
+dot order total
+
+45
+00:02:18,000 --> 00:02:20,493
+and convert that to currency.
+
+46
+00:02:21,480 --> 00:02:24,123
+Save that, and let me see.
+
+47
+00:02:25,110 --> 00:02:28,470
+Perfect. That looks much better.
+
+48
+00:02:28,470 --> 00:02:29,475
+Finally, we have all
+
+49
+00:02:29,475 --> 00:02:34,475
+of these fancy buttons to update the order status.
+
+50
+00:02:34,710 --> 00:02:38,220
+Now before we work on updating the order status,
+
+51
+00:02:38,220 --> 00:02:39,570
+let me first work
+
+52
+00:02:39,570 --> 00:02:43,383
+on updating the order details in the next video.
+

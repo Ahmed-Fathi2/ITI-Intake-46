@@ -1,0 +1,49 @@
+﻿using ITI.Application.Interfaces.Repositories;
+using ITI.Domain.Entities;
+using ITI.Infrastructure.Persistence.Context;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace ITI.Infrastructure.Repositories
+{
+    public class StudentCourseRepository(AppDbContext dbContext) : IStudentCourseRepository
+    {
+        private readonly AppDbContext dbContext = dbContext;
+
+        public IEnumerable<StudentCourse> GetAll()
+        {
+            return dbContext.StudentCourses.ToList();
+        }
+
+        public StudentCourse? GetById(int id)
+        {
+            return dbContext.StudentCourses.FirstOrDefault(x => x.Id == id);
+        }
+
+        public void Add(StudentCourse studentCourse)
+        {
+            dbContext.StudentCourses.Add(studentCourse);
+            dbContext.SaveChanges();
+        }
+
+        public void Update(StudentCourse studentCourse)
+        {
+            var exist = dbContext.StudentCourses.FirstOrDefault(x => x.Id == studentCourse.Id);
+            if (exist == null) return;
+
+            exist.StudentId = studentCourse.StudentId;
+            exist.CourseId = studentCourse.CourseId;
+
+            dbContext.StudentCourses.Update(exist);
+            dbContext.SaveChanges();
+        }
+
+        public void Delete(int id)
+        {
+            var entity = dbContext.StudentCourses.FirstOrDefault(x => x.Id == id);
+            if (entity == null) return;
+            dbContext.StudentCourses.Remove(entity);
+            dbContext.SaveChanges();
+        }
+    }
+}

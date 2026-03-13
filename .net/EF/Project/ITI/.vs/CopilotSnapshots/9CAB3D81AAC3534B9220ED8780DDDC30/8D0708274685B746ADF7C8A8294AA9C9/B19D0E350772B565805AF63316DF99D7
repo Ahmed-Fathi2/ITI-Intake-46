@@ -1,0 +1,14 @@
+﻿using ITI.Domain.Entities;
+using System.Collections.Generic;
+
+namespace ITI.Application.Interfaces.Repositories
+{
+    public interface IStudentCourseRepository
+    {
+        IEnumerable<StudentCourse> GetAll();
+        StudentCourse? GetById(int id);
+        void Add(StudentCourse studentCourse);
+        void Update(StudentCourse studentCourse);
+        void Delete(int id);
+    }
+}

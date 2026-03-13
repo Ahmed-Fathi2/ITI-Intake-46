@@ -1,0 +1,276 @@
+1
+00:00:01,744 --> 00:00:03,719
+Instructor: The final thing that we want to work on
+
+2
+00:00:03,719 --> 00:00:06,060
+is when we hit the Update Role
+
+3
+00:00:06,060 --> 00:00:07,683
+it should update the role.
+
+4
+00:00:08,520 --> 00:00:13,200
+So let me switch back here and copy the RoleManagement.
+
+5
+00:00:13,200 --> 00:00:16,020
+Paste that one more time here,
+
+6
+00:00:16,020 --> 00:00:19,983
+remove everything, and this will be HttpPost.
+
+7
+00:00:21,600 --> 00:00:23,910
+What we will be getting here
+
+8
+00:00:23,910 --> 00:00:26,820
+will be the RoleManagementVM model
+
+9
+00:00:26,820 --> 00:00:30,300
+because we did not bind that property.
+
+10
+00:00:30,300 --> 00:00:32,674
+In order to get the RoleId
+
+11
+00:00:32,674 --> 00:00:35,903
+we will have to go to roleManagementVM model
+
+12
+00:00:35,903 --> 00:00:39,320
+.ApplicationUser.Id, and then the RoleID.
+
+13
+00:00:41,489 --> 00:00:44,550
+Now this RoleID is the current role.
+
+14
+00:00:44,550 --> 00:00:47,880
+So let me retrieve the oldRole from the database,
+
+15
+00:00:47,880 --> 00:00:50,253
+that way we know what is the old role.
+
+16
+00:00:51,360 --> 00:00:55,350
+We will check here if not, and if the current role
+
+17
+00:00:55,350 --> 00:00:58,147
+which is inside roleManagementVM model
+
+18
+00:00:58,147 --> 00:01:02,820
+.ApplicationUser.Role is not equal to oldRole,
+
+19
+00:01:02,820 --> 00:01:04,923
+that means a role was updated.
+
+20
+00:01:06,450 --> 00:01:08,580
+Now, when we have to update anything,
+
+21
+00:01:08,580 --> 00:01:12,420
+let me retrieve the application user from the database,
+
+22
+00:01:12,420 --> 00:01:15,060
+and then I will check one thing.
+
+23
+00:01:15,060 --> 00:01:18,876
+If roleManagement.ApplicationUser.Role
+
+24
+00:01:18,876 --> 00:01:20,313
+== SD.Role_Company,
+
+25
+00:01:22,380 --> 00:01:25,110
+that means along with assigning the role,
+
+26
+00:01:25,110 --> 00:01:29,103
+we also have to assign company to that application user.
+
+27
+00:01:29,940 --> 00:01:33,556
+So we can set applicationUser.CompanyId
+
+28
+00:01:33,556 --> 00:01:37,395
+= roleManagementVM model
+
+29
+00:01:37,395 --> 00:01:39,645
+.ApplicationUser.CompanyId.
+
+30
+00:01:42,420 --> 00:01:45,600
+Then if the oldRole was a company role,
+
+31
+00:01:45,600 --> 00:01:48,780
+then we have to remove that CompanyId.
+
+32
+00:01:48,780 --> 00:01:53,760
+So ApplicationUser.CompanyId will be null.
+
+33
+00:01:53,760 --> 00:01:56,280
+So that is everything that we have to update
+
+34
+00:01:56,280 --> 00:02:00,033
+with applicationUser, so let me save the changes.
+
+35
+00:02:01,110 --> 00:02:03,780
+Now finally, we have to remove the old role
+
+36
+00:02:03,780 --> 00:02:06,663
+and assign the new role to our user.
+
+37
+00:02:07,590 --> 00:02:11,613
+For that we have helper method inside UserManager.
+
+38
+00:02:12,840 --> 00:02:16,353
+Let me retrieve that using dependency injection.
+
+39
+00:02:18,510 --> 00:02:21,090
+Perfect, now if we go down,
+
+40
+00:02:21,090 --> 00:02:23,111
+we need to remove the oldRole.
+
+41
+00:02:23,111 --> 00:02:26,883
+So _userManager.RemoveRoleAsync,
+
+42
+00:02:28,230 --> 00:02:31,050
+and we have to pass the user object,
+
+43
+00:02:31,050 --> 00:02:33,150
+which is applicationUser, and the oldRole,
+
+44
+00:02:34,230 --> 00:02:38,550
+we have to provide that, which is in oldRole.
+
+45
+00:02:38,550 --> 00:02:40,140
+It is an Async method,
+
+46
+00:02:40,140 --> 00:02:43,803
+so we will call GetAwaiter.GetResult.
+
+47
+00:02:45,570 --> 00:02:48,480
+Copy that, paste it one more time.
+
+48
+00:02:48,480 --> 00:02:52,590
+Once we remove the oldRole, we have to AddToRoleAsync
+
+49
+00:02:53,460 --> 00:02:56,010
+and we have to add the new role
+
+50
+00:02:56,010 --> 00:02:59,917
+that is inside VM model .ApplicationUser.Role.
+
+51
+00:03:03,060 --> 00:03:08,060
+Finally, let me Redirect to the "Index" action, and perfect.
+
+52
+00:03:08,460 --> 00:03:10,920
+With that, let me go back,
+
+53
+00:03:10,920 --> 00:03:14,160
+and we will have to restart the application
+
+54
+00:03:14,160 --> 00:03:16,443
+to test everything that we have.
+
+55
+00:03:18,870 --> 00:03:22,833
+Perfect, let me log in as an admin here.
+
+56
+00:03:24,570 --> 00:03:27,270
+And we go to Manage User,
+
+57
+00:03:27,270 --> 00:03:29,220
+we have a company account.
+
+58
+00:03:29,220 --> 00:03:32,043
+Let me go back in the database,
+
+59
+00:03:33,060 --> 00:03:38,060
+and if I examine that email is company@gmail, where is that?
+
+60
+00:03:39,090 --> 00:03:43,290
+Right here, it should have a CompanyId.
+
+61
+00:03:43,290 --> 00:03:47,790
+If I change that role to be Employee, Update Role,
+
+62
+00:03:47,790 --> 00:03:49,470
+perfect, that is done.
+
+63
+00:03:49,470 --> 00:03:54,470
+And if I execute the CompanyId should be gone, perfect.
+
+64
+00:03:55,680 --> 00:03:59,700
+If I edit that again to be a company,
+
+65
+00:03:59,700 --> 00:04:04,263
+change that, let me execute here,
+
+66
+00:04:05,910 --> 00:04:09,870
+and perfect, the CompanyId is getting assigned
+
+67
+00:04:09,870 --> 00:04:13,560
+and the role is also back to Company.
+
+68
+00:04:13,560 --> 00:04:15,810
+So with that, you can see how easy it is
+
+69
+00:04:15,810 --> 00:04:20,493
+to manage roles dynamically from the portal in .NET Core.
+

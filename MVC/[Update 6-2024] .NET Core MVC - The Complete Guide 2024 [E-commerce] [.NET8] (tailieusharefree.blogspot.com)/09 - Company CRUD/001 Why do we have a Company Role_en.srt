@@ -1,0 +1,144 @@
+1
+00:00:01,589 --> 00:00:03,570
+Instructor: When we have the utility
+
+2
+00:00:03,570 --> 00:00:08,570
+we have the static details where we created a few roles.
+
+3
+00:00:08,610 --> 00:00:10,680
+Let me spend a little bit of time to
+
+4
+00:00:10,680 --> 00:00:14,553
+explain the first two roles that we see right here.
+
+5
+00:00:15,450 --> 00:00:19,260
+Customer is a basic customer who comes to the website
+
+6
+00:00:19,260 --> 00:00:22,920
+register for an account and places an order.
+
+7
+00:00:22,920 --> 00:00:26,190
+But we will also have some special user
+
+8
+00:00:26,190 --> 00:00:28,950
+which will belong to a company.
+
+9
+00:00:28,950 --> 00:00:32,159
+Now, the advantage a company user will get is
+
+10
+00:00:32,159 --> 00:00:35,370
+they do not have to make the payment right away.
+
+11
+00:00:35,370 --> 00:00:40,370
+They will have 30 days, which technically we call net 30
+
+12
+00:00:40,470 --> 00:00:43,800
+which means they will get 30 days to make payment
+
+13
+00:00:43,800 --> 00:00:46,173
+after the order has been placed.
+
+14
+00:00:47,160 --> 00:00:50,280
+So for them, we will have a different functionality
+
+15
+00:00:50,280 --> 00:00:54,990
+and a company user can be registered by an admin user.
+
+16
+00:00:54,990 --> 00:00:59,160
+Now all of those registration complexities we will work on
+
+17
+00:00:59,160 --> 00:01:03,810
+in the later videos, but right now those are the two roles.
+
+18
+00:01:03,810 --> 00:01:07,440
+And then we have admin and an employee role.
+
+19
+00:01:07,440 --> 00:01:11,010
+Employee will have access to maybe modify the shipping
+
+20
+00:01:11,010 --> 00:01:13,920
+of a product and other details.
+
+21
+00:01:13,920 --> 00:01:17,314
+But admin will be able to perform all the credit operations
+
+22
+00:01:17,314 --> 00:01:20,823
+on product and other content management.
+
+23
+00:01:21,720 --> 00:01:25,713
+That is the reason behind four roles that we have created.
+
+24
+00:01:26,730 --> 00:01:27,810
+Most of the time,
+
+25
+00:01:27,810 --> 00:01:31,560
+we will be working on the three roles in the top here
+
+26
+00:01:31,560 --> 00:01:35,160
+but I wanted to spend a minute to explain you
+
+27
+00:01:35,160 --> 00:01:37,503
+why we have a role of company.
+
+28
+00:01:38,370 --> 00:01:41,250
+If a user is given a role of company,
+
+29
+00:01:41,250 --> 00:01:44,250
+they must belong to some company.
+
+30
+00:01:44,250 --> 00:01:45,843
+So we need to manage a list
+
+31
+00:01:45,843 --> 00:01:48,152
+of all the companies that are authorized
+
+32
+00:01:48,152 --> 00:01:50,223
+in the system as well,
+
+33
+00:01:51,300 --> 00:01:53,587
+or that we have to perform credit operations
+
+34
+00:01:53,587 --> 00:01:55,920
+on a company model.
+
+35
+00:01:55,920 --> 00:01:59,345
+So let me show you what you have to do to accomplish
+
+36
+00:01:59,345 --> 00:02:02,823
+that as an assignment in the next video.
+

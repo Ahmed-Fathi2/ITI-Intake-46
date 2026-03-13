@@ -1,0 +1,392 @@
+1
+00:00:01,830 --> 00:00:04,770
+Instructor: Now we need to design the details page.
+
+2
+00:00:04,770 --> 00:00:06,540
+If we go to the homepage,
+
+3
+00:00:06,540 --> 00:00:10,530
+we have all the products, and that design looks good.
+
+4
+00:00:10,530 --> 00:00:12,720
+But when we go on the details page,
+
+5
+00:00:12,720 --> 00:00:16,260
+we need to display image, category, price,
+
+6
+00:00:16,260 --> 00:00:17,403
+and much more.
+
+7
+00:00:18,420 --> 00:00:22,350
+Rather than spending time in writing Bootstrap and CSS,
+
+8
+00:00:22,350 --> 00:00:25,320
+I have provided that in snippets.
+
+9
+00:00:25,320 --> 00:00:27,330
+Make sure you have downloaded them,
+
+10
+00:00:27,330 --> 00:00:31,350
+and then, in the snippets here, in Section 6,
+
+11
+00:00:31,350 --> 00:00:34,203
+in Section 7, we have the details UI.
+
+12
+00:00:35,370 --> 00:00:37,050
+Copy everything there,
+
+13
+00:00:37,050 --> 00:00:42,050
+and I will paste it inside our details view right here.
+
+14
+00:00:43,260 --> 00:00:48,150
+Now, whatever I have here, it is purely HTML and CSS.
+
+15
+00:00:48,150 --> 00:00:50,700
+You can see there is no tag helpers,
+
+16
+00:00:50,700 --> 00:00:54,153
+or anything related to .NET programming.
+
+17
+00:00:55,020 --> 00:00:59,073
+It is all HTML, CSS, and Bootstrap.
+
+18
+00:01:00,120 --> 00:01:01,020
+Save that.
+
+19
+00:01:01,020 --> 00:01:04,470
+And if we go back and navigate to the details page,
+
+20
+00:01:04,470 --> 00:01:07,830
+we have a fancy design template that is ready
+
+21
+00:01:07,830 --> 00:01:11,190
+with only HTML and CSS.
+
+22
+00:01:11,190 --> 00:01:14,760
+We need to populate this with all the dynamic data,
+
+23
+00:01:14,760 --> 00:01:17,820
+so let me do that one thing at a time,
+
+24
+00:01:17,820 --> 00:01:19,413
+starting with the title.
+
+25
+00:01:20,550 --> 00:01:21,960
+If we go to the top,
+
+26
+00:01:21,960 --> 00:01:24,090
+in order to get anything here,
+
+27
+00:01:24,090 --> 00:01:25,563
+we need to add model.
+
+28
+00:01:26,460 --> 00:01:28,110
+What will be the model?
+
+29
+00:01:28,110 --> 00:01:31,470
+In details here, we are passing a product,
+
+30
+00:01:31,470 --> 00:01:33,753
+so that will be our model.
+
+31
+00:01:34,800 --> 00:01:36,570
+Where we have the title here,
+
+32
+00:01:36,570 --> 00:01:40,653
+where we'll say Model., we have Title.
+
+33
+00:01:41,640 --> 00:01:43,980
+Let me copy the model here.
+
+34
+00:01:43,980 --> 00:01:47,010
+Next we have Model.Author.
+
+35
+00:01:47,010 --> 00:01:49,830
+When we have to go back to the homepage,
+
+36
+00:01:49,830 --> 00:01:53,070
+we can add asp-action.
+
+37
+00:01:53,070 --> 00:01:55,023
+It will be Index action.
+
+38
+00:01:56,580 --> 00:01:59,100
+Then we need the image here,
+
+39
+00:01:59,100 --> 00:02:03,813
+that will be, I have to write Model.ImageURL.
+
+40
+00:02:04,770 --> 00:02:05,850
+Scroll down.
+
+41
+00:02:05,850 --> 00:02:10,590
+We have Category, that is inside Model.Category.Name.
+
+42
+00:02:11,820 --> 00:02:16,820
+ISBN, ListPrice is Model.ListPrice,
+
+43
+00:02:17,220 --> 00:02:19,983
+and we'll convert that to currency.
+
+44
+00:02:21,510 --> 00:02:24,330
+Then we have Quantity here,
+
+45
+00:02:24,330 --> 00:02:26,370
+we have Price twice here.
+
+46
+00:02:26,370 --> 00:02:29,583
+Let me see what is going on in the template first.
+
+47
+00:02:30,990 --> 00:02:33,180
+We need the first price here,
+
+48
+00:02:33,180 --> 00:02:35,703
+and then we need to toggle all the price.
+
+49
+00:02:36,720 --> 00:02:41,073
+So here, we will have Model.Price.ToString,
+
+50
+00:02:42,420 --> 00:02:44,283
+and currency format.
+
+51
+00:02:45,300 --> 00:02:47,100
+Paste that here.
+
+52
+00:02:47,100 --> 00:02:49,413
+Let me copy .ToString.
+
+53
+00:02:50,400 --> 00:02:53,910
+And let me see how the UI looks like.
+
+54
+00:02:53,910 --> 00:02:56,040
+Perfect. Looks good.
+
+55
+00:02:56,040 --> 00:02:58,440
+After that, we need the description.
+
+56
+00:02:58,440 --> 00:03:01,080
+Now before I work on description,
+
+57
+00:03:01,080 --> 00:03:02,940
+let me go to product,
+
+58
+00:03:02,940 --> 00:03:05,433
+and make the description a little fancy.
+
+59
+00:03:06,600 --> 00:03:09,330
+I will just go to Lorem Ipsum,
+
+60
+00:03:09,330 --> 00:03:11,733
+and let me generate something there.
+
+61
+00:03:12,930 --> 00:03:14,523
+I will copy that,
+
+62
+00:03:15,600 --> 00:03:16,980
+paste it here.
+
+63
+00:03:16,980 --> 00:03:19,203
+And let me make some things bold,
+
+64
+00:03:21,120 --> 00:03:22,923
+some things italica,
+
+65
+00:03:24,210 --> 00:03:26,553
+and underline one word.
+
+66
+00:03:27,900 --> 00:03:30,780
+Let me copy that update,
+
+67
+00:03:30,780 --> 00:03:33,723
+and I will save that for all the description.
+
+68
+00:03:34,650 --> 00:03:37,770
+Now, the reason I want to do that for all of them,
+
+69
+00:03:37,770 --> 00:03:41,790
+is that the UI looks a little consistent.
+
+70
+00:03:41,790 --> 00:03:44,343
+So, let me do that real quick.
+
+71
+00:03:56,370 --> 00:03:58,080
+Because of all the scrolling,
+
+72
+00:03:58,080 --> 00:04:02,040
+I think it was best if the back button was at the top here,
+
+73
+00:04:02,040 --> 00:04:04,503
+so that could be updated later on.
+
+74
+00:04:05,340 --> 00:04:07,980
+But perfect, description looks good.
+
+75
+00:04:07,980 --> 00:04:12,090
+Now if I go to the homepage, DETAILS here,
+
+76
+00:04:12,090 --> 00:04:14,770
+and let me modify the description here
+
+77
+00:04:15,910 --> 00:04:18,570
+to be Model.Description,
+
+78
+00:04:18,570 --> 00:04:23,250
+you will see something ugly here, which is HTML text.
+
+79
+00:04:23,250 --> 00:04:26,580
+That is because we have the rich text editor,
+
+80
+00:04:26,580 --> 00:04:28,560
+and if we have to convert that,
+
+81
+00:04:28,560 --> 00:04:32,280
+we have something called as HTML.Raw,
+
+82
+00:04:32,280 --> 00:04:36,513
+and we need to pass Model.Description inside there.
+
+83
+00:04:37,380 --> 00:04:38,850
+And perfect.
+
+84
+00:04:38,850 --> 00:04:39,683
+You can see,
+
+85
+00:04:39,683 --> 00:04:43,563
+it translates that exactly back to what we wanted.
+
+86
+00:04:44,550 --> 00:04:49,140
+So, BACK TO HOME should work now, let's go there.
+
+87
+00:04:49,140 --> 00:04:51,270
+Go to another DETAILS,
+
+88
+00:04:51,270 --> 00:04:54,810
+and we have a Count button, which you can ignore.
+
+89
+00:04:54,810 --> 00:04:56,910
+We have an ADD TO CART as well,
+
+90
+00:04:56,910 --> 00:04:58,710
+but that is coming soon,
+
+91
+00:04:58,710 --> 00:05:01,713
+we do not have that in our functionality right now.
+
+92
+00:05:03,300 --> 00:05:05,460
+I can go to the top here,
+
+93
+00:05:05,460 --> 00:05:08,613
+and I will add margin bottom of 4 as well.
+
+94
+00:05:09,930 --> 00:05:14,220
+And perfect, that looks better for the details page.
+
+95
+00:05:14,220 --> 00:05:17,250
+Now we will ignore the Count here, and ADD TO CART,
+
+96
+00:05:17,250 --> 00:05:19,170
+but basically, on our website,
+
+97
+00:05:19,170 --> 00:05:21,930
+we have the homepage and details page
+
+98
+00:05:21,930 --> 00:05:24,213
+that is working as expected.
+

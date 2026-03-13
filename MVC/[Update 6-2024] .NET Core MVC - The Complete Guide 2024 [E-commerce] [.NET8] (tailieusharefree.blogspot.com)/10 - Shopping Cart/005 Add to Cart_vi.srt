@@ -1,0 +1,328 @@
+1
+00:00:01,960 --> 00:00:06,060
+Bây giờ là lúc làm việc với phương pháp đăng hành động để biết chi tiết.
+
+2
+00:00:06,070 --> 00:00:11,440
+Vì vậy, hãy để tôi sao chép và dán nó và nó sẽ là bài đăng HTTP.
+
+3
+00:00:11,470 --> 00:00:16,090
+Mô hình mà chúng tôi sẽ nhận được ở đây sẽ là Giỏ hàng.
+
+4
+00:00:17,320 --> 00:00:24,070
+Bây giờ, nếu chúng tôi đi đến chi tiết ở đây, chúng tôi sẽ nhận được số lượng, nhưng chúng tôi sẽ không nhận
+
+5
+00:00:24,070 --> 00:00:28,660
+được ID sản phẩm vì ID đó không nằm trong bất kỳ thuộc tính đầu vào nào.
+
+6
+00:00:29,020 --> 00:00:36,100
+Chúng tôi sẽ phải thêm trường nhập ẩn cho ID sản phẩm theo cách đó trong bộ điều khiển gia đình.
+
+7
+00:00:36,100 --> 00:00:41,230
+Khi chúng tôi nhận được giỏ hàng, ID sản phẩm sẽ được điền.
+
+8
+00:00:41,900 --> 00:00:49,190
+Nhưng trên hết, khi chúng ta phải nhập một bản ghi trong bảng giỏ hàng, chúng ta cần ID người dùng của
+
+9
+00:00:49,190 --> 00:00:51,140
+người dùng đã đăng nhập.
+
+10
+00:00:51,500 --> 00:01:00,350
+Vì vậy, bài đăng HTTP này, chúng tôi phải thêm từ khóa được ủy quyền vì nếu ai đó đăng bài thì họ phải là người
+
+11
+00:01:00,350 --> 00:01:02,020
+dùng được ủy quyền.
+
+12
+00:01:02,030 --> 00:01:07,910
+Chúng tôi không quan tâm họ có vai trò gì, họ chỉ cần đăng nhập vào trang web.
+
+13
+00:01:08,360 --> 00:01:12,830
+Đó là lý do tại sao chúng tôi sẽ sử dụng từ khóa được ủy quyền ở đây mà không có bất kỳ vai trò nào.
+
+14
+00:01:13,640 --> 00:01:21,650
+Bây giờ điều đó thật tốt khi người dùng được ủy quyền, nhưng làm cách nào chúng ta có được ID người dùng đó của người dùng đã đăng nhập?
+
+15
+00:01:22,190 --> 00:01:24,560
+Chúng tôi có phương pháp trợ giúp cho điều đó.
+
+16
+00:01:24,560 --> 00:01:32,990
+Vì vậy, trước tiên chúng tôi sẽ phải lấy thứ gì đó là danh tính xác nhận quyền sở hữu bên trong đối tượng người dùng được
+
+17
+00:01:32,990 --> 00:01:36,890
+cung cấp theo mặc định mà chúng tôi có danh tính.
+
+18
+00:01:37,510 --> 00:01:42,310
+Chúng tôi phải chuyển đổi rõ ràng điều đó thành danh tính yêu cầu.
+
+19
+00:01:42,490 --> 00:01:44,260
+Vì vậy, hãy để tôi làm điều đó.
+
+20
+00:01:44,980 --> 00:01:47,350
+Bây giờ từ đó tuyên bố danh tính.
+
+21
+00:01:47,350 --> 00:01:55,240
+Có một yêu cầu đặc biệt với tên định danh tên sẽ có ID người dùng của người dùng đã đăng nhập.
+
+22
+00:01:55,720 --> 00:02:02,380
+Đây là những phương pháp mặc định do nhóm Dotnet cung cấp và tôi không phát minh lại bất cứ thứ
+
+23
+00:02:02,380 --> 00:02:05,330
+gì, chỉ cần truy cập chúng ngay tại đây.
+
+24
+00:02:05,350 --> 00:02:17,200
+Vì vậy, ID người dùng nằm trong dấu chấm nhận dạng xác nhận quyền sở hữu được tìm thấy trước tiên và chúng tôi muốn tìm loại xác nhận quyền sở hữu. định danh tên.
+
+25
+00:02:17,230 --> 00:02:23,720
+Mã định danh tên này không là gì ngoài một hằng số và đó là nơi ID người dùng sẽ được lưu trữ.
+
+26
+00:02:23,740 --> 00:02:32,530
+Khi người dùng đăng nhập, chúng tôi phải truy cập giá trị dấu chấm và theo cách đó, ID người dùng sẽ được điền.
+
+27
+00:02:33,740 --> 00:02:42,110
+Bây giờ, để chứng minh điều đó, hãy để tôi thêm một điểm gỡ lỗi ở đây và khởi động lại ứng dụng.
+
+28
+00:02:44,680 --> 00:02:50,840
+Để tôi đi vào chi tiết và nếu tôi chọn Thêm vào giỏ hàng, nó sẽ yêu cầu tôi đăng nhập.
+
+29
+00:02:50,860 --> 00:02:56,020
+Vì vậy, hãy để tôi đăng nhập như một khách hàng ở đây và hoàn thiện.
+
+30
+00:02:56,050 --> 00:03:04,750
+Bây giờ nếu tôi nhấp vào Thêm vào giỏ hàng, nó sẽ đạt đến điểm dừng của chúng tôi và nếu bạn kiểm tra, chúng tôi có danh tính xác nhận quyền sở hữu và bên trong
+
+31
+00:03:04,750 --> 00:03:07,930
+đó, chúng tôi có tất cả các xác nhận quyền sở hữu ở đó.
+
+32
+00:03:07,930 --> 00:03:13,120
+Nếu bạn kiểm tra, chúng tôi có số nhận dạng tên và có ID người dùng.
+
+33
+00:03:14,270 --> 00:03:21,620
+Đó là ID người dùng mà chúng tôi muốn và ID người dùng đó chúng tôi phải thêm vào giỏ hàng khi tạo
+
+34
+00:03:21,620 --> 00:03:22,490
+bản ghi.
+
+35
+00:03:23,450 --> 00:03:30,260
+Vì vậy, nếu tôi nhấn lại F10 ở đây id người dùng được điền và điều đó có vẻ tốt.
+
+36
+00:03:30,950 --> 00:03:31,880
+Rất hoàn hảo.
+
+37
+00:03:31,880 --> 00:03:33,660
+Hãy để tôi dừng ứng dụng.
+
+38
+00:03:33,680 --> 00:03:39,710
+Chúng tôi có ID người dùng và ID sản phẩm sẽ nằm trong mô hình giỏ hàng.
+
+39
+00:03:40,430 --> 00:03:48,770
+Vì vậy, tất cả những gì chúng ta phải làm là nói ứng dụng chấm giỏ hàng, ID người dùng bằng với ID người dùng và sau đó chúng
+
+40
+00:03:48,770 --> 00:03:51,020
+ta phải thêm giỏ hàng đó.
+
+41
+00:03:51,860 --> 00:03:57,030
+Để thêm điều đó, chúng tôi sẽ nói đơn vị công việc gạch dưới dấu chấm giỏ hàng dấu chấm thêm.
+
+42
+00:03:57,050 --> 00:04:03,170
+Chúng tôi thêm giỏ hàng và chúng tôi nói đơn vị công việc gạch dưới dấu chấm tiết kiệm.
+
+43
+00:04:04,410 --> 00:04:08,520
+Cùng với đó, hãy để tôi chạy ứng dụng và xem điều gì sẽ xảy ra.
+
+44
+00:04:09,700 --> 00:04:09,860
+Các.
+
+45
+00:04:11,400 --> 00:04:13,600
+Tôi sẽ mở cơ sở dữ liệu ở đây.
+
+46
+00:04:13,620 --> 00:04:17,040
+Hãy để tôi làm mới các bảng.
+
+47
+00:04:18,019 --> 00:04:20,180
+Giỏ hàng đang rỗng.
+
+48
+00:04:20,510 --> 00:04:23,840
+Và hãy để tôi đi vào chi tiết ở đây.
+
+49
+00:04:24,290 --> 00:04:26,690
+Chúng tôi sẽ phải đăng nhập lại.
+
+50
+00:04:28,250 --> 00:04:30,620
+Và hãy để tôi thêm ba mục.
+
+51
+00:04:30,650 --> 00:04:31,820
+Thêm vào giỏ hàng.
+
+52
+00:04:32,630 --> 00:04:34,580
+Bây giờ nó đạt một ngoại lệ.
+
+53
+00:04:35,030 --> 00:04:38,780
+Bạn có thể cố gắng tìm hiểu lý do tại sao nó lại là một ngoại lệ không?
+
+54
+00:04:40,070 --> 00:04:42,380
+Lý do là trong bộ điều khiển nhà.
+
+55
+00:04:42,380 --> 00:04:46,730
+Khi mọi thứ thành công, chúng tôi sẽ chuyển hướng trở lại chế độ xem.
+
+56
+00:04:46,730 --> 00:04:52,970
+Nhưng chế độ xem chi tiết này mong đợi một giỏ hàng không được cung cấp ở đây.
+
+57
+00:04:53,480 --> 00:04:58,370
+Vì vậy, về cơ bản mọi thứ đã được thực hiện và sau đó nó quay trở lại Chế độ xem.
+
+58
+00:04:58,400 --> 00:05:01,100
+Vì vậy, nếu tôi đi đến giỏ hàng.
+
+59
+00:05:01,130 --> 00:05:02,240
+Hoàn hảo.
+
+60
+00:05:02,420 --> 00:05:05,300
+Chúng tôi có lối vào ngay tại đây.
+
+61
+00:05:06,020 --> 00:05:14,570
+Tất cả những gì chúng ta phải làm là nếu tôi quay lại và tiếp tục, thay vì quay lại chế độ xem, tôi sẽ phải chuyển
+
+62
+00:05:14,570 --> 00:05:17,390
+hướng chúng đến trang chủ.
+
+63
+00:05:17,930 --> 00:05:24,800
+Bây giờ, khi chúng ta chuyển hướng chúng đến phương thức hành động chỉ mục, thay vì viết chuỗi ma thuật ở đây,
+
+64
+00:05:24,800 --> 00:05:32,730
+chúng ta có một thứ được gọi là tên của và ở đó nó cung cấp tên của tất cả phương thức hành động bên trong bộ điều khiển này.
+
+65
+00:05:32,730 --> 00:05:39,120
+Vì vậy, theo cách đó bạn có thể thấy chúng tôi tránh được lỗi chính tả và chúng tôi tránh được chuỗi ma thuật.
+
+66
+00:05:40,050 --> 00:05:42,690
+Với điều đó, hãy để tôi chạy lại ứng dụng.
+
+67
+00:05:44,860 --> 00:05:50,350
+Hãy để tôi đi đến chi tiết ở đây và để tôi cập nhật số đếm thành một.
+
+68
+00:05:50,530 --> 00:05:52,480
+Chúng tôi sẽ phải đăng nhập.
+
+69
+00:05:54,620 --> 00:05:55,280
+Hoàn hảo.
+
+70
+00:05:55,280 --> 00:05:56,180
+Điều đó đã làm việc.
+
+71
+00:05:56,180 --> 00:06:00,620
+Nhưng nếu tôi truy cập cơ sở dữ liệu trước đó thì số lượng là ba.
+
+72
+00:06:00,920 --> 00:06:05,390
+Tôi đã đăng nhập với cùng một người dùng và tôi đã cập nhật cùng một sản phẩm.
+
+73
+00:06:05,390 --> 00:06:08,240
+Nhưng bạn có thể thấy những gì đang xảy ra ở đây.
+
+74
+00:06:08,450 --> 00:06:11,960
+Nó đang thêm các mục trùng lặp trong bảng.
+
+75
+00:06:12,170 --> 00:06:13,820
+Chúng tôi không muốn điều đó.
+
+76
+00:06:13,910 --> 00:06:18,800
+Nếu ID sản phẩm đã tồn tại thì chúng tôi phải cập nhật số lượng.
+
+77
+00:06:18,800 --> 00:06:21,530
+Khác chúng ta phải thêm một mục mới.
+
+78
+00:06:22,160 --> 00:06:24,200
+Chúng ta sẽ phải làm rõ mọi thứ ở đây.
+
+79
+00:06:24,200 --> 00:06:28,670
+Vì vậy, chúng tôi sẽ nói xóa và để tôi xóa cả ba hàng.
+
+80
+00:06:28,670 --> 00:06:36,230
+Nhưng bây giờ chúng tôi cần tìm ra rằng, được thôi, nếu thẻ đã tồn tại cho người dùng đó và sản phẩm đó, thì chúng
+
+81
+00:06:36,260 --> 00:06:39,830
+tôi phải cập nhật nếu không chúng tôi sẽ tạo.
+
+82
+00:06:40,250 --> 00:06:42,980
+Hãy để tôi làm điều đó trong video tiếp theo.
+

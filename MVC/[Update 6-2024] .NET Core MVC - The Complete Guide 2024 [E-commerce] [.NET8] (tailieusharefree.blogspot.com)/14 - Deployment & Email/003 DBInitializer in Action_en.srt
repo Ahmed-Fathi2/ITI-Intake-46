@@ -1,0 +1,124 @@
+1
+00:00:01,920 --> 00:00:03,180
+Instructor: Now, how can we test
+
+2
+00:00:03,180 --> 00:00:06,210
+if everything is actually working?
+
+3
+00:00:06,210 --> 00:00:09,840
+Well, doing that is super simple.
+
+4
+00:00:09,840 --> 00:00:14,840
+Let me close all the tabs here and open appsettings.json.
+
+5
+00:00:15,000 --> 00:00:17,700
+We have been using bulky database
+
+6
+00:00:17,700 --> 00:00:21,810
+but now let me change the database name to Bulky one.
+
+7
+00:00:21,810 --> 00:00:25,110
+Typically when we do that, we have to add migration
+
+8
+00:00:25,110 --> 00:00:28,980
+but now we are doing that in seed database
+
+9
+00:00:28,980 --> 00:00:32,640
+so we do not have to do anything here directly
+
+10
+00:00:32,640 --> 00:00:34,800
+run the application.
+
+11
+00:00:34,800 --> 00:00:37,830
+It'll automatically create that database
+
+12
+00:00:37,830 --> 00:00:41,460
+apply all the migration seed admin user
+
+13
+00:00:41,460 --> 00:00:43,743
+and assign the role of admin.
+
+14
+00:00:45,570 --> 00:00:49,500
+Perfect, you can see here all the products are created.
+
+15
+00:00:49,500 --> 00:00:51,450
+Now we do not have any image
+
+16
+00:00:51,450 --> 00:00:55,620
+because that is the edit that user will have to do.
+
+17
+00:00:55,620 --> 00:00:58,680
+Let me go to DB Initializer
+
+18
+00:00:58,680 --> 00:01:02,103
+that was admin@dotnetmastery.com,
+
+19
+00:01:03,000 --> 00:01:08,000
+and if I try admin123, it should be able to sign me in
+
+20
+00:01:08,910 --> 00:01:13,503
+and perfect, everything is working as expected.
+
+21
+00:01:14,670 --> 00:01:19,670
+So that means if we go back here, we should have bulky one
+
+22
+00:01:20,190 --> 00:01:24,483
+and it should have all the tables, everything is created.
+
+23
+00:01:25,500 --> 00:01:26,333
+So you can see
+
+24
+00:01:26,333 --> 00:01:30,273
+with DB initializer how easy deployment will be.
+
+25
+00:01:31,538 --> 00:01:35,250
+Now, before we do anything else here, let me revert
+
+26
+00:01:35,250 --> 00:01:38,490
+back the old database name because that has orders
+
+27
+00:01:38,490 --> 00:01:41,874
+and everything and that is what we will use
+
+28
+00:01:41,874 --> 00:01:45,273
+if we want to build on to our application.
+
+29
+00:01:46,320 --> 00:01:47,940
+I can also go back
+
+30
+00:01:47,940 --> 00:01:52,940
+and delete this bulky one, that was only for testing.
+
+31
+00:01:54,000 --> 00:01:58,173
+Perfect, let me continue from the next video.
+

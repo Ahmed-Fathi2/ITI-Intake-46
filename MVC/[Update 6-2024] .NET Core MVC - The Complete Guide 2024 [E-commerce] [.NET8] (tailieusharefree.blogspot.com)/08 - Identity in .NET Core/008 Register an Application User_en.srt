@@ -1,0 +1,476 @@
+1
+00:00:02,040 --> 00:00:04,027
+Instructor: Now, we have the discriminator
+
+2
+00:00:04,027 --> 00:00:06,540
+as IdentityUser.
+
+3
+00:00:06,540 --> 00:00:10,890
+Changing that to ApplicationUser is super simple.
+
+4
+00:00:10,890 --> 00:00:14,430
+But before I walk you through that, let me go back here,
+
+5
+00:00:14,430 --> 00:00:18,630
+in area, identity, pages, account,
+
+6
+00:00:18,630 --> 00:00:20,310
+we have register.
+
+7
+00:00:20,310 --> 00:00:23,550
+Let me open the register page model.
+
+8
+00:00:23,550 --> 00:00:25,890
+Again, this is a razor page here
+
+9
+00:00:25,890 --> 00:00:28,740
+and you can see we are injecting many things
+
+10
+00:00:28,740 --> 00:00:31,350
+in dependency injection.
+
+11
+00:00:31,350 --> 00:00:34,770
+I want to spend some time to explain you few things
+
+12
+00:00:34,770 --> 00:00:36,540
+right here.
+
+13
+00:00:36,540 --> 00:00:39,600
+Now think about when you are implementing a login
+
+14
+00:00:39,600 --> 00:00:42,120
+or registration functionality.
+
+15
+00:00:42,120 --> 00:00:44,670
+You will have to write all the code
+
+16
+00:00:44,670 --> 00:00:46,140
+of what should happen
+
+17
+00:00:46,140 --> 00:00:49,440
+when a user enters username and password.
+
+18
+00:00:49,440 --> 00:00:51,780
+You will have to encrypt that code.
+
+19
+00:00:51,780 --> 00:00:53,640
+You might have to validate that
+
+20
+00:00:53,640 --> 00:00:55,980
+with what it is there in database
+
+21
+00:00:55,980 --> 00:00:57,960
+and then you can be like, okay,
+
+22
+00:00:57,960 --> 00:01:02,250
+authentication looks good, login is successful.
+
+23
+00:01:02,250 --> 00:01:05,310
+On top of that, you will have to store that in session
+
+24
+00:01:05,310 --> 00:01:08,190
+or some place that user is logged in
+
+25
+00:01:08,190 --> 00:01:11,310
+and you might have to store the details about user
+
+26
+00:01:11,310 --> 00:01:12,333
+in session.
+
+27
+00:01:13,230 --> 00:01:16,110
+Now these are only the basic things.
+
+28
+00:01:16,110 --> 00:01:18,750
+If you think about the complete authentication
+
+29
+00:01:18,750 --> 00:01:22,170
+there are way more functionalities that are needed.
+
+30
+00:01:22,170 --> 00:01:24,450
+Taking care of logging a user,
+
+31
+00:01:24,450 --> 00:01:26,820
+all the way to logging out a user
+
+32
+00:01:26,820 --> 00:01:30,360
+and managing their credentials between there.
+
+33
+00:01:30,360 --> 00:01:32,848
+When we use the .NET identity,
+
+34
+00:01:32,848 --> 00:01:37,830
+.NET team has taken care of all the heavy lifting for us
+
+35
+00:01:37,830 --> 00:01:41,430
+and they have given us these classes like SignInManager,
+
+36
+00:01:41,430 --> 00:01:45,870
+UserManager, RoleManager to manage your roles
+
+37
+00:01:45,870 --> 00:01:49,830
+and all of that is provided by default.
+
+38
+00:01:49,830 --> 00:01:52,530
+All we have to do is directly inject them
+
+39
+00:01:52,530 --> 00:01:54,480
+in dependency injection
+
+40
+00:01:54,480 --> 00:01:58,620
+and then using UserManager or SignInManager,
+
+41
+00:01:58,620 --> 00:02:00,363
+we can manage the user.
+
+42
+00:02:01,380 --> 00:02:04,770
+Now, SignInManager expects the type of user
+
+43
+00:02:04,770 --> 00:02:07,380
+and that is IdentityUser.
+
+44
+00:02:07,380 --> 00:02:09,780
+You can keep that, that is okay.
+
+45
+00:02:09,780 --> 00:02:12,330
+We only want to change the discriminator
+
+46
+00:02:12,330 --> 00:02:14,730
+when we are creating that user
+
+47
+00:02:14,730 --> 00:02:17,343
+with the help of these helper classes.
+
+48
+00:02:18,390 --> 00:02:19,530
+If we scroll down,
+
+49
+00:02:19,530 --> 00:02:22,050
+in razor pages if you remember,
+
+50
+00:02:22,050 --> 00:02:24,120
+we have handlers.
+
+51
+00:02:24,120 --> 00:02:25,980
+So we scroll down,
+
+52
+00:02:25,980 --> 00:02:30,510
+we have a get handler and we have a post handler.
+
+53
+00:02:30,510 --> 00:02:33,840
+Inside the post handler you can see there is a method
+
+54
+00:02:33,840 --> 00:02:36,450
+which says CreateUser.
+
+55
+00:02:36,450 --> 00:02:39,630
+If you press F12 or if you scroll down,
+
+56
+00:02:39,630 --> 00:02:42,333
+you will see that method right here.
+
+57
+00:02:43,410 --> 00:02:45,600
+That CreateUser is doing nothing
+
+58
+00:02:45,600 --> 00:02:49,980
+but it is creating an instance of IdentityUser.
+
+59
+00:02:49,980 --> 00:02:50,910
+Rather than that
+
+60
+00:02:50,910 --> 00:02:54,930
+we want to create an instance of ApplicationUser
+
+61
+00:02:54,930 --> 00:02:58,533
+and we will have to update the return type here as well.
+
+62
+00:02:59,910 --> 00:03:03,240
+That will make sure that CreateUser right here,
+
+63
+00:03:03,240 --> 00:03:06,873
+the user will now be of type ApplicationUser.
+
+64
+00:03:07,920 --> 00:03:09,300
+Then on line 120,
+
+65
+00:03:09,300 --> 00:03:13,020
+you can see we have a helper method in _userManager,
+
+66
+00:03:13,020 --> 00:03:15,000
+which is CreateAsync,
+
+67
+00:03:15,000 --> 00:03:18,270
+there it expects a user object and password
+
+68
+00:03:18,270 --> 00:03:22,110
+and it will automatically create that user.
+
+69
+00:03:22,110 --> 00:03:24,690
+So when this method will be invoked
+
+70
+00:03:24,690 --> 00:03:28,890
+it'll insert an entry in the ASP.NET user's table
+
+71
+00:03:28,890 --> 00:03:32,463
+and on top of that it'll encrypt the password as well.
+
+72
+00:03:33,720 --> 00:03:37,623
+So helper method is taking care of all the heavy lifting.
+
+73
+00:03:38,490 --> 00:03:42,480
+On top of that, if result is successful, we scroll down.
+
+74
+00:03:42,480 --> 00:03:45,660
+It is also doing something to generate email token
+
+75
+00:03:45,660 --> 00:03:47,460
+and sending email,
+
+76
+00:03:47,460 --> 00:03:49,800
+but it is only the interface,
+
+77
+00:03:49,800 --> 00:03:52,773
+implementation of that has not been done.
+
+78
+00:03:54,270 --> 00:03:57,060
+But if you examine on line 144,
+
+79
+00:03:57,060 --> 00:03:59,190
+we are using _signInManager,
+
+80
+00:03:59,190 --> 00:04:03,390
+and we are automatically signing in that user.
+
+81
+00:04:03,390 --> 00:04:05,640
+And because of that, if you remember,
+
+82
+00:04:05,640 --> 00:04:09,330
+when we register a user and hit the submit button
+
+83
+00:04:09,330 --> 00:04:12,393
+it automatically signs in the user.
+
+84
+00:04:13,260 --> 00:04:15,150
+We do not have to write any code,
+
+85
+00:04:15,150 --> 00:04:17,399
+we are only calling the helper method
+
+86
+00:04:17,399 --> 00:04:20,583
+in _signInManager and _userManager.
+
+87
+00:04:21,810 --> 00:04:23,460
+So, that is great.
+
+88
+00:04:23,460 --> 00:04:27,360
+Now that we have modified the user to be ApplicationUser,
+
+89
+00:04:27,360 --> 00:04:30,993
+let me run the application and see what happens.
+
+90
+00:04:33,660 --> 00:04:36,510
+Let me try to register a new user.
+
+91
+00:04:36,510 --> 00:04:38,700
+I know this will be an ApplicationUser,
+
+92
+00:04:38,700 --> 00:04:42,220
+so let me say applicationuser@gmail.com
+
+93
+00:04:43,200 --> 00:04:45,360
+we will enter a password
+
+94
+00:04:45,360 --> 00:04:47,610
+and hit register.
+
+95
+00:04:47,610 --> 00:04:51,360
+It will automatically sign us in as well.
+
+96
+00:04:51,360 --> 00:04:54,570
+If we go to database and execute that,
+
+97
+00:04:54,570 --> 00:04:57,120
+we have the application user here.
+
+98
+00:04:57,120 --> 00:04:59,850
+And if we examine the discriminator,
+
+99
+00:04:59,850 --> 00:05:02,927
+you can see it is of type ApplicationUser.
+
+100
+00:05:03,960 --> 00:05:06,930
+So things are indeed getting different here
+
+101
+00:05:06,930 --> 00:05:10,290
+and we can now register an ApplicationUser
+
+102
+00:05:10,290 --> 00:05:12,363
+rather than default IdentityUser.
+
+103
+00:05:13,980 --> 00:05:17,250
+Now because we are adding ApplicationUser here,
+
+104
+00:05:17,250 --> 00:05:20,040
+on user we have more properties
+
+105
+00:05:20,040 --> 00:05:24,420
+like if we want name or if we want street address,
+
+106
+00:05:24,420 --> 00:05:26,820
+we can populate all of them.
+
+107
+00:05:26,820 --> 00:05:30,180
+But before I populate all of those properties,
+
+108
+00:05:30,180 --> 00:05:33,360
+what is the role of current user?
+
+109
+00:05:33,360 --> 00:05:35,850
+By default, when you add identity,
+
+110
+00:05:35,850 --> 00:05:38,880
+it does add the table to manage roles,
+
+111
+00:05:38,880 --> 00:05:42,153
+but if you examine the roles table, it is empty.
+
+112
+00:05:43,050 --> 00:05:46,260
+So we do not have any roles in our website.
+
+113
+00:05:46,260 --> 00:05:50,430
+Like if we want admin role, employee role, company role
+
+114
+00:05:50,430 --> 00:05:54,780
+or any individual role, we do not have any roles.
+
+115
+00:05:54,780 --> 00:05:59,780
+We have to write some code to seed this ASP.NET roles table
+
+116
+00:05:59,790 --> 00:06:02,670
+and then we have to use some helper methods
+
+117
+00:06:02,670 --> 00:06:07,620
+that when a user is created based on what we select in role,
+
+118
+00:06:07,620 --> 00:06:10,500
+we want to assign that role.
+
+119
+00:06:10,500 --> 00:06:14,163
+So let me first work on that in the next video.
+

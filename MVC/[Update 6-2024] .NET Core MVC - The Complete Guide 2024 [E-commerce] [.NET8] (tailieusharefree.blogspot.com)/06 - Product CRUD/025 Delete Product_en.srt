@@ -1,0 +1,248 @@
+1
+00:00:02,040 --> 00:00:04,410
+Instructor: Now we need to add the delete logic.
+
+2
+00:00:04,410 --> 00:00:07,830
+So where we have the get all in product controller
+
+3
+00:00:07,830 --> 00:00:11,790
+let me copy that, paste it one more time here
+
+4
+00:00:11,790 --> 00:00:14,883
+and let me call that HttpDelete here.
+
+5
+00:00:16,050 --> 00:00:18,390
+We will name this as delete.
+
+6
+00:00:18,390 --> 00:00:20,943
+When we are deleting, we need the ID.
+
+7
+00:00:22,680 --> 00:00:26,160
+Based on the ID here, we will retrieve our product
+
+8
+00:00:26,160 --> 00:00:29,970
+and let me store that to be product to be deleted
+
+9
+00:00:29,970 --> 00:00:31,413
+rather than OBJ.
+
+10
+00:00:33,300 --> 00:00:35,560
+If product to be deleted is null
+
+11
+00:00:38,040 --> 00:00:40,350
+in that case I will return Json
+
+12
+00:00:40,350 --> 00:00:43,980
+where in the object I will say success is false
+
+13
+00:00:43,980 --> 00:00:46,353
+and message error while deleting.
+
+14
+00:00:47,430 --> 00:00:50,460
+But if that is valid, then before we delete the product
+
+15
+00:00:50,460 --> 00:00:53,370
+we need to remove its image as well.
+
+16
+00:00:53,370 --> 00:00:58,370
+So we will say variable old image path is equal to,
+
+17
+00:00:58,530 --> 00:01:01,530
+and if I go to absurd where I was combining
+
+18
+00:01:01,530 --> 00:01:05,680
+the path, that logic, I can copy this
+
+19
+00:01:07,590 --> 00:01:10,950
+and we will paste that right here.
+
+20
+00:01:10,950 --> 00:01:13,890
+Perfect. So we will delete the old path here.
+
+21
+00:01:13,890 --> 00:01:15,993
+We need the wwwRootPath,
+
+22
+00:01:16,860 --> 00:01:21,093
+which we can get from webHostenvironment.WebRootPath.
+
+23
+00:01:22,200 --> 00:01:27,200
+Image URL is inside product to be deleted, .ImageUrl.
+
+24
+00:01:29,100 --> 00:01:32,583
+Let me break this out here. Perfect.
+
+25
+00:01:33,960 --> 00:01:36,300
+So we delete the image here.
+
+26
+00:01:36,300 --> 00:01:41,130
+Next we will say unitOfWork.product.remove.
+
+27
+00:01:41,130 --> 00:01:44,050
+We want to remove the product to be deleted
+
+28
+00:01:45,390 --> 00:01:48,183
+and underscore unit of work.save.
+
+29
+00:01:49,230 --> 00:01:52,050
+Finally, where we have to return the Json here,
+
+30
+00:01:52,050 --> 00:01:56,613
+we will say success is true and message delete successful.
+
+31
+00:01:57,720 --> 00:01:59,580
+Let me stop the changes.
+
+32
+00:01:59,580 --> 00:02:02,673
+We have an error, let me see what that is.
+
+33
+00:02:06,540 --> 00:02:09,122
+It says delete already exist.
+
+34
+00:02:10,440 --> 00:02:12,483
+Let me see where that is.
+
+35
+00:02:16,680 --> 00:02:19,140
+And yes, of course we need to remove
+
+36
+00:02:19,140 --> 00:02:22,380
+the existing delete functionality that we have
+
+37
+00:02:22,380 --> 00:02:27,380
+and I will also remove the delete view in area.
+
+38
+00:02:27,900 --> 00:02:29,313
+We have the delete.
+
+39
+00:02:30,420 --> 00:02:31,713
+Let's remove that.
+
+40
+00:02:34,140 --> 00:02:36,870
+With that, let me add a debunking point here
+
+41
+00:02:36,870 --> 00:02:39,213
+and go to product.js.
+
+42
+00:02:40,170 --> 00:02:45,030
+Now there, if I copy this, paste it here rather than absurd.
+
+43
+00:02:45,030 --> 00:02:49,533
+If I say delete here and I can just pass forward slash I'd.
+
+44
+00:02:50,370 --> 00:02:53,043
+Let me run and show you what happens.
+
+45
+00:02:55,740 --> 00:02:57,543
+We go to product here.
+
+46
+00:02:58,500 --> 00:03:00,660
+We have the fake product here.
+
+47
+00:03:00,660 --> 00:03:05,070
+If I hit delete here, the EPA will not be invoked
+
+48
+00:03:05,070 --> 00:03:08,400
+because that EPA has HttpDelete there.
+
+49
+00:03:08,400 --> 00:03:13,023
+But if I remove that HttpDelete, let's see what happens.
+
+50
+00:03:17,250 --> 00:03:21,360
+We go to product and the delete should work now.
+
+51
+00:03:21,360 --> 00:03:23,760
+Perfect. It hits our breakpoint.
+
+52
+00:03:23,760 --> 00:03:25,350
+It will remove the image
+
+53
+00:03:25,350 --> 00:03:28,230
+and it will also delete the product.
+
+54
+00:03:28,230 --> 00:03:31,320
+If I continue here, perfect.
+
+55
+00:03:31,320 --> 00:03:35,613
+It says success is true and message delete successful.
+
+56
+00:03:36,600 --> 00:03:40,800
+If I go back here, that product no longer exists
+
+57
+00:03:40,800 --> 00:03:45,800
+so our EPA is actually being invoked and it returns Json.
+
+58
+00:03:46,290 --> 00:03:49,440
+But typically what happens is when we are deleting,
+
+59
+00:03:49,440 --> 00:03:51,063
+we like a confirmation.
+
+60
+00:03:51,930 --> 00:03:54,600
+For that we will be using SweetAlert.
+
+61
+00:03:54,600 --> 00:03:56,730
+And let me show you how to add that
+
+62
+00:03:56,730 --> 00:03:59,463
+to our project in the next video.
+

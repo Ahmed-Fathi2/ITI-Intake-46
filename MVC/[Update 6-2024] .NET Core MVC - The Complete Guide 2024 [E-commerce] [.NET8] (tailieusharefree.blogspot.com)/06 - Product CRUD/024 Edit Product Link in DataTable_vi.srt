@@ -1,0 +1,180 @@
+1
+00:00:01,440 --> 00:00:02,790
+Trong bảng dữ liệu.
+
+2
+00:00:02,790 --> 00:00:06,750
+Chúng tôi muốn các nút chỉnh sửa hoặc xóa bất kỳ sản phẩm nào.
+
+3
+00:00:07,440 --> 00:00:15,090
+Nếu tôi quay lại mã ở đây, chúng ta có các cột cơ bản, nhưng với cột cơ bản đó, chúng ta có thể làm cho mọi thứ trở
+
+4
+00:00:15,090 --> 00:00:16,350
+nên cực kỳ lạ mắt.
+
+5
+00:00:16,890 --> 00:00:18,870
+Hãy để tôi chỉ cho bạn làm thế nào để làm điều đó.
+
+6
+00:00:18,900 --> 00:00:22,030
+Chúng tôi sẽ sao chép nó, dán nó một lần nữa.
+
+7
+00:00:22,050 --> 00:00:28,710
+Cột tiếp theo, Bất cứ khi nào chúng tôi chỉnh sửa hoặc xóa bất kỳ sản phẩm nào, chúng tôi cần ID sản phẩm.
+
+8
+00:00:29,310 --> 00:00:32,220
+Vì vậy, đối với dữ liệu, về cơ bản chúng tôi cần ID.
+
+9
+00:00:32,250 --> 00:00:36,840
+Ở đây, nếu tôi lưu cái này và quay lại, nó sẽ hiển thị ID.
+
+10
+00:00:37,380 --> 00:00:44,610
+Tôi không muốn điều đó hiển thị ID hơn là tôi muốn hiển thị một số nút ngay tại đây.
+
+11
+00:00:45,250 --> 00:00:49,210
+Vì vậy, những gì tôi có thể làm là có một thứ gọi là kết xuất.
+
+12
+00:00:49,540 --> 00:00:53,920
+Và ở đó chúng ta có thể định nghĩa một chức năng kết xuất tùy chỉnh mà chúng ta muốn.
+
+13
+00:00:54,530 --> 00:01:00,890
+Vì vậy, ở đây chúng ta sẽ nói chức năng và tham số chúng ta sẽ lấy dữ liệu, về cơ bản là ID.
+
+14
+00:01:02,060 --> 00:01:07,820
+Bây giờ, ở đây bên trong chuỗi, chúng ta sẽ phải viết HTML mà chúng ta muốn hiển thị.
+
+15
+00:01:08,180 --> 00:01:17,360
+Giống như nếu tôi thêm một div ở đây với một div đóng và nếu tôi nói xin chào, nếu tôi lưu nó và quay lại, bạn có thể thấy nó
+
+16
+00:01:17,360 --> 00:01:18,320
+hiển thị.
+
+17
+00:01:18,320 --> 00:01:19,820
+Xin chào ngay đó.
+
+18
+00:01:20,450 --> 00:01:26,260
+Nhưng thay vì điều đó trong div, hãy để tôi thêm một lớp bootstrap của nhóm BTN.
+
+19
+00:01:26,270 --> 00:01:28,580
+Cho rằng một vai trò của nhóm.
+
+20
+00:01:29,290 --> 00:01:29,680
+Hiện nay.
+
+21
+00:01:29,680 --> 00:01:32,650
+Ngay bây giờ tôi phải viết mọi thứ trong một dòng.
+
+22
+00:01:32,650 --> 00:01:39,880
+Nhưng nếu chúng ta muốn có nhiều dòng, chúng ta có thể sử dụng biểu tượng ở trên cùng của ashtarak nơi chúng ta có
+
+23
+00:01:39,910 --> 00:01:41,740
+thể viết HTML nhiều dòng.
+
+24
+00:01:42,070 --> 00:01:48,370
+Vì vậy, bạn có thể thấy chúng ta có thể chia nó ra thành một dòng khác và nó vẫn coi đó là một chuỗi.
+
+25
+00:01:49,480 --> 00:01:53,410
+Trước tiên, tôi sẽ thêm một thẻ neo ở đây với href trống.
+
+26
+00:01:53,440 --> 00:02:00,010
+Ngay bây giờ, chúng tôi sẽ thêm một số lớp bootstrap và đang thêm biểu tượng bootstrap bằng bút chì.
+
+27
+00:02:01,090 --> 00:02:03,810
+Nếu tôi lưu nó ở đây, hãy quay lại.
+
+28
+00:02:03,820 --> 00:02:04,650
+Hoàn hảo.
+
+29
+00:02:04,660 --> 00:02:08,860
+Chúng tôi có nút chỉnh sửa tương tự như chỉnh sửa ở đây.
+
+30
+00:02:08,889 --> 00:02:17,140
+Hãy để tôi tạo một số khoảng trống và thêm một nút xóa có biểu tượng để lấp đầy thùng rác và thật tuyệt.
+
+31
+00:02:17,140 --> 00:02:18,850
+Điều đó có vẻ tốt hơn nhiều.
+
+32
+00:02:19,090 --> 00:02:23,560
+Tôi có thể giảm chiều rộng ở đây để đảm bảo rằng chúng tôi có đủ không gian.
+
+33
+00:02:23,560 --> 00:02:25,150
+Vì vậy, hãy để tôi làm điều đó.
+
+34
+00:02:25,180 --> 00:02:27,640
+Chúng tôi sẽ thực hiện 10% này.
+
+35
+00:02:27,670 --> 00:02:33,400
+Tác giả có thể là 15 và chúng tôi có thể thay đổi điều này thành 25%.
+
+36
+00:02:33,430 --> 00:02:34,420
+Hoàn hảo.
+
+37
+00:02:34,450 --> 00:02:35,530
+Có vẻ tốt.
+
+38
+00:02:35,680 --> 00:02:37,360
+Bây giờ khi người dùng nhấp chuột.
+
+39
+00:02:37,360 --> 00:02:46,660
+Chỉnh sửa, chúng tôi cần viết href ở đây để chúng tôi phải chuyển hướng đến hành động nâng cấp bộ điều khiển sản phẩm của khu vực quản trị.
+
+40
+00:02:46,660 --> 00:02:48,790
+Và ở đó chúng ta phải vượt qua ID.
+
+41
+00:02:49,820 --> 00:02:57,980
+Vì vậy, chúng tôi có dữ liệu đó trong dữ liệu ở đây để chúng tôi có thể sử dụng ký hiệu đô la và sử dụng dữ liệu vì chúng tôi đang nói rằng
+
+42
+00:02:57,980 --> 00:02:59,420
+dữ liệu về cơ bản là ID.
+
+43
+00:03:00,540 --> 00:03:01,230
+Với.
+
+44
+00:03:01,230 --> 00:03:08,200
+Nếu tôi quay lại, bạn có thể thấy chức năng chỉnh sửa và liên kết đó đang hoạt động như mong đợi.
+
+45
+00:03:08,220 --> 00:03:14,100
+Trong video tiếp theo, hãy để tôi thêm một điểm cuối API để xóa và sau đó gọi điểm cuối đó.
+

@@ -1,0 +1,404 @@
+1
+00:00:01,589 --> 00:00:07,410
+Chúng tôi phải tạo JavaScript để gửi yêu cầu Ajax và tải dữ liệu.
+
+2
+00:00:08,240 --> 00:00:10,970
+Vì vậy, đó sẽ là một chút khó khăn.
+
+3
+00:00:10,970 --> 00:00:13,250
+Vì vậy, hãy để tôi hướng dẫn bạn qua tất cả những điều đó.
+
+4
+00:00:13,250 --> 00:00:17,540
+Ở đây trong thư mục gốc WW, chúng ta có CSS.
+
+5
+00:00:17,570 --> 00:00:19,910
+JS Ngay tại đó.
+
+6
+00:00:19,910 --> 00:00:21,680
+Hãy để tôi thêm một tập tin mới.
+
+7
+00:00:21,890 --> 00:00:30,410
+Tôi sẽ dừng ứng dụng, mặt hàng mới, và tôi sẽ gọi sản phẩm đó là chấm.
+
+8
+00:00:30,410 --> 00:00:33,530
+JS Hãy thêm điều đó.
+
+9
+00:00:34,940 --> 00:00:41,360
+Bây giờ nếu chúng ta quay lại, hãy để tôi sao chép những gì chúng tôi có, bảng dữ liệu của chúng tôi dán nó ngay tại đây.
+
+10
+00:00:41,720 --> 00:00:49,460
+Chúng tôi đang tải bảng dữ liệu ở đây, nhưng chúng tôi cần thực hiện điều đó trên document dot ready. Do jQuery, chúng tôi
+
+11
+00:00:49,460 --> 00:00:55,430
+có thể sử dụng đô la document dot ready và chúng tôi sẽ gọi một phương thức tải bảng dữ liệu.
+
+12
+00:00:56,180 --> 00:01:05,570
+Hãy để tôi tạo hàm đó ở đây và bên trong đó về cơ bản tôi sẽ cắt và dán mã này vào một bảng
+
+13
+00:01:05,570 --> 00:01:08,180
+dữ liệu biến bằng.
+
+14
+00:01:08,180 --> 00:01:10,070
+Và hãy để tôi dán nó.
+
+15
+00:01:10,980 --> 00:01:16,980
+Bạn có thể thấy nó đang tìm kiếm thứ gọi là bảng của tôi và chúng tôi sẽ thêm vào sau.
+
+16
+00:01:16,980 --> 00:01:18,060
+Đừng lo.
+
+17
+00:01:18,270 --> 00:01:22,020
+Thay vì bảng của tôi, hãy để tôi gọi đó là dữ liệu TBL.
+
+18
+00:01:23,800 --> 00:01:28,740
+Điều đầu tiên chúng ta cần URL API bên trong quản trị viên.
+
+19
+00:01:28,750 --> 00:01:31,540
+Chúng tôi có sản phẩm và nhận được tất cả.
+
+20
+00:01:32,370 --> 00:01:34,860
+Điều đó sẽ lấy tất cả các hồ sơ.
+
+21
+00:01:35,220 --> 00:01:39,780
+Bây giờ, khi chúng tôi truy xuất các bản ghi đó, chúng tôi phải định dạng bản ghi đó.
+
+22
+00:01:40,170 --> 00:01:49,260
+Nếu tôi quay lại tài liệu và chuyển đến tab dữ liệu ở đây và cuộn xuống, bạn có thể thấy chúng tôi có thể hiển thị
+
+23
+00:01:49,260 --> 00:01:51,780
+các cột và có thể có dữ liệu.
+
+24
+00:01:52,230 --> 00:01:59,730
+Thuộc tính đầu tiên ở đây là dữ liệu, nhưng vì chúng tôi đang sử dụng Ajax ở đây, nó sẽ tự động được tải.
+
+25
+00:01:59,970 --> 00:02:08,100
+Vì vậy, chúng tôi có thể sao chép các cột ở đây, quay lại mã và tôi có thể dán mã đó vào sau dấu ngoặc nhọn, thêm
+
+26
+00:02:08,100 --> 00:02:11,190
+dấu phẩy và chúng tôi sẽ thêm các cột.
+
+27
+00:02:11,490 --> 00:02:14,910
+Các cột ở đây sẽ ở bên trong dấu hai chấm ở đây.
+
+28
+00:02:15,730 --> 00:02:17,500
+Và Ajax cũng vậy.
+
+29
+00:02:17,500 --> 00:02:20,110
+Chúng tôi sẽ thêm nó trong dấu ngoặc kép.
+
+30
+00:02:21,040 --> 00:02:28,210
+Tôi sẽ thêm nó vào dấu ngoặc nhọn cho các giá trị, thêm dấu phẩy và để tôi định dạng nó một chút
+
+31
+00:02:28,210 --> 00:02:30,070
+để mọi thứ có ý nghĩa.
+
+32
+00:02:31,080 --> 00:02:33,300
+Chúng ta cần dấu ngoặc nhọn đóng ở đây.
+
+33
+00:02:33,300 --> 00:02:34,500
+Hãy để tôi thêm điều đó.
+
+34
+00:02:34,500 --> 00:02:36,210
+Và hoàn hảo.
+
+35
+00:02:36,240 --> 00:02:43,980
+Mọi thứ đang ổn, nhưng trong Ajax ở đây, chúng tôi có thể trực tiếp sử dụng nó hoặc chúng tôi có thể xác định URL vì khi chúng tôi
+
+36
+00:02:43,980 --> 00:02:49,320
+có lệnh gọi Ajax, có thể bạn muốn có nhiều tùy chọn hơn hoặc nhiều thuộc tính hơn.
+
+37
+00:02:49,320 --> 00:02:51,570
+Đó là lý do tại sao nó là một đối tượng.
+
+38
+00:02:51,930 --> 00:02:53,940
+Tiếp theo chúng ta có các cột.
+
+39
+00:02:55,050 --> 00:02:58,830
+Bây giờ chúng tôi có dữ liệu ở đây và chúng tôi có vài cái tên.
+
+40
+00:02:59,160 --> 00:03:05,610
+Và cùng với đó, chúng tôi cũng có thể đưa ra một số tùy chọn như chiều rộng của tất cả các cột sẽ là bao nhiêu.
+
+41
+00:03:06,270 --> 00:03:14,370
+Trước khi chúng ta thêm các tên cột ở đây, hãy để tôi thực sự quay lại chỉ mục của chúng ta ở đây và nơi chúng ta đang
+
+42
+00:03:14,370 --> 00:03:22,530
+hiển thị vòng lặp cho mỗi vòng lặp không còn cần thiết nữa vì chúng ta sẽ sử dụng bảng dữ liệu cho điều đó.
+
+43
+00:03:23,310 --> 00:03:28,970
+Ở đây, tất cả những gì chúng ta phải làm là thêm ID của dữ liệu TBL.
+
+44
+00:03:28,980 --> 00:03:32,460
+Vì vậy, chúng tôi có bảng ở đâu, chúng tôi sẽ cung cấp ID đó.
+
+45
+00:03:33,330 --> 00:03:35,280
+Chúng ta không cần cơ thể.
+
+46
+00:03:35,310 --> 00:03:40,530
+Chúng tôi có thể xóa bảng dữ liệu đó sẽ đảm nhiệm việc định cấu hình tất cả những thứ đó.
+
+47
+00:03:41,010 --> 00:03:44,700
+Điều duy nhất chúng ta phải làm là thêm mã JavaScript.
+
+48
+00:03:44,730 --> 00:03:53,550
+Vì vậy, chúng tôi sẽ thêm một phần dành cho các tập lệnh và bên trong đó, chúng tôi sẽ thêm tham chiếu đến SRC,
+
+49
+00:03:53,550 --> 00:03:55,350
+JS product dot JS.
+
+50
+00:03:55,350 --> 00:03:59,400
+Chúng tôi đã thêm bảng dữ liệu vào bố cục được gạch chân.
+
+51
+00:03:59,400 --> 00:04:06,810
+Vì vậy, với cấu hình đó, hãy để tôi chạy cái này và tôi muốn cho bạn thấy một thông báo lỗi rất phổ biến
+
+52
+00:04:06,810 --> 00:04:10,020
+khi bạn làm việc với các bảng dữ liệu.
+
+53
+00:04:10,590 --> 00:04:14,250
+Chúng tôi đi đến sản phẩm ở đây và chúng tôi có một cảnh báo.
+
+54
+00:04:14,610 --> 00:04:20,250
+Nó nói tên tham số không xác định được yêu cầu cho hàng 0 cột 0.
+
+55
+00:04:20,370 --> 00:04:27,900
+Bạn có thể thấy chúng tôi đang hỏi tên ở đây và không tìm thấy lý do là đối tượng JSON mà bộ điều
+
+56
+00:04:27,900 --> 00:04:29,130
+khiển trả về.
+
+57
+00:04:29,130 --> 00:04:38,040
+Nó không có bất cứ thứ gì có tên, nhưng nếu tôi thay đổi nó thành tiêu đề và nếu tôi làm mới ở đây lần này, bạn có thể thấy
+
+58
+00:04:38,040 --> 00:04:41,100
+lỗi được định vị, không tìm thấy.
+
+59
+00:04:41,310 --> 00:04:48,180
+Đó là vì tên cột không hợp lệ nhưng tiêu đề sẽ được điền nếu bạn nhấp vào được.
+
+60
+00:04:48,810 --> 00:04:51,450
+Vì vậy, bạn có thể thấy vấn đề ngay tại đây.
+
+61
+00:04:51,450 --> 00:04:54,450
+Chúng ta cần phải có tên cột chính xác.
+
+62
+00:04:55,770 --> 00:05:05,520
+Vì vậy, nếu chúng ta vào mục lục ở đây, sao chép tất cả chúng như giá ISBN và chúng ta có tác giả.
+
+63
+00:05:06,350 --> 00:05:07,820
+Hãy để tôi lưu nó.
+
+64
+00:05:07,850 --> 00:05:10,090
+Quay lại đây và làm mới.
+
+65
+00:05:10,100 --> 00:05:12,570
+Bạn có thể thấy nó vẫn không hoạt động.
+
+66
+00:05:12,590 --> 00:05:14,750
+Tại sao lại như vậy?
+
+67
+00:05:15,710 --> 00:05:21,560
+Chà, nó phải khớp với những gì API được trả về và nó phân biệt chữ hoa chữ thường.
+
+68
+00:05:22,130 --> 00:05:25,550
+Vì vậy, chúng ta cần biết API đang trả về cái gì.
+
+69
+00:05:25,550 --> 00:05:27,980
+Chúng ta có thể sao chép và dán cái này.
+
+70
+00:05:28,010 --> 00:05:36,170
+Hãy để tôi gọi sản phẩm API là dấu gạch chéo chuyển tiếp, lấy tất cả những gì chúng tôi có thể sao chép API này.
+
+71
+00:05:36,900 --> 00:05:39,090
+Chuyển đến trình định dạng JSON.
+
+72
+00:05:39,660 --> 00:05:44,850
+Mở nó trong một tab mới và để tôi dán mã API của chúng tôi.
+
+73
+00:05:44,880 --> 00:05:51,960
+Hãy để tôi quay lại và sao chép nó một lần nữa và dán nó ở đây và hoàn thiện.
+
+74
+00:05:51,990 --> 00:05:56,220
+Bạn có thể thấy nó là tiêu đề ISBN danh sách tác giả.
+
+75
+00:05:56,220 --> 00:06:02,280
+Giá có chữ P viết hoa, vì vậy nếu bạn muốn hiển thị giá đó, giá phải khớp chính xác.
+
+76
+00:06:03,240 --> 00:06:04,950
+Vì vậy, chúng ta hãy làm điều đó.
+
+77
+00:06:04,980 --> 00:06:07,110
+Chúng tôi sẽ giữ điều này mở ở đây.
+
+78
+00:06:07,110 --> 00:06:08,760
+Và đó là đâu?
+
+79
+00:06:08,910 --> 00:06:12,390
+Ở đây chúng tôi có ISBN hoặc chữ thường.
+
+80
+00:06:12,420 --> 00:06:21,420
+Sao chép dán danh sách đó, sao chép giá và dán tác giả đó tất cả chữ thường.
+
+81
+00:06:21,900 --> 00:06:24,960
+Và cuối cùng, chúng tôi muốn tên danh mục.
+
+82
+00:06:25,740 --> 00:06:26,880
+Tên danh mục.
+
+83
+00:06:26,880 --> 00:06:31,320
+Nếu chúng tôi đến đây, nó nằm trong danh mục và sau đó chúng tôi có tên.
+
+84
+00:06:31,650 --> 00:06:38,660
+Vì vậy, bạn phải viết danh mục dấu chấm và sau đó thuộc tính bên trong có tên.
+
+85
+00:06:38,680 --> 00:06:41,650
+Đó chính xác là những gì bạn phải sử dụng.
+
+86
+00:06:41,650 --> 00:06:45,160
+Và một khi bạn làm điều đó, lỗi sẽ biến mất.
+
+87
+00:06:45,670 --> 00:06:53,470
+Vì vậy, nếu bạn nhận thấy thông báo lỗi đó, điều đó có nghĩa là trong bảng dữ liệu của bạn, tên thuộc tính của bạn không hợp lệ.
+
+88
+00:06:53,860 --> 00:07:03,460
+Bây giờ, nếu tôi vào mục lục ở đây, hãy để tôi thêm chiều rộng 100% cho bảng và điều đó có vẻ tốt hơn nhiều.
+
+89
+00:07:03,970 --> 00:07:09,190
+Cùng với đó, chúng tôi có tiêu đề, giá ISBN, tác giả và danh mục.
+
+90
+00:07:09,220 --> 00:07:12,280
+Chúng tôi có thể sửa đổi một số chiều rộng trong sản phẩm.
+
+91
+00:07:12,790 --> 00:07:16,660
+Giống như tiêu đề có thể chiếm 25% ISBN.
+
+92
+00:07:16,690 --> 00:07:20,710
+Không sao, điều này có thể mất 10%.
+
+93
+00:07:20,740 --> 00:07:25,150
+Tác giả có thể chiếm 20 và tên thể loại.
+
+94
+00:07:25,150 --> 00:07:26,410
+Trông tôt đây.
+
+95
+00:07:26,440 --> 00:07:30,700
+Nếu tôi tổng hợp chúng, tôi tin là tổng số 85.
+
+96
+00:07:30,940 --> 00:07:34,000
+Vì vậy, chúng tôi có thêm 15 trong đó.
+
+97
+00:07:34,000 --> 00:07:35,020
+15 nữa.
+
+98
+00:07:35,050 --> 00:07:37,510
+Tôi muốn hiển thị hai nút.
+
+99
+00:07:37,810 --> 00:07:42,610
+Vậy làm cách nào chúng tôi có thể thêm các nút tùy chỉnh vào nơi chúng tôi có các cột?
+
+100
+00:07:42,970 --> 00:07:45,770
+Hãy để tôi chỉ ra điều đó trong video tiếp theo.
+
+101
+00:07:45,770 --> 00:07:45,930
+Vì thế.
+

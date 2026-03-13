@@ -1,0 +1,116 @@
+1
+00:00:01,580 --> 00:00:08,690
+Bây giờ chúng ta cần thêm một mô hình mới sẽ chịu trách nhiệm thêm hoặc quản lý tất cả các hình ảnh cho một
+
+2
+00:00:08,690 --> 00:00:09,470
+sản phẩm.
+
+3
+00:00:09,980 --> 00:00:14,540
+Một sản phẩm có thể có nhiều hình ảnh trong dự án mô hình.
+
+4
+00:00:14,570 --> 00:00:18,830
+Chúng tôi sẽ thêm một lớp mới và gọi đó là hình ảnh sản phẩm.
+
+5
+00:00:21,370 --> 00:00:26,870
+Chúng tôi sẽ biến lớp đó thành một lớp công khai ở đây và thuộc tính đầu tiên sẽ là khóa chính.
+
+6
+00:00:26,890 --> 00:00:28,870
+Hãy để tôi gọi đó là ID.
+
+7
+00:00:29,590 --> 00:00:31,270
+Điều đó là đủ tốt.
+
+8
+00:00:31,870 --> 00:00:36,160
+Sau đó, chúng tôi muốn URL vì vậy chúng tôi sẽ có chuỗi.
+
+9
+00:00:36,860 --> 00:00:43,070
+Và đó sẽ là URL hình ảnh cho từng hình ảnh mà chúng tôi có.
+
+10
+00:00:43,250 --> 00:00:46,040
+Và đó sẽ là URL hình ảnh.
+
+11
+00:00:46,340 --> 00:00:49,010
+Tôi sẽ làm cho điều này một tài sản bắt buộc.
+
+12
+00:00:50,550 --> 00:00:56,370
+Sau đó, chúng tôi cần ID sản phẩm vì một sản phẩm có thể có nhiều URL hình ảnh.
+
+13
+00:00:56,520 --> 00:01:03,800
+Vì vậy, chúng tôi cần mối quan hệ đó ở đây cho ID sản phẩm và ID sản phẩm sẽ là khóa ngoại.
+
+14
+00:01:03,810 --> 00:01:07,560
+Vì vậy, tôi sẽ thêm thuộc tính điều hướng cho sản phẩm.
+
+15
+00:01:08,280 --> 00:01:14,850
+Bây giờ, nếu bạn nghĩ về điều này, mối quan hệ giữa sản phẩm và hình ảnh sản phẩm là mối quan hệ một đối
+
+16
+00:01:15,240 --> 00:01:18,960
+nhiều bởi vì một sản phẩm sẽ có nhiều hình ảnh sản phẩm.
+
+17
+00:01:19,740 --> 00:01:24,870
+Vì vậy, trong sản phẩm ở đây, chúng tôi có thể tạo một danh sách các hình ảnh sản phẩm.
+
+18
+00:01:25,050 --> 00:01:33,720
+Vì vậy, trong mô hình sản phẩm, chúng tôi có thể tạo danh sách hình ảnh sản phẩm nơi chúng tôi có thể mang hoặc tải tất cả hình ảnh
+
+19
+00:01:33,720 --> 00:01:35,310
+cho sản phẩm của mình.
+
+20
+00:01:35,970 --> 00:01:42,900
+Vì vậy, theo cách đó, chúng tôi đang nói với cốt lõi của khung thực thể về mối quan hệ một đến nhiều mà chúng tôi
+
+21
+00:01:42,900 --> 00:01:45,270
+có giữa sản phẩm và hình ảnh sản phẩm.
+
+22
+00:01:46,440 --> 00:01:53,010
+Với cấu hình đó, chúng tôi phải thêm nó vào ngữ cảnh DB của ứng dụng bên trong quyền
+
+23
+00:01:53,010 --> 00:02:01,410
+truy cập dữ liệu ở đây chúng tôi cần tạo thêm một bộ DB cho hình ảnh sản phẩm và tôi sẽ gọi hình ảnh sản phẩm
+
+24
+00:02:01,410 --> 00:02:02,940
+đó sẽ là tên bảng.
+
+25
+00:02:04,330 --> 00:02:11,830
+Với cấu hình đó, tất cả những gì chúng ta phải làm là thêm di chuyển để thêm hình ảnh sản phẩm vào DB.
+
+26
+00:02:16,570 --> 00:02:17,080
+Hoàn hảo.
+
+27
+00:02:17,080 --> 00:02:18,460
+Điều đó được thực hiện ở đây.
+
+28
+00:02:18,490 --> 00:02:20,680
+Hãy để tôi cập nhật cơ sở dữ liệu.
+
+29
+00:02:20,680 --> 00:02:27,220
+Và cùng với đó, chúng tôi đã tạo một bảng mới để xử lý tất cả các hình ảnh của sản phẩm.
+

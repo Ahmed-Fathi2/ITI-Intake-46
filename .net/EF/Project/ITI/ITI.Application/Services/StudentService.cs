@@ -22,9 +22,8 @@ namespace ITI.Application.Services
             return students;
         }
 
-        public void Add(CreateStudentDto createStudentDto)
+        public int Add(CreateStudentDto createStudentDto)
         {
-
             var student = new Student
             {
                 FirstName = createStudentDto.FirstName,
@@ -34,8 +33,7 @@ namespace ITI.Application.Services
 
             studentRepository.Add(student);
 
-        
-           
+            return student.Id;
         }
 
         public AllStudentDto? GetById(int id)
@@ -55,6 +53,24 @@ namespace ITI.Application.Services
                 );
 
             return studentDto;
+        }
+
+        public void Update(UpdateStudentDto updateStudentDto)
+        {
+            var student = studentRepository.GetById(updateStudentDto.Id);
+            if (student == null)
+                return;
+
+            student.FirstName = updateStudentDto.FirstName;
+            student.LastName = updateStudentDto.LastName;
+            student.Phone = updateStudentDto.Phone;
+
+            studentRepository.Update(student);
+        }
+
+        public void Delete(int id)
+        {
+            studentRepository.Delete(id);
         }
     }
 

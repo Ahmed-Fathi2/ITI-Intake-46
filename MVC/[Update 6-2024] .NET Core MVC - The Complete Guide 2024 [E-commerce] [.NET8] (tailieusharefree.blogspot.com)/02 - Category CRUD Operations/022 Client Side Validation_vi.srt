@@ -1,0 +1,248 @@
+1
+00:00:01,500 --> 00:00:05,850
+Bây giờ, các xác thực mà chúng tôi có ngay bây giờ là phía máy chủ.
+
+2
+00:00:05,850 --> 00:00:12,090
+Và điều tôi muốn nói là bạn sẽ nhận thấy khi chúng ta nhấn nút tạo, nó chạm vào điểm gỡ lỗi của chúng
+
+3
+00:00:12,090 --> 00:00:16,230
+ta trong bộ điều khiển và sau đó nó trả về thông báo lỗi.
+
+4
+00:00:16,620 --> 00:00:19,470
+Bạn sẽ nhận thấy trang cũng được tải lại.
+
+5
+00:00:19,500 --> 00:00:20,330
+Chúng ta đi thôi.
+
+6
+00:00:20,340 --> 00:00:22,400
+Bạn có thể thấy spinner ở trên cùng.
+
+7
+00:00:22,410 --> 00:00:24,990
+Điều đó có nghĩa là nó sẽ đến máy chủ.
+
+8
+00:00:25,200 --> 00:00:30,860
+Nhưng nếu chúng ta muốn triển khai xác thực phía máy khách bằng JavaScript thì sao?
+
+9
+00:00:30,870 --> 00:00:38,010
+Chúng tôi có thể dễ dàng thực hiện xác thực trong chính trình duyệt để đảm bảo trường này có được điền hay không.
+
+10
+00:00:38,730 --> 00:00:43,200
+Dot net core đã cung cấp một số thứ được tích hợp sẵn.
+
+11
+00:00:43,530 --> 00:00:49,600
+Nếu chúng ta xem xét một phần các tập lệnh xác thực, thì nó có jQuery xác thực.
+
+12
+00:00:49,950 --> 00:00:53,280
+Sử dụng điều đó, chúng tôi có thể thực hiện xác thực phía máy khách.
+
+13
+00:00:54,000 --> 00:01:01,170
+Và để làm được điều đó, chúng tôi không phải viết nhiều mã bên trong chế độ xem tạo nơi chúng tôi có xác thực vì
+
+14
+00:01:01,170 --> 00:01:05,220
+chúng tôi phải bao gồm tham chiếu đến chế độ xem một phần này.
+
+15
+00:01:05,370 --> 00:01:12,210
+Vì vậy, về cơ bản, chúng ta phải thêm chế độ xem một phần này, đây là chế độ xem được chia sẻ bên trong chế độ xem tạo chính.
+
+16
+00:01:12,210 --> 00:01:20,040
+Và theo cách đó, bất kỳ mã nào bên trong chia sẻ cũng sẽ được thêm vào chế độ xem tạo mà chúng tôi có.
+
+17
+00:01:20,520 --> 00:01:23,970
+Bây giờ làm thế nào chúng ta có thể thêm hoặc sử dụng chế độ xem một phần?
+
+18
+00:01:24,850 --> 00:01:26,260
+Điều đó khá đơn giản.
+
+19
+00:01:26,380 --> 00:01:33,760
+Vì chế độ xem một phần này chỉ có các tập lệnh nên chúng tôi sẽ phải thêm phần đó vào một phần mới ở đây
+
+20
+00:01:33,760 --> 00:01:35,590
+dành cho các tập lệnh.
+
+21
+00:01:36,980 --> 00:01:38,750
+Và tôi có một số không gian.
+
+22
+00:01:38,750 --> 00:01:40,130
+Hãy để tôi loại bỏ điều đó.
+
+23
+00:01:40,310 --> 00:01:43,520
+Bên trong đó, chúng ta sẽ có cú pháp dao cạo.
+
+24
+00:01:43,520 --> 00:01:50,170
+Và khi chúng tôi phải sử dụng bất kỳ chế độ xem một phần nào, chúng tôi có thể làm điều đó với thẻ một phần.
+
+25
+00:01:50,180 --> 00:01:52,700
+Và ở đó chúng tôi phải cung cấp tên.
+
+26
+00:01:53,560 --> 00:01:55,330
+Hãy chắc chắn để sao chép tên.
+
+27
+00:01:55,330 --> 00:01:59,980
+Nó phải khớp chính xác với tên mà chúng tôi có trong tập lệnh xác thực.
+
+28
+00:01:59,980 --> 00:02:00,850
+một phần.
+
+29
+00:02:00,970 --> 00:02:03,520
+Nó phải là tên tập tin chính xác.
+
+30
+00:02:03,730 --> 00:02:07,000
+Nếu điều đó không giống nhau, nó sẽ không hoạt động.
+
+31
+00:02:07,710 --> 00:02:14,340
+Và cùng với đó, nó đã thêm chế độ xem một phần đó vào phần tập lệnh cho trang Chế độ xem.
+
+32
+00:02:14,760 --> 00:02:19,990
+Bây giờ, vì chế độ xem một phần này có liên quan đến tập lệnh nên chúng tôi đã thêm phần đó vào tập lệnh.
+
+33
+00:02:20,010 --> 00:02:25,770
+Nhưng nếu đây không phải là tập lệnh liên quan, bạn có thể trực tiếp thêm tập lệnh đó ngay tại đây.
+
+34
+00:02:25,770 --> 00:02:30,480
+Khi chúng ta phải sử dụng một số chế độ xem một phần trong trang chính.
+
+35
+00:02:31,420 --> 00:02:33,580
+Nhưng đó không phải là trường hợp cho bây giờ.
+
+36
+00:02:33,580 --> 00:02:38,440
+Vì vậy, chúng tôi sẽ thêm nó vào bên trong phần tập lệnh mà chúng tôi có.
+
+37
+00:02:39,350 --> 00:02:46,970
+Nhưng ở đây bạn đã nhận thấy cách chúng ta có thể sử dụng chế độ xem một phần với trình trợ giúp thẻ một phần mà chúng ta có
+
+38
+00:02:47,000 --> 00:02:47,540
+trong. Nền tảng NET.
+
+39
+00:02:47,780 --> 00:02:48,890
+Và nơi chúng tôi có tên
+
+40
+00:02:49,890 --> 00:02:56,400
+ở đây, theo mặc định, nó sẽ đi và xem trong thư mục dùng chung vì đó là vị trí mặc định cho bất kỳ chế độ xem một phần nào.
+
+41
+00:02:56,400 --> 00:02:59,700
+Do đó, nó sẽ tự động tìm thấy điều
+
+42
+00:03:00,610 --> 00:03:07,450
+đó và nó sẽ thêm JavaScript cần thiết để xác thực phía máy khách.
+
+43
+00:03:07,450 --> 00:03:09,400
+Đơn giản như thế.
+
+44
+00:03:09,640 --> 00:03:11,170
+Cùng với đó, hãy để tôi khởi động lại ứng dụng.
+
+45
+00:03:12,290 --> 00:03:14,930
+Và bây giờ, việc xác thực sẽ được thực
+
+46
+00:03:14,930 --> 00:03:21,950
+hiện đầu tiên ở phía máy khách và để xác thực tùy chỉnh, nó sẽ chuyển đến phía máy chủ.
+
+47
+00:03:21,950 --> 00:03:23,030
+Vì vậy, để kiểm
+
+48
+00:03:23,450 --> 00:03:32,270
+tra điều đó, thực sự hãy để tôi quay lại và bỏ ghi chú những dòng này ở đây vì chúng là xác thực tùy chỉnh và để tôi chạy dự án.
+
+49
+00:03:32,270 --> 00:03:35,570
+Vì vậy, nếu chúng ta đi đến danh mục ở đây và nếu chúng ta tạo một danh mục mới lần này khi chúng ta nhấn tạo.
+
+50
+00:03:37,800 --> 00:03:45,090
+Hãy để tôi cũng thêm một điểm gỡ lỗi.
+
+51
+00:03:45,120 --> 00:03:47,820
+Bạn sẽ nhận thấy nó sẽ không đi đến máy chủ.
+
+52
+00:03:48,060 --> 00:03:50,880
+Sẽ không có bất kỳ spinner nào.
+
+53
+00:03:50,910 --> 00:03:52,930
+Chúng tôi thấy thông báo lỗi và bạn cũng có thể thấy nó không đạt điểm dừng của chúng tôi.
+
+54
+00:03:52,950 --> 00:03:58,590
+Nếu tôi nhập tên danh mục kiểm tra tạo ở đây, chúng tôi có xác thực khác.
+
+55
+00:03:59,490 --> 00:04:05,240
+Khi chúng tôi hoàn thành điều đó, nếu nó lớn hơn 100,
+
+56
+00:04:05,250 --> 00:04:12,990
+bạn có thể thấy khi tôi đang nhập, nó sẽ tự động hiển thị xác thực.
+
+57
+00:04:12,990 --> 00:04:14,160
+Nhưng xác thực tùy chỉnh
+
+58
+00:04:14,760 --> 00:04:22,079
+mà chúng tôi có là tên danh mục và thứ tự hiển thị không thể giống nhau ở phía máy chủ và xác thực phía máy khách không nhận thức được điều đó.
+
+59
+00:04:22,079 --> 00:04:26,400
+Vì vậy, khi chúng tôi nhấn nút tạo lần này, nó sẽ chạm
+
+60
+00:04:26,700 --> 00:04:35,010
+vào điểm dừng của chúng tôi và nó sẽ chuyển đến máy chủ và hiển thị xác thực phía máy chủ.
+
+61
+00:04:35,010 --> 00:04:37,140
+Cùng với đó, chúng tôi đã thấy việc thêm xác thực phía máy khách vào chế độ xem của chúng tôi trong . dự án mạng.
+
+62
+00:04:38,140 --> 00:04:46,540
+Chúng tôi chỉ cần thêm các tập lệnh được cung cấp theo mặc định trên trang mà chúng tôi muốn xác thực phía máy khách.
+

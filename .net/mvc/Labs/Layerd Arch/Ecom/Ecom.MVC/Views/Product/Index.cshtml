@@ -1,0 +1,66 @@
+﻿@using Ecom.BLL.Consts
+@using Ecom.BLL.ViewModel.ProductVM
+
+@model IEnumerable<ProductReadVM>
+
+<div class="d-flex justify-content-center  m-3">
+    <h2 class="text-success">  Product List</h2>
+</div>
+
+<hr />
+@if (User.IsInRole(SystemRoles.Admin))
+{
+    
+<div class="d-flex justify-content-between  m-3">
+    <a class="btn btn-success mb-2" href="~/Product/Create">Add New Product</a>
+ 
+</div>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Price</th>
+            <th scope="col">Count</th>
+            <th scope="col">Category</th>
+            @* <th scope="col">Image</th> *@
+            <th class="text-center" scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var product in Model)
+        {
+
+            <tr>
+                <th scope="row">@product.Id</th>
+                <th scope="row">@product.Name</th>
+                <th scope="row">@product.Description</th>
+                <th scope="row">@product.Price</th>
+                <th scope="row">@product.Count</th>
+                <th scope="row">@product.Category</th>
+                @* <th scope="row">
+
+                    <img src="@product.ImageUrl" alt="Alternate Text" style="width: 100px; height: 100px;"  />
+                </th> *@
+                <th class="d-flex justify-content-center gap-1" scope="row">
+
+                    @* <a class="btn btn-primary" href="~/Product/GetById/@product.Id">ViewDetails</a> *@
+                    @Html.ActionLink("ViewDetails", "GetById", "Product", new { Id = product.Id} , new{@class="btn btn-primary"})
+                    @if (User.IsInRole(SystemRoles.Admin))
+                    {
+                    @* <a class="btn btn-secondary" href="~/Product/Edit/@product.Id">Edit</a> *@
+                    <a asp-action="Edit" asp-controller="Product" asp-route-id="@product.Id" class="btn btn-secondary">Edit</a>
+
+                    <a class="btn btn-outline-danger" href="~/Product/Delete/@product.Id">Delete</a>
+                    }
+                </th>
+            </tr>
+        }
+
+    </tbody>
+</table>
+

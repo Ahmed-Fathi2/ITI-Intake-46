@@ -1,0 +1,152 @@
+1
+00:00:01,890 --> 00:00:03,839
+Instructor: Now the way we have designed our project
+
+2
+00:00:03,839 --> 00:00:06,601
+is we have repository to access any
+
+3
+00:00:06,601 --> 00:00:08,560
+of our core model
+
+4
+00:00:09,420 --> 00:00:11,820
+similar to category repository.
+
+5
+00:00:11,820 --> 00:00:16,560
+We will also have to add a repository for product image
+
+6
+00:00:16,560 --> 00:00:20,670
+and then we will have to add that to unit of work.
+
+7
+00:00:20,670 --> 00:00:21,660
+That is the design
+
+8
+00:00:21,660 --> 00:00:24,840
+of repository that we have in our project.
+
+9
+00:00:24,840 --> 00:00:28,290
+So let me copy the category repository,
+
+10
+00:00:28,290 --> 00:00:29,460
+paste it,
+
+11
+00:00:29,460 --> 00:00:34,460
+and I will modify that for I product image repository.
+
+12
+00:00:37,080 --> 00:00:41,910
+I will copy that name and we will modify the interface here.
+
+13
+00:00:41,910 --> 00:00:45,540
+That will be on model product image.
+
+14
+00:00:45,540 --> 00:00:47,400
+And, in the update here
+
+15
+00:00:47,400 --> 00:00:50,193
+we will receive a product image object.
+
+16
+00:00:51,660 --> 00:00:54,510
+Perfect. The interface looks good.
+
+17
+00:00:54,510 --> 00:00:58,620
+Let me copy the implementation of category repository
+
+18
+00:00:58,620 --> 00:01:00,720
+paste it one more time
+
+19
+00:01:00,720 --> 00:01:05,462
+and I will rename that to be product image repository.
+
+20
+00:01:07,500 --> 00:01:09,870
+I will copy that name here
+
+21
+00:01:09,870 --> 00:01:14,100
+and I will modify the product image repository.
+
+22
+00:01:14,100 --> 00:01:16,263
+Let me do that real quick.
+
+23
+00:01:18,540 --> 00:01:21,330
+Model here will be product image
+
+24
+00:01:21,330 --> 00:01:25,800
+and the constructor name will be product image repository.
+
+25
+00:01:25,800 --> 00:01:29,400
+On update, we will receive a product image,
+
+26
+00:01:29,400 --> 00:01:32,190
+and we will go to underscore tb
+
+27
+00:01:32,190 --> 00:01:34,593
+dot product images dot update.
+
+28
+00:01:35,880 --> 00:01:38,670
+That looks good for both the repository.
+
+29
+00:01:38,670 --> 00:01:42,150
+Finally, we have to configure unit of work.
+
+30
+00:01:42,150 --> 00:01:43,680
+In the interface here,
+
+31
+00:01:43,680 --> 00:01:47,880
+we just need to create I product, image repository.
+
+32
+00:01:47,880 --> 00:01:50,760
+And in the implementation here,
+
+33
+00:01:50,760 --> 00:01:55,740
+let me create public I product image repository
+
+34
+00:01:55,740 --> 00:01:57,273
+and initialize that.
+
+35
+00:02:03,085 --> 00:02:05,370
+Perfect, that looks good.
+
+36
+00:02:05,370 --> 00:02:08,430
+And with that we have added the product image
+
+37
+00:02:08,430 --> 00:02:10,800
+to our unit of work.
+
+38
+00:02:10,800 --> 00:02:13,743
+Let me continue from the next video.
+

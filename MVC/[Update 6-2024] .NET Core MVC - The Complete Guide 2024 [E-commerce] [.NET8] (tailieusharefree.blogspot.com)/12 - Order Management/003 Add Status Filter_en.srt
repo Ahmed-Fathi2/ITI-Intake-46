@@ -1,0 +1,196 @@
+1
+00:00:01,859 --> 00:00:03,960
+Instructor: Now on the Order List page,
+
+2
+00:00:03,960 --> 00:00:08,070
+I want to add a filtering here on the order status.
+
+3
+00:00:08,070 --> 00:00:10,110
+You can of course search for that.
+
+4
+00:00:10,110 --> 00:00:12,840
+But what I want to do is add a tab here
+
+5
+00:00:12,840 --> 00:00:16,830
+and display multiple status so user can click there
+
+6
+00:00:16,830 --> 00:00:19,923
+and toggle the order list right here.
+
+7
+00:00:21,060 --> 00:00:24,990
+For that, let me switch back, and we are on the index.
+
+8
+00:00:24,990 --> 00:00:28,740
+Inside the card-body, let me a div,
+
+9
+00:00:28,740 --> 00:00:32,159
+give it some Bootstrap classes of d-flex,
+
+10
+00:00:32,159 --> 00:00:37,160
+and justify-content-between, give it padding bottom of 5
+
+11
+00:00:37,890 --> 00:00:39,843
+and padding top of 2.
+
+12
+00:00:41,130 --> 00:00:44,040
+Within there I will add an empty span,
+
+13
+00:00:44,040 --> 00:00:46,890
+and then I will add a ul element
+
+14
+00:00:46,890 --> 00:00:50,823
+where we will display all the status in an li element.
+
+15
+00:00:51,840 --> 00:00:56,340
+For the ul, I will add some Bootstrap classes of list-group
+
+16
+00:00:56,340 --> 00:00:59,160
+and list-group-horizontal-small.
+
+17
+00:00:59,160 --> 00:01:03,303
+In there, I will be adding the multiple li elements.
+
+18
+00:01:04,230 --> 00:01:08,733
+Now li elements, I will be adding them inside anchor tag.
+
+19
+00:01:09,600 --> 00:01:11,430
+So the first anchor tag,
+
+20
+00:01:11,430 --> 00:01:15,903
+let me give it a style of text-decoration as none.
+
+21
+00:01:18,330 --> 00:01:20,460
+And what will be the route?
+
+22
+00:01:20,460 --> 00:01:25,380
+So asp-controller name, it will be the Order controller,
+
+23
+00:01:25,380 --> 00:01:28,980
+and the action name will be the same, Index action.
+
+24
+00:01:28,980 --> 00:01:32,580
+So it will basically bring them back to the same page,
+
+25
+00:01:32,580 --> 00:01:36,660
+but on top of that we will be adding an asp-route,
+
+26
+00:01:36,660 --> 00:01:41,660
+so asp-route-, we want to give some status.
+
+27
+00:01:42,690 --> 00:01:47,690
+So status is equal to, let me call the first one, inprocess.
+
+28
+00:01:49,230 --> 00:01:53,250
+Then right here, let me add an li, give it a class
+
+29
+00:01:53,250 --> 00:01:58,250
+of list-group-item, and I display In Process.
+
+30
+00:02:00,750 --> 00:02:03,480
+So that is the first li element.
+
+31
+00:02:03,480 --> 00:02:07,530
+Copy that and paste it four more times.
+
+32
+00:02:07,530 --> 00:02:10,440
+Let's say we want to display all the orders
+
+33
+00:02:10,440 --> 00:02:12,750
+where payment is pending.
+
+34
+00:02:12,750 --> 00:02:17,130
+After that, we want to display all the completed ones,
+
+35
+00:02:17,130 --> 00:02:19,170
+all the approved ones,
+
+36
+00:02:19,170 --> 00:02:24,170
+and we will have All to display all the status.
+
+37
+00:02:24,270 --> 00:02:25,460
+Now for each one of them,
+
+38
+00:02:25,460 --> 00:02:28,533
+we will have to give them a unique status.
+
+39
+00:02:29,670 --> 00:02:33,390
+So for all, let me give it all.
+
+40
+00:02:33,390 --> 00:02:38,247
+Next, we need approved, then we have completed,
+
+41
+00:02:39,660 --> 00:02:44,103
+and payment pending, we can call that just pending.
+
+42
+00:02:45,420 --> 00:02:50,057
+Perfect. With that, if I save and go back, great.
+
+43
+00:02:51,420 --> 00:02:56,010
+We have that here, and when we click, you can see the URL.
+
+44
+00:02:56,010 --> 00:02:59,253
+It is appending the status as expected.
+
+45
+00:03:00,300 --> 00:03:02,160
+Next task that I want to do
+
+46
+00:03:02,160 --> 00:03:04,950
+is based on what is selected here.
+
+47
+00:03:04,950 --> 00:03:09,270
+We want to give that particular box some styling.
+
+48
+00:03:09,270 --> 00:03:13,653
+That way we can tell which one of the status is selected.
+
+49
+00:03:15,000 --> 00:03:17,553
+Let me do that in the next video.
+

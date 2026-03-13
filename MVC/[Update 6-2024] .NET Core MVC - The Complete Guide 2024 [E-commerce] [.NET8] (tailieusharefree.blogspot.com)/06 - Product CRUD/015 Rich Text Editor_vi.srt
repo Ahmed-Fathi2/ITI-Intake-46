@@ -1,0 +1,232 @@
+1
+00:00:01,740 --> 00:00:03,780
+Trước khi tôi làm bất cứ điều gì khác.
+
+2
+00:00:03,780 --> 00:00:09,420
+Nếu tôi đi đến sản phẩm ở đây và cố gắng tạo một sản phẩm, bạn có thể xem mô tả.
+
+3
+00:00:09,420 --> 00:00:11,460
+Đây là một hộp văn bản.
+
+4
+00:00:11,820 --> 00:00:15,300
+Tôi muốn chuyển đổi nó thành một vùng văn bản đa dạng thức.
+
+5
+00:00:15,810 --> 00:00:20,460
+Vì vậy, tôi sẽ sử dụng một thứ gọi là MCE nhỏ ở đây.
+
+6
+00:00:21,720 --> 00:00:24,900
+Và chúng tôi có trình chỉnh sửa ngay tại đây.
+
+7
+00:00:25,020 --> 00:00:32,159
+Bạn có thể thấy nó là một trình chỉnh sửa ưa thích và bạn có thể thực hiện khá nhiều điều với mô tả, làm cho
+
+8
+00:00:32,159 --> 00:00:35,250
+nó trở nên lạ mắt như bạn muốn để định giá.
+
+9
+00:00:35,280 --> 00:00:41,940
+Nếu chúng tôi đến đây, bạn sẽ thấy rằng nó miễn phí mãi mãi nếu bạn sử dụng phiên bản cốt lõi và điều đó đủ tốt cho
+
+10
+00:00:41,940 --> 00:00:43,410
+yêu cầu của chúng tôi.
+
+11
+00:00:44,510 --> 00:00:46,490
+Vì vậy, hãy để tôi đăng nhập ở đây.
+
+12
+00:00:46,700 --> 00:00:51,350
+Và nếu bạn không có tài khoản, bạn luôn có thể tiếp tục với Google.
+
+13
+00:00:53,830 --> 00:00:57,310
+Khi chúng tôi đăng nhập tại đây, chúng tôi có bảng điều khiển đám mây.
+
+14
+00:00:57,340 --> 00:01:02,950
+Bây giờ, tôi đã đăng ký tài khoản, vì vậy bạn có thể thấy một số cách sử dụng khác mà tôi có.
+
+15
+00:01:02,980 --> 00:01:09,640
+Nhưng nếu bạn đăng ký tại đây, bạn sẽ thấy tích hợp đám mây và đó là những gì chúng ta cần để bắt đầu.
+
+16
+00:01:10,120 --> 00:01:12,130
+Điều đầu tiên là kịch bản ở đây.
+
+17
+00:01:12,130 --> 00:01:17,660
+Vì vậy, hãy để tôi sao chép tập lệnh được hiển thị và chúng tôi sẽ quay lại ứng dụng của mình.
+
+18
+00:01:17,680 --> 00:01:23,800
+Chúng tôi sẽ mở bố cục gạch dưới và nơi chúng tôi có tập lệnh Java ở cuối tại đây.
+
+19
+00:01:23,830 --> 00:01:25,570
+Để tôi dán cái đó.
+
+20
+00:01:26,260 --> 00:01:33,400
+Khi bạn thực hiện điều đó, nếu bạn cuộn xuống sẽ có khóa API nhỏ, nhưng khóa đó đã được bao gồm trong tập lệnh
+
+21
+00:01:33,400 --> 00:01:37,990
+ở đây, vì vậy bạn có thể trực tiếp sử dụng tập lệnh ngay tại đây.
+
+22
+00:01:38,590 --> 00:01:43,810
+Bây giờ chúng tôi đã có tập lệnh, chúng tôi có cách sử dụng thực tế ngay tại đây.
+
+23
+00:01:43,810 --> 00:01:46,630
+Và để tôi sao chép thẻ script ở đây.
+
+24
+00:01:46,660 --> 00:01:53,840
+Điều duy nhất chúng ta cần là một vùng văn bản trên trang vì bạn có thể thấy bộ chọn ở đây là vùng văn bản.
+
+25
+00:01:54,720 --> 00:02:02,210
+Vì vậy, hãy để tôi quay lại đây và trong phần sản phẩm, tôi sẽ mở upsert nơi tôi có mô tả.
+
+26
+00:02:02,220 --> 00:02:09,660
+Tôi sẽ chuyển đổi nó thành một vùng văn bản và với vùng văn bản, chúng ta cần thẻ đóng rõ ràng.
+
+27
+00:02:11,140 --> 00:02:12,310
+Bây giờ với mô tả.
+
+28
+00:02:12,310 --> 00:02:13,900
+Chúng tôi không muốn bất kỳ xác nhận.
+
+29
+00:02:13,900 --> 00:02:17,950
+Vì vậy, tôi có thể xóa nó và chúng tôi phải thêm JavaScript.
+
+30
+00:02:19,000 --> 00:02:22,370
+Nếu bạn để ý ở đây, chúng tôi có một phần dành cho kịch bản.
+
+31
+00:02:22,420 --> 00:02:27,400
+Bên trong đó, chúng ta có thể dán mã JavaScript và nó sẽ hoạt động.
+
+32
+00:02:27,880 --> 00:02:31,420
+Với cấu hình đó, hãy để tôi lưu mọi thứ.
+
+33
+00:02:31,450 --> 00:02:34,390
+Quay trở lại và hoàn thiện.
+
+34
+00:02:34,660 --> 00:02:38,380
+Bạn có thể thấy chúng tôi có một trình soạn thảo đẹp ngay tại đây.
+
+35
+00:02:38,620 --> 00:02:41,560
+Bây giờ với điều đó, chúng tôi không thấy mô tả ở trên cùng.
+
+36
+00:02:41,560 --> 00:02:46,010
+Vì vậy, hãy để tôi quay lại đây và nơi tôi có mô tả.
+
+37
+00:02:46,030 --> 00:02:51,190
+Cắt và dán nó và tôi sẽ loại bỏ các hình thức nổi.
+
+38
+00:02:53,760 --> 00:03:00,750
+Và nơi chúng tôi có lớp, tôi sẽ cung cấp cho nó một lớp văn bản bị tắt tiếng để có màu xám.
+
+39
+00:03:01,050 --> 00:03:02,100
+Hoàn hảo.
+
+40
+00:03:02,220 --> 00:03:03,890
+Điều đó có vẻ tốt hơn nhiều.
+
+41
+00:03:03,900 --> 00:03:11,040
+Bạn có thể thấy chúng tôi có các phông chữ ưa thích ở đây có thể được áp dụng và mô tả của chúng tôi bây giờ có thể cực kỳ lạ mắt.
+
+42
+00:03:12,200 --> 00:03:19,580
+Nếu chúng tôi quay lại đây và khi chúng tôi cuộn xuống, bạn có thể thấy trong thanh công cụ và plugin, chúng tôi có khá
+
+43
+00:03:19,580 --> 00:03:21,420
+nhiều plugin ngay tại đây.
+
+44
+00:03:21,440 --> 00:03:23,810
+Chúng tôi có thể không cần tất cả chúng.
+
+45
+00:03:24,140 --> 00:03:26,330
+Chúng tôi có thể loại bỏ hình ảnh ở đây.
+
+46
+00:03:26,360 --> 00:03:27,470
+Liên kết ở đây.
+
+47
+00:03:27,470 --> 00:03:30,970
+Tìm kiếm phương tiện thay thế.
+
+48
+00:03:30,980 --> 00:03:37,070
+Hãy để tôi xóa nó và để tôi xóa các liên kết ở đây.
+
+49
+00:03:40,980 --> 00:03:43,380
+Tôi đoán điều đó là đủ tốt.
+
+50
+00:03:43,410 --> 00:03:45,870
+Hãy để tôi xem nó trông như thế nào.
+
+51
+00:03:46,440 --> 00:03:47,400
+Lưu vào đó.
+
+52
+00:03:47,400 --> 00:03:49,890
+Quay lại và.
+
+53
+00:03:49,890 --> 00:03:51,390
+Vâng, điều đó có vẻ tốt hơn.
+
+54
+00:03:52,020 --> 00:03:58,110
+Bạn luôn có thể chơi xung quanh với những plugin bạn muốn, nhưng tôi sẽ để việc lựa chọn đó cho bạn.
+
+55
+00:03:58,860 --> 00:04:04,590
+Cùng với đó, chúng tôi đã triển khai MCE nhỏ ngay tại đây trên trang sản phẩm.
+
+56
+00:04:04,890 --> 00:04:11,550
+Bây giờ, cuối cùng, những gì chúng tôi muốn làm việc là khi chúng tôi chọn một hình ảnh ở đây và nhấn nút tạo.
+
+57
+00:04:11,550 --> 00:04:18,630
+Chúng tôi cần lưu hình ảnh đó ở đâu đó trong mã của chúng tôi tại đây và chúng tôi cũng cần cập nhật URL của hình ảnh.
+
+58
+00:04:19,230 --> 00:04:22,050
+Hãy để tôi làm điều đó trong video tiếp theo.
+

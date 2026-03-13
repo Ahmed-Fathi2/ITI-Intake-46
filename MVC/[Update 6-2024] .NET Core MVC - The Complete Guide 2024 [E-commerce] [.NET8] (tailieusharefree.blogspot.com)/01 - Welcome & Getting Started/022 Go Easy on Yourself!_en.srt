@@ -1,0 +1,92 @@
+1
+00:00:01,550 --> 00:00:06,020
+Now there is a one teeny tiny thing that I want to tell you right now.
+
+2
+00:00:06,590 --> 00:00:11,750
+When we go to controller, we have a controller and we have an action method.
+
+3
+00:00:11,780 --> 00:00:15,200
+There it is, returning something called as a view.
+
+4
+00:00:15,410 --> 00:00:22,070
+If you are coming here from traditional .net or some other programming language, you will be smacking
+
+5
+00:00:22,070 --> 00:00:22,660
+your head.
+
+6
+00:00:22,670 --> 00:00:24,200
+What is this view?
+
+7
+00:00:24,230 --> 00:00:26,210
+What is this action result?
+
+8
+00:00:26,240 --> 00:00:28,190
+Why is this return type?
+
+9
+00:00:28,400 --> 00:00:35,660
+Typically we have a return type of, let's say an object or maybe a string or something like a list
+
+10
+00:00:35,660 --> 00:00:37,400
+or a enumerable.
+
+11
+00:00:38,060 --> 00:00:44,630
+An action result is one of the custom classes or rather interface that is implemented in the.
+
+12
+00:00:44,870 --> 00:00:52,790
+.Net framework and that basically implements all of the possible result type for an action method.
+
+13
+00:00:53,360 --> 00:00:58,820
+So even if things are looking like it's magic right now, it is not.
+
+14
+00:00:58,820 --> 00:01:04,200
+And when you progress with the course, you will see how everything comes together.
+
+15
+00:01:04,530 --> 00:01:12,330
+So right now, do not and I'm saying that do not try to smack your head or be too hard on yourself on
+
+16
+00:01:12,330 --> 00:01:16,410
+trying to understand every small piece that you see on the screen.
+
+17
+00:01:16,830 --> 00:01:24,030
+By the end of this course, I will cover all of them to make sure that no stone is left unturned.
+
+18
+00:01:24,270 --> 00:01:28,230
+But when I say that, just assume this is the syntax right now.
+
+19
+00:01:28,260 --> 00:01:35,550
+Just assume that for now, because I know when I will be moving forward with the course, you will understand
+
+20
+00:01:35,550 --> 00:01:37,320
+all the basic foundation.
+
+21
+00:01:37,440 --> 00:01:39,300
+Nothing is magic.
+
+22
+00:01:39,330 --> 00:01:45,270
+Everything is programming and you will learn all of that by the end of this course.
+
+23
+00:01:45,660 --> 00:01:51,930
+So right now, don't be too hard on yourself and let me continue from the next video.
+

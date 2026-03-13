@@ -1,0 +1,180 @@
+﻿using System;
+using System.Drawing;
+using System.Windows.Forms;
+using Microsoft.Extensions.DependencyInjection;
+
+namespace ITI.WinForms
+{
+    public class MainMenuForm : Form
+    {
+        private Button studentsBtn;
+        private Button departmentsBtn;
+        private Button coursesBtn;
+        private Button instructorsBtn;
+        private Button studentCoursesBtn;
+        private Button courseSessionsBtn;
+        private Button attendanceBtn;
+        private Button exitBtn;
+
+        public MainMenuForm()
+        {
+            InitializeComponent();
+        }
+
+        private void InitializeComponent()
+        {
+            SuspendLayout();
+
+            StartPosition = FormStartPosition.CenterScreen;
+            ClientSize = new Size(360, 520);
+            Text = "Main Menu";
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MaximizeBox = false;
+            BackColor = SystemColors.Window;
+
+            var title = new Label
+            {
+                Text = "ITI Management",
+                Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point),
+                AutoSize = false,
+                TextAlign = ContentAlignment.MiddleCenter,
+                Dock = DockStyle.Top,
+                Height = 60
+            };
+
+            var panel = new FlowLayoutPanel
+            {
+                Dock = DockStyle.Fill,
+                FlowDirection = FlowDirection.TopDown,
+                Padding = new Padding(20),
+                AutoScroll = true
+            };
+
+            Font btnFont = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+
+            studentsBtn = new Button { Text = "Students", Size = new Size(300, 50), Font = btnFont, Margin = new Padding(5) };
+            departmentsBtn = new Button { Text = "Departments", Size = new Size(300, 50), Font = btnFont, Margin = new Padding(5) };
+            coursesBtn = new Button { Text = "Courses", Size = new Size(300, 50), Font = btnFont, Margin = new Padding(5) };
+            instructorsBtn = new Button { Text = "Instructors", Size = new Size(300, 50), Font = btnFont, Margin = new Padding(5) };
+            studentCoursesBtn = new Button { Text = "Student Courses", Size = new Size(300, 50), Font = btnFont, Margin = new Padding(5) };
+            courseSessionsBtn = new Button { Text = "Course Sessions", Size = new Size(300, 50), Font = btnFont, Margin = new Padding(5) };
+            attendanceBtn = new Button { Text = "Attendance", Size = new Size(300, 50), Font = btnFont, Margin = new Padding(5) };
+            exitBtn = new Button { Text = "Exit", Size = new Size(100, 36), Font = btnFont, Margin = new Padding(5) };
+
+            studentsBtn.Click += StudentsBtn_Click;
+            departmentsBtn.Click += DepartmentsBtn_Click;
+            coursesBtn.Click += CoursesBtn_Click;
+            instructorsBtn.Click += InstructorsBtn_Click;
+            studentCoursesBtn.Click += NotImplemented_Click;
+            courseSessionsBtn.Click += CourseSessionsBtn_Click;
+            attendanceBtn.Click += AttendanceBtn_Click;
+            exitBtn.Click += ExitBtn_Click;
+
+            panel.Controls.Add(studentsBtn);
+            panel.Controls.Add(departmentsBtn);
+            panel.Controls.Add(coursesBtn);
+            panel.Controls.Add(instructorsBtn);
+            panel.Controls.Add(studentCoursesBtn);
+            panel.Controls.Add(courseSessionsBtn);
+            panel.Controls.Add(attendanceBtn);
+
+            var bottomPanel = new Panel { Dock = DockStyle.Bottom, Height = 56 };
+            exitBtn.Location = new Point((ClientSize.Width - exitBtn.Width) / 2, 10);
+            bottomPanel.Controls.Add(exitBtn);
+
+            Controls.Add(panel);
+            Controls.Add(bottomPanel);
+            Controls.Add(title);
+
+            ResumeLayout(false);
+        }
+
+        private void AttendanceBtn_Click(object? sender, EventArgs e)
+        {
+            try
+            {
+                var form = Program.ServiceProvider.GetRequiredService<CourseSessionAttendanceForm>();
+                form.ShowDialog(this);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Could not open Attendance form: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void CourseSessionsBtn_Click(object? sender, EventArgs e)
+        {
+            try
+            {
+                var form = Program.ServiceProvider.GetRequiredService<CourseSessionForm>();
+                form.ShowDialog(this);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Could not open Course Sessions form: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void CoursesBtn_Click(object? sender, EventArgs e)
+        {
+            try
+            {
+                var form = Program.ServiceProvider.GetRequiredService<CourseForm>();
+                form.ShowDialog(this);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Could not open Courses form: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void StudentsBtn_Click(object? sender, EventArgs e)
+        {
+            try
+            {
+                var form = Program.ServiceProvider.GetRequiredService<Form1>();
+                form.ShowDialog(this);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Could not open Students form: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void DepartmentsBtn_Click(object? sender, EventArgs e)
+        {
+            try
+            {
+                var form = Program.ServiceProvider.GetRequiredService<DepartmentForm>();
+                form.ShowDialog(this);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Could not open Departments form: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void InstructorsBtn_Click(object? sender, EventArgs e)
+        {
+            try
+            {
+                var form = Program.ServiceProvider.GetRequiredService<InstractorForm>();
+                form.ShowDialog(this);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Could not open Instructors form: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void NotImplemented_Click(object? sender, EventArgs e)
+        {
+            MessageBox.Show("This area is not implemented yet.", "Not implemented", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void ExitBtn_Click(object? sender, EventArgs e)
+        {
+            Close();
+        }
+    }
+}

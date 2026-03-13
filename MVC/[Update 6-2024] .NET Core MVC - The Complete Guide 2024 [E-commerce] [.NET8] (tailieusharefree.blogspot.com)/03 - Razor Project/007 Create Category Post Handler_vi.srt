@@ -1,0 +1,228 @@
+1
+00:00:01,910 --> 00:00:06,680
+Bây giờ chúng tôi cần thêm một điểm cuối bài đăng ở đây và chúng tôi sẽ làm điều đó như thế nào?
+
+2
+00:00:07,480 --> 00:00:09,850
+Vâng, thêm đó là siêu đơn giản.
+
+3
+00:00:10,030 --> 00:00:17,740
+Chúng tôi sẽ nói loại trả về công khai sẽ không bị vô hiệu ở đây vì khi chúng tôi tạo danh mục, chúng tôi muốn chuyển
+
+4
+00:00:17,740 --> 00:00:22,810
+hướng đến một số trang dao cạo, chẳng hạn như trang chỉ mục cho danh mục.
+
+5
+00:00:23,290 --> 00:00:30,040
+Vì vậy, kiểu trả về sẽ giống với kết quả hành động I mà chúng ta đã thấy trong ứng dụng MVC.
+
+6
+00:00:30,690 --> 00:00:34,700
+Sau đó, những gì sẽ là tên trên sẽ được yêu cầu.
+
+7
+00:00:34,710 --> 00:00:42,840
+Nhưng nếu chúng tôi phải đăng một cái gì đó, thì chúng tôi phải viết từ khóa bài đăng và đó là cách chúng tôi tạo trình xử
+
+8
+00:00:42,870 --> 00:00:45,570
+lý bài đăng trong các trang dao cạo.
+
+9
+00:00:46,640 --> 00:00:50,630
+Bây giờ khi chúng tôi đăng, chúng tôi sẽ nhận được đối tượng thể loại ở đây.
+
+10
+00:00:50,630 --> 00:00:52,550
+Vì vậy, chúng tôi sẽ nhận được điều đó.
+
+11
+00:00:52,910 --> 00:00:55,640
+Và hãy để tôi gọi OBJ đó ở đây.
+
+12
+00:00:55,670 --> 00:01:00,050
+Tiếp theo, những gì chúng tôi muốn làm là trên danh mục dấu chấm DB.
+
+13
+00:01:00,050 --> 00:01:05,870
+Chúng tôi muốn thêm đối tượng và dấu gạch dưới dấu chấm db lưu các thay đổi.
+
+14
+00:01:06,850 --> 00:01:08,770
+Sau đó, chúng tôi muốn chuyển hướng.
+
+15
+00:01:08,770 --> 00:01:09,820
+Vì vậy, trở lại.
+
+16
+00:01:10,120 --> 00:01:18,820
+Trước đây, chúng tôi đã chuyển hướng đến hành động, nhưng trong các trang dao cạo, chúng tôi đã chuyển hướng đến trang và chúng tôi phải đặt
+
+17
+00:01:18,820 --> 00:01:19,720
+tên cho nó.
+
+18
+00:01:21,530 --> 00:01:27,260
+Chúng tôi sẽ gọi đó là trang chỉ mục vì chúng tôi đang ở trong cùng một thư mục sẽ hoạt động.
+
+19
+00:01:28,900 --> 00:01:36,220
+Với cấu hình đó, nếu chúng tôi khởi động lại ứng dụng, mọi thứ sẽ không hoạt động chính xác như chúng tôi dự định.
+
+20
+00:01:36,610 --> 00:01:43,690
+Hãy để tôi thêm một điểm sửa lỗi vào bài đăng ở đây và để tôi đợi ứng dụng xuất hiện trở lại.
+
+21
+00:01:45,410 --> 00:01:47,660
+Và hãy để tôi đi đến danh mục.
+
+22
+00:01:49,000 --> 00:01:50,770
+Tạo một danh mục mới.
+
+23
+00:01:50,800 --> 00:01:52,570
+Dân cư một cái gì đó ở đó.
+
+24
+00:01:52,600 --> 00:01:54,220
+Nhấn nút tạo.
+
+25
+00:01:54,250 --> 00:01:57,430
+Bạn sẽ nhận thấy obj ở đây là null.
+
+26
+00:01:58,620 --> 00:02:00,020
+Tại sao vậy?
+
+27
+00:02:00,030 --> 00:02:02,720
+Trong danh mục chúng tôi có bài viết ở đây.
+
+28
+00:02:02,730 --> 00:02:06,210
+Nó nên điền vào ít nhất danh mục. tên.
+
+29
+00:02:06,720 --> 00:02:09,190
+Thể loại đó ở ngay đây.
+
+30
+00:02:09,210 --> 00:02:16,620
+Nhưng nếu bạn kiểm tra thì nó cũng không được điền khi chúng tôi đang làm việc với các trang dao cạo.
+
+31
+00:02:16,650 --> 00:02:24,030
+Nếu chúng tôi muốn thuộc tính này khả dụng khi chúng tôi đăng thuộc tính đó, chúng tôi phải thêm thuộc tính
+
+32
+00:02:24,030 --> 00:02:30,030
+ở đây là thuộc tính liên kết để đảm bảo rằng thuộc tính liên kết thuộc tính này.
+
+33
+00:02:30,030 --> 00:02:37,260
+Và khi chúng tôi đăng bài đó, nó sẽ tự động được liên kết và có sẵn trong trình xử lý bài đăng.
+
+34
+00:02:37,830 --> 00:02:43,440
+Khi chúng tôi làm điều đó, chúng tôi không còn yêu cầu bất cứ điều gì trong tham số ở đây.
+
+35
+00:02:43,440 --> 00:02:48,480
+Chúng tôi có thể truy cập trực tiếp vào danh mục vì danh mục đó sẽ được điền.
+
+36
+00:02:49,690 --> 00:02:52,930
+Bây giờ hãy để tôi chạy cái này và hiển thị cái đó.
+
+37
+00:02:53,750 --> 00:03:01,790
+Chúng tôi đi đến danh mục ở đây, tạo loại một cái gì đó ở đây và chúng tôi kiểm tra danh mục.
+
+38
+00:03:01,820 --> 00:03:02,690
+Hoàn hảo.
+
+39
+00:03:02,690 --> 00:03:08,120
+Chúng tôi có thứ tự hiển thị cũng như tên và chúng tôi tiếp tục ở đây.
+
+40
+00:03:08,240 --> 00:03:09,140
+Tuyệt vời.
+
+41
+00:03:09,350 --> 00:03:12,980
+Danh mục đó đã được thêm thành công.
+
+42
+00:03:13,550 --> 00:03:21,140
+Vì vậy, khi chúng tôi làm việc với các trang dao cạo, chúng tôi phải liên kết rõ ràng các thuộc tính mà chúng tôi muốn truy cập trên
+
+43
+00:03:21,140 --> 00:03:22,670
+bài đăng của biểu mẫu.
+
+44
+00:03:23,640 --> 00:03:31,050
+Nếu bạn có nhiều thuộc tính, bạn có thể liên kết chúng riêng lẻ hoặc điều bạn có thể làm là thêm cấp độ mô hình
+
+45
+00:03:31,050 --> 00:03:31,840
+trang.
+
+46
+00:03:31,860 --> 00:03:38,880
+Ở đây chúng ta có một thứ được gọi là thuộc tính liên kết và nó sẽ liên kết tất cả các thuộc tính mà bạn xác định trong
+
+47
+00:03:38,880 --> 00:03:40,260
+mô hình trang.
+
+48
+00:03:41,510 --> 00:03:42,050
+Với.
+
+49
+00:03:42,050 --> 00:03:45,950
+Nếu bạn chạy ứng dụng, nó sẽ hoạt động theo cách tương tự.
+
+50
+00:03:46,630 --> 00:03:48,850
+Hãy để tôi thử điều đó là tốt.
+
+51
+00:03:49,420 --> 00:03:51,610
+Chúng tôi sẽ có thử nghiệm để.
+
+52
+00:03:52,380 --> 00:03:55,740
+Và chúng tôi đã kiểm tra danh mục hoàn hảo.
+
+53
+00:03:55,740 --> 00:03:57,720
+Đó là dân cư.
+
+54
+00:03:59,080 --> 00:04:05,470
+Vì vậy, đó là hai cách để liên kết các thuộc tính khi chúng ta làm việc với các trang dao cạo.
+
+55
+00:04:07,430 --> 00:04:13,790
+Bây giờ với phần tổng quan ngắn gọn đó, bạn đã biết cách tạo trình xử lý nhận và trình xử lý bài đăng.
+
+56
+00:04:14,560 --> 00:04:21,970
+Với kiến thức mà bạn có, tôi muốn bạn thực hiện, chỉnh sửa và xóa các chức năng dưới dạng bài tập.
+
+57
+00:04:22,720 --> 00:04:28,090
+Vì vậy, chúc may mắn với nhiệm vụ đó và tôi sẽ gặp lại các bạn trong video tiếp theo.
+

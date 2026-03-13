@@ -1,0 +1,344 @@
+1
+00:00:01,830 --> 00:00:06,060
+Now when we are creating a new category, we want validation.
+
+2
+00:00:06,600 --> 00:00:08,580
+One validation could be display.
+
+3
+00:00:08,580 --> 00:00:13,470
+Order cannot be less than one and category name is required.
+
+4
+00:00:13,500 --> 00:00:21,090
+We can also add some validation that category name must be less than, let's say, 20 characters.
+
+5
+00:00:21,810 --> 00:00:28,650
+Typically in .net when we had to use validation, we had to use JavaScript and we had to write all
+
+6
+00:00:28,650 --> 00:00:29,370
+the code.
+
+7
+00:00:29,980 --> 00:00:37,570
+But with .net core, we have those validations built in and the support for jQuery is already added in
+
+8
+00:00:37,570 --> 00:00:38,560
+the project.
+
+9
+00:00:39,130 --> 00:00:42,910
+Let's see how we can use that and add validation.
+
+10
+00:00:44,180 --> 00:00:46,280
+We will go back to the project here.
+
+11
+00:00:46,280 --> 00:00:52,640
+And first we will be working with server side validation, which is in the controller.
+
+12
+00:00:53,120 --> 00:00:57,290
+When we are adding a category, we want some validation.
+
+13
+00:00:57,950 --> 00:01:07,280
+Inside the category model, we added some data annotation like name is required, but next for display
+
+14
+00:01:07,280 --> 00:01:13,370
+order, we want a range validation and we have that data annotation as well.
+
+15
+00:01:13,760 --> 00:01:17,210
+So with range we can provide the minimum value.
+
+16
+00:01:17,240 --> 00:01:21,740
+It has to be one and for maximum we will add 100.
+
+17
+00:01:21,770 --> 00:01:26,390
+That means we will have 1 to 100 for the display order.
+
+18
+00:01:27,430 --> 00:01:34,780
+After that for the name here, we will add the max length data annotation and we can say max length
+
+19
+00:01:34,780 --> 00:01:37,690
+will be, let's say 30 characters.
+
+20
+00:01:39,130 --> 00:01:44,470
+With that configured, we have added the validations that are needed in category.
+
+21
+00:01:44,800 --> 00:01:49,540
+But how will this validations be implemented on the create page?
+
+22
+00:01:51,030 --> 00:01:54,480
+.net core has built in tag helpers for that.
+
+23
+00:01:55,140 --> 00:01:57,020
+Where we have the input here.
+
+24
+00:01:57,030 --> 00:02:03,300
+Let's say if there are some error message with the name, then we want to display that right here.
+
+25
+00:02:03,660 --> 00:02:08,340
+But even before we display, let me go to the category controller.
+
+26
+00:02:09,360 --> 00:02:14,850
+Here, we will add an F condition and there is something called as model State.
+
+27
+00:02:14,880 --> 00:02:16,530
+. is valid.
+
+28
+00:02:17,300 --> 00:02:24,530
+This basically will check if the model state that we have, which is the category object here, if that
+
+29
+00:02:24,530 --> 00:02:30,500
+object is valid, that means it will go to category and examine all the validation.
+
+30
+00:02:30,770 --> 00:02:38,030
+If it is required, then whatever is being populated here in the name must be populated.
+
+31
+00:02:38,720 --> 00:02:46,760
+If it is not, then the model state is not valid and it will not go to the database and save the category.
+
+32
+00:02:48,140 --> 00:02:51,380
+Let me run this and see what happens.
+
+33
+00:02:54,240 --> 00:02:56,910
+We go to category create.
+
+34
+00:02:56,910 --> 00:03:03,060
+And if we hit create now, it takes us back to the page but does not add a category.
+
+35
+00:03:03,760 --> 00:03:07,390
+If I have display order here does not work.
+
+36
+00:03:07,690 --> 00:03:15,670
+Similarly, if I have name here, but if display order is zero, it will not work because we have the
+
+37
+00:03:15,670 --> 00:03:17,260
+range validation.
+
+38
+00:03:18,730 --> 00:03:23,980
+If we add a debugging point here, you will also notice the model state value.
+
+39
+00:03:24,620 --> 00:03:26,630
+Let's hit the create here.
+
+40
+00:03:27,110 --> 00:03:29,090
+The is valid is false.
+
+41
+00:03:29,390 --> 00:03:36,800
+If you examine model state here, you will notice in the result view it will display what exactly is
+
+42
+00:03:36,800 --> 00:03:37,730
+it checking.
+
+43
+00:03:39,150 --> 00:03:43,290
+Name is valid, but display order is invalid.
+
+44
+00:03:44,110 --> 00:03:49,750
+If you expand that further, it will display the exact error message as well.
+
+45
+00:03:50,790 --> 00:03:51,840
+So perfect.
+
+46
+00:03:51,870 --> 00:03:58,860
+Our validations are working in the project, but right now, if something is not valid, it is redirecting
+
+47
+00:03:58,890 --> 00:04:03,690
+to the index page and we are not able to see those error message.
+
+48
+00:04:04,720 --> 00:04:05,350
+For that.
+
+49
+00:04:05,350 --> 00:04:08,080
+What we will do is stop the application.
+
+50
+00:04:08,260 --> 00:04:12,810
+If everything is valid, create and return back to the index.
+
+51
+00:04:12,820 --> 00:04:16,180
+Else we want to return back to the view itself.
+
+52
+00:04:17,529 --> 00:04:23,350
+With that, let me run the application and this time it will stay on the page here.
+
+53
+00:04:23,350 --> 00:04:28,300
+But we will not see any validation or any error message.
+
+54
+00:04:29,430 --> 00:04:31,650
+We already saw in Model State.
+
+55
+00:04:31,650 --> 00:04:39,510
+We have the exact error message displaying that is super simple and we should be thankful to tag helper
+
+56
+00:04:39,510 --> 00:04:40,350
+for that.
+
+57
+00:04:41,350 --> 00:04:43,330
+To display error message inside.
+
+58
+00:04:43,360 --> 00:04:44,110
+Tag helpers.
+
+59
+00:04:44,110 --> 00:04:51,880
+We have something called as ASP validation for and it will evaluate everything against the current model.
+
+60
+00:04:52,590 --> 00:04:57,490
+So ASP validation for this is the validation for name model.
+
+61
+00:04:57,510 --> 00:05:03,090
+We can give it a bootstrap classes of text danger for the red color.
+
+62
+00:05:04,460 --> 00:05:05,570
+Copy that.
+
+63
+00:05:05,600 --> 00:05:10,190
+We will have to add one more span for display order.
+
+64
+00:05:12,610 --> 00:05:17,130
+So now, if there are any errors with the name, it will be displayed here.
+
+65
+00:05:17,140 --> 00:05:22,630
+If there are any errors with display order, it will automatically be displayed here.
+
+66
+00:05:22,780 --> 00:05:25,780
+And that is the power of tag helpers.
+
+67
+00:05:26,540 --> 00:05:30,830
+Once you save that, we will have to restart the application.
+
+68
+00:05:32,940 --> 00:05:37,140
+Let's go to category here and create a category.
+
+69
+00:05:37,380 --> 00:05:38,220
+Perfect.
+
+70
+00:05:38,250 --> 00:05:42,270
+If we try empty here, it displays the validation.
+
+71
+00:05:42,720 --> 00:05:45,180
+And if we have the range one.
+
+72
+00:05:45,480 --> 00:05:46,470
+Perfect.
+
+73
+00:05:47,640 --> 00:05:48,900
+That looks great.
+
+74
+00:05:48,930 --> 00:05:51,480
+Now we have server side validation.
+
+75
+00:05:51,810 --> 00:05:56,310
+But what if we want to change the message that is being displayed here?
+
+76
+00:05:57,060 --> 00:05:59,010
+Super simple as well.
+
+77
+00:05:59,010 --> 00:06:06,360
+With data annotation, we go here and with range we have a custom error message field.
+
+78
+00:06:07,320 --> 00:06:10,710
+And we can provide the custom error message here.
+
+79
+00:06:11,190 --> 00:06:12,770
+Here we had the end.
+
+80
+00:06:12,780 --> 00:06:15,240
+We are replacing that with hyphen.
+
+81
+00:06:15,660 --> 00:06:19,140
+Let me restart and see if that works.
+
+82
+00:06:21,410 --> 00:06:24,560
+We go to category here create.
+
+83
+00:06:27,250 --> 00:06:28,720
+And perfect.
+
+84
+00:06:28,750 --> 00:06:31,450
+We have the custom error message.
+
+85
+00:06:32,600 --> 00:06:33,800
+So perfect.
+
+86
+00:06:33,800 --> 00:06:38,750
+With that we have seen tag helpers and server side validation.
+

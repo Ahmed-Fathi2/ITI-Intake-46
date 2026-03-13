@@ -1,0 +1,240 @@
+1
+00:00:01,650 --> 00:00:07,560
+Điều cuối cùng mà chúng tôi muốn thực hiện là khi chúng tôi nhấn vào quy tắc cập nhật, nó sẽ cập nhật quy tắc.
+
+2
+00:00:08,310 --> 00:00:12,420
+Vì vậy, hãy để tôi quay lại đây và sao chép quản lý quy tắc.
+
+3
+00:00:13,020 --> 00:00:15,330
+Dán một lần nữa vào đây.
+
+4
+00:00:15,660 --> 00:00:20,340
+Xóa mọi thứ và đây sẽ là bài đăng http.
+
+5
+00:00:21,330 --> 00:00:29,520
+Những gì chúng tôi sẽ nhận được ở đây sẽ là mô hình chế độ xem quản lý quy tắc vì chúng tôi không ràng buộc thuộc tính đó.
+
+6
+00:00:30,030 --> 00:00:38,430
+Để lấy ID quy tắc, chúng ta sẽ phải vào mô hình xem quản lý quy tắc, ứng dụng DOT, người dùng. id và sau đó là ID quy
+
+7
+00:00:38,730 --> 00:00:40,140
+tắc.
+
+8
+00:00:41,500 --> 00:00:43,840
+Bây giờ quy tắc này là quy tắc hiện tại.
+
+9
+00:00:44,230 --> 00:00:47,640
+Vì vậy, hãy để tôi truy xuất quy tắc cũ từ cơ sở dữ liệu.
+
+10
+00:00:47,650 --> 00:00:50,260
+Bằng cách đó chúng ta biết quy tắc cũ là gì?
+
+11
+00:00:51,320 --> 00:00:52,400
+Chúng tôi sẽ kiểm tra ở đây.
+
+12
+00:00:52,400 --> 00:00:59,510
+Nếu không, và nếu vai trò hiện tại, nằm trong mô hình dạng xem quản lý vai trò, thì vai trò chấm của người
+
+13
+00:00:59,510 --> 00:01:02,590
+dùng ứng dụng đó không bằng vai trò cũ.
+
+14
+00:01:02,600 --> 00:01:04,910
+Điều đó có nghĩa là một vai trò đã được cập nhật.
+
+15
+00:01:06,300 --> 00:01:13,050
+Bây giờ khi chúng ta phải cập nhật bất cứ thứ gì, hãy để tôi truy xuất người dùng ứng dụng từ cơ sở dữ liệu và sau đó
+
+16
+00:01:13,050 --> 00:01:14,580
+tôi sẽ kiểm tra một thứ.
+
+17
+00:01:14,790 --> 00:01:23,670
+Nếu vai trò quản lý chấm ứng dụng người dùng chấm vai trò bằng c. công ty, nghĩa là cùng với việc chỉ định vai trò, chúng
+
+18
+00:01:23,670 --> 00:01:29,070
+tôi cũng phải chỉ định công ty cho người dùng ứng dụng đó.
+
+19
+00:01:29,700 --> 00:01:36,000
+Vì vậy, chúng tôi có thể đặt người dùng ứng dụng. ID công ty tương đương với vai trò quản lý.
+
+20
+00:01:36,000 --> 00:01:40,620
+Người dùng ứng dụng ViewModel Dot. ID công ty.
+
+21
+00:01:42,130 --> 00:01:50,920
+Sau đó, nếu quy tắc cũ là quy tắc công ty, thì chúng tôi phải xóa người dùng ứng dụng ID công ty đó. ID công ty sẽ là
+
+22
+00:01:50,920 --> 00:01:52,810
+null.
+
+23
+00:01:53,470 --> 00:01:57,910
+Vì vậy, đó là mọi thứ mà chúng tôi phải cập nhật với người dùng ứng dụng.
+
+24
+00:01:57,910 --> 00:02:00,040
+Vì vậy, hãy để tôi lưu các thay đổi.
+
+25
+00:02:00,910 --> 00:02:06,640
+Bây giờ, cuối cùng, chúng ta phải xóa vai trò cũ và gán vai trò mới cho người dùng của mình.
+
+26
+00:02:07,240 --> 00:02:11,590
+Đối với điều đó, chúng tôi có phương thức trợ giúp bên trong Trình quản lý người dùng.
+
+27
+00:02:12,700 --> 00:02:16,330
+Hãy để tôi truy xuất điều đó bằng cách sử dụng phép nội xạ phụ thuộc.
+
+28
+00:02:18,230 --> 00:02:19,070
+Hoàn hảo.
+
+29
+00:02:19,160 --> 00:02:22,880
+Bây giờ, nếu chúng ta đi xuống, chúng ta cần loại bỏ cuộn cũ.
+
+30
+00:02:22,880 --> 00:02:32,810
+Vì vậy, trình quản lý người dùng chấm loại bỏ cuộn không đồng bộ và chúng tôi phải chuyển đối tượng người dùng, đó là người dùng ứng
+
+31
+00:02:32,810 --> 00:02:34,190
+dụng và cuộn cũ.
+
+32
+00:02:34,190 --> 00:02:37,730
+Chúng tôi phải cung cấp những gì trong cuộn cũ.
+
+33
+00:02:38,270 --> 00:02:40,040
+Nó là một phương pháp không đồng bộ.
+
+34
+00:02:40,040 --> 00:02:43,850
+Vì vậy, chúng tôi sẽ gọi get Waiter dot get result.
+
+35
+00:02:45,540 --> 00:02:46,380
+Sao chép cái đó.
+
+36
+00:02:46,380 --> 00:02:48,120
+Dán nó một lần nữa.
+
+37
+00:02:48,240 --> 00:02:56,820
+Khi chúng tôi xóa cuộn cũ, chúng tôi phải thêm cuộn không đồng bộ và chúng tôi phải thêm cuộn mới bên trong
+
+38
+00:02:56,820 --> 00:02:58,020
+ViewModel.
+
+39
+00:02:59,170 --> 00:03:02,170
+Ứng dụng chấm Người dùng chấm hàng.
+
+40
+00:03:02,830 --> 00:03:07,120
+Cuối cùng, hãy để tôi chuyển hướng đến hành động lập chỉ mục và.
+
+41
+00:03:07,120 --> 00:03:07,990
+Hoàn hảo.
+
+42
+00:03:08,200 --> 00:03:16,480
+Cùng với đó, hãy để tôi quay lại và chúng tôi sẽ phải khởi động lại ứng dụng để kiểm tra mọi thứ chúng tôi có.
+
+43
+00:03:18,420 --> 00:03:19,440
+Hoàn hảo.
+
+44
+00:03:20,260 --> 00:03:22,750
+Hãy để tôi đăng nhập với tư cách quản trị viên tại đây.
+
+45
+00:03:24,400 --> 00:03:26,830
+Và chúng tôi đi để quản lý người dùng.
+
+46
+00:03:26,950 --> 00:03:29,080
+Chúng tôi có một tài khoản công ty.
+
+47
+00:03:29,110 --> 00:03:32,080
+Hãy để tôi quay trở lại trong cơ sở dữ liệu.
+
+48
+00:03:32,770 --> 00:03:37,210
+Và nếu tôi kiểm tra email đó là công ty tại Gmail.
+
+49
+00:03:38,260 --> 00:03:39,100
+Đó là đâu?
+
+50
+00:03:39,100 --> 00:03:40,300
+Ngay chỗ này.
+
+51
+00:03:40,480 --> 00:03:42,370
+Nó phải có một ID công ty.
+
+52
+00:03:43,000 --> 00:03:48,250
+Nếu tôi thay đổi vai trò đó thành vai trò cập nhật nhân viên thì hoàn hảo.
+
+53
+00:03:48,250 --> 00:03:49,210
+Thế là xong.
+
+54
+00:03:49,210 --> 00:03:53,710
+Và nếu tôi điều hành công ty, id sẽ biến mất.
+
+55
+00:03:54,100 --> 00:03:55,120
+Hoàn hảo.
+
+56
+00:03:55,390 --> 00:04:01,090
+Nếu tôi chỉnh sửa nó một lần nữa thành một công ty, hãy thay đổi điều đó.
+
+57
+00:04:02,140 --> 00:04:04,180
+Hãy để tôi thực hiện ở đây.
+
+58
+00:04:05,680 --> 00:04:07,180
+Và hoàn hảo.
+
+59
+00:04:07,420 --> 00:04:12,910
+ID công ty đang được chỉ định và vai trò cũng được trả lại cho công ty.
+
+60
+00:04:13,300 --> 00:04:20,440
+Vì vậy, với điều đó, bạn có thể thấy việc quản lý các vai trò một cách linh hoạt từ cổng thông tin trong lõi Dotnet dễ dàng như thế nào.
+

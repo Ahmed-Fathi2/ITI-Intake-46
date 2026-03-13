@@ -1,0 +1,236 @@
+1
+00:00:01,720 --> 00:00:05,240
+Let me walk you guys through the journey of .net core.
+
+2
+00:00:05,260 --> 00:00:06,640
+In this video.
+
+3
+00:00:07,350 --> 00:00:13,110
+.net core is probably the biggest change .net programming language has encountered.
+
+4
+00:00:13,710 --> 00:00:20,880
+In 2002, Microsoft introduced web forms and that was a revolution at that time.
+
+5
+00:00:21,150 --> 00:00:26,820
+But web forms had its own drawbacks, and there was a need to overcome all of them.
+
+6
+00:00:27,270 --> 00:00:34,200
+Because of that, the .net team came up with a new architecture, which was .net MVC.
+
+7
+00:00:34,650 --> 00:00:44,460
+Now, even though I love MVC and I have built many applications using MVC, it had its own flaws, like
+
+8
+00:00:44,460 --> 00:00:48,630
+it was created on top of the components of web forms.
+
+9
+00:00:49,140 --> 00:00:56,130
+Because of that, it was tightly tied to IIS and ultimately Windows operating system.
+
+10
+00:00:56,250 --> 00:01:02,880
+But with evolution of development, Microsoft had to keep up with the changing technology.
+
+11
+00:01:04,000 --> 00:01:12,550
+As a result of that, In June of 2016, Microsoft released ASP Dotnet core and it was the first version
+
+12
+00:01:12,550 --> 00:01:16,060
+of Dotnet that was built on top of this new.
+
+13
+00:01:16,360 --> 00:01:17,860
+.Net core framework.
+
+14
+00:01:18,440 --> 00:01:25,550
+This .net core platform has been completely rewritten and it is a cross platform version.
+
+15
+00:01:25,790 --> 00:01:29,990
+Because of that, it is not tied to Windows operating system.
+
+16
+00:01:30,550 --> 00:01:37,390
+Now since .net core was rewritten, it was written with cloud architecture in mind, and because of
+
+17
+00:01:37,420 --> 00:01:39,730
+that it is extremely robust.
+
+18
+00:01:40,390 --> 00:01:47,590
+Then in August of 2018, Microsoft released the next version of .net Core, which is .net, Core
+
+19
+00:01:47,590 --> 00:01:48,550
+2.0.
+
+20
+00:01:48,550 --> 00:01:55,270
+And after that the team has been very active in releasing new versions of .net core.
+
+21
+00:01:55,840 --> 00:01:58,420
+Lately they have finalized that in November.
+
+22
+00:01:58,420 --> 00:02:02,740
+Each year they will release the new version with new features.
+
+23
+00:02:03,130 --> 00:02:10,810
+So in November 2022, .net Core seven was released and .net Core eight will be released in November
+
+24
+00:02:10,810 --> 00:02:12,280
+of 2023.
+
+25
+00:02:12,990 --> 00:02:20,220
+Now, even though the final version of .Net eight will be released in 2023, we can use the preview version
+
+26
+00:02:20,220 --> 00:02:23,790
+of .net eight using Visual Studio Preview.
+
+27
+00:02:24,120 --> 00:02:29,640
+So the preview version is out there and that is what we will be using in this course.
+
+28
+00:02:30,060 --> 00:02:32,550
+That is a small overview of the.
+
+29
+00:02:32,790 --> 00:02:35,370
+.Net framework and its evolution.
+
+30
+00:02:36,220 --> 00:02:39,940
+Now, that being said, why should you even learn that at core?
+
+31
+00:02:39,940 --> 00:02:46,930
+And what are the advantages that Dotnet core brings to the table when you compare the classic .net language?
+
+32
+00:02:48,050 --> 00:02:50,090
+The list is quite extensive.
+
+33
+00:02:50,780 --> 00:02:54,470
+First one is that .net core is fast and open source.
+
+34
+00:02:54,770 --> 00:02:56,930
+If you compare that with traditional.
+
+35
+00:02:57,140 --> 00:03:03,540
+.Net applications, there have been quite a few benchmark and .net core is very fast.
+
+36
+00:03:03,560 --> 00:03:07,880
+When you compare that to web forms or even .net MVC.
+
+37
+00:03:09,110 --> 00:03:11,870
+Then .net core is cross-platform.
+
+38
+00:03:12,290 --> 00:03:19,730
+The classic .net was tied to IIS and windows, but since .net core is rewritten, it has removed
+
+39
+00:03:19,730 --> 00:03:22,550
+that dependency with .net core.
+
+40
+00:03:23,240 --> 00:03:27,620
+And with .net core, we have a built in dependency injection.
+
+41
+00:03:27,860 --> 00:03:34,790
+Dependency injection is super great when you will move along with the course and by the time you finish
+
+42
+00:03:34,790 --> 00:03:41,270
+the course, if you work with .net core, you cannot imagine yourself going back to the code where there
+
+43
+00:03:41,270 --> 00:03:43,190
+is no dependency injection.
+
+44
+00:03:43,670 --> 00:03:49,940
+It saves a lot of time and it is extremely efficient in managing all the dependencies.
+
+45
+00:03:50,620 --> 00:03:52,450
+With any programming language.
+
+46
+00:03:52,450 --> 00:03:58,930
+It is critical that new updates or new versions that are released, they should be easily upgradable.
+
+47
+00:03:59,080 --> 00:04:02,200
+And that is one of the great features with net core.
+
+48
+00:04:02,230 --> 00:04:05,230
+The updates have typically been very smooth.
+
+49
+00:04:05,870 --> 00:04:10,130
+And because of that, you can always keep up with the new version.
+
+50
+00:04:11,200 --> 00:04:13,930
+net core is also cloud friendly.
+
+51
+00:04:14,440 --> 00:04:20,890
+As we move along with the development, more and more companies are leaning heavily towards cloud development
+
+52
+00:04:20,890 --> 00:04:25,390
+and .net core has been built with cloud architecture in mind.
+
+53
+00:04:25,540 --> 00:04:32,140
+So that is why it is very flexible when we have to integrate .net core with the cloud technologies.
+
+54
+00:04:32,500 --> 00:04:34,900
+Lastly, when it comes to performance.
+
+55
+00:04:34,930 --> 00:04:42,100
+.net core exceeds all the previous version and even the new versions that are released in .net core.
+
+56
+00:04:42,130 --> 00:04:44,980
+They supersede the previous version.
+
+57
+00:04:45,430 --> 00:04:49,120
+Microsoft has invested a lot in .net core.
+
+58
+00:04:49,420 --> 00:04:55,300
+That gives us a clear idea that Microsoft has long term plan with this technology.
+
+59
+00:04:55,940 --> 00:05:00,860
+So with that brief overview, let me continue from the next video.
+

@@ -1,0 +1,324 @@
+1
+00:00:01,800 --> 00:00:03,810
+Instructor: When we are deleting our product,
+
+2
+00:00:03,810 --> 00:00:05,220
+I want an alert,
+
+3
+00:00:05,220 --> 00:00:08,223
+And for that I will be using SweetAlert2.
+
+4
+00:00:09,150 --> 00:00:11,130
+If we see notification here,
+
+5
+00:00:11,130 --> 00:00:13,653
+you can see it is a fancy notification.
+
+6
+00:00:14,820 --> 00:00:19,410
+Let me go to the installation tab here and we have the CDN.
+
+7
+00:00:19,410 --> 00:00:24,390
+Let me copy that, and I will add that in our project.
+
+8
+00:00:24,390 --> 00:00:26,940
+I have _layout here.
+
+9
+00:00:26,940 --> 00:00:28,173
+Let me add that.
+
+10
+00:00:29,760 --> 00:00:32,759
+Now how to actually invoke that.
+
+11
+00:00:32,759 --> 00:00:35,400
+Now let me go to the examples here
+
+12
+00:00:35,400 --> 00:00:37,410
+and if we scroll down
+
+13
+00:00:37,410 --> 00:00:40,740
+we should have an example with confirm button.
+
+14
+00:00:40,740 --> 00:00:43,140
+This is exactly what we want.
+
+15
+00:00:43,140 --> 00:00:46,260
+We want a confirmation box and if they select
+
+16
+00:00:46,260 --> 00:00:49,773
+Yes, delete it, then we want to delete the product.
+
+17
+00:00:50,790 --> 00:00:53,763
+So I can copy the Swal.fire.
+
+18
+00:00:54,630 --> 00:00:56,730
+Go back to our project here
+
+19
+00:00:56,730 --> 00:01:00,870
+and we will add that in product.js file.
+
+20
+00:01:00,870 --> 00:01:03,750
+Let me create a function here, Delete,
+
+21
+00:01:03,750 --> 00:01:07,443
+where we will get the URL that needs to be invoked.
+
+22
+00:01:08,460 --> 00:01:11,223
+I will paste the Swal.fire.
+
+23
+00:01:12,270 --> 00:01:16,110
+Now in here when user selects okay, let's delete that.
+
+24
+00:01:16,110 --> 00:01:19,950
+We want to make an Ajax request to our controller
+
+25
+00:01:19,950 --> 00:01:22,410
+to delete this particular product.
+
+26
+00:01:22,410 --> 00:01:24,243
+And I will make this HttpDelete.
+
+27
+00:01:25,290 --> 00:01:26,853
+That is what it should have.
+
+28
+00:01:27,810 --> 00:01:32,310
+I will do continue editing here and let's go back.
+
+29
+00:01:32,310 --> 00:01:36,900
+So if it is confirmed, I will set $.ajax
+
+30
+00:01:36,900 --> 00:01:39,690
+and we will have the Ajax request.
+
+31
+00:01:39,690 --> 00:01:42,780
+We will first have the url that we will receive
+
+32
+00:01:42,780 --> 00:01:46,770
+in the parameter of the method right here.
+
+33
+00:01:46,770 --> 00:01:50,103
+Next, we need the type and that is HttpDelete.
+
+34
+00:01:51,270 --> 00:01:53,400
+So we will write DELETE here.
+
+35
+00:01:53,400 --> 00:01:56,223
+And what should happen if it is successful?
+
+36
+00:01:57,360 --> 00:02:00,660
+Well on success, let me have a function
+
+37
+00:02:00,660 --> 00:02:03,330
+where we will get the data back.
+
+38
+00:02:03,330 --> 00:02:07,110
+If it is successful, what are we returning back here?
+
+39
+00:02:07,110 --> 00:02:10,650
+We are returning a success and a message.
+
+40
+00:02:10,650 --> 00:02:14,493
+So that will be available in data right here.
+
+41
+00:02:15,390 --> 00:02:18,150
+What I can do is I can just call our toastr
+
+42
+00:02:18,150 --> 00:02:22,803
+notification .success and pass that data.message.
+
+43
+00:02:23,670 --> 00:02:27,960
+With that configured, we have to pass this URL
+
+44
+00:02:27,960 --> 00:02:32,013
+and we will have to replace this href with an onClick.
+
+45
+00:02:32,940 --> 00:02:35,610
+So we have the URL that looks good.
+
+46
+00:02:35,610 --> 00:02:39,840
+What I can do is I can replace href with an onClick.
+
+47
+00:02:39,840 --> 00:02:41,970
+Call the delete function here.
+
+48
+00:02:41,970 --> 00:02:45,870
+And I will pass that right here.
+
+49
+00:02:45,870 --> 00:02:47,670
+That looks good.
+
+50
+00:02:47,670 --> 00:02:52,233
+With that configured, let me rebuild and see if that works.
+
+51
+00:02:54,540 --> 00:02:56,373
+We go to product here.
+
+52
+00:02:57,630 --> 00:03:00,060
+Let me try delete, perfect.
+
+53
+00:03:00,060 --> 00:03:02,610
+If I hit cancel, nothing happens.
+
+54
+00:03:02,610 --> 00:03:06,900
+But when I select, Yes, Delete it, it hits the endpoint.
+
+55
+00:03:06,900 --> 00:03:10,170
+And if I continue, you can see on the UI
+
+56
+00:03:10,170 --> 00:03:13,320
+that product is still visible.
+
+57
+00:03:13,320 --> 00:03:15,300
+But that is not the case.
+
+58
+00:03:15,300 --> 00:03:19,020
+If I load the product page again, that is gone.
+
+59
+00:03:19,020 --> 00:03:21,090
+So what is happening is even though
+
+60
+00:03:21,090 --> 00:03:23,160
+that product is getting deleted,
+
+61
+00:03:23,160 --> 00:03:25,863
+the data table is not getting refreshed.
+
+62
+00:03:26,700 --> 00:03:29,610
+Refreshing that is super simple as well.
+
+63
+00:03:29,610 --> 00:03:32,643
+If I go back to product.js here.
+
+64
+00:03:33,570 --> 00:03:36,180
+When we have the results success here.
+
+65
+00:03:36,180 --> 00:03:40,080
+We can say dataTable.ajax.reload.
+
+66
+00:03:40,080 --> 00:03:43,440
+This data table we have that right here.
+
+67
+00:03:43,440 --> 00:03:45,570
+But in order to access that
+
+68
+00:03:45,570 --> 00:03:49,323
+we need to create a variable with the name of data table.
+
+69
+00:03:50,400 --> 00:03:53,880
+With that, it'll be available right here
+
+70
+00:03:53,880 --> 00:03:56,283
+and it'll be able to reload that.
+
+71
+00:03:58,020 --> 00:03:59,070
+So perfect.
+
+72
+00:03:59,070 --> 00:04:00,570
+With that configured,
+
+73
+00:04:00,570 --> 00:04:04,173
+let me restart and test everything once again.
+
+74
+00:04:05,100 --> 00:04:07,590
+We will have to create a new product.
+
+75
+00:04:07,590 --> 00:04:10,413
+I do not want to delete the existing products.
+
+76
+00:04:18,166 --> 00:04:20,370
+Perfect, we have that here.
+
+77
+00:04:20,370 --> 00:04:21,959
+We hit delete.
+
+78
+00:04:21,959 --> 00:04:24,840
+Yes, delete it, delete successful,
+
+79
+00:04:24,840 --> 00:04:27,423
+and the data table also reloaded.
+
+80
+00:04:28,290 --> 00:04:30,720
+With that we have all the correct functionalities
+
+81
+00:04:30,720 --> 00:04:33,693
+for product working as expected.
+

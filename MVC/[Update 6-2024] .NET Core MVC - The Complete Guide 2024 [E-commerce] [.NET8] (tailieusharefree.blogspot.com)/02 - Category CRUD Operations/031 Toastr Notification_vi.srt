@@ -1,0 +1,316 @@
+1
+00:00:01,780 --> 00:00:08,900
+Bây giờ khi cập nhật, tạo hoặc xóa thành công, thay vì hiển thị thẻ H2 đơn giản này, ở đây tốt nhất là chúng
+
+2
+00:00:08,900 --> 00:00:11,720
+ta nên sử dụng một cái gì đó lạ mắt.
+
+3
+00:00:12,420 --> 00:00:14,980
+Và vì điều đó, chúng tôi sẽ sử dụng máy nướng bánh mì.
+
+4
+00:00:15,000 --> 00:00:21,570
+Nếu bạn tìm kiếm điều đó, chúng tôi có liên kết đầu tiên ở đây và hãy để tôi chuyển đến trang demo.
+
+5
+00:00:21,750 --> 00:00:25,440
+Chúng tôi sẽ nhấp vào Show Toaster và hoàn thiện.
+
+6
+00:00:25,470 --> 00:00:29,760
+Những thông báo này tốt hơn nhiều so với những gì chúng tôi có.
+
+7
+00:00:30,740 --> 00:00:36,650
+Chúng tôi đã thành công, chúng tôi có Máy nướng bánh mì cảnh báo và chúng tôi cũng đã thêm máy nướng bánh mì.
+
+8
+00:00:37,920 --> 00:00:41,370
+Vì vậy, hãy xem cách chúng ta có thể thêm chúng vào dự án của mình.
+
+9
+00:00:42,140 --> 00:00:46,420
+Đây là thư viện JavaScript ở đây và chúng tôi có CDN.
+
+10
+00:00:47,220 --> 00:00:51,510
+Hãy để tôi sao chép CDN cho CSS ở đây.
+
+11
+00:00:51,510 --> 00:00:54,360
+Và chúng ta sẽ thêm phong cách của mình ở đâu?
+
+12
+00:00:54,960 --> 00:00:59,260
+Chúng tôi luôn thực hiện tất cả các kiểu dáng toàn cầu trong bố cục được gạch dưới.
+
+13
+00:00:59,280 --> 00:01:01,770
+Vì vậy, hãy để tôi thêm điều đó ở đây.
+
+14
+00:01:04,550 --> 00:01:09,560
+Liên kết rel bằng với stylesheet và ref.
+
+15
+00:01:09,560 --> 00:01:12,050
+Hãy để tôi dán CDN ở đây.
+
+16
+00:01:12,680 --> 00:01:13,790
+Hoàn hảo.
+
+17
+00:01:14,030 --> 00:01:16,850
+Tiếp theo, chúng ta cũng cần JSS.
+
+18
+00:01:16,880 --> 00:01:23,300
+Bây giờ đối với JavaScript, chúng tôi sẽ phải thêm nó vào bên trong thông báo riêng lẻ tại đây.
+
+19
+00:01:23,300 --> 00:01:27,860
+Vì vậy, khi chúng tôi đang hiển thị điều đó, chúng tôi phải thêm thông báo đó.
+
+20
+00:01:28,510 --> 00:01:36,430
+Vì vậy, ở đây tôi có thể thêm thẻ script ở đây và src tương đương với việc dán thẻ đó.
+
+21
+00:01:38,400 --> 00:01:39,910
+Và để tôi xem.
+
+22
+00:01:39,930 --> 00:01:42,390
+Chúng tôi cũng cần thẻ đóng.
+
+23
+00:01:43,550 --> 00:01:44,420
+Hoàn hảo.
+
+24
+00:01:44,450 --> 00:01:46,440
+Lỗi sẽ biến mất.
+
+25
+00:01:46,460 --> 00:01:47,810
+Trông tôt đây.
+
+26
+00:01:48,470 --> 00:01:50,600
+Khi chúng ta đang sử dụng máy nướng bánh mì ở đây.
+
+27
+00:01:50,600 --> 00:01:52,550
+Chúng tôi cũng cần jQuery.
+
+28
+00:01:52,790 --> 00:01:56,090
+Chúng tôi đã có nó bên trong lib ở đây.
+
+29
+00:01:56,090 --> 00:02:02,510
+Vì vậy, lib, jQuery dist và chúng tôi có phiên bản rút gọn.
+
+30
+00:02:02,510 --> 00:02:04,100
+Chúng ta có thể sử dụng nó.
+
+31
+00:02:04,730 --> 00:02:07,670
+Và hãy để tôi thêm thẻ đóng.
+
+32
+00:02:09,449 --> 00:02:10,139
+Hoàn hảo.
+
+33
+00:02:10,139 --> 00:02:11,280
+Trông tôt đây.
+
+34
+00:02:11,790 --> 00:02:16,260
+Chúng tôi sẽ sao chép cái này, dán nó cho lỗi.
+
+35
+00:02:16,650 --> 00:02:22,230
+Và thay vì sử dụng tệp . js ở đây, hãy để tôi sử dụng phiên bản rút gọn.
+
+36
+00:02:22,620 --> 00:02:29,640
+Bằng cách đó, khi chúng tôi chuyển sang sản xuất, chúng tôi không phải cập nhật bất cứ điều gì và chúng tôi đang sử dụng bản
+
+37
+00:02:29,640 --> 00:02:30,630
+rút gọn một lần.
+
+38
+00:02:31,170 --> 00:02:35,190
+Chúng tôi cũng sẽ làm tương tự cho CSS.
+
+39
+00:02:36,310 --> 00:02:37,870
+Và hoàn hảo.
+
+40
+00:02:38,110 --> 00:02:43,720
+Bây giờ, cuối cùng, bên trong thông báo gạch dưới, chúng tôi không muốn có một H2 nhàm chán.
+
+41
+00:02:43,780 --> 00:02:46,540
+Thay vào đó chúng ta phải xem làm thế nào để sử dụng nó.
+
+42
+00:02:46,540 --> 00:02:49,630
+Nếu chúng tôi cuộn xuống, chúng tôi có ba bước dễ dàng.
+
+43
+00:02:49,720 --> 00:02:57,250
+Chúng tôi đã thêm CSS và JS và sau đó chúng tôi có máy nướng bánh mì. thông tin và văn bản ngay tại đây.
+
+44
+00:02:57,550 --> 00:02:58,990
+Khá đơn giản.
+
+45
+00:02:58,990 --> 00:03:00,730
+Hãy để tôi sao chép này.
+
+46
+00:03:01,180 --> 00:03:05,590
+Quay lại mã của chúng tôi và nơi chúng tôi có dữ liệu tạm thời.
+
+47
+00:03:05,590 --> 00:03:09,760
+Trước đó, chúng tôi sẽ thêm máy nướng bánh mì. thành công.
+
+48
+00:03:10,610 --> 00:03:14,000
+Và chúng tôi cần thông báo thành công ngay tại đó.
+
+49
+00:03:14,910 --> 00:03:21,030
+Chúng tôi sẽ thêm một dấu chấm phẩy ở đây và chúng tôi cần đặt dấu chấm phẩy này trong một dấu ngoặc kép.
+
+50
+00:03:21,060 --> 00:03:24,420
+Ngoài ra, bánh mì nướng ở đây sẽ nằm trong kịch bản.
+
+51
+00:03:24,660 --> 00:03:27,270
+Loại bằng với văn bản.
+
+52
+00:03:27,300 --> 00:03:29,910
+Chuyển tiếp tập lệnh Java gạch chéo.
+
+53
+00:03:30,960 --> 00:03:32,130
+Và hoàn hảo.
+
+54
+00:03:32,130 --> 00:03:33,270
+Trông tôt đây.
+
+55
+00:03:34,340 --> 00:03:38,150
+Hãy để tôi sao chép và dán nó ngay tại đây.
+
+56
+00:03:38,180 --> 00:03:40,970
+Lần này nó sẽ bị lỗi ở đây.
+
+57
+00:03:40,970 --> 00:03:44,600
+Lưu nó và chạy ứng dụng.
+
+58
+00:03:47,260 --> 00:03:56,290
+Chúng tôi vào danh mục ở đây, cố gắng chỉnh sửa thứ tự hiển thị thành 88 hay đúng hơn là 99 và hoàn thiện.
+
+59
+00:03:56,380 --> 00:03:59,170
+Chúng tôi có thông báo ưa thích.
+
+60
+00:04:00,420 --> 00:04:04,200
+Bây giờ, trong khi chúng ta ở đây, tôi muốn thực hiện một thay đổi.
+
+61
+00:04:04,560 --> 00:04:09,210
+Ngay bây giờ, chế độ xem một phần nằm trong Index. cshtml.
+
+62
+00:04:09,510 --> 00:04:14,850
+Nhưng giả sử đây là một chức năng sẽ có trên hàng trăm trang.
+
+63
+00:04:15,560 --> 00:04:21,079
+Vì vậy, thay vì thêm vào tất cả chúng, chúng ta cũng có thể thêm nó vào bố cục được gạch dưới.
+
+64
+00:04:21,079 --> 00:04:22,970
+Vì vậy, cắt nó từ đây.
+
+65
+00:04:24,310 --> 00:04:32,770
+Và ở chỗ chúng tôi có bố cục được gạch dưới trước phần thân hiển thị ở đây, tôi có thể thêm chế độ xem một phần theo cách đó.
+
+66
+00:04:32,770 --> 00:04:37,060
+Trên tất cả các trang, chức năng này sẽ khả dụng.
+
+67
+00:04:37,180 --> 00:04:43,870
+Chúng tôi sẽ phải xây dựng lại và áp dụng các thay đổi ở đây và mọi thứ sẽ vẫn hoạt động như cũ.
+
+68
+00:04:44,200 --> 00:04:51,490
+Nhưng bây giờ, bất cứ nơi nào chúng tôi cần chúc mừng hoặc thông báo, nó sẽ có sẵn và chúng tôi sẽ không phải
+
+69
+00:04:51,490 --> 00:04:54,310
+thêm chế độ xem một phần để thông báo.
+
+70
+00:04:55,030 --> 00:04:58,870
+Hãy thử xóa ở đây và hoàn thiện.
+
+71
+00:04:59,080 --> 00:05:02,080
+Mọi thứ đang hoạt động như mong đợi.
+
+72
+00:05:03,090 --> 00:05:07,860
+Cùng với đó, chúng tôi đã kết hợp thông báo máy nướng bánh mì trong dự án của mình.
+
+73
+00:05:08,400 --> 00:05:10,080
+Bây giờ, hãy nghĩ về điều này.
+
+74
+00:05:10,110 --> 00:05:16,860
+Nếu bạn không có chế độ xem một phần trên tất cả các trang mà bạn cần xem thông báo, bạn
+
+75
+00:05:16,860 --> 00:05:21,120
+sẽ phải thêm mã cụ thể này vào đầu tất cả các trang.
+
+76
+00:05:21,390 --> 00:05:27,450
+Và nếu trong tương lai, khi bạn muốn thay đổi từ máy nướng bánh mì sang một thứ khác, bạn
+
+77
+00:05:27,450 --> 00:05:33,750
+sẽ phải cập nhật mã đó trên tất cả các trang có mã này, đây không phải là một ý kiến hay.
+
+78
+00:05:33,930 --> 00:05:37,650
+Và đó là lý do tại sao bạn nên sử dụng chế độ xem từng phần.
+
+79
+00:05:38,410 --> 00:05:43,150
+Vì vậy, với điều đó, hãy để tôi tiếp tục từ video tiếp theo.
+

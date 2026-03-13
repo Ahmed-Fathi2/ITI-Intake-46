@@ -1,0 +1,108 @@
+﻿using System;
+using System.Drawing;
+using System.Windows.Forms;
+using Microsoft.Extensions.DependencyInjection;
+
+namespace ITI.WinForms
+{
+    public class MainMenuForm : Form
+    {
+        private Button studentsBtn;
+        private Button departmentsBtn;
+        private Button coursesBtn;
+        private Button instructorsBtn;
+        private Button studentCoursesBtn;
+        private Button courseSessionsBtn;
+        private Button attendanceBtn;
+        private Button exitBtn;
+
+        public MainMenuForm()
+        {
+            InitializeComponent();
+        }
+
+        private void InitializeComponent()
+        {
+            Text = "Main Menu";
+            ClientSize = new Size(300, 420);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MaximizeBox = false;
+
+            studentsBtn = new Button { Text = "Students", Location = new Point(50, 20), Size = new Size(200, 40) };
+            departmentsBtn = new Button { Text = "Departments", Location = new Point(50, 80), Size = new Size(200, 40) };
+            coursesBtn = new Button { Text = "Courses", Location = new Point(50, 140), Size = new Size(200, 40) };
+            instructorsBtn = new Button { Text = "Instructors", Location = new Point(50, 200), Size = new Size(200, 40) };
+            studentCoursesBtn = new Button { Text = "Student Courses", Location = new Point(50, 260), Size = new Size(200, 40) };
+            courseSessionsBtn = new Button { Text = "Course Sessions", Location = new Point(50, 320), Size = new Size(200, 40) };
+            attendanceBtn = new Button { Text = "Attendance", Location = new Point(50, 380), Size = new Size(200, 40) };
+            exitBtn = new Button { Text = "Exit", Location = new Point(260, 10), Size = new Size(30, 25) };
+
+            Controls.Add(studentsBtn);
+            Controls.Add(departmentsBtn);
+            Controls.Add(coursesBtn);
+            Controls.Add(instructorsBtn);
+            Controls.Add(studentCoursesBtn);
+            Controls.Add(courseSessionsBtn);
+            Controls.Add(attendanceBtn);
+            Controls.Add(exitBtn);
+
+            studentsBtn.Click += StudentsBtn_Click;
+            departmentsBtn.Click += DepartmentsBtn_Click;
+            coursesBtn.Click += NotImplemented_Click;
+            instructorsBtn.Click += InstructorsBtn_Click;
+            studentCoursesBtn.Click += NotImplemented_Click;
+            courseSessionsBtn.Click += NotImplemented_Click;
+            attendanceBtn.Click += NotImplemented_Click;
+            exitBtn.Click += ExitBtn_Click;
+        }
+
+        private void StudentsBtn_Click(object? sender, EventArgs e)
+        {
+            try
+            {
+                var form = Program.ServiceProvider.GetRequiredService<Form1>();
+                form.ShowDialog(this);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Could not open Students form: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void DepartmentsBtn_Click(object? sender, EventArgs e)
+        {
+            try
+            {
+                var form = Program.ServiceProvider.GetRequiredService<DepartmentForm>();
+                form.ShowDialog(this);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Could not open Departments form: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void InstructorsBtn_Click(object? sender, EventArgs e)
+        {
+            try
+            {
+                var form = Program.ServiceProvider.GetRequiredService<InstractorForm>();
+                form.ShowDialog(this);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Could not open Instructors form: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void NotImplemented_Click(object? sender, EventArgs e)
+        {
+            MessageBox.Show("This area is not implemented yet.", "Not implemented", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void ExitBtn_Click(object? sender, EventArgs e)
+        {
+            Close();
+        }
+    }
+}

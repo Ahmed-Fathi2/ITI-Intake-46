@@ -1,0 +1,144 @@
+1
+00:00:02,250 --> 00:00:09,870
+Bây giờ chúng tôi có danh mục của mình, nhưng chúng tôi sẽ thêm sản phẩm vào video sắp tới, nơi chúng tôi sẽ thực hiện
+
+2
+00:00:09,870 --> 00:00:11,250
+các hoạt động CRUD.
+
+3
+00:00:11,760 --> 00:00:16,230
+Bây giờ trước khi tôi thêm điều đó, hãy để tôi thêm một danh sách thả xuống trong điều hướng.
+
+4
+00:00:16,230 --> 00:00:22,030
+Vì vậy, tôi sẽ truy cập getbootstrap. com và để tôi đi đến tài liệu.
+
+5
+00:00:22,050 --> 00:00:24,150
+Tìm kiếm thanh NAV.
+
+6
+00:00:25,590 --> 00:00:28,620
+Chúng tôi có một danh sách thả xuống ở đây có vẻ tốt.
+
+7
+00:00:28,650 --> 00:00:32,250
+Hãy để tôi sao chép li ở đây cho danh sách thả xuống.
+
+8
+00:00:32,670 --> 00:00:34,170
+Sao chép cái đó.
+
+9
+00:00:34,200 --> 00:00:36,270
+Quay trở lại mã của chúng tôi.
+
+10
+00:00:36,450 --> 00:00:39,300
+Chúng tôi có bố cục gạch dưới mở ở đây.
+
+11
+00:00:39,450 --> 00:00:41,400
+Nếu không, bạn có thể mở nó.
+
+12
+00:00:41,400 --> 00:00:46,860
+Và sau các phần tử li, hãy để tôi dán nó ngay tại đây.
+
+13
+00:00:47,940 --> 00:00:49,740
+Chúng tôi quay trở lại giao diện người dùng.
+
+14
+00:00:49,770 --> 00:00:52,920
+Chúng tôi đã tải lại nóng và bắt đầu.
+
+15
+00:00:52,920 --> 00:00:58,350
+Nhưng tôi thấy có màu xanh lam và tôi nghĩ đó là do CSS.
+
+16
+00:00:58,830 --> 00:00:59,490
+Chuẩn rồi.
+
+17
+00:00:59,490 --> 00:01:00,780
+Tôi không cần cái đó.
+
+18
+00:01:00,780 --> 00:01:02,640
+Tôi có thể nhận xét điều đó.
+
+19
+00:01:03,000 --> 00:01:05,310
+Lưu lại và.
+
+20
+00:01:05,310 --> 00:01:06,180
+Hoàn hảo.
+
+21
+00:01:06,210 --> 00:01:07,470
+Có vẻ tốt.
+
+22
+00:01:08,570 --> 00:01:09,980
+Cái đầu tiên ở đây.
+
+23
+00:01:09,980 --> 00:01:12,020
+Tôi muốn đó là thể loại.
+
+24
+00:01:12,140 --> 00:01:16,400
+Cắt con hẻm và dán nó ngay tại đây.
+
+25
+00:01:17,620 --> 00:01:19,690
+Chúng ta sẽ phải xây dựng lại.
+
+26
+00:01:19,870 --> 00:01:22,000
+Hãy để tôi chờ đợi cho điều đó.
+
+27
+00:01:26,060 --> 00:01:27,080
+Và hoàn hảo.
+
+28
+00:01:27,080 --> 00:01:30,920
+Chúng tôi có danh mục, nhưng tôi không thấy màu sắc ở đây.
+
+29
+00:01:31,550 --> 00:01:34,880
+Chúng ta sẽ phải làm cho văn bản đó tối đi.
+
+30
+00:01:35,840 --> 00:01:39,620
+Lưu nó ở đây và hoàn hảo, chúng tôi có điều đó.
+
+31
+00:01:39,620 --> 00:01:47,840
+Nhưng thay vào đó, tôi chỉ có thể đưa cho nó một lớp vật phẩm thả xuống và xem nó có hoạt động không.
+
+32
+00:01:48,080 --> 00:01:49,070
+Hoàn hảo.
+
+33
+00:01:49,070 --> 00:01:58,850
+Tốt hơn nhiều sau đó tôi sẽ để dải phân cách ở đây và xem nào, có vẻ tốt đấy.
+
+34
+00:01:58,940 --> 00:02:03,950
+Thay vì thả xuống đây, hãy để tôi làm cho nó quản lý nội dung.
+
+35
+00:02:05,360 --> 00:02:06,740
+Và hoàn hảo.
+
+36
+00:02:06,740 --> 00:02:07,910
+Trông tôt đây.
+

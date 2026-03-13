@@ -1,0 +1,85 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\ITI\\.Net\\Blazor\\Ahmed Mohamed Fathi\\Task1\\BlazorApp1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{48EFF821-2F4D-60CC-AA44-BE0F1D6E5F35}|BlazorApp1\\BlazorApp1.csproj|f:\\iti\\.net\\blazor\\ahmed mohamed fathi\\task1\\blazorapp1\\blazorapp1\\components\\pages\\todo.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{48EFF821-2F4D-60CC-AA44-BE0F1D6E5F35}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\todo.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48EFF821-2F4D-60CC-AA44-BE0F1D6E5F35}|BlazorApp1\\BlazorApp1.csproj|f:\\iti\\.net\\blazor\\ahmed mohamed fathi\\task1\\blazorapp1\\blazorapp1\\components\\pages\\error.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{48EFF821-2F4D-60CC-AA44-BE0F1D6E5F35}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\error.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48EFF821-2F4D-60CC-AA44-BE0F1D6E5F35}|BlazorApp1\\BlazorApp1.csproj|f:\\iti\\.net\\blazor\\ahmed mohamed fathi\\task1\\blazorapp1\\blazorapp1\\components\\pages\\notfound.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{48EFF821-2F4D-60CC-AA44-BE0F1D6E5F35}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\notfound.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48EFF821-2F4D-60CC-AA44-BE0F1D6E5F35}|BlazorApp1\\BlazorApp1.csproj|f:\\iti\\.net\\blazor\\ahmed mohamed fathi\\task1\\blazorapp1\\blazorapp1\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{48EFF821-2F4D-60CC-AA44-BE0F1D6E5F35}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Error.razor",
+              "DocumentMoniker": "F:\\ITI\\.Net\\Blazor\\Ahmed Mohamed Fathi\\Task1\\BlazorApp1\\BlazorApp1\\Components\\Pages\\Error.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\Error.razor",
+              "ToolTip": "F:\\ITI\\.Net\\Blazor\\Ahmed Mohamed Fathi\\Task1\\BlazorApp1\\BlazorApp1\\Components\\Pages\\Error.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\Error.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-09T15:01:02.859Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NotFound.razor",
+              "DocumentMoniker": "F:\\ITI\\.Net\\Blazor\\Ahmed Mohamed Fathi\\Task1\\BlazorApp1\\BlazorApp1\\Components\\Pages\\NotFound.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\NotFound.razor",
+              "ToolTip": "F:\\ITI\\.Net\\Blazor\\Ahmed Mohamed Fathi\\Task1\\BlazorApp1\\BlazorApp1\\Components\\Pages\\NotFound.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\NotFound.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-09T15:00:57.857Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Todo.razor",
+              "DocumentMoniker": "F:\\ITI\\.Net\\Blazor\\Ahmed Mohamed Fathi\\Task1\\BlazorApp1\\BlazorApp1\\Components\\Pages\\Todo.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\Todo.razor",
+              "ToolTip": "F:\\ITI\\.Net\\Blazor\\Ahmed Mohamed Fathi\\Task1\\BlazorApp1\\BlazorApp1\\Components\\Pages\\Todo.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\Todo.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-09T14:47:32.14Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "F:\\ITI\\.Net\\Blazor\\Ahmed Mohamed Fathi\\Task1\\BlazorApp1\\BlazorApp1\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Layout\\NavMenu.razor",
+              "ToolTip": "F:\\ITI\\.Net\\Blazor\\Ahmed Mohamed Fathi\\Task1\\BlazorApp1\\BlazorApp1\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-09T14:47:22.144Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

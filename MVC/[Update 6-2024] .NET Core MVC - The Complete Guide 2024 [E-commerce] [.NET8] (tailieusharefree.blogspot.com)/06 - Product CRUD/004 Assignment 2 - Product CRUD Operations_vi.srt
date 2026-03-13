@@ -1,0 +1,44 @@
+1
+00:00:01,609 --> 00:00:05,610
+Chúng tôi có một đơn vị làm việc tại chỗ cho kho lưu trữ sản phẩm của chúng tôi.
+
+2
+00:00:05,630 --> 00:00:12,830
+Đã đến lúc thực hiện nhiệm vụ thứ hai, nơi bạn phải tạo bộ điều khiển sản phẩm và các phương thức hành
+
+3
+00:00:12,830 --> 00:00:14,990
+động cho chức năng CRUD.
+
+4
+00:00:15,500 --> 00:00:22,340
+Sau khi bạn tạo bộ điều khiển và các phương thức hành động, thì bạn sẽ phải tạo chế độ xem cho tất cả các
+
+5
+00:00:22,370 --> 00:00:26,990
+hoạt động CRUD và thêm xác thực phía máy khách và phía máy chủ.
+
+6
+00:00:27,880 --> 00:00:29,110
+Tất cả các bước ở đây.
+
+7
+00:00:29,110 --> 00:00:35,200
+Chúng tôi đã làm điều đó cho bộ điều khiển danh mục, vì vậy bạn phải sao chép chúng.
+
+8
+00:00:35,200 --> 00:00:42,160
+Và lý do duy nhất tôi khiến bạn sao chép chúng một lần nữa là bạn sẽ có được một số kinh nghiệm về cách
+
+9
+00:00:42,160 --> 00:00:48,400
+làm việc với tất cả các chức năng CRUD, với các mô hình, chế độ xem và bộ điều khiển.
+
+10
+00:00:48,730 --> 00:00:55,690
+Sự khác biệt duy nhất lần này là bạn có nhiều thuộc tính hơn trong mô hình sản phẩm so với mô hình danh mục.
+
+11
+00:00:56,050 --> 00:01:03,400
+Vì vậy, hãy đảm bảo thực hành tất cả các thao tác CRUD và tôi sẽ chỉ cho bạn cách thực hiện điều đó trong video tiếp theo.
+

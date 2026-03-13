@@ -1,0 +1,132 @@
+1
+00:00:01,650 --> 00:00:07,980
+Khi chúng tôi có các mặt hàng trong giỏ hàng của mình và khi người dùng nhấp vào trang tóm tắt, chúng
+
+2
+00:00:07,980 --> 00:00:08,820
+tôi muốn gì?
+
+3
+00:00:09,240 --> 00:00:15,000
+Chúng tôi muốn hiển thị một trang trong đó ở phía bên phải, chúng tôi sẽ thấy tất cả các sản phẩm và
+
+4
+00:00:15,000 --> 00:00:21,840
+ở phía bên trái, chúng tôi sẽ nắm bắt thông tin về chi tiết giao hàng như chúng tôi sẽ cần tên, số điện thoại, địa chỉ
+
+5
+00:00:21,840 --> 00:00:22,620
+đường phố.
+
+6
+00:00:22,800 --> 00:00:28,740
+Và khi chúng tôi nhận được tất cả các chi tiết địa chỉ, thì chúng tôi sẽ có một nút để đặt hàng.
+
+7
+00:00:29,560 --> 00:00:34,970
+Vì vậy, thay vì thiết kế trang đó, tôi đã cung cấp thiết kế đó trong đoạn trích.
+
+8
+00:00:34,990 --> 00:00:39,490
+Bạn đến Mục mười sẽ có UI tóm tắt.
+
+9
+00:00:39,910 --> 00:00:46,540
+Sao chép mọi thứ ở đó và chúng ta cần tạo một phương thức hành động cho điều đó và sau đó tạo một chế độ xem.
+
+10
+00:00:47,980 --> 00:00:51,650
+Và bộ điều khiển giỏ hàng ở đây ngay sau index.
+
+11
+00:00:51,670 --> 00:00:56,530
+Hãy để tôi tạo một phương thức hành động sẽ có kết quả hành động.
+
+12
+00:00:56,710 --> 00:00:58,830
+Gọi đó là tóm tắt.
+
+13
+00:00:58,840 --> 00:01:02,980
+Và bây giờ, hãy để tôi quay trở lại quan điểm.
+
+14
+00:01:03,100 --> 00:01:05,920
+Nhấp chuột phải vào đây, thêm chế độ xem.
+
+15
+00:01:06,310 --> 00:01:10,930
+Chúng tôi sẽ đặt cho nó cùng một tên, đó là bản tóm tắt.
+
+16
+00:01:11,140 --> 00:01:17,350
+Hãy thêm điều đó và tôi sẽ dán tất cả HTML mà chúng tôi đã sao chép từ mẫu.
+
+17
+00:01:17,710 --> 00:01:25,150
+Một lần nữa, bạn có thể thấy ở đây toàn là HTML và CSS và không có gì liên quan đến lõi dotnet.
+
+18
+00:01:25,510 --> 00:01:29,020
+Vì vậy, không có trình trợ giúp thẻ hoặc bất kỳ mã dao cạo nào.
+
+19
+00:01:29,050 --> 00:01:34,720
+Hoàn toàn là HTML và CSS và chúng tôi sẽ lập chỉ mục tại đây.
+
+20
+00:01:35,980 --> 00:01:42,670
+Nơi chúng tôi có liên kết tóm tắt ở đây, chúng tôi sẽ chuyển đến hành động tóm tắt ASP.
+
+21
+00:01:43,530 --> 00:01:48,480
+Hãy để tôi chạy dự án và xem giao diện người dùng mà chúng tôi đã dán.
+
+22
+00:01:49,750 --> 00:01:51,460
+Cho toi di mua hang.
+
+23
+00:01:51,460 --> 00:02:00,010
+Và ở đây, thay vì hiển thị số 0, hãy để tôi mở bố cục được gạch chân ngay bây giờ và tôi sẽ xóa bố cục đó vì chúng
+
+24
+00:02:00,460 --> 00:02:03,060
+tôi không có mục số không.
+
+25
+00:02:03,070 --> 00:02:09,910
+Chúng tôi thực sự có các mặt hàng trong giỏ hàng có vẻ tốt nếu chúng tôi điều hướng đến giỏ hàng.
+
+26
+00:02:09,910 --> 00:02:13,300
+Và nếu tôi tóm tắt ở đây, thật tuyệt.
+
+27
+00:02:13,420 --> 00:02:20,050
+Bạn có thể thấy chúng tôi phải cung cấp chi tiết giao hàng tại đây, tất cả các trường và chúng tôi cũng phải
+
+28
+00:02:20,050 --> 00:02:22,120
+điền vào phần tóm tắt đơn hàng.
+
+29
+00:02:22,820 --> 00:02:28,280
+Khi người dùng điền thông tin này, chúng tôi sẽ giữ thông tin đó ở đâu?
+
+30
+00:02:28,940 --> 00:02:35,990
+Khi một đơn hàng thực sự được đặt trên một trang web điển hình, chúng tôi có tất cả thông tin này trong tiêu đề đơn hàng
+
+31
+00:02:35,990 --> 00:02:38,140
+và sau đó là chi tiết đơn hàng.
+
+32
+00:02:38,150 --> 00:02:45,080
+Chúng tôi có tất cả các chi tiết sản phẩm trong đơn đặt hàng đó, nhưng chúng tôi không có mẫu cho đơn đặt hàng đó.
+
+33
+00:02:45,080 --> 00:02:51,560
+Vì vậy, hãy để tôi tạo mô hình đó trước cho tiêu đề đơn hàng và chi tiết đơn hàng trong video tiếp theo.
+

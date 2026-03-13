@@ -1,0 +1,240 @@
+1
+00:00:01,950 --> 00:00:05,220
+Instructor: We have added ApplicationUser in our models
+
+2
+00:00:05,220 --> 00:00:08,460
+and we have pushed that to our database,
+
+3
+00:00:08,460 --> 00:00:13,323
+but the default identity here is still using IdentityUser.
+
+4
+00:00:14,340 --> 00:00:17,100
+With that, let me run the application
+
+5
+00:00:17,100 --> 00:00:20,490
+and try to see how the default registration
+
+6
+00:00:20,490 --> 00:00:22,863
+and login functionalities work.
+
+7
+00:00:25,080 --> 00:00:28,230
+So let me register for a user here
+
+8
+00:00:28,230 --> 00:00:32,369
+and I will call that test@gmail.com.
+
+9
+00:00:32,369 --> 00:00:37,370
+Password, I will do Admin123* with a capital A,
+
+10
+00:00:37,530 --> 00:00:40,710
+because if I only use 123,
+
+11
+00:00:40,710 --> 00:00:43,440
+you can see password is not strong enough,
+
+12
+00:00:43,440 --> 00:00:46,560
+so we have to keep something strong.
+
+13
+00:00:46,560 --> 00:00:50,493
+I will add Admin123* and register.
+
+14
+00:00:51,690 --> 00:00:53,730
+Perfect, once I register here,
+
+15
+00:00:53,730 --> 00:00:56,760
+it automatically signs me in.
+
+16
+00:00:56,760 --> 00:00:58,770
+But if we log out here,
+
+17
+00:00:58,770 --> 00:01:02,520
+and then if we go to log in, we can try that again.
+
+18
+00:01:02,520 --> 00:01:07,230
+Test@gmail.com and Admin123.
+
+19
+00:01:07,230 --> 00:01:09,540
+I did not add the asterisk at the end,
+
+20
+00:01:09,540 --> 00:01:12,420
+so we should say invalid login attempt.
+
+21
+00:01:12,420 --> 00:01:14,100
+That looks good.
+
+22
+00:01:14,100 --> 00:01:16,473
+Now let me type the correct password.
+
+23
+00:01:18,060 --> 00:01:21,360
+Perfect, with correct password, it logs me in,
+
+24
+00:01:21,360 --> 00:01:23,490
+and we have a profile,
+
+25
+00:01:23,490 --> 00:01:25,050
+and on the top right here,
+
+26
+00:01:25,050 --> 00:01:28,053
+we see Hello test@gmail.com.
+
+27
+00:01:29,130 --> 00:01:32,700
+Now if you click there, it displays the profile
+
+28
+00:01:32,700 --> 00:01:36,090
+where it displays username, phone number,
+
+29
+00:01:36,090 --> 00:01:39,600
+they can update their email, verify email,
+
+30
+00:01:39,600 --> 00:01:44,310
+modify their password, add a two-factor authentication,
+
+31
+00:01:44,310 --> 00:01:47,523
+and they can download or delete their personal data.
+
+32
+00:01:48,360 --> 00:01:51,270
+All of this is provided by default
+
+33
+00:01:51,270 --> 00:01:54,420
+with the identity that we scaffolded.
+
+34
+00:01:54,420 --> 00:01:56,490
+So you can see when we scaffold,
+
+35
+00:01:56,490 --> 00:01:58,590
+it provides many things,
+
+36
+00:01:58,590 --> 00:02:01,410
+not just the basic identity setup,
+
+37
+00:02:01,410 --> 00:02:05,640
+and it is more like a complete identity package.
+
+38
+00:02:05,640 --> 00:02:08,789
+But of course, if you add more fields to register,
+
+39
+00:02:08,789 --> 00:02:12,873
+you can always update profile and all the other pages.
+
+40
+00:02:13,980 --> 00:02:17,940
+But before anything, let me switch back to SQL Server
+
+41
+00:02:17,940 --> 00:02:21,060
+and examine the user that got created
+
+42
+00:02:21,060 --> 00:02:23,703
+in the ASP.NET User Stable.
+
+43
+00:02:25,050 --> 00:02:27,870
+Perfect, you can see we have the record here.
+
+44
+00:02:27,870 --> 00:02:29,580
+If you scroll to the right,
+
+45
+00:02:29,580 --> 00:02:32,730
+what should be the Discriminator column?
+
+46
+00:02:32,730 --> 00:02:36,603
+Will it be ApplicationUser or will it be IdentityUser?
+
+47
+00:02:38,040 --> 00:02:42,120
+If you said IdentityUser, you are correct,
+
+48
+00:02:42,120 --> 00:02:44,580
+you can see that right here.
+
+49
+00:02:44,580 --> 00:02:46,530
+Because right now in our application,
+
+50
+00:02:46,530 --> 00:02:49,920
+the default identity is IdentityUser,
+
+51
+00:02:49,920 --> 00:02:52,260
+but on top of that, the important thing is,
+
+52
+00:02:52,260 --> 00:02:54,570
+when we are registering the user,
+
+53
+00:02:54,570 --> 00:02:57,330
+we are creating an IdentityUser
+
+54
+00:02:57,330 --> 00:02:59,463
+and not an ApplicationUser.
+
+55
+00:03:00,510 --> 00:03:04,440
+So we need to modify that, because with IdentityUser,
+
+56
+00:03:04,440 --> 00:03:07,830
+we will not get city, name, postal code,
+
+57
+00:03:07,830 --> 00:03:09,783
+state, and street address.
+
+58
+00:03:10,650 --> 00:03:13,380
+If we want to capture those properties,
+
+59
+00:03:13,380 --> 00:03:17,193
+we need to find out a way to register an ApplicationUser.
+
+60
+00:03:18,772 --> 00:03:22,023
+So let me work on that in the next video.
+

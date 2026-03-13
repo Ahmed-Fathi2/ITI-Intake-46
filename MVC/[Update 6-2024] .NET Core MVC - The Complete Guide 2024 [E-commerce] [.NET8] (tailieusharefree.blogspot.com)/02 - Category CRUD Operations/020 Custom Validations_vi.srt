@@ -1,0 +1,148 @@
+1
+00:00:02,009 --> 00:00:06,750
+Bây giờ, đây là những xác thực tích hợp sẵn mà chúng tôi có với chú thích dữ liệu.
+
+2
+00:00:07,110 --> 00:00:13,680
+Nhưng nếu bạn muốn một số xác thực tùy chỉnh thì sao, chẳng hạn như giả sử vì lý do nào đó bạn muốn xác thực mà
+
+3
+00:00:13,680 --> 00:00:16,500
+tên và thứ tự hiển thị không thể giống nhau.
+
+4
+00:00:17,560 --> 00:00:24,040
+Để thực hiện điều đó, Hãy để tôi quay lại bộ điều khiển và nơi chúng tôi đã tạo.
+
+5
+00:00:24,070 --> 00:00:26,050
+Chúng ta phải làm một số kiểm tra.
+
+6
+00:00:26,290 --> 00:00:36,610
+Chúng tôi có thể kiểm tra xem obj. tên. hai thấp hơn bằng nhau obj thứ tự hiển thị dấu chấm. hai chuỗi.
+
+7
+00:00:37,590 --> 00:00:40,610
+Chà, chúng ta không cần phải hạ thấp vì nó sẽ là số.
+
+8
+00:00:40,620 --> 00:00:41,730
+Không sao đâu.
+
+9
+00:00:41,730 --> 00:00:48,390
+Nếu đúng như vậy, thì ở trạng thái mô hình mà chúng tôi có, chúng tôi muốn thêm một thông báo lỗi tùy chỉnh.
+
+10
+00:00:49,270 --> 00:00:54,430
+Và đối với điều đó trên Trạng thái mô hình, chúng tôi có một lỗi phương thức thêm mô hình.
+
+11
+00:00:55,300 --> 00:00:57,810
+Ở đó chúng ta có thể thêm một lỗi mô hình.
+
+12
+00:00:57,820 --> 00:01:00,310
+Chúng tôi có khóa và thông báo lỗi.
+
+13
+00:01:00,820 --> 00:01:02,560
+Bây giờ chìa khóa này là gì?
+
+14
+00:01:02,980 --> 00:01:09,580
+Khóa này về cơ bản là nếu chúng ta vào danh mục Tạo, ở đây chúng ta có tên.
+
+15
+00:01:09,940 --> 00:01:17,020
+Nếu chúng ta muốn gán nó cho trường tên ở đây, thì đó là khóa chính xác mà chúng ta nên sử dụng ở đây.
+
+16
+00:01:17,380 --> 00:01:22,180
+Vì vậy, hãy để tôi sử dụng khóa đó và tôi sẽ thêm một thông báo lỗi tùy chỉnh.
+
+17
+00:01:22,180 --> 00:01:26,230
+Thứ tự hiển thị không thể khớp chính xác với tên.
+
+18
+00:01:27,130 --> 00:01:32,500
+Khi chúng tôi làm điều đó, nếu tôi chạy ứng dụng, hãy xem điều gì sẽ xảy ra.
+
+19
+00:01:33,500 --> 00:01:36,920
+Chúng tôi đi đến danh mục ở đây tạo.
+
+20
+00:01:37,950 --> 00:01:46,320
+Và nếu chúng tôi tạo hoàn hảo, chúng tôi sẽ thấy thông báo lỗi đó và thông báo đó đang được hiển thị trong trường nơi chúng
+
+21
+00:01:46,320 --> 00:01:47,990
+tôi có tên danh mục.
+
+22
+00:01:48,000 --> 00:01:52,320
+Đó chính xác là những gì chúng tôi đã làm khi thêm tên khóa này.
+
+23
+00:01:53,240 --> 00:02:01,490
+Nhưng chúng tôi cũng có một thứ khác ở đây, Không phải ở đây trong trang tạo nơi chúng tôi có khoảng thời gian này ngay
+
+24
+00:02:01,490 --> 00:02:02,110
+tại đây.
+
+25
+00:02:02,120 --> 00:02:03,830
+Vâng, hãy để tôi làm điều đó.
+
+26
+00:02:03,830 --> 00:02:11,960
+Sau tiêu đề ở đây, chúng ta có thể thêm một div và chúng ta có bản tóm tắt xác thực ASP cho từng cái riêng lẻ.
+
+27
+00:02:11,960 --> 00:02:17,720
+Chúng tôi có xác thực ASP hoặc nhưng chúng tôi có bản tóm tắt xác thực ASP.
+
+28
+00:02:18,820 --> 00:02:19,720
+Đối với lĩnh vực đó.
+
+29
+00:02:19,720 --> 00:02:28,150
+Nếu tôi hoàn thành tất cả và tôi đóng nó, hãy để tôi lưu cái này và quay lại làm mới ở đây.
+
+30
+00:02:28,600 --> 00:02:32,890
+Chà, tôi nghĩ để xác thực chúng ta sẽ phải khởi động lại.
+
+31
+00:02:34,880 --> 00:02:38,150
+Và đi đến danh mục tạo.
+
+32
+00:02:39,080 --> 00:02:39,860
+Hoàn hảo.
+
+33
+00:02:39,890 --> 00:02:46,700
+Bây giờ bạn có thể thấy với phần tóm tắt xác thực, nó hiển thị phần tóm tắt ở trên cùng cùng với những phần
+
+34
+00:02:46,700 --> 00:02:48,530
+riêng lẻ ngay tại đây.
+
+35
+00:02:49,610 --> 00:02:56,240
+Và nếu chúng tôi có thông báo lỗi tùy chỉnh, bạn có thể thấy thông báo đó cũng đang được hiển thị.
+
+36
+00:02:56,900 --> 00:03:03,710
+Vì vậy, nếu bạn muốn liệt kê tất cả các thông báo lỗi tại một nơi thay vì từng thông báo lỗi riêng lẻ, bạn
+
+37
+00:03:03,710 --> 00:03:07,400
+có thể sử dụng Trình trợ giúp thẻ tóm tắt xác thực ASP.
+

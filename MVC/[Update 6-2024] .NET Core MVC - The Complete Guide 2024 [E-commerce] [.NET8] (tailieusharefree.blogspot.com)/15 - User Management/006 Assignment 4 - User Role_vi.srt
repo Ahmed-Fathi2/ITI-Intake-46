@@ -1,0 +1,96 @@
+1
+00:00:01,839 --> 00:00:04,660
+Bây giờ tôi muốn cho bạn xem bài tập cuối cùng của bạn.
+
+2
+00:00:04,870 --> 00:00:07,760
+Tôi muốn bạn làm việc trên trường quyền.
+
+3
+00:00:07,780 --> 00:00:15,250
+Khi người dùng nhấp vào đây, nó sẽ mở ra một trang mới, bên trong bộ điều khiển người dùng và phương thức hành
+
+4
+00:00:15,250 --> 00:00:17,530
+động với tên là quản lý vai trò.
+
+5
+00:00:18,190 --> 00:00:22,210
+Ở đó, nó sẽ mong đợi một ID người dùng dựa trên đó.
+
+6
+00:00:22,210 --> 00:00:27,490
+Nó sẽ điền tên của người dùng ở đây và chúng tôi sẽ hiển thị vai trò hiện tại.
+
+7
+00:00:27,970 --> 00:00:32,980
+Nếu người dùng là người dùng của công ty, họ sẽ thấy tên công ty được đính kèm.
+
+8
+00:00:32,980 --> 00:00:33,570
+Đây.
+
+9
+00:00:33,580 --> 00:00:41,350
+Tôi có một số tên công ty giả như bạn có thể thấy, nhưng về cơ bản nếu bạn muốn xác thực điều đó, bạn có thể
+
+10
+00:00:41,350 --> 00:00:46,210
+đến công ty và bạn có thể thấy tôi đã tạo một số tên giả ở đây.
+
+11
+00:00:47,060 --> 00:00:55,970
+Vì vậy, đối với người dùng, nếu chúng tôi chuyển đến người dùng cá nhân, chúng tôi sẽ thấy vai trò đó ở đây và chúng tôi có thể thay đổi vai trò đó thành tài khoản
+
+12
+00:00:55,970 --> 00:00:56,720
+công ty.
+
+13
+00:00:57,080 --> 00:01:03,240
+Nếu chúng tôi thay đổi đó thành công ty, chúng tôi cần chọn một công ty và nhấn nút cập nhật.
+
+14
+00:01:03,260 --> 00:01:05,540
+Bạn có thể thấy rằng đã được cập nhật.
+
+15
+00:01:06,360 --> 00:01:07,740
+Trong sự cho phép.
+
+16
+00:01:07,740 --> 00:01:14,040
+Nếu chúng tôi thay đổi điều đó thành cá nhân, công ty sẽ biến mất và điều đó được phản ánh.
+
+17
+00:01:14,700 --> 00:01:20,340
+Bây giờ, khi một công ty đang được cập nhật, nó cũng sẽ được cập nhật trong cơ sở dữ liệu.
+
+18
+00:01:21,290 --> 00:01:25,190
+Vì vậy, hãy nghĩ xem ViewModel cho trang này là gì.
+
+19
+00:01:25,850 --> 00:01:31,700
+Để cung cấp cho bạn một gợi ý, chúng tôi cần người dùng ứng dụng và sau đó chúng tôi có hai danh sách thả xuống.
+
+20
+00:01:31,730 --> 00:01:36,290
+Chúng tôi có danh sách thả xuống cho vai trò và chúng tôi có danh sách thả xuống cho công ty.
+
+21
+00:01:37,120 --> 00:01:39,730
+Cùng với đó, chúng ta cần một cái gì đó để lưu trữ.
+
+22
+00:01:39,760 --> 00:01:42,520
+Vai trò hiện tại của người dùng là gì?
+
+23
+00:01:43,610 --> 00:01:49,400
+Vì vậy, đó sẽ là mô hình chế độ xem, xây dựng mô hình chế độ xem đó và sau đó xây dựng trang này.
+
+24
+00:01:49,430 --> 00:01:55,700
+Tôi muốn bạn hoàn thành nhiệm vụ đó và sau đó xem giải pháp trong video tiếp theo.
+

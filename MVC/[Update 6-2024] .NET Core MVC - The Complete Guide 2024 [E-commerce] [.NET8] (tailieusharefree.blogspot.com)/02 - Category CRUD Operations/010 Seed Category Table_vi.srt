@@ -1,0 +1,228 @@
+1
+00:00:02,000 --> 00:00:03,800
+Trên trang danh sách danh mục.
+
+2
+00:00:03,800 --> 00:00:11,300
+Chúng tôi muốn hiển thị tất cả các danh mục, nhưng nếu bạn vào cơ sở dữ liệu, chúng tôi hiện không có bất kỳ danh mục
+
+3
+00:00:11,300 --> 00:00:11,840
+nào.
+
+4
+00:00:12,620 --> 00:00:18,890
+Bây giờ, nếu muốn, bạn có thể chỉnh sửa top 200 và về cơ bản là thêm một số danh mục ngay tại đây.
+
+5
+00:00:19,370 --> 00:00:25,880
+Nhưng thay vào đó, thực thể, lõi khung cung cấp cho bạn một số chức năng trợ giúp nếu bạn phải
+
+6
+00:00:25,880 --> 00:00:29,420
+tạo một số thực thể trong cơ sở dữ liệu của mình.
+
+7
+00:00:30,630 --> 00:00:34,770
+Để làm được điều đó, chúng ta sẽ phải chuyển đến Bối cảnh DB của ứng dụng.
+
+8
+00:00:34,800 --> 00:00:38,610
+Hãy để tôi mở nó bên trong ứng dụng.
+
+9
+00:00:38,610 --> 00:00:39,750
+ngữ cảnh DB.
+
+10
+00:00:39,750 --> 00:00:46,830
+Sau khi chúng tôi có bộ DB, chúng tôi sẽ ghi đè chức năng mặc định khi tạo mô hình và chức năng đó mong đợi
+
+11
+00:00:46,830 --> 00:00:48,570
+một trình tạo mô hình.
+
+12
+00:00:48,930 --> 00:00:56,010
+Bây giờ, đây là một chức năng mặc định đã có sẵn trong bối cảnh DB và chúng tôi muốn ghi đè lên hành
+
+13
+00:00:56,010 --> 00:00:56,940
+vi mặc định.
+
+14
+00:00:56,940 --> 00:01:01,050
+Vì vậy, chúng tôi phải sử dụng từ khóa ghi đè cho điều đó.
+
+15
+00:01:01,350 --> 00:01:03,480
+Nó mong đợi một người xây dựng mô hình.
+
+16
+00:01:03,480 --> 00:01:11,010
+Và nếu bạn kiểm tra bất kỳ quá trình di chuyển nào, chúng tôi đang sử dụng một thứ được gọi là trình tạo di chuyển ở
+
+17
+00:01:11,640 --> 00:01:20,430
+đó và ở đây chúng tôi sẽ nhận được một tham số của trình tạo mô hình kiểu Sử dụng trình tạo mô hình này, chúng tôi có thể xem dữ liệu.
+
+18
+00:01:20,910 --> 00:01:27,710
+Bây giờ một lần nữa, đừng nghĩ về lý do chính xác tại sao chúng ta có trình tạo mô hình hoặc tại sao lại tạo mô hình.
+
+19
+00:01:27,720 --> 00:01:35,410
+Đó là điều mặc định mà khung thực thể đã triển khai và chúng tôi chỉ sử dụng điều đó để tạo dữ liệu.
+
+20
+00:01:36,130 --> 00:01:40,340
+Và để xem dữ liệu, chúng tôi sẽ sử dụng trình tạo mô hình.
+
+21
+00:01:40,360 --> 00:01:46,030
+Ở đó chúng tôi có thực thể và thực thể nào chúng tôi muốn tạo hoặc làm việc trên đó.
+
+22
+00:01:46,800 --> 00:01:49,320
+Đó là thể loại ngay tại đây.
+
+23
+00:01:50,180 --> 00:01:56,600
+Vì vậy, chúng tôi sẽ nói danh mục và sau đó những gì chúng tôi muốn làm, chúng tôi muốn thêm một số dữ liệu.
+
+24
+00:01:56,870 --> 00:02:04,910
+Vì vậy, chúng ta có một phương thức có dữ liệu và bên trong mà bạn có thể thấy trong các thông số ở đây, nó mong đợi
+
+25
+00:02:04,940 --> 00:02:06,470
+một mảng danh mục.
+
+26
+00:02:07,290 --> 00:02:13,380
+Và nếu bạn kiểm tra các nhận xét ở đây, nó cho biết thêm dữ liệu xem vào loại thực thể này.
+
+27
+00:02:13,830 --> 00:02:18,770
+Chúng tôi muốn tạo một đối tượng mới ở đây để có dữ liệu.
+
+28
+00:02:18,780 --> 00:02:20,790
+Chúng tôi sẽ nói danh mục mới.
+
+29
+00:02:22,060 --> 00:02:24,520
+Và ở đó chúng ta sẽ phải điền ID.
+
+30
+00:02:24,970 --> 00:02:27,790
+Chúng tôi sẽ cung cấp cho 1, tên.
+
+31
+00:02:27,790 --> 00:02:29,920
+Hãy để tôi gọi hành động đó.
+
+32
+00:02:30,730 --> 00:02:33,460
+Và thứ tự hiển thị là 1.
+
+33
+00:02:35,070 --> 00:02:38,730
+Sử dụng nó sẽ tạo ra thực thể cụ thể này.
+
+34
+00:02:38,940 --> 00:02:45,480
+Nhưng nếu bạn muốn tạo nhiều danh mục hơn, bạn có thể thêm dấu phẩy và dán nhiều lần vào đây.
+
+35
+00:02:46,680 --> 00:02:48,810
+Giả sử bạn muốn hành động.
+
+36
+00:02:48,960 --> 00:02:50,940
+Sau đó, bạn có khoa học viễn tưởng.
+
+37
+00:02:51,690 --> 00:02:53,460
+Và bạn có lịch sử.
+
+38
+00:02:54,250 --> 00:02:59,650
+Chúng tôi cũng sẽ thay đổi thứ tự hiển thị và chúng tôi sẽ giữ chúng giống như ID.
+
+39
+00:03:01,460 --> 00:03:02,450
+Hoàn hảo.
+
+40
+00:03:02,480 --> 00:03:09,680
+Bây giờ chúng tôi đang nói với lõi khung thực thể rằng này, về danh mục, chúng tôi muốn tạo ba bản ghi này.
+
+41
+00:03:10,100 --> 00:03:14,270
+Và một lần nữa, để làm được điều đó, chúng ta sẽ phải thêm phần di chuyển.
+
+42
+00:03:14,510 --> 00:03:20,190
+Bất cứ khi nào cần cập nhật bất cứ thứ gì với cơ sở dữ liệu, chúng tôi phải thêm một lần di chuyển.
+
+43
+00:03:20,210 --> 00:03:23,180
+Luôn luôn, luôn luôn, luôn luôn nhớ điều đó.
+
+44
+00:03:24,110 --> 00:03:30,710
+Vì vậy, chúng tôi sẽ nói thêm di chuyển và tôi sẽ gọi bảng danh mục hạt giống này.
+
+45
+00:03:33,170 --> 00:03:33,950
+Hoàn hảo.
+
+46
+00:03:33,950 --> 00:03:34,730
+Điều đó hoạt động.
+
+47
+00:03:34,730 --> 00:03:41,450
+Nếu bạn kiểm tra quá trình di chuyển, nó sẽ gọi một thứ gọi là dữ liệu chèn và nó đang chèn
+
+48
+00:03:41,450 --> 00:03:42,320
+ba bản ghi.
+
+49
+00:03:42,650 --> 00:03:44,780
+Tất cả chúng trông thật hoàn hảo.
+
+50
+00:03:45,170 --> 00:03:48,560
+Vậy chúng ta phải làm gì để áp dụng những thay đổi này?
+
+51
+00:03:48,920 --> 00:03:54,230
+Chúng tôi chạy cơ sở dữ liệu cập nhật lệnh và điều đó sẽ tạo dữ liệu của chúng tôi.
+
+52
+00:03:56,100 --> 00:03:57,600
+Hoàn hảo với điều đó.
+
+53
+00:03:57,600 --> 00:04:00,570
+Nếu tôi quay lại đây và làm mới.
+
+54
+00:04:00,600 --> 00:04:01,430
+Tuyệt vời.
+
+55
+00:04:01,440 --> 00:04:05,100
+Chúng tôi có ba bản ghi trong bảng danh mục của chúng tôi.
+
+56
+00:04:05,790 --> 00:04:13,590
+Trong video tiếp theo, hãy để tôi chỉ cho bạn cách chúng tôi có thể dễ dàng truy xuất ba bản ghi mà chúng tôi có trong bảng
+
+57
+00:04:13,590 --> 00:04:15,000
+danh mục của mình.
+

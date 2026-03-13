@@ -1,0 +1,148 @@
+1
+00:00:01,839 --> 00:00:09,220
+Bây giờ chúng tôi muốn thêm nhiều bảng hơn vào bảng người dùng, đây là cách triển khai mặc định trong danh tính Dotnet.
+
+2
+00:00:09,760 --> 00:00:14,950
+Vì vậy, nếu tôi quay lại ứng dụng, hãy để tôi đóng mọi thứ ở đây.
+
+3
+00:00:14,950 --> 00:00:23,950
+Và nếu tôi kiểm tra Program. cs nơi nó thêm danh tính mặc định, bạn có thể thấy người dùng mặc định là người dùng
+
+4
+00:00:23,950 --> 00:00:24,760
+danh tính.
+
+5
+00:00:25,090 --> 00:00:31,840
+Nhưng nếu chúng tôi muốn thêm nhiều thuộc tính hơn cho người dùng nhận dạng, chúng tôi luôn có thể mở rộng người dùng đó.
+
+6
+00:00:32,619 --> 00:00:42,100
+Vì vậy, về cơ bản trong các mô hình của chúng ta ở đây, hãy để tôi tạo thêm một tệp nữa và tôi sẽ gọi ứng dụng đó là user.
+
+7
+00:00:42,520 --> 00:00:44,980
+Chúng tôi sẽ biến nó thành một tệp công khai.
+
+8
+00:00:45,460 --> 00:00:53,470
+Và trong tệp đó, chúng tôi cần đảm bảo rằng nó mở rộng danh tính người dùng và chúng tôi sẽ phải thêm câu lệnh
+
+9
+00:00:53,470 --> 00:00:54,380
+sử dụng.
+
+10
+00:00:54,400 --> 00:00:57,040
+Đối với điều đó, chúng tôi sẽ phải cài đặt gói.
+
+11
+00:00:57,040 --> 00:01:01,480
+Phần mở rộng Microsoft Dot dot Cửa hàng chấm nhận dạng.
+
+12
+00:01:02,960 --> 00:01:10,010
+Khi chúng tôi làm điều đó, điều đó có nghĩa là người dùng ứng dụng sẽ có tất cả các cài đặt mặc định của người dùng nhận
+
+13
+00:01:10,010 --> 00:01:11,000
+dạng trên đó.
+
+14
+00:01:11,030 --> 00:01:17,120
+Giả sử chúng ta muốn thêm tên của người dùng và đó sẽ là trường bắt buộc.
+
+15
+00:01:18,020 --> 00:01:18,980
+Cùng với tên.
+
+16
+00:01:18,980 --> 00:01:25,610
+Tại đây, chúng tôi có thể thêm bốn thuộc tính nữa như Địa chỉ đường phố, thành phố, tiểu bang và mã bưu chính.
+
+17
+00:01:25,760 --> 00:01:29,630
+Chúng tôi có thể làm cho chúng không có giá trị, nhưng tên sẽ được yêu cầu.
+
+18
+00:01:30,350 --> 00:01:37,860
+Bây giờ, khi chúng tôi có điều đó, chúng tôi cần thêm điều đó vào quá trình di chuyển và chúng tôi cũng phải thêm trình ánh xạ cho điều đó.
+
+19
+00:01:37,880 --> 00:01:43,640
+Vì vậy, nếu chúng ta đi đến ngữ cảnh DB của ứng dụng, chúng ta sẽ tạo một bộ DB cho điều đó.
+
+20
+00:01:44,770 --> 00:01:48,640
+Vì vậy, để được đặt ở đây trên người dùng ứng dụng.
+
+21
+00:01:50,620 --> 00:01:53,830
+Và tôi sẽ gọi ứng dụng đó là người dùng.
+
+22
+00:01:54,070 --> 00:01:58,030
+Với cấu hình đó, chúng tôi có thể thêm một lần di chuyển mới.
+
+23
+00:01:58,420 --> 00:02:02,860
+Và tôi sẽ gọi đây là người dùng nhận dạng mở rộng.
+
+24
+00:02:06,570 --> 00:02:07,440
+Cuộc di cư.
+
+25
+00:02:07,440 --> 00:02:10,190
+Bạn có thể thấy nó đang thêm Kollam City.
+
+26
+00:02:10,199 --> 00:02:18,300
+Ngoài ra còn có một cột phân biệt đối xử, nhưng chúng tôi có tên mã bưu chính, tiểu bang và địa chỉ đường phố có
+
+27
+00:02:18,300 --> 00:02:18,870
+vẻ tốt.
+
+28
+00:02:18,870 --> 00:02:26,790
+Hãy để tôi cập nhật cơ sở dữ liệu và để tôi quay lại cơ sở dữ liệu và để tôi chọn lại top 1000.
+
+29
+00:02:27,870 --> 00:02:28,500
+Hoàn hảo.
+
+30
+00:02:28,500 --> 00:02:33,920
+Nó đã thêm tất cả các cột đó, nhưng một cột là cột phân biệt này.
+
+31
+00:02:33,930 --> 00:02:35,910
+Chính xác đó là gì?
+
+32
+00:02:36,360 --> 00:02:41,220
+Chà, bây giờ, trong ứng dụng của chúng tôi, nếu bạn nghĩ về điều đó, chúng tôi có hai loại người dùng.
+
+33
+00:02:41,250 --> 00:02:45,630
+Chúng tôi có người dùng nhận dạng và chúng tôi có người dùng ứng dụng.
+
+34
+00:02:45,840 --> 00:02:52,860
+Vì vậy, cột phân biệt đối xử về cơ bản sẽ có một giá trị cho biết người dùng trên bản ghi đó.
+
+35
+00:02:52,890 --> 00:02:57,540
+Đó là người dùng ứng dụng hay đó là người dùng nhận dạng?
+
+36
+00:02:57,780 --> 00:02:59,220
+Đơn giản như thế.
+
+37
+00:02:59,760 --> 00:03:08,610
+Nhưng cùng với đó, chúng ta đã biết cách mở rộng danh tính người dùng mặc định trong dự án của mình và thêm nhiều cột hơn.
+

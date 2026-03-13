@@ -1,0 +1,200 @@
+1
+00:00:02,060 --> 00:00:09,080
+Bây giờ chúng tôi muốn làm việc trên một trong những chức năng chính về cách thêm một mặt hàng vào giỏ hàng.
+
+2
+00:00:09,680 --> 00:00:17,150
+Nếu tôi chạy ứng dụng ở đây và nếu chúng tôi đi đến chi tiết ở đây, chúng tôi đã đếm và dựa vào đó, chúng tôi
+
+3
+00:00:17,150 --> 00:00:19,850
+có thể thêm mặt hàng vào giỏ hàng.
+
+4
+00:00:20,680 --> 00:00:25,120
+Vì vậy, chúng tôi phải kích hoạt nút ở đây và làm việc trên đó.
+
+5
+00:00:26,200 --> 00:00:28,420
+Hãy để tôi dừng ứng dụng.
+
+6
+00:00:28,450 --> 00:00:31,090
+Cái nút đó ở bên trong.
+
+7
+00:00:31,090 --> 00:00:35,290
+Khu vực khách hàng Lượt xem Chi tiết.
+
+8
+00:00:35,380 --> 00:00:38,170
+Bộ điều khiển là bộ điều khiển gia đình.
+
+9
+00:00:39,230 --> 00:00:45,770
+Vì vậy, trong phần chi tiết ở đây, nơi chúng tôi có nút, tôi sẽ xóa nút sắp tới.
+
+10
+00:00:45,770 --> 00:00:47,840
+Và bị vô hiệu hóa ở đâu?
+
+11
+00:00:48,380 --> 00:00:49,970
+Trông tôt đây.
+
+12
+00:00:50,330 --> 00:00:54,500
+Tôi có một biểu mẫu ở đây để nó có thể đăng.
+
+13
+00:00:54,530 --> 00:00:57,620
+Số lượng là gì và sản phẩm là gì?
+
+14
+00:00:58,840 --> 00:01:07,240
+Nhưng để đăng ở nơi chúng tôi có đầu vào đếm, chúng tôi cần thêm ASP cho trình trợ giúp thẻ và điều đó yêu
+
+15
+00:01:07,240 --> 00:01:08,920
+cầu một mô hình.
+
+16
+00:01:09,870 --> 00:01:13,620
+Nếu tôi đi đến đỉnh ở đây, chúng tôi không có mô hình.
+
+17
+00:01:13,950 --> 00:01:16,110
+Chúng tôi có mô hình sản phẩm.
+
+18
+00:01:16,140 --> 00:01:19,890
+Nhưng trong mô hình sản phẩm, chúng tôi không có số lượng.
+
+19
+00:01:20,770 --> 00:01:28,510
+Vì vậy, về cơ bản, điều chúng tôi cần là chúng tôi muốn có một mô hình nơi chúng tôi sẽ có sản phẩm và chúng tôi cũng sẽ có bộ
+
+20
+00:01:28,510 --> 00:01:30,130
+đếm cho đầu vào của mình.
+
+21
+00:01:31,140 --> 00:01:36,510
+Nếu bạn kiểm tra giỏ hàng mà chúng tôi đã tạo trong các mô hình của mình.
+
+22
+00:01:37,320 --> 00:01:41,490
+Nó có một sản phẩm sẽ phải được phổ biến.
+
+23
+00:01:41,490 --> 00:01:44,610
+Và trên hết, nó cũng có số đếm.
+
+24
+00:01:45,260 --> 00:01:51,830
+Vì vậy, chúng tôi phải sửa đổi mô hình trong các chi tiết của chúng tôi từ sản phẩm sang giỏ hàng.
+
+25
+00:01:52,490 --> 00:01:59,630
+Khi chúng tôi làm điều đó, mọi thứ ở đây sẽ bị hỏng vì thay vì mô hình, nó sẽ phải điều hướng đến sản
+
+26
+00:01:59,630 --> 00:02:01,430
+phẩm chấm của mô hình.
+
+27
+00:02:01,880 --> 00:02:04,490
+Vì vậy, hãy để tôi sửa đổi điều đó.
+
+28
+00:02:16,120 --> 00:02:17,610
+Và hoàn hảo.
+
+29
+00:02:17,620 --> 00:02:25,330
+Bây giờ với điều đó cho ASP, chúng ta có thể truy cập trực tiếp vào số đếm và hoàn thiện trông thật tuyệt.
+
+30
+00:02:26,110 --> 00:02:33,910
+Với cấu hình đó, để tôi chạy ứng dụng ngay bây giờ, khi bạn đi vào chi tiết, bạn sẽ thấy một
+
+31
+00:02:33,910 --> 00:02:35,290
+thông báo lỗi.
+
+32
+00:02:35,970 --> 00:02:38,810
+Thông báo lỗi là tự giải thích.
+
+33
+00:02:38,820 --> 00:02:41,820
+Vì vậy, hãy cố gắng tìm ra những gì sai ở đây.
+
+34
+00:02:42,840 --> 00:02:45,480
+Tôi hy vọng bạn có thể tìm ra điều đó.
+
+35
+00:02:45,510 --> 00:02:49,140
+Vấn đề là những gì chúng tôi đang chuyển sang Chế độ xem.
+
+36
+00:02:49,500 --> 00:02:56,460
+Nếu chúng tôi đi đến chi tiết bộ điều khiển gia đình, chúng tôi đang chuyển sản phẩm, nhưng về chi tiết, chúng tôi
+
+37
+00:02:56,460 --> 00:02:59,940
+đang nói rằng này, nó sẽ mong đợi một mô hình giỏ hàng.
+
+38
+00:03:00,760 --> 00:03:04,970
+Để giải quyết vấn đề đó, chúng ta sẽ phải truyền một đối tượng giỏ hàng vào đây.
+
+39
+00:03:04,990 --> 00:03:07,300
+Giỏ hàng bằng mới.
+
+40
+00:03:08,020 --> 00:03:10,720
+Và bên trong đó chúng ta có sản phẩm.
+
+41
+00:03:11,630 --> 00:03:14,900
+Tôi có thể cắt cái này, dán nó vào đây.
+
+42
+00:03:15,410 --> 00:03:23,300
+Ngoài ra, tôi có thể đặt số lượng mặc định là một và tôi cũng có thể điền ID sản phẩm là ID
+
+43
+00:03:23,300 --> 00:03:24,410
+sản phẩm.
+
+44
+00:03:25,750 --> 00:03:27,700
+Khi chúng tôi quay lại chế độ xem.
+
+45
+00:03:27,730 --> 00:03:30,040
+Chúng ta phải vượt qua giỏ hàng ở đây.
+
+46
+00:03:30,460 --> 00:03:32,380
+Và điều đó có vẻ tốt.
+
+47
+00:03:33,240 --> 00:03:41,970
+Với cấu hình đó, nếu tôi quay lại hoàn hảo, các chi tiết sẽ hiển thị và chúng tôi có số đếm trong video tiếp
+
+48
+00:03:41,970 --> 00:03:42,950
+theo.
+
+49
+00:03:42,960 --> 00:03:46,370
+Hãy để tôi làm việc trên phương pháp hành động bài đăng để biết chi tiết.
+
+50
+00:03:46,380 --> 00:03:51,090
+Bằng cách đó, chúng tôi sẽ có thể thêm các mặt hàng vào giỏ hàng.
+

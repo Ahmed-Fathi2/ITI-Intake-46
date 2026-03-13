@@ -1,0 +1,208 @@
+1
+00:00:01,770 --> 00:00:05,400
+Nút mà tôi muốn làm việc là hủy đơn hàng.
+
+2
+00:00:05,730 --> 00:00:09,630
+Vì vậy, hãy để tôi quay trở lại đây thực sự với các đơn đặt hàng.
+
+3
+00:00:09,630 --> 00:00:15,360
+Và nếu chúng tôi có thứ gì đó được phê duyệt ở đây, thì đây là đơn đặt hàng của khách hàng.
+
+4
+00:00:15,360 --> 00:00:19,920
+Vì vậy, nếu chúng tôi hủy đơn đặt hàng, chúng tôi muốn cập nhật trạng thái.
+
+5
+00:00:19,920 --> 00:00:23,400
+Nhưng trên hết, tôi muốn cho bạn thấy một điều nữa.
+
+6
+00:00:23,580 --> 00:00:31,530
+Chúng tôi thực sự muốn hoàn lại tiền cho khách hàng này và chúng tôi có ID mục đích thanh toán dựa vào đó, chúng
+
+7
+00:00:31,530 --> 00:00:35,610
+tôi có thể sử dụng Stripe để dễ dàng hoàn lại tiền.
+
+8
+00:00:36,650 --> 00:00:44,120
+Hãy để tôi chỉ ra rằng chúng tôi sẽ quay lại đây để biết chi tiết nơi chúng tôi có lệnh hủy.
+
+9
+00:00:44,690 --> 00:00:48,920
+Hãy để tôi thêm một hành động ASP hủy đơn đặt hàng.
+
+10
+00:00:50,500 --> 00:00:51,610
+Sao chép cái đó.
+
+11
+00:00:51,610 --> 00:00:54,280
+Và chúng ta sẽ tạo một phương thức hành động.
+
+12
+00:00:54,910 --> 00:00:58,470
+Hãy để tôi sao chép phương thức hành động này cho đơn đặt hàng.
+
+13
+00:00:58,480 --> 00:01:06,100
+Dán nó vào đây với dấu ngoặc đóng và tôi sẽ sao chép tên hành động Hủy đơn hàng.
+
+14
+00:01:07,080 --> 00:01:07,920
+Hoàn hảo.
+
+15
+00:01:09,960 --> 00:01:15,810
+Khi chúng tôi phải hủy đơn hàng trước, chúng tôi sẽ lấy đơn hàng đó từ cơ sở dữ liệu.
+
+16
+00:01:15,990 --> 00:01:20,850
+Và sau đó bên trong tiêu đề đơn hàng, chúng ta có thể kiểm tra trạng thái thanh toán.
+
+17
+00:01:21,210 --> 00:01:29,430
+Nếu trạng thái thanh toán bằng với trạng thái thanh toán chấm SD được phê duyệt, điều đó có nghĩa là thanh toán đã được thực
+
+18
+00:01:29,430 --> 00:01:32,340
+hiện và chúng tôi phải hoàn lại tiền cho họ.
+
+19
+00:01:33,200 --> 00:01:42,140
+Bây giờ, để hoàn lại tiền cho họ, chúng tôi sẽ tạo một tùy chọn thay đổi về khoản hoàn trả mới, tạo tùy chọn.
+
+20
+00:01:42,140 --> 00:01:45,860
+Và bạn có thể thấy đó là bên trong lớp Stripe.
+
+21
+00:01:46,850 --> 00:01:48,170
+Trông tôt đây.
+
+22
+00:01:48,650 --> 00:01:57,950
+Bên trong đó, bạn có thể đưa ra một số lý do như lý do hoàn tiền, dấu chấm do khách hàng yêu cầu và bạn phải cung cấp
+
+23
+00:01:57,950 --> 00:02:05,090
+id mục đích thanh toán nằm trong ID mục đích thanh toán dấu chấm tiêu đề đơn hàng.
+
+24
+00:02:06,230 --> 00:02:11,240
+Khi bạn có tùy chọn, một lần nữa chúng ta phải tạo một dịch vụ.
+
+25
+00:02:11,240 --> 00:02:20,090
+Nhưng lần này sẽ là một dịch vụ hoàn tiền bên trong Stripe, và sau đó chúng tôi sẽ nhận được một đối tượng hoàn tiền.
+
+26
+00:02:20,750 --> 00:02:25,610
+Bằng cách gọi dịch vụ dot tạo với các tùy chọn.
+
+27
+00:02:26,850 --> 00:02:28,020
+Đơn giản như thế.
+
+28
+00:02:28,620 --> 00:02:35,340
+Cùng với đó, khoản tiền hoàn lại đã được xử lý và nếu muốn, bạn cũng có thể ghi lại trạng thái khoản tiền hoàn lại hoặc ID
+
+29
+00:02:35,340 --> 00:02:39,750
+khoản tiền hoàn lại trong cơ sở dữ liệu của mình bằng cách tạo một trường mới.
+
+30
+00:02:40,550 --> 00:02:48,470
+Những gì tôi sẽ làm là ngay tại đây, tôi sẽ cập nhật trạng thái cập nhật dấu chấm tiêu đề của đơn vị công việc.
+
+31
+00:02:49,080 --> 00:02:50,670
+Thay đổi điều đó để được đặt hàng.
+
+32
+00:02:50,670 --> 00:03:00,450
+tiêu đề. id ID nằm bên trong tiêu đề đơn hàng. id và trạng thái sẽ bị hủy trạng thái.
+
+33
+00:03:00,600 --> 00:03:05,850
+Trạng thái thanh toán sẽ là trạng thái dấu chấm được hoàn trả.
+
+34
+00:03:07,350 --> 00:03:12,150
+Trong phần khác ở đây, chúng tôi sẽ không hoàn lại tiền cho họ.
+
+35
+00:03:12,150 --> 00:03:15,540
+Vì vậy, chúng tôi sẽ trực tiếp nói trạng thái bị hủy.
+
+36
+00:03:16,620 --> 00:03:18,750
+Cuối cùng, chúng ta phải lưu các thay đổi.
+
+37
+00:03:18,750 --> 00:03:25,650
+Vì vậy, hãy để tôi sao chép nó từ đầu vào đây, dán nó vào đây và tôi sẽ nói rằng đơn hàng đã bị hủy.
+
+38
+00:03:25,650 --> 00:03:28,740
+Chuyển hướng thành công trở lại.
+
+39
+00:03:29,980 --> 00:03:30,730
+Hoàn hảo.
+
+40
+00:03:30,730 --> 00:03:32,110
+Trông tôt đây.
+
+41
+00:03:32,290 --> 00:03:36,280
+Hãy để tôi lưu cái này và khởi động lại ứng dụng.
+
+42
+00:03:36,940 --> 00:03:39,640
+Chúng tôi đã đăng nhập với tư cách quản trị viên tại đây.
+
+43
+00:03:39,670 --> 00:03:44,110
+Để tôi đi quản lý đơn hàng và khách hàng.
+
+44
+00:03:44,290 --> 00:03:48,070
+Để mình vào đó bấm hủy đơn hàng.
+
+45
+00:03:49,610 --> 00:03:50,330
+Hoàn hảo.
+
+46
+00:03:50,330 --> 00:03:51,710
+Đơn hàng bị hủy.
+
+47
+00:03:51,950 --> 00:03:57,830
+Sau đó, hãy để tôi đến Stripe và xem liệu yêu cầu hoàn tiền có thực sự được thông qua hay không.
+
+48
+00:03:58,280 --> 00:04:00,830
+Chúng tôi sẽ đi đến thanh toán ở đây và.
+
+49
+00:04:00,830 --> 00:04:01,700
+Hoàn hảo.
+
+50
+00:04:01,730 --> 00:04:10,400
+Bạn có thể thấy khoản tiền hoàn lại đã được bắt đầu và mục đích thanh toán nếu bạn để ý, kết thúc bằng chữ T và đó là những gì
+
+51
+00:04:10,400 --> 00:04:12,410
+chúng tôi có ngay tại đây.
+
+52
+00:04:13,450 --> 00:04:22,270
+Vì vậy, việc hủy đơn đặt hàng đang hoạt động như mong đợi và chúng tôi sẽ hoàn lại tiền cho họ nếu thanh toán được thực hiện.
+

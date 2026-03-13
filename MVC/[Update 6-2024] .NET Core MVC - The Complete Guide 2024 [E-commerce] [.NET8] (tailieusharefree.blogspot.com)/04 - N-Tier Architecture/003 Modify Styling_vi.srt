@@ -1,0 +1,400 @@
+1
+00:00:00,260 --> 00:00:07,310
+Trước khi chúng tôi làm việc với bất kỳ thứ gì khác, tôi muốn sửa đổi các thiết kế cơ bản mà chúng tôi có trên chủ đề bootstrap
+
+2
+00:00:07,310 --> 00:00:09,500
+đang được sử dụng trong khóa học.
+
+3
+00:00:10,810 --> 00:00:14,000
+Chúng tôi đang sử dụng Boots Watch cho dự án của mình.
+
+4
+00:00:14,020 --> 00:00:20,470
+Và nếu chúng ta xem xét các chủ đề có nhiều chủ đề có sẵn, điều tôi muốn làm
+
+5
+00:00:20,470 --> 00:00:26,830
+là chuyển từ chủ đề Lux sang đá sa thạch ở đây và việc đó cực kỳ đơn giản.
+
+6
+00:00:27,340 --> 00:00:32,259
+Chúng tôi có thể tải xuống tệp bootstrap tại đây và để tôi mở tệp đó.
+
+7
+00:00:32,290 --> 00:00:34,630
+Chúng tôi sẽ sao chép mọi thứ ở đây.
+
+8
+00:00:34,930 --> 00:00:41,740
+Hãy quay lại dự án của chúng ta ở đây và w. w. với CSS gốc.
+
+9
+00:00:41,770 --> 00:00:45,580
+Chà, chúng tôi đã cập nhật điều đó trực tiếp trong CSS.
+
+10
+00:00:45,610 --> 00:00:48,530
+Ở đây chúng tôi có chủ đề Lux.
+
+11
+00:00:48,610 --> 00:00:55,660
+Hãy để tôi loại bỏ nó và dán chủ đề mới ngay tại đây, đó là đá sa thạch.
+
+12
+00:00:56,690 --> 00:00:57,230
+Với.
+
+13
+00:00:57,230 --> 00:01:01,610
+Nếu tôi chạy ứng dụng, bạn sẽ thấy chủ đề mới đang hoạt động.
+
+14
+00:01:01,970 --> 00:01:07,490
+Nhưng trên hết, tôi muốn thay đổi màu nút mà chúng tôi có theo mặc định.
+
+15
+00:01:08,870 --> 00:01:16,820
+Bây giờ, thay vì nhập tất cả HTML và CSS đó, điều tôi đã làm là cung cấp tất cả các đoạn trích và bạn có thể tải chúng
+
+16
+00:01:16,820 --> 00:01:21,320
+xuống từ Dotnet mastery. com ở đó.
+
+17
+00:01:21,320 --> 00:01:25,160
+Nếu bạn đi đến chi tiết khóa học, bạn có thể nhận được tất cả các đoạn trích.
+
+18
+00:01:25,550 --> 00:01:33,350
+Vì vậy, hãy đảm bảo tải xuống tất cả chúng và trong các tệp đính kèm mà chúng tôi đang ở phần bốn, chúng tôi có trang
+
+19
+00:01:33,350 --> 00:01:35,150
+web dot CSS bên trong đó.
+
+20
+00:01:35,750 --> 00:01:43,220
+Nếu bạn mở ra thì có khá nhiều CSS ngay tại đây, nhưng chủ yếu những gì tôi đang làm là thay
+
+21
+00:01:43,250 --> 00:01:53,240
+đổi phác thảo BTN, BG thành công và các lớp bootstrap chính mà chúng tôi đang sử dụng như BTN chính và BTN thành công.
+
+22
+00:01:53,930 --> 00:01:56,360
+Vì vậy, sao chép tất cả những điều đó ở đây.
+
+23
+00:01:56,510 --> 00:01:58,900
+Chúng tôi sẽ đi đến giải pháp của chúng tôi.
+
+24
+00:01:58,910 --> 00:02:08,389
+Chúng tôi có một trang web dot CSS bên trong thư mục CSS của chúng tôi, xóa mọi thứ ở đó và dán tất cả các lớp.
+
+25
+00:02:08,810 --> 00:02:11,870
+Bây giờ tôi không giới thiệu các lớp tùy chỉnh.
+
+26
+00:02:11,870 --> 00:02:19,160
+Về cơ bản, tôi đang ghi đè các lớp có sẵn trong bootstrap, vì vậy theo cách đó, chúng tôi sẽ không sử
+
+27
+00:02:19,160 --> 00:02:26,750
+dụng các lớp mới, chúng tôi sẽ sử dụng các lớp cũ và nó giống như chủ đề đồng hồ khởi động và hoàn hảo.
+
+28
+00:02:26,780 --> 00:02:34,160
+Cùng với đó, bạn có thể thấy thiết kế mới đang có hiệu lực và chúng tôi có một bảng màu đẹp ngay tại đây.
+
+29
+00:02:34,670 --> 00:02:42,260
+Tôi thích bảng màu này hơn những gì chúng tôi có trước đây và tôi cũng muốn thay đổi một số thiết kế
+
+30
+00:02:42,260 --> 00:02:45,500
+với danh mục Tạo và tất cả các trang khác.
+
+31
+00:02:46,170 --> 00:02:48,240
+Hãy để tôi làm điều đó thực sự nhanh chóng.
+
+32
+00:02:48,600 --> 00:02:51,510
+Vì vậy, chúng tôi sẽ đi để tạo danh mục.
+
+33
+00:02:51,630 --> 00:02:57,120
+Chúng tôi sẽ chuyển đến danh mục Chế độ xem ngay tại đây.
+
+34
+00:02:57,120 --> 00:02:58,640
+Hãy để tôi bắt đầu mới.
+
+35
+00:02:58,650 --> 00:03:03,240
+Chúng tôi sẽ thêm một div, cung cấp cho nó một lớp thẻ và bóng tối.
+
+36
+00:03:03,330 --> 00:03:09,120
+Cùng với đó, chúng tôi sẽ nói số không đường viền và đường viền trên cùng của bốn.
+
+37
+00:03:10,340 --> 00:03:16,220
+Bên trong thẻ chính ở đây, chúng tôi sẽ thêm một div khác dành cho tiêu đề thẻ.
+
+38
+00:03:16,220 --> 00:03:18,800
+Và hãy để tôi thêm div đóng.
+
+39
+00:03:19,780 --> 00:03:20,620
+Hoàn hảo.
+
+40
+00:03:20,620 --> 00:03:21,910
+Trông tôt đây.
+
+41
+00:03:21,940 --> 00:03:26,860
+Sau đó, chúng tôi sẽ thêm tiêu đề ở đây bên trong lớp hàng.
+
+42
+00:03:27,130 --> 00:03:30,940
+Chúng tôi sẽ đặt cột lớp div 12.
+
+43
+00:03:31,810 --> 00:03:37,120
+Trung tâm văn bản và trong H2, chúng tôi đã tạo danh mục.
+
+44
+00:03:37,150 --> 00:03:45,250
+Để tôi cắt nó, dán nó vào đây và tạo cho nó lớp văn bản màu trắng và phần đệm y là hai.
+
+45
+00:03:46,060 --> 00:03:52,390
+Sau đó, khi tiêu đề thẻ kết thúc ở đây, chúng tôi sẽ thêm một div khác cho phần thân thẻ.
+
+46
+00:03:53,160 --> 00:03:58,560
+Vì vậy, thân thẻ lớp bootstrap ở đây và phần đệm cho.
+
+47
+00:03:59,800 --> 00:04:00,610
+Hoàn hảo.
+
+48
+00:04:01,680 --> 00:04:08,070
+Hãy để tôi cắt biểu mẫu và dán nó ngay tại đây bên trong biểu mẫu.
+
+49
+00:04:08,070 --> 00:04:13,830
+Hãy để tôi cung cấp cho nó một lớp hàng bootstrap và xem giao diện người dùng trông như thế nào.
+
+50
+00:04:13,830 --> 00:04:21,839
+Ngay bây giờ tôi không thấy vỉa hè xuất hiện trong hình ảnh, vì vậy hãy để tôi xem bố cục gạch dưới.
+
+51
+00:04:22,079 --> 00:04:27,510
+Chúng tôi có vỉa hè sau bootstrap, vì vậy điều đó sẽ hiệu quả.
+
+52
+00:04:27,780 --> 00:04:33,510
+Nhưng hãy để tôi di chuyển nó đến cuối cùng ở đây và để tôi khởi động lại dự án.
+
+53
+00:04:36,030 --> 00:04:40,260
+Hãy chuyển đến danh mục và tạo danh mục mới.
+
+54
+00:04:40,380 --> 00:04:41,310
+Hoàn hảo.
+
+55
+00:04:41,310 --> 00:04:43,020
+Điều này có vẻ tốt hơn nhiều.
+
+56
+00:04:43,080 --> 00:04:44,910
+Chính xác những gì tôi muốn.
+
+57
+00:04:45,300 --> 00:04:47,160
+Hãy để tôi quay trở lại một lần nữa.
+
+58
+00:04:47,160 --> 00:04:50,070
+Và tôi không muốn không khí ở đây.
+
+59
+00:04:50,550 --> 00:04:53,020
+Loại bỏ hàng đầu tiên là tốt.
+
+60
+00:04:53,040 --> 00:04:56,880
+Và tôi cũng không cần top bốn.
+
+61
+00:04:57,910 --> 00:05:05,190
+Khi chúng ta có lề lớp, ba người dưới cùng và Rho, chúng ta đã ở bên trong Rho về hình thức.
+
+62
+00:05:05,200 --> 00:05:11,800
+Vì vậy, những gì tôi có thể làm là thêm một lớp có dạng đệm nổi Y2 và cột 12.
+
+63
+00:05:12,800 --> 00:05:14,810
+Chúng ta có yếu tố đầu vào ở đâu?
+
+64
+00:05:14,810 --> 00:05:22,190
+Tôi sẽ sửa đổi lớp từ phần đệm 0 thành điều khiển biểu mẫu, đường viền 0 và bóng và nơi chúng
+
+65
+00:05:22,190 --> 00:05:25,670
+tôi có phần tử đầu vào, tôi sẽ nói Msx2.
+
+66
+00:05:26,650 --> 00:05:27,950
+Trông tôt đây.
+
+67
+00:05:27,970 --> 00:05:32,950
+Hãy để tôi sao chép các lớp và áp dụng chúng cho thứ tự hiển thị.
+
+68
+00:05:33,310 --> 00:05:36,640
+Một lần nữa, tất cả chúng đều là các lớp bootstrap.
+
+69
+00:05:36,760 --> 00:05:38,260
+Không có gì lạ mắt.
+
+70
+00:05:39,700 --> 00:05:41,740
+Đúng hơn là BTN thứ cấp.
+
+71
+00:05:41,770 --> 00:05:43,510
+Để tôi làm BTN.
+
+72
+00:05:43,540 --> 00:05:45,250
+phác thảo chính.
+
+73
+00:05:47,680 --> 00:05:51,940
+Hãy để tôi lưu nó và hãy xem sự khác biệt ngay bây giờ.
+
+74
+00:05:53,300 --> 00:05:56,960
+Tải lại nóng vì lý do nào đó không hoạt động.
+
+75
+00:05:57,170 --> 00:06:00,580
+Bạn có thể thấy nó không được kiểm tra lại vì một số lý do.
+
+76
+00:06:00,590 --> 00:06:02,390
+Vì vậy, hãy để tôi khởi động lại.
+
+77
+00:06:04,850 --> 00:06:05,450
+Hoàn hảo.
+
+78
+00:06:05,450 --> 00:06:08,330
+Nó được kiểm tra ngay bây giờ.
+
+79
+00:06:08,690 --> 00:06:14,120
+Và để tôi đi tạo danh mục và tạo danh mục.
+
+80
+00:06:14,120 --> 00:06:18,020
+Tên có vẻ tốt ở đây, nhưng có gì đó không ổn.
+
+81
+00:06:18,020 --> 00:06:19,250
+Hãy để tôi quay trở lại.
+
+82
+00:06:19,970 --> 00:06:28,280
+Khi chúng ta sử dụng biểu mẫu thả nổi ở đây, đầu vào sẽ xuất hiện trước và sẽ có tất cả các lớp này.
+
+83
+00:06:28,520 --> 00:06:30,950
+Vì vậy, hãy để tôi chuyển nó xung quanh.
+
+84
+00:06:33,320 --> 00:06:37,760
+Tôi đã thêm chúng vào nhãn do nhầm lẫn và hoàn thiện.
+
+85
+00:06:37,790 --> 00:06:40,520
+Chúng ta có thể sao chép và dán nó ở đây.
+
+86
+00:06:40,550 --> 00:06:44,870
+Sửa đổi ASP để được hiển thị thứ tự.
+
+87
+00:06:47,380 --> 00:06:49,370
+Chúng ta sẽ phải xây dựng lại.
+
+88
+00:06:49,390 --> 00:06:51,100
+Hãy để tôi làm điều đó.
+
+89
+00:06:53,560 --> 00:06:54,820
+Loại.
+
+90
+00:06:56,100 --> 00:07:00,690
+Tạo và hoàn thiện tên danh mục có vẻ tốt.
+
+91
+00:07:00,720 --> 00:07:01,550
+Hãy để tôi xem.
+
+92
+00:07:01,560 --> 00:07:04,530
+Đã xảy ra lỗi với thứ tự hiển thị.
+
+93
+00:07:04,680 --> 00:07:07,560
+Chúng tôi không có hình thức nổi.
+
+94
+00:07:08,610 --> 00:07:10,020
+Thêm cái đó vào đây.
+
+95
+00:07:10,910 --> 00:07:12,980
+Và nó sẽ làm mới.
+
+96
+00:07:14,640 --> 00:07:15,870
+Và hoàn hảo.
+
+97
+00:07:15,900 --> 00:07:17,310
+Trông tôt đây.
+
+98
+00:07:17,940 --> 00:07:21,960
+Vì vậy, với hàng ở đây, hãy để tôi thêm phần đệm vào.
+
+99
+00:07:22,630 --> 00:07:26,680
+Và điều đó có vẻ tốt hơn nhiều cho danh mục tạo.
+
+100
+00:07:27,530 --> 00:07:32,780
+Hãy để tôi áp dụng tất cả những thay đổi này cho các trang khác trong video tiếp theo.
+

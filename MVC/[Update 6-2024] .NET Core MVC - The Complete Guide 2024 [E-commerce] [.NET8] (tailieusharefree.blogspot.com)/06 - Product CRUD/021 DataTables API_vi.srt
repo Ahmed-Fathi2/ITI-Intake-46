@@ -1,0 +1,240 @@
+1
+00:00:02,240 --> 00:00:05,689
+Chúng tôi đang sử dụng cách bố trí bảng với danh sách sản phẩm ở đây.
+
+2
+00:00:05,689 --> 00:00:09,200
+Nhưng nếu chúng ta muốn một cái gì đó lạ mắt với sản phẩm thì sao?
+
+3
+00:00:09,230 --> 00:00:12,530
+Giống như nếu chúng ta muốn chức năng tìm kiếm trong bảng thì sao?
+
+4
+00:00:12,530 --> 00:00:17,480
+Chúng tôi muốn phân trang, chúng tôi muốn sắp xếp và tất cả các tính năng cơ bản đó.
+
+5
+00:00:18,050 --> 00:00:23,720
+Thay vì triển khai tất cả những điều đó, chúng tôi có các plugin của bên thứ ba mà chúng tôi có thể sử dụng.
+
+6
+00:00:23,750 --> 00:00:31,130
+Giống như chúng ta có bảng dữ liệu. net nơi bạn có thể thấy nó đi kèm với tất cả các chức năng cơ bản đó.
+
+7
+00:00:31,130 --> 00:00:33,950
+Và bắt đầu là siêu đơn giản.
+
+8
+00:00:34,890 --> 00:00:40,290
+Điều đầu tiên chúng ta phải làm là bao gồm tệp CSS và JavaScript.
+
+9
+00:00:40,500 --> 00:00:42,210
+Vì vậy, chúng ta hãy làm điều đó.
+
+10
+00:00:42,540 --> 00:00:45,700
+Ta quay lại, dừng ứng dụng tại đây.
+
+11
+00:00:45,720 --> 00:00:53,220
+Mở bố cục được gạch dưới trong chế độ xem và chúng tôi sẽ thêm tệp CSS trước.
+
+12
+00:00:53,250 --> 00:00:58,740
+Liên kết hoặc l bằng biểu định kiểu h href.
+
+13
+00:00:58,890 --> 00:01:01,680
+Hãy để tôi dán những gì chúng tôi sao chép ở đây.
+
+14
+00:01:02,660 --> 00:01:04,340
+Và điều đó có vẻ tốt.
+
+15
+00:01:04,370 --> 00:01:05,600
+Cuộn xuống.
+
+16
+00:01:05,630 --> 00:01:07,610
+Chúng tôi cần một thẻ script.
+
+17
+00:01:07,730 --> 00:01:10,880
+Sao chép và dán nó một lần nữa ở đây.
+
+18
+00:01:11,420 --> 00:01:13,640
+Và chúng ta cần SRC.
+
+19
+00:01:14,210 --> 00:01:16,040
+Hãy để tôi quay trở lại đây.
+
+20
+00:01:16,130 --> 00:01:17,930
+Sao chép CDN.
+
+21
+00:01:18,380 --> 00:01:20,630
+Dán nó ngay tại đây.
+
+22
+00:01:22,350 --> 00:01:23,120
+Hoàn hảo.
+
+23
+00:01:23,130 --> 00:01:25,140
+Cả hai bước đó đều được thực hiện.
+
+24
+00:01:25,140 --> 00:01:28,710
+Và bước cuối cùng ở đây là khởi tạo bảng dữ liệu.
+
+25
+00:01:28,830 --> 00:01:36,510
+Để thấy điều đó, hãy để tôi nhấp vào Bắt đầu tại đây và chúng tôi sẽ sử dụng lệnh gọi Ajax để tải tất cả
+
+26
+00:01:36,510 --> 00:01:37,200
+dữ liệu.
+
+27
+00:01:37,380 --> 00:01:45,150
+Bên trong đây, bạn có thể thấy chúng tôi có một JavaScript cơ bản nơi nó đang tìm kiếm một điểm cuối API để tải dữ
+
+28
+00:01:45,150 --> 00:01:45,870
+liệu đó.
+
+29
+00:01:46,500 --> 00:01:50,760
+Bây giờ bạn có thể nghĩ rằng tôi sẽ phải thêm một API cho việc này?
+
+30
+00:01:50,790 --> 00:01:51,990
+Dĩ nhiên là không.
+
+31
+00:01:52,140 --> 00:01:59,100
+Khi bạn đang làm việc với dotnet và nếu bạn tạo một dự án MVC, hỗ trợ API đã được thêm vào bộ
+
+32
+00:01:59,100 --> 00:02:00,180
+điều khiển.
+
+33
+00:02:00,870 --> 00:02:06,540
+Vì vậy, bất cứ điều gì chúng tôi đang làm trong chỉ mục, chúng tôi sẽ phải làm điều đó trong lệnh gọi API.
+
+34
+00:02:07,260 --> 00:02:13,440
+Vì vậy, chúng tôi chỉ có thể sao chép dòng này ở đây và để tôi cuộn xuống ở cuối.
+
+35
+00:02:13,590 --> 00:02:17,730
+Ngay tại đây tôi sẽ thêm một phần hay đúng hơn là một khu vực.
+
+36
+00:02:18,300 --> 00:02:20,730
+Gọi lệnh gọi API đó.
+
+37
+00:02:21,980 --> 00:02:23,270
+Và và khu vực.
+
+38
+00:02:24,230 --> 00:02:25,340
+Trong đây.
+
+39
+00:02:25,340 --> 00:02:28,520
+Hãy để tôi tạo một yêu cầu nhận HTTP.
+
+40
+00:02:29,230 --> 00:02:34,170
+Trong đó, ta sẽ nói mắt công nhận được tất cả.
+
+41
+00:02:34,180 --> 00:02:39,850
+Và điều đó đã được hỗ trợ bởi vì chúng tôi đang sử dụng kiến trúc MVC.
+
+42
+00:02:40,490 --> 00:02:41,060
+Ở đó.
+
+43
+00:02:41,060 --> 00:02:45,980
+Hãy để tôi dán mã mà chúng ta đã sao chép vào đây và danh sách sản phẩm tại đây.
+
+44
+00:02:45,980 --> 00:02:54,140
+Về cơ bản, chúng tôi phải quay lại để chúng tôi có thể nói trả lại JSON ở đây và chúng tôi sẽ trả về một đối tượng mới.
+
+45
+00:02:54,140 --> 00:03:00,050
+Vì vậy, chúng tôi sẽ nói dữ liệu mới bằng với danh sách sản phẩm OBJ.
+
+46
+00:03:02,280 --> 00:03:03,540
+Đơn giản như thế.
+
+47
+00:03:03,720 --> 00:03:05,610
+Bây giờ, làm thế nào để bạn kiểm tra điều đó?
+
+48
+00:03:05,910 --> 00:03:08,130
+Hãy để tôi chạy ứng dụng ở đây.
+
+49
+00:03:08,130 --> 00:03:11,310
+Và chúng tôi không cần ID trong tham số.
+
+50
+00:03:11,340 --> 00:03:13,830
+Hãy để tôi loại bỏ điều đó với nhận được tất cả.
+
+51
+00:03:13,830 --> 00:03:15,720
+Chạy cái đó thêm một lần nữa.
+
+52
+00:03:18,470 --> 00:03:22,280
+Bây giờ chúng ta cần điều hướng đến bộ điều khiển và điểm cuối.
+
+53
+00:03:22,310 --> 00:03:27,920
+Nó nằm trong sản phẩm quản trị viên và tên là get all.
+
+54
+00:03:28,130 --> 00:03:34,550
+Nếu tôi gõ nó, bạn có thể thấy nó truy xuất dữ liệu ở đây và chúng tôi có tất cả sản phẩm.
+
+55
+00:03:34,880 --> 00:03:42,230
+Vì vậy, API của chúng tôi sẽ hoạt động trong vòng chưa đầy một phút vì chúng tôi đang sử dụng dự án MVC
+
+56
+00:03:42,230 --> 00:03:44,060
+và nó có hỗ trợ cho API.
+
+57
+00:03:44,870 --> 00:03:45,730
+Rất hoàn hảo.
+
+58
+00:03:45,740 --> 00:03:48,220
+Điểm cuối API của chúng tôi đang hoạt động.
+
+59
+00:03:48,230 --> 00:03:54,020
+Bây giờ chúng ta cần gọi API đó trong một yêu cầu AJAX và tải bảng dữ liệu của mình.
+
+60
+00:03:54,050 --> 00:03:56,990
+Hãy để tôi làm điều đó trong video tiếp theo.
+

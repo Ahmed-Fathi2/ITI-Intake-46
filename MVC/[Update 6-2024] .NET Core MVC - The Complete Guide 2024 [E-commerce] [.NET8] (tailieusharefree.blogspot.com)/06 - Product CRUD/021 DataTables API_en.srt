@@ -1,0 +1,280 @@
+1
+00:00:02,220 --> 00:00:04,140
+Instructor: We are using a table layout
+
+2
+00:00:04,140 --> 00:00:05,939
+with the product list here.
+
+3
+00:00:05,939 --> 00:00:09,540
+But what if we want something fancy with the product?
+
+4
+00:00:09,540 --> 00:00:11,730
+Like what if we want search functionality
+
+5
+00:00:11,730 --> 00:00:13,800
+in the table, we want pagination,
+
+6
+00:00:13,800 --> 00:00:18,300
+we want sorting, and all of those basic feature.
+
+7
+00:00:18,300 --> 00:00:20,970
+Rather than implementing all of that,
+
+8
+00:00:20,970 --> 00:00:24,000
+we have third party plugins that we can use
+
+9
+00:00:24,000 --> 00:00:28,170
+like we have data tables.net where you can see it comes
+
+10
+00:00:28,170 --> 00:00:31,440
+with all of those basic functionalities
+
+11
+00:00:31,440 --> 00:00:33,963
+and getting started is super simple.
+
+12
+00:00:34,950 --> 00:00:38,640
+First thing that we have to do is include the CSS
+
+13
+00:00:38,640 --> 00:00:40,860
+and JavaScript file.
+
+14
+00:00:40,860 --> 00:00:42,840
+So let's do that.
+
+15
+00:00:42,840 --> 00:00:45,990
+We go back, stop the application here,
+
+16
+00:00:45,990 --> 00:00:50,070
+open underscore layout in views
+
+17
+00:00:50,070 --> 00:00:53,550
+and we will be adding the CSS file first.
+
+18
+00:00:53,550 --> 00:00:57,420
+Link REL is equal to style sheet href.
+
+19
+00:00:59,070 --> 00:01:04,069
+Let me paste what we copied here and that looks good.
+
+20
+00:01:04,440 --> 00:01:05,910
+Scroll down.
+
+21
+00:01:05,910 --> 00:01:07,980
+We need a script tag.
+
+22
+00:01:07,980 --> 00:01:11,730
+Copy and paste it one more time here.
+
+23
+00:01:11,730 --> 00:01:16,350
+And we need the SRC, let me go back here.
+
+24
+00:01:16,350 --> 00:01:20,673
+Copy the CDN, paste it right here.
+
+25
+00:01:22,470 --> 00:01:25,440
+Perfect, both of those steps are done.
+
+26
+00:01:25,440 --> 00:01:29,160
+And last step here is initialize the data table.
+
+27
+00:01:29,160 --> 00:01:33,120
+In order to see that, let me click on get started here
+
+28
+00:01:33,120 --> 00:01:35,580
+and we will be using Ajax call
+
+29
+00:01:35,580 --> 00:01:37,650
+to load all the data.
+
+30
+00:01:37,650 --> 00:01:41,460
+Inside here, you can see we have a basic Java script
+
+31
+00:01:41,460 --> 00:01:46,460
+where it is looking for an API endpoint to load that data.
+
+32
+00:01:46,710 --> 00:01:48,570
+Now you might be thinking that will I
+
+33
+00:01:48,570 --> 00:01:51,000
+have to add an API for this?
+
+34
+00:01:51,000 --> 00:01:52,440
+Of course not.
+
+35
+00:01:52,440 --> 00:01:54,960
+When you are working with .net and if you
+
+36
+00:01:54,960 --> 00:01:58,980
+create an MVC project, API support is already added
+
+37
+00:01:58,980 --> 00:02:00,213
+in the controller.
+
+38
+00:02:01,140 --> 00:02:03,720
+So whatever we were doing in index,
+
+39
+00:02:03,720 --> 00:02:06,573
+we will have to do that in the API call.
+
+40
+00:02:07,530 --> 00:02:12,210
+So we can just copy this line here and let me scroll down
+
+41
+00:02:12,210 --> 00:02:14,550
+at the end right here.
+
+42
+00:02:14,550 --> 00:02:18,570
+I will add a section or rather a region,
+
+43
+00:02:18,570 --> 00:02:23,343
+call that API calls, have an end region.
+
+44
+00:02:24,390 --> 00:02:29,370
+Within here, let me create an HTTP get request.
+
+45
+00:02:29,370 --> 00:02:34,370
+In there we will say public i action wizard get all
+
+46
+00:02:34,560 --> 00:02:37,500
+and that is already supported because we
+
+47
+00:02:37,500 --> 00:02:40,590
+are using MVC architecture.
+
+48
+00:02:40,590 --> 00:02:44,250
+There, let me paste the code that we copied here
+
+49
+00:02:44,250 --> 00:02:46,170
+and the product list here.
+
+50
+00:02:46,170 --> 00:02:48,768
+We basically have to return back,
+
+51
+00:02:48,768 --> 00:02:52,020
+so we can say return Json here
+
+52
+00:02:52,020 --> 00:02:54,300
+and we will return a new object.
+
+53
+00:02:54,300 --> 00:02:59,300
+So we will say new data is equal to OBJ product list.
+
+54
+00:03:02,490 --> 00:03:03,990
+Simple as that.
+
+55
+00:03:03,990 --> 00:03:06,210
+Now how do you test that?
+
+56
+00:03:06,210 --> 00:03:08,550
+Let me run the application here
+
+57
+00:03:08,550 --> 00:03:11,550
+and we do not need the IT in the parameter.
+
+58
+00:03:11,550 --> 00:03:14,010
+Let me remove that with get all.
+
+59
+00:03:14,010 --> 00:03:15,753
+Run that one more time.
+
+60
+00:03:18,750 --> 00:03:22,500
+Now we need to navigate to the controller and endpoint.
+
+61
+00:03:22,500 --> 00:03:27,500
+It is inside admin, product, and name is get all.
+
+62
+00:03:28,410 --> 00:03:32,610
+If I type that, you can see it retrieves the data here
+
+63
+00:03:32,610 --> 00:03:35,220
+and we have all the product.
+
+64
+00:03:35,220 --> 00:03:37,770
+So our API is up and running in less
+
+65
+00:03:37,770 --> 00:03:41,460
+than one minute because we are using MVC project
+
+66
+00:03:41,460 --> 00:03:45,060
+and it has the support for API.
+
+67
+00:03:45,060 --> 00:03:48,450
+So perfect, our API endpoint is functional.
+
+68
+00:03:48,450 --> 00:03:50,460
+Now we need to call that API
+
+69
+00:03:50,460 --> 00:03:54,330
+in an Ajax request and load our data table.
+
+70
+00:03:54,330 --> 00:03:57,003
+Let me do that in the next video.
+

@@ -1,0 +1,72 @@
+1
+00:00:01,440 --> 00:00:04,620
+Chúng tôi đã thêm giỏ hàng vào cơ sở dữ liệu của chúng tôi.
+
+2
+00:00:04,650 --> 00:00:09,300
+Chúng ta phải tạo một kho lưu trữ và thêm nó vào đơn vị công việc.
+
+3
+00:00:09,750 --> 00:00:17,700
+Vì vậy, đơn giản như vậy, chúng tôi sẽ sao chép kho lưu trữ danh mục và sửa đổi kho lưu trữ đó cho giỏ hàng của chúng tôi.
+
+4
+00:00:22,660 --> 00:00:31,210
+Chúng ta sẽ thay đổi tên giao diện model sẽ là giỏ hàng và cập nhật sẽ là giỏ hàng.
+
+5
+00:00:31,780 --> 00:00:32,830
+Hoàn hảo.
+
+6
+00:00:33,310 --> 00:00:36,810
+Sau giao diện, chúng ta phải triển khai kho lưu trữ.
+
+7
+00:00:36,820 --> 00:00:46,480
+Vì vậy, hãy để tôi sao chép kho lưu trữ danh mục và chúng tôi sẽ sửa đổi kho lưu trữ đó thành kho lưu trữ giỏ hàng.
+
+8
+00:00:48,530 --> 00:00:50,810
+Chúng tôi sẽ sửa đổi tất cả các tên ở đây.
+
+9
+00:00:50,810 --> 00:00:54,950
+Hãy để tôi làm điều đó thật nhanh để bạn không phải chờ đợi và xem.
+
+10
+00:01:00,060 --> 00:01:00,810
+Và hoàn hảo.
+
+11
+00:01:00,810 --> 00:01:02,010
+Trông tôt đây.
+
+12
+00:01:02,040 --> 00:01:04,650
+Cuối cùng, chúng ta cần đơn vị công việc.
+
+13
+00:01:07,360 --> 00:01:08,860
+Trông tôt đây.
+
+14
+00:01:08,870 --> 00:01:10,920
+Bên trong đơn vị công việc.
+
+15
+00:01:10,930 --> 00:01:12,910
+Hãy để tôi tạo ra điều đó.
+
+16
+00:01:20,160 --> 00:01:21,000
+Hoàn hảo.
+
+17
+00:01:21,480 --> 00:01:26,670
+Cùng với đó, chúng tôi đã định cấu hình đơn vị công việc để sử dụng kho lưu trữ của mình.
+
+18
+00:01:26,880 --> 00:01:30,240
+Và hãy để tôi tiếp tục từ video tiếp theo.
+

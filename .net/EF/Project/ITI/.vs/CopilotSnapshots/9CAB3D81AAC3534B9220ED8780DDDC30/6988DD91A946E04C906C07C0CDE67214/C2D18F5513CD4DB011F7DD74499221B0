@@ -1,0 +1,141 @@
+﻿using ITI.Application.Dtos;
+using ITI.Application.Interfaces.Services;
+using System.ComponentModel;
+using System.Drawing;
+using System.Windows.Forms;
+
+namespace ITI.WinForms
+{
+    public class InstractorForm : Form
+    {
+        private readonly IInstractorService instractorService;
+        private readonly IDepartmentService departmentService;
+
+        private DataGridView grid;
+        private TextBox fNameTxt;
+        private TextBox lNameTxt;
+        private TextBox phoneTxt;
+        private ComboBox deptCombo;
+        private Button addBtn;
+        private Button updateBtn;
+        private Button deleteBtn;
+
+        public InstractorForm(IInstractorService instractorService, IDepartmentService departmentService)
+        {
+            this.instractorService = instractorService;
+            this.departmentService = departmentService;
+            InitializeComponent();
+            LoadDepartments();
+            LoadInstractors();
+        }
+
+        private void InitializeComponent()
+        {
+            Text = "Instructors";
+            ClientSize = new Size(700, 500);
+
+            grid = new DataGridView { Location = new Point(20, 20), Size = new Size(640, 250), ReadOnly = true, AutoGenerateColumns = true };
+            fNameTxt = new TextBox { Location = new Point(120, 290), Size = new Size(200, 25) };
+            lNameTxt = new TextBox { Location = new Point(120, 330), Size = new Size(200, 25) };
+            phoneTxt = new TextBox { Location = new Point(120, 370), Size = new Size(200, 25) };
+            deptCombo = new ComboBox { Location = new Point(120, 410), Size = new Size(200, 25), DropDownStyle = ComboBoxStyle.DropDownList };
+
+            var fnLbl = new Label { Text = "FirstName", Location = new Point(20, 290), Size = new Size(80, 25) };
+            var lnLbl = new Label { Text = "LastName", Location = new Point(20, 330), Size = new Size(80, 25) };
+            var phLbl = new Label { Text = "Phone", Location = new Point(20, 370), Size = new Size(80, 25) };
+            var diLbl = new Label { Text = "Department", Location = new Point(20, 410), Size = new Size(80, 25) };
+
+            addBtn = new Button { Text = "Add", Location = new Point(360, 290), Size = new Size(100, 30) };
+            updateBtn = new Button { Text = "Update", Location = new Point(360, 330), Size = new Size(100, 30) };
+            deleteBtn = new Button { Text = "Delete", Location = new Point(360, 370), Size = new Size(100, 30) };
+
+            Controls.AddRange(new Control[] { grid, fNameTxt, lNameTxt, phoneTxt, deptCombo, fnLbl, lnLbl, phLbl, diLbl, addBtn, updateBtn, deleteBtn });
+
+            addBtn.Click += AddBtn_Click;
+            updateBtn.Click += UpdateBtn_Click;
+            deleteBtn.Click += DeleteBtn_Click;
+            grid.SelectionChanged += Grid_SelectionChanged;
+        }
+
+        private void LoadInstractors()
+        {
+            var list = instractorService.GetAll().ToList();
+            grid.DataSource = null;
+            grid.DataSource = new BindingList<AllInstractorDto>(list);
+        }
+
+        private void LoadDepartments()
+        {
+            var list = departmentService.GetAll().ToList();
+            var items = new List<object>();
+            items.Add(new { Id = 0, Name = "-- Select Department --" });
+            items.AddRange(list.Select(d => new { Id = d.Id, Name = d.Name }));
+
+            deptCombo.DataSource = null;
+            deptCombo.DisplayMember = "Name";
+            deptCombo.ValueMember = "Id";
+            deptCombo.DataSource = items;
+        }
+
+        private void AddBtn_Click(object? sender, EventArgs e)
+        {
+            if (!(deptCombo.SelectedValue is int deptId) || deptId == 0)
+            {
+                MessageBox.Show("Please select a department.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            var dto = new CreateInstractorDto(fNameTxt.Text, lNameTxt.Text, phoneTxt.Text, deptId);
+            instractorService.Add(dto);
+            ClearInputs();
+            LoadInstractors();
+        }
+
+        private void UpdateBtn_Click(object? sender, EventArgs e)
+        {
+            if (grid.CurrentRow?.DataBoundItem is AllInstractorDto dto)
+            {
+                if (!(deptCombo.SelectedValue is int deptId) || deptId == 0)
+                {
+                    MessageBox.Show("Please select a department.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                var update = new UpdateInstractorDto(dto.Id, fNameTxt.Text, lNameTxt.Text, phoneTxt.Text, deptId);
+                instractorService.Update(update);
+                LoadInstractors();
+            }
+        }
+
+        private void DeleteBtn_Click(object? sender, EventArgs e)
+        {
+            if (grid.CurrentRow?.DataBoundItem is AllInstractorDto dto)
+            {
+                var r = MessageBox.Show("Delete this instructor?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (r == DialogResult.Yes)
+                {
+                    instractorService.Delete(dto.Id);
+                    LoadInstractors();
+                    ClearInputs();
+                }
+            }
+        }
+
+        private void Grid_SelectionChanged(object? sender, EventArgs e)
+        {
+            if (grid.CurrentRow?.DataBoundItem is AllInstractorDto dto)
+            {
+                fNameTxt.Text = dto.FirstName ?? string.Empty;
+                lNameTxt.Text = dto.LastName ?? string.Empty;
+                phoneTxt.Text = dto.Phone ?? string.Empty;
+                deptCombo.SelectedValue = dto.DepartmentId;
+            }
+        }
+
+        private void ClearInputs()
+        {
+            fNameTxt.Text = string.Empty;
+            lNameTxt.Text = string.Empty;
+            phoneTxt.Text = string.Empty;
+            deptCombo.SelectedValue = 0;
+        }
+    }
+}

@@ -1,0 +1,216 @@
+1
+00:00:01,770 --> 00:00:03,840
+Instructor: Now based on the status here,
+
+2
+00:00:03,840 --> 00:00:08,370
+we want to toggle which one of the status is active.
+
+3
+00:00:08,370 --> 00:00:10,650
+Doing that is super simple.
+
+4
+00:00:10,650 --> 00:00:13,560
+Let's say if in process was selected,
+
+5
+00:00:13,560 --> 00:00:17,310
+we basically have to add a class of active
+
+6
+00:00:17,310 --> 00:00:19,710
+and with that, you can see it displays
+
+7
+00:00:19,710 --> 00:00:22,143
+that in process is selected.
+
+8
+00:00:23,130 --> 00:00:25,530
+But we have to do that dynamically.
+
+9
+00:00:25,530 --> 00:00:29,580
+Based on the status here, we have to add that variable
+
+10
+00:00:29,580 --> 00:00:32,192
+to each one of these ally element.
+
+11
+00:00:33,090 --> 00:00:38,090
+So what we can do is right here, let me add some razor code.
+
+12
+00:00:39,540 --> 00:00:41,935
+First thing, we have to retrieve the status
+
+13
+00:00:41,935 --> 00:00:46,350
+based on the query string that we have in the URL,
+
+14
+00:00:46,350 --> 00:00:48,690
+so we will say variable status.
+
+15
+00:00:48,690 --> 00:00:53,310
+We want to retrieve that from context dot request dot query
+
+16
+00:00:53,310 --> 00:00:55,503
+and the name is status.
+
+17
+00:00:56,490 --> 00:01:00,270
+After that, let me create five more variables here
+
+18
+00:01:00,270 --> 00:01:03,540
+for all the status that we have right here.
+
+19
+00:01:03,540 --> 00:01:07,500
+And it must match with the exact names that you see
+
+20
+00:01:07,500 --> 00:01:11,010
+inside the ASP route status.
+
+21
+00:01:11,010 --> 00:01:15,090
+We are giving them a default class of text primary.
+
+22
+00:01:15,090 --> 00:01:18,690
+Then we want to switch case here where,
+
+23
+00:01:18,690 --> 00:01:22,923
+based on the status, we will toggle the bootstrap classes.
+
+24
+00:01:24,150 --> 00:01:26,730
+So first case will be pending
+
+25
+00:01:26,730 --> 00:01:30,660
+and we'll copy paste that here.
+
+26
+00:01:30,660 --> 00:01:34,290
+If the case is pending, the pending variable
+
+27
+00:01:34,290 --> 00:01:38,100
+we will change the bootstrap classes to be active.
+
+28
+00:01:38,100 --> 00:01:42,273
+Text white, and we can give it BG primary.
+
+29
+00:01:43,740 --> 00:01:45,750
+We will break the case there
+
+30
+00:01:45,750 --> 00:01:48,843
+and that looks good for the pending class.
+
+31
+00:01:49,860 --> 00:01:53,703
+Let me copy this and paste it about four more times.
+
+32
+00:01:54,540 --> 00:01:57,540
+I will copy that for in process,
+
+33
+00:01:57,540 --> 00:02:01,770
+I have completed, I have approved.
+
+34
+00:02:01,770 --> 00:02:05,880
+And then for the default, we will say all is equal
+
+35
+00:02:05,880 --> 00:02:10,342
+to active text white and BG primary.
+
+36
+00:02:15,804 --> 00:02:18,300
+So based on whatever is selected here,
+
+37
+00:02:18,300 --> 00:02:21,090
+we are toggling the bootstrap classes
+
+38
+00:02:21,090 --> 00:02:23,610
+and we forgot one thing.
+
+39
+00:02:23,610 --> 00:02:26,613
+We need to change the variable names as well.
+
+40
+00:02:28,890 --> 00:02:30,960
+Perfect, that looks good.
+
+41
+00:02:30,960 --> 00:02:34,920
+Now these variable names, we can dynamically assign them
+
+42
+00:02:34,920 --> 00:02:38,973
+to the ally element like in process.
+
+43
+00:02:39,810 --> 00:02:42,393
+Next we have the pending one here.
+
+44
+00:02:44,400 --> 00:02:46,353
+Then we have completed,
+
+45
+00:02:48,630 --> 00:02:53,630
+scroll down, we have approved, and we have all.
+
+46
+00:02:56,940 --> 00:02:59,880
+With that, if you save and go back,
+
+47
+00:02:59,880 --> 00:03:02,070
+you can see when pending is selected,
+
+48
+00:03:02,070 --> 00:03:05,850
+we have a class there. When we change to completed,
+
+49
+00:03:05,850 --> 00:03:09,450
+the links are working as expected,
+
+50
+00:03:09,450 --> 00:03:11,820
+so the UI part is looking good,
+
+51
+00:03:11,820 --> 00:03:14,550
+but we need to toggle the functionality.
+
+52
+00:03:14,550 --> 00:03:17,760
+That way the order list is also updated
+
+53
+00:03:17,760 --> 00:03:21,390
+based on the status that is selected.
+
+54
+00:03:21,390 --> 00:03:24,153
+Let me do that in the next video.
+

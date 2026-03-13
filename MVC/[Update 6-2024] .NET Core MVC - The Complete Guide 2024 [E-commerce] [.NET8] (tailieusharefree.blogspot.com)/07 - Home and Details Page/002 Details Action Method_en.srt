@@ -1,0 +1,200 @@
+1
+00:00:01,890 --> 00:00:04,500
+-: When a user clicks on the detail page
+
+2
+00:00:04,500 --> 00:00:08,910
+we want to display all the product details on that page.
+
+3
+00:00:08,910 --> 00:00:12,000
+So what will be the model for that page?
+
+4
+00:00:12,000 --> 00:00:15,300
+It'll basically be a single product.
+
+5
+00:00:15,300 --> 00:00:17,100
+So what we should do is go back
+
+6
+00:00:17,100 --> 00:00:22,100
+to the code here in home controller where we have index,
+
+7
+00:00:22,260 --> 00:00:24,960
+copy and paste action method.
+
+8
+00:00:24,960 --> 00:00:27,360
+We will call that as details
+
+9
+00:00:27,360 --> 00:00:29,613
+and we will require an ID.
+
+10
+00:00:30,660 --> 00:00:33,930
+Based on that ID, we will get all the details
+
+11
+00:00:33,930 --> 00:00:37,683
+and not get all because it'll be a single product.
+
+12
+00:00:39,090 --> 00:00:41,777
+We will call that product and we will return
+
+13
+00:00:41,777 --> 00:00:43,623
+that to the view.
+
+14
+00:00:44,820 --> 00:00:46,770
+Let me do that.
+
+15
+00:00:46,770 --> 00:00:48,303
+Perfect, that looks good.
+
+16
+00:00:49,170 --> 00:00:51,609
+Now when we are getting a product, we need to add
+
+17
+00:00:51,609 --> 00:00:56,609
+the link operator u goes to u dot id is equal, equal to id.
+
+18
+00:00:57,420 --> 00:01:00,663
+Based on that it will retrieve the product details.
+
+19
+00:01:01,680 --> 00:01:05,129
+Once that is done, let me add that view.
+
+20
+00:01:05,129 --> 00:01:09,273
+I can directly click add view here and add that.
+
+21
+00:01:10,170 --> 00:01:12,400
+Change the name to be details
+
+22
+00:01:14,310 --> 00:01:18,540
+and let me make sure it got added in the right area.
+
+23
+00:01:18,540 --> 00:01:19,503
+Yes, it did.
+
+24
+00:01:21,300 --> 00:01:22,560
+Perfect.
+
+25
+00:01:22,560 --> 00:01:24,892
+So with that we have added what should happen
+
+26
+00:01:24,892 --> 00:01:29,520
+on the details, but on the homepage or the index
+
+27
+00:01:29,520 --> 00:01:31,653
+we need to add that redirect.
+
+28
+00:01:32,730 --> 00:01:36,510
+Now because we are in the same area and same controller
+
+29
+00:01:36,510 --> 00:01:39,420
+I can only write the action method that call
+
+30
+00:01:39,420 --> 00:01:40,980
+the action details.
+
+31
+00:01:40,980 --> 00:01:45,273
+It will by default use the same area and same controller.
+
+32
+00:01:46,320 --> 00:01:47,400
+But on top of that
+
+33
+00:01:47,400 --> 00:01:51,480
+when it is being calling that if we examine the controller
+
+34
+00:01:51,480 --> 00:01:53,253
+we need to pass the id.
+
+35
+00:01:54,300 --> 00:01:55,740
+So if I go back here
+
+36
+00:01:55,740 --> 00:01:59,820
+we will say ASP route and name is id.
+
+37
+00:01:59,820 --> 00:02:02,730
+We will use the exact same name.
+
+38
+00:02:02,730 --> 00:02:06,750
+If you want to call that as product id, then we will
+
+39
+00:02:06,750 --> 00:02:11,750
+have to use the same name right here and that should work.
+
+40
+00:02:13,260 --> 00:02:17,340
+So how do we get the product ID that is inside
+
+41
+00:02:17,340 --> 00:02:18,903
+product dot id,
+
+42
+00:02:20,700 --> 00:02:21,533
+Perfect.
+
+43
+00:02:21,533 --> 00:02:22,620
+That should work.
+
+44
+00:02:22,620 --> 00:02:26,583
+Let me run the application and see that in action.
+
+45
+00:02:29,910 --> 00:02:31,800
+Let me click here.
+
+46
+00:02:31,800 --> 00:02:35,133
+Perfect, product id one, go back.
+
+47
+00:02:36,210 --> 00:02:37,830
+Product ID three.
+
+48
+00:02:37,830 --> 00:02:39,213
+And that works.
+
+49
+00:02:40,290 --> 00:02:41,280
+So perfect.
+
+50
+00:02:41,280 --> 00:02:46,113
+Now we are able to navigate and that is working as expected.
+

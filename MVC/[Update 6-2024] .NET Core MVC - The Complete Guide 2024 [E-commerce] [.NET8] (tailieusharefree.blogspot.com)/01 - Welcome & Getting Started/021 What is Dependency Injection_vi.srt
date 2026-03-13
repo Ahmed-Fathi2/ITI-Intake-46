@@ -1,0 +1,580 @@
+1
+00:00:02,160 --> 00:00:04,590
+Bhrugen: Nội dung phụ thuộc là gì?
+
+2
+00:00:04,590 --> 00:00:06,870
+Đây là một câu hỏi phỏng vấn phổ biến
+
+3
+00:00:06,870 --> 00:00:10,590
+và việc giải thích điều đó bằng một ví dụ thực tế sẽ cho
+
+4
+00:00:10,590 --> 00:00:13,830
+thấy rằng bạn thực sự hiểu khái niệm này.
+
+5
+00:00:13,830 --> 00:00:17,820
+Tên tôi là Bhrugen và chào mừng bạn đến với Dot Net Mastery.
+
+6
+00:00:17,820 --> 00:00:21,960
+Nếu bạn thích nội dung miễn phí liên quan đến . NET, hãy nhớ đăng
+
+7
+00:00:21,960 --> 00:00:24,690
+ký kênh nhé.
+
+8
+00:00:24,690 --> 00:00:29,460
+Bằng cách đó bạn sẽ được thông báo khi nội dung mới được tải lên.
+
+9
+00:00:29,460 --> 00:00:31,290
+Bây giờ, quay lại câu hỏi
+
+10
+00:00:31,290 --> 00:00:34,470
+chính, tiêm phụ thuộc chính xác là gì?
+
+11
+00:00:34,470 --> 00:00:38,700
+Nội xạ phụ thuộc là một mẫu thiết kế trong đó một lớp
+
+12
+00:00:38,700 --> 00:00:43,290
+hoặc đối tượng có các lớp phụ thuộc được chèn thay vì trực
+
+13
+00:00:43,290 --> 00:00:45,573
+tiếp tạo ra chúng.
+
+14
+00:00:46,650 --> 00:00:50,100
+Điều này được thực hiện để chúng ta không phải tạo, quản
+
+15
+00:00:50,100 --> 00:00:51,900
+lý và loại bỏ đối tượng, đồng
+
+16
+00:00:51,900 --> 00:00:55,413
+thời nó cải thiện sự liên kết lỏng lẻo giữa các lớp.
+
+17
+00:00:56,610 --> 00:00:58,800
+Bây giờ, điều đó quá nặng về kỹ thuật.
+
+18
+00:00:58,800 --> 00:00:59,910
+Đừng lo.
+
+19
+00:00:59,910 --> 00:01:03,480
+Hãy để tôi đơn giản hóa điều đó bằng một ví dụ thực tế mà hầu
+
+20
+00:01:03,480 --> 00:01:06,243
+hết mọi người đều có thể liên tưởng đến.
+
+21
+00:01:07,260 --> 00:01:11,760
+Trong ví dụ này, Bob ở đây muốn đi bộ đường dài.
+
+22
+00:01:11,760 --> 00:01:13,380
+Bây giờ, đây là một chuyến
+
+23
+00:01:13,380 --> 00:01:16,380
+đi bộ dài và để làm được điều đó, anh ấy sẽ cần
+
+24
+00:01:16,380 --> 00:01:19,410
+nhiều vật dụng như bản đồ, đèn pin, thanh
+
+25
+00:01:19,410 --> 00:01:21,120
+protein, v.v.
+
+26
+00:01:21,120 --> 00:01:24,360
+Vì vậy, anh ấy đặt tất cả chúng vào ba lô
+
+27
+00:01:24,360 --> 00:01:27,240
+của mình và ngày hôm sau khi đi bộ đường
+
+28
+00:01:27,240 --> 00:01:30,000
+dài, anh ấy mang theo ba lô.
+
+29
+00:01:30,000 --> 00:01:33,420
+Chiếc túi mà anh ấy mang theo có tác dụng như một vật đựng để trong
+
+30
+00:01:33,420 --> 00:01:36,030
+quá trình đi bộ đường dài, khi cần bất cứ thứ gì,
+
+31
+00:01:36,030 --> 00:01:39,273
+anh ấy có thể lấy nó ra khỏi hộp và sử dụng chúng.
+
+32
+00:01:40,170 --> 00:01:42,150
+Đây là khái niệm đơn giản.
+
+33
+00:01:42,150 --> 00:01:45,090
+Bạn đặt những món đồ bạn cần vào một thùng chứa
+
+34
+00:01:45,090 --> 00:01:46,380
+và khi bạn cần, chúng
+
+35
+00:01:46,380 --> 00:01:48,960
+đã có sẵn trong thùng chứa nên bạn có thể
+
+36
+00:01:48,960 --> 00:01:52,143
+trực tiếp lấy chúng từ thùng chứa.
+
+37
+00:01:53,130 --> 00:01:56,250
+Bây giờ, điều đó hơi quá dễ hiểu, nhưng nó
+
+38
+00:01:56,250 --> 00:01:59,610
+liên quan thế nào đến thế giới lập trình?
+
+39
+00:01:59,610 --> 00:02:01,710
+Để chỉ ra điều đó, hãy để tôi giải thích
+
+40
+00:02:01,710 --> 00:02:04,743
+một tình huống không có nội dung phụ thuộc.
+
+41
+00:02:05,790 --> 00:02:08,520
+Trong ứng dụng của chúng tôi, chúng tôi
+
+42
+00:02:08,520 --> 00:02:12,600
+có ba trang và chúng tôi có một số chức năng chung mà chúng
+
+43
+00:02:12,600 --> 00:02:15,480
+tôi muốn sử dụng trên cả ba trang, như chúng
+
+44
+00:02:15,480 --> 00:02:17,640
+tôi muốn gửi email và chúng tôi
+
+45
+00:02:17,640 --> 00:02:20,280
+muốn truy cập cơ sở dữ liệu của mình trên
+
+46
+00:02:20,280 --> 00:02:23,280
+cả ba trang mà chúng tôi có.
+
+47
+00:02:23,280 --> 00:02:27,240
+Vì vậy, trước tiên, giả sử chúng ta phải truy cập cơ sở dữ liệu.
+
+48
+00:02:27,240 --> 00:02:28,770
+Để làm được điều đó,
+
+49
+00:02:28,770 --> 00:02:32,640
+điều chúng ta thường làm là tạo đối tượng của lớp,
+
+50
+00:02:32,640 --> 00:02:35,670
+được sử dụng để truy cập cơ sở dữ liệu.
+
+51
+00:02:35,670 --> 00:02:39,090
+Hãy để tôi gọi DB đó cho ví dụ này.
+
+52
+00:02:39,090 --> 00:02:42,420
+Sau đó chúng ta có thể gọi một số phương thức bên trong đối
+
+53
+00:02:42,420 --> 00:02:44,070
+tượng đó và lấy dữ liệu.
+
+54
+00:02:44,070 --> 00:02:45,390
+Sau khi hoàn tất,
+
+55
+00:02:45,390 --> 00:02:48,663
+chúng ta sẽ xử lý đối tượng đã được tạo.
+
+56
+00:02:49,590 --> 00:02:52,650
+Logic tạo đối tượng này, chúng ta sẽ phải
+
+57
+00:02:52,650 --> 00:02:54,630
+viết trong cả ba trang và
+
+58
+00:02:54,630 --> 00:02:58,710
+điều tương tự chúng ta sẽ phải làm với email.
+
+59
+00:02:58,710 --> 00:03:01,710
+Bằng cách đó, chúng tôi thực sự đang giải quyết vấn
+
+60
+00:03:01,710 --> 00:03:05,730
+đề có quyền truy cập email và cơ sở dữ liệu trong trang của mình.
+
+61
+00:03:05,730 --> 00:03:07,380
+Nhưng như bạn có thể thấy,
+
+62
+00:03:07,380 --> 00:03:12,240
+chúng tôi có rất nhiều mã trùng lặp đang được viết ở đây và khi thiết
+
+63
+00:03:12,240 --> 00:03:16,770
+kế, chúng tôi cố gắng xây dựng giải pháp hoàn hảo.
+
+64
+00:03:16,770 --> 00:03:19,500
+Nhưng thật đáng buồn, hầu hết chúng ta đều không
+
+65
+00:03:19,500 --> 00:03:22,620
+biết được tương lai hoàn chỉnh của một dự án.
+
+66
+00:03:22,620 --> 00:03:25,440
+Rất có thể trong tương lai, vì
+
+67
+00:03:25,440 --> 00:03:27,360
+lý do nào đó, bạn có thể
+
+68
+00:03:27,360 --> 00:03:31,530
+phải tạo một lớp mới để gửi email hoặc có thể
+
+69
+00:03:31,530 --> 00:03:34,920
+là một lớp truy cập dữ liệu mới.
+
+70
+00:03:34,920 --> 00:03:37,440
+Điều gì xảy ra trong trường hợp đó?
+
+71
+00:03:37,440 --> 00:03:39,720
+Vâng, bây giờ nó là đơn giản.
+
+72
+00:03:39,720 --> 00:03:42,720
+Trong tất cả các trang mà chúng tôi có đối tượng cũ, chúng
+
+73
+00:03:42,720 --> 00:03:45,210
+tôi sẽ thay thế đối tượng đó bằng lớp mới.
+
+74
+00:03:45,210 --> 00:03:49,080
+Giống như trong trường hợp này, chúng ta có lớp Db_new và chúng
+
+75
+00:03:49,080 --> 00:03:50,180
+ta có Email_new.
+
+76
+00:03:52,410 --> 00:03:54,180
+Và khi chúng ta nghĩ về điều đó,
+
+77
+00:03:54,180 --> 00:03:57,000
+nó dường như không phải là một vấn đề lớn.
+
+78
+00:03:57,000 --> 00:04:00,480
+Đó là bởi vì hiện tại chúng tôi chỉ có ba trang.
+
+79
+00:04:00,480 --> 00:04:05,480
+Nhưng nếu ứng dụng của bạn có 30 trang hoặc 300 trang thì sao?
+
+80
+00:04:05,790 --> 00:04:08,880
+Bạn sẽ phải sửa đổi điều đó trong tất cả các
+
+81
+00:04:08,880 --> 00:04:11,070
+trang và trên hết bạn sẽ phải
+
+82
+00:04:11,070 --> 00:04:13,470
+xử lý việc tạo đối tượng, quản lý
+
+83
+00:04:13,470 --> 00:04:14,853
+và xử lý chúng.
+
+84
+00:04:15,750 --> 00:04:18,300
+Đó là một công sức tốn nhiều thời gian khi
+
+85
+00:04:18,300 --> 00:04:21,093
+chúng ta phải làm điều đó ở tất cả các trang.
+
+86
+00:04:22,320 --> 00:04:25,440
+Vậy đâu là giải pháp để tránh tất cả những
+
+87
+00:04:25,440 --> 00:04:28,620
+điều này và có được một kiến trúc tối ưu?
+
+88
+00:04:28,620 --> 00:04:31,833
+Câu trả lời cho điều đó là việc tiêm phụ thuộc.
+
+89
+00:04:32,850 --> 00:04:36,780
+Hãy để tôi chỉ cho bạn tình huống tương tự sẽ như thế
+
+90
+00:04:36,780 --> 00:04:39,420
+nào với việc chèn phần phụ thuộc.
+
+91
+00:04:39,420 --> 00:04:41,820
+Một lần nữa, chúng ta sẽ có ba trang
+
+92
+00:04:41,820 --> 00:04:45,630
+và chúng ta sẽ có chức năng email và cơ sở dữ liệu.
+
+93
+00:04:45,630 --> 00:04:49,680
+Đây cũng là những thứ phổ biến mà chúng ta đã có trước đây,
+
+94
+00:04:49,680 --> 00:04:52,470
+nhưng ngay bây giờ chúng ta sẽ có một thứ
+
+95
+00:04:52,470 --> 00:04:56,190
+đặc biệt, đó là vùng chứa nội xạ phụ thuộc và trong vùng
+
+96
+00:04:56,190 --> 00:04:59,460
+chứa đó, chúng ta sẽ đăng ký cả dịch vụ email và
+
+97
+00:04:59,460 --> 00:05:01,380
+cơ sở dữ liệu.
+
+98
+00:05:01,380 --> 00:05:06,060
+Vì vậy, ở đó chúng ta sẽ có giao diện cho IEmail và IDb
+
+99
+00:05:06,060 --> 00:05:09,390
+và chúng ta sẽ triển khai bên trong lớp
+
+100
+00:05:09,390 --> 00:05:10,713
+email và DB.
+
+101
+00:05:11,670 --> 00:05:15,270
+Khi bất kỳ trang nào truy cập các chức
+
+102
+00:05:15,270 --> 00:05:20,270
+năng này, họ sẽ yêu cầu triển khai IDb hoặc IEmail.
+
+103
+00:05:20,790 --> 00:05:23,430
+Các trang không biết họ sẽ được
+
+104
+00:05:23,430 --> 00:05:25,260
+triển khai những gì.
+
+105
+00:05:25,260 --> 00:05:28,350
+Container tiêm phụ thuộc chịu trách nhiệm cho tất
+
+106
+00:05:28,350 --> 00:05:29,553
+cả những điều đó.
+
+107
+00:05:30,510 --> 00:05:33,660
+Vì vậy, những gì khung sẽ làm là khi một
+
+108
+00:05:33,660 --> 00:05:36,780
+trang yêu cầu triển khai giao diện email,
+
+109
+00:05:36,780 --> 00:05:39,000
+nó sẽ nhìn vào vùng chứa để tìm
+
+110
+00:05:39,000 --> 00:05:44,000
+ra giao diện email đó được triển khai bên trong lớp email, do
+
+111
+00:05:44,250 --> 00:05:47,460
+đó, nó sẽ tự động tạo đối tượng và chuyển
+
+112
+00:05:47,460 --> 00:05:49,860
+nó vào trang.
+
+113
+00:05:49,860 --> 00:05:51,810
+Bằng cách đó, chúng tôi không phải đối
+
+114
+00:05:51,810 --> 00:05:54,120
+phó với việc tạo đối tượng, xử lý hoặc quản lý
+
+115
+00:05:54,120 --> 00:05:56,313
+đối tượng đó trong trang của mình.
+
+116
+00:05:57,510 --> 00:05:59,430
+Các trang sẽ trông rất gọn
+
+117
+00:05:59,430 --> 00:06:01,890
+gàng vì chúng sẽ chỉ có giao diện và
+
+118
+00:06:01,890 --> 00:06:03,990
+cách triển khai được cung cấp
+
+119
+00:06:03,990 --> 00:06:06,513
+bởi vùng chứa nội xạ phụ thuộc.
+
+120
+00:06:07,380 --> 00:06:09,060
+Điều tốt nhất là trong tương
+
+121
+00:06:09,060 --> 00:06:12,420
+lai, nếu bạn phải thay đổi hoặc thay thế việc triển
+
+122
+00:06:12,420 --> 00:06:15,270
+khai, bạn không phải thực hiện ở tất cả các
+
+123
+00:06:15,270 --> 00:06:17,910
+nơi vì bạn chỉ đăng ký việc triển khai trong
+
+124
+00:06:17,910 --> 00:06:19,410
+vùng chứa, vì vậy chỉ trong
+
+125
+00:06:19,410 --> 00:06:22,230
+tệp đó bạn mới phải đi và thay thế bằng việc
+
+126
+00:06:22,230 --> 00:06:24,813
+triển khai mới.
+
+127
+00:06:25,680 --> 00:06:27,570
+Vì vậy, DB và email của chúng
+
+128
+00:06:27,570 --> 00:06:31,650
+ta, chúng ta chỉ cần thay thế chúng bằng DB mới và email mới
+
+129
+00:06:31,650 --> 00:06:34,170
+và tất cả các trang sẽ tự động nhận được
+
+130
+00:06:34,170 --> 00:06:35,943
+triển khai mới.
+
+131
+00:06:37,200 --> 00:06:38,970
+Vì vậy, bạn có thể thấy email
+
+132
+00:06:38,970 --> 00:06:43,120
+và cơ sở dữ liệu hiện được kết hợp lỏng lẻo với các lớp khác
+
+133
+00:06:44,400 --> 00:06:48,090
+và đó là điểm hay của việc chèn phụ thuộc.
+
+134
+00:06:48,090 --> 00:06:50,640
+Bây giờ, tính năng nội xạ phụ thuộc đã được tích hợp
+
+135
+00:06:50,640 --> 00:06:53,460
+sẵn nếu bạn đang sử dụng . NET framework
+
+136
+00:06:53,460 --> 00:06:56,100
+nên bạn chỉ cần đăng ký
+
+137
+00:06:56,100 --> 00:07:00,270
+dịch vụ và . NET framework sẽ lo mọi việc khác.
+
+138
+00:07:00,270 --> 00:07:04,470
+Tôi hy vọng với video ngắn đó, bạn sẽ hiểu rõ hơn về
+
+139
+00:07:04,470 --> 00:07:06,870
+việc chèn phần phụ thuộc.
+
+140
+00:07:06,870 --> 00:07:08,670
+Nếu bạn thích video này,
+
+141
+00:07:08,670 --> 00:07:10,650
+hãy nhớ thích video và để
+
+142
+00:07:10,650 --> 00:07:14,280
+lại nhận xét nếu bạn có bất kỳ câu hỏi hoặc chủ
+
+143
+00:07:14,280 --> 00:07:17,580
+đề nào khác mà tôi sẽ đề cập tiếp theo.
+
+144
+00:07:17,580 --> 00:07:21,690
+Bạn có thể xem thêm video miễn phí trên dotnetmastery. com.
+
+145
+00:07:21,690 --> 00:07:23,763
+Cho đến lúc đó, chúc bạn viết mã vui vẻ.
+

@@ -1,0 +1,232 @@
+1
+00:00:01,890 --> 00:00:03,540
+Instructor: Now we want to work on the
+
+2
+00:00:03,540 --> 00:00:06,990
+shopping cart controller so we can display everything
+
+3
+00:00:06,990 --> 00:00:10,023
+on the UI and display a shopping cart.
+
+4
+00:00:11,130 --> 00:00:13,953
+For that, we will have to do quite a few things.
+
+5
+00:00:15,030 --> 00:00:17,880
+First thing, we need to create a controller
+
+6
+00:00:17,880 --> 00:00:21,180
+and we will do that in the customer controller.
+
+7
+00:00:21,180 --> 00:00:24,930
+Make our shopping cart will be customer facing
+
+8
+00:00:24,930 --> 00:00:27,993
+and let me call that as cart controller.
+
+9
+00:00:30,690 --> 00:00:33,330
+Inside there we have the index action.
+
+10
+00:00:33,330 --> 00:00:34,890
+Let me right click.
+
+11
+00:00:34,890 --> 00:00:36,990
+Go to view does not work.
+
+12
+00:00:36,990 --> 00:00:39,330
+We have to add the view.
+
+13
+00:00:39,330 --> 00:00:41,343
+Let me create the index view.
+
+14
+00:00:42,690 --> 00:00:44,957
+Now, where I have the underscore layout,
+
+15
+00:00:44,957 --> 00:00:48,660
+we need to add a shopping cart icon there.
+
+16
+00:00:48,660 --> 00:00:50,530
+So let me scroll there
+
+17
+00:00:51,390 --> 00:00:53,790
+and let me copy an L I.
+
+18
+00:00:53,790 --> 00:00:55,410
+Well, it's inside dropdown.
+
+19
+00:00:55,410 --> 00:00:57,093
+Let me copy this one.
+
+20
+00:00:58,080 --> 00:01:01,380
+Paste it outside of the comment here.
+
+21
+00:01:01,380 --> 00:01:02,924
+The area will be customer
+
+22
+00:01:02,924 --> 00:01:07,380
+but controller will be cart controller.
+
+23
+00:01:07,380 --> 00:01:10,410
+And what do we want to write here?
+
+24
+00:01:10,410 --> 00:01:12,960
+I will be using the bootstrap icon.
+
+25
+00:01:12,960 --> 00:01:16,200
+So class is P I P I card,
+
+26
+00:01:16,200 --> 00:01:20,043
+and by default, let me display zero inside there.
+
+27
+00:01:21,180 --> 00:01:23,700
+With that, let me run this and see
+
+28
+00:01:23,700 --> 00:01:27,633
+if we are able to navigate to the index page.
+
+29
+00:01:31,410 --> 00:01:33,450
+Our shopping cart looks good.
+
+30
+00:01:33,450 --> 00:01:38,450
+If I click there, we go to customer cart and privacy.
+
+31
+00:01:38,490 --> 00:01:41,970
+Whoops. The action method will be index.
+
+32
+00:01:41,970 --> 00:01:43,623
+That was the culprit.
+
+33
+00:01:44,910 --> 00:01:48,900
+If I go back here and if I click there
+
+34
+00:01:48,900 --> 00:01:52,680
+you can see it says the page cannot be found.
+
+35
+00:01:52,680 --> 00:01:56,040
+Can you try to find out or think of a reason on
+
+36
+00:01:56,040 --> 00:01:57,423
+what we are missing?
+
+37
+00:01:58,500 --> 00:02:01,710
+If you said, we did not mention the area here,
+
+38
+00:02:01,710 --> 00:02:02,763
+you are correct.
+
+39
+00:02:03,750 --> 00:02:08,250
+We have to give that a area of customer,
+
+40
+00:02:08,250 --> 00:02:11,100
+and that should fix the issue.
+
+41
+00:02:11,100 --> 00:02:13,680
+We will have to rebuild here.
+
+42
+00:02:13,680 --> 00:02:15,543
+Let me wait for that.
+
+43
+00:02:20,130 --> 00:02:22,200
+And if I click this time,
+
+44
+00:02:22,200 --> 00:02:25,683
+Perfect. Empty page is being loaded here.
+
+45
+00:02:26,610 --> 00:02:29,610
+Now we do not want to waste our time in writing
+
+46
+00:02:29,610 --> 00:02:31,980
+H T M L and C S S.
+
+47
+00:02:31,980 --> 00:02:36,150
+Because of that, in the project resource snippets,
+
+48
+00:02:36,150 --> 00:02:38,430
+we are in section 10.
+
+49
+00:02:38,430 --> 00:02:41,040
+I have the shopping cart UI
+
+50
+00:02:41,040 --> 00:02:44,550
+which is purely H T M L and C S S .
+
+51
+00:02:44,550 --> 00:02:48,660
+You can copy that and paste it in the index view
+
+52
+00:02:48,660 --> 00:02:50,640
+for the shopping cart.
+
+53
+00:02:50,640 --> 00:02:54,060
+Save that, and if you go back,
+
+54
+00:02:54,060 --> 00:02:55,200
+perfect.
+
+55
+00:02:55,200 --> 00:02:58,890
+You have a basic template that is up and running
+
+56
+00:02:58,890 --> 00:03:01,560
+and now all you have to do is retrieve that
+
+57
+00:03:01,560 --> 00:03:05,343
+shopping cart and modify all the properties here.
+
+58
+00:03:06,510 --> 00:03:09,093
+Let me do that in the next video.
+

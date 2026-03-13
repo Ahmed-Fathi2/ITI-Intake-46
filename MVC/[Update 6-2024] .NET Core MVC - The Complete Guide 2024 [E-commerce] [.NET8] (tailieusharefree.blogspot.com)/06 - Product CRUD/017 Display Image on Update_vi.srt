@@ -1,0 +1,104 @@
+1
+00:00:01,640 --> 00:00:08,390
+Bây giờ điều tôi muốn làm là nơi chúng tôi có bản cập nhật hay đúng hơn là tạo thay vì chiếm toàn bộ chiều
+
+2
+00:00:08,390 --> 00:00:14,840
+rộng ở đây, chúng tôi sẽ lấy cột mười và hai hàng ở phía bên tay phải, chúng tôi sẽ dành phần đó cho hình
+
+3
+00:00:14,840 --> 00:00:16,040
+ảnh sản phẩm.
+
+4
+00:00:16,670 --> 00:00:19,400
+Vì vậy, chúng tôi phải thực hiện một số thay đổi thiết kế.
+
+5
+00:00:19,400 --> 00:00:21,050
+Hãy để tôi đi đến vô lý.
+
+6
+00:00:21,080 --> 00:00:24,200
+Chúng tôi có hình thức của chúng tôi ở đây bên trong đó.
+
+7
+00:00:24,200 --> 00:00:27,680
+Hãy để tôi thêm một div, tạo cho nó một lớp hàng.
+
+8
+00:00:28,070 --> 00:00:32,060
+Trong hàng đó, chúng tôi sẽ nói lớp div của cột mười.
+
+9
+00:00:32,960 --> 00:00:37,100
+Và tôi sẽ thêm một div nữa với một lớp cột vào.
+
+10
+00:00:38,560 --> 00:00:46,180
+Bất cứ điều gì chúng ta có trong div ở đây, hãy để tôi cắt nó và dán nó vào lớp của cột mười.
+
+11
+00:00:46,300 --> 00:00:47,620
+Lưu vào đó.
+
+12
+00:00:48,360 --> 00:00:49,560
+Và hoàn hảo.
+
+13
+00:00:49,560 --> 00:00:51,840
+Nó đã được chuyển sang phía bên phải.
+
+14
+00:00:51,840 --> 00:00:54,290
+Ở đây chúng tôi sẽ hiển thị hình ảnh.
+
+15
+00:00:54,300 --> 00:00:59,420
+Vì vậy, hãy để tôi cuộn xuống đây và chúng tôi cần thẻ hình ảnh.
+
+16
+00:00:59,430 --> 00:01:10,890
+IMG src nằm trong URL hình ảnh dấu chấm sản phẩm mô hình và chúng tôi sẽ cung cấp cho nó chiều rộng 100%.
+
+17
+00:01:11,010 --> 00:01:16,560
+Tôi cũng sẽ cung cấp cho nó một số kiểu dáng tùy chỉnh ở đây và để tôi đóng thẻ đó.
+
+18
+00:01:17,910 --> 00:01:20,370
+Hãy quay trở lại và hoàn thiện.
+
+19
+00:01:20,400 --> 00:01:23,880
+Chúng tôi có hình ảnh đang được hiển thị ở đây.
+
+20
+00:01:23,880 --> 00:01:28,200
+Khi chúng ta tạo, nó sẽ trống và điều đó không sao cả.
+
+21
+00:01:29,000 --> 00:01:35,990
+Bây giờ quá trình tạo của chúng tôi đã hoạt động và chúng tôi có thể nhìn thấy hình ảnh, nhưng trong chức năng cập nhật, chúng tôi
+
+22
+00:01:35,990 --> 00:01:38,870
+chưa thêm bất kỳ thứ gì bên trong phương thức đăng.
+
+23
+00:01:38,900 --> 00:01:45,130
+Nếu tôi quay lại đây, người điều khiển, mọi thứ chúng ta có ở đây đều là để tạo ra.
+
+24
+00:01:45,140 --> 00:01:50,720
+À, không có trong bài viết ở đây chúng ta chỉ có sản phẩm chấm ADD.
+
+25
+00:01:51,080 --> 00:01:54,800
+Chúng tôi chưa xử lý cách cập nhật sản phẩm ngay bây giờ.
+
+26
+00:01:55,490 --> 00:02:01,910
+Vì vậy, trong video tiếp theo, hãy để tôi quản lý việc cập nhật sản phẩm theo phương pháp upsert.
+

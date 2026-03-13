@@ -1,0 +1,252 @@
+1
+00:00:01,780 --> 00:00:05,290
+Chúng tôi muốn thực hiện các thao tác CRUD trên danh mục.
+
+2
+00:00:05,410 --> 00:00:12,220
+Về cơ bản, điều đó có nghĩa là chúng tôi muốn tạo một danh mục, lấy tất cả các danh mục, xóa một danh mục và cập nhật
+
+3
+00:00:12,220 --> 00:00:13,270
+một danh mục.
+
+4
+00:00:14,230 --> 00:00:21,490
+Và để làm được điều đó, chúng tôi sẽ yêu cầu một bộ điều khiển vì hiện tại khi chúng tôi chạy ứng dụng, chúng tôi chỉ
+
+5
+00:00:21,490 --> 00:00:23,200
+có bộ điều khiển gia đình.
+
+6
+00:00:23,800 --> 00:00:26,820
+Bạn có thể thấy chúng tôi có nhà và sự riêng tư ở đây.
+
+7
+00:00:26,830 --> 00:00:32,560
+Tương tự, chúng tôi muốn có một bộ điều khiển danh mục nơi chúng tôi có thể quản lý tất cả các danh mục.
+
+8
+00:00:33,600 --> 00:00:41,340
+Vì vậy, hãy để tôi dừng ứng dụng tại đây và nơi chúng tôi có bộ điều khiển gia đình trong thư mục bộ điều khiển, nhấp
+
+9
+00:00:41,340 --> 00:00:49,290
+chuột phải vào Thêm, bây giờ chúng tôi có bộ điều khiển, bạn có thể sử dụng các mẫu khác ở đó, nhưng chúng tôi muốn bắt
+
+10
+00:00:49,290 --> 00:00:50,310
+đầu mới.
+
+11
+00:00:50,310 --> 00:00:56,400
+Vì vậy, tôi sẽ sử dụng MVC, bộ điều khiển trống và chúng ta phải đặt tên cho nó.
+
+12
+00:00:56,700 --> 00:01:00,300
+Hãy để tôi gọi bộ điều khiển danh mục đó.
+
+13
+00:01:00,720 --> 00:01:07,020
+Bây giờ hãy nhớ khi bạn thêm bộ điều khiển, bạn phải có từ khóa bộ điều khiển ở cuối.
+
+14
+00:01:07,470 --> 00:01:13,110
+Đó là cách mã sẽ biết rằng tệp lớp cụ thể này là một bộ điều khiển.
+
+15
+00:01:14,230 --> 00:01:17,800
+Hãy để tôi nhấn nút thêm ở đây và hoàn thiện.
+
+16
+00:01:17,830 --> 00:01:20,770
+Nó thêm một bộ điều khiển bên trong đó.
+
+17
+00:01:20,770 --> 00:01:24,970
+Nó có một phương thức hành động là phương thức hành động chỉ mục.
+
+18
+00:01:25,930 --> 00:01:28,930
+Bây giờ điểm cuối này sẽ được kích hoạt như thế nào?
+
+19
+00:01:29,170 --> 00:01:34,210
+Hãy để tôi thêm một điểm sửa lỗi ở đây và để tôi chạy ứng dụng.
+
+20
+00:01:35,420 --> 00:01:36,710
+Trong ứng dụng.
+
+21
+00:01:36,710 --> 00:01:41,270
+Nếu chúng tôi muốn truy cập bộ điều khiển danh mục, chúng tôi sẽ truy cập vào đó như thế nào?
+
+22
+00:01:42,370 --> 00:01:42,970
+Vì điều đó.
+
+23
+00:01:42,970 --> 00:01:44,890
+Chúng tôi sẽ viết thể loại ở đây.
+
+24
+00:01:44,890 --> 00:01:47,800
+Và tiếp theo, phương pháp hành động là gì?
+
+25
+00:01:48,160 --> 00:01:51,070
+Và tiếp theo, phương pháp hành động là gì?
+
+26
+00:01:52,100 --> 00:01:54,590
+Phương thức hành động mặc định đã được thêm vào.
+
+27
+00:01:54,590 --> 00:01:59,420
+Nó là chỉ mục, vì vậy chúng ta có thể nói chỉ mục ở đây và nhấn enter.
+
+28
+00:01:59,720 --> 00:02:00,680
+Hoàn hảo.
+
+29
+00:02:00,710 --> 00:02:07,220
+Nó đạt đến điểm gỡ lỗi của chúng tôi ở đây và nếu tiếp tục, chúng tôi sẽ thấy thông báo lỗi.
+
+30
+00:02:07,400 --> 00:02:11,600
+Đã xảy ra ngoại lệ chưa được xử lý trong khi xử lý yêu cầu.
+
+31
+00:02:11,720 --> 00:02:18,890
+Không tìm thấy chỉ mục dạng xem vì ở đây bạn thấy khi phương thức hành động được gọi, nó sẽ trả về một dạng
+
+32
+00:02:18,890 --> 00:02:19,610
+xem.
+
+33
+00:02:20,060 --> 00:02:26,810
+Thông thường, khi chúng tôi làm việc với Bộ điều khiển gia đình, chúng tôi có các chế độ xem trong thư mục chính, nhưng khi chúng
+
+34
+00:02:26,810 --> 00:02:33,290
+tôi làm việc với bộ điều khiển danh mục, chúng tôi đã thêm bộ điều khiển đó, nhưng chúng tôi chưa thêm bất kỳ chế độ xem nào.
+
+35
+00:02:33,890 --> 00:02:39,140
+Nếu bạn quay lại, nó cũng hiển thị tất cả các vị trí đã được tìm kiếm.
+
+36
+00:02:39,440 --> 00:02:45,300
+Trước tiên, nó sẽ tìm thư mục danh mục và cố gắng tìm tệp index. html.
+
+37
+00:02:45,320 --> 00:02:53,070
+Nếu không tìm thấy, nó cũng sẽ xem xét thư mục dùng chung, là vị trí dùng chung cho tất cả các chế
+
+38
+00:02:53,070 --> 00:02:54,450
+độ xem một phần.
+
+39
+00:02:55,050 --> 00:03:02,640
+Những gì chúng ta phải làm là tạo một thư mục có tên là danh mục và thêm chế độ xem bên trong thư
+
+40
+00:03:02,640 --> 00:03:03,480
+mục đó.
+
+41
+00:03:04,050 --> 00:03:05,520
+Hãy để tôi làm điều đó.
+
+42
+00:03:05,790 --> 00:03:08,810
+Chúng tôi sẽ đóng nó ở đây trong quan điểm.
+
+43
+00:03:08,820 --> 00:03:10,950
+Chúng tôi sẽ tạo một thư mục.
+
+44
+00:03:11,340 --> 00:03:14,280
+Nó phải phù hợp với tên của thể loại.
+
+45
+00:03:14,370 --> 00:03:17,940
+Và bên trong đó, chúng tôi sẽ thêm một chế độ xem.
+
+46
+00:03:18,270 --> 00:03:24,600
+Bây giờ khi bạn đang làm việc trong chế độ xem, nếu bạn nhấp chuột phải và chuyển đến nút thêm, nó
+
+47
+00:03:24,600 --> 00:03:29,930
+sẽ tự động hiển thị rằng, mặc định mà người dùng thường thêm là một chế độ xem.
+
+48
+00:03:29,940 --> 00:03:32,970
+Vì vậy, đó là những gì nó hiển thị ở trên cùng.
+
+49
+00:03:33,000 --> 00:03:37,500
+Hãy để tôi chọn cái đó và chúng tôi sẽ thêm chế độ xem trống.
+
+50
+00:03:38,370 --> 00:03:42,120
+Bây giờ bạn có thể chọn chế độ xem dao cạo ở đây hoặc chế độ xem trống.
+
+51
+00:03:42,150 --> 00:03:47,130
+Chúng tôi sẽ đi với tên chế độ xem trống Index. cshtml.
+
+52
+00:03:47,160 --> 00:03:48,550
+Trông tôt đây.
+
+53
+00:03:48,570 --> 00:03:53,460
+Hãy để tôi nói thêm rằng chúng tôi không quan tâm đến bất cứ điều gì ở đây.
+
+54
+00:03:53,460 --> 00:04:03,300
+Hãy để tôi loại bỏ nó và tôi sẽ chỉ thêm một H1 ở đây và tôi sẽ nói danh sách danh mục ngay tại đây.
+
+55
+00:04:04,640 --> 00:04:07,970
+Cùng với đó, hãy để tôi chạy ứng dụng một lần nữa.
+
+56
+00:04:09,910 --> 00:04:10,730
+Hoàn hảo.
+
+57
+00:04:10,750 --> 00:04:13,890
+Hãy để tôi điều hướng đến bộ điều khiển danh mục.
+
+58
+00:04:13,900 --> 00:04:16,300
+Chúng tôi có hành động chỉ mục.
+
+59
+00:04:16,750 --> 00:04:20,200
+Chúng tôi sẽ nhấn tiếp tục và hoàn thiện.
+
+60
+00:04:20,350 --> 00:04:25,930
+Nó đưa chúng ta trở lại chế độ xem và hiển thị danh sách danh mục mà chúng ta đã thêm.
+
+61
+00:04:26,820 --> 00:04:27,810
+Quá tuyệt vời.
+
+62
+00:04:27,840 --> 00:04:34,650
+Chúng tôi đã thêm bộ điều khiển đầu tiên của mình vào ứng dụng và chúng tôi cũng đã thêm chế độ xem tương ứng.
+
+63
+00:04:34,650 --> 00:04:40,920
+Và trên trang này, chúng tôi sẽ hiển thị tất cả các danh mục mà chúng tôi có trong cơ sở dữ liệu của mình.
+

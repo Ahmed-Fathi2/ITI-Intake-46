@@ -1,0 +1,152 @@
+1
+00:00:01,274 --> 00:00:04,224
+Instructor: I believe everything is complete.
+
+2
+00:00:04,224 --> 00:00:07,249
+Before we test, let me add a debugging point
+
+3
+00:00:07,249 --> 00:00:12,000
+in the order confirmation, and let me go back,
+
+4
+00:00:12,000 --> 00:00:13,590
+let me add one more item
+
+5
+00:00:13,590 --> 00:00:18,590
+to the cart here, and we'll log in as the customer.
+
+6
+00:00:20,400 --> 00:00:22,743
+Whoops, I forgot to add that.
+
+7
+00:00:24,850 --> 00:00:28,260
+Perfect, we go to our card here.
+
+8
+00:00:28,260 --> 00:00:31,533
+Summary, let me place order.
+
+9
+00:00:33,337 --> 00:00:36,510
+Perfect, the total looks good.
+
+10
+00:00:36,510 --> 00:00:38,340
+Let me go back here.
+
+11
+00:00:38,340 --> 00:00:43,050
+We have the seventh order, and looks good.
+
+12
+00:00:43,050 --> 00:00:44,793
+We have the session ID.
+
+13
+00:00:45,930 --> 00:00:47,280
+Let me go back,
+
+14
+00:00:47,280 --> 00:00:50,370
+enter the dummy credit card number,
+
+15
+00:00:50,370 --> 00:00:52,960
+and we will select the Pay button.
+
+16
+00:00:52,960 --> 00:00:56,550
+It is processing that completed.
+
+17
+00:00:56,550 --> 00:00:58,560
+We got the ID here.
+
+18
+00:00:58,560 --> 00:01:02,442
+Let me debug one line at a time here
+
+19
+00:01:02,442 --> 00:01:07,442
+and we create a new service with the session ID,
+
+20
+00:01:07,950 --> 00:01:09,420
+and perfect.
+
+21
+00:01:09,420 --> 00:01:12,090
+You can see the payment status is paid,
+
+22
+00:01:12,090 --> 00:01:16,403
+it went inside, and we got the PaymentIntent ID,
+
+23
+00:01:16,403 --> 00:01:18,780
+that is populated.
+
+24
+00:01:18,780 --> 00:01:22,046
+It updates the status and redirects us
+
+25
+00:01:22,046 --> 00:01:25,283
+to the order confirmation page.
+
+26
+00:01:25,283 --> 00:01:27,870
+Let me remove the debugging point,
+
+27
+00:01:27,870 --> 00:01:30,324
+and if we examine this line again,
+
+28
+00:01:30,324 --> 00:01:33,660
+now the status is approved and we have
+
+29
+00:01:33,660 --> 00:01:35,613
+the PaymentIntent ID.
+
+30
+00:01:36,540 --> 00:01:38,970
+Now because the payment was successful,
+
+31
+00:01:38,970 --> 00:01:41,160
+if I go to stripe.com,
+
+32
+00:01:41,160 --> 00:01:44,306
+I should be able to see that as well.
+
+33
+00:01:44,306 --> 00:01:46,500
+We are on the correct account.
+
+34
+00:01:46,500 --> 00:01:49,740
+Let me go to Payments, and perfect.
+
+35
+00:01:49,740 --> 00:01:51,960
+You can see this was successful
+
+36
+00:01:51,960 --> 00:01:54,885
+and the status is also complete.
+
+37
+00:01:54,885 --> 00:01:59,340
+So with that, our payment has been posted on Stripe,
+
+38
+00:01:59,340 --> 00:02:02,883
+and our order has been placed successfully.
+

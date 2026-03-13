@@ -1,0 +1,268 @@
+1
+00:00:01,600 --> 00:00:04,300
+Bây giờ chúng ta cần thiết kế trang chi tiết.
+
+2
+00:00:04,420 --> 00:00:09,850
+Nếu chúng tôi vào trang chủ, chúng tôi có tất cả các sản phẩm và thiết kế đó trông đẹp.
+
+3
+00:00:10,270 --> 00:00:17,380
+Nhưng khi chúng tôi vào trang chi tiết, chúng tôi cần hiển thị danh mục hình ảnh, giá cả và hơn thế nữa.
+
+4
+00:00:17,950 --> 00:00:24,700
+Thay vì dành thời gian viết bootstrap và CSS, tôi đã cung cấp điều đó trong các đoạn trích.
+
+5
+00:00:25,030 --> 00:00:30,730
+Đảm bảo rằng bạn đã tải chúng xuống và sau đó xem đoạn trích ở đây trong phần sáu.
+
+6
+00:00:31,000 --> 00:00:34,900
+Trong phần bảy, chúng tôi có giao diện người dùng chi tiết.
+
+7
+00:00:35,080 --> 00:00:42,460
+Sao chép mọi thứ ở đó và tôi sẽ dán nó vào trong chế độ xem chi tiết của chúng tôi ngay tại đây.
+
+8
+00:00:43,210 --> 00:00:47,900
+Bây giờ, bất cứ thứ gì tôi có ở đây, nó hoàn toàn là HTML và CSS.
+
+9
+00:00:47,920 --> 00:00:54,190
+Bạn có thể thấy không có trình trợ giúp thẻ hoặc bất kỳ thứ gì liên quan đến lập trình dotnet.
+
+10
+00:00:54,700 --> 00:00:59,050
+Đó là tất cả HTML, CSS và bootstrap.
+
+11
+00:00:59,920 --> 00:01:00,880
+Lưu vào đó.
+
+12
+00:01:00,880 --> 00:01:08,050
+Và nếu chúng tôi quay lại và điều hướng đến trang chi tiết, chúng tôi có một mẫu thiết kế ưa thích
+
+13
+00:01:08,050 --> 00:01:10,510
+sẵn sàng chỉ với HTML và CSS.
+
+14
+00:01:10,870 --> 00:01:14,480
+Chúng ta cần điền vào đây tất cả dữ liệu động.
+
+15
+00:01:14,500 --> 00:01:19,360
+Vì vậy, hãy để tôi làm từng việc một, bắt đầu với tiêu đề.
+
+16
+00:01:20,260 --> 00:01:25,540
+Nếu chúng ta lên trên cùng để lấy bất cứ thứ gì ở đây, chúng ta cần thêm model.
+
+17
+00:01:26,280 --> 00:01:28,830
+Mô hình chi tiết sẽ như thế nào?
+
+18
+00:01:28,830 --> 00:01:33,750
+Ở đây chúng tôi đang chuyển một sản phẩm, vì vậy đó sẽ là mô hình của chúng tôi.
+
+19
+00:01:34,620 --> 00:01:38,850
+Nơi chúng tôi có tiêu đề ở đây, chúng tôi sẽ nói Model DOT.
+
+20
+00:01:39,210 --> 00:01:40,650
+Chúng tôi có danh hiệu.
+
+21
+00:01:41,600 --> 00:01:43,580
+Hãy để tôi sao chép mô hình ở đây.
+
+22
+00:01:43,730 --> 00:01:46,400
+Tiếp theo, chúng ta có model dot author.
+
+23
+00:01:46,700 --> 00:01:52,310
+Khi chúng tôi phải quay lại trang chủ, chúng tôi có thể thêm hành động ASP.
+
+24
+00:01:52,880 --> 00:01:55,040
+Nó sẽ là hành động lập chỉ mục.
+
+25
+00:01:56,360 --> 00:02:03,740
+Sau đó, chúng tôi cần hình ảnh ở đây sẽ ở URL hình ảnh dấu chấm mô hình tốc độ.
+
+26
+00:02:04,760 --> 00:02:05,720
+Cuộn xuống.
+
+27
+00:02:05,720 --> 00:02:17,840
+Chúng tôi có danh mục bên trong mô hình. loại. tên giá niêm yết ISBN là giá niêm yết kiểu mẫu và chúng tôi sẽ chuyển
+
+28
+00:02:17,840 --> 00:02:19,970
+đổi giá đó thành đơn vị tiền tệ.
+
+29
+00:02:21,560 --> 00:02:23,100
+Sau đó, chúng tôi có số lượng.
+
+30
+00:02:23,120 --> 00:02:26,130
+Ở đây chúng tôi có giá gấp đôi ở đây.
+
+31
+00:02:26,150 --> 00:02:29,630
+Hãy để tôi xem những gì đang xảy ra trong mẫu đầu tiên.
+
+32
+00:02:30,740 --> 00:02:35,660
+Chúng tôi cần giá đầu tiên ở đây và sau đó chúng tôi cần chuyển đổi tất cả giá.
+
+33
+00:02:36,380 --> 00:02:44,330
+Vì vậy, ở đây chúng ta sẽ có mô hình dot price, dot to string và định dạng tiền tệ.
+
+34
+00:02:45,280 --> 00:02:46,030
+Dán cái đó.
+
+35
+00:02:46,030 --> 00:02:49,450
+Ở đây, hãy để tôi sao chép nó vào string.
+
+36
+00:02:50,200 --> 00:02:53,260
+Và để tôi xem giao diện người dùng trông như thế nào.
+
+37
+00:02:53,680 --> 00:02:54,460
+Hoàn hảo.
+
+38
+00:02:54,460 --> 00:02:55,330
+Có vẻ tốt.
+
+39
+00:02:55,930 --> 00:02:58,120
+Sau đó, chúng ta cần mô tả.
+
+40
+00:02:58,150 --> 00:03:05,380
+Bây giờ, trước khi tôi bắt tay vào phần mô tả, hãy để tôi chuyển sang phần sản phẩm và làm cho phần mô tả trông lạ mắt hơn một chút.
+
+41
+00:03:06,400 --> 00:03:11,710
+Tôi sẽ đến Lorem ipsum và để tôi tạo ra thứ gì đó ở đó.
+
+42
+00:03:12,900 --> 00:03:25,470
+Tôi sẽ sao chép nó, dán nó vào đây và để tôi in đậm một số, in nghiêng một số và gạch dưới
+
+43
+00:03:25,470 --> 00:03:26,580
+một từ.
+
+44
+00:03:27,600 --> 00:03:33,720
+Hãy để tôi sao chép bản cập nhật đó và tôi sẽ lưu nó cho tất cả các mô tả.
+
+45
+00:03:34,350 --> 00:03:41,310
+Bây giờ, lý do tôi muốn làm điều đó cho tất cả chúng là giao diện người dùng trông hơi nhất quán.
+
+46
+00:03:41,490 --> 00:03:44,340
+Vì vậy, hãy để tôi làm điều đó thực sự nhanh chóng.
+
+47
+00:03:56,310 --> 00:03:57,990
+Bởi vì tất cả các cuộn.
+
+48
+00:03:57,990 --> 00:04:04,530
+Tôi nghĩ tốt nhất là nếu nút quay lại ở trên cùng ở đây, để có thể cập nhật sau này.
+
+49
+00:04:05,010 --> 00:04:07,680
+Nhưng mô tả hoàn hảo có vẻ tốt.
+
+50
+00:04:07,710 --> 00:04:14,850
+Bây giờ nếu tôi đi đến chi tiết trang chủ ở đây và để tôi sửa đổi mô tả ở đây.
+
+51
+00:04:15,780 --> 00:04:16,620
+Để làm mẫu.
+
+52
+00:04:16,920 --> 00:04:17,880
+Sự miêu tả.
+
+53
+00:04:18,240 --> 00:04:22,530
+Bạn sẽ thấy một thứ xấu xí ở đây, đó là văn bản HTML.
+
+54
+00:04:22,950 --> 00:04:29,610
+Đó là bởi vì chúng tôi có trình soạn thảo văn bản đa dạng thức và nếu chúng tôi phải chuyển đổi thì
+
+55
+00:04:29,610 --> 00:04:36,480
+chúng tôi có một thứ gọi là html dot raw và chúng tôi cần chuyển mô tả mô hình dot bên trong đó.
+
+56
+00:04:37,230 --> 00:04:38,520
+Và hoàn hảo.
+
+57
+00:04:38,550 --> 00:04:43,560
+Bạn có thể thấy nó dịch chính xác trở lại những gì chúng tôi muốn.
+
+58
+00:04:44,250 --> 00:04:46,800
+Vì vậy, trở về nhà nên làm việc bây giờ.
+
+59
+00:04:47,400 --> 00:04:48,870
+Hãy đi đến đó.
+
+60
+00:04:48,900 --> 00:04:54,550
+Chuyển đến một chi tiết khác và chúng tôi có một nút đếm mà bạn có thể bỏ qua.
+
+61
+00:04:54,570 --> 00:04:58,440
+Chúng tôi cũng có tính năng thêm vào giỏ hàng nhưng tính năng này sẽ sớm ra mắt.
+
+62
+00:04:58,470 --> 00:05:01,710
+Chúng tôi không có điều đó trong chức năng của chúng tôi ngay bây giờ.
+
+63
+00:05:03,150 --> 00:05:08,580
+Tôi có thể lên trên cùng ở đây và tôi cũng sẽ thêm lề dưới cùng là bốn.
+
+64
+00:05:09,690 --> 00:05:10,920
+Và hoàn hảo.
+
+65
+00:05:10,920 --> 00:05:13,590
+Điều đó có vẻ tốt hơn cho trang chi tiết.
+
+66
+00:05:14,010 --> 00:05:17,030
+Bây giờ chúng tôi sẽ bỏ qua số lượng ở đây và thêm vào Giỏ hàng.
+
+67
+00:05:17,040 --> 00:05:24,150
+Nhưng về cơ bản trên trang web của chúng tôi, chúng tôi có trang chủ và trang chi tiết đang hoạt động như mong đợi.
+

@@ -1,0 +1,184 @@
+1
+00:00:01,680 --> 00:00:09,480
+Bây giờ chúng tôi muốn làm việc trên cùng các chức năng mà chúng tôi có trong dự án MVC với danh mục trong dự án
+
+2
+00:00:09,480 --> 00:00:15,810
+Web hoặc dự án MVC, chúng tôi có bộ điều khiển, nhưng đó không phải là thứ chúng tôi có khi
+
+3
+00:00:15,810 --> 00:00:23,010
+làm việc với các trang dao cạo ở đó chúng tôi có các trang và trong đó chúng ta phải tổ chức mọi thứ.
+
+4
+00:00:23,010 --> 00:00:31,500
+Vì vậy, những gì chúng ta sẽ làm là tạo một thư mục mới cho danh mục và bên trong đó có danh sách tất cả các danh mục,
+
+5
+00:00:31,500 --> 00:00:34,230
+tôi sẽ tạo một trang dao cạo mới.
+
+6
+00:00:34,800 --> 00:00:36,660
+Chúng tôi không có tầm nhìn ở đây.
+
+7
+00:00:36,660 --> 00:00:38,580
+Chúng tôi có các trang dao cạo.
+
+8
+00:00:39,570 --> 00:00:43,110
+Khi chúng tôi nói trang dao cạo, chúng tôi có trang dao cạo trống.
+
+9
+00:00:43,110 --> 00:00:45,270
+Chúng ta sẽ bắt đầu với điều đó.
+
+10
+00:00:46,040 --> 00:00:51,530
+Trang chỉ mục, chúng tôi có thể gọi đó là danh mục mà chúng tôi đang liệt kê tất cả các danh mục.
+
+11
+00:00:51,680 --> 00:00:53,930
+Nhưng tôi có một gợi ý nhỏ.
+
+12
+00:00:53,930 --> 00:01:00,830
+Vì vậy, hãy để tôi kết thúc phần này và nơi chúng tôi có danh mục, nếu bạn biết trong mô hình, chúng tôi có cùng tên.
+
+13
+00:01:01,160 --> 00:01:07,130
+Nếu bạn muốn sử dụng cùng một tên, bạn có thể tiếp tục và làm điều đó, nhưng sau đó bạn
+
+14
+00:01:07,130 --> 00:01:12,290
+sẽ phải thêm các câu lệnh sử dụng hoàn chỉnh nhiều lần để tránh điều đó.
+
+15
+00:01:12,290 --> 00:01:14,750
+Tôi sẽ đổi tên cái này thành danh mục.
+
+16
+00:01:14,750 --> 00:01:17,720
+Bằng cách đó, chúng ta không cần phải rõ ràng.
+
+17
+00:01:18,500 --> 00:01:22,040
+Sau đó, trong các danh mục, chúng tôi sẽ thêm trang dao cạo.
+
+18
+00:01:22,280 --> 00:01:23,110
+Rỗng một cái.
+
+19
+00:01:23,120 --> 00:01:29,180
+Chúng tôi muốn bắt đầu mới và để tôi gọi đó là Index. cshtml.
+
+20
+00:01:30,380 --> 00:01:35,810
+Bây giờ, trong trang này, bạn nhận thấy điều gì đó khác so với khi chúng tôi thêm chế độ xem trong MVC.
+
+21
+00:01:36,230 --> 00:01:41,180
+Vì vậy, một lần nữa, trong MVC, tôi sử dụng thuật ngữ xem trong các trang dao cạo.
+
+22
+00:01:41,180 --> 00:01:45,830
+Chúng tôi có trang dao cạo và tệp CSS sẽ là mô hình trang.
+
+23
+00:01:46,580 --> 00:01:50,240
+Đó sẽ là thuật ngữ mà tôi sẽ sử dụng.
+
+24
+00:01:50,870 --> 00:01:55,740
+Vì vậy, trong trang dao cạo, chúng tôi có mô hình quảng cáo đã được xác định.
+
+25
+00:01:55,790 --> 00:02:01,430
+Và nếu bạn kiểm tra đường dẫn đó là tệp chính xác mà chúng tôi có trong tệp CSS.
+
+26
+00:02:02,370 --> 00:02:07,520
+Nếu bạn nghĩ về điều đó trong MVC, chúng tôi phải xác định điều đó trong các trang Razor.
+
+27
+00:02:07,530 --> 00:02:12,990
+Nó đã tạo tệp CSS đó và thêm tệp đó vào câu lệnh ADD.
+
+28
+00:02:12,990 --> 00:02:19,260
+Và trước đó, chúng tôi có trang THÊM xác định rằng đây sẽ là trang dao cạo.
+
+29
+00:02:20,100 --> 00:02:21,900
+Chúng tôi không cần điều này ở đây.
+
+30
+00:02:21,900 --> 00:02:28,050
+Chúng tôi chỉ có thể có một H1 và chúng tôi có thể nói danh sách danh mục như thế.
+
+31
+00:02:29,230 --> 00:02:30,540
+Đợi đã, một dòng đó.
+
+32
+00:02:30,550 --> 00:02:32,790
+Hãy để tôi chạy dự án Razer.
+
+33
+00:02:32,800 --> 00:02:37,600
+Chúng ta sẽ có dự án khởi nghiệp là Razer xuyên suốt phần này.
+
+34
+00:02:38,050 --> 00:02:41,260
+Vì vậy, làm điều đó và chúng tôi sẽ chạy dự án.
+
+35
+00:02:41,970 --> 00:02:43,260
+Và hoàn hảo.
+
+36
+00:02:43,320 --> 00:02:47,100
+Bây giờ chúng ta sẽ định tuyến đến trang mới mà chúng ta đã thêm như thế nào?
+
+37
+00:02:47,730 --> 00:02:49,800
+Đó là bên trong danh mục.
+
+38
+00:02:49,800 --> 00:02:52,500
+Vì vậy, định tuyến là khá đơn giản.
+
+39
+00:02:52,650 --> 00:02:57,800
+Bất kể vị trí bên trong thư mục trang là gì, đó sẽ là tuyến đường.
+
+40
+00:02:57,810 --> 00:03:00,510
+Vì vậy, danh mục và sau đó lập chỉ mục.
+
+41
+00:03:00,510 --> 00:03:03,000
+Và chúng tôi có danh sách danh mục.
+
+42
+00:03:03,420 --> 00:03:09,060
+Bây giờ chỉ mục luôn là tùy chọn, vì vậy nếu bạn xóa chỉ mục đó, nó sẽ tải cùng một trang.
+
+43
+00:03:09,690 --> 00:03:16,500
+Nhưng với các trang dao cạo, chúng tôi không có định tuyến phức tạp khi thêm phương thức hành động của bộ điều khiển và sau đó
+
+44
+00:03:16,500 --> 00:03:18,000
+là các tham số tuyến đường.
+
+45
+00:03:19,220 --> 00:03:22,850
+Các trang dao cạo có định tuyến rất đơn giản.
+
+46
+00:03:23,330 --> 00:03:27,890
+Với cấu hình đó, hãy để tôi tiếp tục từ video tiếp theo.
+

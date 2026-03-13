@@ -1,0 +1,280 @@
+1
+00:00:01,950 --> 00:00:02,969
+Instructor: Now we have worked
+
+2
+00:00:02,969 --> 00:00:06,630
+on performing current operations on category,
+
+3
+00:00:06,630 --> 00:00:09,270
+but in our website we will be selling books
+
+4
+00:00:09,270 --> 00:00:12,810
+and basically we need product that will contain all
+
+5
+00:00:12,810 --> 00:00:17,580
+of the books of our website and that will have a category.
+
+6
+00:00:17,580 --> 00:00:20,670
+So we need to create a model for our product
+
+7
+00:00:20,670 --> 00:00:24,393
+which is bulk and perform credit operations on that.
+
+8
+00:00:25,560 --> 00:00:27,900
+First thing that we have to do for that
+
+9
+00:00:27,900 --> 00:00:30,660
+is actually create a model.
+
+10
+00:00:30,660 --> 00:00:32,940
+Let me close all the tabs here.
+
+11
+00:00:32,940 --> 00:00:36,810
+We will do that in the bulky book dot models here,
+
+12
+00:00:36,810 --> 00:00:39,960
+right click, add a new class,
+
+13
+00:00:39,960 --> 00:00:43,383
+and I can call that as product.
+
+14
+00:00:45,228 --> 00:00:47,460
+We will make this a public class
+
+15
+00:00:47,460 --> 00:00:51,180
+and what will be all the properties of product.
+
+16
+00:00:51,180 --> 00:00:55,560
+If you recall, inside category, we used data annotations
+
+17
+00:00:55,560 --> 00:00:59,700
+and we had the IT as the primary key.
+
+18
+00:00:59,700 --> 00:01:04,410
+We can copy those two, paste that in product here
+
+19
+00:01:04,410 --> 00:01:07,710
+because we will have ID and rather than name.
+
+20
+00:01:07,710 --> 00:01:10,863
+When we work with a book, we have title.
+
+21
+00:01:11,790 --> 00:01:13,950
+We do not want max length there.
+
+22
+00:01:13,950 --> 00:01:15,183
+This looks good.
+
+23
+00:01:16,800 --> 00:01:19,413
+After that, let me add description,
+
+24
+00:01:19,413 --> 00:01:23,013
+ISBN and author for our product.
+
+25
+00:01:24,090 --> 00:01:26,160
+Now our store is a bulky store
+
+26
+00:01:26,160 --> 00:01:28,710
+where we will be selling books in bulk,
+
+27
+00:01:28,710 --> 00:01:32,610
+so if they buy more books, they will get more discount.
+
+28
+00:01:32,610 --> 00:01:35,490
+For that, let me add first property,
+
+29
+00:01:35,490 --> 00:01:38,070
+which will be list price
+
+30
+00:01:38,070 --> 00:01:41,070
+and I will add a display property here
+
+31
+00:01:41,070 --> 00:01:44,910
+because if you notice here it has a list price.
+
+32
+00:01:44,910 --> 00:01:47,253
+I want to display that with a space.
+
+33
+00:01:48,720 --> 00:01:51,840
+So for that, we have the display data annotation
+
+34
+00:01:51,840 --> 00:01:55,530
+and I will call that as list price.
+
+35
+00:01:55,530 --> 00:01:58,590
+And of course I forgot the name here.
+
+36
+00:01:58,590 --> 00:01:59,703
+That looks good.
+
+37
+00:02:00,840 --> 00:02:03,570
+On top of that, I want a range validation.
+
+38
+00:02:03,570 --> 00:02:06,180
+That price must be between, let's say,
+
+39
+00:02:06,180 --> 00:02:08,252
+one and thousand dollars.
+
+40
+00:02:09,389 --> 00:02:12,000
+Looks good for the list price
+
+41
+00:02:12,000 --> 00:02:14,190
+but our store is a bulky store,
+
+42
+00:02:14,190 --> 00:02:16,650
+so based on the different quantity,
+
+43
+00:02:16,650 --> 00:02:18,960
+we will have different price.
+
+44
+00:02:18,960 --> 00:02:21,213
+Let me paste that three times.
+
+45
+00:02:22,080 --> 00:02:24,960
+The first one, let me call that price.
+
+46
+00:02:24,960 --> 00:02:28,920
+Next one, I will call that price 50,
+
+47
+00:02:28,920 --> 00:02:31,983
+and last one will be price hundred.
+
+48
+00:02:32,850 --> 00:02:35,370
+Price hundred will be price of the book
+
+49
+00:02:35,370 --> 00:02:38,370
+if they buy more than a hundred quantity.
+
+50
+00:02:38,370 --> 00:02:43,370
+Price 50 will be the price for more than 50 quantity
+
+51
+00:02:43,410 --> 00:02:47,433
+and it will be price for one to 50.
+
+52
+00:02:49,020 --> 00:02:51,630
+So list price will be a different price
+
+53
+00:02:51,630 --> 00:02:54,180
+and price here will be the cost
+
+54
+00:02:54,180 --> 00:02:57,720
+of product for the quantity one to 50.
+
+55
+00:02:57,720 --> 00:02:59,820
+If they buy more than 50,
+
+56
+00:02:59,820 --> 00:03:02,550
+then we will give them the price 50.
+
+57
+00:03:02,550 --> 00:03:06,213
+For more than a hundred, we will give them price hundred.
+
+58
+00:03:07,200 --> 00:03:09,810
+Now this looks good for all the properties
+
+59
+00:03:09,810 --> 00:03:12,000
+that we want right now.
+
+60
+00:03:12,000 --> 00:03:15,300
+Of course, we need category inside our product
+
+61
+00:03:15,300 --> 00:03:18,900
+and we also want to add an image to our product
+
+62
+00:03:18,900 --> 00:03:21,660
+but we will do that later on.
+
+63
+00:03:21,660 --> 00:03:24,810
+First I want to keep things super simple.
+
+64
+00:03:24,810 --> 00:03:29,100
+Right now our model has few strings and few double.
+
+65
+00:03:29,100 --> 00:03:32,223
+Kind of similar to what we had for our category.
+
+66
+00:03:33,270 --> 00:03:35,790
+And with that in place, I want you guys
+
+67
+00:03:35,790 --> 00:03:38,910
+to practice CRUD operations on product
+
+68
+00:03:38,910 --> 00:03:41,640
+similar to what we did with category
+
+69
+00:03:41,640 --> 00:03:44,970
+and that will be your next assignment.
+
+70
+00:03:44,970 --> 00:03:48,153
+Let me walk you through that in the next video.
+

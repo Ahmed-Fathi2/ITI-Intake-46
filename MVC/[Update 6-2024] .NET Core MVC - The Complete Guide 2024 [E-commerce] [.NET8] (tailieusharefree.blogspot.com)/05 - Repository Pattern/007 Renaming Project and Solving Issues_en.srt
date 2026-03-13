@@ -1,0 +1,472 @@
+1
+00:00:01,890 --> 00:00:04,320
+-: The next item that I want to show you guys
+
+2
+00:00:04,320 --> 00:00:06,030
+you do not have to do that
+
+3
+00:00:06,030 --> 00:00:09,390
+but I want to show you how that could be done.
+
+4
+00:00:09,390 --> 00:00:10,650
+And what I am talking
+
+5
+00:00:10,650 --> 00:00:14,310
+about is sometimes you might face a situation
+
+6
+00:00:14,310 --> 00:00:17,610
+where you have to rename your project.
+
+7
+00:00:17,610 --> 00:00:19,650
+Like let's say where we have bulky
+
+8
+00:00:19,650 --> 00:00:21,570
+in the project names here
+
+9
+00:00:21,570 --> 00:00:24,933
+we want to modify all of them to be bulky book.
+
+10
+00:00:25,830 --> 00:00:27,780
+So how do we do that?
+
+11
+00:00:27,780 --> 00:00:29,310
+Well, it is pretty simple
+
+12
+00:00:29,310 --> 00:00:33,630
+but there are some things that we will have to modify first.
+
+13
+00:00:33,630 --> 00:00:36,445
+Wherever we have bulky here
+
+14
+00:00:36,445 --> 00:00:39,240
+we will change the project name to be bulky book here
+
+15
+00:00:39,240 --> 00:00:43,290
+and when I do that, we will see an error message.
+
+16
+00:00:43,290 --> 00:00:46,530
+Now typically you will not see this error message
+
+17
+00:00:46,530 --> 00:00:49,650
+but the reason I am seeing that is previously
+
+18
+00:00:49,650 --> 00:00:52,140
+I tried to rename that and because
+
+19
+00:00:52,140 --> 00:00:54,660
+of that a dot user already exists
+
+20
+00:00:54,660 --> 00:00:59,660
+at this location so far that what we will do is right click
+
+21
+00:01:00,420 --> 00:01:02,733
+and let me open that folder.
+
+22
+00:01:04,763 --> 00:01:07,170
+Inside there we have the bulky book web user.
+
+23
+00:01:07,170 --> 00:01:09,180
+We will delete that and then
+
+24
+00:01:09,180 --> 00:01:12,243
+if I try to rename here, it will work.
+
+25
+00:01:13,380 --> 00:01:16,260
+Now again, we don't want the bulky user
+
+26
+00:01:16,260 --> 00:01:21,030
+we want a bulky book web, and perfect.
+
+27
+00:01:21,030 --> 00:01:22,920
+So again, point number one
+
+28
+00:01:22,920 --> 00:01:25,320
+you will not see that error message
+
+29
+00:01:25,320 --> 00:01:28,020
+but I wanted to explicitly show that
+
+30
+00:01:28,020 --> 00:01:30,963
+because of that I introduced that user.
+
+31
+00:01:31,980 --> 00:01:34,380
+Then we have to rename all the project here.
+
+32
+00:01:34,380 --> 00:01:38,013
+Let me do that bulky book dot utility,
+
+33
+00:01:39,060 --> 00:01:41,460
+bulky book dot models
+
+34
+00:01:41,460 --> 00:01:46,460
+and we have bulky book dot data access.
+
+35
+00:01:46,620 --> 00:01:49,980
+Right now we have renamed only the project
+
+36
+00:01:49,980 --> 00:01:52,290
+but all the files like the controller here
+
+37
+00:01:52,290 --> 00:01:55,353
+you can see namespace is using bulky web.
+
+38
+00:01:56,280 --> 00:01:58,170
+In order to change all of that
+
+39
+00:01:58,170 --> 00:02:02,370
+we will do Ctrl-shift-F, find and replace.
+
+40
+00:02:02,370 --> 00:02:05,730
+Wherever we see bulky, we want to replace that
+
+41
+00:02:05,730 --> 00:02:09,577
+with bulky book and let me replace all.
+
+42
+00:02:11,760 --> 00:02:13,203
+Perfect, that works.
+
+43
+00:02:14,100 --> 00:02:16,500
+But now if you notice the controller
+
+44
+00:02:16,500 --> 00:02:18,840
+the namespace is modified here
+
+45
+00:02:18,840 --> 00:02:21,960
+but the repository and everything you can see it
+
+46
+00:02:21,960 --> 00:02:24,033
+is not detecting those project.
+
+47
+00:02:24,870 --> 00:02:26,580
+While sometimes it might happen
+
+48
+00:02:26,580 --> 00:02:28,470
+that it detects that project
+
+49
+00:02:28,470 --> 00:02:31,590
+it all depends on the dependencies here.
+
+50
+00:02:31,590 --> 00:02:34,500
+I am not able to open the dependencies
+
+51
+00:02:34,500 --> 00:02:37,743
+so let me restart visual studio.
+
+52
+00:02:40,950 --> 00:02:45,120
+Once I do that, it will reload everything and perfect.
+
+53
+00:02:45,120 --> 00:02:48,210
+Now in dependencies, when you examine project
+
+54
+00:02:48,210 --> 00:02:50,970
+it has bulky book dot data access
+
+55
+00:02:50,970 --> 00:02:53,380
+and it is working as expected
+
+56
+00:02:54,750 --> 00:02:56,910
+but you can see the models here is not
+
+57
+00:02:56,910 --> 00:03:00,180
+working, so if we examine the dependencies
+
+58
+00:03:00,180 --> 00:03:01,890
+in the data project
+
+59
+00:03:01,890 --> 00:03:04,590
+you can see the name here is messed up
+
+60
+00:03:04,590 --> 00:03:06,693
+because we renamed a few things.
+
+61
+00:03:07,770 --> 00:03:11,490
+Changing that is super simple, edit project file.
+
+62
+00:03:11,490 --> 00:03:14,880
+We will remove both the dependencies here
+
+63
+00:03:14,880 --> 00:03:18,270
+and we will add the project reference once again
+
+64
+00:03:18,270 --> 00:03:20,673
+to models and utility.
+
+65
+00:03:23,280 --> 00:03:26,520
+Perfect. With that, everything should be fixed here.
+
+66
+00:03:26,520 --> 00:03:31,520
+Let me build the solution and great, that worked.
+
+67
+00:03:31,920 --> 00:03:34,620
+Finally, let me run the application
+
+68
+00:03:34,620 --> 00:03:39,090
+and show you something odd, and great.
+
+69
+00:03:39,090 --> 00:03:43,410
+Right now you can see everything is working as expected
+
+70
+00:03:43,410 --> 00:03:46,050
+but for some of you the footer here
+
+71
+00:03:46,050 --> 00:03:48,690
+will not be properly designed.
+
+72
+00:03:48,690 --> 00:03:52,200
+And let me show you how it will look like.
+
+73
+00:03:52,200 --> 00:03:56,610
+If we go to views, shared underscored layout.
+
+74
+00:03:56,610 --> 00:04:00,330
+Let me break the CSS and perfect.
+
+75
+00:04:00,330 --> 00:04:03,720
+So this is exactly how it will look like.
+
+76
+00:04:03,720 --> 00:04:05,730
+You might be wondering that, hey,
+
+77
+00:04:05,730 --> 00:04:10,620
+what exactly is the CSS, and why is it present?
+
+78
+00:04:10,620 --> 00:04:14,070
+Well, what happens is that is automatically localization
+
+79
+00:04:14,070 --> 00:04:17,910
+and bundling that is being done with the CSS.
+
+80
+00:04:17,910 --> 00:04:20,820
+This has been introduced with .NET 6.
+
+81
+00:04:20,820 --> 00:04:24,900
+If you examine the underscored layout dot CS HTML
+
+82
+00:04:24,900 --> 00:04:27,180
+there is a .CSS file
+
+83
+00:04:27,180 --> 00:04:31,263
+and it is automatically scoped to underscored layout.
+
+84
+00:04:32,340 --> 00:04:36,360
+In order for this to be automatically added to CSS.
+
+85
+00:04:36,360 --> 00:04:38,100
+inside the link here
+
+86
+00:04:38,100 --> 00:04:42,753
+we need the HREF with the project name dot style dot CSS.
+
+87
+00:04:43,920 --> 00:04:47,640
+That is the CSS isolation that has been introduced
+
+88
+00:04:47,640 --> 00:04:50,133
+and I wanted to show that as well.
+
+89
+00:04:51,360 --> 00:04:54,600
+So once that matches, it automatically binds
+
+90
+00:04:54,600 --> 00:04:59,553
+that and you can see the footer is functional as expected,
+
+91
+00:05:00,420 --> 00:05:04,683
+but if you go to category here, things again will not work.
+
+92
+00:05:05,700 --> 00:05:07,830
+You can see the exception here
+
+93
+00:05:07,830 --> 00:05:11,040
+and that is because knowingly or unknowingly
+
+94
+00:05:11,040 --> 00:05:15,480
+we have also updated the database name to be bulky book.
+
+95
+00:05:15,480 --> 00:05:17,550
+This has to be bulky.
+
+96
+00:05:17,550 --> 00:05:20,740
+We did not intend to update the database name
+
+97
+00:05:21,750 --> 00:05:24,720
+with the Ctrl-shift-F when we updated.
+
+98
+00:05:24,720 --> 00:05:27,240
+It updated the database name as well.
+
+99
+00:05:27,240 --> 00:05:30,030
+Because of that, the connection was broken.
+
+100
+00:05:30,030 --> 00:05:32,100
+And when we modified back,
+
+101
+00:05:32,100 --> 00:05:35,103
+everything is working as expected.
+
+102
+00:05:36,090 --> 00:05:39,990
+So even though we have spent about 10 minutes on this video
+
+103
+00:05:39,990 --> 00:05:42,750
+we have learned some things important.
+
+104
+00:05:42,750 --> 00:05:45,750
+First, we saw the CSS isolation that comes
+
+105
+00:05:45,750 --> 00:05:47,400
+with the styling here.
+
+106
+00:05:47,400 --> 00:05:51,420
+And next we saw how can we modify the project name
+
+107
+00:05:51,420 --> 00:05:53,850
+and if we modify, some dependencies
+
+108
+00:05:53,850 --> 00:05:57,540
+gets broken, how can we fix that and make sure
+
+109
+00:05:57,540 --> 00:06:00,783
+our project is working as expected.
+
+110
+00:06:01,950 --> 00:06:04,140
+Now traditionally in a programming course,
+
+111
+00:06:04,140 --> 00:06:06,690
+you will not see this common issues
+
+112
+00:06:06,690 --> 00:06:10,080
+but when you are working with a real world project
+
+113
+00:06:10,080 --> 00:06:13,200
+I myself have encountered these issues
+
+114
+00:06:13,200 --> 00:06:16,170
+and that is why I wanted to spend some time
+
+115
+00:06:16,170 --> 00:06:19,080
+to give you exposure to these issues
+
+116
+00:06:19,080 --> 00:06:20,703
+and how to resolve them.
+
+117
+00:06:21,570 --> 00:06:23,970
+I hope this video was helpful
+
+118
+00:06:23,970 --> 00:06:27,693
+and let me continue with the course from the next video.
+

@@ -1,0 +1,376 @@
+1
+00:00:01,740 --> 00:00:03,719
+Instructor: Now in our project we have
+
+2
+00:00:03,719 --> 00:00:05,550
+category repository
+
+3
+00:00:05,550 --> 00:00:09,558
+and that is handling the CRUD operations for category.
+
+4
+00:00:09,558 --> 00:00:14,558
+Category repository looks good but it is not perfect.
+
+5
+00:00:14,790 --> 00:00:16,350
+And what I mean by that is
+
+6
+00:00:16,350 --> 00:00:19,380
+let me go to controller here and let's think
+
+7
+00:00:19,380 --> 00:00:22,470
+that in a controller you have many action method
+
+8
+00:00:22,470 --> 00:00:26,190
+and you are using about 10 different repositories.
+
+9
+00:00:26,190 --> 00:00:28,470
+You will have to inject all of them.
+
+10
+00:00:28,470 --> 00:00:30,510
+That is completely okay.
+
+11
+00:00:30,510 --> 00:00:33,030
+That actually gives you the freedom that hey
+
+12
+00:00:33,030 --> 00:00:36,510
+you only inject the repository that is needed.
+
+13
+00:00:36,510 --> 00:00:41,100
+But one drawback here is if you go to repository, and
+
+14
+00:00:41,100 --> 00:00:45,870
+if we go to category repository, we have the save method.
+
+15
+00:00:45,870 --> 00:00:47,850
+Now this save method will be there
+
+16
+00:00:47,850 --> 00:00:51,000
+in all the individual repositories that we will have
+
+17
+00:00:51,000 --> 00:00:54,780
+down the road like product, order, shopping cart
+
+18
+00:00:54,780 --> 00:00:57,060
+and everyone else.
+
+19
+00:00:57,060 --> 00:00:59,730
+But the save functionality is not relevant
+
+20
+00:00:59,730 --> 00:01:02,370
+to the repository or the model.
+
+21
+00:01:02,370 --> 00:01:04,983
+It is a global method that is being used.
+
+22
+00:01:06,000 --> 00:01:09,780
+So the correct way of doing things is to have the save
+
+23
+00:01:09,780 --> 00:01:13,200
+and something called us unit of work.
+
+24
+00:01:13,200 --> 00:01:16,380
+But before I implement that, I do want to tell you
+
+25
+00:01:16,380 --> 00:01:19,620
+that if you only want to use the category repository
+
+26
+00:01:19,620 --> 00:01:23,010
+in a project, that is completely okay.
+
+27
+00:01:23,010 --> 00:01:26,910
+Adding a unit of work is not always required.
+
+28
+00:01:26,910 --> 00:01:30,660
+I like that personally because it gives a clean approach.
+
+29
+00:01:30,660 --> 00:01:33,510
+But with that there are some drawbacks as well
+
+30
+00:01:33,510 --> 00:01:36,933
+which I will cover as we proceed with the goals.
+
+31
+00:01:37,893 --> 00:01:40,950
+But before that, we have the big question
+
+32
+00:01:40,950 --> 00:01:44,130
+on how will we have the unit of work.
+
+33
+00:01:44,130 --> 00:01:49,130
+Inside the IRepository here, let me add a new item.
+
+34
+00:01:49,140 --> 00:01:54,030
+Let me stop the project first, right click, add a new item.
+
+35
+00:01:54,998 --> 00:01:58,260
+And with the new version of Visual Studio
+
+36
+00:01:58,260 --> 00:02:01,380
+they have implemented a compact view.
+
+37
+00:02:01,380 --> 00:02:04,620
+I do like that when I have to add the CS file
+
+38
+00:02:04,620 --> 00:02:09,180
+but for interface, we can click show all templates here
+
+39
+00:02:09,180 --> 00:02:13,153
+interface and rename that to be IUnitOfWork.
+
+40
+00:02:16,020 --> 00:02:20,793
+Let's add that and we will make this a public interface.
+
+41
+00:02:22,200 --> 00:02:24,870
+In here we will have all the repositories
+
+42
+00:02:24,870 --> 00:02:27,330
+so ICategoryRepository
+
+43
+00:02:27,330 --> 00:02:30,870
+and we will only have the get inside there.
+
+44
+00:02:30,870 --> 00:02:35,283
+Next we can implement the global method here, like save.
+
+45
+00:02:36,240 --> 00:02:37,620
+Now the implementation
+
+46
+00:02:37,620 --> 00:02:40,710
+of how we will get the category repository.
+
+47
+00:02:40,710 --> 00:02:44,220
+That will be done in repository folder.
+
+48
+00:02:44,220 --> 00:02:47,130
+We will create, I can use the compact view.
+
+49
+00:02:47,130 --> 00:02:49,560
+I need only the class file.
+
+50
+00:02:49,560 --> 00:02:51,843
+I will call that unit of work.
+
+51
+00:02:54,900 --> 00:02:56,670
+This will be a public class
+
+52
+00:02:56,670 --> 00:03:00,393
+and it'll implement the IUnit of work interface.
+
+53
+00:03:01,676 --> 00:03:05,700
+We will press CTRL dot and implement the interface.
+
+54
+00:03:05,700 --> 00:03:06,533
+Perfect.
+
+55
+00:03:07,470 --> 00:03:09,000
+We need an implementation
+
+56
+00:03:09,000 --> 00:03:11,550
+for the category repository here.
+
+57
+00:03:11,550 --> 00:03:16,323
+Let me add a getter and a private setter right there.
+
+58
+00:03:17,850 --> 00:03:20,520
+Now like in the category repository
+
+59
+00:03:20,520 --> 00:03:24,900
+we had application DB context using dependency injection.
+
+60
+00:03:24,900 --> 00:03:26,640
+We will do the same thing
+
+61
+00:03:26,640 --> 00:03:31,233
+and that will be done in unit of work right here.
+
+62
+00:03:32,550 --> 00:03:34,620
+We will have the class name as unit
+
+63
+00:03:34,620 --> 00:03:38,460
+of work here and we do not have any base clause.
+
+64
+00:03:38,460 --> 00:03:41,907
+We can remove that, right here where we have
+
+65
+00:03:41,907 --> 00:03:44,040
+the category repository.
+
+66
+00:03:44,040 --> 00:03:46,530
+We can add that in the constructor.
+
+67
+00:03:46,530 --> 00:03:48,960
+Let me cut and paste it here.
+
+68
+00:03:48,960 --> 00:03:53,820
+I will call that category and we will say category is equal
+
+69
+00:03:55,311 --> 00:03:57,183
+to new category repository.
+
+70
+00:03:58,830 --> 00:04:02,103
+And we'll pass the DB context right there.
+
+71
+00:04:02,940 --> 00:04:04,680
+And we have an error here
+
+72
+00:04:04,680 --> 00:04:09,000
+because in interface we call that category repository.
+
+73
+00:04:09,000 --> 00:04:11,847
+We change that to category here
+
+74
+00:04:11,847 --> 00:04:14,730
+and perfect, the error goes away.
+
+75
+00:04:14,730 --> 00:04:16,410
+So now in unit of work
+
+76
+00:04:16,410 --> 00:04:19,769
+we have something for category repository where
+
+77
+00:04:19,769 --> 00:04:22,593
+we are passing the DB context as well.
+
+78
+00:04:23,550 --> 00:04:26,790
+Lastly, let me modify the save here
+
+79
+00:04:26,790 --> 00:04:30,570
+cut that and paste the implementation here.
+
+80
+00:04:30,570 --> 00:04:33,000
+And we do not need the save method
+
+81
+00:04:33,000 --> 00:04:36,240
+inside the individual repository.
+
+82
+00:04:36,240 --> 00:04:39,783
+I'll have to remove that from the interface as well.
+
+83
+00:04:41,070 --> 00:04:42,690
+And perfect.
+
+84
+00:04:42,690 --> 00:04:43,623
+Looks good.
+
+85
+00:04:44,940 --> 00:04:48,240
+So with that, our unit of work looks good
+
+86
+00:04:48,240 --> 00:04:52,143
+and it has the implementation for our category repository.
+
+87
+00:04:53,190 --> 00:04:55,710
+Let me close both the files here
+
+88
+00:04:55,710 --> 00:04:58,380
+and in the next video let me work
+
+89
+00:04:58,380 --> 00:05:01,710
+on category controller, not the repository.
+
+90
+00:05:01,710 --> 00:05:04,023
+I closed that accidentally.
+
+91
+00:05:05,040 --> 00:05:07,860
+We have category controller here.
+
+92
+00:05:07,860 --> 00:05:11,130
+We do not want to use the category repository.
+
+93
+00:05:11,130 --> 00:05:14,820
+We want to use the unit of work that we configured
+
+94
+00:05:14,820 --> 00:05:19,353
+because it internally has category repository as well.
+

@@ -1,0 +1,64 @@
+1
+00:00:01,700 --> 00:00:08,150
+Trước khi chúng ta tiếp tục, hãy để tôi hướng dẫn bạn những kỳ vọng của tôi trước khi bạn tham gia khóa học.
+
+2
+00:00:08,630 --> 00:00:11,780
+Khóa học này có rất ít điều kiện tiên quyết.
+
+3
+00:00:11,930 --> 00:00:12,920
+Như bạn đã biết.
+
+4
+00:00:12,920 --> 00:00:16,890
+Chúng ta sẽ học ASP. NET Core MVC trong khóa học này.
+
+5
+00:00:16,910 --> 00:00:22,970
+Do đó, bạn phải có hiểu biết cơ bản về ngôn ngữ lập trình C-sharp.
+
+6
+00:00:23,240 --> 00:00:28,300
+Nếu bạn đã làm việc với . net, điều đó hoàn toàn ổn.
+
+7
+00:00:28,310 --> 00:00:34,820
+Miễn là bạn hiểu những nền tảng cơ bản của C#, bạn sẽ thành thạo khóa học.
+
+8
+00:00:35,650 --> 00:00:40,300
+Trên hết, chúng tôi sẽ sử dụng SQL Server cho cơ sở dữ liệu của mình.
+
+9
+00:00:40,480 --> 00:00:45,280
+Vì vậy, bạn nên có một số kinh nghiệm trong việc viết truy vấn cho SQL Server.
+
+10
+00:00:45,640 --> 00:00:53,560
+Tôi không muốn bất kỳ trải nghiệm ưa thích nào như các hàm và bất kỳ thứ gì phức tạp, nhưng SQL cơ bản như câu lệnh
+
+11
+00:00:53,590 --> 00:00:57,310
+chọn, câu lệnh xóa và các cú pháp SQL cơ bản đó.
+
+12
+00:00:57,340 --> 00:00:59,410
+Bạn nên làm quen với chúng.
+
+13
+00:00:59,710 --> 00:01:05,860
+Miễn là bạn có hai nền tảng cơ bản này, bạn sẽ không gặp phải bất kỳ vấn đề nào trong khóa học.
+
+14
+00:01:06,190 --> 00:01:13,870
+Tôi sẽ bắt đầu từ Ground zero khi giải thích. net MVC và cách mọi thứ kết hợp với
+
+15
+00:01:13,870 --> 00:01:14,770
+nhau.
+
+16
+00:01:15,690 --> 00:01:19,080
+Với điều đó, hãy để tôi tiếp tục từ video tiếp theo.
+

@@ -1,0 +1,360 @@
+1
+00:00:01,589 --> 00:00:06,570
+Chúng tôi muốn triển khai mẫu kho lưu trữ để truy cập dữ liệu bên trong dự án của mình.
+
+2
+00:00:07,140 --> 00:00:13,110
+Vì đây là một dự án lớn, nên có một mẫu kho lưu trữ luôn tốt hơn là truy cập trực tiếp vào cơ sở
+
+3
+00:00:13,110 --> 00:00:18,180
+dữ liệu đó như chúng ta đang thực hiện bên trong bộ điều khiển ngay tại đây.
+
+4
+00:00:19,260 --> 00:00:25,020
+Vì vậy, hãy để tôi đóng tất cả các vòi ở đây và bắt đầu làm mới với dự án truy cập dữ liệu của chúng ta.
+
+5
+00:00:25,390 --> 00:00:26,980
+Chúng ta cần tạo dự án đó.
+
+6
+00:00:28,110 --> 00:00:34,950
+Vì vậy, điều đầu tiên, hãy để tôi tạo một thư mục ở đây với tên là kho lưu trữ và bên trong đó,
+
+7
+00:00:34,950 --> 00:00:42,060
+nó sẽ tạo một thư mục, những gì tôi lưu trữ, sẽ chứa tất cả giao diện và việc triển khai sẽ nằm trong
+
+8
+00:00:42,060 --> 00:00:43,650
+kho lưu trữ.
+
+9
+00:00:44,810 --> 00:00:49,670
+Vì vậy, chúng tôi có thể di chuyển kho lưu trữ của mình bên trong thư mục kho lưu trữ như vậy.
+
+10
+00:00:50,480 --> 00:00:57,920
+Vì vậy, trước tiên, hãy để tôi triển khai giao diện bên trong kho lưu trữ nơi chúng tôi triển khai giao diện và mọi cuộc
+
+11
+00:00:57,920 --> 00:00:59,710
+gọi mà tôi có về cơ bản.
+
+12
+00:01:00,140 --> 00:01:06,680
+Hãy hy vọng rằng đây sẽ là một giao diện công khai và giao diện này phải chung chung.
+
+13
+00:01:07,310 --> 00:01:14,090
+Hiện tại, chúng tôi có danh mục, nhưng trong tương lai, chúng tôi sẽ có loại công ty bao gồm, đơn đặt hàng của người dùng, cách
+
+14
+00:01:14,090 --> 00:01:16,520
+đặt hàng chi tiết và nhiều thông tin khác.
+
+15
+00:01:17,180 --> 00:01:20,930
+Điều này xảy ra mà chúng ta sẽ có thể xử lý tất cả các lớp.
+
+16
+00:01:21,770 --> 00:01:26,660
+Ở đây có thể nói đây sẽ là một kho gen mà nó là một lớp.
+
+17
+00:01:27,260 --> 00:01:29,630
+Nó không quan trọng những gì cổ điển sẽ được.
+
+18
+00:01:29,660 --> 00:01:31,430
+Chúng ta không cần phải xác định điều đó ở đây.
+
+19
+00:01:31,730 --> 00:01:33,320
+Nó sẽ chỉ là một lớp học.
+
+20
+00:01:33,950 --> 00:01:36,710
+Sau đó, nó có thể là một danh mục mà chúng ta có ngay bây giờ.
+
+21
+00:01:36,740 --> 00:01:39,200
+Phóng viên của chúng tôi đã phải đặt hàng chi tiết.
+
+22
+00:01:39,860 --> 00:01:42,590
+Chúng tôi không quan tâm đến điều đó bên trong tủ quần áo của chúng tôi.
+
+23
+00:01:43,250 --> 00:01:45,500
+Đây sẽ là một kho gen.
+
+24
+00:01:46,430 --> 00:01:51,140
+Vì vậy, theo giả thuyết, hãy giả sử rằng bây giờ đây là Loại bốn.
+
+25
+00:01:52,310 --> 00:01:58,240
+Trong trường hợp đó, các phương pháp phổ biến mà chúng tôi muốn triển khai để kiểm tra những phương pháp đó là gì?
+
+26
+00:01:58,250 --> 00:02:01,070
+Chúng ta có thể quay lại dự án thú cưng của mình ở đó.
+
+27
+00:02:01,130 --> 00:02:07,150
+Chúng tôi có thư mục bộ điều khiển có thể giảm thiểu điều đó và chèn thư mục bộ điều khiển.
+
+28
+00:02:07,440 --> 00:02:14,780
+Hãy mở bộ điều khiển để bạn có thể thấy ở đây chúng tôi có vô số AI nơi chúng tôi nhận được tất cả các danh mục.
+
+29
+00:02:15,380 --> 00:02:18,980
+Vì vậy, chúng ta cần thực hiện điều đó ở đây trong danh mục di truyền.
+
+30
+00:02:19,370 --> 00:02:23,540
+Chúng ta có thể gõ nên trong vô số d t.
+
+31
+00:02:23,570 --> 00:02:25,610
+Về cơ bản, chúng tôi có thể là bất kỳ lớp nào.
+
+32
+00:02:25,760 --> 00:02:30,440
+Nó có thể là danh mục khi chúng ta đang sử dụng bên trong bộ điều khiển danh mục.
+
+33
+00:02:31,460 --> 00:02:33,470
+Chúng tôi không muốn bất kỳ tham số nào ở đây.
+
+34
+00:02:33,860 --> 00:02:36,200
+Chúng tôi chỉ muốn truy xuất tất cả các danh mục.
+
+35
+00:02:36,530 --> 00:02:38,300
+Đó là yêu cầu đầu tiên của chúng tôi.
+
+36
+00:02:39,230 --> 00:02:43,490
+Sau đó, nếu họ vặn nó xuống, chúng tôi có yêu cầu thêm một danh mục.
+
+37
+00:02:44,270 --> 00:02:50,450
+Vì vậy, khi chúng tôi thêm một danh mục, chúng tôi sẽ chuyển đối tượng cần thêm, là một đối tượng
+
+38
+00:02:50,450 --> 00:02:51,230
+của lớp.
+
+39
+00:02:52,160 --> 00:02:54,260
+Vì vậy, hãy thực hiện điều đó ngay tại đây.
+
+40
+00:02:54,800 --> 00:02:57,640
+Kiểu trả về sẽ là tên phương thức màu trắng.
+
+41
+00:02:57,650 --> 00:02:58,730
+Chúng ta có thể cho nó đi trước.
+
+42
+00:02:59,000 --> 00:03:03,200
+Và sau đó, tham số chúng tôi sẽ cung cấp cho thực thể cần được thêm vào.
+
+43
+00:03:04,580 --> 00:03:11,600
+Hãy quay lại yêu cầu tiếp theo của bộ điều khiển mà chúng tôi đã thêm nó và bên trong đã thêm vào, chúng tôi muốn tìm
+
+44
+00:03:11,600 --> 00:03:13,290
+điều đó dựa trên ý tưởng.
+
+45
+00:03:14,390 --> 00:03:20,960
+Bây giờ nếu bạn nhớ ở đây, bạn có thể sử dụng để tìm nhanh cách đó hoạt động nếu thứ bạn đang tìm là khóa chính.
+
+46
+00:03:21,620 --> 00:03:27,930
+Nhưng nếu đó không phải là khóa chính, bạn có thể sử dụng Star Default để tìm khóa đó dựa trên ý tưởng.
+
+47
+00:03:29,070 --> 00:03:33,180
+Tất nhiên, với mặc định đầu tiên của chúng tôi, bạn cần câu lệnh sử dụng của Liên kết.
+
+48
+00:03:33,750 --> 00:03:38,580
+Nhưng cùng với đó, cách tiếp cận này sẽ hoạt động trên bất kỳ cột nào, không chỉ ý tưởng.
+
+49
+00:03:39,650 --> 00:03:46,090
+Vì vậy, giả sử nếu bạn định tìm một danh mục có tên bằng với một số tên mà bạn có ở đây, điều này sẽ hoạt động với
+
+50
+00:03:46,520 --> 00:03:50,720
+mặc định ngôi sao đầu tiên, nhưng nó sẽ không hoạt động với Tìm kiếm.
+
+51
+00:03:51,440 --> 00:03:57,500
+Vì vậy, thay vì triển khai find trong khả năng đó, sẽ hợp lý hơn khi triển khai một cái gì đó như mặc
+
+52
+00:03:57,500 --> 00:03:58,400
+định bốn sao.
+
+53
+00:03:59,470 --> 00:04:05,890
+Vì vậy, chúng tôi có thể quay lại kho lưu trữ và hãy thực hiện mặc định đầu tiên của chúng tôi ngay từ đầu.
+
+54
+00:04:06,610 --> 00:04:09,520
+Kiểu trả về mặc định đầu tiên của chúng ta sẽ là gì?
+
+55
+00:04:10,060 --> 00:04:16,959
+Nó sẽ trả về một đối tượng của lớp mà chúng ta muốn để đây sẽ là Lớp D chung sẽ là kiểu
+
+56
+00:04:16,959 --> 00:04:18,050
+trả về.
+
+57
+00:04:18,880 --> 00:04:22,420
+Chúng ta có thể gọi phương thức này là get first mặc định.
+
+58
+00:04:24,790 --> 00:04:31,300
+Và tham số ở đây sẽ là gì, tham số mà họ muốn ở đây, biểu thức này hay cái gì đó tương
+
+59
+00:04:31,300 --> 00:04:31,840
+tự?
+
+60
+00:04:32,590 --> 00:04:39,290
+Chúng ta có thể có biểu thức chính xác này bên trong tham số vì đây là một biểu thức bên trong.
+
+61
+00:04:39,610 --> 00:04:47,260
+Chúng tôi có một chức năng đang xử lý một số tình huống và lọc dữ liệu để triển khai chức năng chính xác này.
+
+62
+00:04:47,650 --> 00:04:55,150
+Nếu họ đi đến một kho lưu trữ, chúng tôi sẽ nói rằng chúng tôi muốn có một biểu thức ở đây với điều khiển nhấn nói cho
+
+63
+00:04:55,150 --> 00:05:00,460
+biểu thức được liên kết vì đó là một biểu thức liên kết bên trong biểu thức đó.
+
+64
+00:05:00,550 --> 00:05:07,180
+Chúng ta có một hàm mà tham số đầu tiên là kính di truyền và đầu ra sẽ là Boolean.
+
+65
+00:05:07,630 --> 00:05:09,580
+Chúng tôi sẽ gọi đó là một bộ lọc.
+
+66
+00:05:10,730 --> 00:05:17,210
+Đây sẽ là một thuộc tính bắt buộc khi chúng ta gọi con mèo đầu tiên, mặc định của chúng ta, bởi vì nếu chúng ta chỉ
+
+67
+00:05:17,210 --> 00:05:21,530
+có một bản ghi, thì chúng luôn có thể cần một điều kiện nghiêm trọng.
+
+68
+00:05:22,430 --> 00:05:27,050
+Vì vậy, với điều đó, chúng tôi đã xử lý tình huống mặc định đầu tiên này một cách hoàn hảo.
+
+69
+00:05:27,770 --> 00:05:34,160
+Chúng tôi có thể sử dụng mã này nếu bạn muốn hoặc bạn có thể bỏ ghi chú mã mà chúng tôi đã có trước đó, nó sẽ vẫn hoạt động như
+
+70
+00:05:34,160 --> 00:05:34,550
+cũ.
+
+71
+00:05:35,630 --> 00:05:40,910
+Tiếp theo, hãy cuộn xuống, chúng tôi phải chỉnh sửa bài đăng nơi chúng tôi đang cập nhật một số bản ghi.
+
+72
+00:05:41,950 --> 00:05:47,620
+Bây giờ, cập nhật là thứ sẽ không phổ biến đối với tất cả các kho lưu trữ, vì giả sử khi bạn đang cập
+
+73
+00:05:47,620 --> 00:05:52,210
+nhật danh mục, bạn có một logic khác khi bạn đang cập nhật một sản phẩm.
+
+74
+00:05:52,240 --> 00:05:56,590
+Bạn có một logic khác vì bạn có hình ảnh cần được cập nhật.
+
+75
+00:05:57,570 --> 00:06:04,290
+Vì vậy, bản cập nhật không phải là thứ nhất quán trên tất cả các mô hình mà chúng tôi có, do đó, sẽ
+
+76
+00:06:04,300 --> 00:06:08,680
+hợp lý nếu không đưa nó vào bên trong kho lưu trữ di truyền.
+
+77
+00:06:09,800 --> 00:06:16,700
+Vì vậy, chúng tôi sẽ quay lại để cập nhật trong các video sau, sau đó, chúng tôi có phần dẫn đầu mà chúng tôi thấy rằng chúng
+
+78
+00:06:16,700 --> 00:06:23,180
+tôi đã triển khai con mèo trước, mặc định của chúng tôi và chúng tôi có nhiều hành động nhất khi chúng tôi loại bỏ
+
+79
+00:06:23,180 --> 00:06:25,800
+thứ gì đó khó coi, một động thái ở đây .
+
+80
+00:06:25,820 --> 00:06:27,870
+Chúng tôi chỉ muốn loại bỏ một thực thể.
+
+81
+00:06:28,040 --> 00:06:35,570
+Vì vậy, chúng tôi phải vượt qua điều đó và loại trả về sẽ có màu trắng để chúng tôi có thể sao chép phần bổ sung ở đây, dựa trên một lần nữa,
+
+82
+00:06:35,570 --> 00:06:36,350
+đã loại bỏ xa.
+
+83
+00:06:38,910 --> 00:06:44,820
+Cuối cùng, có thể bạn muốn xóa nhiều thực thể cho đến nay chúng tôi có một thứ gọi
+
+84
+00:06:45,110 --> 00:06:48,720
+là phạm vi xóa khi chúng tôi muốn xóa phạm vi.
+
+85
+00:06:48,900 --> 00:06:51,300
+Chúng tôi sẽ nhận được nhiều hơn một thực thể ở đây.
+
+86
+00:06:51,630 --> 00:06:58,620
+Vì vậy, thay vì hai ở đây, chúng ta sẽ nhận được vô số trà, là một tập hợp các thực thể.
+
+87
+00:06:59,760 --> 00:07:06,690
+Vì vậy, với điều đó, kho lưu trữ di truyền của chúng ta có vẻ tốt khi chúng ta tiếp tục với cái lạnh, chúng ta đã đối mặt với một số tình huống
+
+88
+00:07:06,690 --> 00:07:07,380
+phức tạp.
+
+89
+00:07:07,590 --> 00:07:10,890
+Và chúng tôi sẽ quay lại đây để sửa đổi kho lưu trữ của chúng tôi.
+
+90
+00:07:11,940 --> 00:07:15,030
+Vì vậy, với điều đó, hãy tiếp tục từ đài phát thanh tiếp theo.
+

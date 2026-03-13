@@ -1,0 +1,148 @@
+1
+00:00:02,000 --> 00:00:07,460
+Những gì chúng ta phải làm là tạo một dự án bằng Visual Studio 2022.
+
+2
+00:00:08,029 --> 00:00:16,670
+Tôi đã mở Visual Studio 2022 tại đây và tôi sẽ chọn tạo một dự án mới ở phía bên tay trái tại đây.
+
+3
+00:00:16,670 --> 00:00:23,030
+Tôi sẽ có các mẫu dự án gần đây, nhưng điều chúng tôi muốn làm ở đây là tìm kiếm MVC.
+
+4
+00:00:23,390 --> 00:00:27,740
+Và cùng với đó, chúng ta sẽ nhận được ASP. NET Core Web ứng dụng.
+
+5
+00:00:28,040 --> 00:00:32,030
+Bây giờ dự án chúng tôi muốn làm việc là ứng dụng MVC.
+
+6
+00:00:32,030 --> 00:00:36,200
+Vì vậy, hãy đảm bảo chọn cái có Model View và Controller.
+
+7
+00:00:36,560 --> 00:00:42,440
+Ngoài ra còn có một ứng dụng web không có MVC sử dụng các trang dao cạo.
+
+8
+00:00:42,590 --> 00:00:44,300
+Chúng tôi không muốn điều đó.
+
+9
+00:00:45,350 --> 00:00:51,590
+Chúng tôi sẽ cung cấp cho dự án của chúng tôi một tên web cồng kềnh, vị trí bất cứ nơi nào bạn muốn lưu nó.
+
+10
+00:00:51,590 --> 00:00:53,630
+Và sau đó chúng ta cần một giải pháp.
+
+11
+00:00:53,630 --> 00:00:55,820
+Tên. bây giờ là tên
+
+12
+00:00:55,820 --> 00:01:01,670
+giải pháp, tôi sẽ giữ nó cồng kềnh vì trong đó chúng ta sẽ có nhiều dự án.
+
+13
+00:01:01,670 --> 00:01:05,390
+Với cấu hình đó, hãy để tôi nhấn nút tiếp theo.
+
+14
+00:01:05,810 --> 00:01:09,320
+Khung mà chúng tôi muốn sử dụng là . mạng tám.
+
+15
+00:01:09,350 --> 00:01:12,530
+Chúng tôi sẽ chọn loại xác thực đó.
+
+16
+00:01:12,530 --> 00:01:15,410
+Chúng tôi sẽ thêm xác thực sau này.
+
+17
+00:01:15,410 --> 00:01:22,010
+Nhưng ngay bây giờ chúng tôi muốn giữ mọi thứ cực kỳ đơn giản và sau đó chúng tôi sẽ thêm vào dự án của mình.
+
+18
+00:01:22,460 --> 00:01:27,560
+Vì vậy, ngay bây giờ chúng tôi sẽ giữ nguyên cấu hình đó cho HTTPS.
+
+19
+00:01:27,590 --> 00:01:30,320
+Điều đó có vẻ tốt và chúng tôi sẽ không kiểm tra điều đó.
+
+20
+00:01:30,320 --> 00:01:32,630
+Không sử dụng báo cáo cấp cao nhất.
+
+21
+00:01:32,630 --> 00:01:37,880
+Nó chỉ thêm các câu lệnh sử dụng ở trên cùng và nó không quan trọng lắm.
+
+22
+00:01:37,880 --> 00:01:42,230
+Đó là lý do tại sao chúng ta có thể bỏ qua điều đó và nhấn nút tạo.
+
+23
+00:01:43,210 --> 00:01:48,580
+Chỉ cần nhấp vào nút đó, điều kỳ diệu sẽ xảy ra và dự án của bạn được tạo.
+
+24
+00:01:49,800 --> 00:01:54,340
+Tôi sẽ khám phá tất cả các tệp và thư mục đang được tạo theo mặc định.
+
+25
+00:01:54,360 --> 00:01:58,050
+Nhưng trước đó, hãy để tôi thêm phần này vào kiểm soát nguồn.
+
+26
+00:01:59,370 --> 00:02:02,240
+Tôi đã đăng nhập vào repo git của mình.
+
+27
+00:02:02,250 --> 00:02:04,350
+Vì vậy, đó là đi cùng.
+
+28
+00:02:04,440 --> 00:02:05,790
+Tên kho lưu trữ.
+
+29
+00:02:05,790 --> 00:02:09,330
+Hãy để tôi gọi MVC gạch dưới cồng kềnh đó.
+
+30
+00:02:10,500 --> 00:02:17,160
+Bây giờ tôi sẽ biến nó thành một kho lưu trữ riêng, nhưng khi khóa học bắt đầu, tôi sẽ chuyển đổi
+
+31
+00:02:17,160 --> 00:02:19,650
+nó thành một kho lưu trữ công khai.
+
+32
+00:02:20,900 --> 00:02:24,890
+Với cấu hình đó, hãy để tôi nhấn, tạo và nhấn nút.
+
+33
+00:02:25,280 --> 00:02:26,630
+Và hoàn hảo.
+
+34
+00:02:26,630 --> 00:02:28,950
+Chúng tôi có hai thay đổi đi.
+
+35
+00:02:28,970 --> 00:02:30,560
+Để tôi đẩy chúng.
+
+36
+00:02:32,560 --> 00:02:33,190
+Hoàn hảo.
+
+37
+00:02:33,190 --> 00:02:38,950
+Vì vậy, chúng tôi đã tạo dự án của mình và chúng tôi đã cam kết mã của mình với repo git.
+

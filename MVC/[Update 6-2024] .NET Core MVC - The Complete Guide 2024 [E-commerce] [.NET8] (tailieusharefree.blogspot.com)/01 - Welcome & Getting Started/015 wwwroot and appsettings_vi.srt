@@ -1,0 +1,240 @@
+1
+00:00:01,859 --> 00:00:05,040
+Thư mục tiếp theo mà chúng tôi có là www.
+
+2
+00:00:05,070 --> 00:00:06,300
+Thư mục gốc.
+
+3
+00:00:06,420 --> 00:00:10,170
+Và đây là một thư mục quan trọng trong ứng dụng.
+
+4
+00:00:10,260 --> 00:00:18,600
+Thư mục này về cơ bản sẽ lưu trữ tất cả nội dung tĩnh của tệp . net hoặc dự án của bạn.
+
+5
+00:00:19,080 --> 00:00:21,390
+Bây giờ nội dung tĩnh là gì?
+
+6
+00:00:21,420 --> 00:00:29,460
+Nội dung tĩnh về cơ bản có nghĩa là mọi CSS, mọi JavaScript, mọi gói NuGet hoặc thư viện của bên
+
+7
+00:00:29,460 --> 00:00:35,640
+thứ ba hoặc nếu bạn có bất kỳ hình ảnh, tệp, PDF, PowerPoint nào, v.v.
+
+8
+00:00:35,970 --> 00:00:43,620
+Bất cứ thứ gì tĩnh, không có mã HTML đều được đưa vào W. w. w thư mục gốc.
+
+9
+00:00:44,230 --> 00:00:51,280
+Vì vậy, bạn có thể thấy ngay tại đây, chúng tôi có một trang web toàn cầu dot CSS, CSS này đã được sử dụng trong ứng dụng.
+
+10
+00:00:51,460 --> 00:00:56,140
+Vì vậy, nếu bạn muốn thêm một số kiểu dáng ở đây, bạn luôn có thể thêm kiểu dáng đó.
+
+11
+00:00:56,620 --> 00:01:01,990
+Tiếp theo, chúng ta có tệp JS, đó là site. JS, nhưng cái đó trống.
+
+12
+00:01:02,020 --> 00:01:04,510
+Chúng tôi chỉ có một mẫu cơ bản ở đó.
+
+13
+00:01:04,810 --> 00:01:10,720
+Bên trong thư mục lib, chúng ta có thể thấy các xác thực bootstrap, jQuery, jQuery.
+
+14
+00:01:10,750 --> 00:01:16,780
+Tất cả chúng được bao gồm theo mặc định khi bạn tạo một ứng dụng MVC.
+
+15
+00:01:17,600 --> 00:01:25,670
+Trong tương lai, khi chúng tôi phải thêm hình ảnh hoặc bất kỳ thứ gì tĩnh, chúng tôi sẽ luôn thêm
+
+16
+00:01:25,670 --> 00:01:28,370
+chúng vào một nơi, đó là www.
+
+17
+00:01:28,400 --> 00:01:29,700
+Thư mục gốc.
+
+18
+00:01:29,720 --> 00:01:31,820
+Hãy luôn nhớ điều đó.
+
+19
+00:01:32,270 --> 00:01:39,290
+Sau đó, chúng tôi có bộ điều khiển, mô hình và chế độ xem mà tôi sẽ trình bày trong các video sắp tới.
+
+20
+00:01:39,290 --> 00:01:43,850
+Nhưng sau đó, chúng tôi có một thứ gọi là Cài đặt ứng dụng. json.
+
+21
+00:01:44,360 --> 00:01:50,930
+Và sau đó nếu bạn mở rộng nó, bạn có thể thấy chúng tôi có các cài đặt ứng dụng, . phát triển . JSON.
+
+22
+00:01:51,840 --> 00:01:57,060
+Cài đặt ứng dụng sẽ là nơi bạn sẽ lưu trữ tất cả chuỗi kết nối của mình.
+
+23
+00:01:57,240 --> 00:02:03,630
+Bây giờ khi tôi muốn nói đến chuỗi kết nối, nó không chỉ là chuỗi kết nối, mà về cơ bản là bất kỳ khóa
+
+24
+00:02:03,660 --> 00:02:06,240
+bí mật nào bạn có cho ứng dụng của mình.
+
+25
+00:02:06,360 --> 00:02:09,780
+Một ví dụ về điều đó sẽ dành cho email của bạn.
+
+26
+00:02:09,810 --> 00:02:14,450
+Bạn có thể đang sử dụng SendGrid hoặc bạn có thể có khóa bí mật cho email.
+
+27
+00:02:14,460 --> 00:02:16,850
+Bạn sẽ thêm nó trong cài đặt ứng dụng.
+
+28
+00:02:16,860 --> 00:02:21,480
+Khi bạn có kết nối cơ sở dữ liệu, bạn sẽ thêm các khóa bí mật đó vào đó.
+
+29
+00:02:21,480 --> 00:02:28,560
+Nếu bạn đang sử dụng tài khoản Azure Blob Storage hoặc Azure Storage, bạn sẽ lưu trữ tất cả các kết
+
+30
+00:02:28,560 --> 00:02:29,880
+nối đó ở một nơi.
+
+31
+00:02:29,910 --> 00:02:36,660
+Bằng cách đó, khi bạn phải thay đổi kết nối, bạn luôn biết rằng mình phải truy cập Cài đặt ứng dụng. json và không xem qua tất cả
+
+32
+00:02:36,660 --> 00:02:41,550
+mã để cố gắng tìm ra kết nối đó ở đâu.
+
+33
+00:02:41,850 --> 00:02:47,100
+Tất cả các khóa kết nối hoặc khóa bí mật của bạn phải luôn được đưa vào bên trong.
+
+34
+00:02:47,100 --> 00:02:48,780
+Cài đặt ứng dụng. json.
+
+35
+00:02:49,520 --> 00:02:55,790
+Bây giờ ở đây bạn thấy có appsettings. json và cài đặt ứng dụng, dấu chấm phát triển dấu chấm JSON.
+
+36
+00:02:56,420 --> 00:03:02,660
+Nếu bạn nhớ bên trong cài đặt khởi chạy dấu chấm JSON, chúng ta có ASP. NET Core.
+
+37
+00:03:02,870 --> 00:03:08,870
+Bây giờ, dựa trên môi trường này, nó sẽ được cấu hình để sử dụng một chuỗi kết nối khác.
+
+38
+00:03:09,230 --> 00:03:14,510
+Giống như giả sử trong sản xuất, bạn sẽ có một biến môi trường có tên là sản xuất.
+
+39
+00:03:14,540 --> 00:03:17,160
+Sau đó, bên trong Appsettings. json.
+
+40
+00:03:17,180 --> 00:03:21,710
+Vâng, trong dự án ở đây, hãy để tôi thêm và cho bạn xem tệp mới đó.
+
+41
+00:03:21,980 --> 00:03:24,320
+Chúng tôi sẽ thêm một mục mới.
+
+42
+00:03:25,170 --> 00:03:27,600
+Và chúng tôi sẽ tìm kiếm tệp JSON.
+
+43
+00:03:27,600 --> 00:03:29,700
+Chúng tôi có tệp cài đặt ứng dụng.
+
+44
+00:03:30,030 --> 00:03:34,050
+Tôi sẽ gọi đó là cài đặt ứng dụng. sản xuất . JSON.
+
+45
+00:03:35,120 --> 00:03:36,710
+Chúng tôi lưu nó ở đây.
+
+46
+00:03:36,710 --> 00:03:42,620
+Và điều gì sẽ xảy ra với . net là nó sẽ tự động sử dụng kết nối đó.
+
+47
+00:03:42,920 --> 00:03:45,140
+Rất tiếc, tôi có một lỗi chính tả ở đó.
+
+48
+00:03:45,470 --> 00:03:46,300
+Khắc phục điều đó.
+
+49
+00:03:46,310 --> 00:03:47,450
+Rất hoàn hảo.
+
+50
+00:03:47,780 --> 00:03:55,490
+Hiện đang được sản xuất, nếu ASP. NET Core, đây là tên sản xuất, sau đó nó sẽ sử dụng chuỗi kết nối và tất cả
+
+51
+00:03:55,490 --> 00:04:01,730
+các cài đặt từ cài đặt ứng dụng này. sản xuất  . JSON.
+
+52
+00:04:02,060 --> 00:04:10,190
+Vì vậy, khá thông minh về loại kết nối mà nó sẽ sử dụng, nhưng chúng tôi sẽ khám phá điều đó trong các video sắp tới.
+
+53
+00:04:10,220 --> 00:04:13,760
+Ngay bây giờ chúng tôi không muốn đi sâu vào sự phức tạp đó.
+
+54
+00:04:14,210 --> 00:04:21,079
+Điều duy nhất bạn nên nhớ là tất cả bí mật hoặc chuỗi kết nối của bạn sẽ có trong tệp dot json cài
+
+55
+00:04:21,079 --> 00:04:22,160
+đặt ứng dụng.
+
+56
+00:04:22,900 --> 00:04:25,570
+Hãy để tôi xóa tệp sản xuất mà tôi đã thêm.
+
+57
+00:04:25,570 --> 00:04:32,650
+Ngay bây giờ chúng tôi sẽ không sử dụng mã đó, nhưng trong phần cuối cùng nơi chúng tôi sẽ triển khai mã, tôi
+
+58
+00:04:32,680 --> 00:04:36,670
+sẽ sửa đổi mã đó và cho bạn thấy mọi thứ hoạt động như thế nào.
+
+59
+00:04:36,970 --> 00:04:38,140
+Rất hoàn hảo.
+
+60
+00:04:38,170 --> 00:04:44,620
+Cùng với đó, trong video tiếp theo, chúng ta hãy xem xét Program. cs, đây là một tệp quan trọng.
+

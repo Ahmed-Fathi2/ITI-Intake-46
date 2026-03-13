@@ -1,0 +1,492 @@
+1
+00:00:01,974 --> 00:00:04,380
+Instructor: Final thing that I want to toggle
+
+2
+00:00:04,380 --> 00:00:06,480
+is in the as AspNet user
+
+3
+00:00:06,480 --> 00:00:09,330
+we created many more properties.
+
+4
+00:00:09,330 --> 00:00:13,300
+I want to add all of those properties in the register page
+
+5
+00:00:14,580 --> 00:00:18,540
+so we can go back here, we will have to add them first
+
+6
+00:00:18,540 --> 00:00:20,853
+to the register page model.
+
+7
+00:00:22,860 --> 00:00:26,910
+We scroll down, we have the input model and there
+
+8
+00:00:26,910 --> 00:00:28,800
+we have few properties.
+
+9
+00:00:28,800 --> 00:00:30,663
+We added the role dropdown.
+
+10
+00:00:31,830 --> 00:00:35,520
+We want to add the other properties so you can copy them
+
+11
+00:00:35,520 --> 00:00:38,400
+from AspNet users if you want.
+
+12
+00:00:38,400 --> 00:00:42,120
+But basically we want to add street address, city, state
+
+13
+00:00:42,120 --> 00:00:45,090
+postal code and phone number.
+
+14
+00:00:45,090 --> 00:00:47,610
+Now, phone number, we did not add that in the
+
+15
+00:00:47,610 --> 00:00:51,900
+application user because if we switched to our database
+
+16
+00:00:51,900 --> 00:00:56,250
+and examine the AspNet users table, phone number column
+
+17
+00:00:56,250 --> 00:01:00,603
+is created by default that you can see right here.
+
+18
+00:01:02,130 --> 00:01:06,540
+So I am adding a property in the register so we can capture
+
+19
+00:01:06,540 --> 00:01:08,433
+and save that as well.
+
+20
+00:01:09,330 --> 00:01:12,960
+Once we add that here in the register, we have to
+
+21
+00:01:12,960 --> 00:01:17,760
+copy the email here, paste that one more time
+
+22
+00:01:17,760 --> 00:01:19,740
+before the roll here.
+
+23
+00:01:19,740 --> 00:01:23,190
+Make sure to change that to column MD6.
+
+24
+00:01:23,190 --> 00:01:28,190
+Next what we have is street address copy and paste that
+
+25
+00:01:29,640 --> 00:01:31,440
+we do not want auto complete.
+
+26
+00:01:31,440 --> 00:01:36,440
+We can remove that one and perfect, that looks good.
+
+27
+00:01:37,530 --> 00:01:42,150
+Paste it four more times, now rather than street address.
+
+28
+00:01:42,150 --> 00:01:44,223
+I will update that to city.
+
+29
+00:01:45,090 --> 00:01:46,533
+We have state.
+
+30
+00:01:48,540 --> 00:01:51,543
+Postal code and phone number.
+
+31
+00:01:54,900 --> 00:01:58,053
+Save that and let me see the UI.
+
+32
+00:01:58,980 --> 00:02:00,840
+Perfect, that looks good.
+
+33
+00:02:00,840 --> 00:02:02,790
+We need to update here as well.
+
+34
+00:02:02,790 --> 00:02:03,640
+So let me do that
+
+35
+00:02:09,570 --> 00:02:10,740
+and perfect.
+
+36
+00:02:10,740 --> 00:02:12,270
+That looks good.
+
+37
+00:02:12,270 --> 00:02:14,220
+Let me take a look at that.
+
+38
+00:02:14,220 --> 00:02:16,380
+We have a weird error here.
+
+39
+00:02:16,380 --> 00:02:18,633
+Let me restart the application.
+
+40
+00:02:21,930 --> 00:02:25,117
+Let me navigate to register and perfect.
+
+41
+00:02:25,117 --> 00:02:27,600
+The register looks good.
+
+42
+00:02:27,600 --> 00:02:32,250
+We have many more properties here and we have placeholder.
+
+43
+00:02:32,250 --> 00:02:35,340
+Now you can obviously remove everything that is there
+
+44
+00:02:35,340 --> 00:02:37,530
+in place holder, but you can see
+
+45
+00:02:37,530 --> 00:02:40,920
+because of placeholder we are getting the fancy design
+
+46
+00:02:40,920 --> 00:02:43,650
+that when we click, it's slightly hovers
+
+47
+00:02:43,650 --> 00:02:48,150
+on the top and I personally like that, because of that.
+
+48
+00:02:48,150 --> 00:02:50,940
+I am going to leave the place holder here
+
+49
+00:02:50,940 --> 00:02:54,060
+but of course you can make the placeholder according
+
+50
+00:02:54,060 --> 00:02:56,820
+to what the ASP 4 is.
+
+51
+00:02:56,820 --> 00:02:59,850
+I am not going to spend time editing that
+
+52
+00:02:59,850 --> 00:03:02,793
+but you can obviously fix all of that.
+
+53
+00:03:03,840 --> 00:03:06,150
+With that we have added all the properties
+
+54
+00:03:06,150 --> 00:03:08,520
+on the register UI.
+
+55
+00:03:08,520 --> 00:03:11,370
+Now when we post, we will receive all
+
+56
+00:03:11,370 --> 00:03:16,370
+of them in the OnPostAsync where we have our model.
+
+57
+00:03:16,860 --> 00:03:19,980
+But when we are creating or passing the user here
+
+58
+00:03:19,980 --> 00:03:24,240
+we are only populating email for that user.
+
+59
+00:03:24,240 --> 00:03:27,399
+We will also have to populate the other properties
+
+60
+00:03:27,399 --> 00:03:29,550
+from the input model.
+
+61
+00:03:29,550 --> 00:03:34,410
+So let me do that, now let me go back to the database here.
+
+62
+00:03:34,410 --> 00:03:37,350
+We also added name column there
+
+63
+00:03:37,350 --> 00:03:41,370
+so let me create that property as well
+
+64
+00:03:41,370 --> 00:03:43,323
+and name will be required.
+
+65
+00:03:44,370 --> 00:03:48,810
+Save that here and that's okay.
+
+66
+00:03:48,810 --> 00:03:50,460
+It should go away.
+
+67
+00:03:50,460 --> 00:03:52,803
+Let me also modify here.
+
+68
+00:03:58,380 --> 00:04:01,050
+We need to add the UI there.
+
+69
+00:04:01,050 --> 00:04:04,200
+So let me copy the street address.
+
+70
+00:04:04,200 --> 00:04:07,110
+I should add that right after email
+
+71
+00:04:07,110 --> 00:04:11,730
+but I want to keep password and confirm password together.
+
+72
+00:04:11,730 --> 00:04:14,050
+So let me do name here
+
+73
+00:04:20,730 --> 00:04:24,370
+And I will cut name along with phone number
+
+74
+00:04:25,290 --> 00:04:30,290
+and I will cut these two, paste it right after email.
+
+75
+00:04:30,660 --> 00:04:34,203
+So email, name and phone number goes together.
+
+76
+00:04:35,610 --> 00:04:37,230
+We have an error there.
+
+77
+00:04:37,230 --> 00:04:39,093
+Let me see what it is.
+
+78
+00:04:40,260 --> 00:04:43,050
+Well, we have an issue with the required
+
+79
+00:04:43,050 --> 00:04:48,050
+let me see why, it says required is ambiguous reference
+
+80
+00:04:48,300 --> 00:04:53,190
+between data annotation and some other required attribute.
+
+81
+00:04:53,190 --> 00:04:56,700
+We will modify that to be data annotation.
+
+82
+00:04:56,700 --> 00:05:00,120
+It is conflicting with something else there.
+
+83
+00:05:00,120 --> 00:05:02,110
+So let me add that
+
+84
+00:05:04,230 --> 00:05:07,380
+and let me examine the change commit here.
+
+85
+00:05:07,380 --> 00:05:10,320
+I want to make sure I did not add something.
+
+86
+00:05:10,320 --> 00:05:11,730
+Yes I did.
+
+87
+00:05:11,730 --> 00:05:15,690
+I added this line, this using statement,
+
+88
+00:05:15,690 --> 00:05:17,313
+that was not needed.
+
+89
+00:05:18,420 --> 00:05:22,893
+So remove that and now required should work.
+
+90
+00:05:24,150 --> 00:05:27,270
+Yep, sometimes when you add some other using statement
+
+91
+00:05:27,270 --> 00:05:31,200
+you can see how conflicts can happen but thankfully because
+
+92
+00:05:31,200 --> 00:05:34,980
+of git changes I can easily make sure that I only
+
+93
+00:05:34,980 --> 00:05:38,793
+have the changes that I intended to go in this comment.
+
+94
+00:05:39,900 --> 00:05:43,890
+With that configured, let me run the application.
+
+95
+00:05:43,890 --> 00:05:46,090
+We still have an error here
+
+96
+00:05:47,040 --> 00:05:52,040
+and what is in here and let me open application user.
+
+97
+00:05:54,240 --> 00:05:57,900
+I think accidentally something is integer
+
+98
+00:05:57,900 --> 00:06:02,670
+which should not be, whoops, name cannot be integer.
+
+99
+00:06:02,670 --> 00:06:04,830
+It has to be a string.
+
+100
+00:06:04,830 --> 00:06:08,823
+If we modify something there, we have to add a migration.
+
+101
+00:06:10,620 --> 00:06:15,450
+I will call that update name to be string application user.
+
+102
+00:06:15,450 --> 00:06:18,030
+I like to name migration as meaningful
+
+103
+00:06:18,030 --> 00:06:23,030
+as possible and I forgot to change the default project.
+
+104
+00:06:23,220 --> 00:06:24,390
+Perfect.
+
+105
+00:06:24,390 --> 00:06:26,170
+Let me update the database
+
+106
+00:06:30,387 --> 00:06:32,460
+and great, that is all done.
+
+107
+00:06:32,460 --> 00:06:34,500
+Let me run the application
+
+108
+00:06:34,500 --> 00:06:37,083
+and make sure everything is working.
+
+109
+00:06:38,100 --> 00:06:40,170
+I will create a new user
+
+110
+00:06:40,170 --> 00:06:44,200
+and this time all the details will be populated
+
+111
+00:06:45,420 --> 00:06:49,320
+and we have multiple street address that is not correct.
+
+112
+00:06:49,320 --> 00:06:51,363
+Let me go to register.
+
+113
+00:06:54,399 --> 00:06:57,086
+This will be name
+
+114
+00:06:57,086 --> 00:07:01,890
+so let me change that to be full name and perfect.
+
+115
+00:07:01,890 --> 00:07:03,693
+Let me type that once again.
+
+116
+00:07:04,710 --> 00:07:06,180
+If I do not select a role
+
+117
+00:07:06,180 --> 00:07:10,350
+it'll be customer role and that works for this user.
+
+118
+00:07:10,350 --> 00:07:11,703
+Let me create that.
+
+119
+00:07:13,590 --> 00:07:15,180
+Perfect, that looks good.
+
+120
+00:07:15,180 --> 00:07:17,613
+Let me switch back to the database here.
+
+121
+00:07:18,510 --> 00:07:23,510
+And if I examine AspNet users, perfect.
+
+122
+00:07:23,580 --> 00:07:27,240
+Now you can see all the columns are getting populated
+
+123
+00:07:27,240 --> 00:07:30,003
+and that is working as expected.
+

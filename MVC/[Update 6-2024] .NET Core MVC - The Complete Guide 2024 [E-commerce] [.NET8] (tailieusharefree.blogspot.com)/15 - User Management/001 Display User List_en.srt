@@ -1,0 +1,432 @@
+1
+00:00:01,880 --> 00:00:03,960
+Instructor: Now what I want to do is
+
+2
+00:00:03,960 --> 00:00:07,110
+in content management I want to create a section
+
+3
+00:00:07,110 --> 00:00:09,009
+for user management.
+
+4
+00:00:09,009 --> 00:00:13,440
+In there I want to display all the users in data table.
+
+5
+00:00:13,440 --> 00:00:15,504
+Let me do that first.
+
+6
+00:00:15,504 --> 00:00:17,910
+I will close the application here,
+
+7
+00:00:17,910 --> 00:00:20,790
+we have application user that is okay
+
+8
+00:00:20,790 --> 00:00:24,300
+but we need to create user controller.
+
+9
+00:00:24,300 --> 00:00:28,500
+I will add that in the admin section, controller, copy,
+
+10
+00:00:28,500 --> 00:00:33,044
+and paste the company controller because that has data table
+
+11
+00:00:33,044 --> 00:00:36,994
+and let me call this user controller.
+
+12
+00:00:36,994 --> 00:00:39,000
+We will copy that name
+
+13
+00:00:39,000 --> 00:00:43,410
+and I will paste that in the class and constructor.
+
+14
+00:00:43,410 --> 00:00:44,463
+That looks good.
+
+15
+00:00:45,450 --> 00:00:46,980
+Now in the index here,
+
+16
+00:00:46,980 --> 00:00:50,400
+we do not want anything we can directly return back
+
+17
+00:00:50,400 --> 00:00:54,540
+to the view because we will be using data table.
+
+18
+00:00:54,540 --> 00:00:58,553
+Let me remove the absurd here that is not needed as well.
+
+19
+00:00:58,553 --> 00:01:03,060
+We have API calls, we want to retrieve list
+
+20
+00:01:03,060 --> 00:01:06,510
+of application user, let me do that here
+
+21
+00:01:06,510 --> 00:01:10,800
+and that will be unit of work dot application user.
+
+22
+00:01:10,800 --> 00:01:12,330
+But now when we are working
+
+23
+00:01:12,330 --> 00:01:16,290
+on user controller rather than using unit of work,
+
+24
+00:01:16,290 --> 00:01:19,495
+let me directly use application DB context
+
+25
+00:01:19,495 --> 00:01:22,203
+because I want to show that route as well.
+
+26
+00:01:23,100 --> 00:01:24,780
+So if we want a combination
+
+27
+00:01:24,780 --> 00:01:28,747
+of that for some reason, that is also possible.
+
+28
+00:01:28,747 --> 00:01:31,123
+Now I would not recommend this
+
+29
+00:01:31,123 --> 00:01:35,160
+but you can add that right here.
+
+30
+00:01:35,160 --> 00:01:36,990
+At the end of this section,
+
+31
+00:01:36,990 --> 00:01:38,790
+I will also explain on
+
+32
+00:01:38,790 --> 00:01:42,720
+why exactly I used application DB context initially
+
+33
+00:01:42,720 --> 00:01:44,564
+for this controller.
+
+34
+00:01:44,564 --> 00:01:48,060
+We directly have the application DB context.
+
+35
+00:01:48,060 --> 00:01:51,100
+We can use that to retrieve all the user.
+
+36
+00:01:51,100 --> 00:01:54,578
+On underscore DB we have application user
+
+37
+00:01:54,578 --> 00:01:56,010
+and there when we have
+
+38
+00:01:56,010 --> 00:01:59,790
+to get everything we will be using the where syntax
+
+39
+00:01:59,790 --> 00:02:02,614
+but if we want to get all of the user ID,
+
+40
+00:02:02,614 --> 00:02:05,463
+then we do not need any where syntax.
+
+41
+00:02:06,540 --> 00:02:09,600
+Right here, we want to include the company.
+
+42
+00:02:09,600 --> 00:02:11,340
+So let me do that.
+
+43
+00:02:11,340 --> 00:02:15,447
+U dot company, convert that to a list.
+
+44
+00:02:15,447 --> 00:02:18,720
+Then we will return that list here and let me
+
+45
+00:02:18,720 --> 00:02:23,720
+call that OBJ user list, that sounds good.
+
+46
+00:02:24,210 --> 00:02:26,580
+If we think about that, all of our user
+
+47
+00:02:26,580 --> 00:02:28,410
+will not be company user.
+
+48
+00:02:28,410 --> 00:02:31,620
+So if a user is not company user, we have
+
+49
+00:02:31,620 --> 00:02:35,695
+to manually do something else we will see an exception.
+
+50
+00:02:35,695 --> 00:02:37,380
+Let me correct that.
+
+51
+00:02:37,380 --> 00:02:39,093
+Once we see that exception,
+
+52
+00:02:40,500 --> 00:02:43,350
+then we do not have any delete features here.
+
+53
+00:02:43,350 --> 00:02:47,670
+Let me remove that and we will come back to this.
+
+54
+00:02:47,670 --> 00:02:49,590
+So get all is looking good.
+
+55
+00:02:49,590 --> 00:02:51,300
+We have the index.
+
+56
+00:02:51,300 --> 00:02:56,300
+Next I have to add the index view, raise our view.
+
+57
+00:02:56,610 --> 00:03:01,590
+Let me add that here and perfect it got added.
+
+58
+00:03:01,590 --> 00:03:02,970
+Let me double check.
+
+59
+00:03:02,970 --> 00:03:06,797
+I have the area of admin, that looks good.
+
+60
+00:03:06,797 --> 00:03:08,550
+For the view here,
+
+61
+00:03:08,550 --> 00:03:13,073
+let me open the view that we have for product index.
+
+62
+00:03:14,310 --> 00:03:17,283
+Copy that and paste it here.
+
+63
+00:03:18,360 --> 00:03:19,920
+We do not have any model.
+
+64
+00:03:19,920 --> 00:03:24,920
+We can remove that and we'll display user list here.
+
+65
+00:03:25,590 --> 00:03:27,870
+I do not want to create anything.
+
+66
+00:03:27,870 --> 00:03:29,193
+We can remove that.
+
+67
+00:03:30,150 --> 00:03:31,441
+Perfect.
+
+68
+00:03:31,441 --> 00:03:35,220
+Now here we want to display all the user properties.
+
+69
+00:03:35,220 --> 00:03:40,220
+So let me add name, email, phone number, company, and role.
+
+70
+00:03:40,410 --> 00:03:43,890
+Do not worry about company and role right now.
+
+71
+00:03:43,890 --> 00:03:47,280
+Do not worry about role of the user right now.
+
+72
+00:03:47,280 --> 00:03:50,043
+We will cover that in the upcoming video.
+
+73
+00:03:51,000 --> 00:03:53,550
+We need to add the JavaScript file,
+
+74
+00:03:53,550 --> 00:03:58,050
+change this to be user dot js, that looks good.
+
+75
+00:03:58,050 --> 00:04:00,453
+Finally, we have to add the Javascript.
+
+76
+00:04:01,710 --> 00:04:05,460
+Let me copy the company, paste that again,
+
+77
+00:04:05,460 --> 00:04:08,799
+rename that to be user dot js.
+
+78
+00:04:08,799 --> 00:04:13,083
+Then we need to modify the JavaScript right here.
+
+79
+00:04:14,190 --> 00:04:16,589
+Name that is valid, what is the next one?
+
+80
+00:04:16,589 --> 00:04:18,899
+We have email and phone.
+
+81
+00:04:18,899 --> 00:04:21,390
+Email, phone will be phone number.
+
+82
+00:04:21,390 --> 00:04:23,730
+We have that at the end.
+
+83
+00:04:23,730 --> 00:04:25,980
+Let me type that here.
+
+84
+00:04:25,980 --> 00:04:28,860
+Then we have company and role.
+
+85
+00:04:28,860 --> 00:04:32,610
+Company is inside company dot name, but role,
+
+86
+00:04:32,610 --> 00:04:34,500
+I do not know where that is
+
+87
+00:04:34,500 --> 00:04:37,530
+so let me keep that empty for now.
+
+88
+00:04:37,530 --> 00:04:40,650
+With that configured here, let me remove the delete.
+
+89
+00:04:40,650 --> 00:04:45,650
+I do not need that and perfect, looks good.
+
+90
+00:04:46,034 --> 00:04:51,034
+Let me go to solution, views, shared, underscore layout,
+
+91
+00:04:52,800 --> 00:04:57,800
+and I will copy the create user, paste it one more time.
+
+92
+00:04:58,560 --> 00:05:02,820
+Well, let me copy the area much easier.
+
+93
+00:05:02,820 --> 00:05:07,820
+Admin, user controller, index action,
+
+94
+00:05:08,258 --> 00:05:11,043
+and I will call that manage user.
+
+95
+00:05:11,970 --> 00:05:15,543
+Let me run the application and see if that works.
+
+96
+00:05:18,480 --> 00:05:20,370
+Let me go to content management.
+
+97
+00:05:20,370 --> 00:05:22,260
+We have manage user
+
+98
+00:05:22,260 --> 00:05:25,530
+and we can see the error message with email.
+
+99
+00:05:25,530 --> 00:05:27,603
+Let me see why that is the case.
+
+100
+00:05:28,862 --> 00:05:31,939
+If you see here, we forgot to change this.
+
+101
+00:05:31,939 --> 00:05:36,453
+It'll not be company, it'll be user and get all.
+
+102
+00:05:37,320 --> 00:05:42,320
+Let me refresh here and perfect.
+
+103
+00:05:42,480 --> 00:05:46,827
+Now if you see here, we are only looking at one user.
+
+104
+00:05:46,827 --> 00:05:48,540
+If I go to database
+
+105
+00:05:48,540 --> 00:05:52,587
+and examine the ASP.NET users, we have three users.
+
+106
+00:05:52,587 --> 00:05:55,843
+Why do I only see one user here?
+
+107
+00:05:55,843 --> 00:06:00,843
+Try to pause the video and analyze on what is going on here.
+
+108
+00:06:01,530 --> 00:06:05,103
+I will walk you through the solution in the next video.
+

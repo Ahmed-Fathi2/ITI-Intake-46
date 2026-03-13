@@ -1,0 +1,256 @@
+1
+00:00:01,710 --> 00:00:03,660
+Instructor: I hope you are able to figure out
+
+2
+00:00:03,660 --> 00:00:05,193
+what is going on.
+
+3
+00:00:05,193 --> 00:00:06,631
+Let me switch back here
+
+4
+00:00:06,631 --> 00:00:11,070
+and add a debugging point in the user controller,
+
+5
+00:00:11,070 --> 00:00:12,183
+right here.
+
+6
+00:00:13,260 --> 00:00:15,524
+Now if I go back and refresh here
+
+7
+00:00:15,524 --> 00:00:17,940
+it will hit my break point.
+
+8
+00:00:17,940 --> 00:00:19,112
+If I press F10,
+
+9
+00:00:19,112 --> 00:00:22,693
+you can see it only retrieves one record
+
+10
+00:00:22,693 --> 00:00:26,137
+and it has to do something with the in blue statement
+
+11
+00:00:26,137 --> 00:00:29,220
+because it is trying to include company.
+
+12
+00:00:29,220 --> 00:00:33,603
+But if it does not find, it is excluding that user as well.
+
+13
+00:00:34,590 --> 00:00:38,070
+Solution to that is, let me stop the application.
+
+14
+00:00:38,070 --> 00:00:40,830
+If it go to application user here,
+
+15
+00:00:40,830 --> 00:00:42,548
+company is required.
+
+16
+00:00:42,548 --> 00:00:44,980
+So make that allowable field
+
+17
+00:00:44,980 --> 00:00:49,350
+and then it will not care if that company is present or not.
+
+18
+00:00:49,350 --> 00:00:54,330
+If it is not present, it'll still retrieve the user detail.
+
+19
+00:00:54,330 --> 00:00:56,840
+With that configured, let me log in here
+
+20
+00:00:56,840 --> 00:01:01,023
+and let me go to Manage User.
+
+21
+00:01:02,700 --> 00:01:05,250
+We hit our break point press F10,
+
+22
+00:01:05,250 --> 00:01:08,013
+and now it retrieves 10 records.
+
+23
+00:01:08,880 --> 00:01:10,860
+The database that I was examining,
+
+24
+00:01:10,860 --> 00:01:12,750
+that was of a different account.
+
+25
+00:01:12,750 --> 00:01:14,820
+That is why I had three records.
+
+26
+00:01:14,820 --> 00:01:16,590
+That was my bad.
+
+27
+00:01:16,590 --> 00:01:18,570
+Let me open this
+
+28
+00:01:18,570 --> 00:01:20,825
+and ASPNet users,
+
+29
+00:01:20,825 --> 00:01:21,658
+perfect.
+
+30
+00:01:21,658 --> 00:01:24,540
+We have all the records there.
+
+31
+00:01:24,540 --> 00:01:27,660
+And if we continue here it will load the page
+
+32
+00:01:27,660 --> 00:01:30,663
+but we will see a warning with company dot name.
+
+33
+00:01:31,560 --> 00:01:35,070
+Now even though it loads the page completely okay,
+
+34
+00:01:35,070 --> 00:01:37,625
+we see the issue with company dot name.
+
+35
+00:01:37,625 --> 00:01:39,673
+Why is that?
+
+36
+00:01:39,673 --> 00:01:41,550
+Well, the reason behind that
+
+37
+00:01:41,550 --> 00:01:42,821
+is when it is joining
+
+38
+00:01:42,821 --> 00:01:46,830
+if it does not find that company will be known.
+
+39
+00:01:46,830 --> 00:01:50,321
+And in here we are trying to access company dot name.
+
+40
+00:01:50,321 --> 00:01:55,230
+So what we have to do is before we return back here,
+
+41
+00:01:55,230 --> 00:01:58,290
+we have to iterate through all of the user,
+
+42
+00:01:58,290 --> 00:02:01,368
+variable user, end user list here
+
+43
+00:02:01,368 --> 00:02:06,368
+and we will have to check if user dot company is null.
+
+44
+00:02:08,699 --> 00:02:11,550
+Then basically we have to say user dot company
+
+45
+00:02:11,550 --> 00:02:13,500
+is equal to new.
+
+46
+00:02:13,500 --> 00:02:14,333
+And name?
+
+47
+00:02:15,501 --> 00:02:19,203
+We will just add that as empty string and that should work.
+
+48
+00:02:20,280 --> 00:02:23,642
+With that configured, if I save this and go back
+
+49
+00:02:23,642 --> 00:02:26,591
+and let me remove the debugging point,
+
+50
+00:02:26,591 --> 00:02:29,820
+continue here and perfect.
+
+51
+00:02:29,820 --> 00:02:32,340
+This time the other message that we are looking at
+
+52
+00:02:32,340 --> 00:02:34,170
+is in column four
+
+53
+00:02:34,170 --> 00:02:36,180
+because what was happening before is
+
+54
+00:02:36,180 --> 00:02:39,339
+if I remove this if condition that we added,
+
+55
+00:02:39,339 --> 00:02:42,930
+and if I save that,
+
+56
+00:02:42,930 --> 00:02:46,080
+the column if you notice here was column three,
+
+57
+00:02:46,080 --> 00:02:48,330
+which is company dot name.
+
+58
+00:02:48,330 --> 00:02:50,370
+So now when we add that,
+
+59
+00:02:50,370 --> 00:02:52,161
+the next issue is with role
+
+60
+00:02:52,161 --> 00:02:56,673
+because it does not find any value for that role.
+
+61
+00:02:57,690 --> 00:02:59,958
+So in the next video,
+
+62
+00:02:59,958 --> 00:03:00,900
+our task is to find out
+
+63
+00:03:00,900 --> 00:03:05,323
+the role of each of the customer here and display that.
+
+64
+00:03:05,323 --> 00:03:08,253
+Let me do that in the next video.
+

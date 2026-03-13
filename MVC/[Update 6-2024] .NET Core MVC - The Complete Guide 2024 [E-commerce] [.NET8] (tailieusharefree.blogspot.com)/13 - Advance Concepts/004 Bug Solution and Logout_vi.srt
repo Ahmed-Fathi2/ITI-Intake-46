@@ -1,0 +1,140 @@
+1
+00:00:01,600 --> 00:00:06,040
+Tôi hy vọng bạn có thể tìm ra chính xác những gì đang xảy ra ở đây.
+
+2
+00:00:06,310 --> 00:00:11,560
+Nhưng với thông báo lỗi ở đây, bạn có thể thấy rằng có điều gì đó đang diễn ra với quá trình theo
+
+3
+00:00:11,560 --> 00:00:12,070
+dõi.
+
+4
+00:00:12,070 --> 00:00:16,960
+Và chúng tôi biết khi chúng tôi nhận được mọi thứ theo mặc định, chúng tôi sẽ không theo dõi chúng.
+
+5
+00:00:17,630 --> 00:00:23,960
+Vì vậy, điều gì sẽ xảy ra trong bộ điều khiển giỏ hàng ở chế độ xóa khi chúng tôi nhận giỏ hàng từ DB ở chế độ nhận?
+
+6
+00:00:23,990 --> 00:00:31,640
+Chúng tôi không theo dõi thực thể đó khi chúng tôi sử dụng tính năng xóa, thực thể đó không còn được theo dõi bởi
+
+7
+00:00:31,640 --> 00:00:35,090
+lõi EF và do đó bạn đang thấy thông báo lỗi đó.
+
+8
+00:00:35,960 --> 00:00:43,850
+Để giải quyết vấn đề đó, tất cả những gì bạn phải làm ở đây là đặt thuộc tính track thành true.
+
+9
+00:00:45,440 --> 00:00:48,920
+Cùng với đó, nó sẽ có thể loại bỏ thành công.
+
+10
+00:00:49,860 --> 00:00:53,220
+Bây giờ chúng tôi cũng đang loại bỏ nó bên trong đây.
+
+11
+00:00:53,220 --> 00:00:56,150
+Vì vậy, hãy để tôi xem nơi chúng tôi có loại bỏ.
+
+12
+00:00:56,160 --> 00:01:00,060
+Tôi sẽ phải thêm thực thể được theo dõi là đúng.
+
+13
+00:01:00,060 --> 00:01:02,610
+Và để tôi xem nếu nó hoạt động.
+
+14
+00:01:05,690 --> 00:01:08,990
+Chúng tôi sẽ phải đăng nhập ở đây với tư cách là quản trị viên thử nghiệm.
+
+15
+00:01:08,990 --> 00:01:10,670
+Hãy để tôi làm điều đó.
+
+16
+00:01:11,090 --> 00:01:14,060
+Và chúng tôi có ba mục bây giờ.
+
+17
+00:01:14,060 --> 00:01:21,140
+Nếu tôi cố xóa, bạn có thể thấy nó hoạt động như mong đợi và giỏ hàng cũng đang được cập nhật.
+
+18
+00:01:21,290 --> 00:01:27,380
+Nếu tôi nhấp vào dấu trừ ở đây, chúng tôi chỉ đếm được một, vì vậy nó sẽ giảm số đó xuống còn một.
+
+19
+00:01:27,380 --> 00:01:28,850
+Và hoàn hảo.
+
+20
+00:01:28,850 --> 00:01:30,050
+Điều đó đã làm việc.
+
+21
+00:01:31,030 --> 00:01:37,150
+Đây là những điều nhỏ mà bạn sẽ làm quen khi bạn xây dựng ngày càng nhiều ứng dụng và
+
+22
+00:01:37,150 --> 00:01:39,760
+khi bạn tiếp xúc nhiều hơn với MVC.
+
+23
+00:01:40,930 --> 00:01:47,260
+Nhưng một điều cuối cùng mà chúng ta phải làm là khi đăng xuất ở đây, chúng ta phải xóa phiên của mình.
+
+24
+00:01:47,860 --> 00:01:55,540
+Vì vậy, hãy để tôi làm điều đó trong dự án nơi chúng tôi có các tệp, hãy để tôi tìm kiếm đăng xuất tại đây và chúng
+
+25
+00:01:55,540 --> 00:01:57,700
+tôi có mã phía sau ngay tại đó.
+
+26
+00:01:57,700 --> 00:02:07,870
+Khi chúng tôi đăng xuất, chúng tôi sẽ đặt Httpcontext dot session, dot, set, int 32 hoặc đúng hơn là chúng tôi
+
+27
+00:02:07,870 --> 00:02:09,580
+có thể xóa phiên.
+
+28
+00:02:11,110 --> 00:02:14,920
+Điều đó cũng sẽ hoạt động nếu người dùng đăng xuất.
+
+29
+00:02:16,150 --> 00:02:20,380
+Hãy để tôi khởi động lại ứng dụng và xem nó có hoạt động không.
+
+30
+00:02:22,060 --> 00:02:23,270
+Chúng tôi không có.
+
+31
+00:02:23,290 --> 00:02:24,940
+Để tôi đăng nhập vào đây.
+
+32
+00:02:26,900 --> 00:02:29,750
+Chà, chúng ta phải làm vậy nếu tôi đăng xuất.
+
+33
+00:02:30,760 --> 00:02:32,650
+Hoàn hảo trở lại con số không.
+
+34
+00:02:33,220 --> 00:02:36,340
+Vì vậy, với điều đó, phiên của chúng tôi có vẻ tốt.
+
+35
+00:02:36,370 --> 00:02:39,400
+Hãy để tôi tiếp tục từ video tiếp theo.
+

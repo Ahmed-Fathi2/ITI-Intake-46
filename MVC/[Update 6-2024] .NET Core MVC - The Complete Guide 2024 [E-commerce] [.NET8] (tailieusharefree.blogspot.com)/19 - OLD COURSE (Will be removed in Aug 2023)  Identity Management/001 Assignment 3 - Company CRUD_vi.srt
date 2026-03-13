@@ -1,0 +1,52 @@
+1
+00:00:02,490 --> 00:00:08,970
+Bây giờ, đã đến lúc thực hiện nhiệm vụ thứ ba của chúng ta, điều này sẽ tương tự như những gì chúng ta làm với mục
+
+2
+00:00:08,970 --> 00:00:11,940
+menu, nhưng nhiệm vụ này đơn giản hơn rất nhiều.
+
+3
+00:00:12,060 --> 00:00:17,010
+Tôi muốn các bạn tạo ra một mô hình công ty sẽ có các thuộc tính sau.
+
+4
+00:00:17,640 --> 00:00:25,890
+Nó sẽ là tên khóa chính sẽ được yêu cầu và địa chỉ đường phố, mã bưu điện của tiểu bang thành phố và số điện thoại.
+
+5
+00:00:26,370 --> 00:00:28,080
+Chúng có thể là trường tùy chọn.
+
+6
+00:00:29,010 --> 00:00:36,300
+Sau khi tạo bảng, bạn sẽ phải thêm công ty vào kho lưu trữ và đơn vị công việc sử dụng kho lưu
+
+7
+00:00:36,300 --> 00:00:37,200
+trữ đó.
+
+8
+00:00:37,380 --> 00:00:42,390
+Bạn cần thực hiện các hoạt động hiện tại trên công ty bằng bảng dữ liệu.
+
+9
+00:00:42,840 --> 00:00:46,950
+Và chúng tôi cũng sẽ thực hiện một hành động bốn cập nhật và chỉnh sửa.
+
+10
+00:00:47,340 --> 00:00:50,670
+Vì vậy, bạn sẽ phải làm tương tự như mục menu.
+
+11
+00:00:51,480 --> 00:00:55,980
+Vì vậy, điều đó sẽ giúp bạn thực hành nhiều hơn với bảng dữ liệu a mà chúng tôi có.
+
+12
+00:00:56,310 --> 00:00:58,830
+Và tất nhiên, xác nhận sẽ giống nhau.
+
+13
+00:00:59,820 --> 00:01:04,470
+Vì vậy, chúc may mắn với bài tập, và chúng ta hãy tiếp tục từ tuần tới, bạn.
+

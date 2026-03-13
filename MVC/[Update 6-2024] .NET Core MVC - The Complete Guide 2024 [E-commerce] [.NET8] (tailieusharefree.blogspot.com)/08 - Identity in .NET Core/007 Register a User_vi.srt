@@ -1,0 +1,180 @@
+1
+00:00:01,750 --> 00:00:07,990
+Chúng tôi đã thêm người dùng ứng dụng vào các mô hình của mình và chúng tôi đã đẩy ứng dụng đó vào cơ sở dữ liệu của mình.
+
+2
+00:00:08,140 --> 00:00:13,300
+Nhưng danh tính mặc định ở đây vẫn là sử dụng danh tính người dùng.
+
+3
+00:00:14,290 --> 00:00:22,150
+Cùng với đó, hãy để tôi chạy ứng dụng và thử xem các chức năng đăng ký và đăng nhập mặc định hoạt động như
+
+4
+00:00:22,150 --> 00:00:22,840
+thế nào.
+
+5
+00:00:24,880 --> 00:00:32,100
+Vậy để mình đăng ký user ở đây mình sẽ gọi thử ở gmail đó. com.
+
+6
+00:00:32,110 --> 00:00:33,320
+Mật khẩu.
+
+7
+00:00:33,340 --> 00:00:41,770
+Tôi sẽ làm quản trị viên 123 sao với chữ A viết hoa vì nếu tôi chỉ sử dụng một hai, ba, bạn có thể thấy mật khẩu
+
+8
+00:00:41,770 --> 00:00:43,300
+không đủ mạnh.
+
+9
+00:00:43,300 --> 00:00:46,000
+Vì vậy, chúng ta phải giữ một cái gì đó mạnh mẽ.
+
+10
+00:00:46,450 --> 00:00:50,470
+Tôi sẽ thêm quản trị viên một, hai, ba sao và đăng ký.
+
+11
+00:00:51,460 --> 00:00:52,240
+Hoàn hảo.
+
+12
+00:00:52,240 --> 00:00:56,020
+Khi tôi đăng ký ở đây, nó sẽ tự động đăng nhập cho tôi.
+
+13
+00:00:56,470 --> 00:01:02,370
+Nhưng nếu chúng tôi đăng xuất tại đây và sau đó nếu chúng tôi đăng nhập, chúng tôi có thể thử lại.
+
+14
+00:01:02,380 --> 00:01:05,830
+Kiểm tra tại gmail. com và quản trị viên.
+
+15
+00:01:05,830 --> 00:01:06,970
+Một hai ba.
+
+16
+00:01:07,120 --> 00:01:12,130
+Tôi đã không thêm dấu hoa thị ở cuối nên chúng ta sẽ thấy lần đăng nhập không hợp lệ.
+
+17
+00:01:12,160 --> 00:01:13,780
+Trông tôt đây.
+
+18
+00:01:13,810 --> 00:01:16,480
+Bây giờ hãy để tôi gõ đúng mật khẩu.
+
+19
+00:01:17,960 --> 00:01:19,940
+Hoàn hảo với mật khẩu chính xác.
+
+20
+00:01:19,940 --> 00:01:23,150
+Nó đăng nhập tôi và chúng tôi có một hồ sơ.
+
+21
+00:01:23,150 --> 00:01:25,430
+Và trên cùng bên phải ở đây chúng ta thấy.
+
+22
+00:01:25,460 --> 00:01:27,980
+Chào test tại gmail. com.
+
+23
+00:01:28,890 --> 00:01:36,180
+Bây giờ, nếu bạn nhấp vào đó, nó sẽ hiển thị hồ sơ, trong đó hiển thị tên người dùng, số điện thoại,
+
+24
+00:01:36,180 --> 00:01:44,550
+họ có thể cập nhật email, xác minh email, sửa đổi mật khẩu, thêm xác thực hai yếu tố và họ có thể tải xuống hoặc
+
+25
+00:01:44,550 --> 00:01:47,460
+xóa dữ liệu cá nhân của mình.
+
+26
+00:01:48,320 --> 00:01:53,840
+Tất cả những điều này được cung cấp theo mặc định với danh tính mà chúng tôi đã tạo ra.
+
+27
+00:01:54,110 --> 00:02:01,640
+Vì vậy, bạn có thể thấy khi chúng tôi dàn dựng, nó cung cấp nhiều thứ, không chỉ là thiết lập nhận dạng cơ bản và
+
+28
+00:02:01,640 --> 00:02:04,940
+nó giống như một gói nhận dạng hoàn chỉnh hơn.
+
+29
+00:02:05,360 --> 00:02:11,930
+Nhưng tất nhiên nếu bạn thêm nhiều trường để đăng ký, bạn luôn có thể cập nhật, hồ sơ và tất cả các
+
+30
+00:02:11,930 --> 00:02:12,860
+trang khác.
+
+31
+00:02:13,810 --> 00:02:21,610
+Nhưng trước hết, hãy để tôi quay lại SQL Server và kiểm tra người dùng đã được tạo trong
+
+32
+00:02:21,610 --> 00:02:23,650
+ASP. NET bảng Người dùng.
+
+33
+00:02:24,780 --> 00:02:25,470
+Hoàn hảo.
+
+34
+00:02:25,470 --> 00:02:27,660
+Bạn có thể thấy chúng tôi có hồ sơ ở đây.
+
+35
+00:02:27,660 --> 00:02:32,160
+Nếu bạn cuộn sang bên phải, cột phân biệt đối xử là gì?
+
+36
+00:02:32,400 --> 00:02:37,140
+Nó sẽ là người dùng ứng dụng hay nó sẽ là người dùng nhận dạng?
+
+37
+00:02:38,040 --> 00:02:41,310
+Nếu bạn đặt người dùng nhận dạng, bạn đã đúng.
+
+38
+00:02:41,820 --> 00:02:48,900
+Bạn có thể thấy điều đó ngay tại đây, vì hiện tại trong ứng dụng của chúng tôi, danh tính mặc định là danh tính người
+
+39
+00:02:48,900 --> 00:02:49,650
+dùng.
+
+40
+00:02:49,650 --> 00:02:56,400
+Nhưng trên hết, điều quan trọng là khi chúng tôi đăng ký người dùng, chúng tôi đang tạo một người dùng
+
+41
+00:02:56,400 --> 00:02:59,460
+nhận dạng chứ không phải người dùng ứng dụng.
+
+42
+00:03:00,350 --> 00:03:08,240
+Vì vậy, chúng tôi cần sửa đổi điều đó bởi vì với người dùng nhận dạng, chúng tôi sẽ không nhận được tên thành phố, mã bưu chính, tiểu bang
+
+43
+00:03:08,240 --> 00:03:09,740
+và địa chỉ đường phố.
+
+44
+00:03:10,610 --> 00:03:17,930
+Nếu chúng ta muốn nắm bắt các thuộc tính đó, chúng ta cần tìm cách đăng ký người dùng ứng dụng.
+
+45
+00:03:18,440 --> 00:03:21,920
+Vì vậy, hãy để tôi làm việc đó trong video tiếp theo.
+

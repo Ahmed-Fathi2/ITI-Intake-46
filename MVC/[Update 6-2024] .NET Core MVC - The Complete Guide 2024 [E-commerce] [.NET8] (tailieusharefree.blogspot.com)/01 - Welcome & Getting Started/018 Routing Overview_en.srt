@@ -1,0 +1,228 @@
+1
+00:00:03,170 --> 00:00:07,820
+Now we want to understand routing in an MVC application.
+
+2
+00:00:08,240 --> 00:00:15,080
+Routing basically defines that in the URL when you type something where it should send that request
+
+3
+00:00:15,080 --> 00:00:15,450
+to.
+
+4
+00:00:16,129 --> 00:00:23,000
+We have configured a default route here, but when it comes to an MVC application, we have a certain
+
+5
+00:00:23,000 --> 00:00:23,720
+pattern.
+
+6
+00:00:24,260 --> 00:00:30,590
+And before I show you that in the application, let me walk you through a presentation here to give
+
+7
+00:00:30,590 --> 00:00:32,030
+you a rough idea.
+
+8
+00:00:32,930 --> 00:00:40,580
+You can see the URL pattern for routing is considered after the domain name localhost, and port number
+
+9
+00:00:40,580 --> 00:00:42,020
+is the domain name.
+
+10
+00:00:43,090 --> 00:00:49,300
+This localhost can be google.com, can be .net mastery.com or whatever you want.
+
+11
+00:00:49,570 --> 00:00:57,040
+When we have to consider routing, we remove that piece and anything after that is considered the routing
+
+12
+00:00:57,040 --> 00:00:57,820
+pattern.
+
+13
+00:00:58,530 --> 00:01:00,450
+In an MVC application.
+
+14
+00:01:00,450 --> 00:01:04,890
+The typical route that we have is a controller and then action.
+
+15
+00:01:05,640 --> 00:01:11,100
+Those are the two words that you should always, always remember and write it down.
+
+16
+00:01:11,370 --> 00:01:16,260
+There is a controller and inside controller there are action methods.
+
+17
+00:01:17,020 --> 00:01:19,540
+Let me show you that with an example here.
+
+18
+00:01:19,660 --> 00:01:26,290
+In this first URL, you see we have the domain name, which is localhost, and then we have something
+
+19
+00:01:26,290 --> 00:01:32,230
+called as forward slash category, forward slash index, and then a number three.
+
+20
+00:01:33,080 --> 00:01:40,010
+So the first thing that you see after the domain is the controller name and next thing with a forward
+
+21
+00:01:40,010 --> 00:01:42,710
+slash will be an action name.
+
+22
+00:01:43,560 --> 00:01:47,520
+After that, if there is anything there that will be the ID.
+
+23
+00:01:48,540 --> 00:01:53,360
+ID is an optional field that we already saw right here.
+
+24
+00:01:53,370 --> 00:01:55,710
+You can see that is question mark.
+
+25
+00:01:56,510 --> 00:02:00,770
+So if we go back, what is the first thing after the domain name?
+
+26
+00:02:00,770 --> 00:02:02,490
+That is the category.
+
+27
+00:02:02,510 --> 00:02:04,460
+After that, we have index.
+
+28
+00:02:04,460 --> 00:02:11,930
+And then if there is anything present that will be populated in the ID, that is the default pattern
+
+29
+00:02:11,930 --> 00:02:14,630
+that has been defined in the .net project.
+
+30
+00:02:15,020 --> 00:02:20,510
+Now, of course, we can modify some things here and we will do that in the later videos.
+
+31
+00:02:20,510 --> 00:02:22,910
+But this is the default pattern.
+
+32
+00:02:23,150 --> 00:02:28,340
+We have controllers and inside there we have action based on that.
+
+33
+00:02:28,340 --> 00:02:35,180
+I have an example here and I want you to find out that based on the URL, what will be the category
+
+34
+00:02:35,180 --> 00:02:39,650
+and what will be the action and if there is an ID or not.
+
+35
+00:02:41,420 --> 00:02:46,860
+The first example here category is the controller and index is the action.
+
+36
+00:02:46,880 --> 00:02:50,600
+We do not have any ID, so ID will be null.
+
+37
+00:02:51,710 --> 00:02:55,190
+After that we only have something called as category.
+
+38
+00:02:55,730 --> 00:03:01,670
+If there is no action defined, then by default the action will be index action.
+
+39
+00:03:02,060 --> 00:03:05,560
+We do not have any action defined in the second example.
+
+40
+00:03:05,570 --> 00:03:08,310
+So controller will be category.
+
+41
+00:03:08,330 --> 00:03:11,960
+Action will be index and ID will be null.
+
+42
+00:03:13,150 --> 00:03:20,800
+In the third example here we have controller name as category action name as edit, and then we have
+
+43
+00:03:20,800 --> 00:03:23,950
+some ID with the value of three.
+
+44
+00:03:24,990 --> 00:03:29,790
+And the final example here we have a controller with the name of product.
+
+45
+00:03:29,820 --> 00:03:35,520
+We have an action with the name of details and ID with a value of three.
+
+46
+00:03:36,000 --> 00:03:40,260
+Now you might be wondering what is the importance of this assignment?
+
+47
+00:03:40,470 --> 00:03:44,620
+Well, it is really important from now onwards.
+
+48
+00:03:44,640 --> 00:03:52,170
+If you look at a URL that is using MVC architecture, you can tell what is the controller name and what
+
+49
+00:03:52,170 --> 00:03:53,430
+is the action name.
+
+50
+00:03:53,880 --> 00:04:00,450
+Now, if I go back here, we are saying that the default controller is home and action is index.
+
+51
+00:04:00,570 --> 00:04:07,170
+That basically means that if nothing is defined after the domain name, it is telling the application
+
+52
+00:04:07,170 --> 00:04:11,760
+that you should go to home controller and index action method.
+
+53
+00:04:12,490 --> 00:04:18,310
+That is the default route that .net team has configured in Program.cs.
+
+54
+00:04:18,670 --> 00:04:25,030
+If you want, you can change that default route, but that is the default route and you know how that
+
+55
+00:04:25,030 --> 00:04:28,810
+will be converted to a URL if you want.
+
+56
+00:04:28,960 --> 00:04:30,670
+Now enough talking.
+
+57
+00:04:30,700 --> 00:04:35,140
+Let me show you routing in action in the next video.
+

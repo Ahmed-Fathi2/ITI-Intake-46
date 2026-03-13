@@ -1,0 +1,576 @@
+1
+00:00:00,550 --> 00:00:07,720
+Trong video ngắn này, chúng ta sẽ thấy các vòng đời dịch vụ khác nhau khi nói đến việc tiêm phụ thuộc
+
+2
+00:00:07,720 --> 00:00:09,280
+vào lõi Dotnet.
+
+3
+00:00:09,760 --> 00:00:13,080
+Bây giờ, bạn không cần phải lập trình điều này cùng với tôi.
+
+4
+00:00:13,090 --> 00:00:20,320
+Tôi chỉ muốn các bạn xem mười phút tiếp theo và hiểu thời gian sử dụng dịch vụ khác nhau trong
+
+5
+00:00:20,320 --> 00:00:22,360
+tiêm phụ thuộc là gì.
+
+6
+00:00:23,180 --> 00:00:30,320
+Trước khi chúng ta xem xét một ví dụ, hãy để tôi nhanh chóng cung cấp cho bạn một ý tưởng sơ bộ về trách nhiệm
+
+7
+00:00:30,320 --> 00:00:31,730
+của mỗi kiếp sống.
+
+8
+00:00:32,330 --> 00:00:39,020
+Kiếp sống nhất thời là kiếp sống đơn giản nhất trong số chúng, và nó cũng là một trong những kiếp sống an toàn nhất.
+
+9
+00:00:39,440 --> 00:00:45,980
+Về cơ bản, tạm thời có nghĩa là bất cứ khi nào chúng ta muốn thực hiện bất kỳ điều gì, hãy tạo một đối tượng mới và cung cấp cho
+
+10
+00:00:45,980 --> 00:00:47,000
+đối tượng mới đó.
+
+11
+00:00:47,030 --> 00:00:50,260
+Bạn không bao giờ phải sử dụng lại một đối tượng hiện có.
+
+12
+00:00:50,270 --> 00:00:55,400
+Mỗi khi một dịch vụ được yêu cầu, một triển khai mới sẽ được tạo.
+
+13
+00:00:56,240 --> 00:01:01,700
+Sau đó, chúng tôi có phạm vi phụ thuộc vào yêu cầu HTTP.
+
+14
+00:01:01,880 --> 00:01:10,280
+Vì vậy, bất cứ khi nào một yêu cầu HTTP được gửi đến máy chủ vào thời điểm đó cho phạm vi đó, một vòng đời sẽ được tạo và
+
+15
+00:01:10,400 --> 00:01:18,710
+sau đó cùng một đối tượng hoặc cùng một dịch vụ được sử dụng ở bất kỳ đâu trong yêu cầu đó mà dịch vụ được yêu cầu.
+
+16
+00:01:19,280 --> 00:01:24,430
+Vì vậy, giả sử đối với một lần tải trang, chúng tôi đang gọi một dịch vụ mười lần.
+
+17
+00:01:24,440 --> 00:01:32,900
+Nó sẽ chỉ tạo đối tượng đó một lần và nó sẽ sử dụng cùng đối tượng đó mười lần trong một yêu cầu đó.
+
+18
+00:01:33,200 --> 00:01:39,020
+Nhưng sau đó, nếu có yêu cầu tiếp theo, thì một triển khai mới sẽ được tạo.
+
+19
+00:01:39,650 --> 00:01:47,180
+Và cuối cùng, chúng ta có Singleton nơi một triển khai được tạo cho vòng đời của ứng dụng.
+
+20
+00:01:47,330 --> 00:01:54,470
+Vì vậy, khi ứng dụng bắt đầu, chúng tôi tạo một đối tượng của dịch vụ đó hoặc triển khai và đối tượng đó được
+
+21
+00:01:54,470 --> 00:01:59,810
+sử dụng cho tất cả các yêu cầu sắp tới trừ khi bạn khởi động lại ứng dụng.
+
+22
+00:02:00,940 --> 00:02:09,310
+Vì vậy, để cung cấp cho bạn một ý tưởng sơ bộ, một lần nữa, dịch vụ mới tạm thời được tạo mỗi lần cho phạm vi.
+
+23
+00:02:09,460 --> 00:02:18,520
+Dịch vụ mới sẽ được tạo một lần cho mỗi yêu cầu và đối với đơn lẻ, dịch vụ mới sẽ được tạo một lần cho mỗi vòng
+
+24
+00:02:18,520 --> 00:02:20,260
+đời của ứng dụng.
+
+25
+00:02:20,860 --> 00:02:26,230
+Giờ đây, Scoped là một trong những cách tiếp cận được đề xuất nhiều nhất cho ứng dụng web.
+
+26
+00:02:26,260 --> 00:02:30,760
+Do đó, một dịch vụ sẽ được tạo theo từng yêu cầu.
+
+27
+00:02:31,090 --> 00:02:36,400
+Nhưng ngay cả với tất cả những điều tổng quan này, mọi thứ có thể hơi phức tạp.
+
+28
+00:02:37,070 --> 00:02:41,810
+Vì vậy, hãy để tôi giải thích điều đó thêm một chút bằng một ví dụ thực tế.
+
+29
+00:02:42,750 --> 00:02:48,330
+Hãy để tôi chuyển sang Visual Studio và chúng tôi sẽ tạo một ứng dụng MVC.
+
+30
+00:02:49,210 --> 00:02:54,790
+Tôi sẽ đặt tên cho nó là thời gian phục vụ trọn đời và để tôi tạo ra nó.
+
+31
+00:02:56,060 --> 00:02:57,080
+Trong dự án.
+
+32
+00:02:57,080 --> 00:03:02,150
+Ở đây, hãy để tôi tạo một thư mục mới cho các dịch vụ.
+
+33
+00:03:03,070 --> 00:03:03,760
+Trong đó.
+
+34
+00:03:03,760 --> 00:03:08,200
+Hãy để tôi tạo ba giao diện cho ba dịch vụ mà chúng tôi có.
+
+35
+00:03:08,560 --> 00:03:11,680
+Vì vậy, cái đầu tiên sẽ là tôi có phạm vi.
+
+36
+00:03:12,950 --> 00:03:15,110
+Hãy để tôi thêm một cái mới ở đây.
+
+37
+00:03:15,590 --> 00:03:17,870
+Đó sẽ là Singleton.
+
+38
+00:03:18,560 --> 00:03:22,520
+Và cuối cùng, chúng tôi sẽ thêm tạm thời.
+
+39
+00:03:22,550 --> 00:03:25,010
+Đây chỉ là tên giao diện.
+
+40
+00:03:25,010 --> 00:03:28,690
+Chúng tôi chưa thêm bất kỳ chức năng nào vào đó.
+
+41
+00:03:28,700 --> 00:03:34,100
+Hãy để tôi thêm một phương thức lấy lưới sẽ trả về một lưới ngẫu nhiên.
+
+42
+00:03:34,220 --> 00:03:37,100
+Vì vậy, kiểu trả về sẽ là chuỗi.
+
+43
+00:03:39,010 --> 00:03:39,720
+Hoàn hảo.
+
+44
+00:03:39,730 --> 00:03:43,990
+Tôi sẽ thêm nó vào cả ba giao diện mà chúng tôi đã thêm.
+
+45
+00:03:44,870 --> 00:03:49,160
+Bây giờ chúng ta cần thêm việc triển khai ba giao diện này.
+
+46
+00:03:50,220 --> 00:03:53,110
+Việc thực hiện sẽ khá đơn giản.
+
+47
+00:03:53,130 --> 00:04:02,160
+Hãy để tôi thêm một lớp ở đây cho dịch vụ Singleton Grid sẽ triển khai dịch vụ I Singleton Grid.
+
+48
+00:04:02,460 --> 00:04:04,380
+Thực hiện giao diện.
+
+49
+00:04:05,880 --> 00:04:14,100
+Ở đây, hãy để tôi tạo một lưới chỉ đọc riêng với tên ID và trong ID hàm tạo, chúng tôi sẽ nói
+
+50
+00:04:14,100 --> 00:04:15,960
+grid. lưới mới.
+
+51
+00:04:17,079 --> 00:04:18,519
+Và chức năng ở đây.
+
+52
+00:04:18,519 --> 00:04:22,210
+Chúng tôi chỉ muốn trả lại id. để chuỗi.
+
+53
+00:04:23,270 --> 00:04:24,500
+Trông tôt đây.
+
+54
+00:04:24,920 --> 00:04:30,710
+Hãy để tôi tạo triển khai tương tự cho hai giao diện khác mà chúng ta có.
+
+55
+00:04:30,980 --> 00:04:40,910
+Hãy để tôi thêm một lớp sẽ là dịch vụ lưới có phạm vi và lớp đó sẽ triển khai dịch vụ lưới có phạm vi tôi.
+
+56
+00:04:41,690 --> 00:04:48,320
+Tôi có thể sao chép mọi thứ ở đây, dán nó và chúng tôi sẽ thay đổi tên hàm tạo.
+
+57
+00:04:48,410 --> 00:04:49,850
+Có vẻ tốt.
+
+58
+00:04:50,120 --> 00:04:55,010
+Hãy để tôi thêm cái cuối cùng, đó là dịch vụ lưới tạm thời.
+
+59
+00:04:56,060 --> 00:05:00,070
+Hãy để tôi sao chép và dán nó vào đây.
+
+60
+00:05:00,860 --> 00:05:05,120
+Và điều này sẽ triển khai dịch vụ lưới tạm thời.
+
+61
+00:05:05,660 --> 00:05:12,770
+Vì vậy, bây giờ chúng tôi có ba giao diện và ba triển khai tương ứng của chúng có vẻ tốt.
+
+62
+00:05:13,130 --> 00:05:21,170
+Nhưng khi chúng tôi đăng ký dịch vụ cho Program. cs, chúng ta phải viết vòng đời mà chúng ta muốn
+
+63
+00:05:21,170 --> 00:05:22,160
+đăng ký.
+
+64
+00:05:22,610 --> 00:05:28,620
+Vì vậy, trong dịch vụ ADD ở đây, chúng tôi sẽ nói builder. dịch vụ, chấm THÊM.
+
+65
+00:05:28,640 --> 00:05:32,630
+Và sau đó chúng ta phải viết vòng đời mà chúng ta muốn sử dụng.
+
+66
+00:05:32,750 --> 00:05:36,500
+Chúng tôi đã xác định phạm vi thoáng qua và đơn lẻ.
+
+67
+00:05:37,150 --> 00:05:44,680
+Trong Singleton, chúng ta sẽ có giao diện, là một dịch vụ lưới đơn và việc triển khai nằm
+
+68
+00:05:44,680 --> 00:05:47,560
+trong dịch vụ Lưới Singleton.
+
+69
+00:05:47,860 --> 00:05:53,560
+Đó là cách chúng tôi đăng ký một dịch vụ cho vùng chứa tiêm phụ thuộc.
+
+70
+00:05:53,980 --> 00:05:58,270
+Chúng tôi cũng sẽ đăng ký dịch vụ tạm thời và trong phạm vi.
+
+71
+00:05:59,210 --> 00:05:59,990
+Hoàn hảo.
+
+72
+00:05:59,990 --> 00:06:05,210
+Vì vậy, nó hoàn toàn giống như khi chúng ta đăng ký ngữ cảnh DB cho vùng chứa.
+
+73
+00:06:05,210 --> 00:06:13,040
+Và sau đó khi chúng tôi phải sử dụng nó, chúng tôi sẽ làm điều đó bên trong bộ điều khiển gia đình trước khi chúng tôi bắt
+
+74
+00:06:13,040 --> 00:06:17,510
+đầu sử dụng nó ngay tại đây, hãy để tôi tạo sáu trường riêng tư.
+
+75
+00:06:17,600 --> 00:06:23,210
+Hai sẽ dành cho dịch vụ phạm vi này, hai dành cho Singleton và hai dành cho tạm thời.
+
+76
+00:06:23,540 --> 00:06:28,580
+Chúng tôi đã xác định phạm vi một đến Singleton một hai và tạm thời một đến.
+
+77
+00:06:29,470 --> 00:06:30,070
+Kế tiếp.
+
+78
+00:06:30,070 --> 00:06:33,580
+Những gì chúng tôi muốn là triển khai các giao diện này.
+
+79
+00:06:33,790 --> 00:06:37,360
+Chúng tôi đã đăng ký trong Program. cs ngay tại đây.
+
+80
+00:06:37,360 --> 00:06:43,900
+Vì vậy, về cơ bản, chúng tôi đang nói rằng khi ai đó yêu cầu triển khai dịch vụ lưới đơn lẻ, chúng tôi đang
+
+81
+00:06:43,930 --> 00:06:44,980
+nói với họ.
+
+82
+00:06:45,190 --> 00:06:51,580
+Net cung cấp cho họ triển khai có sẵn trong dịch vụ lưới Singleton.
+
+83
+00:06:52,230 --> 00:06:55,800
+Nhưng ở đó chúng tôi đang nói rằng hãy sử dụng ADD singleton.
+
+84
+00:06:55,800 --> 00:06:57,330
+Đó là cả cuộc đời.
+
+85
+00:06:57,980 --> 00:07:05,000
+Vì vậy, khi chúng tôi muốn sử dụng triển khai bên trong hàm tạo ở đây, chúng tôi có thể hỏi trực tiếp
+
+86
+00:07:05,030 --> 00:07:12,770
+lõi Dotnet rằng chúng tôi cần triển khai dịch vụ lưới có phạm vi và chúng tôi sẽ gọi đó là lưới có phạm vi.
+
+87
+00:07:13,160 --> 00:07:16,220
+Sau đó, chúng tôi muốn thực hiện điều đó.
+
+88
+00:07:16,220 --> 00:07:20,930
+Vì vậy, lưới phạm vi một dấu phẩy, chúng ta sẽ có lưới phạm vi hai.
+
+89
+00:07:21,080 --> 00:07:27,080
+Và tương tự, chúng tôi muốn triển khai cho dịch vụ đơn lẻ và tạm thời.
+
+90
+00:07:27,440 --> 00:07:29,780
+Vì vậy, đây là những thực hiện mà.
+
+91
+00:07:29,990 --> 00:07:35,240
+Net framework sẽ cung cấp dựa trên những gì chúng ta đã đăng ký trong Program. cs.
+
+92
+00:07:35,660 --> 00:07:42,560
+Sau đó, chúng ta phải gán các triển khai này cho biến cục bộ mà chúng ta có ngay tại đây.
+
+93
+00:07:43,730 --> 00:07:44,820
+Đối với điều đó, chúng tôi sẽ nói.
+
+94
+00:07:44,840 --> 00:07:46,040
+Gạch dưới Singleton.
+
+95
+00:07:46,040 --> 00:07:50,900
+Một bằng Singleton một và tương tự cho mọi thứ khác.
+
+96
+00:07:50,990 --> 00:07:56,480
+Tôi có thể thay đổi điều này thành một lưới có phạm vi chứ không phải là lưới có phạm vi ở đây.
+
+97
+00:07:57,530 --> 00:07:58,280
+Hoàn hảo.
+
+98
+00:07:58,730 --> 00:07:59,660
+Nó có vẻ tốt.
+
+99
+00:07:59,840 --> 00:08:03,290
+Vì vậy, chúng tôi có triển khai này trên đó.
+
+100
+00:08:03,290 --> 00:08:09,210
+Chúng ta có thể gọi phương thức này là get grid thay vì tạo ra bất kỳ thứ gì lạ mắt.
+
+101
+00:08:09,230 --> 00:08:17,900
+Hãy để tôi sử dụng trình tạo chuỗi cho thư ở đây và tôi sẽ thêm vào thư đó bằng phép nội suy chuỗi.
+
+102
+00:08:19,140 --> 00:08:27,870
+Vì vậy, trước tiên tôi sẽ nói giá trị tạm thời, sau đó chúng tôi sẽ hiển thị giá trị bằng cách sử dụng dấu gạch dưới tạm thời
+
+103
+00:08:28,080 --> 00:08:29,970
+một dấu chấm lấy lưới.
+
+104
+00:08:30,000 --> 00:08:31,830
+Chúng tôi có phương pháp đó.
+
+105
+00:08:32,130 --> 00:08:35,429
+Và sau đó, hãy để tôi thêm một dòng mới.
+
+106
+00:08:36,500 --> 00:08:37,580
+Rất hoàn hảo.
+
+107
+00:08:37,580 --> 00:08:42,770
+Điều đó có vẻ tốt cho bản sao tạm thời đầu tiên và dán nó.
+
+108
+00:08:42,770 --> 00:08:47,620
+Một lần nữa, chúng tôi muốn hiển thị lưới hai chấm tạm thời.
+
+109
+00:08:47,630 --> 00:08:50,480
+Và hãy để tôi thêm một dòng mới ở đó.
+
+110
+00:08:52,520 --> 00:08:55,890
+Sao chép chúng, dán thêm hai lần nữa.
+
+111
+00:08:55,910 --> 00:08:58,460
+Tiếp theo, chúng tôi muốn bản sao này.
+
+112
+00:09:00,460 --> 00:09:02,740
+Phạm vi, một phạm vi để.
+
+113
+00:09:03,580 --> 00:09:05,800
+Phạm vi gạch dưới hai một.
+
+114
+00:09:05,830 --> 00:09:08,440
+Gạch dưới Phạm vi hai.
+
+115
+00:09:08,830 --> 00:09:11,200
+Và cuối cùng, chúng ta cần Singleton.
+
+116
+00:09:11,950 --> 00:09:12,880
+Hoàn hảo.
+
+117
+00:09:12,910 --> 00:09:16,690
+Khi chúng tôi quay lại, chúng tôi không muốn quay lại chế độ xem.
+
+118
+00:09:16,720 --> 00:09:18,100
+Chúng tôi chỉ muốn trở về.
+
+119
+00:09:18,100 --> 00:09:18,820
+Được rồi.
+
+120
+00:09:18,820 --> 00:09:23,140
+Và hiển thị thông báo. để xâu chuỗi trên màn hình.
+
+121
+00:09:24,160 --> 00:09:27,160
+Vì vậy, bây giờ chúng ta cần phải suy nghĩ về những gì sẽ xảy ra.
+
+122
+00:09:27,340 --> 00:09:34,660
+Về cơ bản, tất cả chúng đều có cùng một phương thức lưới cat, trả về một lưới ngẫu nhiên, nhưng điều
+
+123
+00:09:34,660 --> 00:09:39,010
+khác biệt duy nhất là cách vòng đời đã được đăng ký.
+
+124
+00:09:39,900 --> 00:09:43,860
+Vì vậy, hãy để tôi chạy cái này và xem nó hoạt động.
+
+125
+00:09:45,620 --> 00:09:46,820
+Và hoàn hảo.
+
+126
+00:09:46,850 --> 00:09:49,130
+Chúng tôi có một cái gì đó ngay tại đây.
+
+127
+00:09:49,840 --> 00:09:55,900
+Bạn có thể thấy khi chúng tôi đang làm việc với yêu cầu tạm thời ở đây, các lưới sẽ khác nhau, nhưng khi
+
+128
+00:09:55,900 --> 00:10:00,310
+chúng tôi có phạm vi hoặc Singleton, chúng giống như chúng tôi biết.
+
+129
+00:10:00,310 --> 00:10:01,390
+Singleton ở lại.
+
+130
+00:10:01,390 --> 00:10:05,200
+Tương tự cho vòng đời của ứng dụng.
+
+131
+00:10:05,620 --> 00:10:12,730
+Vì vậy, ngay cả khi chúng tôi làm mới ứng dụng, phạm vi và tạm thời sẽ khác nhau, nhưng Singleton
+
+132
+00:10:12,730 --> 00:10:14,650
+sẽ luôn giữ nguyên.
+
+133
+00:10:15,070 --> 00:10:22,120
+Bạn có thể thấy khi tôi làm mới ở đây, Transient đang được cập nhật cùng với phạm vi, nhưng Singleton
+
+134
+00:10:22,120 --> 00:10:24,250
+luôn giữ nguyên.
+
+135
+00:10:25,180 --> 00:10:31,450
+Và sau đó đối với phạm vi ở đây, bạn có thể thấy mỗi lần đối với một yêu cầu, nó sẽ nhận được một giá trị mới.
+
+136
+00:10:31,450 --> 00:10:36,340
+Nhưng đối với một yêu cầu, giá trị vẫn giống nhau trong cả hai yêu cầu.
+
+137
+00:10:37,150 --> 00:10:43,120
+Nhưng trong thời gian ngắn bất cứ lúc nào một quid được yêu cầu, nó sẽ gọi một quid mới.
+
+138
+00:10:43,630 --> 00:10:50,530
+Vì vậy, điều đó có nghĩa là mỗi khi một tạm thời được gọi, về cơ bản, nó sẽ cung cấp một triển khai mới cho
+
+139
+00:10:50,530 --> 00:10:51,370
+dịch vụ đó.
+
+140
+00:10:51,760 --> 00:10:57,340
+Khi nói đến phạm vi, việc triển khai vẫn giữ nguyên cho một yêu cầu.
+
+141
+00:10:57,370 --> 00:11:04,300
+Nếu trong một yêu cầu đó, chúng tôi gọi yêu cầu này mười lần, chúng tôi sẽ nhận được cùng một dịch vụ, nhưng trong lần
+
+142
+00:11:04,300 --> 00:11:09,280
+tiếp theo, bạn sẽ nhận được một dịch vụ khác khi bạn đang làm việc với Scoped.
+
+143
+00:11:10,510 --> 00:11:17,170
+Vì vậy, với điều đó, bạn có thể thấy phạm vi tạm thời và Singleton khác nhau như thế nào khi nói đến thời gian
+
+144
+00:11:17,170 --> 00:11:19,600
+tồn tại của dịch vụ Tiêm phụ thuộc.
+

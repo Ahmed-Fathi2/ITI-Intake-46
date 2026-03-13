@@ -1,0 +1,220 @@
+1
+00:00:01,740 --> 00:00:03,690
+Instructor: We are able to place order with
+
+2
+00:00:03,690 --> 00:00:07,563
+both the accounts of company as well as a customer user.
+
+3
+00:00:08,460 --> 00:00:13,410
+With that in place now we want to work on order management.
+
+4
+00:00:13,410 --> 00:00:16,399
+Like how will we update the order status to processing,
+
+5
+00:00:16,399 --> 00:00:21,333
+shipped and how can a company user make a payment later on?
+
+6
+00:00:22,260 --> 00:00:25,020
+First we need to add an order controller
+
+7
+00:00:25,020 --> 00:00:28,500
+where we will be having different action to display
+
+8
+00:00:28,500 --> 00:00:29,913
+all of the orders.
+
+9
+00:00:31,080 --> 00:00:34,630
+So first thing first, let me switch back to the code
+
+10
+00:00:35,670 --> 00:00:38,220
+and we will stop the application here.
+
+11
+00:00:38,220 --> 00:00:42,330
+Whoops, I restarted, let me stop that.
+
+12
+00:00:42,330 --> 00:00:47,040
+And inside admin we will have order management.
+
+13
+00:00:47,040 --> 00:00:52,040
+So in admin orders, let me create a new controller
+
+14
+00:00:52,170 --> 00:00:54,933
+with the name of order controller.
+
+15
+00:00:55,800 --> 00:00:58,110
+We will go with the empty controller.
+
+16
+00:00:58,110 --> 00:01:00,150
+That looks good.
+
+17
+00:01:00,150 --> 00:01:02,520
+Now for displaying all the orders,
+
+18
+00:01:02,520 --> 00:01:04,890
+we will be using data table.
+
+19
+00:01:04,890 --> 00:01:07,500
+So we can go to product controller,
+
+20
+00:01:07,500 --> 00:01:12,000
+and where we have the A P I, let me copy this,
+
+21
+00:01:12,000 --> 00:01:15,243
+and I will paste it right here.
+
+22
+00:01:17,040 --> 00:01:20,160
+Perfect. The A P I call looks good.
+
+23
+00:01:20,160 --> 00:01:23,610
+We do not want the delete, let me remove that.
+
+24
+00:01:23,610 --> 00:01:26,073
+And we need to add unit of work.
+
+25
+00:01:27,120 --> 00:01:30,330
+So right here we will have private,
+
+26
+00:01:30,330 --> 00:01:33,040
+read only I unit of work
+
+27
+00:01:34,230 --> 00:01:36,243
+underscore unit of work.
+
+28
+00:01:39,450 --> 00:01:43,750
+In the constructor, we will get the I unit of work
+
+29
+00:01:44,910 --> 00:01:49,353
+and underscore unit of work is equal to unit of work.
+
+30
+00:01:50,730 --> 00:01:53,970
+In the get all here, we will be getting a list
+
+31
+00:01:53,970 --> 00:01:58,170
+or I innumerable of order header.
+
+32
+00:01:58,170 --> 00:01:59,310
+So OBJ,
+
+33
+00:01:59,310 --> 00:02:04,260
+I will call that order headers is equal to
+
+34
+00:02:04,260 --> 00:02:08,699
+unit of work dot order header dot get all
+
+35
+00:02:08,699 --> 00:02:11,673
+and we want to include application user.
+
+36
+00:02:14,340 --> 00:02:16,080
+That looks good and we will return
+
+37
+00:02:16,080 --> 00:02:20,040
+back the OBJ order headers.
+
+38
+00:02:20,040 --> 00:02:22,789
+Great. So our order controller looks good
+
+39
+00:02:22,789 --> 00:02:26,073
+with the get all A P I endpoint.
+
+40
+00:02:27,120 --> 00:02:29,310
+But before I end the video,
+
+41
+00:02:29,310 --> 00:02:32,910
+typically when we retrieve anything related to order
+
+42
+00:02:32,910 --> 00:02:37,173
+we have to retrieve order header as well as order detail.
+
+43
+00:02:38,040 --> 00:02:41,740
+So for that it makes sense to create a new model
+
+44
+00:02:42,720 --> 00:02:44,320
+and let me do that.
+
+45
+00:02:44,320 --> 00:02:46,920
+It'll be a view model.
+
+46
+00:02:46,920 --> 00:02:51,920
+I will call that order VM for order view model
+
+47
+00:02:52,350 --> 00:02:55,440
+and it will be a public class.
+
+48
+00:02:55,440 --> 00:02:57,960
+Now that will have order header,
+
+49
+00:02:57,960 --> 00:03:01,530
+and it will have a collection of order detail.
+
+50
+00:03:01,530 --> 00:03:03,090
+So prop,
+
+51
+00:03:03,090 --> 00:03:06,460
+that will be I innumerable of order detail
+
+52
+00:03:07,590 --> 00:03:10,263
+and let me call that order detail.
+
+53
+00:03:12,000 --> 00:03:15,205
+Perfect. So we have a order review model that has
+
+54
+00:03:15,205 --> 00:03:20,205
+order header and all the order detail related to that model.
+
+55
+00:03:21,930 --> 00:03:26,013
+With that in place, let me continue from the next video.
+

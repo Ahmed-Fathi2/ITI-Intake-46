@@ -1,0 +1,420 @@
+1
+00:00:01,830 --> 00:00:03,870
+Instructor: The publishable and the secret key
+
+2
+00:00:03,870 --> 00:00:05,850
+that we have for our Stripe,
+
+3
+00:00:05,850 --> 00:00:08,280
+we need to add that in our project.
+
+4
+00:00:08,280 --> 00:00:11,823
+That way we can access them whenever we want to.
+
+5
+00:00:12,720 --> 00:00:14,880
+Now, when we have to add any connection
+
+6
+00:00:14,880 --> 00:00:17,700
+or any secrets in the application,
+
+7
+00:00:17,700 --> 00:00:22,113
+I will be doing that inside app settings dot JSON file.
+
+8
+00:00:22,980 --> 00:00:24,720
+Now typically in production,
+
+9
+00:00:24,720 --> 00:00:26,790
+you might be using a secret vault
+
+10
+00:00:26,790 --> 00:00:29,280
+or other details for your secrets,
+
+11
+00:00:29,280 --> 00:00:32,103
+but app settings is a good place to get started.
+
+12
+00:00:33,390 --> 00:00:36,810
+We already added our database connection here,
+
+13
+00:00:36,810 --> 00:00:40,680
+so I will be creating a new section for Stripe.
+
+14
+00:00:40,680 --> 00:00:42,660
+Let me call that Stripe.
+
+15
+00:00:42,660 --> 00:00:45,780
+And inside there I want two things.
+
+16
+00:00:45,780 --> 00:00:47,970
+One is a secret key
+
+17
+00:00:47,970 --> 00:00:52,020
+and the next one here will be publishable key.
+
+18
+00:00:52,020 --> 00:00:54,450
+Let me navigate to Stripe here,
+
+19
+00:00:54,450 --> 00:00:56,670
+copy the publishable key.
+
+20
+00:00:56,670 --> 00:00:58,650
+I will paste it here,
+
+21
+00:00:58,650 --> 00:01:00,660
+reveal the secret key,
+
+22
+00:01:00,660 --> 00:01:03,750
+and we will paste that right here.
+
+23
+00:01:03,750 --> 00:01:06,270
+Secret key starts with an SK
+
+24
+00:01:06,270 --> 00:01:09,513
+and publishable key starts with a PK.
+
+25
+00:01:10,680 --> 00:01:12,900
+Perfect, that looks good.
+
+26
+00:01:12,900 --> 00:01:15,420
+Next thing, what we can do is we can directly
+
+27
+00:01:15,420 --> 00:01:19,080
+get the section by using the eye configuration,
+
+28
+00:01:19,080 --> 00:01:22,230
+but I want to show you a slightly different way
+
+29
+00:01:22,230 --> 00:01:26,280
+of fetching some values from app settings.
+
+30
+00:01:26,280 --> 00:01:29,460
+What we can do is we can create a utility file
+
+31
+00:01:29,460 --> 00:01:33,060
+for Stripe settings based on the exact property name
+
+32
+00:01:33,060 --> 00:01:34,500
+that are right here,
+
+33
+00:01:34,500 --> 00:01:37,653
+like secret key and publishable key.
+
+34
+00:01:38,610 --> 00:01:41,400
+I think it is better if I show you
+
+35
+00:01:41,400 --> 00:01:43,680
+inside the utility project.
+
+36
+00:01:43,680 --> 00:01:45,930
+Let me create a new class.
+
+37
+00:01:45,930 --> 00:01:50,163
+I will call that Stripe settings dot cs.
+
+38
+00:01:51,666 --> 00:01:54,070
+It'll be a public class here
+
+39
+00:01:55,170 --> 00:01:58,380
+and inside there I will create two properties,
+
+40
+00:01:58,380 --> 00:02:00,780
+which will have the exact spelling
+
+41
+00:02:00,780 --> 00:02:03,030
+like we have in the name here,
+
+42
+00:02:03,030 --> 00:02:06,183
+which is secret key and publishable key.
+
+43
+00:02:07,620 --> 00:02:11,520
+Then what we can do is inside the program dot cs
+
+44
+00:02:11,520 --> 00:02:13,560
+we can configure in a manner
+
+45
+00:02:13,560 --> 00:02:17,790
+that secrets in app settings are automatically injected
+
+46
+00:02:17,790 --> 00:02:19,593
+inside these properties.
+
+47
+00:02:20,490 --> 00:02:22,353
+Let me show you how to do that.
+
+48
+00:02:24,060 --> 00:02:29,060
+Right here we can say builder dot services dot configure
+
+49
+00:02:29,520 --> 00:02:33,780
+and there we want to configure Stripe settings.
+
+50
+00:02:33,780 --> 00:02:37,200
+Now, next, how do we want to configure that?
+
+51
+00:02:37,200 --> 00:02:40,770
+For that we will say builder dot configuration
+
+52
+00:02:40,770 --> 00:02:43,110
+dot get section,
+
+53
+00:02:43,110 --> 00:02:46,320
+and we have to write the section name,
+
+54
+00:02:46,320 --> 00:02:50,460
+name of the section, if you remember, that is Stripe,
+
+55
+00:02:50,460 --> 00:02:53,973
+but it is always safe to copy and paste that.
+
+56
+00:02:54,840 --> 00:02:56,880
+Now, as long as the property names
+
+57
+00:02:56,880 --> 00:02:59,220
+inside the Stripe settings match
+
+58
+00:02:59,220 --> 00:03:03,390
+what is there in the Stripe section in app settings
+
+59
+00:03:03,390 --> 00:03:06,810
+it'll automatically inject these values
+
+60
+00:03:06,810 --> 00:03:09,603
+inside the properties right here.
+
+61
+00:03:10,590 --> 00:03:12,180
+So that is another way
+
+62
+00:03:12,180 --> 00:03:16,290
+of fetching the values from your app settings.
+
+63
+00:03:16,290 --> 00:03:18,870
+Now how and when we will use that,
+
+64
+00:03:18,870 --> 00:03:22,350
+that we will cover in the upcoming videos,
+
+65
+00:03:22,350 --> 00:03:26,970
+but right now in our packages we have not even added Stripe.
+
+66
+00:03:26,970 --> 00:03:29,040
+So what we have to do is first
+
+67
+00:03:29,040 --> 00:03:33,090
+we have to add the NuGet package for Stripe.
+
+68
+00:03:33,090 --> 00:03:37,920
+Right click on the project, manage NuGet packages here,
+
+69
+00:03:37,920 --> 00:03:42,570
+and in the browse tab we will search for Stripe dot net.
+
+70
+00:03:42,570 --> 00:03:44,550
+Now, when it comes to Stripe
+
+71
+00:03:44,550 --> 00:03:47,070
+I do not want the pre-release package.
+
+72
+00:03:47,070 --> 00:03:49,200
+So let me install the stable one,
+
+73
+00:03:49,200 --> 00:03:52,893
+which is 41.9 as of this recording.
+
+74
+00:03:55,890 --> 00:03:57,780
+Perfect, it has been installed
+
+75
+00:03:57,780 --> 00:04:01,353
+and with that Stripe has been added in the project.
+
+76
+00:04:02,520 --> 00:04:04,470
+When we are using Stripe,
+
+77
+00:04:04,470 --> 00:04:06,450
+one thing that we have to configure
+
+78
+00:04:06,450 --> 00:04:10,470
+in program dot cs is the API key
+
+79
+00:04:10,470 --> 00:04:13,440
+and that API key is the secret key
+
+80
+00:04:13,440 --> 00:04:15,783
+inside app settings dot JSON.
+
+81
+00:04:16,740 --> 00:04:20,459
+So scroll down where we have the middleware here.
+
+82
+00:04:20,459 --> 00:04:24,243
+We have to configure Stripe configuration,
+
+83
+00:04:25,440 --> 00:04:26,370
+type that,
+
+84
+00:04:26,370 --> 00:04:28,440
+and if you press control dot,
+
+85
+00:04:28,440 --> 00:04:31,830
+we have the using statement for Stripe.
+
+86
+00:04:31,830 --> 00:04:35,340
+There, we have to configure the API key.
+
+87
+00:04:35,340 --> 00:04:40,340
+This API key is the secret key in app settings dot JSON.
+
+88
+00:04:40,560 --> 00:04:43,860
+Now we have already populated the Stripe settings,
+
+89
+00:04:43,860 --> 00:04:46,680
+but that we will use in controller.
+
+90
+00:04:46,680 --> 00:04:49,080
+Right now we have the builder object,
+
+91
+00:04:49,080 --> 00:04:54,080
+so on builder dot configuration we have get section.
+
+92
+00:04:54,180 --> 00:04:56,580
+We will write Stripe here.
+
+93
+00:04:56,580 --> 00:04:59,520
+That will retrieve the complete section,
+
+94
+00:04:59,520 --> 00:05:02,430
+but inside the section of Stripe,
+
+95
+00:05:02,430 --> 00:05:04,530
+we found secret key.
+
+96
+00:05:04,530 --> 00:05:08,730
+So let me copy that and we will separate that by a colon
+
+97
+00:05:08,730 --> 00:05:11,100
+and paste the value.
+
+98
+00:05:11,100 --> 00:05:15,720
+That will actually go inside Stripe, get the secret key,
+
+99
+00:05:15,720 --> 00:05:18,180
+and on there we will say get
+
+100
+00:05:18,180 --> 00:05:21,600
+and type of the value is string.
+
+101
+00:05:21,600 --> 00:05:23,580
+That will fetch the value
+
+102
+00:05:23,580 --> 00:05:27,660
+and assign that to the Stripe configuration.
+
+103
+00:05:27,660 --> 00:05:31,530
+With that, Stripe has been configured in our project
+
+104
+00:05:31,530 --> 00:05:34,920
+and we have also configured the connection strings
+
+105
+00:05:34,920 --> 00:05:38,193
+for secret key and publishable key.
+

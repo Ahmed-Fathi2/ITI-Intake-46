@@ -1,0 +1,260 @@
+1
+00:00:01,609 --> 00:00:05,630
+Bây giờ chúng ta cần hiển thị tất cả các đơn đặt hàng trong trang chỉ mục.
+
+2
+00:00:05,810 --> 00:00:08,990
+Vì vậy, nhấp chuột phải vào chỉ mục thêm chế độ xem.
+
+3
+00:00:09,020 --> 00:00:10,820
+Nó sẽ trống rỗng.
+
+4
+00:00:10,850 --> 00:00:12,030
+Có vẻ tốt.
+
+5
+00:00:12,050 --> 00:00:13,310
+Hãy để tôi thêm điều đó.
+
+6
+00:00:15,160 --> 00:00:15,880
+Mật mã.
+
+7
+00:00:15,880 --> 00:00:19,090
+Chúng tôi có thể sao chép nó từ chỉ mục sản phẩm.
+
+8
+00:00:19,690 --> 00:00:27,970
+Sao chép mọi thứ, dán nó vào đây và chúng ta cần tạo một JS mới, sẽ là thứ tự js.
+
+9
+00:00:28,550 --> 00:00:37,130
+Khi chúng tôi đang làm việc với đơn đặt hàng ở đây, tôi muốn hiển thị ID, tên, số điện thoại, email trạng thái đơn hàng
+
+10
+00:00:37,130 --> 00:00:38,780
+và tổng đơn hàng.
+
+11
+00:00:39,050 --> 00:00:44,360
+Vì vậy, chúng tôi sẽ cập nhật tất cả các thuộc tính đó ngay tại đây.
+
+12
+00:00:45,000 --> 00:00:48,270
+Chúng tôi không muốn một liên kết ở đây để tạo ra một sản phẩm mới.
+
+13
+00:00:48,270 --> 00:00:53,340
+Hãy để tôi xóa cái đó và tôi sẽ xóa div này hoàn toàn.
+
+14
+00:00:53,520 --> 00:00:55,800
+Đây sẽ là danh sách có thứ tự.
+
+15
+00:00:57,690 --> 00:01:01,320
+Còn model ở đây sẽ là order, view model.
+
+16
+00:01:02,080 --> 00:01:08,420
+Chà, khi chúng tôi đang làm việc ở đây, chúng tôi không muốn có một mô hình vì chúng tôi đang lấy mô hình đó từ bảng dữ liệu.
+
+17
+00:01:08,440 --> 00:01:10,420
+Vì vậy, hãy để tôi loại bỏ điều đó.
+
+18
+00:01:11,110 --> 00:01:13,480
+Và tôi tin rằng điều đó có vẻ tốt.
+
+19
+00:01:13,570 --> 00:01:20,010
+Tiếp theo, tôi muốn làm việc với JavaScript, vì vậy hãy sao chép và dán JavaScript sản phẩm.
+
+20
+00:01:20,020 --> 00:01:23,260
+Đổi tên nó thành order dot js.
+
+21
+00:01:24,460 --> 00:01:24,970
+Hoàn hảo.
+
+22
+00:01:24,970 --> 00:01:26,100
+Chúng tôi đang theo thứ tự.
+
+23
+00:01:26,380 --> 00:01:30,460
+JS Và ở đó chúng ta phải truy xuất tất cả các cột.
+
+24
+00:01:30,940 --> 00:01:38,350
+Cái đầu tiên ở đây là ID, tiếp theo là tên và sau đó là số điện thoại.
+
+25
+00:01:40,590 --> 00:01:45,750
+Sau đó, nếu tôi quay lại trạng thái email chỉ mục và tổng số.
+
+26
+00:01:46,290 --> 00:01:52,110
+Vì vậy, email nằm trong người dùng ứng dụng. e-mail.
+
+27
+00:01:52,440 --> 00:01:55,380
+Tiếp theo chúng ta có trạng thái đơn hàng.
+
+28
+00:01:57,320 --> 00:02:00,750
+Và hãy để tôi sao chép và dán cái này một lần nữa.
+
+29
+00:02:00,770 --> 00:02:02,930
+Chúng tôi có tổng số đơn đặt hàng.
+
+30
+00:02:04,200 --> 00:02:05,610
+Nút kết xuất ở đây.
+
+31
+00:02:05,610 --> 00:02:10,650
+Chúng tôi sẽ để nó như hiện tại và chúng tôi không muốn xóa bất cứ thứ gì.
+
+32
+00:02:10,650 --> 00:02:16,500
+Vì vậy, tôi sẽ xóa nó cũng như liên kết xóa ngay tại đây.
+
+33
+00:02:17,490 --> 00:02:18,330
+Hoàn hảo.
+
+34
+00:02:18,480 --> 00:02:19,980
+Hãy để tôi lưu nó.
+
+35
+00:02:19,980 --> 00:02:29,380
+Và chúng tôi sẽ làm việc trên bố cục được gạch chân ở ngay đây, nơi chúng tôi có quyền riêng tư.
+
+36
+00:02:29,400 --> 00:02:39,420
+Hãy để tôi thay đổi điều đó thành bộ điều khiển quản trị sẽ là hành động lập chỉ mục của bộ điều khiển và tôi sẽ gọi
+
+37
+00:02:39,600 --> 00:02:41,070
+lệnh quản lý đó.
+
+38
+00:02:43,000 --> 00:02:46,390
+Lưu nó và để tôi chạy dự án.
+
+39
+00:02:48,690 --> 00:02:55,160
+Chúng tôi sẽ điều hướng để quản lý đơn đặt hàng và nó không tìm thấy đơn đặt hàng quản trị viên đó.
+
+40
+00:02:55,170 --> 00:02:56,790
+Điều gì là không chính xác?
+
+41
+00:02:56,820 --> 00:02:59,850
+Rất tiếc, chúng tôi quên mất khu vực ở đây.
+
+42
+00:03:01,330 --> 00:03:03,430
+Khu vực là quản trị viên.
+
+43
+00:03:05,250 --> 00:03:09,720
+Với điều đó, hãy để tôi khởi động lại ở đây và đảm bảo rằng nó hoạt động.
+
+44
+00:03:10,760 --> 00:03:17,900
+Bây giờ, khi vào trang, chúng ta sẽ thấy một lỗi phổ biến với bảng dữ liệu và điều đó có vẻ ổn.
+
+45
+00:03:18,710 --> 00:03:25,610
+Lý do đằng sau đó là khi tôi thêm điều này, tôi đã không quan tâm đến vỏ bọc mà chúng ta có ở đây.
+
+46
+00:03:25,880 --> 00:03:32,750
+Tôi đã nói với bạn nhiều lần rằng bạn phải luôn nhớ JSON được trả về là gì và dựa vào đó bạn phải
+
+47
+00:03:32,750 --> 00:03:35,840
+biến nó thành trường hợp chính xác.
+
+48
+00:03:36,290 --> 00:03:38,540
+Vì vậy, bây giờ hãy để tôi sửa nó.
+
+49
+00:03:38,540 --> 00:03:44,000
+Bằng cách đó, bạn luôn nhớ đảm bảo rằng đây là trường hợp nhạy cảm.
+
+50
+00:03:44,210 --> 00:03:46,490
+Với điều đó, nếu tôi quay trở lại.
+
+51
+00:03:47,880 --> 00:03:51,100
+Và chúng tôi vẫn thấy lỗi ở đây.
+
+52
+00:03:51,120 --> 00:03:54,720
+Và tất nhiên, chúng tôi sẽ không đặt hàng.
+
+53
+00:03:54,720 --> 00:03:56,100
+Đó là lý do.
+
+54
+00:03:56,550 --> 00:03:57,810
+Lưu vào đó.
+
+55
+00:03:57,810 --> 00:03:59,250
+Và hoàn hảo.
+
+56
+00:03:59,280 --> 00:04:04,590
+Bây giờ chúng tôi có tất cả các chi tiết trong chiều rộng bảng dữ liệu của chúng tôi ở đây.
+
+57
+00:04:04,590 --> 00:04:09,660
+Hãy để tôi thay đổi điều đó và số điện thoại, làm cho nó lớn hơn một chút.
+
+58
+00:04:10,560 --> 00:04:11,490
+Hoàn hảo.
+
+59
+00:04:11,490 --> 00:04:15,660
+Điều đó có vẻ tốt hơn nhiều cho bảng dữ liệu đặt hàng của chúng tôi.
+
+60
+00:04:16,019 --> 00:04:24,420
+Với điều đó trước khi tôi kết thúc video trong quản trị viên, chúng tôi có bộ điều khiển đơn hàng và ở đó tôi
+
+61
+00:04:24,420 --> 00:04:33,840
+sẽ tạo một hành động để biết chi tiết nơi chúng tôi sẽ chuyển id đơn hàng, hãy để tôi gọi ID đơn hàng đó và chuyển dữ liệu.
+
+62
+00:04:34,490 --> 00:04:38,090
+Điều đó có vẻ tốt và chúng tôi không muốn thêm vào đây.
+
+63
+00:04:39,060 --> 00:04:39,840
+Hoàn hảo.
+
+64
+00:04:39,930 --> 00:04:41,970
+Điều này có vẻ tốt hơn nhiều.
+
+65
+00:04:42,790 --> 00:04:50,020
+Bây giờ, trước khi chúng ta tìm hiểu chi tiết, hãy để tôi tiếp tục và sửa đổi một vài điều ở đây trong video tiếp theo.
+

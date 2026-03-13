@@ -1,0 +1,92 @@
+1
+00:00:02,490 --> 00:00:04,770
+Educator: Now it's time for a third assignment.
+
+2
+00:00:04,770 --> 00:00:08,670
+This will be similar to what we did with the menu item
+
+3
+00:00:08,670 --> 00:00:10,860
+but a lot simpler.
+
+4
+00:00:10,860 --> 00:00:12,060
+In this assignment,
+
+5
+00:00:12,060 --> 00:00:14,537
+I want you guys to create a company model
+
+6
+00:00:14,537 --> 00:00:17,640
+which will have the following properties.
+
+7
+00:00:17,640 --> 00:00:19,890
+ID will be the primary key,
+
+8
+00:00:19,890 --> 00:00:23,760
+name will be required, and street address, city, state,
+
+9
+00:00:23,760 --> 00:00:26,008
+postal code, and phone number.
+
+10
+00:00:26,008 --> 00:00:28,621
+They can be optional field.
+
+11
+00:00:28,621 --> 00:00:30,810
+Once you create the table,
+
+12
+00:00:30,810 --> 00:00:33,433
+then you will have to add company to Repository
+
+13
+00:00:33,433 --> 00:00:34,683
+and UnitOfWork.
+
+14
+00:00:35,640 --> 00:00:37,080
+Using that repository,
+
+15
+00:00:37,080 --> 00:00:39,660
+you need to perform the CRUD Operations
+
+16
+00:00:39,660 --> 00:00:42,870
+on Company using DataTables.
+
+17
+00:00:42,870 --> 00:00:47,340
+And also we will implement one action for update and edit
+
+18
+00:00:47,340 --> 00:00:51,480
+so you will have to do the same like menu item.
+
+19
+00:00:51,480 --> 00:00:54,810
+So that will give you more practice with DataTable,
+
+20
+00:00:54,810 --> 00:00:55,993
+alerts that we have,
+
+21
+00:00:55,993 --> 00:00:59,820
+and, of course, validations will be the same.
+
+22
+00:00:59,820 --> 00:01:01,770
+So good luck with the assignment
+
+23
+00:01:01,770 --> 00:01:04,653
+and let's continue from the next video.
+

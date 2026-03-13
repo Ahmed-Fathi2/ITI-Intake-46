@@ -1,0 +1,300 @@
+1
+00:00:01,680 --> 00:00:03,660
+Instructor: Now on the production website,
+
+2
+00:00:03,660 --> 00:00:06,030
+we can log in using the user
+
+3
+00:00:06,030 --> 00:00:09,570
+that we seeded in DB initializer.
+
+4
+00:00:09,570 --> 00:00:11,700
+So let me hit the login button
+
+5
+00:00:11,700 --> 00:00:15,843
+and I will log in as admin at dotnetmastery.com.
+
+6
+00:00:17,010 --> 00:00:20,850
+Once we do that, then we can modify the product
+
+7
+00:00:20,850 --> 00:00:24,183
+if we want and we can add image there.
+
+8
+00:00:25,020 --> 00:00:28,990
+So cotton candy, let me upload image, update.
+
+9
+00:00:31,320 --> 00:00:33,363
+Let me do that for all of them.
+
+10
+00:00:51,240 --> 00:00:52,073
+Perfect.
+
+11
+00:00:52,073 --> 00:00:55,347
+Now if I go to the homepage, great,
+
+12
+00:00:55,347 --> 00:00:58,230
+all the images arming up here
+
+13
+00:00:58,230 --> 00:01:00,060
+and let me try to place an order.
+
+14
+00:01:00,060 --> 00:01:04,110
+As an admin user, some things will not work
+
+15
+00:01:04,110 --> 00:01:05,403
+and let me show that.
+
+16
+00:01:08,040 --> 00:01:11,310
+When we go to summary, place order,
+
+17
+00:01:11,310 --> 00:01:13,770
+it'll redirect me to Stripe.
+
+18
+00:01:13,770 --> 00:01:15,360
+That is okay.
+
+19
+00:01:15,360 --> 00:01:19,500
+But if I click the back button here, it will not work.
+
+20
+00:01:19,500 --> 00:01:22,230
+Because we have the URL that was hardcoded
+
+21
+00:01:22,230 --> 00:01:26,220
+to local host and that should not be the case.
+
+22
+00:01:26,220 --> 00:01:30,453
+So we basically have to get this URL more dynamically.
+
+23
+00:01:31,320 --> 00:01:33,720
+Let me switch back to the code here
+
+24
+00:01:33,720 --> 00:01:38,720
+and let me do control shift F and search for local host.
+
+25
+00:01:38,730 --> 00:01:41,283
+I have that in two places.
+
+26
+00:01:42,330 --> 00:01:44,283
+Let me open both of them.
+
+27
+00:01:45,630 --> 00:01:49,140
+So first we need to get this https
+
+28
+00:01:49,140 --> 00:01:53,160
+and that we can get from request.scheme.
+
+29
+00:01:53,160 --> 00:01:57,090
+That will provide us whether it's http, https.
+
+30
+00:01:57,090 --> 00:01:59,760
+After that we will have to add this colon
+
+31
+00:01:59,760 --> 00:02:04,080
+and two forward slash and the later part here,
+
+32
+00:02:04,080 --> 00:02:08,513
+we can get that using request.host.value.
+
+33
+00:02:11,610 --> 00:02:15,150
+Finally, we will have to add the forward slash at the end.
+
+34
+00:02:15,150 --> 00:02:17,940
+So this will get the domain dynamically.
+
+35
+00:02:17,940 --> 00:02:20,340
+If it's local host, it'll get that.
+
+36
+00:02:20,340 --> 00:02:22,953
+If it is a website, it will get that.
+
+37
+00:02:24,090 --> 00:02:27,900
+In the controller here, let me add that as well.
+
+38
+00:02:27,900 --> 00:02:31,983
+And with that change we will have to commit and deploy.
+
+39
+00:02:33,180 --> 00:02:37,365
+So here I will name the kit commit as post-deployment,
+
+40
+00:02:37,365 --> 00:02:40,803
+URL settings, and let me push that.
+
+41
+00:02:43,050 --> 00:02:45,270
+Perfect, that looks good.
+
+42
+00:02:45,270 --> 00:02:47,580
+Now when it'll be pushed,
+
+43
+00:02:47,580 --> 00:02:51,513
+that will trigger one more deployment.
+
+44
+00:02:52,560 --> 00:02:55,560
+I already saw that on the homepage.
+
+45
+00:02:55,560 --> 00:02:58,230
+Perfect. We will have to wait again
+
+46
+00:02:58,230 --> 00:03:00,813
+to see all the changes in action.
+
+47
+00:03:06,240 --> 00:03:08,400
+Perfect. The deployment complete.
+
+48
+00:03:08,400 --> 00:03:10,920
+Now if we open the domain again
+
+49
+00:03:10,920 --> 00:03:13,980
+this time we should be able to place order
+
+50
+00:03:13,980 --> 00:03:17,040
+and Stripe should be able to redirect us
+
+51
+00:03:17,040 --> 00:03:19,023
+based on the dynamic URL.
+
+52
+00:03:20,133 --> 00:03:21,390
+We are logged in.
+
+53
+00:03:21,390 --> 00:03:23,880
+Let me go to cart here.
+
+54
+00:03:23,880 --> 00:03:25,980
+Place order.
+
+55
+00:03:25,980 --> 00:03:28,500
+We navigate to the shopping cart.
+
+56
+00:03:28,500 --> 00:03:30,510
+If we select back here,
+
+57
+00:03:30,510 --> 00:03:33,240
+it takes us to the correct shopping cart.
+
+58
+00:03:33,240 --> 00:03:34,960
+So that is working
+
+59
+00:03:36,090 --> 00:03:39,843
+and let me try to place an order with the dummy credit card.
+
+60
+00:03:41,490 --> 00:03:42,990
+Perfect. That work.
+
+61
+00:03:42,990 --> 00:03:46,350
+If we go to order management, great.
+
+62
+00:03:46,350 --> 00:03:48,720
+We have three orders in the all.
+
+63
+00:03:48,720 --> 00:03:51,265
+But you can see some of them are pending,
+
+64
+00:03:51,265 --> 00:03:55,739
+because we went to the checkout page and then we came back.
+
+65
+00:03:55,739 --> 00:03:58,800
+So what you can do is on validations
+
+66
+00:03:58,800 --> 00:04:01,470
+you can add a custom status that hey,
+
+67
+00:04:01,470 --> 00:04:04,680
+it went to cart, but the order did not go through
+
+68
+00:04:04,680 --> 00:04:08,550
+and maybe have a cleanup job to remove those orders.
+
+69
+00:04:08,550 --> 00:04:11,070
+So that is something that you can work with
+
+70
+00:04:11,070 --> 00:04:14,520
+and modify based on your requirements.
+
+71
+00:04:14,520 --> 00:04:17,070
+But we have a successful order here
+
+72
+00:04:17,070 --> 00:04:19,740
+and payment status is approved,
+
+73
+00:04:19,740 --> 00:04:22,533
+the order status is also approved.
+
+74
+00:04:23,400 --> 00:04:26,052
+We can start processing, ship the order,
+
+75
+00:04:26,052 --> 00:04:30,903
+and perfect, all the validations are working as expected.
+

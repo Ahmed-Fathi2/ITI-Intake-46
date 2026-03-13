@@ -1,0 +1,152 @@
+﻿using Mapster;
+using Microsoft.EntityFrameworkCore;
+using System.Linq.Dynamic.Core;
+using WebService.BLL.Abstractions;
+using WebService.BLL.Abstractions.Errors.Product;
+using WebService.BLL.Dtos.Product;
+using WebService.DAL.Repositories.UnitOfWork;
+
+namespace WebService.BLL.Managers.Product
+{
+    public class ProductManager : IProductManager
+    {
+        private readonly IUnitOfWork _unitOfWork;
+
+        public ProductManager(IUnitOfWork unitOfWork)
+        {
+            _unitOfWork = unitOfWork;
+        }
+
+        public async Task<Result<IEnumerable<ProductsResponseDto>>> GetAllProducts()
+        {
+            var products = await _unitOfWork.ProductRepository.GetAllAsync();
+
+            var result = products.Adapt<IEnumerable<ProductsResponseDto>>();
+
+
+            return Result.Success<IEnumerable<ProductsResponseDto>>(result);
+
+
+        }
+
+        public async Task<Result<ProductDetailsResponseDto>> GetProductById(int id)
+        {
+            var product = await _unitOfWork.ProductRepository.GetProductByCategoryAsync(id);
+            if (product is null)
+                return Result.Failure<ProductDetailsResponseDto>(ProductError.ProductNotFound);
+
+            var result = product.Adapt<ProductDetailsResponseDto>();
+
+            //var result= new ProductDetailsResponseDto
+            //    (
+            //        Id: product.Id,
+            //        Name: product.Name,
+            //        Description: product.Description,
+            //        Price : product.Price,
+            //        Count : product.Count,
+            //        CategoryName : product.Category.Name,
+            //        CategoryDescription : product.Category.Description
+
+            //    );
+
+            return Result.Success(result);
+
+        }
+        public async Task<Result<ProductsResponseDto>> AddProduct(CreateProductDto createProductDto)
+        {
+
+            var product = createProductDto.Adapt<Product>();
+
+            //var product = new Product
+            //{
+            //    Name = createProductDto.Name,
+            //    Description = createProductDto.Description,
+            //    Price = createProductDto.Price,
+            //    Count = createProductDto.Count,
+            //    CategoryId = createProductDto.CategoryId
+            //};
+
+            _unitOfWork.ProductRepository.Add(product);
+            await _unitOfWork.SaveAsync();
+
+
+
+            var result = product.Adapt<ProductsResponseDto>();
+            //var result = new ProductsResponseDto
+            //(
+            //    Id : product.Id,
+            //    Name : product.Name,
+            //    Description : product.Description,
+            //    Price : product.Price,
+            //    Count : product.Count
+
+            //);
+
+            return Result.Success(result);
+        }
+        public async Task<Result> UpdateProduct(int id, UpdateProductDto updateProductDto)
+        {
+            var product = await _unitOfWork.ProductRepository.GetByIdAsync(id);
+            if (product is null)
+                return Result.Failure<ProductDetailsResponseDto>(ProductError.ProductNotFound);
+
+
+            updateProductDto.Adapt(product);
+            //product.Name = updateProductDto.Name;
+            //product.Description = updateProductDto.Description;
+            //product.Price = updateProductDto.Price;
+            //product.Count = updateProductDto.Count;
+            //product.CategoryId = updateProductDto.CategoryId;
+            await _unitOfWork.SaveAsync();
+
+            return Result.Success();
+        }
+
+        public async Task<Result> DeleteProduct(int id)
+        {
+            var product = await _unitOfWork.ProductRepository.GetByIdAsync(id);
+            if (product is null)
+                return Result.Failure<ProductDetailsResponseDto>(ProductError.ProductNotFound);
+
+            _unitOfWork.ProductRepository.Delete(product);
+            await _unitOfWork.SaveAsync();
+
+            return Result.Success();
+        }
+
+        public async Task<Result<PaginatedList<ProductsResponseDto>>> GetProducts(ProductRequestFilter requestFilter)
+        {
+            var query = await _unitOfWork.ProductRepository.GetAllProducts();
+
+            //Search
+            if (string.IsNullOrEmpty(requestFilter.SearchValue) is false)
+                query = query.Where(p => p.Name.Contains(requestFilter.SearchValue)
+                                 || p.Description.Contains(requestFilter.SearchValue));
+
+            //Sorting
+            if (string.IsNullOrEmpty(requestFilter.SortColumn) is false)
+                query = query.OrderBy($"{requestFilter.SortColumn} {requestFilter.SortDirection}");
+
+            //Filter
+            if (requestFilter.CategoryId.HasValue)
+                query = query.Where(p => p.CategoryId == requestFilter.CategoryId);
+
+            if (requestFilter.MinPrice.HasValue)
+                query = query.Where(p => p.Price >= requestFilter.MinPrice);
+
+            if (requestFilter.MaxPrice.HasValue)
+                query = query.Where(p => p.Price <= requestFilter.MaxPrice);
+
+
+            //Mapping
+            var productsResponseDto = query.ProjectToType<ProductsResponseDto>()
+                                           .AsNoTracking();
+
+            //Pagination
+            var result = await PaginatedList<ProductsResponseDto>
+                            .CreateAsync(productsResponseDto, requestFilter.PageNumber, requestFilter.PageSize);
+
+            return Result.Success(result);
+        }
+    }
+}

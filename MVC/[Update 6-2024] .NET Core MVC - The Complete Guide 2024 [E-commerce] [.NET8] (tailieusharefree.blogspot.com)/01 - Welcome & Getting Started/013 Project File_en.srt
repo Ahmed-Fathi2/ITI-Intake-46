@@ -1,0 +1,200 @@
+1
+00:00:01,770 --> 00:00:03,800
+Our project is created here.
+
+2
+00:00:03,810 --> 00:00:08,370
+Let me walk you through all the files that we see right here one by one.
+
+3
+00:00:08,580 --> 00:00:16,350
+But before I even do anything with that, let me run the application by clicking the https here and
+
+4
+00:00:16,350 --> 00:00:20,430
+that will build the project and open that in the browser.
+
+5
+00:00:21,270 --> 00:00:22,110
+Perfect.
+
+6
+00:00:22,110 --> 00:00:24,510
+By default, we have a simple application.
+
+7
+00:00:24,510 --> 00:00:31,230
+Let me zoom in here and we have two things in the header here, home page where we see welcome here
+
+8
+00:00:31,230 --> 00:00:35,970
+and we have a privacy page where it displays a different page.
+
+9
+00:00:36,510 --> 00:00:42,090
+So one thing you can see right out of the box, we have a header here, we have a footer, we have a
+
+10
+00:00:42,090 --> 00:00:49,230
+body here and we have navigation that is already configured by the default .net project.
+
+11
+00:00:49,560 --> 00:00:51,240
+That is great news.
+
+12
+00:00:51,480 --> 00:00:57,840
+But before we take a look at any other files, the main file that I want to show you is the project
+
+13
+00:00:57,840 --> 00:01:03,790
+file itself to examine the project file, you have to right click on the project.
+
+14
+00:01:04,239 --> 00:01:06,300
+Now, here there are two things.
+
+15
+00:01:06,310 --> 00:01:12,490
+One is a project which is bulky web, and then one is a solution which is bulky.
+
+16
+00:01:12,760 --> 00:01:16,600
+A solution can have multiple project in .net.
+
+17
+00:01:17,390 --> 00:01:21,110
+Right now we only have one project which is bulky web.
+
+18
+00:01:21,470 --> 00:01:25,520
+When we examine the project file, it belongs to a project.
+
+19
+00:01:25,520 --> 00:01:29,540
+So we will right click on Bulky Web, which is our project.
+
+20
+00:01:29,540 --> 00:01:33,140
+And there we have something called as edit Project file.
+
+21
+00:01:34,400 --> 00:01:35,300
+Perfect.
+
+22
+00:01:35,330 --> 00:01:38,660
+When I open that, you can see it is pretty simple.
+
+23
+00:01:38,660 --> 00:01:45,950
+Right now, in the older versions of .net core, this was more complicated, but they are simplifying
+
+24
+00:01:45,950 --> 00:01:47,900
+this with the newer version.
+
+25
+00:01:48,810 --> 00:01:50,460
+Inside Property Group.
+
+26
+00:01:50,460 --> 00:01:57,420
+We have something called a target framework which says that we are using net 8.0, which is the.
+
+27
+00:01:57,660 --> 00:01:59,130
+.Net eight framework.
+
+28
+00:02:00,880 --> 00:02:05,380
+Then we have something called as nullable and that is enabled.
+
+29
+00:02:05,410 --> 00:02:12,580
+Now what exactly this nullable will do, I will cover that in the later videos because it is too early
+
+30
+00:02:12,580 --> 00:02:14,530
+to go into those details.
+
+31
+00:02:15,290 --> 00:02:18,380
+And next, we have implicit using statements.
+
+32
+00:02:18,530 --> 00:02:24,950
+If you are coming from any front end library or any other frameworks, you should be familiar with some
+
+33
+00:02:24,950 --> 00:02:29,390
+import statements that you write to import other libraries.
+
+34
+00:02:29,900 --> 00:02:36,740
+Now, because implicit using is enabled here, the default using or import statements from the .net
+
+35
+00:02:36,740 --> 00:02:40,070
+libraries, we will not have to write all of that.
+
+36
+00:02:40,220 --> 00:02:44,180
+It will automatically be included with our project.
+
+37
+00:02:44,300 --> 00:02:50,300
+If you disable that, then basically you will have to explicitly add import statements.
+
+38
+00:02:50,330 --> 00:02:57,980
+Nothing more complicated, but it is a convenience to have implicit using enabled and that is the setting
+
+39
+00:02:57,980 --> 00:02:59,510
+we will keep as well.
+
+40
+00:03:00,760 --> 00:03:07,210
+Project file basically has all the project properties which are set by .net right here.
+
+41
+00:03:07,210 --> 00:03:14,260
+And on top of that, when you add some of the NuGet packages or NPM packages, then you have to add
+
+42
+00:03:14,260 --> 00:03:15,910
+them in the project file.
+
+43
+00:03:16,450 --> 00:03:23,500
+Now when we add NuGet package, I will show you how the project file here gets updated in the upcoming
+
+44
+00:03:23,500 --> 00:03:24,310
+videos.
+
+45
+00:03:25,060 --> 00:03:31,690
+But right now, when we have the project file, we have the .net target framework that is really important.
+
+46
+00:03:31,690 --> 00:03:37,240
+And we have Nullable, which has been introduced from .net six.
+
+47
+00:03:37,630 --> 00:03:40,420
+I will explain that in later videos as well.
+
+48
+00:03:40,420 --> 00:03:44,770
+And we have implicit using nothing that fancy right now.
+
+49
+00:03:44,770 --> 00:03:51,910
+But when we add more things to our project, I will show you how the project file gets updated.
+
+50
+00:03:52,210 --> 00:03:56,920
+With that brief overview, let me continue from the next video.
+

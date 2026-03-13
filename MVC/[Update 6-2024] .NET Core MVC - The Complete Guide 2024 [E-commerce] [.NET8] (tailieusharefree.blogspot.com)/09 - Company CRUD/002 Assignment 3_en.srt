@@ -1,0 +1,84 @@
+1
+00:00:01,510 --> 00:00:03,999
+Instructor: We want to enhance our application,
+
+2
+00:00:03,999 --> 00:00:06,780
+and it is time for third assignment
+
+3
+00:00:06,780 --> 00:00:08,236
+where you have to do something
+
+4
+00:00:08,236 --> 00:00:11,605
+that you have already done before.
+
+5
+00:00:11,605 --> 00:00:12,886
+And what I mean by that,
+
+6
+00:00:12,886 --> 00:00:15,511
+is you have to create a new model
+
+7
+00:00:15,511 --> 00:00:17,252
+or a new table in the database
+
+8
+00:00:17,252 --> 00:00:19,895
+with the name of company.
+
+9
+00:00:19,895 --> 00:00:22,744
+And table name will be companies.
+
+10
+00:00:22,744 --> 00:00:25,495
+That is what we have been using so far.
+
+11
+00:00:25,495 --> 00:00:28,250
+And inside there, these are all the properties
+
+12
+00:00:28,250 --> 00:00:31,240
+that you have to create.
+
+13
+00:00:31,240 --> 00:00:33,500
+Name will be the required property
+
+14
+00:00:33,500 --> 00:00:36,890
+and everything else will be optional.
+
+15
+00:00:36,890 --> 00:00:38,247
+You have to add Company
+
+16
+00:00:38,247 --> 00:00:41,139
+to Repository and UnitOfWork.
+
+17
+00:00:41,139 --> 00:00:43,250
+And finally, you will have to perform
+
+18
+00:00:43,250 --> 00:00:48,250
+CRUD Operations on Company using DataTables.
+
+19
+00:00:48,642 --> 00:00:50,764
+So good luck with that assignment
+
+20
+00:00:50,764 --> 00:00:51,747
+and I will show you
+
+21
+00:00:51,747 --> 00:00:55,203
+how to do all of that in the next video.
+

@@ -1,0 +1,68 @@
+1
+00:00:02,450 --> 00:00:09,620
+Bây giờ, trước khi chúng tôi làm việc với bất kỳ thứ gì khác mà chúng tôi có URL hình ảnh, chúng tôi muốn đây là tệp tải lên.
+
+2
+00:00:10,190 --> 00:00:12,050
+Để tôi chuyển lại đây.
+
+3
+00:00:12,080 --> 00:00:17,060
+Hãy để tôi đóng cam kết git ở đây và tôi sẽ bắt đầu tạo.
+
+4
+00:00:17,090 --> 00:00:24,260
+Hiện tại, chúng tôi chỉ đang tạo và không chỉnh sửa và tôi có một lý do rất chính đáng cho điều đó mà tôi sẽ
+
+5
+00:00:24,260 --> 00:00:26,600
+trình bày trong video sắp tới.
+
+6
+00:00:26,900 --> 00:00:34,180
+Nhưng ngay bây giờ, hãy để tôi cuộn xuống nơi chúng tôi có hình ảnh ở đây mà chúng tôi không muốn có ESP.
+
+7
+00:00:34,190 --> 00:00:41,570
+Chúng tôi sẽ nói loại đầu vào bằng với kiểm soát tệp và biểu mẫu có vẻ tốt.
+
+8
+00:00:41,810 --> 00:00:43,490
+Chúng tôi không muốn xác nhận.
+
+9
+00:00:43,490 --> 00:00:48,650
+Hãy để tôi loại bỏ nó và để tôi quay lại và xem nó trông như thế nào.
+
+10
+00:00:48,800 --> 00:00:49,780
+Hoàn hảo.
+
+11
+00:00:49,790 --> 00:00:51,290
+Có vẻ tốt ở đây.
+
+12
+00:00:52,160 --> 00:00:58,250
+Sau đó, nơi chúng tôi có biểu mẫu ngay tại đây, chúng tôi sẽ phải thêm một thứ.
+
+13
+00:00:58,640 --> 00:01:04,400
+Chúng ta phải thêm loại sẽ là dữ liệu biểu mẫu nhiều phần.
+
+14
+00:01:04,410 --> 00:01:08,670
+Nếu bạn không thêm nó, thì việc tải lên tệp sẽ không hoạt động.
+
+15
+00:01:08,670 --> 00:01:13,560
+Vì vậy, hãy đảm bảo rằng trong biểu mẫu của bạn, bạn có dữ liệu biểu mẫu nhiều phần.
+
+16
+00:01:14,550 --> 00:01:15,330
+Với.
+
+17
+00:01:15,330 --> 00:01:22,230
+Về cơ bản, chúng tôi có một yếu tố đầu vào hay đúng hơn là tải lên tệp đầu vào trong quá trình tạo sản phẩm.
+

@@ -1,0 +1,84 @@
+1
+00:00:01,859 --> 00:00:05,220
+Instructor: In this course, we will be using .NET 8.
+
+2
+00:00:05,220 --> 00:00:07,680
+Right now, .NET 8 is in preview.
+
+3
+00:00:07,680 --> 00:00:09,990
+So if you download .NET 8,
+
+4
+00:00:09,990 --> 00:00:13,200
+currently preview.2 has been released.
+
+5
+00:00:13,200 --> 00:00:15,270
+First, you have to download the version
+
+6
+00:00:15,270 --> 00:00:16,920
+based on your system.
+
+7
+00:00:16,920 --> 00:00:19,980
+I have downloaded Windows x64.
+
+8
+00:00:19,980 --> 00:00:22,410
+And once you download .NET 8,
+
+9
+00:00:22,410 --> 00:00:27,270
+then you have to download Visual Studio 2022 Preview.
+
+10
+00:00:27,270 --> 00:00:31,890
+You need the Preview version if you want to work with .NET 8
+
+11
+00:00:31,890 --> 00:00:33,993
+because it has not been released yet.
+
+12
+00:00:35,340 --> 00:00:38,130
+Preview version can be downloaded for free.
+
+13
+00:00:38,130 --> 00:00:43,130
+Just go to visualstudio.microsoft.com/vs/preview.
+
+14
+00:00:45,930 --> 00:00:50,250
+Make sure to install .NET 8 and Visual Studio Preview
+
+15
+00:00:50,250 --> 00:00:52,950
+before you proceed with the course.
+
+16
+00:00:52,950 --> 00:00:56,250
+Now, if you want to follow along with .NET 7,
+
+17
+00:00:56,250 --> 00:00:59,940
+you can obviously do that and everything will work
+
+18
+00:00:59,940 --> 00:01:04,200
+other than one change that has been introduced in .NET 8,
+
+19
+00:01:04,200 --> 00:01:09,200
+where they have new type, for date only and time only.
+
+20
+00:01:09,450 --> 00:01:13,350
+But other than that, everything will work perfectly fine
+
+21
+00:01:13,350 --> 00:01:15,303
+with .NET 7 as well.
+

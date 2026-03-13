@@ -34,5 +34,26 @@ namespace ITI.Infrastructure.Repositories
             }
             return student;
         }
+        public void Update(Student student)
+        {
+            var exist = dbContext.Students.FirstOrDefault(x => x.Id == student.Id);
+            if (exist == null) return;
+
+            exist.FirstName = student.FirstName;
+            exist.LastName = student.LastName;
+            exist.Phone = student.Phone;
+
+            //dbContext.Students.Update(exist);
+            dbContext.SaveChanges();
+        }
+
+        public void Delete(int id)
+        {
+            var student = dbContext.Students.FirstOrDefault(x => x.Id == id);
+            if (student == null) return;
+
+            dbContext.Students.Remove(student);
+            dbContext.SaveChanges();
+        }
     }
 }

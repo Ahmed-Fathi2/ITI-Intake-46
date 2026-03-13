@@ -1,0 +1,356 @@
+1
+00:00:01,770 --> 00:00:02,820
+Instructor: How we'll be able
+
+2
+00:00:02,820 --> 00:00:05,850
+to test this email functionality?
+
+3
+00:00:05,850 --> 00:00:08,700
+Let me first go to Program.cs
+
+4
+00:00:08,700 --> 00:00:12,780
+and make sure that I have injected EmailSender correctly.
+
+5
+00:00:12,780 --> 00:00:14,100
+That looks good.
+
+6
+00:00:14,100 --> 00:00:15,240
+And because of that,
+
+7
+00:00:15,240 --> 00:00:17,793
+if I examine the register here,
+
+8
+00:00:18,690 --> 00:00:20,853
+let me open the page model.
+
+9
+00:00:21,810 --> 00:00:23,040
+And if you examine,
+
+10
+00:00:23,040 --> 00:00:27,300
+we have the IEmailSender independency injection.
+
+11
+00:00:27,300 --> 00:00:31,170
+Also, when the registration is successful here,
+
+12
+00:00:31,170 --> 00:00:35,970
+it is automatically sending an email to confirm the account.
+
+13
+00:00:35,970 --> 00:00:38,760
+So that logic is already there.
+
+14
+00:00:38,760 --> 00:00:40,800
+Let me run the application
+
+15
+00:00:40,800 --> 00:00:43,863
+and register to see if that is working.
+
+16
+00:00:44,700 --> 00:00:46,920
+Previously the logic was there,
+
+17
+00:00:46,920 --> 00:00:49,410
+but the email sender was empty
+
+18
+00:00:49,410 --> 00:00:52,650
+because of which no email was being sent.
+
+19
+00:00:52,650 --> 00:00:55,200
+But now that we have added the logic
+
+20
+00:00:55,200 --> 00:00:57,093
+it should send out an email.
+
+21
+00:00:59,790 --> 00:01:02,313
+Let me register.
+
+22
+00:01:03,990 --> 00:01:06,420
+The email address is valid here
+
+23
+00:01:06,420 --> 00:01:08,793
+so let me hit the register button.
+
+24
+00:01:10,770 --> 00:01:12,000
+Perfect. That is done.
+
+25
+00:01:12,000 --> 00:01:13,893
+Let me open Gmail here.
+
+26
+00:01:15,540 --> 00:01:17,460
+And then of course we will have to look
+
+27
+00:01:17,460 --> 00:01:19,140
+into the Spam folder
+
+28
+00:01:19,140 --> 00:01:22,380
+and we have this email from Bulky Book.
+
+29
+00:01:22,380 --> 00:01:24,270
+It should be Bulky.
+
+30
+00:01:24,270 --> 00:01:27,480
+I believe I have a spelling mistake in EmailSender.
+
+31
+00:01:27,480 --> 00:01:28,980
+There we go.
+
+32
+00:01:28,980 --> 00:01:31,230
+So whatever name we have here,
+
+33
+00:01:31,230 --> 00:01:33,660
+it is using that right here
+
+34
+00:01:33,660 --> 00:01:35,107
+and it is displaying,
+
+35
+00:01:35,107 --> 00:01:38,850
+"Please confirm your account by clicking here".
+
+36
+00:01:38,850 --> 00:01:41,490
+Now, surprisingly when we will click there,
+
+37
+00:01:41,490 --> 00:01:45,337
+it takes us to the confirmation page and it displays,
+
+38
+00:01:45,337 --> 00:01:48,600
+"Thank you for confirming your email".
+
+39
+00:01:48,600 --> 00:01:51,600
+Now all of this logic is already built in
+
+40
+00:01:51,600 --> 00:01:53,670
+with the .NET Identity,
+
+41
+00:01:53,670 --> 00:01:56,730
+because of which you can see in the database
+
+42
+00:01:56,730 --> 00:02:00,210
+when we examine the ASP.Net users table.
+
+43
+00:02:00,210 --> 00:02:01,893
+Let me open that.
+
+44
+00:02:03,480 --> 00:02:08,250
+You will see EmailConfirmed will be true for this account.
+
+45
+00:02:08,250 --> 00:02:10,770
+Where is that? Right here.
+
+46
+00:02:10,770 --> 00:02:13,740
+you can see EmailConfirmed is true.
+
+47
+00:02:13,740 --> 00:02:18,740
+So that implementation is also working as expected.
+
+48
+00:02:18,750 --> 00:02:19,650
+On top of that,
+
+49
+00:02:19,650 --> 00:02:23,790
+if you want to send an email once the order is placed,
+
+50
+00:02:23,790 --> 00:02:25,770
+we can do that as well.
+
+51
+00:02:25,770 --> 00:02:27,543
+It is straightforward.
+
+52
+00:02:28,380 --> 00:02:30,993
+We have that in the CartController.
+
+53
+00:02:31,950 --> 00:02:33,543
+Let me open that.
+
+54
+00:02:35,550 --> 00:02:39,360
+And there we will have to inject the IEmailSender
+
+55
+00:02:39,360 --> 00:02:41,403
+using dependency injection.
+
+56
+00:02:42,600 --> 00:02:44,463
+Let me do that here.
+
+57
+00:02:46,380 --> 00:02:48,180
+And perfect.
+
+58
+00:02:48,180 --> 00:02:53,180
+Then the action method will be OrderConfirmation.
+
+59
+00:02:53,400 --> 00:02:57,250
+And right here we can use _emailSender.
+
+60
+00:02:57,250 --> 00:03:00,600
+There we have the method SendEmailAsync.
+
+61
+00:03:00,600 --> 00:03:05,580
+We need to provide email subject and HTML Message.
+
+62
+00:03:05,580 --> 00:03:10,580
+Email is inside OrderHeader.ApplicationUser.Email.
+
+63
+00:03:11,970 --> 00:03:14,100
+Next we need a subject,
+
+64
+00:03:14,100 --> 00:03:18,390
+so we can say "New Order - Bulky Book".
+
+65
+00:03:18,390 --> 00:03:22,230
+And finally we need some text here.
+
+66
+00:03:22,230 --> 00:03:23,880
+So this will be HTML.
+
+67
+00:03:23,880 --> 00:03:26,040
+So we can add a paragraph tag
+
+68
+00:03:26,040 --> 00:03:28,080
+with the closing tag
+
+69
+00:03:28,080 --> 00:03:32,187
+and we can say "New Order Created".
+
+70
+00:03:33,060 --> 00:03:36,750
+And with that we will append the orderID.
+
+71
+00:03:36,750 --> 00:03:40,860
+That is inside orderHeader.Id.
+
+72
+00:03:40,860 --> 00:03:43,233
+Perfect, that looks good.
+
+73
+00:03:44,340 --> 00:03:45,870
+With that configured,
+
+74
+00:03:45,870 --> 00:03:49,923
+let me restart the application and try to place an order.
+
+75
+00:03:53,400 --> 00:03:55,410
+We are already logged in.
+
+76
+00:03:55,410 --> 00:03:57,663
+Let me add item to the cart.
+
+77
+00:03:58,890 --> 00:04:00,720
+Go to Cart here.
+
+78
+00:04:00,720 --> 00:04:02,973
+Summary, place order.
+
+79
+00:04:06,630 --> 00:04:09,213
+Perfect. Let me hit the pay button here.
+
+80
+00:04:10,920 --> 00:04:12,750
+And that works.
+
+81
+00:04:12,750 --> 00:04:15,120
+Order number is 1010.
+
+82
+00:04:15,120 --> 00:04:17,190
+And then if you open Gmail,
+
+83
+00:04:17,190 --> 00:04:20,820
+you will notice the email "New Order - Bulky Book"
+
+84
+00:04:20,820 --> 00:04:24,540
+and "New Order" along with the orderID.
+
+85
+00:04:24,540 --> 00:04:27,990
+Now, you can be fancy with the HTML templates here,
+
+86
+00:04:27,990 --> 00:04:30,843
+but I am keeping things super simple.
+
+87
+00:04:31,680 --> 00:04:32,670
+So perfect.
+
+88
+00:04:32,670 --> 00:04:35,550
+With that, email functionality is looking good
+
+89
+00:04:35,550 --> 00:04:36,723
+in our project.
+

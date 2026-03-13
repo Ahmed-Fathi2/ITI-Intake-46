@@ -1,0 +1,144 @@
+1
+00:00:02,050 --> 00:00:02,590
+Ngay lập tức.
+
+2
+00:00:02,590 --> 00:00:09,760
+Chúng tôi sẽ không lo lắng về nút cập nhật chi tiết đơn hàng, nhưng về cơ bản, nút này sẽ chỉ hiển thị nếu người
+
+3
+00:00:09,760 --> 00:00:12,670
+dùng là quản trị viên hoặc nhân viên.
+
+4
+00:00:13,090 --> 00:00:15,540
+Vì vậy, chúng ta có thể thêm logic tương tự.
+
+5
+00:00:15,550 --> 00:00:25,030
+Để tôi quay lại đây và tôi sẽ sao chép điều kiện if mà tôi có nút ở đây, tôi sẽ dán nó
+
+6
+00:00:25,030 --> 00:00:25,870
+vào.
+
+7
+00:00:26,050 --> 00:00:31,990
+Vì vậy, nếu chỉ là quản trị viên hoặc nhân viên, thì chúng tôi sẽ hiển thị nút đó.
+
+8
+00:00:32,470 --> 00:00:33,490
+Hoàn hảo.
+
+9
+00:00:34,230 --> 00:00:37,800
+Bây giờ, điều tiếp theo chúng ta cần hiển thị tóm tắt đơn hàng.
+
+10
+00:00:38,280 --> 00:00:39,780
+Hãy để tôi làm điều đó.
+
+11
+00:00:40,200 --> 00:00:44,970
+Để tóm tắt đơn hàng, chúng tôi phải hiển thị trạng thái đơn hàng hiện tại.
+
+12
+00:00:45,610 --> 00:00:49,960
+Vì vậy, đó là dấu chấm tiêu đề thứ tự dấu chấm bên trong mô hình.
+
+13
+00:00:49,990 --> 00:00:52,000
+Chúng tôi có trạng thái đơn hàng.
+
+14
+00:00:52,330 --> 00:00:59,890
+Sau đó, nếu chúng tôi quay lại, chúng tôi cần hiển thị từng sản phẩm ở đây dựa trên những gì chúng tôi có trong chi tiết đơn hàng.
+
+15
+00:01:00,790 --> 00:01:12,490
+Vì vậy, ngay tại đây trong UL, tôi sẽ thêm một chi tiết cho từng biến vòng lặp trong chi tiết thứ tự dấu chấm của mô hình và tôi sẽ đóng
+
+16
+00:01:12,490 --> 00:01:22,420
+nó ngay tại đây Đối với mỗi một trong số chúng, chúng ta cần hiển thị tiêu đề sao cho tiêu đề dấu chấm sản phẩm
+
+17
+00:01:22,420 --> 00:01:24,730
+bên trong chi tiết.
+
+18
+00:01:25,030 --> 00:01:32,020
+Và chúng tôi cần hiển thị giá riêng lẻ nằm trong giá chấm chi tiết.
+
+19
+00:01:33,650 --> 00:01:37,100
+Chúng tôi sẽ chuyển đổi sang định dạng tiền tệ tại đây.
+
+20
+00:01:37,820 --> 00:01:38,450
+Hoàn hảo.
+
+21
+00:01:38,450 --> 00:01:39,670
+Trông tôt đây.
+
+22
+00:01:39,680 --> 00:01:41,270
+Hãy để tôi sao chép điều đó.
+
+23
+00:01:41,420 --> 00:01:46,250
+Tiếp theo, chúng ta có số lượng bên trong chi tiết.
+
+24
+00:01:47,320 --> 00:01:48,550
+Số chấm.
+
+25
+00:01:49,370 --> 00:01:53,750
+Sau đó, chúng tôi muốn hiển thị phép nhân của số lượng và giá cả.
+
+26
+00:01:53,750 --> 00:01:56,670
+Ở đây chúng ta sẽ sử dụng dấu hiệu at.
+
+27
+00:01:56,690 --> 00:02:00,680
+Chúng tôi muốn đi đến chi tiết số lượng dấu chấm.
+
+28
+00:02:00,860 --> 00:02:08,900
+Nhân số đó với giá điểm chi tiết và chúng tôi sẽ chuyển đổi số đó sang định dạng tiền tệ.
+
+29
+00:02:10,190 --> 00:02:18,920
+Sau đó, chúng tôi cần tổng số lớn ở đây nằm trong tiêu đề thứ tự dấu chấm bên trong mô hình, tổng số thứ tự dấu chấm và chuyển đổi
+
+30
+00:02:18,920 --> 00:02:20,480
+số đó thành tiền tệ.
+
+31
+00:02:21,310 --> 00:02:24,160
+Lưu nó và cho tôi xem.
+
+32
+00:02:24,670 --> 00:02:25,660
+Hoàn hảo.
+
+33
+00:02:25,660 --> 00:02:27,670
+Điều đó có vẻ tốt hơn nhiều.
+
+34
+00:02:28,240 --> 00:02:33,940
+Cuối cùng, chúng tôi có tất cả các nút ưa thích này để cập nhật trạng thái đơn hàng.
+
+35
+00:02:34,480 --> 00:02:41,650
+Bây giờ, trước khi chúng ta cập nhật trạng thái đơn hàng, trước tiên hãy để tôi cập nhật chi tiết đơn hàng
+
+36
+00:02:41,650 --> 00:02:43,330
+trong video tiếp theo.
+

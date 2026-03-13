@@ -1,0 +1,160 @@
+1
+00:00:01,620 --> 00:00:05,560
+Mục tiếp theo mà chúng tôi muốn làm việc là trong danh mục.
+
+2
+00:00:05,580 --> 00:00:12,840
+Chúng tôi có danh sách và tạo danh mục mới, nhưng chúng tôi muốn chỉnh sửa danh mục hiện có.
+
+3
+00:00:13,290 --> 00:00:19,050
+Đối với điều đó trên trang chỉ mục, chúng tôi cần các nút để chỉnh sửa hoặc xóa bất kỳ danh mục nào.
+
+4
+00:00:19,940 --> 00:00:29,000
+Hãy để tôi mở các biểu tượng bootstrap cho điều đó và tìm một biểu tượng để chỉnh sửa, đó sẽ là biểu tượng bút chì.
+
+5
+00:00:29,910 --> 00:00:30,540
+Hoàn hảo.
+
+6
+00:00:30,540 --> 00:00:31,920
+Nhìn có vẻ tốt.
+
+7
+00:00:32,070 --> 00:00:33,330
+Sao chép cái đó.
+
+8
+00:00:33,420 --> 00:00:36,860
+Và chúng tôi sẽ thêm nó vào trang chỉ mục.
+
+9
+00:00:36,870 --> 00:00:40,590
+Vì vậy, chế độ xem chỉ mục của danh mục.
+
+10
+00:00:41,410 --> 00:00:42,280
+Ngay chỗ này.
+
+11
+00:00:42,280 --> 00:00:51,340
+Chúng tôi cũng sẽ thêm một lần chạm nữa và tôi sẽ thêm phần tử td nơi chúng tôi sẽ có nút chỉnh sửa và xóa.
+
+12
+00:00:52,660 --> 00:00:55,750
+Và ở đây hãy để tôi tạo một div.
+
+13
+00:00:55,750 --> 00:01:06,130
+Cung cấp cho nó các lớp bootstrap là 75 cho chiều rộng và nhóm BTN và cũng cung cấp cho nó vai trò của nhóm.
+
+14
+00:01:06,820 --> 00:01:09,850
+Bây giờ trong div này, chúng tôi muốn liên kết.
+
+15
+00:01:10,030 --> 00:01:15,370
+Vì vậy, chúng tôi sẽ có hai thẻ neo và nó sẽ chuyển đến bộ điều khiển nào.
+
+16
+00:01:15,520 --> 00:01:19,060
+Chúng tôi sẽ làm việc với bộ điều khiển cùng loại.
+
+17
+00:01:19,060 --> 00:01:24,520
+Vì vậy, chúng tôi sẽ viết danh mục và chúng tôi nên gọi hành động nào?
+
+18
+00:01:25,340 --> 00:01:29,690
+Khi chúng tôi chỉnh sửa một danh mục, chúng tôi sẽ gọi hành động chỉnh sửa.
+
+19
+00:01:30,350 --> 00:01:40,970
+Và cùng với đó, hãy để tôi cung cấp cho nó một số lớp bootstrap của BTN, BTN chính và ký quỹ X của hai.
+
+20
+00:01:42,020 --> 00:01:50,120
+Và thẻ neo ở đây, chúng tôi sẽ dán biểu tượng và tôi sẽ viết, chỉnh sửa, lưu nó.
+
+21
+00:01:50,360 --> 00:01:53,270
+Hãy để tôi xem giao diện người dùng trông như thế nào.
+
+22
+00:01:53,390 --> 00:01:54,400
+Hoàn hảo.
+
+23
+00:01:54,410 --> 00:01:55,730
+Có vẻ tốt.
+
+24
+00:01:55,940 --> 00:01:57,740
+Hãy để tôi sao chép này.
+
+25
+00:01:58,010 --> 00:02:00,010
+Dán nó một lần nữa.
+
+26
+00:02:00,020 --> 00:02:02,240
+Hành động tiếp theo sẽ là xóa.
+
+27
+00:02:02,540 --> 00:02:06,250
+Bây giờ, ngay bây giờ chúng tôi không có bất kỳ hành động nào trong số này.
+
+28
+00:02:06,260 --> 00:02:09,949
+Chúng tôi sẽ bổ sung chúng trong các video sắp tới.
+
+29
+00:02:11,060 --> 00:02:16,730
+Đó sẽ là BTN xóa ở đây và tôi cần một biểu tượng mới để xóa.
+
+30
+00:02:17,090 --> 00:02:20,660
+Hãy để tôi tìm kiếm một biểu tượng thùng rác.
+
+31
+00:02:22,000 --> 00:02:23,620
+Và thùng rác đầy.
+
+32
+00:02:23,620 --> 00:02:25,000
+Trông tôt đây.
+
+33
+00:02:25,270 --> 00:02:26,560
+Sao chép cái đó.
+
+34
+00:02:26,650 --> 00:02:30,160
+Dán nó ngay tại đây.
+
+35
+00:02:32,480 --> 00:02:36,140
+Và chúng tôi quên văn bản sẽ bị xóa.
+
+36
+00:02:37,760 --> 00:02:38,960
+Và hoàn hảo.
+
+37
+00:02:38,960 --> 00:02:42,260
+Chúng tôi cần nguy hiểm, không xóa.
+
+38
+00:02:43,870 --> 00:02:44,550
+Tuyệt vời.
+
+39
+00:02:44,560 --> 00:02:48,400
+Vì vậy, các nút chỉnh sửa và xóa của chúng tôi trông rất tuyệt.
+
+40
+00:02:48,910 --> 00:02:52,120
+Hãy để tôi tiếp tục từ video tiếp theo.
+

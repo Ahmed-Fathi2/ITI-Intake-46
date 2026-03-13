@@ -1,0 +1,88 @@
+1
+00:00:01,690 --> 00:00:06,760
+Bây giờ chúng tôi có một kho lưu trữ và chúng tôi có một kho lưu trữ giao diện.
+
+2
+00:00:07,030 --> 00:00:11,170
+Chúng tôi cần danh mục của mình để triển khai kho lưu trữ đó.
+
+3
+00:00:11,680 --> 00:00:16,450
+Vì vậy, làm thế nào để chúng tôi làm điều đó trong kho lưu trữ?
+
+4
+00:00:16,570 --> 00:00:25,150
+Đầu tiên, tôi sẽ tạo một giao diện mới sẽ là kho lưu trữ danh mục.
+
+5
+00:00:27,270 --> 00:00:35,010
+Chúng tôi sẽ biến giao diện này thành giao diện công cộng và giao diện đó sẽ triển khai giao diện kho lưu trữ AI.
+
+6
+00:00:35,250 --> 00:00:41,520
+Và lần này, khi nó triển khai kho lưu trữ AI, chúng tôi biết lớp mà chúng tôi muốn triển
+
+7
+00:00:41,520 --> 00:00:44,160
+khai cho kho lưu trữ này là gì.
+
+8
+00:00:44,640 --> 00:00:50,220
+Đó sẽ là mô hình danh mục nơi chúng tôi muốn triển khai giao diện.
+
+9
+00:00:51,120 --> 00:00:51,690
+Theo cách đó.
+
+10
+00:00:51,690 --> 00:00:58,590
+Bây giờ chúng tôi thực sự đang xác định rằng khi chúng tôi cần triển khai cho kho lưu trữ danh mục I,
+
+11
+00:00:58,590 --> 00:01:01,950
+tôi muốn bạn lấy chức năng cơ bản từ kho lưu trữ.
+
+12
+00:01:02,100 --> 00:01:09,360
+Điều đó sẽ làm là đảm bảo rằng chúng ta có tất cả các phương thức cơ bản này trong đó thực thể sẽ là danh mục.
+
+13
+00:01:09,570 --> 00:01:10,620
+Trên hết.
+
+14
+00:01:10,620 --> 00:01:17,340
+Nếu bạn còn nhớ, chúng tôi cần thêm hai chức năng nữa và đó là các phương thức cập nhật và lưu.
+
+15
+00:01:17,940 --> 00:01:21,690
+Vì vậy, ở đây chúng tôi sẽ có void update ở đó.
+
+16
+00:01:21,690 --> 00:01:30,030
+Chúng tôi sẽ lấy danh mục và để tôi gọi OBJ đó và chúng tôi cũng sẽ có một phương pháp để lưu các thay đổi.
+
+17
+00:01:30,990 --> 00:01:38,340
+Vì vậy, đây là giao diện kho lưu trữ danh mục cuối cùng sẽ triển khai chức năng cơ bản mà chúng tôi
+
+18
+00:01:38,340 --> 00:01:40,470
+có cho tất cả kho lưu trữ.
+
+19
+00:01:40,620 --> 00:01:46,350
+Ngoài ra, chúng tôi sẽ có một bản cập nhật và lưu vào kho lưu trữ danh mục.
+
+20
+00:01:47,070 --> 00:01:49,320
+Bây giờ đây là giao diện.
+
+21
+00:01:49,470 --> 00:01:54,480
+Chúng ta cần triển khai nó trong kho lưu trữ danh mục.
+
+22
+00:01:55,020 --> 00:01:57,960
+Hãy để tôi làm điều đó trong video tiếp theo.
+

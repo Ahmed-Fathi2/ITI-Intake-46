@@ -1,0 +1,124 @@
+1
+00:00:01,510 --> 00:00:05,420
+Chúng tôi đã tạo giao diện cho kho lưu trữ danh mục.
+
+2
+00:00:05,440 --> 00:00:09,460
+Hãy để tôi thêm phần triển khai cho điều đó trong kho lưu trữ.
+
+3
+00:00:09,490 --> 00:00:14,500
+Tạo một lớp sẽ là kho lưu trữ danh mục.
+
+4
+00:00:15,450 --> 00:00:21,840
+Nó sẽ là một lớp công khai và sẽ triển khai kho lưu trữ danh mục I.
+
+5
+00:00:23,370 --> 00:00:27,840
+Nếu chúng ta nhấn điều khiển. ở đây, nó sẽ thực hiện giao diện.
+
+6
+00:00:28,140 --> 00:00:35,250
+Nhưng khi bạn thấy nó implements thì thực ra nó đang thực hiện add, get, get all, remove remove
+
+7
+00:00:35,250 --> 00:00:35,880
+range.
+
+8
+00:00:36,090 --> 00:00:40,710
+Những triển khai đó chúng tôi đã có trong kho lưu trữ chung của chúng tôi.
+
+9
+00:00:41,010 --> 00:00:48,360
+Vì vậy, chúng tôi không muốn thêm nó một lần nữa, chúng tôi muốn sử dụng chức năng cơ bản
+
+10
+00:00:48,360 --> 00:00:56,580
+vì điều đó, cùng với kho lưu trữ danh mục I, chúng tôi cũng muốn triển khai kho lưu trữ với lớp danh
+
+11
+00:00:56,580 --> 00:01:01,650
+mục và điều đó sẽ xuất hiện trước giao diện như thế này.
+
+12
+00:01:02,860 --> 00:01:03,400
+Với.
+
+13
+00:01:03,400 --> 00:01:10,540
+Bạn có thể thấy nó không đưa ra thông báo lỗi cho kho lưu trữ danh mục hoặc các phương pháp khác.
+
+14
+00:01:11,110 --> 00:01:17,860
+Nhưng bây giờ chúng tôi có một lỗi ở đây cho biết không có đối số nào tương ứng với tham
+
+15
+00:01:17,860 --> 00:01:21,010
+số bắt buộc db của danh mục kho lưu trữ.
+
+16
+00:01:22,100 --> 00:01:29,090
+Chà, nếu chúng ta chuyển sang triển khai kho lưu trữ ở đây, chúng ta đang nói rằng ngữ cảnh DB của ứng
+
+17
+00:01:29,090 --> 00:01:33,290
+dụng sẽ được cung cấp cho bạn khi đối tượng sẽ được tạo.
+
+18
+00:01:33,740 --> 00:01:38,810
+Thông thường khi chúng ta sử dụng phép nội xạ phụ thuộc, chúng sẽ tự động được đưa vào.
+
+19
+00:01:38,810 --> 00:01:42,420
+Nhưng trong trường hợp này, chúng tôi đang tạo trên dòng 12.
+
+20
+00:01:42,440 --> 00:01:50,360
+Vì vậy, những gì chúng ta có thể nói là, này, đối với kho lưu trữ danh mục, chúng ta muốn lấy ngữ cảnh DB của ứng dụng bằng
+
+21
+00:01:50,360 --> 00:01:56,450
+cách sử dụng phép nội xạ phụ thuộc và sau đó chúng ta có thể thêm một hàm tạo, lấy ở đây.
+
+22
+00:01:56,450 --> 00:02:03,800
+Và khi chúng tôi thực hiện triển khai này, chúng tôi muốn chuyển triển khai này cho tất cả các lớp cơ sở.
+
+23
+00:02:04,100 --> 00:02:13,250
+Vì vậy, ở đây chúng ta có thể nói DB cơ sở Theo cách đó, bất kỳ bối cảnh DB nào chúng ta nhận được ở đây, chúng ta sẽ chuyển đến
+
+24
+00:02:13,250 --> 00:02:15,620
+kho lưu trữ và lỗi sẽ biến mất.
+
+25
+00:02:16,490 --> 00:02:19,880
+Hai phương pháp mà chúng ta có ở đây khá đơn giản.
+
+26
+00:02:19,880 --> 00:02:27,420
+Khi chúng tôi phải lưu, chúng tôi lưu nó trên dấu gạch dưới DB thay đổi lưu dấu chấm và khi chúng tôi phải cập
+
+27
+00:02:27,420 --> 00:02:34,980
+nhật danh mục, chúng tôi sẽ nói danh mục dấu gạch dưới DB, cập nhật dấu chấm và chúng tôi chuyển đối tượng.
+
+28
+00:02:36,680 --> 00:02:37,490
+Hoàn hảo.
+
+29
+00:02:37,880 --> 00:02:43,010
+Vì vậy, bây giờ chúng tôi có một kho lưu trữ danh mục đã được triển khai.
+
+30
+00:02:43,460 --> 00:02:51,050
+Làm cách nào chúng tôi có thể thay thế ngữ cảnh DB của ứng dụng mà chúng tôi đang sử dụng ở đây bằng kho lưu trữ thực tế của chúng tôi?
+
+31
+00:02:51,800 --> 00:02:54,800
+Hãy để tôi cho bạn thấy điều đó trong video tiếp theo.
+

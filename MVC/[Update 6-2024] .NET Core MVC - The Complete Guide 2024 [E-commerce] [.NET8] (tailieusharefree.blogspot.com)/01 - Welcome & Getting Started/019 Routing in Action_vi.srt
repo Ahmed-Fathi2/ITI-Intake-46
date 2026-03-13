@@ -1,0 +1,556 @@
+1
+00:00:01,720 --> 00:00:08,290
+Bây giờ bạn đã có ý tưởng sơ bộ về bộ điều khiển là gì và hành động dựa trên URL là gì.
+
+2
+00:00:08,470 --> 00:00:15,610
+Vì vậy, về cơ bản, nếu bạn có một URL từ đó, bạn có thể cho tôi biết bộ điều khiển là gì, hành động
+
+3
+00:00:15,610 --> 00:00:16,870
+là gì và ID là gì?
+
+4
+00:00:18,080 --> 00:00:19,520
+Với ý tưởng sơ sài đó.
+
+5
+00:00:19,670 --> 00:00:25,040
+Hãy để tôi quay lại dự án ở đây và tôi sẽ mở Solution Explorer.
+
+6
+00:00:25,820 --> 00:00:29,990
+Bạn có thể thấy có ba thư mục ở đây mà chúng tôi chưa đề cập đến.
+
+7
+00:00:30,170 --> 00:00:35,750
+Có một thư mục xem, có một thư mục mô hình và có một thư mục điều khiển.
+
+8
+00:00:36,500 --> 00:00:40,760
+Trong bộ điều khiển, bạn có thể thấy chúng tôi có một thứ gọi là bộ điều khiển gia đình.
+
+9
+00:00:41,400 --> 00:00:43,710
+Khi chúng ta đặt tên cho bất kỳ bộ điều khiển nào.
+
+10
+00:00:43,710 --> 00:00:47,640
+Một điều quan trọng là từ khóa bộ điều khiển.
+
+11
+00:00:48,240 --> 00:00:55,170
+Vì vậy, nếu bạn có bộ điều khiển gia đình, bạn nên đặt tên theo sau là từ khóa bộ điều khiển và từ đó
+
+12
+00:00:55,170 --> 00:00:58,320
+phải được đặt trong thư mục bộ điều khiển.
+
+13
+00:00:58,590 --> 00:01:02,160
+Nếu bạn đặt nó ở một nơi khác, nó sẽ không hoạt động.
+
+14
+00:01:02,430 --> 00:01:06,840
+Đây là những quy tắc được xác định cho kiến trúc MVC.
+
+15
+00:01:07,140 --> 00:01:10,530
+Vì vậy, trong bộ điều khiển, chúng tôi có bộ điều khiển gia đình.
+
+16
+00:01:10,830 --> 00:01:15,450
+Trong các mô hình, chúng tôi chỉ có một mô hình là mô hình xem lỗi.
+
+17
+00:01:15,600 --> 00:01:22,650
+Nó là một tệp lớp cơ bản và nó có hai thuộc tính, không có gì lạ mắt và chúng tôi không muốn đi vào chi
+
+18
+00:01:22,650 --> 00:01:24,330
+tiết đó ngay bây giờ.
+
+19
+00:01:25,380 --> 00:01:31,560
+Một điều khác mà tôi muốn chỉ ra là khi một yêu cầu đến với bộ điều khiển, không phải lúc nào
+
+20
+00:01:31,560 --> 00:01:33,240
+cũng cần có một mô hình.
+
+21
+00:01:33,360 --> 00:01:40,260
+Đôi khi, nó có thể hiển thị chế độ xem có thể là chế độ xem tĩnh và không cần mô hình trong trường hợp đó.
+
+22
+00:01:40,770 --> 00:01:43,370
+Nhưng tôi muốn bạn ghi nhớ điều đó.
+
+23
+00:01:43,380 --> 00:01:46,380
+Mô hình đó không phải lúc nào cũng cần thiết.
+
+24
+00:01:46,680 --> 00:01:47,670
+Hoàn hảo.
+
+25
+00:01:47,700 --> 00:01:55,800
+Vì vậy, bây giờ chúng tôi có một bộ điều khiển gia đình ở đây và tất cả các chế độ xem liên quan đến bộ điều khiển đó sẽ được
+
+26
+00:01:55,800 --> 00:02:00,210
+đặt bên trong thư mục chế độ xem có cùng tên với bộ điều khiển.
+
+27
+00:02:00,360 --> 00:02:03,750
+Và đây sẽ là bộ điều khiển tại nhà chứ không phải tại nhà.
+
+28
+00:02:03,870 --> 00:02:10,660
+Bộ điều khiển là một từ khóa ở đây, vì vậy tên thực của bộ điều khiển là nhà và đó sẽ là tên của
+
+29
+00:02:10,680 --> 00:02:13,380
+thư mục bên trong thư mục lượt xem.
+
+30
+00:02:14,150 --> 00:02:16,860
+Và đó là kiến trúc cho MVC.
+
+31
+00:02:17,370 --> 00:02:24,510
+Chúng tôi có bộ điều khiển và tất cả các chế độ xem tương ứng với bộ điều khiển đó phải được đặt bên
+
+32
+00:02:24,510 --> 00:02:30,750
+trong thư mục chế độ xem với một thư mục con có tên chính xác là tên bộ điều khiển.
+
+33
+00:02:31,290 --> 00:02:32,310
+Rất hoàn hảo.
+
+34
+00:02:32,340 --> 00:02:37,980
+Chúng ta có thể thấy trong bộ điều khiển gia đình, chúng ta có chế độ xem chỉ mục và chúng ta có chế độ xem quyền riêng tư.
+
+35
+00:02:38,750 --> 00:02:41,120
+Nếu tôi chạy ứng dụng ở đây.
+
+36
+00:02:42,240 --> 00:02:46,560
+Và ngay tại đó, bạn có thể thấy chúng tôi có trang chủ và trang bảo mật.
+
+37
+00:02:46,950 --> 00:02:54,300
+Hiện tại, chúng tôi chỉ có một bộ điều khiển trong ứng dụng của mình, vì vậy cả hai chế độ xem đều thuộc cùng một bộ điều khiển.
+
+38
+00:02:54,890 --> 00:02:57,720
+Khi chúng tôi tải trang, bạn có thể thấy URL.
+
+39
+00:02:57,740 --> 00:03:01,430
+Chúng tôi không có bất kỳ tên bộ điều khiển hoặc tên hành động nào.
+
+40
+00:03:01,790 --> 00:03:04,250
+Chúng tôi chỉ có văn bản chào mừng này.
+
+41
+00:03:04,930 --> 00:03:08,860
+Hãy xem vị trí của văn bản trong Home View.
+
+42
+00:03:08,890 --> 00:03:10,510
+Chúng tôi có chế độ xem chỉ mục.
+
+43
+00:03:10,540 --> 00:03:16,210
+Nếu tôi mở nó, đó là văn bản chính xác mà chúng ta thấy ngay tại đây.
+
+44
+00:03:16,510 --> 00:03:24,880
+Chúng tôi hoan nghênh chúng tôi đã tìm hiểu và chúng tôi có một thẻ liên kết với việc xây dựng các ứng dụng web bằng ASP. NET lõi.
+
+45
+00:03:25,510 --> 00:03:34,120
+Vì vậy, những gì chúng ta thấy trên trang chủ ở đây về cơ bản được hiển thị từ chế độ xem chỉ mục này bên trong thư mục chính.
+
+46
+00:03:34,960 --> 00:03:39,100
+Khi chúng tôi nhấp vào quyền riêng tư ở đây, chúng tôi có chính sách quyền riêng tư.
+
+47
+00:03:39,100 --> 00:03:47,860
+Và nếu tôi mở tệp cshtml bảo mật, đó là dữ liệu đang được hiển thị ngay tại đây.
+
+48
+00:03:48,460 --> 00:03:54,700
+Bây giờ hãy bỏ qua dữ liệu chế độ xem này, nhưng bạn có thể thấy thẻ đoạn chính xác là những gì chúng tôi có.
+
+49
+00:03:55,700 --> 00:04:01,910
+Bây giờ, một điều thú vị mà bạn nên chú ý ở đây là khi chúng ta truy cập trang bảo mật.
+
+50
+00:04:01,910 --> 00:04:07,040
+URL ở đây là thứ mà chúng ta đã thấy trước đây với định tuyến.
+
+51
+00:04:07,460 --> 00:04:09,080
+Dựa trên URL này.
+
+52
+00:04:09,110 --> 00:04:13,640
+Bạn có thể cho tôi biết tên bộ điều khiển và tên hành động là gì không?
+
+53
+00:04:14,640 --> 00:04:19,800
+Tên bộ điều khiển là bộ điều khiển gia đình và tên hành động là quyền riêng tư.
+
+54
+00:04:20,450 --> 00:04:22,700
+Bây giờ, làm thế nào mà đến với nhau?
+
+55
+00:04:23,180 --> 00:04:24,410
+Tôi sẽ cho bạn thấy điều đó.
+
+56
+00:04:24,410 --> 00:04:28,300
+Nhưng trước đó, hãy để tôi thay đổi nó thành index.
+
+57
+00:04:28,310 --> 00:04:33,980
+Vì vậy, hành động chỉ mục bộ điều khiển nhà nhấn enter và hoàn thiện.
+
+58
+00:04:34,100 --> 00:04:36,350
+Chúng tôi trở lại trang chủ.
+
+59
+00:04:36,530 --> 00:04:38,270
+Làm thế nào điều đó xảy ra?
+
+60
+00:04:38,600 --> 00:04:45,590
+Khi chúng tôi nhấp vào trang chủ, nó không xác định bất kỳ thứ gì trong thư mục gốc và đó là do thư mục gốc mặc định mà
+
+61
+00:04:45,590 --> 00:04:46,850
+chúng tôi có ở đây.
+
+62
+00:04:46,850 --> 00:04:53,450
+Chúng tôi đang nói rằng nếu không có gì được xác định, hãy chuyển đến bộ điều khiển gia đình và hành động lập chỉ mục.
+
+63
+00:04:53,630 --> 00:05:01,010
+Vì vậy, điều đó có nghĩa là ngay cả khi bạn xác định bộ điều khiển gia đình và hành động lập chỉ mục, về cơ bản nó sẽ đưa bạn đến
+
+64
+00:05:01,010 --> 00:05:02,090
+cùng một trang.
+
+65
+00:05:02,720 --> 00:05:06,020
+Vì vậy, tôi hy vọng bạn có thể thấy mọi thứ đang đến với nhau như thế nào.
+
+66
+00:05:06,500 --> 00:05:13,580
+Nhưng câu hỏi chính, làm thế nào nó biết nó phải tải chế độ xem cụ thể mà chúng ta thấy ở đâu?
+
+67
+00:05:14,200 --> 00:05:18,700
+Để tôi cho bạn thấy rằng chúng tôi có bộ điều khiển gia đình và hành động lập chỉ mục.
+
+68
+00:05:19,210 --> 00:05:22,360
+Đối với điều đó, hãy để tôi đi đến bộ điều khiển gia đình ở đây.
+
+69
+00:05:22,360 --> 00:05:25,600
+Và chúng tôi có vài điều ngay tại đây.
+
+70
+00:05:25,810 --> 00:05:29,110
+Bạn có thể thấy có điều gì đó ở đây, nhưng bỏ qua điều đó.
+
+71
+00:05:29,730 --> 00:05:35,190
+Những gì tôi muốn cho bạn thấy là trong bộ điều khiển gia đình mà chúng tôi có ở đây.
+
+72
+00:05:35,220 --> 00:05:39,330
+Chúng được gọi là phương thức hành động trên dòng 11.
+
+73
+00:05:39,330 --> 00:05:45,090
+Về cơ bản, chúng ta có một hàm tạo cho lớp của mình và tôi sẽ giải thích cho bạn điều đó trong các video sau.
+
+74
+00:05:45,090 --> 00:05:52,230
+Nhưng ngoài ra, chúng ta có ba phương thức hành động ở đây và chúng đang trả về một thứ gọi là kết quả
+
+75
+00:05:52,230 --> 00:05:53,400
+hành động I.
+
+76
+00:05:53,970 --> 00:05:59,040
+Trước đây tôi đã nói với bạn rằng có hai thứ là bộ điều khiển và hành động.
+
+77
+00:05:59,870 --> 00:06:01,970
+Những gì chúng tôi đã xác định trong URL.
+
+78
+00:06:01,970 --> 00:06:06,710
+Chúng tôi đang yêu cầu đi tới bộ điều khiển gia đình và nhận hành động lập chỉ mục.
+
+79
+00:06:06,980 --> 00:06:14,960
+Vì vậy, tại thời điểm đó, nó sẽ chuyển đến bộ điều khiển gia đình và nó sẽ thực hiện hành động chỉ mục này trong hành động chỉ mục.
+
+80
+00:06:14,960 --> 00:06:16,610
+Chúng tôi không có bất kỳ mã nào.
+
+81
+00:06:16,640 --> 00:06:19,040
+Chúng tôi chỉ nói xem trở lại.
+
+82
+00:06:19,250 --> 00:06:20,810
+Điều đó có nghĩa là gì?
+
+83
+00:06:21,230 --> 00:06:28,610
+Chà, về cơ bản, nó nói rằng chúng ta phải trả về một số chế độ xem bên trong thư mục chế độ xem, nhưng nó phải trả
+
+84
+00:06:28,610 --> 00:06:29,900
+về chế độ xem nào?
+
+85
+00:06:30,230 --> 00:06:35,180
+Và đó là nơi mà cách đặt tên mà chúng tôi đã đặt cho thư mục xuất hiện.
+
+86
+00:06:35,300 --> 00:06:42,380
+Nếu chúng tôi chưa xác định tên bên trong dấu ngoặc tròn này, nó sẽ sử dụng cùng tên với tên hành động.
+
+87
+00:06:42,680 --> 00:06:45,500
+Vì vậy, nó sẽ trả về một chế độ xem chỉ mục.
+
+88
+00:06:45,890 --> 00:06:48,620
+Nhưng nó sẽ lấy cái nhìn đó từ đâu?
+
+89
+00:06:49,010 --> 00:06:52,250
+Nó sẽ nhận được chế độ xem đó từ bộ điều khiển gia đình.
+
+90
+00:06:52,250 --> 00:06:59,940
+Vì vậy, nó sẽ chuyển đến thư mục chính bên trong chế độ xem và ở đó, nó sẽ nhận được dấu chấm chỉ mục CSS, HTML.
+
+91
+00:07:01,070 --> 00:07:07,340
+Và nếu chúng ta gõ Home Forward gạch chéo quyền riêng tư, nó sẽ thực thi phương thức hành động quyền riêng tư.
+
+92
+00:07:07,340 --> 00:07:15,260
+Và chế độ xem mà nó sẽ trả về sẽ là chế độ xem riêng tư, vì đó là tên của phương thức hành động.
+
+93
+00:07:15,860 --> 00:07:22,850
+Bây giờ, chúng tôi bỏ qua phương pháp hành động lỗi mà chúng tôi có ở đây, nhưng bạn có thể thấy cách chỉ mục và quyền riêng
+
+94
+00:07:22,850 --> 00:07:23,900
+tư được thực thi.
+
+95
+00:07:25,080 --> 00:07:29,520
+Bây giờ với Visual Studio, chúng tôi có chức năng sửa lỗi tuyệt vời.
+
+96
+00:07:30,350 --> 00:07:30,800
+Vì điều đó.
+
+97
+00:07:30,800 --> 00:07:35,750
+Việc bạn phải làm là ngay tại đây khi di chuột bạn có thể thấy một chấm tròn.
+
+98
+00:07:36,050 --> 00:07:39,980
+Nếu bạn nhấp vào đó, điều đó có nghĩa là bạn đã thêm trình gỡ lỗi.
+
+99
+00:07:40,760 --> 00:07:43,370
+Hãy để tôi thêm điều đó vào cả hai dòng ở đây.
+
+100
+00:07:43,370 --> 00:07:51,680
+Và nếu tôi quay lại đây và nếu tôi thực hiện home index và nhấn enter, bạn có thể thấy điểm ngắt đang được nhấn
+
+101
+00:07:51,680 --> 00:07:52,550
+ở đây.
+
+102
+00:07:52,700 --> 00:07:57,350
+Điều đó có nghĩa là tuyên bố này đang được thực hiện ngay bây giờ.
+
+103
+00:07:57,830 --> 00:08:02,180
+Vì vậy, điều đó chứng tỏ rằng nó đang đi đến phương pháp hành động chỉ mục.
+
+104
+00:08:03,090 --> 00:08:10,320
+Chúng tôi sẽ phải nhấn tiếp tục ở đây và sau đó nó sẽ điều hướng hoặc tiếp tục thực hiện và đưa trang web
+
+105
+00:08:10,320 --> 00:08:11,220
+trở lại.
+
+106
+00:08:12,030 --> 00:08:16,470
+Khi chúng ta nhấp vào quyền riêng tư, nó sẽ chuyển đến phương thức hành động quyền riêng tư.
+
+107
+00:08:16,470 --> 00:08:18,630
+Và chúng tôi tiếp tục ở đây.
+
+108
+00:08:18,720 --> 00:08:20,130
+Và hoàn hảo.
+
+109
+00:08:21,330 --> 00:08:26,580
+Vì vậy, với điều đó, tôi hy vọng bạn có một ý tưởng sơ bộ về cách thức hoạt động của định tuyến.
+
+110
+00:08:26,790 --> 00:08:30,780
+Nhưng hãy để tôi cho bạn xem một thứ trước khi tôi kết thúc video.
+
+111
+00:08:31,290 --> 00:08:36,690
+Khi chúng ta quay trở lại The View, hãy để tôi lập trình ở đây.
+
+112
+00:08:36,690 --> 00:08:44,130
+Và thay vì hành động lập chỉ mục của bộ điều khiển gia đình, hãy để tôi đặt mặc định thành nhà riêng và quyền riêng tư.
+
+113
+00:08:44,280 --> 00:08:45,990
+Và hãy để tôi điều hành nó.
+
+114
+00:08:46,500 --> 00:08:50,670
+Bây giờ, khi ứng dụng tải, chúng tôi không có bất kỳ URL nào được xác định.
+
+115
+00:08:50,700 --> 00:08:57,570
+Vì vậy, trên trang chủ, nó sẽ gọi phương thức hành động bảo mật và chế độ xem đó sẽ được trả về.
+
+116
+00:08:58,940 --> 00:08:59,850
+Hoàn hảo.
+
+117
+00:08:59,870 --> 00:09:05,810
+Hãy để tôi quay lại thay đổi đó và tôi sẽ quay lại đây để kiểm soát.
+
+118
+00:09:05,840 --> 00:09:08,630
+Ở đó khi tôi trả lại chế độ xem.
+
+119
+00:09:08,630 --> 00:09:15,590
+Như tôi đã nói trước đây, nếu không có gì được xác định ở đây, nó sẽ tìm kiếm cùng một chế độ xem với tên của
+
+120
+00:09:15,590 --> 00:09:20,000
+phương thức hành động trong thư mục của tên bộ điều khiển đó.
+
+121
+00:09:20,780 --> 00:09:27,920
+Bây giờ, thay vì điều đó, tôi đang nói rằng khi chỉ mục được gọi, tôi muốn bạn trả về một chế độ xem
+
+122
+00:09:27,950 --> 00:09:29,870
+có tên là quyền riêng tư.
+
+123
+00:09:30,600 --> 00:09:37,980
+Trong trường hợp đó, nó sẽ chuyển đến thư mục chính và tìm một chế độ xem có tên là quyền riêng tư và chế độ xem.
+
+124
+00:09:37,980 --> 00:09:41,760
+Có phần mở rộng của dot css html.
+
+125
+00:09:42,770 --> 00:09:44,150
+Hãy để tôi chạy cái này.
+
+126
+00:09:44,930 --> 00:09:48,590
+Bây giờ là trang mặc định, nó lại tải trang riêng tư.
+
+127
+00:09:48,590 --> 00:09:55,130
+Nhưng để chứng minh với bạn rằng nếu tôi về nhà và chế độ xem quyền riêng tư của chỉ mục đang được tải.
+
+128
+00:09:55,870 --> 00:10:00,340
+Vì vậy, bạn luôn có thể ghi đè chế độ xem nào sẽ được trả lại.
+
+129
+00:10:00,370 --> 00:10:04,990
+Nhưng đây là mặc định mà chúng tôi có nếu không có gì hiện diện.
+
+130
+00:10:06,450 --> 00:10:10,920
+Tôi cũng sẽ khôi phục thay đổi đó để giữ cho mọi thứ đơn giản ngay bây giờ.
+
+131
+00:10:12,420 --> 00:10:17,130
+Nhưng tôi hy vọng với điều đó bạn có một ý tưởng sơ bộ về cách thức hoạt động của định tuyến.
+
+132
+00:10:17,370 --> 00:10:24,360
+Và một lần nữa, trong bộ điều khiển, chúng ta sẽ có các phương thức hành động sẽ xác định chế độ xem nào cần được
+
+133
+00:10:24,360 --> 00:10:24,990
+trả về.
+
+134
+00:10:25,620 --> 00:10:29,530
+Bây giờ, MVC rất khó hiểu, như tôi đã nói trước đây.
+
+135
+00:10:29,550 --> 00:10:36,090
+Vì vậy, tôi không mong đợi bạn hiểu 100% những điều mà tôi đang giải thích ngay bây giờ.
+
+136
+00:10:36,360 --> 00:10:43,080
+Nhưng ngay cả khi bạn đang hiểu được 50 đến 70% cho đến nay, thì đó cũng là một tiến bộ lớn.
+
+137
+00:10:43,200 --> 00:10:50,040
+Và khi bạn thực sự bắt đầu triển khai điều này trong phần sắp tới, mọi thứ sẽ bắt đầu có ý nghĩa
+
+138
+00:10:50,040 --> 00:10:55,290
+hơn nhiều và bạn sẽ hiểu tại sao mô hình này lại hiệu quả đến vậy.
+
+139
+00:10:56,780 --> 00:11:00,830
+Với cái nhìn tổng quan đó, hãy để tôi tiếp tục từ video tiếp theo.
+

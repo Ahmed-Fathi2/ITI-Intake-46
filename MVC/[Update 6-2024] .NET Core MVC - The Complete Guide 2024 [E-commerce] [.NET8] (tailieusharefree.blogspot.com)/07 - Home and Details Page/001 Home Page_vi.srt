@@ -1,0 +1,436 @@
+1
+00:00:02,050 --> 00:00:05,050
+Chúng tôi đã đạt được tiến bộ lớn với dự án của chúng tôi.
+
+2
+00:00:05,080 --> 00:00:12,400
+Chúng tôi có các sản phẩm có danh mục và bây giờ điều chúng tôi nên làm là trên trang chủ của ứng dụng, chúng tôi sẽ hiển
+
+3
+00:00:12,400 --> 00:00:19,630
+thị tất cả các sản phẩm và để làm được điều đó, bạn cần suy nghĩ về những gì chúng tôi sẽ làm trong bộ điều khiển và phương
+
+4
+00:00:19,630 --> 00:00:21,280
+thức hành động.
+
+5
+00:00:22,180 --> 00:00:24,280
+Hãy để tôi kết thúc dự án ở đây.
+
+6
+00:00:24,310 --> 00:00:28,990
+Bộ điều khiển mà chúng tôi sẽ làm việc cho nó nằm bên trong khách hàng.
+
+7
+00:00:29,110 --> 00:00:32,619
+Chúng tôi có hành động lập chỉ mục bộ điều khiển gia đình.
+
+8
+00:00:32,920 --> 00:00:39,730
+Bây giờ chúng tôi sẽ làm việc trong khu vực khách hàng vì trang chủ sẽ có thể truy cập được đối với tất cả người dùng
+
+9
+00:00:39,730 --> 00:00:41,860
+chứ không chỉ người dùng quản trị.
+
+10
+00:00:42,870 --> 00:00:43,950
+Trong trang chủ.
+
+11
+00:00:43,950 --> 00:00:46,680
+Bạn cần suy nghĩ về những gì chúng ta cần hiển thị.
+
+12
+00:00:47,070 --> 00:00:49,700
+Chúng tôi sẽ hiển thị tất cả các sản phẩm.
+
+13
+00:00:49,710 --> 00:00:56,220
+Vì vậy, về cơ bản, chúng tôi cần lấy tất cả các sản phẩm từ cơ sở dữ liệu và để làm được điều đó, chúng tôi cần đơn vị công việc.
+
+14
+00:00:56,250 --> 00:00:58,490
+Sử dụng tiêm phụ thuộc.
+
+15
+00:00:58,500 --> 00:01:07,560
+Vì vậy, hãy để tôi thêm đơn vị công việc chỉ đọc riêng tư và đưa vào như chúng tôi đã làm trong bộ điều khiển danh mục và sản phẩm.
+
+16
+00:01:08,820 --> 00:01:18,960
+Sau đó, trong chỉ mục ở đây, chúng tôi sẽ nhận được một tôi vô số sản phẩm và hãy để tôi gọi danh sách sản phẩm đó bằng đơn vị gạch
+
+17
+00:01:18,960 --> 00:01:23,280
+dưới của công việc chấm sản phẩm chấm lấy tất cả.
+
+18
+00:01:24,160 --> 00:01:27,790
+Và khi chúng tôi nhận được, chúng tôi muốn bao gồm danh mục.
+
+19
+00:01:28,120 --> 00:01:30,010
+Vì vậy, đừng quên điều đó.
+
+20
+00:01:30,690 --> 00:01:37,050
+Khi chúng tôi truy xuất danh sách sản phẩm tại đây, chúng tôi có thể quay lại Chế độ xem và chúng tôi sẽ chuyển danh sách
+
+21
+00:01:37,050 --> 00:01:38,010
+sản phẩm tại đây.
+
+22
+00:01:38,940 --> 00:01:42,960
+Tiếp theo, chúng ta phải vào Chế độ xem và thiết kế chế độ xem đó.
+
+23
+00:01:43,710 --> 00:01:50,790
+Điều đầu tiên mà bạn nên nghĩ đến là mô hình nào sẽ là chữ thường và đó
+
+24
+00:01:50,790 --> 00:01:53,160
+sẽ là vô số sản phẩm.
+
+25
+00:01:53,190 --> 00:01:56,730
+Chúng tôi đã có câu lệnh sử dụng trong quá trình nhập.
+
+26
+00:01:56,760 --> 00:02:00,570
+Đó là lý do tại sao chúng tôi có thể trực tiếp viết sản phẩm ngay tại đó.
+
+27
+00:02:01,730 --> 00:02:02,380
+Trong đó.
+
+28
+00:02:02,390 --> 00:02:07,070
+Hãy để tôi thêm một div, tạo cho nó một lớp hàng và phần đệm dưới cùng của ba.
+
+29
+00:02:07,430 --> 00:02:10,820
+Và sau đó chúng ta cần lặp qua I vô số.
+
+30
+00:02:10,820 --> 00:02:16,490
+Vì vậy, tôi sẽ thêm một cho mỗi sản phẩm và mô hình biến vòng lặp.
+
+31
+00:02:17,530 --> 00:02:18,880
+Đối với mỗi người trong số họ.
+
+32
+00:02:18,880 --> 00:02:28,750
+Tôi sẽ thêm một div cung cấp cho nó một lớp cột lớn ba và cột sáu lớp bootstrap nhỏ trong đó tôi sẽ thêm
+
+33
+00:02:28,750 --> 00:02:32,530
+một lớp hàng và phần đệm của hai.
+
+34
+00:02:33,220 --> 00:02:35,320
+Tôi cần div đóng ở đây.
+
+35
+00:02:36,420 --> 00:02:37,200
+Hoàn hảo.
+
+36
+00:02:37,650 --> 00:02:42,450
+Sau đó, tôi sẽ thêm một div, tạo cho nó một lớp đệm của cột 12.
+
+37
+00:02:43,310 --> 00:02:45,320
+Hãy để tôi đóng băng đó là tốt.
+
+38
+00:02:46,540 --> 00:02:50,410
+Tôi không biết tại sao các cửa đóng lại không hoạt động như mong đợi.
+
+39
+00:02:50,440 --> 00:02:51,490
+Rất tiếc.
+
+40
+00:02:53,700 --> 00:02:55,020
+Hãy để tôi sắp xếp chúng.
+
+41
+00:02:55,020 --> 00:02:56,630
+Kiểm soát một điều khiển d.
+
+42
+00:02:58,250 --> 00:02:59,030
+Hoàn hảo.
+
+43
+00:02:59,120 --> 00:03:03,980
+Sau đó, tôi sẽ thêm div cuối cùng, đây sẽ là bố cục thẻ bootstrap.
+
+44
+00:03:03,980 --> 00:03:11,150
+Và ở đó tôi sẽ cung cấp cho lớp thẻ viền ba phần đệm, ba bóng và viền tròn.
+
+45
+00:03:12,230 --> 00:03:21,530
+Trong đó, tôi muốn hiển thị hình ảnh để img src bằng với hình ảnh bên trong product là biến cục
+
+46
+00:03:21,530 --> 00:03:24,020
+bộ mà chúng ta có ở đây.
+
+47
+00:03:24,050 --> 00:03:34,130
+Dot chúng tôi có URL hình ảnh và tôi sẽ cung cấp cho nó các lớp bootstrap của thẻ IMG trên cùng và được làm tròn.
+
+48
+00:03:35,590 --> 00:03:38,770
+Hãy để tôi lưu nó và chạy ứng dụng.
+
+49
+00:03:43,560 --> 00:03:46,110
+Chúng ta sẽ thấy sáu hình ảnh ở đây.
+
+50
+00:03:46,140 --> 00:03:48,030
+Nó có thể mất một giây, nhưng.
+
+51
+00:03:48,030 --> 00:03:48,870
+Hoàn hảo.
+
+52
+00:03:49,110 --> 00:03:53,370
+Tôi có thể xem tất cả các hình ảnh được tải ngay tại đây.
+
+53
+00:03:53,730 --> 00:03:55,290
+Rằng sẽ rất tốt.
+
+54
+00:03:56,400 --> 00:04:02,040
+Sau đó, tôi có thể thêm một div, tạo cho nó một lớp đệm thân thẻ.
+
+55
+00:04:02,040 --> 00:04:03,930
+Dưới cùng của số không.
+
+56
+00:04:05,350 --> 00:04:07,510
+Thêm cả div đóng.
+
+57
+00:04:08,910 --> 00:04:16,200
+Thật khó chịu khi div đóng không tự thêm vào và tôi sẽ thêm một div với phần đệm bên trái của một
+
+58
+00:04:16,829 --> 00:04:24,150
+bên trong phần đệm bên trái. Tôi sẽ thêm hai thẻ đoạn và về cơ bản nó có các lớp bootstrap để thiết
+
+59
+00:04:24,150 --> 00:04:25,080
+kế.
+
+60
+00:04:25,880 --> 00:04:33,530
+Cái đầu tiên, tôi sẽ hiển thị tiêu đề sản phẩm và cái tiếp theo sẽ là tác giả chấm sản phẩm.
+
+61
+00:04:34,460 --> 00:04:35,960
+Lưu vào đó.
+
+62
+00:04:36,290 --> 00:04:38,360
+Hãy xem nó trông như thế nào ở đây.
+
+63
+00:04:39,190 --> 00:04:41,500
+Và hoàn hảo trông tuyệt vời.
+
+64
+00:04:42,520 --> 00:04:44,250
+Hãy để tôi quay lại mã.
+
+65
+00:04:44,260 --> 00:04:45,370
+Sao chép phần đệm.
+
+66
+00:04:45,370 --> 00:04:52,230
+Còn lại một, dán nó một lần nữa ở đây và chúng tôi không muốn tiêu đề thẻ.
+
+67
+00:04:52,240 --> 00:04:53,800
+Chúng tôi sẽ có văn bản.
+
+68
+00:04:53,800 --> 00:04:56,920
+Độ mờ tối có vẻ tốt.
+
+69
+00:04:58,060 --> 00:05:01,060
+Văn bản, độ mờ và trung tâm văn bản.
+
+70
+00:05:02,950 --> 00:05:05,290
+Tại đó, tôi sẽ hiển thị giá thấp nhất.
+
+71
+00:05:05,290 --> 00:05:13,140
+Vì vậy, tôi sẽ nói thấp nhất và trong một khoảng thời gian, chúng tôi sẽ hiển thị giá chấm sản phẩm là 100.
+
+72
+00:05:13,150 --> 00:05:20,260
+Đó là mức giá thấp nhất mà chúng tôi sẽ có. thành chuỗi và chúng tôi sẽ định dạng chuỗi đó bằng một loại tiền tệ.
+
+73
+00:05:20,260 --> 00:05:21,670
+Vì vậy, chúng tôi sẽ thêm xem.
+
+74
+00:05:22,940 --> 00:05:25,700
+Và hãy để tôi quay lại giao diện người dùng ở đây.
+
+75
+00:05:25,730 --> 00:05:26,670
+Hoàn hảo.
+
+76
+00:05:26,740 --> 00:05:27,740
+Trông rất tuyệt.
+
+77
+00:05:28,400 --> 00:05:30,740
+Vì vậy, tiền tệ của chúng tôi có vẻ tốt.
+
+78
+00:05:30,740 --> 00:05:32,270
+Hãy để tôi sao chép này.
+
+79
+00:05:32,300 --> 00:05:37,220
+Dán nó một lần nữa và để tôi cũng hiển thị giá niêm yết.
+
+80
+00:05:37,520 --> 00:05:42,110
+Tôi nghĩ trước khi chúng ta nên hiển thị giá niêm yết và sau đó là giá thấp nhất.
+
+81
+00:05:42,350 --> 00:05:44,120
+Điều đó có ý nghĩa hơn.
+
+82
+00:05:46,490 --> 00:05:50,660
+Giá niêm yết hoàn hảo và sau đó là giá thấp nhất.
+
+83
+00:05:51,440 --> 00:05:52,940
+Hãy để tôi xem.
+
+84
+00:05:53,060 --> 00:05:54,020
+Hoàn hảo.
+
+85
+00:05:54,020 --> 00:06:01,850
+Hãy để tôi quay lại đây và trước nhịp tốt, bên trong nhịp, tôi sẽ thêm một dòng trang trí văn bản
+
+86
+00:06:01,850 --> 00:06:06,050
+lớp qua đó sẽ đảm bảo rằng nó sẽ thêm một dòng ở đó.
+
+87
+00:06:06,050 --> 00:06:10,730
+Và trước đó, tôi sẽ hiển thị giá niêm yết.
+
+88
+00:06:11,630 --> 00:06:14,750
+Hãy để tôi chia nó ra thành những dòng riêng biệt ở đây.
+
+89
+00:06:27,290 --> 00:06:28,100
+Hoàn hảo.
+
+90
+00:06:28,100 --> 00:06:29,480
+Trông tôt đây.
+
+91
+00:06:30,320 --> 00:06:32,780
+Hãy để tôi tổ chức điều này là tốt.
+
+92
+00:06:36,060 --> 00:06:39,560
+Và thật tuyệt khi chúng tôi quay lại giao diện người dùng.
+
+93
+00:06:40,550 --> 00:06:42,770
+Và điều đó có vẻ tốt hơn nhiều.
+
+94
+00:06:43,190 --> 00:06:45,590
+Tôi muốn bỏ lề ở đây.
+
+95
+00:06:45,830 --> 00:06:50,360
+Vì vậy, nơi chúng tôi có cái này, tôi sẽ nói lề, đáy bằng không.
+
+96
+00:06:50,840 --> 00:06:52,970
+Hãy xem nó trông như thế nào.
+
+97
+00:06:54,380 --> 00:06:55,640
+Và tuyệt vời.
+
+98
+00:06:56,150 --> 00:06:58,820
+Tôi thích cách trang chủ xuất hiện.
+
+99
+00:06:59,180 --> 00:07:03,650
+Điều cuối cùng mà tôi muốn là một liên kết để đi đến chi tiết sản phẩm ở đây.
+
+100
+00:07:03,770 --> 00:07:08,920
+Vì vậy, hãy để tôi quay lại sau khi chúng ta có phần thân thẻ div.
+
+101
+00:07:08,930 --> 00:07:11,310
+Tôi sẽ thêm một div nữa ở đây.
+
+102
+00:07:11,330 --> 00:07:16,700
+Trong đó tôi sẽ có một thẻ neo và chúng tôi sẽ hiển thị chi tiết.
+
+103
+00:07:17,330 --> 00:07:22,640
+Tham khảo Hãy để tôi giữ nó dưới dạng băm bây giờ và xem nó trông như thế nào.
+
+104
+00:07:22,670 --> 00:07:26,000
+Rất tiếc, chúng tôi có một lỗi ở đó.
+
+105
+00:07:26,390 --> 00:07:28,610
+Tôi quên dấu ngoặc kép.
+
+106
+00:07:29,500 --> 00:07:31,210
+Và điều đó sẽ sửa chữa nó.
+
+107
+00:07:33,380 --> 00:07:34,100
+Hoàn hảo.
+
+108
+00:07:34,100 --> 00:07:37,190
+Vì vậy, trang chủ của ứng dụng của chúng tôi trông thật tuyệt.
+
+109
+00:07:37,520 --> 00:07:41,450
+Bây giờ, trong video tiếp theo, chúng ta hãy làm việc trên trang chi tiết.
+

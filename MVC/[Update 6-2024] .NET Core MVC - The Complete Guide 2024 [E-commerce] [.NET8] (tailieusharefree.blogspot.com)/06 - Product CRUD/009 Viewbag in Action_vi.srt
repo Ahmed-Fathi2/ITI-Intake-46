@@ -1,0 +1,232 @@
+1
+00:00:01,839 --> 00:00:06,010
+Bây giờ chúng tôi phải chuyển một số dữ liệu từ bộ điều khiển sang chế độ xem của chúng tôi.
+
+2
+00:00:06,250 --> 00:00:11,440
+Và để làm được điều đó, chúng tôi có nhiều mặt hàng hoặc nhiều tuyến đường có sẵn.
+
+3
+00:00:12,160 --> 00:00:14,290
+Đầu tiên, đây là một túi xem.
+
+4
+00:00:14,530 --> 00:00:20,200
+Túi xem chuyển dữ liệu từ bộ điều khiển sang chế độ xem chứ không phải ngược lại.
+
+5
+00:00:20,410 --> 00:00:22,750
+Và đó chính xác là những gì chúng tôi muốn.
+
+6
+00:00:22,780 --> 00:00:29,710
+Chúng tôi muốn chuyển dữ liệu mà chúng tôi có trong bộ điều khiển sang chế độ xem của mình và đó là lý tưởng cho tình huống
+
+7
+00:00:29,710 --> 00:00:33,160
+trong đó dữ liệu tạm thời không có trong một mô hình.
+
+8
+00:00:33,910 --> 00:00:39,760
+Giống như trong ví dụ của chúng tôi, chúng tôi cần danh sách thả xuống và danh sách đó không có trong mô hình của chúng tôi.
+
+9
+00:00:39,760 --> 00:00:42,430
+Chúng tôi không có một tài sản để lưu trữ đó.
+
+10
+00:00:42,550 --> 00:00:48,370
+Vì vậy, trong trường hợp đó, chúng tôi có thể lưu trữ cái này trong túi xem và chuyển cái đó cho chế độ xem của chúng tôi.
+
+11
+00:00:50,840 --> 00:00:58,760
+Mặt sau của bạn là một thuộc tính động tận dụng các tính năng động mới trong C sharp 4. 0.
+
+12
+00:00:59,120 --> 00:01:06,770
+Bất kỳ số lượng thuộc tính và giá trị nào cũng có thể được chỉ định cho một chế độ xem lại và chế độ xem lại trực tiếp
+
+13
+00:01:06,770 --> 00:01:09,500
+chỉ tồn tại trong yêu cầu HTTP hiện tại.
+
+14
+00:01:09,830 --> 00:01:14,030
+Giá trị xem lại sẽ là null nếu có bất kỳ chuyển hướng nào.
+
+15
+00:01:14,150 --> 00:01:21,040
+Giống như trong trường hợp của chúng tôi, chúng tôi sẽ chuyển giá trị từ bộ điều khiển sang chế độ xem và chúng tôi sẽ không chuyển hướng.
+
+16
+00:01:21,050 --> 00:01:24,050
+Đó là lý do tại sao giá trị xem lại sẽ tồn tại.
+
+17
+00:01:25,380 --> 00:01:30,360
+Điểm cuối cùng là chế độ xem lại thực sự là một trình bao bọc xung quanh dữ liệu chế độ xem.
+
+18
+00:01:30,930 --> 00:01:36,300
+Bây giờ bạn có thể nghĩ dữ liệu xem là gì, nhưng chúng tôi sẽ đề cập đến từng thứ một.
+
+19
+00:01:36,840 --> 00:01:43,950
+Trước tiên, hãy để tôi quay lại và chỉ cho bạn cách chúng tôi có thể sử dụng chế độ xem lại ngay tại đây trong mã.
+
+20
+00:01:43,950 --> 00:01:48,990
+Chúng tôi đang nhận tất cả danh sách danh mục, nhưng tôi đang ở trong hành động lập chỉ mục.
+
+21
+00:01:49,140 --> 00:01:50,610
+Hãy để tôi cắt cái này.
+
+22
+00:01:50,640 --> 00:01:54,270
+Chúng tôi thực sự cần điều đó bên trong hành động tạo.
+
+23
+00:01:54,940 --> 00:01:58,660
+Vì vậy, ngay tại đây, hãy để tôi dán nó vào đây và bây giờ.
+
+24
+00:01:58,660 --> 00:02:01,710
+Bạn có thể nghĩ rằng chúng tôi không chuyển bất cứ điều gì ở đây.
+
+25
+00:02:01,720 --> 00:02:04,210
+Tại sao chúng ta không vượt qua danh sách thể loại?
+
+26
+00:02:04,630 --> 00:02:11,080
+Nhưng nếu tôi đi tới The View, bạn có thể thấy chúng tôi đã xác định một mô hình ở trên cùng, đó là mô hình sản phẩm.
+
+27
+00:02:11,710 --> 00:02:18,250
+Vì vậy, bây giờ chúng tôi cần chuyển danh sách danh mục này sang chế độ xem của mình và chúng tôi muốn sử dụng túi xem.
+
+28
+00:02:18,820 --> 00:02:24,670
+Vì vậy, chúng ta có thể nói xem danh sách danh mục chấm gói bằng với danh sách danh mục.
+
+29
+00:02:25,060 --> 00:02:32,170
+Chúng tôi có thể đặt bất kỳ tên nào chúng tôi muốn và tên mà chúng tôi đặt ở đây về cơ bản sẽ hoạt động như một giá trị khóa,
+
+30
+00:02:32,200 --> 00:02:37,570
+trong đó khóa sẽ là danh sách danh mục và giá trị sẽ là bất kỳ thứ gì chúng tôi gán ở đây.
+
+31
+00:02:38,350 --> 00:02:45,520
+Khi chúng tôi thêm phần này vào đây, sau đó bên trong phần tạo, chúng tôi có thể tìm nạp phần đó và hiển thị phần đó trong danh sách thả xuống.
+
+32
+00:02:46,360 --> 00:02:50,650
+Hãy để tôi cuộn xuống và nơi chúng tôi có giá 100.
+
+33
+00:02:50,740 --> 00:02:54,180
+Sau đó, hãy để tôi sao chép và dán nó một lần nữa.
+
+34
+00:02:54,190 --> 00:02:59,030
+Nhãn sẽ dành cho xác thực ASP id danh mục.
+
+35
+00:02:59,030 --> 00:03:04,370
+Chúng tôi có thể thay đổi nó thành ID danh mục, nhưng ở đây chúng tôi muốn trường chọn.
+
+36
+00:03:04,550 --> 00:03:10,160
+Bây giờ khi chúng ta đang sử dụng select thay vì input, chúng ta không thể sử dụng thẻ tự đóng.
+
+37
+00:03:10,160 --> 00:03:17,720
+Chúng tôi phải đóng nó một cách rõ ràng và sau đó tôi sẽ thêm một tùy chọn mặc định nữa ở đây, tùy chọn
+
+38
+00:03:17,720 --> 00:03:20,870
+này sẽ bị tắt, được chọn theo mặc định.
+
+39
+00:03:20,870 --> 00:03:25,280
+Và ở đó chúng tôi sẽ hiển thị danh mục đã chọn.
+
+40
+00:03:26,750 --> 00:03:34,430
+Bây giờ cũng như trước đây, chúng tôi có ID danh mục đó, nhưng chúng tôi cần hiển thị tất cả các mục trong danh sách thả xuống.
+
+41
+00:03:34,850 --> 00:03:43,340
+Để làm được điều đó, chúng ta có một mục ASP trợ giúp thẻ đặc biệt và điều này đòi hỏi tôi có vô số mục danh sách được chọn.
+
+42
+00:03:43,790 --> 00:03:46,040
+Chúng tôi có cái đó trong túi xem của chúng tôi.
+
+43
+00:03:46,040 --> 00:03:51,980
+Vì vậy, để giải nén chúng ta sẽ viết view back dot và chúng ta cần tên khóa.
+
+44
+00:03:52,340 --> 00:03:53,360
+Bây giờ tên chính.
+
+45
+00:03:53,360 --> 00:03:58,730
+Nếu bạn viết ở đây, nó sẽ không giúp ích gì cho IntelliSense vì nó không động.
+
+46
+00:03:58,760 --> 00:04:03,950
+Bạn có thể đặt bất kỳ tên khóa nào ở đây và IntelliSense không thể phát hiện những gì bạn đã cung cấp.
+
+47
+00:04:03,980 --> 00:04:08,000
+Vì vậy, bạn phải gõ nó và đảm bảo rằng nó phù hợp.
+
+48
+00:04:08,030 --> 00:04:11,630
+Nếu có bất kỳ lỗi chính tả nào, mọi thứ sẽ không hoạt động.
+
+49
+00:04:12,360 --> 00:04:13,470
+Cho lớp học ở đây.
+
+50
+00:04:13,470 --> 00:04:16,800
+Chúng tôi sẽ cung cấp cho nó một lớp bootstrap của biểu mẫu chọn.
+
+51
+00:04:16,800 --> 00:04:20,279
+Và với điều đó, hãy để tôi chạy ứng dụng.
+
+52
+00:04:22,170 --> 00:04:27,890
+Chúng tôi đi đến sản phẩm ở đây và chúng tôi sẽ phải tạo ra sản phẩm mới.
+
+53
+00:04:27,900 --> 00:04:28,990
+Cuộn xuống.
+
+54
+00:04:29,010 --> 00:04:29,910
+Hoàn hảo.
+
+55
+00:04:29,940 --> 00:04:35,640
+Chúng tôi có danh mục chọn lọc và ở đó chúng tôi có hành động, khoa học viễn tưởng và lịch sử.
+
+56
+00:04:36,240 --> 00:04:40,290
+Vì vậy, danh sách thả xuống của chúng tôi trông tuyệt vời với Tạo sản phẩm.
+
+57
+00:04:40,980 --> 00:04:45,180
+Bây giờ, đó là một cách để làm việc với View Bag.
+
+58
+00:04:45,540 --> 00:04:50,430
+Hãy để tôi tiếp tục và cho bạn thấy giải pháp thay thế trong video tiếp theo.
+

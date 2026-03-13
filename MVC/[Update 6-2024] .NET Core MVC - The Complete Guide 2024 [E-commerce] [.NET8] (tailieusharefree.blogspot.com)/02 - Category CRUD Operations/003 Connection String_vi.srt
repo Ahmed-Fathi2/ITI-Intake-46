@@ -1,0 +1,252 @@
+1
+00:00:01,609 --> 00:00:06,110
+Trong video này, chúng tôi muốn thêm chuỗi kết nối vào dự án của mình.
+
+2
+00:00:06,350 --> 00:00:11,720
+Bây giờ, khi chúng tôi thêm một chuỗi kết nối, chúng tôi thực sự cần một Máy chủ SQL.
+
+3
+00:00:11,960 --> 00:00:18,860
+Vì vậy, tôi hy vọng bạn đã cài đặt SQL Server cũng như SQL Server Management Studio.
+
+4
+00:00:19,660 --> 00:00:20,740
+Với điều đó tại chỗ.
+
+5
+00:00:20,740 --> 00:00:26,290
+Nếu bạn nhấn vào biểu tượng kết nối ở đây, nó sẽ hỏi bạn tên máy chủ.
+
+6
+00:00:27,200 --> 00:00:31,920
+Bây giờ tôi có nhiều máy chủ được cài đặt trên máy cục bộ của mình.
+
+7
+00:00:31,940 --> 00:00:37,070
+Nếu tôi nhập localhost và kết nối, tôi có thể kết nối ở đó.
+
+8
+00:00:37,190 --> 00:00:43,160
+Tiếp theo, tôi có dấu gạch chéo db cục bộ chuyển tiếp DB cục bộ của MySQL.
+
+9
+00:00:43,790 --> 00:00:48,220
+Nếu tôi nhấn vào đó, tôi cũng có thể kết nối với nó.
+
+10
+00:00:48,230 --> 00:00:53,180
+Và tôi cũng có một máy chủ cục bộ chỉ với tệp . đây.
+
+11
+00:00:53,210 --> 00:00:56,990
+Khi tôi làm điều đó, tôi có thể kết nối thành công.
+
+12
+00:00:57,260 --> 00:01:04,250
+Vì vậy, tôi có ba máy chủ khác nhau trên máy cục bộ của mình dựa trên máy chủ bạn có và bạn có
+
+13
+00:01:04,250 --> 00:01:07,820
+thể kết nối trong studio Quản lý máy chủ SQL.
+
+14
+00:01:07,850 --> 00:01:12,290
+Bạn có thể sử dụng nó trong chuỗi kết nối ngay tại đây.
+
+15
+00:01:12,290 --> 00:01:19,790
+Nếu tôi mở rộng cơ sở dữ liệu, bạn có thể thấy tôi có thử nghiệm MVC và cơ sở dữ liệu API xoài đỏ.
+
+16
+00:01:20,210 --> 00:01:28,710
+Chúng tôi sẽ tạo một cơ sở dữ liệu mới, nhưng để làm được điều đó, chúng tôi cần xác định chuỗi kết nối bên trong dự án của mình.
+
+17
+00:01:29,190 --> 00:01:34,020
+Xác định điều đó là siêu đơn giản, nhưng chúng ta xác định điều đó ở đâu?
+
+18
+00:01:34,700 --> 00:01:42,770
+Bạn luôn có thể mã hóa nó trong chương trình. cs nơi chúng tôi sẽ thiết lập khung thực thể, nhưng
+
+19
+00:01:42,770 --> 00:01:47,240
+tất cả các kết nối và bí mật sẽ luôn ở bên trong.
+
+20
+00:01:47,270 --> 00:01:49,190
+Cài đặt ứng dụng. json.
+
+21
+00:01:49,950 --> 00:01:55,170
+Đó là một tệp JSON cơ bản nơi chúng tôi có khóa và chúng tôi có giá trị.
+
+22
+00:01:55,650 --> 00:02:02,250
+Vì vậy, nếu bạn phải xác định điều gì đó bằng chuỗi kết nối, bạn có thể nói kết nối ở đây, nhưng khi
+
+23
+00:02:02,250 --> 00:02:08,460
+bạn bắt đầu nhập, IntelliSense sẽ cho bạn thấy rằng có một thứ được gọi là chuỗi kết nối.
+
+24
+00:02:09,039 --> 00:02:13,210
+Bây giờ bạn có thể bỏ qua điều đó và xác định khóa tùy chỉnh của riêng mình tại đây.
+
+25
+00:02:13,210 --> 00:02:17,320
+Nhưng chuỗi kết nối là những gì chúng ta sẽ sử dụng để bắt đầu.
+
+26
+00:02:17,650 --> 00:02:22,800
+Đó là một trong những phương pháp trợ giúp đã được cung cấp cùng với cài đặt ứng dụng.
+
+27
+00:02:22,810 --> 00:02:29,560
+Vì vậy, nếu tôi nhấp đúp chuột hoặc bạn có thể chỉ cần nhập nó ở đây, nó sẽ là các chuỗi kết nối sẽ là tên
+
+28
+00:02:29,560 --> 00:02:30,190
+khóa.
+
+29
+00:02:30,550 --> 00:02:35,830
+Vì vậy, đảm bảo rằng không có lỗi chính tả nào ở đây và nó hoàn toàn giống nhau.
+
+30
+00:02:36,520 --> 00:02:38,740
+Bên trong ngoặc kép ở đây.
+
+31
+00:02:38,740 --> 00:02:44,290
+Tiếp theo, chúng ta phải xác định một cặp giá trị khóa mà chúng ta phải xác định giá trị.
+
+32
+00:02:45,070 --> 00:02:48,490
+Những gì chúng tôi đã xác định ở đây, đó là tên phần.
+
+33
+00:02:48,490 --> 00:02:51,700
+Và bên trong đó, chúng ta có cặp giá trị chính.
+
+34
+00:02:52,090 --> 00:02:54,640
+Chúng ta có thể gọi đó là bất cứ thứ gì chúng ta muốn.
+
+35
+00:02:54,670 --> 00:02:57,310
+Tôi sẽ đặt tên cho kết nối mặc định đó.
+
+36
+00:02:57,310 --> 00:03:03,130
+Và sau đó chúng ta phải xác định chuỗi kết nối trong dấu ngoặc kép ngay tại đây.
+
+37
+00:03:04,060 --> 00:03:07,720
+Điều đầu tiên mà chúng ta phải xác định là máy chủ là gì?
+
+38
+00:03:08,080 --> 00:03:12,550
+Nếu tôi quay lại SQL Server, tôi đang sử dụng tệp . đây.
+
+39
+00:03:12,640 --> 00:03:19,090
+Nếu đó là thứ khác, hãy nhớ sao chép nó và tôi sẽ dán nó ngay tại đây.
+
+40
+00:03:19,540 --> 00:03:22,300
+Tôi có một . để nó hoạt động.
+
+41
+00:03:22,570 --> 00:03:29,200
+Chúng ta sẽ thêm một dấu chấm phẩy và thuộc tính tiếp theo, chúng ta phải xác định tên cơ sở dữ liệu sẽ là gì.
+
+42
+00:03:29,740 --> 00:03:32,290
+Tôi sẽ gọi đó là cồng kềnh.
+
+43
+00:03:32,800 --> 00:03:36,040
+Hãy để tôi thêm nó và dấu chấm phẩy.
+
+44
+00:03:36,640 --> 00:03:38,470
+Hãy để tôi giấu điều này ở đây.
+
+45
+00:03:38,470 --> 00:03:41,920
+Và sau đó, tôi muốn xác định hai thuộc tính.
+
+46
+00:03:42,040 --> 00:03:44,140
+Người đầu tiên được tin cậy.
+
+47
+00:03:44,140 --> 00:03:50,440
+Kết nối gạch dưới bằng đúng và chứng chỉ máy chủ tin cậy là đúng.
+
+48
+00:03:50,830 --> 00:03:58,180
+Nếu bạn không định nghĩa chúng, đôi khi khi bạn đã cài đặt SQL Server, nó yêu cầu chứng chỉ tin cậy.
+
+49
+00:03:58,330 --> 00:04:02,230
+Nếu bạn không đặt thì kết nối sẽ không hoạt động.
+
+50
+00:04:02,980 --> 00:04:04,190
+Rất hoàn hảo.
+
+51
+00:04:04,340 --> 00:04:11,120
+Hai thuộc tính này bạn phải xác định nguyên trạng và đảm bảo không có lỗi chính tả trong kết nối đáng tin cậy
+
+52
+00:04:11,120 --> 00:04:17,660
+có dấu gạch dưới, nhưng khi chúng tôi viết chứng chỉ máy chủ tin cậy thì không có dấu gạch dưới hoặc khoảng
+
+53
+00:04:17,660 --> 00:04:18,769
+trắng.
+
+54
+00:04:19,420 --> 00:04:23,470
+Vì vậy, với điều đó, chúng tôi đã xác định một chuỗi kết nối trong dự án của mình.
+
+55
+00:04:23,800 --> 00:04:30,580
+Trong cài đặt ứng dụng, chúng tôi đã thêm một khối có tên Chuỗi kết nối và tôi đã bảo bạn sử dụng tên
+
+56
+00:04:30,580 --> 00:04:31,780
+chính xác đó.
+
+57
+00:04:31,780 --> 00:04:38,050
+Lý do tôi sẽ giải thích điều đó trong các video sắp tới khi chúng ta thấy mọi thứ kết hợp với nhau.
+
+58
+00:04:38,320 --> 00:04:40,720
+Nhưng trong mối liên hệ đó, Strings Block.
+
+59
+00:04:40,750 --> 00:04:44,770
+Ở đây chúng tôi có một khóa có tên là Kết nối mặc định.
+
+60
+00:04:44,770 --> 00:04:50,170
+Và ở đó, chúng tôi đã xác định chuỗi kết nối cho Máy chủ SQL cục bộ của mình.
+
+61
+00:04:50,590 --> 00:04:56,710
+Quá hoàn hảo, chúng tôi đã xác định chuỗi kết nối của mình trong Cài đặt ứng dụng. tập tin json.
+
+62
+00:04:57,040 --> 00:05:03,550
+Bây giờ chúng ta sẽ sử dụng chuỗi kết nối để kết nối với cơ sở dữ liệu và thực sự tạo một bảng như thế nào?
+
+63
+00:05:03,880 --> 00:05:07,660
+Hãy để tôi tiếp tục cho điều đó trong video tiếp theo.
+

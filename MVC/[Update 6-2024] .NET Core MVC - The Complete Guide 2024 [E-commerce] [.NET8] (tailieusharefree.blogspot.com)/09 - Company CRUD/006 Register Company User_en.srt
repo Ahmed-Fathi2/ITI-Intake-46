@@ -1,0 +1,104 @@
+1
+00:00:02,220 --> 00:00:04,800
+Instructor: Final thing that is remaining here is
+
+2
+00:00:04,800 --> 00:00:08,220
+if we have company and we select a company here,
+
+3
+00:00:08,220 --> 00:00:10,830
+we need to populate the company ID
+
+4
+00:00:10,830 --> 00:00:13,380
+when we register the user
+
+5
+00:00:13,380 --> 00:00:17,010
+and this company ID should only be populated
+
+6
+00:00:17,010 --> 00:00:18,963
+if the role is company.
+
+7
+00:00:20,400 --> 00:00:25,020
+So let me switch back and we will go to the page model
+
+8
+00:00:25,020 --> 00:00:27,630
+where we have the on post.
+
+9
+00:00:27,630 --> 00:00:31,440
+Before we create the user, we have to check here
+
+10
+00:00:31,440 --> 00:00:36,440
+if Input.role is equal equal to SD.role_company,
+
+11
+00:00:41,340 --> 00:00:45,840
+in that case, we want to assign user.CompanyId
+
+12
+00:00:45,840 --> 00:00:48,393
+is equal to Input.CompanyId.
+
+13
+00:00:50,623 --> 00:00:54,967
+With that configured, let me restart and see if that works.
+
+14
+00:00:55,860 --> 00:00:58,440
+I will also open SQL server
+
+15
+00:00:58,440 --> 00:01:01,653
+to test the user that has been created.
+
+16
+00:01:04,410 --> 00:01:08,100
+We will select company and let me give that
+
+17
+00:01:08,100 --> 00:01:10,893
+Vivid Books, register.
+
+18
+00:01:13,830 --> 00:01:15,300
+Perfect, that is done.
+
+19
+00:01:15,300 --> 00:01:18,330
+Let me switch back to our database,
+
+20
+00:01:18,330 --> 00:01:23,330
+bulky and let me examine the ASPNET user's table.
+
+21
+00:01:25,290 --> 00:01:27,540
+Where is the new user?
+
+22
+00:01:27,540 --> 00:01:32,540
+Right here. We go to the right and perfect.
+
+23
+00:01:32,922 --> 00:01:35,670
+We have the company ID that has been assigned
+
+24
+00:01:35,670 --> 00:01:37,203
+and that looks great.
+
+25
+00:01:38,640 --> 00:01:42,480
+With that, we are able to register company users
+
+26
+00:01:42,480 --> 00:01:44,073
+in our application.
+

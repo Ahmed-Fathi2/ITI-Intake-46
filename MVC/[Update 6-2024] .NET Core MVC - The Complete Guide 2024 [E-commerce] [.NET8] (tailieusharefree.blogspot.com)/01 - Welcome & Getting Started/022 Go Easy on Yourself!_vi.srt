@@ -1,0 +1,88 @@
+1
+00:00:01,550 --> 00:00:06,020
+Bây giờ có một điều nhỏ bé mà tôi muốn nói với bạn ngay bây giờ.
+
+2
+00:00:06,590 --> 00:00:11,750
+Khi chúng ta đi đến bộ điều khiển, chúng ta có một bộ điều khiển và chúng ta có một phương thức hành động.
+
+3
+00:00:11,780 --> 00:00:15,200
+Nó đây rồi, trả về một thứ gọi là dạng xem.
+
+4
+00:00:15,410 --> 00:00:22,070
+Nếu bạn đến đây từ truyền thống. net hoặc một số ngôn ngữ lập trình khác, bạn sẽ bị đập
+
+5
+00:00:22,070 --> 00:00:22,660
+vào đầu.
+
+6
+00:00:22,670 --> 00:00:24,200
+Quan điểm này là gì?
+
+7
+00:00:24,230 --> 00:00:26,210
+Kết quả hành động này là gì?
+
+8
+00:00:26,240 --> 00:00:28,190
+Tại sao lại là kiểu trả về này?
+
+9
+00:00:28,400 --> 00:00:35,660
+Thông thường, chúng ta có kiểu trả về, chẳng hạn như một đối tượng hoặc có thể là một chuỗi hoặc thứ gì đó giống như một
+
+10
+00:00:35,660 --> 00:00:37,400
+danh sách hoặc một số đếm.
+
+11
+00:00:38,060 --> 00:00:44,630
+Kết quả hành động là một trong các lớp tùy chỉnh hay đúng hơn là giao diện được triển khai trong. Net và về cơ bản triển khai tất cả các loại kết quả có thể có cho một phương thức hành động.
+
+12
+00:00:44,870 --> 00:00:52,790
+Vì vậy, ngay cả khi mọi thứ trông giống như phép thuật ngay bây giờ, thì không phải vậy.
+
+13
+00:00:53,360 --> 00:00:58,820
+Và khi bạn tiến bộ với khóa học, bạn sẽ thấy mọi thứ kết hợp với nhau như thế nào.
+
+14
+00:00:58,820 --> 00:01:04,200
+Vì vậy, ngay bây giờ, đừng và tôi đang nói rằng đừng cố gắng tự đánh vào đầu
+
+15
+00:01:04,530 --> 00:01:12,330
+mình hoặc quá khắt khe với bản thân trong việc cố gắng hiểu từng mảnh nhỏ mà bạn nhìn thấy trên màn hình.
+
+16
+00:01:12,330 --> 00:01:16,410
+Đến cuối khóa học này, tôi sẽ bao quát tất cả chúng để đảm bảo rằng không còn viên đá nào bị lật.
+
+17
+00:01:16,830 --> 00:01:24,030
+Nhưng khi tôi nói điều đó, hãy cứ cho rằng đây là cú pháp ngay bây giờ.
+
+18
+00:01:24,270 --> 00:01:28,230
+Bây giờ chỉ cần giả sử rằng, bởi vì tôi biết
+
+19
+00:01:28,260 --> 00:01:35,550
+khi tôi bắt đầu khóa học, bạn sẽ hiểu tất cả những nền tảng cơ bản.
+
+20
+00:01:35,550 --> 00:01:37,320
+Không có gì là kỳ diệu.
+
+21
+00:01:37,440 --> 00:01:39,300
+Mọi thứ đều là lập trình và bạn sẽ học được tất cả những điều đó khi kết thúc khóa học này.
+
+22
+00:01:39,330 --> 00:01:45,270
+Vì vậy, ngay bây giờ, đừng quá khắt khe với bản thân và hãy để tôi tiếp tục từ video tiếp theo.
+

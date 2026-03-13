@@ -1,0 +1,60 @@
+1
+00:00:01,960 --> 00:00:09,760
+Bây giờ trong dự án của chúng ta, hãy để tôi thêm quyền vào tất cả các vị trí chính xác như trong bộ điều khiển quản trị.
+
+2
+00:00:10,120 --> 00:00:14,530
+Tôi sẽ mang lại từ khóa ủy quyền ở đó trong danh mục.
+
+3
+00:00:15,190 --> 00:00:23,650
+Chúng tôi có đơn đặt hàng của công ty được ủy quyền và vai trò quản trị viên cho bộ điều khiển sản phẩm.
+
+4
+00:00:24,440 --> 00:00:25,340
+Trên hết.
+
+5
+00:00:25,340 --> 00:00:32,479
+Nếu bạn còn nhớ trong bố cục được gạch chân của trang Chính, chúng tôi có vai trò quản trị viên.
+
+6
+00:00:32,750 --> 00:00:41,180
+Vì vậy, chỉ khi người dùng là quản trị viên thì họ mới có thể thực hiện thao tác CRUD trên phần quản lý nội dung
+
+7
+00:00:41,300 --> 00:00:42,620
+ngay tại đây.
+
+8
+00:00:43,260 --> 00:00:45,720
+Vì vậy, chúng tôi cũng sẽ mang nó trở lại.
+
+9
+00:00:46,470 --> 00:00:47,130
+Với.
+
+10
+00:00:47,130 --> 00:00:54,450
+Nếu tôi chạy ứng dụng khi ứng dụng khởi động, họ sẽ không thấy gì với quản lý nội dung.
+
+11
+00:00:56,420 --> 00:00:57,400
+Rất hoàn hảo.
+
+12
+00:00:57,410 --> 00:01:01,760
+Họ thấy quản lý đơn hàng, họ có nhà và họ có thể thấy giỏ hàng.
+
+13
+00:01:02,120 --> 00:01:10,850
+Nếu người dùng quản trị viên đăng nhập tại đây, thì họ sẽ có thể xem quản lý nội dung và hoạt động như mong đợi.
+
+14
+00:01:11,530 --> 00:01:15,850
+Vì vậy, điều đó có vẻ tốt cho việc ủy quyền trên trang web của chúng tôi.
+
+15
+00:01:16,330 --> 00:01:19,180
+Hãy để tôi tiếp tục từ video tiếp theo.
+

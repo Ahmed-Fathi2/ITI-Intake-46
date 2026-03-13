@@ -1,0 +1,508 @@
+1
+00:00:02,430 --> 00:00:04,920
+Instructor: Now we need to display a button
+
+2
+00:00:04,920 --> 00:00:06,660
+in the data table here
+
+3
+00:00:06,660 --> 00:00:09,483
+based on if a user is locked or unlocked.
+
+4
+00:00:10,350 --> 00:00:14,490
+So we have to do some calculations right here.
+
+5
+00:00:14,490 --> 00:00:18,450
+And when we are working with the data along with the ID,
+
+6
+00:00:18,450 --> 00:00:22,020
+we also need the value of the lockout end.
+
+7
+00:00:22,020 --> 00:00:25,920
+Because based on that we can tell whether a user is locked
+
+8
+00:00:25,920 --> 00:00:26,883
+or unlocked.
+
+9
+00:00:27,900 --> 00:00:31,800
+So in data, if we want to retrieve more than one values
+
+10
+00:00:31,800 --> 00:00:33,870
+we can do that by separating them.
+
+11
+00:00:33,870 --> 00:00:36,990
+So ID will be inside ID.
+
+12
+00:00:36,990 --> 00:00:39,980
+We want another variable which is lockoutEnd,
+
+13
+00:00:41,610 --> 00:00:44,210
+and that will be from lockoutEnd.
+
+14
+00:00:45,180 --> 00:00:48,873
+So perfect, I believe that looks good here.
+
+15
+00:00:52,170 --> 00:00:53,430
+Great.
+
+16
+00:00:53,430 --> 00:00:57,243
+So data is now an object and it has two values.
+
+17
+00:00:58,290 --> 00:01:00,540
+When we are in the render function here,
+
+18
+00:01:00,540 --> 00:01:02,313
+we want to get today's date.
+
+19
+00:01:03,450 --> 00:01:06,060
+To do that we will say variable today
+
+20
+00:01:06,060 --> 00:01:08,553
+is equal to new Date.getTime.
+
+21
+00:01:09,990 --> 00:01:12,360
+Then the lockout end date that we have,
+
+22
+00:01:12,360 --> 00:01:15,210
+we will have to convert that in getTime.
+
+23
+00:01:15,210 --> 00:01:18,990
+That will basically convert that to an integer value.
+
+24
+00:01:18,990 --> 00:01:23,460
+And based on those two integer values, we can compare.
+
+25
+00:01:23,460 --> 00:01:28,140
+So we can say if lockout is greater than today,
+
+26
+00:01:28,140 --> 00:01:31,080
+that means that user is currently locked out
+
+27
+00:01:31,080 --> 00:01:33,780
+and we need to display them a button
+
+28
+00:01:33,780 --> 00:01:35,343
+to unlock their account.
+
+29
+00:01:36,180 --> 00:01:40,140
+So let me copy the return statement for HTML here,
+
+30
+00:01:40,140 --> 00:01:44,850
+paste it right here, and we have to make this more dynamic
+
+31
+00:01:44,850 --> 00:01:47,420
+and change few things inside there.
+
+32
+00:01:47,420 --> 00:01:52,050
+First thing, rather than div here, let me make another div,
+
+33
+00:01:52,050 --> 00:01:55,300
+give it a class of text-center.
+
+34
+00:01:55,300 --> 00:01:58,140
+Inside there I will add an anchor tag
+
+35
+00:01:58,140 --> 00:02:00,690
+to unlock any of the account.
+
+36
+00:02:00,690 --> 00:02:05,280
+I have added a bootstrap icon here and that looks good.
+
+37
+00:02:05,280 --> 00:02:08,039
+Next, let me add one more anchor tag here,
+
+38
+00:02:08,039 --> 00:02:12,680
+which we will use in the later videos to update permission.
+
+39
+00:02:12,680 --> 00:02:15,930
+So that looks good for locked.
+
+40
+00:02:15,930 --> 00:02:20,930
+Let me copy this and paste it again in the else part here.
+
+41
+00:02:20,940 --> 00:02:24,810
+And that will be, if a user is unlocked
+
+42
+00:02:24,810 --> 00:02:27,870
+then we want to a display to lock them.
+
+43
+00:02:27,870 --> 00:02:31,623
+Lock button, we can display them in danger like that.
+
+44
+00:02:33,060 --> 00:02:37,980
+Let me rebuild and apply the changes and see if that works.
+
+45
+00:02:37,980 --> 00:02:40,890
+By default, everything should be unlocked
+
+46
+00:02:40,890 --> 00:02:43,053
+so we should see the lock button.
+
+47
+00:02:45,000 --> 00:02:48,090
+If we go to manage user, perfect,
+
+48
+00:02:48,090 --> 00:02:52,440
+everything is unlocked and we see the lock button.
+
+49
+00:02:52,440 --> 00:02:54,900
+But I think it should be other way around.
+
+50
+00:02:54,900 --> 00:02:56,790
+If a user is unlocked,
+
+51
+00:02:56,790 --> 00:02:59,643
+we should see the current status of unlocked here.
+
+52
+00:03:00,480 --> 00:03:02,490
+So let me cut this from here,
+
+53
+00:03:02,490 --> 00:03:06,630
+paste it here, and flip that other way around.
+
+54
+00:03:06,630 --> 00:03:08,610
+Save that, and perfect.
+
+55
+00:03:08,610 --> 00:03:10,830
+Right now user is unlocked.
+
+56
+00:03:10,830 --> 00:03:15,330
+You can click here to lock the user and that looks good.
+
+57
+00:03:15,330 --> 00:03:17,460
+Then for the permission here
+
+58
+00:03:17,460 --> 00:03:20,253
+let me make that 150 pixels.
+
+59
+00:03:21,990 --> 00:03:23,943
+And perfect, that looks good.
+
+60
+00:03:25,200 --> 00:03:28,510
+So now that we have unlock here, we want to work on
+
+61
+00:03:28,510 --> 00:03:32,463
+when we hit the button here, it should lock the user.
+
+62
+00:03:33,720 --> 00:03:37,560
+For that we have to call the same endpoint in both of them.
+
+63
+00:03:37,560 --> 00:03:39,840
+We will add an onclick here.
+
+64
+00:03:39,840 --> 00:03:42,183
+And let me call that method as LockUnlock.
+
+65
+00:03:43,340 --> 00:03:45,570
+There we have to pass the ID.
+
+66
+00:03:45,570 --> 00:03:46,893
+That will be a string.
+
+67
+00:03:47,820 --> 00:03:50,340
+I will pass that in a single quote,
+
+68
+00:03:50,340 --> 00:03:52,950
+and that will be data.id,
+
+69
+00:03:52,950 --> 00:03:56,403
+because now in data we have two properties.
+
+70
+00:03:57,420 --> 00:04:00,600
+Let me create this function at the end here.
+
+71
+00:04:00,600 --> 00:04:04,050
+But before that, let me copy this onclick,
+
+72
+00:04:04,050 --> 00:04:06,633
+paste it for the other one as well.
+
+73
+00:04:07,950 --> 00:04:09,900
+Then we will scroll down.
+
+74
+00:04:09,900 --> 00:04:13,173
+Right here I will create that function of LockUnlock.
+
+75
+00:04:14,460 --> 00:04:17,940
+And inside there we will have an Ajax request
+
+76
+00:04:17,940 --> 00:04:21,990
+where we have to POST an admin user controller.
+
+77
+00:04:21,990 --> 00:04:25,920
+We have LockUnlock, that looks good.
+
+78
+00:04:25,920 --> 00:04:29,070
+Along with that, our data is inside ID,
+
+79
+00:04:29,070 --> 00:04:31,170
+but we have to stringify that.
+
+80
+00:04:31,170 --> 00:04:34,321
+So we will say json.stringify.
+
+81
+00:04:34,321 --> 00:04:38,103
+And the contentType is application.json.
+
+82
+00:04:39,540 --> 00:04:43,950
+Now, when it is successful, we want to add a function.
+
+83
+00:04:43,950 --> 00:04:46,860
+And we will get the data back in JSON.
+
+84
+00:04:46,860 --> 00:04:51,330
+We want to display this message in a toastr notification
+
+85
+00:04:51,330 --> 00:04:53,433
+and reload the data table.
+
+86
+00:04:54,300 --> 00:04:57,780
+On data, if we notice it is passing success,
+
+87
+00:04:57,780 --> 00:05:01,440
+so we can say if data.success is true
+
+88
+00:05:01,440 --> 00:05:04,500
+we want to display toastr notification
+
+89
+00:05:04,500 --> 00:05:07,890
+and we want to reload the data table.
+
+90
+00:05:07,890 --> 00:05:11,733
+With that configured let me restart the application.
+
+91
+00:05:13,650 --> 00:05:17,283
+Let me go back and add a debugging point right here.
+
+92
+00:05:19,200 --> 00:05:21,810
+And let me see if that works.
+
+93
+00:05:21,810 --> 00:05:25,350
+We press unlock here, it hits the break point.
+
+94
+00:05:25,350 --> 00:05:29,370
+We hit continue and nothing happens.
+
+95
+00:05:29,370 --> 00:05:33,330
+Well, if you refresh the page here, you can see the user
+
+96
+00:05:33,330 --> 00:05:34,773
+is locked indeed.
+
+97
+00:05:35,760 --> 00:05:40,020
+So basically data table is not getting refreshed here.
+
+98
+00:05:40,020 --> 00:05:44,100
+Let me see if we have that in a variable, data table.
+
+99
+00:05:44,100 --> 00:05:47,760
+We indeed have that, but for some reason,
+
+100
+00:05:47,760 --> 00:05:51,960
+let me press unlock here, open the console window.
+
+101
+00:05:51,960 --> 00:05:54,243
+Whoops, toastr is not defined.
+
+102
+00:05:55,560 --> 00:05:59,220
+I thought I added that in the main layout
+
+103
+00:05:59,220 --> 00:06:01,320
+but let me examine that.
+
+104
+00:06:01,320 --> 00:06:03,390
+Notification.
+
+105
+00:06:03,390 --> 00:06:07,660
+I can copy both of this in the main layout
+
+106
+00:06:09,930 --> 00:06:12,033
+and let me see if that works.
+
+107
+00:06:14,851 --> 00:06:15,960
+Perfect.
+
+108
+00:06:15,960 --> 00:06:19,950
+With that, everything is working as expected.
+
+109
+00:06:19,950 --> 00:06:23,190
+But we are displaying delete successful.
+
+110
+00:06:23,190 --> 00:06:25,710
+Something is not right.
+
+111
+00:06:25,710 --> 00:06:28,110
+This will not be delete successful.
+
+112
+00:06:28,110 --> 00:06:30,363
+Let me say operation successful.
+
+113
+00:06:31,800 --> 00:06:34,020
+We unlock here, that worked.
+
+114
+00:06:34,020 --> 00:06:36,910
+We lock the account, we unlock that.
+
+115
+00:06:36,910 --> 00:06:38,520
+Perfect.
+
+116
+00:06:38,520 --> 00:06:41,250
+Let me see if the lock actually works.
+
+117
+00:06:41,250 --> 00:06:43,863
+We locked customer at Gmail here.
+
+118
+00:06:44,880 --> 00:06:47,700
+Let me examine here.
+
+119
+00:06:47,700 --> 00:06:49,329
+Where is customer at Gmail?
+
+120
+00:06:49,329 --> 00:06:51,003
+Right here.
+
+121
+00:06:52,710 --> 00:06:56,790
+Perfect, you can see the lockout end date is 3023,
+
+122
+00:06:56,790 --> 00:06:59,700
+so 1000 years from now.
+
+123
+00:06:59,700 --> 00:07:04,530
+If I log out here and try to log in with customer,
+
+124
+00:07:04,530 --> 00:07:06,780
+I should see the error message,
+
+125
+00:07:06,780 --> 00:07:08,943
+locked out, please try again.
+
+126
+00:07:10,380 --> 00:07:11,213
+So great, our functionalities of lock and unlock
+
+127
+00:07:11,213 --> 00:07:16,143
+are working as expected.
+

@@ -1,0 +1,436 @@
+1
+00:00:02,009 --> 00:00:10,140
+Điều cuối cùng mà tôi có thể nghĩ đến ngay bây giờ là đang chờ xử lý là nếu một đơn đặt hàng được vận chuyển bởi một công ty, thì họ cần thực
+
+2
+00:00:10,140 --> 00:00:13,890
+hiện thanh toán, đó là một khoản thanh toán bị trì hoãn.
+
+3
+00:00:14,760 --> 00:00:17,010
+Vì vậy, hãy để tôi làm việc trên đó.
+
+4
+00:00:17,670 --> 00:00:22,320
+Vì vậy, hãy để tôi quay lại mã và nơi chúng tôi có nút đó.
+
+5
+00:00:22,320 --> 00:00:26,610
+Chúng tôi sẽ xử lý việc đó trực tiếp khi gửi biểu mẫu tương tự.
+
+6
+00:00:27,190 --> 00:00:29,830
+Vì vậy, chúng tôi có loại nút bằng để gửi.
+
+7
+00:00:29,860 --> 00:00:34,450
+Chúng ta có thể tạo một phương thức post action với tên của detail.
+
+8
+00:00:37,040 --> 00:00:38,560
+Hãy để tôi làm điều đó.
+
+9
+00:00:38,570 --> 00:00:39,590
+Phải.
+
+10
+00:00:39,620 --> 00:00:42,800
+Vâng, tôi có thể thêm nó vào bất cứ đâu.
+
+11
+00:00:42,950 --> 00:00:45,780
+Hãy để tôi làm điều đó trước khi gọi API.
+
+12
+00:00:45,800 --> 00:00:49,760
+Tôi sẽ tạo một phương thức hành động với tên của chi tiết.
+
+13
+00:00:49,760 --> 00:00:52,550
+Trả tiền ngay, nhưng tên hành động.
+
+14
+00:00:52,550 --> 00:00:55,790
+Tôi đã xác định rõ ràng đó là chi tiết.
+
+15
+00:00:56,850 --> 00:01:04,800
+Vì vậy, nếu tôi lưu nó và nếu tôi thêm một điểm ngắt, tôi sẽ phải quay lại chế độ xem.
+
+16
+00:01:05,370 --> 00:01:10,620
+Hãy để tôi sao chép nó và dán nó ở đây và để tôi thử điều đó.
+
+17
+00:01:12,920 --> 00:01:18,680
+Nếu tôi đến quản lý đơn đặt hàng, nơi chúng tôi có công ty thanh toán ngay bây giờ.
+
+18
+00:01:18,710 --> 00:01:19,550
+Hoàn hảo.
+
+19
+00:01:19,580 --> 00:01:23,750
+Bạn có thể thấy nó đang đạt đến điểm cuối và điều đó có vẻ tốt.
+
+20
+00:01:24,690 --> 00:01:25,440
+Ngay chỗ này.
+
+21
+00:01:25,440 --> 00:01:32,550
+Những gì chúng tôi muốn làm là dựa trên ID tiêu đề đơn hàng, tôi muốn truy xuất và điền lại tiêu đề đơn
+
+22
+00:01:32,550 --> 00:01:34,680
+hàng và chi tiết đơn hàng.
+
+23
+00:01:35,330 --> 00:01:39,680
+Bởi vì khi chúng tôi đang đăng, chúng tôi có thể mất một số thông tin.
+
+24
+00:01:39,800 --> 00:01:46,940
+Vì vậy, dựa trên ID, hãy để tôi truy xuất lại tiêu đề đơn hàng và chi tiết đơn hàng.
+
+25
+00:01:47,760 --> 00:01:50,610
+Sau đó, chúng tôi muốn làm việc với Stripe.
+
+26
+00:01:50,610 --> 00:01:56,590
+Vì vậy, hãy để tôi mở bộ điều khiển nơi chúng tôi có Stripe bên trong bộ điều khiển thẻ.
+
+27
+00:01:56,610 --> 00:01:58,500
+Cuộn xuống.
+
+28
+00:01:59,900 --> 00:02:05,480
+Và hãy để tôi sao chép mọi thứ ngay tại đây với logic của Stripe.
+
+29
+00:02:07,230 --> 00:02:11,460
+Sao chép nó và chúng tôi sẽ dán nó ngay tại đây.
+
+30
+00:02:11,970 --> 00:02:19,620
+Lần này, khi mọi thứ đã thành công, hãy để tôi tạo một trang mới để xác nhận thanh toán và chúng tôi sẽ
+
+31
+00:02:19,620 --> 00:02:21,570
+thêm ID tiêu đề đơn hàng.
+
+32
+00:02:22,320 --> 00:02:27,990
+Vì vậy, ở đây, hãy để tôi nói id tiêu đề đơn hàng bằng với đơn hàng.
+
+33
+00:02:27,990 --> 00:02:31,590
+Xem tiêu đề thứ tự chấm mô hình. nhận dạng.
+
+34
+00:02:33,000 --> 00:02:34,890
+Hãy để tôi sửa trường hợp ở đó.
+
+35
+00:02:34,890 --> 00:02:36,570
+Và điều đó có vẻ tốt.
+
+36
+00:02:36,930 --> 00:02:41,280
+Nhưng nếu họ hủy, chúng tôi muốn chuyển hướng đến cùng một trang.
+
+37
+00:02:41,280 --> 00:02:48,810
+Vì vậy, đó sẽ là quản trị viên và xác nhận thanh toán này sẽ có trong quản trị viên và đặt hàng.
+
+38
+00:02:49,580 --> 00:02:54,410
+Vì vậy, hủy sẽ được quản trị chi tiết đặt hàng.
+
+39
+00:02:54,710 --> 00:02:59,190
+Chúng tôi cần ID đặt hàng lại ở bên trong.
+
+40
+00:02:59,210 --> 00:02:59,830
+Rất tiếc.
+
+41
+00:02:59,840 --> 00:03:01,010
+Để tôi thêm đô la.
+
+42
+00:03:01,010 --> 00:03:07,790
+Ký tên và đặt hàng xem mô hình chấm đặt hàng tiêu đề. nhận dạng.
+
+43
+00:03:08,970 --> 00:03:10,560
+Vì vậy, mà có vẻ tốt.
+
+44
+00:03:10,590 --> 00:03:17,880
+Bây giờ đối với các chi tiết đơn hàng, chúng tôi cần giỏ hàng và đó là bên trong mô hình xem đơn đặt hàng.
+
+45
+00:03:17,910 --> 00:03:20,430
+Bây giờ chúng tôi có các chi tiết đặt hàng.
+
+46
+00:03:21,480 --> 00:03:26,720
+Dựa vào đó, chúng tôi sẽ nhận được giá và tiêu đề sản phẩm cũng như số lượng.
+
+47
+00:03:26,750 --> 00:03:28,400
+Chúng tôi sẽ thêm điều đó.
+
+48
+00:03:28,430 --> 00:03:29,750
+Trông tôt đây.
+
+49
+00:03:30,530 --> 00:03:32,930
+Chúng tôi cuộn xuống, tạo phiên.
+
+50
+00:03:33,140 --> 00:03:34,550
+Trông tôt đây.
+
+51
+00:03:34,580 --> 00:03:37,010
+Tiếp theo, chúng ta phải cập nhật ID.
+
+52
+00:03:37,160 --> 00:03:39,840
+Một khi mọi thứ thành công.
+
+53
+00:03:39,860 --> 00:03:48,680
+Vì vậy, đặt hàng xem mô hình chấm đặt hàng tiêu đề. id và chúng tôi sẽ chuyển ID phiên và id mục đích thanh toán.
+
+54
+00:03:50,230 --> 00:03:51,160
+Hoàn hảo.
+
+55
+00:03:51,250 --> 00:03:53,920
+Tôi tin rằng mọi thứ khác có vẻ tốt.
+
+56
+00:03:54,040 --> 00:03:56,500
+Chúng tôi không cần chuyển hướng đó.
+
+57
+00:03:56,950 --> 00:04:00,850
+Và hãy để tôi xây dựng lại và áp dụng các thay đổi.
+
+58
+00:04:01,730 --> 00:04:07,370
+Trước khi tôi kiểm tra điều đó, hãy để tôi tạo xác nhận thanh toán này thật nhanh.
+
+59
+00:04:08,000 --> 00:04:13,490
+Điều đó sẽ tương tự như xác nhận đơn đặt hàng để tôi có thể sao chép điều này.
+
+60
+00:04:14,480 --> 00:04:19,970
+Chuyển đến bộ điều khiển đặt hàng và dán nó ngay tại đây.
+
+61
+00:04:20,870 --> 00:04:28,790
+Thay vì id, tôi đã viết rằng chúng tôi sẽ trả lại id tiêu đề đơn hàng, hãy để tôi sửa đổi điều đó.
+
+62
+00:04:28,910 --> 00:04:32,330
+Chúng tôi sẽ lấy tiêu đề đơn hàng dựa trên đó.
+
+63
+00:04:32,960 --> 00:04:36,590
+Chà, nếu bạn muốn, bạn có thể bao gồm người dùng ứng dụng.
+
+64
+00:04:36,830 --> 00:04:38,990
+Tôi không nghĩ rằng chúng ta sẽ sử dụng nó.
+
+65
+00:04:39,760 --> 00:04:47,440
+Sau đó, nếu trạng thái thanh toán bằng nhau, bằng với thanh toán bị trì hoãn, chúng tôi muốn đảm bảo rằng khoản thanh toán đã
+
+66
+00:04:47,440 --> 00:04:49,060
+thực sự được thực hiện.
+
+67
+00:04:49,540 --> 00:04:57,220
+Vì vậy, trong trường hợp này, đây là đơn đặt hàng của một công ty và sau đó chúng tôi sẽ nhận được ID phiên của phiên.
+
+68
+00:04:57,670 --> 00:05:00,820
+Chúng tôi sẽ kiểm tra xem trạng thái thanh toán đã được thanh toán hay chưa.
+
+69
+00:05:00,940 --> 00:05:08,230
+Trong trường hợp đó, chúng tôi muốn cập nhật ID mục đích thanh toán và chúng tôi muốn cập nhật trạng thái.
+
+70
+00:05:08,910 --> 00:05:10,170
+Vì vậy, trạng thái.
+
+71
+00:05:10,200 --> 00:05:14,700
+Chúng tôi sẽ thêm ID ở đó và điều đó có vẻ tốt.
+
+72
+00:05:15,000 --> 00:05:20,170
+Nhưng có một điều mà chúng tôi phải sửa đổi đó là chúng tôi không muốn thay đổi trạng thái đơn hàng.
+
+73
+00:05:20,190 --> 00:05:27,270
+Trạng thái duy nhất chúng tôi muốn thay đổi là trạng thái thanh toán vì đơn hàng có thể đã được giao.
+
+74
+00:05:27,300 --> 00:05:29,830
+Vì vậy, chúng tôi không muốn sửa đổi điều đó.
+
+75
+00:05:29,850 --> 00:05:37,740
+Vì vậy, ở đây chúng tôi sẽ đi đến trạng thái dấu chấm tiêu đề đơn hàng và chúng tôi sẽ sử dụng cùng một cái.
+
+76
+00:05:38,610 --> 00:05:40,710
+Tôi tin rằng có vẻ tốt.
+
+77
+00:05:40,800 --> 00:05:43,290
+Chúng tôi không lo lắng về giỏ hàng.
+
+78
+00:05:43,320 --> 00:05:50,970
+Lần này, chúng tôi chỉ quay lại chế độ xem và chúng tôi sẽ trả lại ID tiêu đề đơn hàng.
+
+79
+00:05:51,840 --> 00:05:54,300
+Hãy để tôi tạo chế độ xem này ngay bây giờ.
+
+80
+00:05:54,780 --> 00:05:57,300
+Đây sẽ là xác nhận thanh toán.
+
+81
+00:05:57,300 --> 00:05:58,740
+Hãy để tôi sao chép điều đó.
+
+82
+00:05:58,770 --> 00:06:00,990
+Để tránh lỗi chính tả.
+
+83
+00:06:01,260 --> 00:06:06,420
+Nhấp chuột phải vào thêm chế độ xem và chúng tôi sẽ dán chế độ xem đó.
+
+84
+00:06:08,410 --> 00:06:12,880
+Giao diện người dùng sẽ tương tự như những gì chúng tôi có để xác nhận đơn hàng.
+
+85
+00:06:13,060 --> 00:06:16,570
+Hãy để tôi sao chép và dán nó ở đây.
+
+86
+00:06:16,810 --> 00:06:20,260
+Và ở đây chúng tôi sẽ hiển thị thanh toán thành công.
+
+87
+00:06:21,230 --> 00:06:23,420
+Chúng tôi sẽ hiển thị số thứ tự ở đây.
+
+88
+00:06:23,420 --> 00:06:24,830
+Trông tôt đây.
+
+89
+00:06:25,810 --> 00:06:30,760
+Và ngay tại đây chúng ta sẽ hiển thị thanh toán đã được áp dụng thành công.
+
+90
+00:06:30,790 --> 00:06:35,080
+Chúng tôi sẽ thêm một liên kết để quay lại chi tiết đơn đặt hàng.
+
+91
+00:06:36,630 --> 00:06:43,200
+Chúng tôi có ID lộ trình ESB và mọi thứ khác cần thiết cho chi tiết đơn đặt hàng.
+
+92
+00:06:44,310 --> 00:06:47,910
+Hãy để tôi chạy cái này và xem mọi thứ có hoạt động không.
+
+93
+00:06:49,070 --> 00:06:55,550
+Bây giờ, những gì chúng tôi đã làm cho đến nay tương tự như những gì chúng tôi đã học được khi xử lý khoản thanh toán lần đầu tiên.
+
+94
+00:06:55,550 --> 00:06:58,550
+Đó là lý do tại sao tôi đã đi hơi nhanh một chút.
+
+95
+00:06:59,270 --> 00:07:01,940
+Để mình thêm vào đây rồi bấm thanh toán.
+
+96
+00:07:01,940 --> 00:07:05,270
+Bây giờ chúng tôi đạt điểm cuối của chúng tôi ở đây.
+
+97
+00:07:05,390 --> 00:07:07,180
+Tiếp tục từ đó.
+
+98
+00:07:07,190 --> 00:07:11,120
+Nó sẽ chuyển hướng đến Stripe hoạt động.
+
+99
+00:07:11,150 --> 00:07:12,860
+Để tôi thanh toán.
+
+100
+00:07:13,400 --> 00:07:18,530
+Chúng tôi sẽ nhấn nút thanh toán tại đây và hãy xem điều gì sẽ xảy ra.
+
+101
+00:07:19,710 --> 00:07:21,720
+Thanh toán hoàn hảo thành công.
+
+102
+00:07:21,720 --> 00:07:24,240
+Và chúng tôi có thứ tự số tám.
+
+103
+00:07:24,840 --> 00:07:28,950
+Hãy để tôi đi đến cơ sở dữ liệu và xem nếu nó hoạt động.
+
+104
+00:07:30,060 --> 00:07:32,520
+Chúng tôi cần tiêu đề đơn đặt hàng ở đây.
+
+105
+00:07:33,780 --> 00:07:41,400
+Trạng thái thanh toán hoàn hảo đã được phê duyệt và trạng thái đơn đặt hàng vẫn như đã vận chuyển và chúng tôi có ID
+
+106
+00:07:41,400 --> 00:07:43,620
+mục đích thanh toán có vẻ tốt.
+
+107
+00:07:44,490 --> 00:07:48,000
+Vì vậy, với điều đó, chúng tôi hiện đang xử lý khoản thanh toán bị chậm trễ.
+
+108
+00:07:48,030 --> 00:07:56,160
+Nếu chúng ta quay lại kiểu máy cụ thể đó, với cùng một đơn đặt hàng đó, thì bây giờ chúng ta không thấy nút thanh toán ngay.
+
+109
+00:07:56,790 --> 00:08:00,930
+Vì vậy, tất cả các logic và chức năng đang tìm kiếm tốt.
+

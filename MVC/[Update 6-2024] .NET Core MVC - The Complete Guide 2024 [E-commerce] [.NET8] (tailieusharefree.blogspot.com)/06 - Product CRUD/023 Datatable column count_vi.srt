@@ -1,0 +1,68 @@
+1
+00:00:01,420 --> 00:00:06,640
+Khi bạn đang làm việc với các bảng dữ liệu, bạn phải cẩn thận về một điều.
+
+2
+00:00:07,090 --> 00:00:16,030
+Số lượng cột mà chúng tôi có trong sản phẩm JS ở đây không được vượt quá số lượng tiêu đề bảng hoặc
+
+3
+00:00:16,030 --> 00:00:19,060
+chúng tôi có bên trong CSS HTML.
+
+4
+00:00:19,600 --> 00:00:26,620
+Ngay bây giờ, bạn có thể thấy chúng tôi có sáu cột ngay tại đây trong product dot JS, chúng tôi có năm cột.
+
+5
+00:00:26,740 --> 00:00:31,210
+Nếu bạn có ít cột hơn thì tiêu đề h là được.
+
+6
+00:00:31,210 --> 00:00:36,940
+Nhưng nếu tôi thêm nhiều cột hơn ở đây, hãy để tôi sao chép và dán lại cột đó một lần nữa.
+
+7
+00:00:37,730 --> 00:00:42,400
+Và nếu tôi quay lại đây thì nó cũng hoạt động.
+
+8
+00:00:42,440 --> 00:00:45,050
+Nó phổ biến cùng một dữ liệu ở đây.
+
+9
+00:00:45,050 --> 00:00:52,640
+Nhưng nếu tôi sao chép nó một lần nữa, bây giờ chúng ta có bảy cột ngay tại đây và chúng ta có sáu cột trong The
+
+10
+00:00:52,640 --> 00:00:53,300
+View.
+
+11
+00:00:53,570 --> 00:00:58,370
+Nếu tôi lưu nó, bạn có thể thấy nó không hoạt động trong bảng điều khiển.
+
+12
+00:00:58,400 --> 00:01:01,010
+Chúng tôi có một lỗi ngay tại đây.
+
+13
+00:01:01,920 --> 00:01:05,190
+Vì vậy, hãy luôn nhớ rằng các cột phải khớp với nhau.
+
+14
+00:01:05,400 --> 00:01:09,570
+Một cột mà tôi để lại ở đây là dành cho các nút chỉnh sửa và xóa.
+
+15
+00:01:09,570 --> 00:01:14,550
+Vì vậy, về cơ bản, chúng ta chỉ nên có năm cột trong js sản phẩm.
+
+16
+00:01:15,570 --> 00:01:17,550
+Màu đen có thể hoàn nguyên thay đổi ở đây.
+
+17
+00:01:17,550 --> 00:01:24,660
+Nếu bạn muốn thêm một cột nữa ở đây, bạn cũng sẽ phải thêm một phần tử ngay tại đây.
+

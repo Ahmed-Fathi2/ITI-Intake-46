@@ -1,0 +1,252 @@
+1
+00:00:01,780 --> 00:00:05,290
+We want to perform CRUD operations on category.
+
+2
+00:00:05,410 --> 00:00:12,220
+That basically means we want to create a category, get all categories, delete a category and update
+
+3
+00:00:12,220 --> 00:00:13,270
+a category.
+
+4
+00:00:14,230 --> 00:00:21,490
+And for that we will be requiring a controller because right now when we run the application, we only
+
+5
+00:00:21,490 --> 00:00:23,200
+have the home controller.
+
+6
+00:00:23,800 --> 00:00:26,820
+You can see we have the home and privacy here.
+
+7
+00:00:26,830 --> 00:00:32,560
+Similarly, we want a category controller where we can manage all the categories.
+
+8
+00:00:33,600 --> 00:00:41,340
+So let me stop the application here and where we have home controller in the controllers folder, right
+
+9
+00:00:41,340 --> 00:00:49,290
+click Add, we have a controller now you can use the other templates that are there, but we want to
+
+10
+00:00:49,290 --> 00:00:50,310
+start fresh.
+
+11
+00:00:50,310 --> 00:00:56,400
+So I will use MVC, empty controller and we have to give it a name.
+
+12
+00:00:56,700 --> 00:01:00,300
+Let me call that category controller.
+
+13
+00:01:00,720 --> 00:01:07,020
+Now remember when you add a controller, you must have the controller keyword at the end.
+
+14
+00:01:07,470 --> 00:01:13,110
+That is how the code will know that this particular class file is a controller.
+
+15
+00:01:14,230 --> 00:01:17,800
+Let me hit the add button here and perfect.
+
+16
+00:01:17,830 --> 00:01:20,770
+It adds a controller inside there.
+
+17
+00:01:20,770 --> 00:01:24,970
+It has one action method which is index action method.
+
+18
+00:01:25,930 --> 00:01:28,930
+Now how will this endpoint be triggered?
+
+19
+00:01:29,170 --> 00:01:34,210
+Let me add a debugging point here and let me run the application.
+
+20
+00:01:35,420 --> 00:01:36,710
+In the application.
+
+21
+00:01:36,710 --> 00:01:41,270
+If we want to go to category controller, how will we access that?
+
+22
+00:01:42,370 --> 00:01:42,970
+For that.
+
+23
+00:01:42,970 --> 00:01:44,890
+We will write category here.
+
+24
+00:01:44,890 --> 00:01:47,800
+And next, what is the action method?
+
+25
+00:01:48,160 --> 00:01:51,070
+And next, what is the action method?
+
+26
+00:01:52,100 --> 00:01:54,590
+The default action method that got added.
+
+27
+00:01:54,590 --> 00:01:59,420
+It is index, so we can say index here and press enter.
+
+28
+00:01:59,720 --> 00:02:00,680
+Perfect.
+
+29
+00:02:00,710 --> 00:02:07,220
+It hits our debugging point here and if we continue we will see an error message.
+
+30
+00:02:07,400 --> 00:02:11,600
+An unhandled exception occurred while processing the request.
+
+31
+00:02:11,720 --> 00:02:18,890
+The view index was not found because here you see when the action method is called, it returns back
+
+32
+00:02:18,890 --> 00:02:19,610
+a view.
+
+33
+00:02:20,060 --> 00:02:26,810
+Typically when we were working with Homecontroller, we had views in the home folder, but when we are
+
+34
+00:02:26,810 --> 00:02:33,290
+working with category controller, we added that controller, but we have not added any view.
+
+35
+00:02:33,890 --> 00:02:39,140
+If you go back, it also displays which were all the locations that were searched.
+
+36
+00:02:39,440 --> 00:02:45,300
+It will first look for a category folder and try to find index.html.
+
+37
+00:02:45,320 --> 00:02:53,070
+If it does not find that, it will also look into shared folder, which is a shared location for all
+
+38
+00:02:53,070 --> 00:02:54,450
+the partial views.
+
+39
+00:02:55,050 --> 00:03:02,640
+What we have to do is we have to create a folder with the name of category and add the view inside that
+
+40
+00:03:02,640 --> 00:03:03,480
+folder.
+
+41
+00:03:04,050 --> 00:03:05,520
+Let me do that.
+
+42
+00:03:05,790 --> 00:03:08,810
+We will close it here in views.
+
+43
+00:03:08,820 --> 00:03:10,950
+We will create a folder.
+
+44
+00:03:11,340 --> 00:03:14,280
+It must match the name of category.
+
+45
+00:03:14,370 --> 00:03:17,940
+And inside there we will be adding a view.
+
+46
+00:03:18,270 --> 00:03:24,600
+Now when you are working in the view, if you right click and go to the add button, it automatically
+
+47
+00:03:24,600 --> 00:03:29,930
+displays that hey, default thing that users typically add is a view.
+
+48
+00:03:29,940 --> 00:03:32,970
+So that is what it displays at the top there.
+
+49
+00:03:33,000 --> 00:03:37,500
+Let me select that and we will be adding the empty view.
+
+50
+00:03:38,370 --> 00:03:42,120
+Now you can select the razor view here or the empty view.
+
+51
+00:03:42,150 --> 00:03:47,130
+We will go with the empty view name Index.cshtml.
+
+52
+00:03:47,160 --> 00:03:48,550
+That looks good.
+
+53
+00:03:48,570 --> 00:03:53,460
+Let me add that we do not care about anything here.
+
+54
+00:03:53,460 --> 00:04:03,300
+Let me remove that and I will just add an H1 here and I will say category list right here.
+
+55
+00:04:04,640 --> 00:04:07,970
+With that, let me run the application once again.
+
+56
+00:04:09,910 --> 00:04:10,730
+Perfect.
+
+57
+00:04:10,750 --> 00:04:13,890
+Let me navigate to category controller.
+
+58
+00:04:13,900 --> 00:04:16,300
+We have the index action.
+
+59
+00:04:16,750 --> 00:04:20,200
+We will press continue and perfect.
+
+60
+00:04:20,350 --> 00:04:25,930
+It takes us back to the view and it displays the category list that we added.
+
+61
+00:04:26,820 --> 00:04:27,810
+So great.
+
+62
+00:04:27,840 --> 00:04:34,650
+We have added our first controller in the application and we have also added the corresponding view.
+
+63
+00:04:34,650 --> 00:04:40,920
+And on this page we will be displaying all the categories that we have in our database.
+

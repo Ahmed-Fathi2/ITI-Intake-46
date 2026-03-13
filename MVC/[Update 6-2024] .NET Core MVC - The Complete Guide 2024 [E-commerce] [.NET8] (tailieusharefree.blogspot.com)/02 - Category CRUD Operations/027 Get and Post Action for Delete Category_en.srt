@@ -1,0 +1,112 @@
+1
+00:00:01,890 --> 00:00:04,950
+Finally, we will work on deleting a category.
+
+2
+00:00:05,430 --> 00:00:11,940
+When we delete a category, we want to display everything that we do in edit, but everything will be
+
+3
+00:00:11,940 --> 00:00:12,870
+disabled.
+
+4
+00:00:13,480 --> 00:00:19,930
+So let me copy what we have for edit cat and post action method and paste it one more time.
+
+5
+00:00:19,930 --> 00:00:23,530
+Here we will rename that to be delete.
+
+6
+00:00:24,860 --> 00:00:32,630
+Now in the delete post, you can get the complete category object or you can just get the ID that user
+
+7
+00:00:32,630 --> 00:00:33,770
+wants to delete.
+
+8
+00:00:34,690 --> 00:00:41,290
+In that case, we cannot use the same name for the action method because then the parameters are also
+
+9
+00:00:41,290 --> 00:00:43,450
+same for get and post.
+
+10
+00:00:43,780 --> 00:00:51,460
+So we will have to rename this to be delete post and we have to explicitly tell here that name is delete
+
+11
+00:00:51,460 --> 00:00:53,080
+for this endpoint.
+
+12
+00:00:54,510 --> 00:01:00,330
+Because in the form when we are posting it will look for the same delete action method.
+
+13
+00:01:01,200 --> 00:01:08,730
+In order to do that with HTTP post, we can explicitly say that this endpoints action name is delete,
+
+14
+00:01:08,760 --> 00:01:12,510
+even though we have a different name right here.
+
+15
+00:01:13,900 --> 00:01:16,270
+The get action method looks good.
+
+16
+00:01:16,270 --> 00:01:18,670
+We want to retrieve that category.
+
+17
+00:01:18,670 --> 00:01:21,280
+But how do we delete that category?
+
+18
+00:01:22,080 --> 00:01:27,870
+Now when we have to delete, we first have to find that category from database.
+
+19
+00:01:28,260 --> 00:01:38,310
+So we will say category OBJ is equal to underscore db.categories.find based on the ID and then
+
+20
+00:01:38,340 --> 00:01:42,540
+if OBJ is null, we will return not found.
+
+21
+00:01:43,580 --> 00:01:46,610
+If OBJ is not null or an underscore db.
+
+22
+00:01:46,910 --> 00:01:56,270
+We have categories and there we have remove method which expects the category object so we can pass
+
+23
+00:01:56,270 --> 00:02:00,920
+the obj that we retrieved from the database and pass that.
+
+24
+00:02:01,830 --> 00:02:07,590
+Finally, we will have to save the changes and return back to the index action.
+
+25
+00:02:08,259 --> 00:02:09,600
+And perfect.
+
+26
+00:02:09,610 --> 00:02:10,870
+That looks good.
+
+27
+00:02:11,260 --> 00:02:16,390
+With that, we have the get and post action methods for delete.
+
+28
+00:02:17,250 --> 00:02:20,190
+Let me continue from the next video.
+

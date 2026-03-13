@@ -1,0 +1,784 @@
+1
+00:00:01,630 --> 00:00:04,660
+Tôi hy vọng bạn có thể hoàn thành nhiệm vụ.
+
+2
+00:00:05,320 --> 00:00:07,660
+Hãy để tôi chuyển trở lại mã ở đây.
+
+3
+00:00:07,660 --> 00:00:10,690
+Và trước tiên chúng ta phải thêm một mô hình mới.
+
+4
+00:00:11,200 --> 00:00:12,790
+Tôi sẽ làm điều đó.
+
+5
+00:00:13,060 --> 00:00:15,670
+Tên của mô hình sẽ là công ty.
+
+6
+00:00:16,270 --> 00:00:25,330
+Hãy để tôi nói thêm rằng nó sẽ là một lớp công khai và tôi sẽ thêm tất cả các thuộc tính và tên sẽ được yêu cầu.
+
+7
+00:00:25,870 --> 00:00:30,220
+Mọi thứ khác, chúng tôi sẽ làm tùy chọn đó và điều đó có vẻ tốt.
+
+8
+00:00:31,150 --> 00:00:36,530
+Khi chúng tôi định cấu hình mô hình của mình tại đây, chúng tôi phải thêm mô hình đó vào bộ DB của mình.
+
+9
+00:00:36,550 --> 00:00:45,880
+Vì vậy, tôi sẽ mở ngữ cảnh DB ứng dụng ở đây và tôi sẽ tạo một bộ DB nơi chúng tôi sẽ có các công ty.
+
+10
+00:00:46,500 --> 00:00:51,510
+Trong đó tên bảng sẽ là công ty và chúng tôi phải thêm di chuyển.
+
+11
+00:00:52,260 --> 00:01:00,990
+Dự án mặc định, đảm bảo rằng đó là quyền truy cập dữ liệu và chúng tôi sẽ thêm bảng di chuyển thêm công ty.
+
+12
+00:01:05,970 --> 00:01:06,570
+Hoàn hảo.
+
+13
+00:01:06,570 --> 00:01:07,440
+Trông tôt đây.
+
+14
+00:01:07,440 --> 00:01:14,160
+Chúng tôi có quá trình di chuyển ở đây và chúng tôi có thể cập nhật cơ sở dữ liệu để đẩy quá trình di chuyển này.
+
+15
+00:01:17,480 --> 00:01:18,660
+Trông tôt đây.
+
+16
+00:01:18,680 --> 00:01:21,690
+Tiếp theo, chúng ta phải làm việc trên kho lưu trữ.
+
+17
+00:01:21,710 --> 00:01:24,370
+Vì vậy, sao chép kho thể loại.
+
+18
+00:01:24,380 --> 00:01:26,240
+Dán nó một lần nữa.
+
+19
+00:01:26,240 --> 00:01:29,510
+Đổi tên thành kho lưu trữ của công ty.
+
+20
+00:01:29,810 --> 00:01:31,340
+Hãy để tôi làm điều đó.
+
+21
+00:01:35,540 --> 00:01:40,970
+Sẽ sao chép tên, thay đổi tên lớp ở đây và hàm tạo.
+
+22
+00:01:41,510 --> 00:01:49,820
+Giao diện sẽ là một công ty mà chúng tôi sẽ triển khai trong thời gian ngắn và đó sẽ là mô hình công ty.
+
+23
+00:01:50,600 --> 00:01:57,500
+Đây cũng sẽ là cập nhật dấu chấm công ty và gạch dưới công ty.
+
+24
+00:01:57,530 --> 00:01:58,460
+Các đối tượng.
+
+25
+00:01:59,680 --> 00:02:01,850
+Kho lưu trữ tuyệt vời của công ty.
+
+26
+00:02:01,870 --> 00:02:02,800
+Có vẻ tốt.
+
+27
+00:02:02,830 --> 00:02:04,780
+Chúng ta cần giao diện.
+
+28
+00:02:04,810 --> 00:02:08,169
+Hãy để tôi sao chép danh mục và dán nó.
+
+29
+00:02:08,830 --> 00:02:12,490
+Đổi tên nó thành kho lưu trữ của công ty tôi.
+
+30
+00:02:14,140 --> 00:02:19,930
+Sao chép tên giao diện và sửa đổi mọi thứ ở đây thành công ty.
+
+31
+00:02:22,210 --> 00:02:23,620
+Và hoàn hảo.
+
+32
+00:02:23,620 --> 00:02:25,030
+Trông tôt đây.
+
+33
+00:02:25,480 --> 00:02:27,550
+Lỗi biến mất.
+
+34
+00:02:27,730 --> 00:02:33,250
+Cuối cùng, chúng ta phải thêm nó vào đơn vị công việc và đơn vị công việc của chúng ta.
+
+35
+00:02:42,680 --> 00:02:43,400
+Hoàn hảo.
+
+36
+00:02:43,400 --> 00:02:45,680
+Một đơn vị công việc có vẻ tốt.
+
+37
+00:02:45,770 --> 00:02:48,830
+Hãy để tôi cập nhật đơn vị công việc ở đây.
+
+38
+00:02:50,120 --> 00:02:53,390
+Sao chép và dán nó cho công ty.
+
+39
+00:02:55,450 --> 00:02:58,870
+Và nó sẽ là một kho lưu trữ của công ty.
+
+40
+00:03:01,690 --> 00:03:03,100
+Chúng tôi sẽ khởi tạo nó.
+
+41
+00:03:03,100 --> 00:03:10,390
+Vì vậy, công ty bằng với kho lưu trữ công ty mới và chuyển DB gạch dưới ở đó.
+
+42
+00:03:11,450 --> 00:03:12,110
+Với.
+
+43
+00:03:12,110 --> 00:03:15,890
+Đơn vị làm việc của chúng tôi đang tìm kiếm tốt với mô hình công ty.
+
+44
+00:03:16,670 --> 00:03:25,310
+Điều cuối cùng mà chúng tôi phải làm là thực hiện tất cả thao tác CRUD và chúng tôi muốn sử dụng bảng dữ liệu để có thể sao chép
+
+45
+00:03:25,310 --> 00:03:31,640
+những gì chúng tôi có cho sản phẩm của mình và chúng tôi có thể dán lại bảng đó một lần nữa.
+
+46
+00:03:32,000 --> 00:03:33,710
+Rất tiếc.
+
+47
+00:03:33,710 --> 00:03:35,420
+Và quản trị viên ở đây.
+
+48
+00:03:35,420 --> 00:03:42,020
+Bộ điều khiển Sao chép và dán bộ điều khiển sản phẩm và tôi sẽ đổi tên nó.
+
+49
+00:03:42,200 --> 00:03:45,980
+Vì vậy, người này sẽ là người kiểm soát công ty.
+
+50
+00:03:49,520 --> 00:03:50,870
+Trông tôt đây.
+
+51
+00:03:50,870 --> 00:03:54,170
+Hãy để tôi sửa đổi mọi thứ trong tập tin này.
+
+52
+00:03:54,590 --> 00:03:56,780
+Tôi sẽ nhấn ctrl shift f.
+
+53
+00:03:56,840 --> 00:04:04,820
+Tôi mở bộ điều khiển của công ty và bên trong đó tìm và thay thế bất cứ nơi nào tôi tìm thấy sản phẩm.
+
+54
+00:04:04,820 --> 00:04:07,370
+Tôi sẽ thay thế điều đó bằng công ty.
+
+55
+00:04:08,390 --> 00:04:09,940
+Hãy để tôi làm điều đó.
+
+56
+00:04:10,740 --> 00:04:15,240
+Không có trong toàn bộ giải pháp bên trong tài liệu hiện tại.
+
+57
+00:04:15,270 --> 00:04:19,350
+Luôn đảm bảo kiểm tra điều này khi bạn thay thế.
+
+58
+00:04:20,430 --> 00:04:22,290
+Hãy để tôi thay thế tất cả.
+
+59
+00:04:22,860 --> 00:04:23,670
+Hoàn hảo.
+
+60
+00:04:23,670 --> 00:04:24,830
+Thế là xong.
+
+61
+00:04:24,840 --> 00:04:29,100
+Hãy để tôi cũng xem nếu có bất kỳ sản phẩm chữ thường.
+
+62
+00:04:29,220 --> 00:04:31,440
+Thay thế điều đó bằng công ty.
+
+63
+00:04:32,100 --> 00:04:33,480
+Thay thế tất cả.
+
+64
+00:04:33,480 --> 00:04:35,370
+Chúng tôi không có bất kỳ.
+
+65
+00:04:35,820 --> 00:04:38,880
+Hãy để tôi xem nếu có bất cứ điều gì bị bỏ lỡ ở đây.
+
+66
+00:04:39,270 --> 00:04:42,210
+Tên điều khiển có vẻ tốt.
+
+67
+00:04:42,750 --> 00:04:50,910
+Nhận tất cả, bao gồm cả danh mục không cần thiết và đơn vị công việc sẽ là công ty ở đây.
+
+68
+00:04:50,910 --> 00:04:52,260
+Trông tôt đây.
+
+69
+00:04:52,290 --> 00:04:59,760
+Chúng tôi không có mô hình xem cho công ty, vì vậy ở đây trực tiếp chúng tôi sẽ trả về một đối tượng công ty.
+
+70
+00:05:00,210 --> 00:05:07,680
+Hãy để tôi xóa mọi thứ ở đây và chúng tôi sẽ trả lại một công ty mới sẽ hoạt động.
+
+71
+00:05:07,680 --> 00:05:12,160
+Nếu nó là một bản cập nhật, thì chúng tôi sẽ nhận được một công ty Ở đây.
+
+72
+00:05:12,160 --> 00:05:14,380
+Hãy để tôi gọi công ty đó là OBJ.
+
+73
+00:05:15,470 --> 00:05:17,690
+Và chúng tôi sẽ trả lại điều đó.
+
+74
+00:05:19,130 --> 00:05:21,200
+Hoàn hảo và phi lý.
+
+75
+00:05:21,230 --> 00:05:26,030
+Chúng tôi sẽ truy xuất một đối tượng công ty và không có gì khác.
+
+76
+00:05:26,540 --> 00:05:27,980
+Công ty đối tượng
+
+77
+00:05:28,280 --> 00:05:30,470
+Chúng tôi không có bất kỳ tập tin.
+
+78
+00:05:30,590 --> 00:05:38,060
+Xóa điều đó và chúng tôi sẽ xóa điều kiện if cho tệp không cần thiết ở đây.
+
+79
+00:05:38,960 --> 00:05:47,150
+Chúng tôi có thể trực tiếp kiểm tra xem ID đối tượng công ty có bằng 0 hay không, sau đó chúng tôi muốn thêm đối tượng công
+
+80
+00:05:47,180 --> 00:05:47,660
+ty đó.
+
+81
+00:05:48,290 --> 00:05:51,920
+Khác, chúng tôi muốn cập nhật obj của công ty.
+
+82
+00:05:52,280 --> 00:05:53,130
+Rất tiếc.
+
+83
+00:05:53,660 --> 00:05:54,800
+Chúng ta đi thôi.
+
+84
+00:05:56,670 --> 00:05:58,590
+Hãy để tôi giấu điều đó ở đây.
+
+85
+00:05:58,590 --> 00:06:05,340
+Và nếu trạng thái mô hình không hợp lệ, chúng tôi quay lại chế độ xem với công ty OBJ.
+
+86
+00:06:07,800 --> 00:06:08,640
+Hoàn hảo.
+
+87
+00:06:08,970 --> 00:06:10,380
+Trông rất tuyệt.
+
+88
+00:06:10,410 --> 00:06:17,550
+Chúng tôi không cần môi trường lưu trữ web iWeb, vì vậy hãy để tôi xóa môi trường đó khỏi nội dung phụ thuộc.
+
+89
+00:06:18,920 --> 00:06:19,730
+Tuyệt vời.
+
+90
+00:06:20,300 --> 00:06:25,070
+Cuối cùng, chúng tôi có các lệnh gọi API cần thiết cho bảng dữ liệu.
+
+91
+00:06:25,190 --> 00:06:28,040
+Chúng tôi không muốn các thuộc tính bao gồm.
+
+92
+00:06:28,460 --> 00:06:32,030
+Điều đó có vẻ tốt khi chúng ta phải xóa.
+
+93
+00:06:32,060 --> 00:06:37,100
+Chúng tôi không quan tâm đến hình ảnh ở đây và chúng tôi có thể xóa công ty.
+
+94
+00:06:37,520 --> 00:06:38,420
+Hoàn hảo.
+
+95
+00:06:39,250 --> 00:06:40,660
+Trông rất tuyệt.
+
+96
+00:06:41,590 --> 00:06:43,510
+Hãy để tôi cứu tất cả mọi thứ.
+
+97
+00:06:43,540 --> 00:06:48,420
+Đóng bộ điều khiển ở đây và chúng ta phải sửa đổi chế độ xem.
+
+98
+00:06:48,430 --> 00:06:52,690
+Vì vậy, hãy để tôi sao chép thư mục sản phẩm và dán lại.
+
+99
+00:06:52,690 --> 00:06:53,410
+Đây.
+
+100
+00:06:53,530 --> 00:06:55,810
+Đổi tên thành công ty.
+
+101
+00:06:56,570 --> 00:06:59,630
+Tên thư mục phải khớp với tên bộ điều khiển.
+
+102
+00:06:59,630 --> 00:07:03,950
+Vì vậy, đó là lý do tại sao nó phải giống hệt như công ty.
+
+103
+00:07:04,730 --> 00:07:09,230
+Chúng tôi sẽ đi đến chỉ mục ở đây và chúng tôi không có bất kỳ mô hình nào ở đây.
+
+104
+00:07:09,350 --> 00:07:13,560
+Chúng tôi có thể loại bỏ nó thay vì danh sách sản phẩm.
+
+105
+00:07:13,580 --> 00:07:18,530
+Nó sẽ là danh sách công ty và nó sẽ là bộ điều khiển công ty.
+
+106
+00:07:19,610 --> 00:07:21,590
+Tạo công ty mới.
+
+107
+00:07:22,010 --> 00:07:22,790
+Hoàn hảo.
+
+108
+00:07:22,790 --> 00:07:23,960
+Trông tôt đây.
+
+109
+00:07:23,990 --> 00:07:26,300
+Tiếp theo, chúng ta có bảng dữ liệu.
+
+110
+00:07:26,660 --> 00:07:34,430
+Ở đây chúng tôi sẽ sửa đổi tất cả các thuộc tính với tất cả các thuộc tính có liên quan đến mô hình công ty của chúng tôi.
+
+111
+00:07:34,970 --> 00:07:37,980
+Nếu muốn, bạn có thể xóa địa chỉ khỏi đây.
+
+112
+00:07:38,000 --> 00:07:42,130
+Bằng cách đó, bạn sẽ có thêm chiều rộng, nhưng tôi sẽ giữ nó ở đây.
+
+113
+00:07:42,140 --> 00:07:43,340
+Vậy được rồi.
+
+114
+00:07:44,540 --> 00:07:50,630
+Cuối cùng, chúng tôi cần tạo một JavaScript để chúng tôi sẽ gọi công ty đó là dot js.
+
+115
+00:07:50,780 --> 00:07:53,480
+Và điều đó có vẻ tốt cho index.
+
+116
+00:07:54,050 --> 00:07:56,180
+Chúng ta cần sửa đổi cái chính.
+
+117
+00:07:56,180 --> 00:08:01,190
+Điều đó là vô lý ở đây và mô hình ở đây sẽ là chính công ty.
+
+118
+00:08:01,280 --> 00:08:03,830
+Chúng tôi không cần bất kỳ mô hình xem.
+
+119
+00:08:04,740 --> 00:08:09,870
+Chúng tôi có thể trực tiếp kiểm tra nếu mô hình. id không bằng 0, sau đó cập nhật.
+
+120
+00:08:09,900 --> 00:08:13,560
+Khác tạo và đây sẽ là công ty.
+
+121
+00:08:14,740 --> 00:08:16,660
+Chúng tôi sẽ có một ID ẩn.
+
+122
+00:08:16,900 --> 00:08:18,560
+Chúng tôi không có hình ảnh.
+
+123
+00:08:18,580 --> 00:08:19,990
+Trông tôt đây.
+
+124
+00:08:21,130 --> 00:08:23,680
+Tôi phải sửa đổi tất cả các thuộc tính.
+
+125
+00:08:23,680 --> 00:08:26,020
+Vì vậy, hãy để tôi làm điều đó một cách nhanh chóng.
+
+126
+00:08:26,140 --> 00:08:29,980
+Tôi không muốn bạn chờ đợi và xem, vì vậy hãy để tôi sửa chữa điều đó.
+
+127
+00:08:31,020 --> 00:08:32,909
+Chúng tôi không có một khu vực văn bản.
+
+128
+00:08:32,940 --> 00:08:38,549
+Tôi sẽ xóa cái đó và tôi sẽ sửa đổi mọi thứ khác ngay tại đây.
+
+129
+00:08:58,510 --> 00:09:00,040
+Nhưng hoàn hảo.
+
+130
+00:09:00,040 --> 00:09:01,300
+Trông tôt đây.
+
+131
+00:09:01,390 --> 00:09:05,410
+Chúng tôi sẽ xóa mọi thứ khác không cần thiết ở đây.
+
+132
+00:09:06,370 --> 00:09:12,280
+Và cuối cùng, chúng ta có mô hình. nó để cập nhật hoặc tạo nút.
+
+133
+00:09:12,790 --> 00:09:14,500
+Chúng tôi không có hình ảnh.
+
+134
+00:09:14,500 --> 00:09:19,180
+Tôi có thể xóa cái đó và cái này có thể chiếm toàn bộ cột 12.
+
+135
+00:09:20,340 --> 00:09:22,050
+Với điều đó được lưu ở đây.
+
+136
+00:09:22,050 --> 00:09:25,140
+Tôi cần thêm nó vào bố cục được gạch chân.
+
+137
+00:09:25,920 --> 00:09:31,740
+Vì vậy, bên trong bố cục được gạch chân, chúng ta sẽ phải thêm một mục nữa vào đây.
+
+138
+00:09:32,350 --> 00:09:36,220
+Và đó sẽ là bộ điều khiển công ty.
+
+139
+00:09:36,590 --> 00:09:39,070
+Chúng tôi sẽ gọi công ty đó đến đây.
+
+140
+00:09:39,220 --> 00:09:46,240
+Và nơi tôi có vai trò ở đây, hãy để tôi nhận xét điều này ngay bây giờ, bởi vì chúng tôi đang phát triển mọi thứ ngay
+
+141
+00:09:46,240 --> 00:09:46,990
+bây giờ.
+
+142
+00:09:46,990 --> 00:09:50,260
+Chúng tôi sẽ cấp quyền truy cập vào tất cả các quản lý nội dung.
+
+143
+00:09:50,470 --> 00:09:58,780
+Vì vậy, những gì chúng ta có thể làm là truy cập bộ điều khiển danh mục giếng của công ty và nhận xét các từ khóa được
+
+144
+00:09:58,780 --> 00:09:59,620
+phép.
+
+145
+00:10:02,170 --> 00:10:08,290
+Khi chúng tôi triển khai ứng dụng, chúng tôi sẽ quay lại và chúng tôi sẽ đảm bảo rằng mọi thứ
+
+146
+00:10:08,290 --> 00:10:08,800
+đều ổn.
+
+147
+00:10:08,830 --> 00:10:14,500
+Nhưng ngay bây giờ, khi chúng ta đang phát triển mọi thứ, hãy để tôi giữ mọi thứ thật đơn giản.
+
+148
+00:10:16,830 --> 00:10:21,300
+Với tất cả những thay đổi đó, tôi tin rằng mọi thứ đã hoàn tất.
+
+149
+00:10:21,330 --> 00:10:23,520
+Hãy xem và kiểm chứng.
+
+150
+00:10:23,670 --> 00:10:25,320
+Ồ, chúng tôi quên mất một điều.
+
+151
+00:10:25,560 --> 00:10:28,770
+Chúng tôi đã không thêm JavaScript cho công ty.
+
+152
+00:10:28,800 --> 00:10:31,710
+Vì vậy, hãy để tôi làm điều đó thực sự nhanh chóng ở đây.
+
+153
+00:10:32,250 --> 00:10:34,980
+JS Sao chép sản phẩm.
+
+154
+00:10:35,010 --> 00:10:37,380
+Dán cái đó cho công ty.
+
+155
+00:10:38,040 --> 00:10:41,800
+Và ở đó chúng ta phải sửa đổi tên thuộc tính ở đây.
+
+156
+00:10:41,820 --> 00:10:48,090
+Vì vậy, hãy để tôi làm điều đó và thay đổi tên Địa chỉ đường phố, thành phố, tiểu bang và số điện thoại.
+
+157
+00:10:48,240 --> 00:10:51,170
+Chúng ta phải theo vỏ lạc đà ở đây.
+
+158
+00:10:51,180 --> 00:11:00,390
+Nếu bạn không chắc chắn, hãy xem API đang trả về những gì và dựa vào đó bạn có thể sửa đổi lộ trình.
+
+159
+00:11:00,390 --> 00:11:02,850
+Đây sẽ là công ty quản trị.
+
+160
+00:11:02,880 --> 00:11:05,310
+Nhận tất cả những gì có vẻ tốt.
+
+161
+00:11:05,670 --> 00:11:12,780
+Sau đó, đối với điều vô lý ở đây, nó sẽ là công ty một lần nữa và tương tự sẽ có hiệu lực để xóa.
+
+162
+00:11:14,150 --> 00:11:16,220
+Tôi tin rằng có vẻ tốt.
+
+163
+00:11:16,250 --> 00:11:20,330
+Hãy để tôi chạy ứng dụng và xem nó có hoạt động không.
+
+164
+00:11:23,290 --> 00:11:29,020
+Chúng tôi sẽ điều hướng đến công ty ở đây và không có gì trong bảng dữ liệu.
+
+165
+00:11:29,050 --> 00:11:30,970
+Hãy để tôi thêm một công ty.
+
+166
+00:11:31,510 --> 00:11:38,250
+Bây giờ tôi có thể tạo một công ty từ đây, nhưng điều tôi muốn làm là tôi muốn tạo cơ sở dữ liệu.
+
+167
+00:11:38,260 --> 00:11:43,630
+Và bạn đã thấy khi tôi nhấp vào nút quay lại, tôi sẽ quay lại sản phẩm.
+
+168
+00:11:44,110 --> 00:11:53,320
+Đó là bởi vì điều vô lý ở đây tôi chắc chắn rằng đó là bộ điều khiển sản phẩm trong khi nó phải là bộ điều khiển công ty.
+
+169
+00:11:54,670 --> 00:11:55,630
+Hoàn hảo.
+
+170
+00:11:55,870 --> 00:12:02,200
+Nhưng về cơ bản, tôi muốn tạo bảng công ty của chúng ta với, giả sử là hai công ty vào lúc này.
+
+171
+00:12:02,920 --> 00:12:05,230
+Vì vậy, hãy để tôi làm điều đó thực sự nhanh chóng.
+
+172
+00:12:05,560 --> 00:12:09,250
+Chúng tôi sẽ đi đến bối cảnh DB ứng dụng ở đây.
+
+173
+00:12:10,930 --> 00:12:15,340
+Hãy để tôi ẩn điều này và sao chép những gì chúng tôi có cho danh mục của mình.
+
+174
+00:12:15,700 --> 00:12:17,730
+Dán nó một lần nữa.
+
+175
+00:12:17,740 --> 00:12:20,950
+Chúng tôi muốn xem bảng công ty của chúng tôi.
+
+176
+00:12:24,830 --> 00:12:27,740
+Hãy để tôi tạo một bản ghi công ty ở đây.
+
+177
+00:13:00,640 --> 00:13:01,390
+Hoàn hảo.
+
+178
+00:13:01,390 --> 00:13:06,400
+Tôi đã thêm ba bản ghi ở đây cho ID một, hai và ba.
+
+179
+00:13:07,040 --> 00:13:10,250
+Điều tiếp theo mà tôi phải làm là thêm một di chuyển.
+
+180
+00:13:11,930 --> 00:13:14,690
+Tôi sẽ gọi đó là hồ sơ công ty quảng cáo.
+
+181
+00:13:14,690 --> 00:13:19,610
+Và một khi đã xong, chúng ta phải cập nhật cơ sở dữ liệu.
+
+182
+00:13:21,640 --> 00:13:23,260
+Trông tôt đây.
+
+183
+00:13:23,950 --> 00:13:28,030
+Sau đó, hãy để tôi bắt đầu lại ứng dụng.
+
+184
+00:13:29,300 --> 00:13:33,140
+Lần này chúng ta sẽ thấy ba hồ sơ trong công ty.
+
+185
+00:13:33,440 --> 00:13:36,800
+Tôi cũng sẽ cố gắng thực hiện thao tác CRUD.
+
+186
+00:13:37,880 --> 00:13:39,240
+Đó là thể loại.
+
+187
+00:13:39,260 --> 00:13:41,180
+Chúng ta phải đến công ty.
+
+188
+00:13:41,210 --> 00:13:42,620
+Có vẻ tốt.
+
+189
+00:13:43,350 --> 00:13:46,050
+Chúng tôi có bài kiểm tra xác nhận.
+
+190
+00:13:46,320 --> 00:13:48,570
+Hãy để tôi cố gắng tạo ra điều đó.
+
+191
+00:13:49,750 --> 00:13:51,070
+Điều đó đã làm việc.
+
+192
+00:13:51,910 --> 00:13:53,800
+Để mình xóa thử.
+
+193
+00:13:54,100 --> 00:13:56,680
+Hãy để tôi thử chỉnh sửa nó trước.
+
+194
+00:13:58,900 --> 00:14:00,940
+Và hãy để tôi cố gắng xóa.
+
+195
+00:14:02,430 --> 00:14:03,200
+Hoàn hảo.
+
+196
+00:14:03,210 --> 00:14:08,190
+Vì vậy, tất cả các hoạt động CRUD trên công ty đang hoạt động như mong đợi.
+

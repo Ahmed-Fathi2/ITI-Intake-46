@@ -1,0 +1,300 @@
+1
+00:00:01,810 --> 00:00:05,740
+Bây giờ chúng tôi có người phân biệt đối xử là người dùng nhận dạng.
+
+2
+00:00:06,340 --> 00:00:10,090
+Thay đổi điều đó thành người dùng ứng dụng cực kỳ đơn giản.
+
+3
+00:00:10,570 --> 00:00:18,310
+Nhưng trước khi tôi hướng dẫn bạn về điều đó, hãy để tôi quay lại đây trong tài khoản trang nhận dạng khu vực.
+
+4
+00:00:18,340 --> 00:00:20,020
+Chúng tôi có đăng ký.
+
+5
+00:00:20,050 --> 00:00:22,810
+Hãy để tôi mở mô hình trang đăng ký.
+
+6
+00:00:23,470 --> 00:00:30,550
+Một lần nữa, đây là một trang dao cạo ở đây và bạn có thể thấy chúng tôi đang tiêm nhiều thứ vào tiêm phụ thuộc.
+
+7
+00:00:31,210 --> 00:00:35,770
+Tôi muốn dành thời gian để giải thích cho bạn vài điều ngay tại đây.
+
+8
+00:00:36,250 --> 00:00:43,390
+Bây giờ hãy nghĩ xem khi bạn đang triển khai chức năng đăng nhập hoặc đăng ký, bạn sẽ phải viết tất
+
+9
+00:00:43,390 --> 00:00:49,180
+cả mã về những gì sẽ xảy ra khi người dùng nhập tên người dùng và mật khẩu.
+
+10
+00:00:49,210 --> 00:00:51,550
+Bạn sẽ phải mã hóa mã đó.
+
+11
+00:00:51,580 --> 00:00:57,790
+Bạn có thể phải xác thực điều đó với những gì nó có trong cơ sở dữ liệu và sau đó bạn có thể nói, được
+
+12
+00:00:57,820 --> 00:00:59,620
+rồi, xác thực có vẻ tốt.
+
+13
+00:00:59,650 --> 00:01:02,230
+Đăng nhập thành công.
+
+14
+00:01:02,230 --> 00:01:08,680
+Trên hết, bạn sẽ phải lưu trữ thông tin đó trong phiên hoặc nơi nào đó mà người dùng đã đăng nhập và bạn có thể
+
+15
+00:01:08,680 --> 00:01:12,340
+phải lưu trữ thông tin chi tiết về người dùng trong phiên.
+
+16
+00:01:12,910 --> 00:01:15,770
+Bây giờ đây chỉ là những điều cơ bản.
+
+17
+00:01:15,820 --> 00:01:21,670
+Nếu bạn nghĩ về việc xác thực hoàn chỉnh, thì có nhiều chức năng cần thiết hơn để
+
+18
+00:01:21,910 --> 00:01:29,020
+chăm sóc đăng nhập người dùng cho đến đăng xuất người dùng và quản lý thông tin đăng nhập của họ giữa
+
+19
+00:01:29,020 --> 00:01:29,560
+đó.
+
+20
+00:01:30,070 --> 00:01:38,470
+Khi chúng tôi sử dụng danh tính mạng, nhóm Dotnet đã đảm nhận tất cả các công việc nặng nhọc cho chúng tôi và họ đã cung cấp cho chúng
+
+21
+00:01:38,470 --> 00:01:46,450
+tôi các lớp này như đăng nhập, người quản lý, người quản lý người dùng, người quản lý vai trò để quản lý các vai trò và tất cả những
+
+22
+00:01:46,450 --> 00:01:49,270
+thứ đó được cung cấp theo mặc định.
+
+23
+00:01:49,510 --> 00:01:57,400
+Tất cả những gì chúng ta phải làm là đưa trực tiếp chúng vào phần tiêm phụ thuộc và sau đó sử dụng trình quản lý người dùng hoặc trình quản
+
+24
+00:01:57,400 --> 00:02:00,400
+lý đăng nhập, chúng ta có thể quản lý người dùng.
+
+25
+00:02:01,120 --> 00:02:01,990
+Bây giờ hãy đăng nhập.
+
+26
+00:02:01,990 --> 00:02:06,920
+Người quản lý mong đợi loại người dùng và đó là người dùng nhận dạng.
+
+27
+00:02:07,160 --> 00:02:08,330
+Bạn có thể giữ nó.
+
+28
+00:02:08,330 --> 00:02:09,509
+Vậy được rồi.
+
+29
+00:02:09,530 --> 00:02:16,430
+Chúng tôi chỉ muốn thay đổi bộ phân biệt đối xử khi chúng tôi đang tạo người dùng đó với sự trợ giúp của các lớp trình
+
+30
+00:02:16,430 --> 00:02:17,390
+trợ giúp này.
+
+31
+00:02:18,170 --> 00:02:26,570
+Nếu chúng tôi cuộn xuống trong các trang dao cạo, nếu bạn nhớ chúng tôi có trình xử lý, vì vậy chúng tôi cuộn xuống, chúng tôi có trình
+
+32
+00:02:26,600 --> 00:02:29,810
+xử lý get và chúng tôi có trình xử lý bài đăng.
+
+33
+00:02:30,290 --> 00:02:35,720
+Bên trong trình xử lý bài đăng, bạn có thể thấy có một phương thức cho biết tạo người dùng.
+
+34
+00:02:36,200 --> 00:02:45,170
+Nếu bạn nhấn F12 hoặc nếu bạn cuộn xuống, bạn sẽ thấy phương thức ngay tại đây tạo người dùng không làm gì cả, nhưng
+
+35
+00:02:45,170 --> 00:02:49,580
+nó đang tạo một phiên bản của người dùng nhận dạng.
+
+36
+00:02:49,760 --> 00:02:56,480
+Thay vào đó, chúng tôi muốn tạo một phiên bản của người dùng ứng dụng và chúng tôi cũng sẽ phải
+
+37
+00:02:56,480 --> 00:02:58,550
+cập nhật loại trả về ở đây.
+
+38
+00:02:59,710 --> 00:03:03,030
+Điều đó sẽ đảm bảo rằng tạo người dùng ngay tại đây.
+
+39
+00:03:03,040 --> 00:03:06,850
+Người dùng bây giờ sẽ thuộc loại người dùng ứng dụng.
+
+40
+00:03:07,570 --> 00:03:15,280
+Sau đó, trên dòng 120, bạn có thể thấy chúng tôi có một phương thức trợ giúp trong trình quản lý người dùng, phương thức này được tạo không đồng bộ ở đó.
+
+41
+00:03:15,280 --> 00:03:21,460
+Nó mong đợi một đối tượng người dùng và mật khẩu và nó sẽ tự động tạo người dùng đó.
+
+42
+00:03:21,790 --> 00:03:29,500
+Vì vậy, khi phương thức này được gọi, nó sẽ chèn một mục vào ASP. NET Users và trên hết, nó cũng
+
+43
+00:03:29,500 --> 00:03:32,410
+sẽ mã hóa mật khẩu.
+
+44
+00:03:33,430 --> 00:03:37,660
+Vì vậy, phương pháp trợ giúp đang xử lý tất cả các công việc nặng nhọc.
+
+45
+00:03:38,200 --> 00:03:42,280
+Trên hết, nếu kết quả thành công, chúng tôi sẽ cuộn xuống.
+
+46
+00:03:42,280 --> 00:03:49,570
+Nó cũng đang làm gì đó để tạo mã thông báo email và gửi email, nhưng đó chỉ là việc triển
+
+47
+00:03:49,600 --> 00:03:52,780
+khai giao diện chưa được thực hiện.
+
+48
+00:03:53,950 --> 00:04:02,120
+Nhưng nếu bạn kiểm tra trên dòng 144, chúng tôi đang sử dụng trình quản lý đăng nhập và chúng tôi sẽ tự động đăng nhập người
+
+49
+00:04:02,120 --> 00:04:02,870
+dùng đó.
+
+50
+00:04:03,170 --> 00:04:10,730
+Và do đó, nếu bạn nhớ khi chúng tôi đăng ký người dùng và nhấn nút gửi, nó sẽ tự động đăng
+
+51
+00:04:10,760 --> 00:04:12,470
+nhập người dùng.
+
+52
+00:04:13,070 --> 00:04:15,170
+Chúng tôi không phải viết bất kỳ mã nào.
+
+53
+00:04:15,170 --> 00:04:20,660
+Chúng tôi chỉ gọi phương thức trợ giúp trong trình quản lý đăng nhập và trình quản lý người dùng.
+
+54
+00:04:21,630 --> 00:04:23,130
+Vì vậy, đó là tuyệt vời.
+
+55
+00:04:23,160 --> 00:04:27,180
+Bây giờ chúng tôi đã sửa đổi người dùng thành người dùng ứng dụng.
+
+56
+00:04:27,210 --> 00:04:30,960
+Hãy để tôi chạy ứng dụng và xem điều gì sẽ xảy ra.
+
+57
+00:04:33,440 --> 00:04:36,360
+Hãy để tôi thử đăng ký một người dùng mới.
+
+58
+00:04:36,380 --> 00:04:42,290
+Tôi biết đây sẽ là người dùng ứng dụng, vì vậy hãy để tôi nói người dùng ứng dụng tại gmail. com.
+
+59
+00:04:43,150 --> 00:04:47,110
+Chúng tôi sẽ nhập mật khẩu và nhấn đăng ký.
+
+60
+00:04:47,260 --> 00:04:50,920
+Nó cũng sẽ tự động đăng nhập cho chúng tôi.
+
+61
+00:04:51,010 --> 00:04:59,590
+Nếu chúng tôi truy cập cơ sở dữ liệu và thực thi điều đó, chúng tôi có người dùng ứng dụng ở đây và nếu chúng tôi kiểm tra bộ phân biệt đối xử,
+
+62
+00:04:59,590 --> 00:05:03,010
+bạn có thể thấy nó thuộc loại người dùng ứng dụng.
+
+63
+00:05:03,670 --> 00:05:10,990
+Vì vậy, mọi thứ thực sự đang trở nên khác biệt ở đây và giờ đây chúng ta có thể đăng ký người dùng ứng dụng thay vì người
+
+64
+00:05:10,990 --> 00:05:13,060
+dùng nhận dạng mặc định.
+
+65
+00:05:13,690 --> 00:05:21,100
+Bây giờ, bởi vì chúng tôi đang thêm người dùng ứng dụng ở đây trên người dùng, chúng tôi có nhiều thuộc tính hơn như nếu chúng tôi
+
+66
+00:05:21,130 --> 00:05:26,320
+muốn tên hoặc nếu chúng tôi muốn địa chỉ đường phố, chúng tôi có thể điền vào tất cả chúng.
+
+67
+00:05:26,530 --> 00:05:32,530
+Nhưng trước khi tôi điền vào tất cả các thuộc tính đó, vai trò của người dùng hiện tại là gì?
+
+68
+00:05:33,130 --> 00:05:40,000
+Theo mặc định, khi bạn thêm danh tính, nó sẽ thêm bảng để quản lý vai trò, nhưng nếu bạn kiểm tra
+
+69
+00:05:40,000 --> 00:05:42,160
+bảng vai trò, thì nó trống.
+
+70
+00:05:42,830 --> 00:05:46,120
+Vì vậy, chúng tôi không có bất kỳ vai trò nào trong trang web của chúng tôi.
+
+71
+00:05:46,130 --> 00:05:53,450
+Giống như nếu chúng tôi muốn vai trò quản trị viên, vai trò nhân viên, vai trò công ty hoặc bất kỳ vai trò cá nhân nào, chúng tôi không có bất kỳ
+
+72
+00:05:53,450 --> 00:05:54,170
+vai trò nào.
+
+73
+00:05:54,590 --> 00:06:02,540
+Chúng ta phải viết một số mã để xem ASP này. NET và sau đó chúng tôi phải sử dụng một số phương thức trợ giúp
+
+74
+00:06:02,540 --> 00:06:09,830
+mà khi người dùng được tạo dựa trên những gì chúng tôi chọn trong vai trò, chúng tôi muốn chỉ định vai trò đó.
+
+75
+00:06:10,370 --> 00:06:14,240
+Vì vậy, hãy để tôi làm việc đầu tiên trong video tiếp theo.
+

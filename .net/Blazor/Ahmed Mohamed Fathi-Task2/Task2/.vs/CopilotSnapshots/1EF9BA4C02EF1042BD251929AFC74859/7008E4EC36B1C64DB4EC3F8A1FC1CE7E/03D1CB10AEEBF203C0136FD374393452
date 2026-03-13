@@ -1,0 +1,136 @@
+﻿@page "/todos"
+@inject ApplicationDbContext dbContext
+
+<PageTitle>ToDo</PageTitle>
+
+<h1>ToDo</h1>
+
+<div class="mb-2">
+    <input @bind="newItem" @bind:event="oninput" placeholder="Add a new todo" class="form-control" />
+    <button class="btn btn-primary mt-2" @onclick="Add">Add</button>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Task</th>
+            <th>Status</th>
+            <th style="width:120px">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (items == null)
+        {
+            <tr><td colspan="3">Loading...</td></tr>
+        }
+        else
+        {
+            @foreach (var item in items)
+            {
+                <tr>
+                    <td>
+                        @if (editingId == item.Id)
+                        {
+                            <input class="form-control" @bind="editingText" @bind:event="oninput" />
+                        }
+                        else
+                        {
+                            <span class="@(item.IsDone ? "text-decoration-line-through" : "")">@item.Name</span>
+                        }
+                    </td>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <input type="checkbox" class="form-check-input me-2" checked="@item.IsDone" @onchange="() => ToggleDone(item)" />
+                            <span class="badge @(item.IsDone ? "bg-success" : "bg-secondary")">@((item.IsDone) ? "Done" : "NotCompleted")</span>
+                        </div>
+                    </td>
+                    <td>
+                        @if (editingId == item.Id)
+                        {
+                            <div class="d-flex flex-row gap-1">
+                                <button class="btn btn-sm btn-success" @onclick="() => SaveEdit(item)">Save</button>
+                                <button class="btn btn-sm btn-secondary" @onclick="CancelEdit">Cancel</button>
+                                <button class="btn btn-sm btn-danger" @onclick="() => Remove(item)">Delete</button>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="d-flex flex-row gap-1">
+                                <button class="btn btn-sm btn-primary" @onclick="() => StartEdit(item)">Edit</button>
+                                <button class="btn btn-sm btn-danger" @onclick="() => Remove(item)">Delete</button>
+                            </div>
+                        }
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
+@code {
+    private List<Todo>? items;
+    private string newItem = string.Empty;
+
+    // editing state
+    private int? editingId = null;
+    private string editingText = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        items = await dbContext.Todos.ToListAsync();
+    }
+
+    private async Task Add()
+    {
+        if (string.IsNullOrWhiteSpace(newItem))
+            return;
+
+        var todo = new Todo { Name = newItem.Trim(), IsDone = false };
+        await dbContext.Todos.AddAsync(todo);
+        await dbContext.SaveChangesAsync();
+
+        items.Add(todo);
+        newItem = string.Empty;
+    }
+
+    private async Task Remove(Todo item)
+    {
+        dbContext.Todos.Remove(item);
+        await dbContext.SaveChangesAsync();
+        items.Remove(item);
+    }
+
+    private async Task ToggleDone(Todo item)
+    {
+        item.IsDone = !item.IsDone;
+        dbContext.Todos.Update(item);
+        await dbContext.SaveChangesAsync();
+        StateHasChanged();
+    }
+
+    private void StartEdit(Todo item)
+    {
+        editingId = item.Id;
+        editingText = item.Name ?? string.Empty;
+    }
+
+    private async Task SaveEdit(Todo item)
+    {
+        if (string.IsNullOrWhiteSpace(editingText))
+            return;
+
+        item.Name = editingText.Trim();
+        dbContext.Todos.Update(item);
+        await dbContext.SaveChangesAsync();
+
+        editingId = null;
+        editingText = string.Empty;
+        StateHasChanged();
+    }
+
+    private void CancelEdit()
+    {
+        editingId = null;
+        editingText = string.Empty;
+    }
+}

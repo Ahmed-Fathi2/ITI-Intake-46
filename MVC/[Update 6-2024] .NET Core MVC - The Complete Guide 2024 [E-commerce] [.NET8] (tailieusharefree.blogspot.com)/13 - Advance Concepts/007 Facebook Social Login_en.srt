@@ -1,0 +1,436 @@
+1
+00:00:00,630 --> 00:00:02,580
+Instructor: Now I want to show you something
+
+2
+00:00:02,580 --> 00:00:05,670
+that is common in today's website.
+
+3
+00:00:05,670 --> 00:00:07,410
+When you try to register,
+
+4
+00:00:07,410 --> 00:00:10,230
+we can use another service to register,
+
+5
+00:00:10,230 --> 00:00:13,080
+like Facebook, Google, LinkedIn,
+
+6
+00:00:13,080 --> 00:00:16,353
+and other services that enable that feature.
+
+7
+00:00:17,370 --> 00:00:22,050
+Now to add that in .NET code is super, super simple.
+
+8
+00:00:22,050 --> 00:00:25,950
+First, we will go to facebook.developers.
+
+9
+00:00:25,950 --> 00:00:30,870
+I believe they have a page, developers.facebook.com.
+
+10
+00:00:30,870 --> 00:00:33,420
+There, let me navigate to my apps,
+
+11
+00:00:33,420 --> 00:00:35,850
+and I have few old apps here,
+
+12
+00:00:35,850 --> 00:00:38,253
+but let me create a new app here.
+
+13
+00:00:39,270 --> 00:00:41,730
+Now here, what do we want to do?
+
+14
+00:00:41,730 --> 00:00:44,760
+You might be like, let me select allow people to log in
+
+15
+00:00:44,760 --> 00:00:46,620
+with their Facebook account.
+
+16
+00:00:46,620 --> 00:00:48,630
+But let me stop you there.
+
+17
+00:00:48,630 --> 00:00:50,850
+Do not select that option.
+
+18
+00:00:50,850 --> 00:00:53,370
+Make sure to select other here.
+
+19
+00:00:53,370 --> 00:00:56,940
+And then once you select that, we have consumer,
+
+20
+00:00:56,940 --> 00:01:00,363
+where we have Facebook login, let me select that.
+
+21
+00:01:01,260 --> 00:01:06,260
+That is what we want, and I will give it a name of Bulky.
+
+22
+00:01:06,510 --> 00:01:08,310
+Let me create that.
+
+23
+00:01:08,310 --> 00:01:10,953
+I will have to enter my password.
+
+24
+00:01:12,570 --> 00:01:14,250
+And great.
+
+25
+00:01:14,250 --> 00:01:17,670
+Right here, we want to set up the Facebook login.
+
+26
+00:01:17,670 --> 00:01:19,233
+So let me select that.
+
+27
+00:01:20,130 --> 00:01:24,967
+And there, we want with the www web, we need the URL.
+
+28
+00:01:25,980 --> 00:01:30,980
+Let me go back here, and copy the local host URL there,
+
+29
+00:01:31,680 --> 00:01:35,283
+paste it right here, Save and continue.
+
+30
+00:01:36,180 --> 00:01:38,790
+Now typically when we have to add that,
+
+31
+00:01:38,790 --> 00:01:43,230
+you can see there is lots of configuration that is needed.
+
+32
+00:01:43,230 --> 00:01:47,970
+But thankfully, we do not have to do, because of .NET core.
+
+33
+00:01:47,970 --> 00:01:50,880
+What you have to do is in Facebook login,
+
+34
+00:01:50,880 --> 00:01:53,010
+we will go to the Settings tab,
+
+35
+00:01:53,010 --> 00:01:54,960
+and there we have to populate
+
+36
+00:01:54,960 --> 00:01:57,993
+this valid OAuth redirect URI.
+
+37
+00:01:59,250 --> 00:02:01,680
+We will paste the local host path,
+
+38
+00:02:01,680 --> 00:02:03,960
+and on top of that we will add something
+
+39
+00:02:03,960 --> 00:02:07,440
+called a sign in hyphen Facebook.
+
+40
+00:02:07,440 --> 00:02:12,440
+That is the default valid OAuth redirect URI for Facebook.
+
+41
+00:02:13,380 --> 00:02:14,610
+Now when you publish,
+
+42
+00:02:14,610 --> 00:02:17,310
+you will have to give more access here,
+
+43
+00:02:17,310 --> 00:02:19,953
+but for testing, this is all okay.
+
+44
+00:02:20,995 --> 00:02:24,180
+With that configured, let me save the changes here.
+
+45
+00:02:24,180 --> 00:02:26,340
+And then we will go to Settings.
+
+46
+00:02:26,340 --> 00:02:28,203
+We have the basic settings.
+
+47
+00:02:29,100 --> 00:02:30,870
+Now similar to Stripe,
+
+48
+00:02:30,870 --> 00:02:35,640
+we have an app ID and app secret for Facebook.
+
+49
+00:02:35,640 --> 00:02:39,630
+We will have to configure that in our application.
+
+50
+00:02:39,630 --> 00:02:43,230
+Now, previously in the old days of .NET core,
+
+51
+00:02:43,230 --> 00:02:45,480
+Facebook, Google, and all of them
+
+52
+00:02:45,480 --> 00:02:48,510
+were included in the .NET package,
+
+53
+00:02:48,510 --> 00:02:50,640
+but now they have separated that.
+
+54
+00:02:50,640 --> 00:02:52,380
+So on the web project,
+
+55
+00:02:52,380 --> 00:02:56,250
+we will select Manage NuGet Packages.
+
+56
+00:02:56,250 --> 00:02:59,040
+Let me close everything else here.
+
+57
+00:02:59,040 --> 00:03:01,260
+And the package that we want to search for
+
+58
+00:03:01,260 --> 00:03:06,260
+is microsoft.aspnet.core.authentication.facebook.
+
+59
+00:03:10,290 --> 00:03:12,390
+Perfect, we have that package here.
+
+60
+00:03:12,390 --> 00:03:16,173
+Let me include the pre-release, and install that.
+
+61
+00:03:19,920 --> 00:03:22,770
+Great, that package is installed.
+
+62
+00:03:22,770 --> 00:03:25,980
+Let me see what I have in the Updates tab here.
+
+63
+00:03:25,980 --> 00:03:27,390
+That's okay.
+
+64
+00:03:27,390 --> 00:03:29,040
+Let me close that.
+
+65
+00:03:29,040 --> 00:03:29,873
+And with that,
+
+66
+00:03:29,873 --> 00:03:33,423
+we have added the support for Facebook authentication.
+
+67
+00:03:34,290 --> 00:03:36,060
+Now, last thing that we have to do
+
+68
+00:03:36,060 --> 00:03:39,090
+is add and configure that in our project.
+
+69
+00:03:39,090 --> 00:03:42,960
+And what is the file that we will use for configuration?
+
+70
+00:03:42,960 --> 00:03:46,383
+If you said Program.cs, you are correct.
+
+71
+00:03:47,430 --> 00:03:48,570
+On builder here,
+
+72
+00:03:48,570 --> 00:03:53,280
+we will say builder.Services.Add Authentication.
+
+73
+00:03:53,280 --> 00:03:57,030
+And we want to add the Facebook authentication,
+
+74
+00:03:57,030 --> 00:03:58,620
+because of the package,
+
+75
+00:03:58,620 --> 00:04:00,930
+now we have this option here,
+
+76
+00:04:00,930 --> 00:04:03,663
+and there we have to configure a few option.
+
+77
+00:04:04,830 --> 00:04:06,633
+First one is option.AppId,
+
+78
+00:04:08,257 --> 00:04:10,860
+and that we will provide from the portal.
+
+79
+00:04:10,860 --> 00:04:14,040
+On top of that, we also have the AppSecret,
+
+80
+00:04:14,040 --> 00:04:17,313
+that also we will have to fetch from the portal.
+
+81
+00:04:18,360 --> 00:04:21,600
+So, let me switch back to the portal.
+
+82
+00:04:21,600 --> 00:04:23,460
+Copy the app ID.
+
+83
+00:04:23,460 --> 00:04:25,830
+Paste it right here.
+
+84
+00:04:25,830 --> 00:04:30,830
+And I will copy the AppSecret, paste that right here.
+
+85
+00:04:31,380 --> 00:04:33,480
+With that three lines of code,
+
+86
+00:04:33,480 --> 00:04:35,460
+let me run the application
+
+87
+00:04:35,460 --> 00:04:38,073
+and see if something is different now.
+
+88
+00:04:39,780 --> 00:04:43,560
+And to your surprise, if you go to register this time,
+
+89
+00:04:43,560 --> 00:04:45,963
+you will see a button for Facebook.
+
+90
+00:04:47,040 --> 00:04:49,910
+Now if you click on the button here...
+
+91
+00:04:50,850 --> 00:04:53,820
+Perfect, you can see Bulky is requesting access
+
+92
+00:04:53,820 --> 00:04:57,690
+to name, profile picture, and email address.
+
+93
+00:04:57,690 --> 00:05:01,050
+Now if I select Continue as Bhrugen here,
+
+94
+00:05:01,050 --> 00:05:04,290
+it will redirect and take me back to the website
+
+95
+00:05:04,290 --> 00:05:07,380
+based on the redirect URI that we gave.
+
+96
+00:05:07,380 --> 00:05:08,670
+And perfect.
+
+97
+00:05:08,670 --> 00:05:11,310
+It says you've been successfully authenticated
+
+98
+00:05:11,310 --> 00:05:12,600
+with Facebook.
+
+99
+00:05:12,600 --> 00:05:17,460
+Please enter an email address and click the Register button.
+
+100
+00:05:17,460 --> 00:05:21,510
+Now do not press the register button right here.
+
+101
+00:05:21,510 --> 00:05:25,323
+Because if we open this URL in the other window.
+
+102
+00:05:26,280 --> 00:05:30,210
+Right here, you will notice on the register page
+
+103
+00:05:30,210 --> 00:05:32,970
+we are asking for many more fields.
+
+104
+00:05:32,970 --> 00:05:36,780
+But on this page, it only has the email.
+
+105
+00:05:36,780 --> 00:05:39,210
+So we have to modify this page
+
+106
+00:05:39,210 --> 00:05:42,450
+to handle the other fields as well.
+
+107
+00:05:42,450 --> 00:05:46,080
+Only after that, hit the Register button.
+
+108
+00:05:46,080 --> 00:05:50,490
+So we have to go to identity, account, external login,
+
+109
+00:05:50,490 --> 00:05:53,313
+and let me do that in the next video.
+

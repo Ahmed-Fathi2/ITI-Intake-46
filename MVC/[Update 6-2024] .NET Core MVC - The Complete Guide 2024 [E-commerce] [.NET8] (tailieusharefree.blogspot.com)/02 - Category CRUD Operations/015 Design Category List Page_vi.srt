@@ -1,0 +1,188 @@
+1
+00:00:01,480 --> 00:00:05,950
+Bây giờ trong trang danh mục của chúng tôi, chúng tôi đang hiển thị tất cả các danh mục.
+
+2
+00:00:05,950 --> 00:00:09,430
+Nhưng nếu người dùng muốn tạo một danh mục thì sao?
+
+3
+00:00:10,030 --> 00:00:16,930
+Để làm được điều đó, chúng tôi cần một nút ở đây sẽ đưa chúng tôi đến một trang mới sẽ được dành riêng để
+
+4
+00:00:16,930 --> 00:00:17,980
+tạo danh mục.
+
+5
+00:00:19,300 --> 00:00:23,200
+Vì vậy, hãy để tôi thêm nút đó và thêm một số kiểu dáng.
+
+6
+00:00:23,920 --> 00:00:25,990
+Thay vì chơi H1 đơn giản.
+
+7
+00:00:25,990 --> 00:00:28,000
+Đây, hãy để tôi loại bỏ điều đó.
+
+8
+00:00:28,060 --> 00:00:35,920
+Tôi sẽ thêm một div, đặt cho nó một lớp chứa và chúng ta sẽ đóng div đó ở cuối.
+
+9
+00:00:36,680 --> 00:00:37,730
+Ngay tại đó.
+
+10
+00:00:39,350 --> 00:00:45,470
+Sau đó, chúng tôi sẽ thêm một div, tạo cho nó một lớp hàng và phần đệm trên cùng là bốn.
+
+11
+00:00:45,590 --> 00:00:49,400
+Đây chỉ là các lớp bootstrap mà chúng tôi đang sử dụng.
+
+12
+00:00:50,580 --> 00:00:52,530
+Chúng tôi đang xác định một vùng chứa.
+
+13
+00:00:52,530 --> 00:00:56,380
+Và bên trong đó, chúng tôi có một hàng trong bootstrap.
+
+14
+00:00:56,400 --> 00:00:59,730
+Hàng được chia thành 12 cột trong một trang.
+
+15
+00:00:59,910 --> 00:01:03,720
+Vì vậy, một hàng về cơ bản sẽ có 12 cột.
+
+16
+00:01:04,050 --> 00:01:10,920
+Những gì chúng tôi muốn làm là bên trong lớp div đó, chúng tôi sẽ sử dụng sáu cột.
+
+17
+00:01:10,950 --> 00:01:14,340
+Điều đó có nghĩa là chúng ta còn lại sáu cột khác.
+
+18
+00:01:15,460 --> 00:01:19,330
+Chúng tôi sẽ thêm sáu cột khác ngay tại đây.
+
+19
+00:01:20,110 --> 00:01:25,930
+Vì vậy, sáu cột ở phía bên trái, là phía bên trái của trang, chúng tôi muốn hiển thị
+
+20
+00:01:25,930 --> 00:01:26,680
+tiêu đề.
+
+21
+00:01:27,480 --> 00:01:35,700
+Chúng tôi sẽ sử dụng H2 ở đây và chúng tôi sẽ cung cấp cho nó một lớp văn bản chính bootstrap, có màu đen.
+
+22
+00:01:36,720 --> 00:01:39,630
+Ở đó chúng tôi sẽ hiển thị danh sách danh mục.
+
+23
+00:01:39,780 --> 00:01:41,400
+Hãy để tôi lưu nó.
+
+24
+00:01:41,400 --> 00:01:42,000
+Và.
+
+25
+00:01:42,000 --> 00:01:42,700
+Hoàn hảo.
+
+26
+00:01:42,730 --> 00:01:43,740
+Có vẻ tốt.
+
+27
+00:01:44,340 --> 00:01:50,790
+Ở bên phải ở đây, chúng tôi muốn thêm nút để thêm danh mục mới và nút đó sẽ
+
+28
+00:01:50,790 --> 00:01:51,920
+ở bên phải.
+
+29
+00:01:51,930 --> 00:01:59,580
+Vì vậy, với cột sáu, chúng tôi sẽ thêm nội dung nào đó như văn bản và điều đó sẽ đảm bảo rằng nó sẽ nổi sang bên
+
+30
+00:01:59,580 --> 00:02:00,240
+phải.
+
+31
+00:02:00,950 --> 00:02:01,790
+Bên trong đó.
+
+32
+00:02:01,790 --> 00:02:06,350
+Chúng tôi muốn có một thẻ neo và điều đó sẽ đưa chúng tôi đến một bộ điều khiển nào đó.
+
+33
+00:02:06,350 --> 00:02:09,650
+Và bên trong nó sẽ gọi một số hành động.
+
+34
+00:02:09,889 --> 00:02:15,440
+Nó là gì, chúng tôi chưa xác định điều đó, nhưng chúng tôi sẽ làm điều đó trong các video sắp tới.
+
+35
+00:02:16,240 --> 00:02:24,910
+Chúng tôi sẽ cung cấp cho nó các lớp bootstrap của BTN BTN sơ cấp và để tôi nói tạo danh mục mới.
+
+36
+00:02:26,360 --> 00:02:30,100
+Cùng với đó, hãy để tôi thêm một biểu tượng bootstrap.
+
+37
+00:02:30,110 --> 00:02:34,370
+Vì vậy, tôi sẽ tìm kiếm một biểu tượng dấu cộng.
+
+38
+00:02:36,300 --> 00:02:38,130
+Và chúng ta có vòng tròn cộng.
+
+39
+00:02:38,130 --> 00:02:39,600
+Hãy để tôi sử dụng nó.
+
+40
+00:02:39,900 --> 00:02:44,130
+Dán nó ngay tại đây và chúng ta hãy quay trở lại.
+
+41
+00:02:44,940 --> 00:02:45,690
+Hoàn hảo.
+
+42
+00:02:45,720 --> 00:02:48,000
+Chúng tôi đã tạo danh mục mới.
+
+43
+00:02:49,120 --> 00:02:55,840
+Cùng với phần đệm phía trên, hãy để tôi làm phần đệm phía dưới và tôi nghĩ ba phần sẽ tốt.
+
+44
+00:02:57,540 --> 00:02:58,320
+Hoàn hảo.
+
+45
+00:02:58,320 --> 00:03:02,580
+Điều đó có vẻ tốt hơn nhiều cho trang danh sách danh mục của chúng tôi.
+
+46
+00:03:03,230 --> 00:03:07,510
+Bây giờ, điều gì sẽ xảy ra khi chúng ta nhấp vào nút tạo danh mục mới?
+
+47
+00:03:07,520 --> 00:03:10,340
+Hãy để tôi làm điều đó trong video tiếp theo.
+

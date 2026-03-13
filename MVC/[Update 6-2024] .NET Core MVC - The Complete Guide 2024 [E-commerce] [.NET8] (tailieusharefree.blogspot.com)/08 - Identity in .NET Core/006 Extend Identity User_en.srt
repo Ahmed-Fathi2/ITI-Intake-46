@@ -1,0 +1,208 @@
+1
+00:00:01,890 --> 00:00:03,719
+Instructor: Now we want to add more tables
+
+2
+00:00:03,719 --> 00:00:05,310
+to the user's table
+
+3
+00:00:05,310 --> 00:00:09,990
+which is the default implementation in .netidentity.
+
+4
+00:00:09,990 --> 00:00:12,990
+For that, if I switch back to the application
+
+5
+00:00:12,990 --> 00:00:16,379
+let me close everything here, and if I examine
+
+6
+00:00:16,379 --> 00:00:21,270
+program.cs, where it added the default identity
+
+7
+00:00:21,270 --> 00:00:25,410
+you can see the default user is identity user.
+
+8
+00:00:25,410 --> 00:00:29,430
+But if we want to add more properties to identity user
+
+9
+00:00:29,430 --> 00:00:31,833
+we can always extend that user.
+
+10
+00:00:32,940 --> 00:00:37,940
+So basically in our models here, let me create one more file
+
+11
+00:00:39,060 --> 00:00:42,810
+and I will call that application user.
+
+12
+00:00:42,810 --> 00:00:47,400
+We will make that a public file and in that file
+
+13
+00:00:47,400 --> 00:00:51,600
+we need to make sure it extends the identity user
+
+14
+00:00:51,600 --> 00:00:54,690
+and we will have to add the using statement.
+
+15
+00:00:54,690 --> 00:00:57,210
+For that, we will have to install the package
+
+16
+00:00:57,210 --> 00:01:01,533
+microsoft.extensions.identity.store.
+
+17
+00:01:03,000 --> 00:01:04,319
+Once we do that
+
+18
+00:01:04,319 --> 00:01:06,990
+that means application user will have all the
+
+19
+00:01:06,990 --> 00:01:09,870
+default settings of identity user.
+
+20
+00:01:09,870 --> 00:01:13,410
+On top of that, let's say we want to add name
+
+21
+00:01:13,410 --> 00:01:16,990
+of the user and that will be a required field
+
+22
+00:01:18,030 --> 00:01:21,570
+along with the name here we can add four more properties
+
+23
+00:01:21,570 --> 00:01:26,070
+like street address, city, state, and Postal Code.
+
+24
+00:01:26,070 --> 00:01:29,613
+We can make them nullable, but name will be required.
+
+25
+00:01:30,630 --> 00:01:33,480
+Now, once we have that, we need to add that
+
+26
+00:01:33,480 --> 00:01:38,130
+to migration and we also have to add a mapper for that.
+
+27
+00:01:38,130 --> 00:01:41,250
+So if we go to application DB context
+
+28
+00:01:41,250 --> 00:01:43,563
+we will create a DB set for that.
+
+29
+00:01:45,000 --> 00:01:48,580
+So DB set here on application user
+
+30
+00:01:50,850 --> 00:01:54,360
+and I will call that application users.
+
+31
+00:01:54,360 --> 00:01:58,740
+With that configured, we can add a new migration
+
+32
+00:01:58,740 --> 00:02:02,853
+and I will call this extend Identity user.
+
+33
+00:02:06,690 --> 00:02:10,410
+The migration, you can see it is adding column, city.
+
+34
+00:02:10,410 --> 00:02:12,960
+There is also a discriminator column
+
+35
+00:02:12,960 --> 00:02:17,511
+but we have name, postal code, state and street address.
+
+36
+00:02:17,511 --> 00:02:19,080
+Looks good.
+
+37
+00:02:19,080 --> 00:02:22,650
+Let me update the database and let me switch back
+
+38
+00:02:22,650 --> 00:02:26,793
+to the database and let me do select top thousand again.
+
+39
+00:02:27,990 --> 00:02:28,823
+Perfect.
+
+40
+00:02:28,823 --> 00:02:30,900
+It added all of those columns
+
+41
+00:02:30,900 --> 00:02:34,200
+but one column is this Discriminator column.
+
+42
+00:02:34,200 --> 00:02:36,690
+What exactly is that?
+
+43
+00:02:36,690 --> 00:02:39,510
+Well, now in our application, if you think of that
+
+44
+00:02:39,510 --> 00:02:41,580
+we have two type of user.
+
+45
+00:02:41,580 --> 00:02:46,170
+We have identity user and we have application user.
+
+46
+00:02:46,170 --> 00:02:48,990
+So Discriminator column will basically have
+
+47
+00:02:48,990 --> 00:02:53,130
+a value that will tell that the user on that record.
+
+48
+00:02:53,130 --> 00:02:58,050
+Is that an application user or is that an identity user?
+
+49
+00:02:58,050 --> 00:02:59,223
+Simple as that.
+
+50
+00:03:00,060 --> 00:03:00,893
+But with that,
+
+51
+00:03:00,893 --> 00:03:05,520
+we have seen how to extend the default identity user
+
+52
+00:03:05,520 --> 00:03:08,703
+in our project and add more columns.
+

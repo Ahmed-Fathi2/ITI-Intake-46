@@ -1,0 +1,300 @@
+1
+00:00:02,300 --> 00:00:05,930
+Bây giờ chúng ta có biểu mẫu và chúng ta có nút tạo.
+
+2
+00:00:06,260 --> 00:00:11,570
+Nếu chúng tôi kiểm tra mã, chúng tôi có biểu mẫu và chúng tôi có phương thức gửi bài.
+
+3
+00:00:11,930 --> 00:00:18,470
+Vì vậy, về cơ bản, khi nút được kích hoạt, nó sẽ chạm vào cùng một điểm cuối với yêu cầu đăng bài.
+
+4
+00:00:19,310 --> 00:00:25,790
+Để làm được điều đó, chúng ta phải tạo một phương thức hành động khác bên trong bộ điều khiển danh mục, phương thức này
+
+5
+00:00:25,790 --> 00:00:26,690
+sẽ có cùng tên.
+
+6
+00:00:26,960 --> 00:00:32,720
+Vì vậy, sao chép và dán nó ở đây, nhưng đó sẽ là loại bài đăng http.
+
+7
+00:00:33,080 --> 00:00:38,090
+Vì vậy, bất cứ khi nào một cái gì đó được đăng, điểm cuối này sẽ được gọi.
+
+8
+00:00:38,090 --> 00:00:40,730
+Và ở đó chúng ta phải thêm danh mục.
+
+9
+00:00:41,610 --> 00:00:48,600
+Ngoài ra, khi chúng tôi đăng một cái gì đó ở đây, chúng tôi sẽ nhận được đối tượng danh mục bởi vì nếu chúng tôi kiểm
+
+10
+00:00:48,600 --> 00:00:53,850
+tra việc tạo ở đây, chúng tôi có mô hình đó và ở dạng chúng tôi có các thuộc tính đó.
+
+11
+00:00:54,060 --> 00:00:59,890
+Vì vậy, khi nó được đăng, nó sẽ cung cấp biểu mẫu đó trong bộ điều khiển danh mục.
+
+12
+00:00:59,910 --> 00:01:01,620
+Hãy để tôi gọi đó là OBJ.
+
+13
+00:01:02,490 --> 00:01:08,520
+Khi chúng ta có đối tượng đó, đối tượng đó sẽ có giá trị của danh mục cần được thêm vào.
+
+14
+00:01:08,820 --> 00:01:12,150
+Hãy để tôi thêm một điểm gỡ lỗi và chỉ ra điều đó.
+
+15
+00:01:14,700 --> 00:01:16,410
+Chúng tôi đi đến danh
+
+16
+00:01:17,230 --> 00:01:19,000
+mục Tạo danh mục mới.
+
+17
+00:01:19,030 --> 00:01:21,010
+Hãy để tôi gõ một cái gì đó ở đây.
+
+18
+00:01:21,650 --> 00:01:23,790
+Và nhấn nút tạo.
+
+19
+00:01:23,810 --> 00:01:27,170
+Nếu bạn kiểm tra obj ở đây, thật hoàn hảo.
+
+20
+00:01:27,170 --> 00:01:31,700
+Nó có thứ tự hiển thị và tên ID sẽ bằng không.
+
+21
+00:01:31,700 --> 00:01:35,450
+Và điều đó không sao bởi vì ngay bây giờ chúng tôi muốn tạo ra.
+
+22
+00:01:35,450 --> 00:01:37,550
+Vì vậy, ID phải bằng không.
+
+23
+00:01:38,560 --> 00:01:43,420
+Sau đó, làm thế nào chúng ta có thể sử dụng lõi khung thực thể để tạo danh mục?
+
+24
+00:01:44,300 --> 00:01:47,090
+Chúng tôi đã thấy làm thế nào để lấy nó ngay tại đây.
+
+25
+00:01:47,090 --> 00:01:50,300
+Nhưng việc tạo ra cũng siêu đơn giản.
+
+26
+00:01:50,630 --> 00:01:55,640
+Chúng tôi có DB gạch dưới đã có sẵn dưới dạng ngữ cảnh DB.
+
+27
+00:01:55,730 --> 00:02:03,320
+Ở đó, chúng tôi có bộ danh mục DB và ở đó chúng tôi có một phương thức được cung cấp bởi lõi khung thực
+
+28
+00:02:03,320 --> 00:02:04,580
+thể, đó là THÊM.
+
+29
+00:02:04,580 --> 00:02:09,830
+Và ở đó chúng ta phải chuyển đối tượng sẽ thuộc loại danh mục.
+
+30
+00:02:10,550 --> 00:02:14,870
+Vì vậy, chúng ta có thể chuyển obj mà chúng ta truy xuất vào tham số ở đây.
+
+31
+00:02:14,870 --> 00:02:18,770
+Và đó là dòng duy nhất mà bạn phải thêm danh mục.
+
+32
+00:02:19,160 --> 00:02:23,180
+Bạn không cần bất kỳ câu lệnh chèn hay bất kỳ thứ gì khác.
+
+33
+00:02:23,600 --> 00:02:31,160
+Nhưng ở dòng 27, chúng tôi đang nói với lõi khung thực thể rằng bạn phải thêm đối tượng danh mục này
+
+34
+00:02:31,160 --> 00:02:32,870
+vào bảng danh mục.
+
+35
+00:02:33,080 --> 00:02:37,610
+Nhưng ở dòng 27, chúng tôi chỉ nói những gì bạn phải làm.
+
+36
+00:02:37,820 --> 00:02:39,380
+Chúng tôi không nói với nó rằng.
+
+37
+00:02:39,380 --> 00:02:40,670
+Được rồi, bạn tốt.
+
+38
+00:02:40,670 --> 00:02:42,650
+Bạn có thể tiếp tục và làm điều đó.
+
+39
+00:02:43,040 --> 00:02:50,270
+Nếu bạn đã sẵn sàng thực hiện các câu lệnh đó, thì bạn phải nói dấu gạch dưới db. lưu thay đổi.
+
+40
+00:02:50,660 --> 00:02:57,500
+Vì vậy, trên dòng 27, nó theo dõi tất cả những thay đổi mà tôi phải thực hiện trong cơ sở dữ liệu vì
+
+41
+00:02:57,500 --> 00:03:04,430
+trong tương lai sẽ có nhiều thay đổi hơn và bạn không muốn truy cập cơ sở dữ liệu mỗi khi có thể.
+
+42
+00:03:04,430 --> 00:03:10,040
+Bạn muốn kết hợp năm thay đổi với nhau và thực hiện tất cả chúng trong một cơ sở dữ liệu duy nhất.
+
+43
+00:03:10,040 --> 00:03:10,680
+Gọi.
+
+44
+00:03:11,470 --> 00:03:15,970
+Vì vậy, trên dòng 27, nó đang theo dõi những gì nó phải thêm vào.
+
+45
+00:03:16,000 --> 00:03:24,820
+Và ở dòng 28, nó sẽ thực sự chuyển đến cơ sở dữ liệu và tạo danh mục đó trước khi chúng ta thấy nó hoạt
+
+46
+00:03:24,820 --> 00:03:25,540
+động.
+
+47
+00:03:25,540 --> 00:03:32,980
+Khi danh mục được thêm vào, chúng tôi muốn chuyển hướng đến chế độ xem chỉ mục danh mục nơi họ có thể xem tất cả
+
+48
+00:03:32,980 --> 00:03:34,030
+các danh mục.
+
+49
+00:03:34,710 --> 00:03:39,280
+Bây giờ, chúng tôi không thể quay lại Chế độ xem, nhưng chúng tôi có thể chuyển sang hành động lập chỉ mục.
+
+50
+00:03:39,300 --> 00:03:46,200
+Ở đó, nó sẽ tải lại các danh mục vì khi một danh mục được thêm vào, chúng ta phải tải lại và chuyển danh mục đó cho
+
+51
+00:03:46,200 --> 00:03:47,070
+chế độ xem.
+
+52
+00:03:47,820 --> 00:03:54,180
+Vì vậy, thay vì quay lại chế độ xem, chúng tôi cũng có một thứ gọi là chuyển hướng đến hành động.
+
+53
+00:03:55,400 --> 00:04:01,790
+Nếu bạn đang ở trong cùng một bộ điều khiển, bạn chỉ có thể viết tên hành động ở đây, đó là chỉ mục và nó sẽ
+
+54
+00:04:01,790 --> 00:04:02,660
+hoạt động.
+
+55
+00:04:02,930 --> 00:04:09,050
+Nhưng nếu bạn phải chuyển đến một bộ điều khiển khác, bạn cũng có thể viết tên bộ điều khiển ở đây.
+
+56
+00:04:09,500 --> 00:04:14,720
+Vì vậy, nếu muốn, bạn có thể nói rõ ràng và nói chuyển đến bộ điều khiển danh mục.
+
+57
+00:04:14,720 --> 00:04:20,209
+Nhưng vì chúng ta đang ở trong cùng một bộ điều khiển nên chúng ta có thể bỏ qua điều đó ngay tại đây.
+
+58
+00:04:20,750 --> 00:04:27,980
+Với cấu hình đó, hãy để tôi thực sự thêm lại điểm gỡ lỗi tại đây và chạy ứng dụng.
+
+59
+00:04:28,940 --> 00:04:33,770
+Chúng tôi sẽ đi đến danh mục và cố gắng tạo một danh mục thử nghiệm.
+
+60
+00:04:35,030 --> 00:04:35,900
+Cung cấp cho nó một màn hình.
+
+61
+00:04:35,900 --> 00:04:37,610
+Đặt hàng năm, có thể.
+
+62
+00:04:38,800 --> 00:04:43,720
+Chúng tôi đã đạt đến điểm ngắt của mình, câu lệnh thêm hoàn hảo được thực thi.
+
+63
+00:04:44,550 --> 00:04:46,890
+Và chúng ta có thể vào SQL Server.
+
+64
+00:04:47,130 --> 00:04:48,030
+Hành hình.
+
+65
+00:04:48,030 --> 00:04:50,010
+Nó chưa được thêm vào.
+
+66
+00:04:50,250 --> 00:04:55,410
+Khi chúng tôi thực hiện các thay đổi lưu ở đây, sau đó nếu chúng tôi quay lại.
+
+67
+00:04:55,800 --> 00:04:56,700
+Hoàn hảo.
+
+68
+00:04:56,700 --> 00:04:58,880
+Nó đã thêm danh mục đó.
+
+69
+00:04:58,890 --> 00:05:00,630
+Hãy để tôi tiếp tục.
+
+70
+00:05:00,810 --> 00:05:02,280
+Và tuyệt vời.
+
+71
+00:05:02,370 --> 00:05:05,340
+Chúng tôi thấy danh mục mới đã được thêm vào.
+
+72
+00:05:05,790 --> 00:05:11,130
+Vì vậy, bạn có thể thấy việc thêm danh mục bằng cách sử dụng lõi khung thực thể đơn giản như thế nào.
+
+73
+00:05:12,340 --> 00:05:18,640
+Chúng tôi không phải mở kết nối, đóng kết nối, viết bất kỳ câu lệnh SQL nào để chèn dữ liệu.
+
+74
+00:05:18,670 --> 00:05:22,240
+Mọi thứ được xử lý bởi khung thực thể.
+
+75
+00:05:22,720 --> 00:05:27,340
+Với cấu hình đó, hãy để tôi tiếp tục từ video tiếp theo.
+

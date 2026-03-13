@@ -1,0 +1,324 @@
+1
+00:00:01,960 --> 00:00:08,080
+Chúng tôi đã thêm mã để cập nhật sản phẩm và xóa hình ảnh cũ nếu có.
+
+2
+00:00:08,320 --> 00:00:10,180
+Hãy để tôi thấy điều đó trong hành động.
+
+3
+00:00:10,180 --> 00:00:12,430
+Ở đây chúng ta có một hình ảnh cũ.
+
+4
+00:00:12,730 --> 00:00:16,900
+Hãy để tôi ghim cái này để chúng ta có thể thấy hình ảnh cũ đã bị xóa.
+
+5
+00:00:17,110 --> 00:00:19,600
+Và hãy để tôi tải lên một hình ảnh mới.
+
+6
+00:00:20,540 --> 00:00:22,670
+Chúng tôi sẽ nhấn cập nhật ở đây.
+
+7
+00:00:22,670 --> 00:00:28,400
+Và bạn nhận thấy ở đây hình ảnh mới đã được thêm vào, nhưng hình ảnh cũ không bị xóa.
+
+8
+00:00:29,280 --> 00:00:31,770
+Hãy gỡ lỗi và xem điều gì đã xảy ra.
+
+9
+00:00:32,250 --> 00:00:34,800
+Chúng tôi sẽ thêm một điểm ngắt ở đây.
+
+10
+00:00:35,790 --> 00:00:40,320
+Hãy quay lại và cố gắng cập nhật một hình ảnh mới tại đây.
+
+11
+00:00:41,650 --> 00:00:44,650
+Cập nhật và chúng ta hãy xem.
+
+12
+00:00:46,980 --> 00:00:49,950
+Nó không đi vào điều kiện nếu ở đây.
+
+13
+00:00:49,950 --> 00:00:53,400
+Và vì lý do nào đó, URL hình ảnh không có giá trị.
+
+14
+00:00:54,120 --> 00:01:01,830
+Lý do đằng sau đó là nếu tôi quay lại chế độ xem vô lý, chúng tôi có URL hình ảnh, nhưng nó không có trong bất kỳ
+
+15
+00:01:01,830 --> 00:01:03,510
+trường nhập liệu nào.
+
+16
+00:01:03,870 --> 00:01:08,670
+Do đó, khi biểu mẫu được đăng, nó không ở đó.
+
+17
+00:01:09,800 --> 00:01:17,090
+Chúng tôi cũng sẽ phải thêm URL hình ảnh vào một trường ẩn và điều đó sẽ giải quyết vấn đề của chúng tôi.
+
+18
+00:01:18,060 --> 00:01:22,560
+Với cấu hình đó, hãy để tôi chạy lại ứng dụng.
+
+19
+00:01:25,030 --> 00:01:29,410
+Hãy để tôi đi đến sản phẩm và một với hình ảnh ở đây.
+
+20
+00:01:29,440 --> 00:01:34,870
+Hãy để tôi xóa hình ảnh khác ở đây vì tôi biết đó là hình ảnh giả mạo.
+
+21
+00:01:36,060 --> 00:01:39,450
+Và tôi chỉ có hình ảnh cuối cùng ở đó.
+
+22
+00:01:39,810 --> 00:01:42,270
+Hãy để tôi cố gắng cập nhật cái này.
+
+23
+00:01:44,410 --> 00:01:45,520
+Cập nhật.
+
+24
+00:01:46,680 --> 00:01:49,620
+Và nó sẽ đi vào bên trong điều kiện if.
+
+25
+00:01:49,650 --> 00:01:50,340
+Hoàn hảo.
+
+26
+00:01:50,340 --> 00:01:51,360
+Điều đó đã làm việc.
+
+27
+00:01:51,390 --> 00:01:57,990
+Nếu tôi tiếp tục ở đây, bạn có thể thấy hình ảnh cũ đã bị xóa và chúng ta có lưới mới.
+
+28
+00:01:58,380 --> 00:02:02,130
+Nếu chúng tôi nhấp vào chỉnh sửa ở đây, chúng tôi có hình ảnh mới.
+
+29
+00:02:02,520 --> 00:02:10,770
+Bản cập nhật hoàn hảo Hình ảnh đang hoạt động như mong đợi, nhưng có một vấn đề là giả sử chúng tôi chỉ cập nhật tiêu
+
+30
+00:02:10,770 --> 00:02:11,520
+đề ở đây.
+
+31
+00:02:11,670 --> 00:02:19,500
+Nếu tôi lưu hình ảnh đó, hãy giữ nguyên, nhưng nếu tôi chỉnh sửa ở đây, hình ảnh vẫn ở đó.
+
+32
+00:02:20,280 --> 00:02:28,410
+Một điều mà tôi sẽ chỉ ra ở đây là nếu mã thông minh, nếu tôi cập nhật nó thành tiêu đề ở đây và để tôi thêm một
+
+33
+00:02:28,410 --> 00:02:29,790
+điểm sửa lỗi.
+
+34
+00:02:29,790 --> 00:02:33,120
+Một lần nữa, chúng tôi không sửa đổi hình ảnh ở đây.
+
+35
+00:02:33,120 --> 00:02:42,120
+Nếu tôi nhấn cập nhật, bạn sẽ nhận thấy nó chuyển đến phần cập nhật tại đây và nó có sản phẩm mới có mọi thứ
+
+36
+00:02:42,120 --> 00:02:46,860
+ngay tại đây và tiêu đề sản phẩm tại đây được cập nhật.
+
+37
+00:02:46,860 --> 00:02:51,720
+Nếu mã về cơ bản sẽ cập nhật tất cả các thuộc tính ngay tại đây cùng với tiêu đề.
+
+38
+00:02:52,140 --> 00:03:00,090
+Vì vậy, nếu trong trường hợp bằng cách nào đó, URL hình ảnh trống ở đây, thì hình ảnh đó sẽ bị xóa khỏi mục nhập
+
+39
+00:03:00,090 --> 00:03:00,900
+bảng.
+
+40
+00:03:01,500 --> 00:03:08,910
+Vì vậy, những gì chúng tôi có thể làm là trong trường hợp này, mặc dù bản cập nhật đang hoạt động, khi chúng tôi cập nhật,
+
+41
+00:03:08,910 --> 00:03:12,330
+chúng tôi có thể nói rõ ràng về những gì cần cập nhật.
+
+42
+00:03:12,810 --> 00:03:18,750
+Vì vậy, ngay bây giờ mọi thứ đang hoạt động, nhưng nếu bạn muốn, bạn có thể nói rõ ràng.
+
+43
+00:03:18,960 --> 00:03:25,590
+Nếu chúng tôi đi đến kho lưu trữ sản phẩm của kho lưu trữ, chúng tôi có phương pháp cập nhật ngay tại đây.
+
+44
+00:03:26,310 --> 00:03:33,300
+Thay vì cập nhật trực tiếp đối tượng tại đây, chúng tôi có thể truy xuất đối tượng sản phẩm từ cơ sở dữ liệu dựa trên
+
+45
+00:03:33,300 --> 00:03:36,690
+ID đối tượng mà chúng tôi nhận được ngay tại đây.
+
+46
+00:03:36,690 --> 00:03:42,540
+Và khi chúng tôi có sản phẩm đó từ cơ sở dữ liệu, chúng tôi có thể cập nhật sản phẩm đó theo cách thủ công.
+
+47
+00:03:42,960 --> 00:03:52,410
+Vì vậy, chúng tôi có thể nói nếu OBJ từ DB không phải là null, thì chúng tôi muốn cập nhật thuộc tính nào chúng tôi sẽ phải thực
+
+48
+00:03:52,410 --> 00:04:00,270
+hiện ánh xạ thủ công cho tất cả các thuộc tính đó và sau đó chúng tôi có thể nói rõ rằng nếu URL hình ảnh chấm
+
+49
+00:04:00,300 --> 00:04:05,730
+OBJ không phải là null, chỉ sau đó bạn cập nhật URL hình ảnh.
+
+50
+00:04:06,120 --> 00:04:10,710
+Nếu bạn có bất kỳ logic tùy chỉnh nào khác, bạn cũng có thể thêm logic đó vào đây.
+
+51
+00:04:10,740 --> 00:04:14,880
+Nhưng đây là cách bạn có thể thực hiện ánh xạ thủ công nếu muốn.
+
+52
+00:04:15,030 --> 00:04:22,140
+Và đó là một trong những lý do tôi đã cập nhật bên trong kho lưu trữ riêng lẻ chứ không phải trong kho
+
+53
+00:04:22,140 --> 00:04:23,370
+lưu trữ chung.
+
+54
+00:04:24,370 --> 00:04:30,580
+Với cấu hình đó, nếu bạn chạy ứng dụng, mọi thứ vẫn hoạt động như cũ.
+
+55
+00:04:31,180 --> 00:04:37,280
+Hãy để tôi thấy điều đó trong thực tế và để tôi cũng kiểm tra hình ảnh sản phẩm ở đây.
+
+56
+00:04:37,300 --> 00:04:39,730
+Vì vậy, có điều đó bên cạnh.
+
+57
+00:04:40,420 --> 00:04:44,830
+Tôi sẽ cập nhật tiêu đề ở đây và có thể là mô tả.
+
+58
+00:04:46,470 --> 00:04:49,270
+Chúng tôi cập nhật điểm gỡ lỗi.
+
+59
+00:04:49,290 --> 00:04:50,850
+Hãy để tôi loại bỏ điều đó.
+
+60
+00:04:50,850 --> 00:04:51,870
+Và.
+
+61
+00:04:52,760 --> 00:04:53,360
+Hoàn hảo.
+
+62
+00:04:53,360 --> 00:04:55,190
+Cả hai đều được cập nhật.
+
+63
+00:04:55,790 --> 00:05:02,210
+Điều cuối cùng, chúng tôi có ID danh mục đang được hiển thị ở đây, nhưng chúng tôi cần hiển thị ID đó bên
+
+64
+00:05:02,210 --> 00:05:03,770
+trong chỉ mục sản phẩm.
+
+65
+00:05:04,340 --> 00:05:06,920
+Hãy để tôi làm điều đó trong video tiếp theo.
+
+66
+00:05:06,920 --> 00:05:11,960
+Nhưng trước đó, hãy để tôi thêm hình ảnh vào tất cả những cuốn sách khác mà tôi có.
+
+67
+00:05:11,990 --> 00:05:14,120
+Vì vậy, Fortune of Time.
+
+68
+00:05:15,080 --> 00:05:17,930
+Tôi sẽ chọn bản cập nhật đó.
+
+69
+00:05:18,320 --> 00:05:20,270
+Bầu trời tối.
+
+70
+00:05:20,270 --> 00:05:22,550
+Tôi có một hình ảnh cho điều đó.
+
+71
+00:05:25,640 --> 00:05:28,640
+Tiếp theo tan biến trong hoàng hôn.
+
+72
+00:05:32,090 --> 00:05:34,400
+Chúng tôi có kẹo bông
+
+73
+00:05:37,730 --> 00:05:40,940
+và đá trong đại dương.
+
+74
+00:05:44,810 --> 00:05:47,090
+Những chiếc lá và những điều kỳ diệu.
+
+75
+00:05:51,050 --> 00:05:51,830
+Hoàn hảo.
+
+76
+00:05:51,860 --> 00:05:54,420
+Chúng tôi sẽ không xóa hai cái này ngay bây giờ.
+
+77
+00:05:54,440 --> 00:05:57,520
+Chúng tôi sẽ xử lý điều đó trong các video sắp tới.
+
+78
+00:05:57,530 --> 00:06:00,080
+Nhưng nếu chúng ta chỉnh sửa perfect.
+
+79
+00:06:00,110 --> 00:06:04,100
+Những hình ảnh hiện đang xuất hiện cho tất cả các cuốn sách.
+
+80
+00:06:04,790 --> 00:06:05,790
+Hoàn hảo.
+
+81
+00:06:05,810 --> 00:06:08,690
+Hãy để tôi tiếp tục từ video tiếp theo.
+

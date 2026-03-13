@@ -1,0 +1,64 @@
+1
+00:00:01,700 --> 00:00:08,150
+Before we move forward, let me walk you through on what are my expectations before you take the course.
+
+2
+00:00:08,630 --> 00:00:11,780
+This course has a very few prerequisites.
+
+3
+00:00:11,930 --> 00:00:12,920
+As you know.
+
+4
+00:00:12,920 --> 00:00:16,890
+We will be learning ASP.NET Core MVC in this course.
+
+5
+00:00:16,910 --> 00:00:22,970
+Because of that, you must have a basic understanding of the C-sharp programming language.
+
+6
+00:00:23,240 --> 00:00:28,300
+If you have worked with the traditional .net applications, that is completely okay.
+
+7
+00:00:28,310 --> 00:00:34,820
+As long as you understand the basic foundations of C#, you should be good with the course.
+
+8
+00:00:35,650 --> 00:00:40,300
+On top of that, we will be using SQL Server for our database.
+
+9
+00:00:40,480 --> 00:00:45,280
+So you should have some experience in writing queries for SQL Server.
+
+10
+00:00:45,640 --> 00:00:53,560
+I do not want any fancy experience like functions and anything complex, but basic SQL like select statement,
+
+11
+00:00:53,590 --> 00:00:57,310
+delete statements and those basic SQL syntax.
+
+12
+00:00:57,340 --> 00:00:59,410
+You should be familiar with them.
+
+13
+00:00:59,710 --> 00:01:05,860
+As long as you have these two basic foundations, you will not face any issue in the course.
+
+14
+00:01:06,190 --> 00:01:13,870
+I will be starting from Ground zero when it comes to explaining .net core MVC and how everything comes
+
+15
+00:01:13,870 --> 00:01:14,770
+together.
+
+16
+00:01:15,690 --> 00:01:19,080
+With that, let me continue from the next video.
+

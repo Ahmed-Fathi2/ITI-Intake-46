@@ -1,0 +1,120 @@
+1
+00:00:01,569 --> 00:00:07,270
+Bây giờ, tôi đã nói trước rằng ID trong bảng danh mục sẽ là khóa chính.
+
+2
+00:00:07,600 --> 00:00:13,090
+Nhưng làm cách nào để xác định hay nói đúng hơn là ID này phải là khóa chính?
+
+3
+00:00:13,600 --> 00:00:21,460
+Bởi vì đôi khi, giả sử nếu tên là danh mục, dấu gạch dưới, dấu gạch dưới và sau đó chúng ta có
+
+4
+00:00:21,460 --> 00:00:29,350
+ID, Nếu tên biến giống như thế này, thì làm sao lõi khung thực thể có thể biết rằng thuộc tính
+
+5
+00:00:29,350 --> 00:00:34,120
+cụ thể này mà bạn có sẽ là khóa chính của cái bàn?
+
+6
+00:00:34,660 --> 00:00:38,200
+Đối với điều đó, chúng tôi có một thứ gọi là chú thích dữ liệu.
+
+7
+00:00:38,320 --> 00:00:45,780
+Vì vậy, ngay tại đây trong dấu ngoặc vuông, nếu tôi viết khóa, bạn có thể thấy nó nằm bên trong mô hình thành phần dấu chấm hệ
+
+8
+00:00:45,790 --> 00:00:47,500
+thống mà chú thích dữ liệu.
+
+9
+00:00:47,770 --> 00:00:54,940
+Khi tôi nhấn enter tại đây, chú thích dữ liệu chính sẽ được thêm vào đây và theo cách đó, lõi khung
+
+10
+00:00:54,940 --> 00:01:00,370
+thực thể sẽ biết rằng thuộc tính này sẽ là khóa chính cho bảng danh mục.
+
+11
+00:01:01,060 --> 00:01:09,590
+Vì vậy, điều đó nghe có vẻ tốt, nhưng theo mặc định, nếu tên hoàn toàn là ID, nó sẽ tự động hay đúng hơn
+
+12
+00:01:09,620 --> 00:01:14,800
+là lõi khung thực thể sẽ tự động nghĩ rằng đây là khóa chính.
+
+13
+00:01:14,810 --> 00:01:19,370
+Và do đó, chú thích dữ liệu chính sẽ không được yêu cầu.
+
+14
+00:01:19,820 --> 00:01:26,840
+Ngoài ra, nếu tên giống hệt như mô hình mà chúng tôi có, là danh mục theo sau bởi
+
+15
+00:01:26,870 --> 00:01:34,370
+một ID như thế này, thì nó cũng sẽ tự động coi thuộc tính cụ thể đó là khóa chính.
+
+16
+00:01:35,120 --> 00:01:42,470
+Nhưng với tất cả những điều đã được xác định, nếu bạn xác định rõ ràng chú thích dữ liệu chính theo cách đó,
+
+17
+00:01:42,470 --> 00:01:48,890
+nhìn vào chú thích dữ liệu chính, bạn có thể biết ID đó là khóa chính cho bảng danh mục.
+
+18
+00:01:49,760 --> 00:01:57,740
+Cùng với đó, chúng tôi cũng có một chú thích dữ liệu khác được yêu cầu khi bạn thêm bắt buộc vào bất kỳ thuộc
+
+19
+00:01:57,740 --> 00:02:04,760
+tính nào ở đây khi tập lệnh SQL sẽ được tạo để tạo bảng cụ thể này trong cơ sở dữ liệu, bạn sẽ thấy
+
+20
+00:02:04,790 --> 00:02:08,729
+chuỗi đó sẽ có cài đặt không phải là null.
+
+21
+00:02:08,750 --> 00:02:12,740
+Đó là lý do tại sao chúng tôi có chú thích dữ liệu cần thiết.
+
+22
+00:02:13,640 --> 00:02:20,030
+Bây giờ có nhiều chú thích dữ liệu hơn, nhưng chúng tôi sẽ khám phá chúng khi chúng tôi tiếp tục khóa học.
+
+23
+00:02:20,630 --> 00:02:27,620
+Ngay bây giờ chúng ta đã nói rất nhiều về việc tạo cơ sở dữ liệu, tạo mô hình, tạo bảng và thêm
+
+24
+00:02:27,620 --> 00:02:29,440
+nhiều cột vào đó.
+
+25
+00:02:29,450 --> 00:02:32,630
+Làm cách nào để xác định khóa chính trong bảng đó?
+
+26
+00:02:32,780 --> 00:02:36,170
+Nhưng làm thế nào để chúng ta thực sự tạo bảng?
+
+27
+00:02:36,830 --> 00:02:44,420
+Để làm được điều đó, chúng tôi phải xác định chuỗi kết nối trong dự án của mình với Máy chủ SQL và chúng tôi phải định cấu hình
+
+28
+00:02:44,420 --> 00:02:48,980
+ứng dụng của mình để sử dụng thực thể Framework Core và Máy chủ SQL.
+
+29
+00:02:49,910 --> 00:02:56,780
+Cấu hình đó hơi dài, vì vậy hãy theo dõi tôi và chúng ta sẽ tiếp tục về cấu hình đó trong video
+
+30
+00:02:56,780 --> 00:02:57,860
+tiếp theo.
+

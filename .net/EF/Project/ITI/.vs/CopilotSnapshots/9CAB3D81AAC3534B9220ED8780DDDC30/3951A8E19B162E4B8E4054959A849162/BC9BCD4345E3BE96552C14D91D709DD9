@@ -1,0 +1,186 @@
+﻿namespace ITI.WinForms
+{
+    partial class Form1
+    {
+        /// <summary>
+        ///  Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        ///  Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        ///  Required method for Designer support - do not modify
+        ///  the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            studentDataView = new DataGridView();
+            CreateStudentBtn = new Button();
+            DeleteStudentBtn = new Button();
+            UpdateStudentBtn = new Button();
+            label1 = new Label();
+            label2 = new Label();
+            Phone = new Label();
+            FNameTxt = new TextBox();
+            LNameTxt = new TextBox();
+            PhoneTxt = new TextBox();
+            ((System.ComponentModel.ISupportInitialize)studentDataView).BeginInit();
+            SuspendLayout();
+            // 
+            // studentDataView
+            // 
+            studentDataView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            studentDataView.Location = new Point(60, 20);
+            studentDataView.Name = "studentDataView";
+            studentDataView.RowHeadersWidth = 51;
+            studentDataView.Size = new Size(980, 360);
+            studentDataView.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            studentDataView.TabIndex = 0;
+            // 
+            // CreateStudentBtn
+            // 
+            CreateStudentBtn.Location = new Point(200, 620);
+            CreateStudentBtn.Name = "CreateStudentBtn";
+            CreateStudentBtn.Size = new Size(140, 40);
+            CreateStudentBtn.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            CreateStudentBtn.TabIndex = 1;
+            CreateStudentBtn.Text = "Add";
+            CreateStudentBtn.UseVisualStyleBackColor = true;
+            CreateStudentBtn.Click += CreateStudentBtn_Click;
+            // 
+            // DeleteStudentBtn
+            // 
+            DeleteStudentBtn.Location = new Point(660, 620);
+            DeleteStudentBtn.Name = "DeleteStudentBtn";
+            DeleteStudentBtn.Size = new Size(140, 40);
+            DeleteStudentBtn.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            DeleteStudentBtn.TabIndex = 2;
+            DeleteStudentBtn.Text = "Delete";
+            DeleteStudentBtn.UseVisualStyleBackColor = true;
+            // 
+            // UpdateStudentBtn
+            // 
+            UpdateStudentBtn.Location = new Point(430, 620);
+            UpdateStudentBtn.Name = "UpdateStudentBtn";
+            UpdateStudentBtn.Size = new Size(170, 40);
+            UpdateStudentBtn.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            UpdateStudentBtn.TabIndex = 3;
+            UpdateStudentBtn.Text = "Update";
+            UpdateStudentBtn.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(220, 410);
+            label1.Name = "label1";
+            label1.Size = new Size(90, 23);
+            label1.TabIndex = 4;
+            label1.Text = "First Name";
+            label1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(220, 455);
+            label2.Name = "label2";
+            label2.Size = new Size(80, 23);
+            label2.TabIndex = 5;
+            label2.Text = "Last Name";
+            label2.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            // 
+            // Phone
+            // 
+            Phone.AutoSize = true;
+            Phone.Location = new Point(220, 500);
+            Phone.Name = "Phone";
+            Phone.Size = new Size(60, 23);
+            Phone.TabIndex = 6;
+            Phone.Text = "Phone";
+            Phone.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            // 
+            // FNameTxt
+            // 
+            FNameTxt.Location = new Point(330, 406);
+            FNameTxt.Name = "FNameTxt";
+            FNameTxt.Size = new Size(300, 30);
+            FNameTxt.TabIndex = 7;
+            FNameTxt.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            // 
+            // LNameTxt
+            // 
+            LNameTxt.Location = new Point(330, 451);
+            LNameTxt.Name = "LNameTxt";
+            LNameTxt.Size = new Size(300, 30);
+            LNameTxt.TabIndex = 8;
+            LNameTxt.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            // 
+            // PhoneTxt
+            // 
+            PhoneTxt.Location = new Point(330, 496);
+            PhoneTxt.Name = "PhoneTxt";
+            PhoneTxt.Size = new Size(300, 30);
+            PhoneTxt.TabIndex = 9;
+            PhoneTxt.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            // 
+            // courseChecklist
+            // 
+            courseChecklist = new CheckedListBox { Location = new Point(660, 400), Size = new Size(360, 200), CheckOnClick = true };
+            // 
+            
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1100, 760);
+            StartPosition = FormStartPosition.CenterScreen;
+            Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            
+            Controls.Add(PhoneTxt);
+            Controls.Add(LNameTxt);
+            Controls.Add(FNameTxt);
+            Controls.Add(courseChecklist);
+            Controls.Add(Phone);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(UpdateStudentBtn);
+            Controls.Add(DeleteStudentBtn);
+            Controls.Add(CreateStudentBtn);
+            Controls.Add(studentDataView);
+            Name = "Form1";
+            Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)studentDataView).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        #endregion
+
+        private DataGridView studentDataView;
+        private Button CreateStudentBtn;
+        private Button DeleteStudentBtn;
+        private Button UpdateStudentBtn;
+        private Label label1;
+        private Label label2;
+        private Label Phone;
+        private TextBox FNameTxt;
+        private TextBox LNameTxt;
+        private TextBox PhoneTxt;
+        private CheckedListBox courseChecklist;
+        
+    }
+}

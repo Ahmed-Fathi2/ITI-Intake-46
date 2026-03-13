@@ -1,0 +1,248 @@
+1
+00:00:01,760 --> 00:00:08,780
+Nếu tôi vào Solution Explorer và mở tệp Program. cs, bạn có thể thấy trong định tuyến, chúng tôi có một thứ
+
+2
+00:00:08,780 --> 00:00:11,060
+gọi là bộ điều khiển và hành động.
+
+3
+00:00:11,660 --> 00:00:14,090
+Hãy nhớ những từ khóa này ngay bây giờ.
+
+4
+00:00:14,780 --> 00:00:21,410
+Nếu bạn mở lại Solution Explorer, bạn sẽ nhận thấy chúng tôi có một thư mục có tên bộ điều khiển.
+
+5
+00:00:21,440 --> 00:00:24,350
+Chúng tôi có các mô hình và chúng tôi có quan điểm.
+
+6
+00:00:25,050 --> 00:00:28,440
+Điều đó về cơ bản xác định từ khóa MVC.
+
+7
+00:00:28,950 --> 00:00:33,030
+MVC là viết tắt của các mô hình, Chế độ xem và Bộ điều khiển.
+
+8
+00:00:33,270 --> 00:00:36,480
+Nhưng làm thế nào để cả ba người họ đến với nhau?
+
+9
+00:00:36,930 --> 00:00:40,200
+Hãy để tôi chỉ cho bạn một tổng quan ngắn gọn về điều đó.
+
+10
+00:00:40,710 --> 00:00:46,320
+Trong kiến trúc MVC, như tôi đã nói, chữ cái đầu tiên là viết tắt của model.
+
+11
+00:00:46,530 --> 00:00:49,980
+Mô hình đại diện cho hình dạng của dữ liệu.
+
+12
+00:00:50,280 --> 00:00:54,160
+Vì vậy, nếu bạn có bất kỳ bảng nào hoặc nếu bạn có bất kỳ lớp học nào.
+
+13
+00:00:54,180 --> 00:00:56,490
+Người mẫu sẽ có tất cả những điều đó.
+
+14
+00:00:57,170 --> 00:01:03,050
+Và ý tôi muốn nói khi phân loại là giả sử bạn đang xây dựng một ứng dụng thương mại điện tử nơi
+
+15
+00:01:03,050 --> 00:01:08,690
+bạn có sản phẩm, bạn sẽ có đơn đặt hàng, bạn sẽ có chi tiết đơn hàng, giỏ hàng, v.v.
+
+16
+00:01:08,990 --> 00:01:12,860
+Các mô hình về cơ bản sẽ có tất cả các tệp lớp đó.
+
+17
+00:01:13,890 --> 00:01:19,320
+Tiếp theo, chúng ta có một thứ gọi là As View, viết tắt của giao diện người dùng.
+
+18
+00:01:19,960 --> 00:01:26,500
+Vì vậy, bất cứ điều gì bạn nhìn thấy trên màn hình, đó là phần xem của ứng dụng MVC.
+
+19
+00:01:26,770 --> 00:01:29,260
+Vì vậy, mô hình đại diện cho dữ liệu.
+
+20
+00:01:29,260 --> 00:01:32,860
+Và những gì bạn thấy trên màn hình là giao diện người dùng.
+
+21
+00:01:32,890 --> 00:01:40,780
+Giống như nếu bạn có một biểu mẫu hoặc nếu bạn có một biểu đồ ưa thích mà bạn nhìn thấy trên trình duyệt, thì tất cả những thứ đó đều được biểu thị
+
+22
+00:01:40,780 --> 00:01:41,800
+bằng Chế độ xem.
+
+23
+00:01:42,560 --> 00:01:46,970
+Chế độ xem sẽ kiểm soát phần tử HTML của dự án web của bạn.
+
+24
+00:01:47,480 --> 00:01:53,000
+Bây giờ bạn có chế độ xem nơi bạn có HTML ưa thích mà bạn thấy trên màn hình.
+
+25
+00:01:53,330 --> 00:02:00,740
+Nhưng khi bạn có dữ liệu, bạn sẽ phải xử lý hoặc thậm chí tìm nạp dữ liệu đó vì dữ liệu có thể nằm trong
+
+26
+00:02:00,740 --> 00:02:02,030
+cơ sở dữ liệu.
+
+27
+00:02:02,180 --> 00:02:09,380
+Vì vậy, bạn cần thứ gì đó để tìm nạp dữ liệu đó và hiển thị dữ liệu đó trong một bảng trên chế độ xem HTML mà bạn có.
+
+28
+00:02:09,800 --> 00:02:17,540
+Phần còn thiếu hoặc trái tim của ứng dụng MVC là bộ điều khiển, là phần cuối cùng của khối
+
+29
+00:02:17,540 --> 00:02:18,920
+bị thiếu ở đây.
+
+30
+00:02:19,610 --> 00:02:27,500
+Bộ điều khiển về cơ bản sẽ xử lý yêu cầu của người dùng và nó sẽ hoạt động như một giao diện giữa mô hình và chế
+
+31
+00:02:27,500 --> 00:02:28,070
+độ xem.
+
+32
+00:02:28,490 --> 00:02:35,900
+Điều xảy ra là khi người dùng nhấp vào một trong các nút hoặc mở trang web, trước tiên yêu cầu sẽ được chuyển
+
+33
+00:02:35,900 --> 00:02:37,370
+đến bộ điều khiển.
+
+34
+00:02:37,730 --> 00:02:42,180
+Sau đó, bộ điều khiển sẽ xác định mô hình nào nó phải tìm nạp.
+
+35
+00:02:42,210 --> 00:02:49,620
+Nó sẽ truy xuất tất cả dữ liệu cần thiết bằng cách sử dụng các mô hình và sau đó nó sẽ chuyển tất cả dữ liệu
+
+36
+00:02:49,620 --> 00:02:53,160
+cần thiết để hiển thị cho thành phần dạng xem.
+
+37
+00:02:53,610 --> 00:03:00,900
+Chế độ xem sẽ làm gì là nó sẽ thêm tất cả dữ liệu ở định dạng HTML của nó và chuyển dữ liệu đó trở lại
+
+38
+00:03:00,900 --> 00:03:09,000
+bộ điều khiển, sau đó bộ điều khiển sẽ gửi lại phản hồi đó và dữ liệu hoặc trang web sẽ được hiển thị trên màn
+
+39
+00:03:09,000 --> 00:03:10,440
+hình của bạn.
+
+40
+00:03:10,770 --> 00:03:18,360
+Vì vậy, một điều mà bạn phải luôn nhớ là bộ điều khiển kiến trúc MVC là trái tim của ứng dụng của bạn.
+
+41
+00:03:19,120 --> 00:03:25,420
+Và có vẻ như tôi đang lặp đi lặp lại điều này nhiều lần, nhưng kiến trúc MVC có
+
+42
+00:03:25,420 --> 00:03:28,240
+thể khó hiểu nếu bạn mới bắt đầu.
+
+43
+00:03:28,420 --> 00:03:30,550
+Vì vậy, hãy đi qua đó một lần nữa.
+
+44
+00:03:30,670 --> 00:03:35,080
+Khi người dùng mở một trang web, nó sẽ chuyển đến bộ điều khiển.
+
+45
+00:03:35,410 --> 00:03:42,590
+Sau đó, bộ điều khiển sẽ lấy dữ liệu từ các mô hình hoặc bất cứ nơi nào nó phải xử lý dữ liệu đó.
+
+46
+00:03:42,610 --> 00:03:46,460
+Giống như có thể có một số chuyển đổi hoặc bất cứ điều gì nó phải làm.
+
+47
+00:03:46,480 --> 00:03:53,710
+Và một khi dữ liệu ở trạng thái tốt, nó sẽ chuyển dữ liệu đó tới chế độ xem trên HTML tĩnh đó.
+
+48
+00:03:53,740 --> 00:03:57,310
+Nó sẽ thêm dữ liệu mà bộ điều khiển đã thông qua.
+
+49
+00:03:57,550 --> 00:04:03,910
+Giống như trong View, chúng ta có thể đã định nghĩa là có một table, nhưng table đó cần dữ liệu gì thì chúng ta sẽ chuyển
+
+50
+00:04:03,910 --> 00:04:06,220
+dữ liệu đó từ controller sang View.
+
+51
+00:04:06,250 --> 00:04:10,960
+Sau đó, Vue sẽ thêm dữ liệu đó vào HTML và nội dung cuối cùng.
+
+52
+00:04:10,960 --> 00:04:18,339
+Nó sẽ quay trở lại bộ điều khiển, cuối cùng sẽ được chuyển đến màn hình người dùng và người dùng
+
+53
+00:04:18,339 --> 00:04:20,600
+có thể xem toàn bộ trang web.
+
+54
+00:04:21,230 --> 00:04:27,020
+Các bạn của tôi, đây là kiến trúc cơ bản của một ứng dụng MVC.
+
+55
+00:04:28,140 --> 00:04:35,140
+Bộ điều khiển của chúng ta có thể có nhiều phương thức hành động Phương thức hành động về cơ bản xác định các điểm cuối trong bộ điều
+
+56
+00:04:35,140 --> 00:04:38,430
+khiển và chúng ta sẽ khám phá điều đó trong video tiếp theo.
+
+57
+00:04:38,440 --> 00:04:42,160
+Nhưng cũng có một thứ được gọi là phương thức hành động.
+
+58
+00:04:42,640 --> 00:04:47,620
+Nếu tôi quay lại trang web ở đây, bạn có thể thấy nơi chúng tôi có tuyến đường mặc định.
+
+59
+00:04:47,650 --> 00:04:54,220
+Chúng tôi đang nói rằng nếu không có gì được xác định, bạn nên chuyển đến bộ điều khiển gia đình và ở đó bạn có hành
+
+60
+00:04:54,220 --> 00:04:56,560
+động lập chỉ mục và một thứ gọi là ID.
+
+61
+00:04:57,610 --> 00:05:00,220
+Hãy bỏ qua điều đó ngay bây giờ.
+
+62
+00:05:00,220 --> 00:05:06,970
+Bạn đã biết kiến trúc MVC cơ bản và hãy đề cập đến định tuyến này trong video tiếp theo.
+

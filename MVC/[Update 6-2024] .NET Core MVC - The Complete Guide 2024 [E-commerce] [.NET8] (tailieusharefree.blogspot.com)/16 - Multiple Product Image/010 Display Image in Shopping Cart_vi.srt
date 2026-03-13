@@ -1,0 +1,340 @@
+1
+00:00:01,850 --> 00:00:08,360
+Bây giờ trên trang chủ ở đây, chúng tôi không muốn tải tất cả các hình ảnh, mà tôi muốn tải một trong các
+
+2
+00:00:08,360 --> 00:00:11,390
+hình ảnh và hiển thị hình ảnh đó ngay tại đây.
+
+3
+00:00:12,480 --> 00:00:17,760
+Chúng tôi sẽ quay lại ứng dụng và chúng tôi sẽ chuyển đến bộ điều khiển gia đình.
+
+4
+00:00:18,270 --> 00:00:20,220
+Để tôi đi gặp khách hàng.
+
+5
+00:00:21,390 --> 00:00:22,140
+Hoàn hảo.
+
+6
+00:00:22,170 --> 00:00:28,980
+Chúng tôi có chỉ mục ở đây khi chúng tôi bao gồm danh mục cho sản phẩm, chúng tôi cũng muốn bao gồm cả
+
+7
+00:00:28,980 --> 00:00:30,450
+hình ảnh sản phẩm.
+
+8
+00:00:31,460 --> 00:00:34,520
+Tôi có thể chắc chắn rằng không có lỗi chính tả ở đây.
+
+9
+00:00:34,520 --> 00:00:39,680
+Và trên hết, chúng ta có thể chuyển nhiều thuộc tính bao gồm bằng dấu phẩy.
+
+10
+00:00:40,280 --> 00:00:43,220
+Kho lưu trữ của chúng tôi có khả năng xử lý việc đó.
+
+11
+00:00:43,220 --> 00:00:44,810
+Vì vậy, điều này sẽ làm việc.
+
+12
+00:00:45,650 --> 00:00:47,850
+Chúng tôi cũng có các chi tiết ở đây.
+
+13
+00:00:47,870 --> 00:00:54,560
+Hãy để tôi đảm bảo rằng tôi cũng tải hình ảnh sản phẩm khi chúng tôi điều hướng đến trang chi tiết.
+
+14
+00:00:55,470 --> 00:00:58,500
+Sau đó, tôi sẽ vào xem mục lục.
+
+15
+00:00:58,530 --> 00:00:59,970
+Vào xem.
+
+16
+00:01:00,000 --> 00:01:03,360
+Ở đây chúng tôi đang hiển thị một URL hình ảnh.
+
+17
+00:01:03,870 --> 00:01:10,110
+Nhưng bây giờ những gì chúng ta sẽ phải làm là trước tiên chúng ta sẽ phải kiểm tra xem có bất kỳ hình ảnh sản phẩm nào không.
+
+18
+00:01:10,380 --> 00:01:12,650
+Chúng ta sẽ có một điều kiện if.
+
+19
+00:01:12,660 --> 00:01:23,430
+Tôi sẽ nói rằng hình ảnh sản phẩm chấm sản phẩm không phải là null và số chấm hình ảnh sản phẩm chấm sản phẩm phải lớn
+
+20
+00:01:23,430 --> 00:01:24,390
+hơn 0.
+
+21
+00:01:25,050 --> 00:01:30,690
+Nếu đúng như vậy thì để mình copy thẻ img này dán vào đây nhé.
+
+22
+00:01:30,810 --> 00:01:38,910
+Cái src thì chúng ta sẽ lấy cái đó từ product dot image của product dot first hoặc default.
+
+23
+00:01:39,180 --> 00:01:44,400
+Chúng tôi muốn truy xuất cái đầu tiên trên đó chúng tôi có URL hình ảnh.
+
+24
+00:01:45,830 --> 00:01:51,410
+Bây giờ trong phần khác, về cơ bản, điều đó có nghĩa là sản phẩm đó không có bất kỳ hình ảnh nào.
+
+25
+00:01:51,800 --> 00:01:56,930
+Vì vậy, thay vì để trống ở đây, tôi có thể hiển thị một hình ảnh giả ở đây.
+
+26
+00:01:57,350 --> 00:02:05,000
+Và để hiển thị điều đó, tôi có thể thêm một liên kết vào trình giữ chỗ. đồng xác định kích thước ngẫu nhiên và PNG.
+
+27
+00:02:06,560 --> 00:02:09,030
+Với điều đó, hãy để tôi lưu ở đây.
+
+28
+00:02:09,050 --> 00:02:10,460
+Tất cả điều đó.
+
+29
+00:02:11,270 --> 00:02:12,770
+Hãy quay trở lại.
+
+30
+00:02:14,040 --> 00:02:14,970
+Và tuyệt vời.
+
+31
+00:02:15,120 --> 00:02:18,280
+Bất cứ nơi nào chúng tôi có hình ảnh, nó sẽ được hiển thị.
+
+32
+00:02:18,300 --> 00:02:20,700
+Nếu không, chúng tôi có trình giữ chỗ.
+
+33
+00:02:21,710 --> 00:02:26,270
+Hãy để tôi thử sửa đổi hình ảnh sản phẩm cho kẹo bông.
+
+34
+00:02:28,130 --> 00:02:32,930
+Xóa cái đó, xóa cái đó và xóa luôn cái đó.
+
+35
+00:02:33,530 --> 00:02:35,480
+Chúng tôi cần kẹo bông.
+
+36
+00:02:37,390 --> 00:02:39,850
+Đi đến trang chủ và.
+
+37
+00:02:39,850 --> 00:02:40,660
+Hoàn hảo.
+
+38
+00:02:40,690 --> 00:02:42,100
+Trông tôt đây.
+
+39
+00:02:42,820 --> 00:02:49,180
+Sau đó, hãy để tôi thêm một vài mặt hàng vào giỏ hàng ở đây có hình ảnh ô tô.
+
+40
+00:02:50,440 --> 00:02:57,790
+Và sau đó nếu chúng tôi điều hướng đến giỏ hàng, hãy để tôi hiển thị hình ảnh ở đây trước khi chúng tôi làm việc để hiển
+
+41
+00:02:57,790 --> 00:03:00,070
+thị hình ảnh trong trang chi tiết.
+
+42
+00:03:00,840 --> 00:03:04,200
+Vì vậy, chúng tôi sẽ phải hiển thị trong giỏ hàng.
+
+43
+00:03:04,230 --> 00:03:05,610
+Hãy để tôi đến đó.
+
+44
+00:03:06,360 --> 00:03:07,350
+Đối với giỏ hàng của chúng tôi.
+
+45
+00:03:07,380 --> 00:03:09,760
+Chúng tôi sẽ đi đến bộ điều khiển giỏ hàng.
+
+46
+00:03:09,780 --> 00:03:10,920
+Đó là đâu?
+
+47
+00:03:10,920 --> 00:03:12,300
+Ngay chỗ này.
+
+48
+00:03:12,570 --> 00:03:14,400
+Chúng tôi có chỉ mục.
+
+49
+00:03:14,730 --> 00:03:20,070
+Khi chúng tôi truy xuất mọi thứ ở đây, sản phẩm đã có trong các thuộc tính bao gồm.
+
+50
+00:03:20,430 --> 00:03:23,910
+Bây giờ với mã bạn cũng có sau đó bao gồm.
+
+51
+00:03:23,910 --> 00:03:31,470
+Nhưng thành thật mà nói, tôi không phải là người hâm mộ cuồng nhiệt của việc đưa vào sau đó bởi vì khi chúng tôi đưa vào các thuộc tính, mã khung
+
+52
+00:03:31,470 --> 00:03:33,540
+thực thể cũng đang theo dõi chúng.
+
+53
+00:03:33,780 --> 00:03:41,310
+Vì vậy, thay vì làm cho kho lưu trữ của chúng tôi trở nên phức tạp hơn để bao gồm DOT, sau đó bao gồm, chúng tôi có thể bao gồm tất
+
+54
+00:03:41,310 --> 00:03:44,610
+cả hình ảnh sản phẩm ngay tại đây theo cách thủ công.
+
+55
+00:03:45,150 --> 00:03:52,050
+Trước tiên, chúng tôi sẽ truy xuất vô số tất cả các hình ảnh sản phẩm từ cơ sở dữ liệu và nơi chúng tôi có cho mỗi
+
+56
+00:03:52,050 --> 00:04:01,320
+vòng lặp, chúng tôi có thể tải giỏ hàng chấm sản phẩm hình ảnh sản phẩm chấm bằng với hình ảnh sản phẩm chấm nơi chúng tôi có thể nói u đi tới u dot ID
+
+57
+00:04:01,320 --> 00:04:11,140
+sản phẩm đó id sản phẩm phải khớp với giỏ hàng. sản phẩm. nhận dạng.
+
+58
+00:04:12,390 --> 00:04:16,769
+Bằng cách đó, nó sẽ truy xuất và chúng tôi sẽ chuyển nó thành một danh sách.
+
+59
+00:04:16,950 --> 00:04:18,029
+Hoàn hảo.
+
+60
+00:04:18,209 --> 00:04:24,330
+Vì vậy, bây giờ các hình ảnh sản phẩm chấm sản phẩm trong giỏ hàng sẽ được điền.
+
+61
+00:04:25,590 --> 00:04:29,420
+Chúng tôi có thể sao chép điều kiện mà chúng tôi đã thêm trên trang chủ tại đây.
+
+62
+00:04:29,430 --> 00:04:30,600
+Sao chép cái đó.
+
+63
+00:04:30,600 --> 00:04:37,350
+Và tôi sẽ mở chế độ xem chỉ mục cho bộ điều khiển thẻ nơi chúng tôi có hình ảnh.
+
+64
+00:04:37,710 --> 00:04:40,320
+Hãy để tôi dán nó ngay tại đó.
+
+65
+00:04:40,950 --> 00:04:44,760
+Ở đây chúng ta cũng phải thêm một lớp có chiều rộng 100.
+
+66
+00:04:44,880 --> 00:04:47,760
+Hãy để tôi làm điều đó ở cả hai nơi.
+
+67
+00:04:49,160 --> 00:04:54,680
+Chúng ta sẽ phải điều hướng đến mục hình ảnh chấm sản phẩm chấm sản phẩm.
+
+68
+00:04:55,340 --> 00:04:58,580
+Sao chép và dán nó ở đây.
+
+69
+00:04:59,520 --> 00:05:00,360
+Hoàn hảo.
+
+70
+00:05:00,450 --> 00:05:02,130
+Hãy để tôi lưu tất cả.
+
+71
+00:05:02,130 --> 00:05:03,870
+Tiếp tục chỉnh sửa.
+
+72
+00:05:03,960 --> 00:05:05,670
+Lưu tất cả mọi thứ.
+
+73
+00:05:05,670 --> 00:05:07,650
+Xây dựng lại các thay đổi.
+
+74
+00:05:08,470 --> 00:05:09,880
+Xây dựng lại sự thay đổi.
+
+75
+00:05:10,730 --> 00:05:12,770
+Chúng tôi có một lỗi ở đây.
+
+76
+00:05:14,320 --> 00:05:15,130
+Rất tiếc.
+
+77
+00:05:15,520 --> 00:05:16,330
+Để tôi đặt lại.
+
+78
+00:05:16,450 --> 00:05:17,770
+Có cái gì đó không đúng.
+
+79
+00:05:17,770 --> 00:05:19,240
+Để tôi khởi động lại.
+
+80
+00:05:20,740 --> 00:05:23,590
+Và tôi thấy một vấn đề ở đây.
+
+81
+00:05:25,240 --> 00:05:29,700
+Vì một số lý do, Stripe được thêm vào bộ điều khiển sản phẩm.
+
+82
+00:05:29,710 --> 00:05:33,670
+Hãy để tôi loại bỏ nó và chạy ứng dụng.
+
+83
+00:05:34,150 --> 00:05:35,410
+Hoàn hảo.
+
+84
+00:05:36,190 --> 00:05:43,630
+Hãy để tôi đi đến giỏ hàng của chúng tôi ở đây và giỏ hàng tuyệt vời cũng trông đẹp hơn nhiều.
+
+85
+00:05:44,230 --> 00:05:47,200
+Hãy để tôi tiếp tục trong video tiếp theo.
+

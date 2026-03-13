@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/Src/">
+    <Project Path="Ecom.BLL/Ecom.BLL.csproj" />
+    <Project Path="Ecom.DAL/Ecom.DAL.csproj" />
+    <Project Path="Ecom.MVC/Ecom.MVC.csproj" />
+  </Folder>
+</Solution>

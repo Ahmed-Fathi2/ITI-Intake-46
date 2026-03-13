@@ -1,0 +1,256 @@
+1
+00:00:01,500 --> 00:00:08,910
+Bây giờ trong dự án của chúng tôi, chúng tôi có kho lưu trữ danh mục và đang xử lý các hoạt động CRUD cho danh mục.
+
+2
+00:00:10,020 --> 00:00:14,100
+Kho danh mục có vẻ tốt, nhưng nó không hoàn hảo.
+
+3
+00:00:14,460 --> 00:00:20,880
+Và ý tôi muốn nói là hãy để tôi đi đến bộ điều khiển ở đây và hãy nghĩ rằng trong bộ điều khiển bạn có nhiều
+
+4
+00:00:20,880 --> 00:00:25,840
+phương thức hành động và bạn đang sử dụng khoảng mười kho lưu trữ khác nhau.
+
+5
+00:00:25,860 --> 00:00:28,200
+Bạn sẽ phải tiêm tất cả chúng.
+
+6
+00:00:28,200 --> 00:00:30,170
+Điều đó là hoàn toàn ổn.
+
+7
+00:00:30,180 --> 00:00:35,940
+Điều đó thực sự mang lại cho bạn sự tự do mà này, bạn chỉ đưa vào kho lưu trữ cần thiết.
+
+8
+00:00:36,150 --> 00:00:44,640
+Nhưng một nhược điểm ở đây là nếu bạn đi đến kho lưu trữ và nếu chúng ta đi đến kho lưu trữ danh mục, chúng ta có phương
+
+9
+00:00:44,640 --> 00:00:45,420
+thức lưu.
+
+10
+00:00:45,540 --> 00:00:51,900
+Bây giờ, phương thức lưu này sẽ có trong tất cả các kho lưu trữ riêng lẻ mà chúng tôi sẽ có trong
+
+11
+00:00:51,900 --> 00:00:56,400
+tương lai, như đơn đặt hàng sản phẩm, giỏ hàng và mọi thứ khác.
+
+12
+00:00:56,760 --> 00:01:01,830
+Nhưng chức năng lưu không liên quan đến kho lưu trữ hoặc mô hình.
+
+13
+00:01:02,040 --> 00:01:04,980
+Đó là một phương pháp toàn cầu đang được sử dụng.
+
+14
+00:01:05,700 --> 00:01:12,520
+Vì vậy, cách chính xác để thực hiện mọi việc là lưu phần này vào một thứ gọi là đơn vị công việc.
+
+15
+00:01:13,000 --> 00:01:19,660
+Nhưng trước khi tôi triển khai điều đó, tôi muốn nói với bạn rằng nếu bạn chỉ muốn sử dụng kho lưu trữ danh
+
+16
+00:01:19,660 --> 00:01:26,470
+mục trong một dự án hoàn toàn ổn, thì việc thêm một đơn vị công việc không phải lúc nào cũng cần thiết.
+
+17
+00:01:26,920 --> 00:01:30,490
+Cá nhân tôi thích điều đó vì nó mang lại một cách tiếp cận rõ ràng.
+
+18
+00:01:30,490 --> 00:01:36,970
+Nhưng cùng với đó cũng có một số nhược điểm mà tôi sẽ đề cập khi chúng ta tiếp tục khóa học.
+
+19
+00:01:38,140 --> 00:01:45,760
+Nhưng trước đó, chúng ta có một câu hỏi lớn là làm thế nào chúng ta có đơn vị công việc bên trong kho lưu trữ
+
+20
+00:01:45,760 --> 00:01:46,510
+ở đây?
+
+21
+00:01:46,510 --> 00:01:48,670
+Hãy để tôi thêm một mục mới.
+
+22
+00:01:48,940 --> 00:01:51,430
+Hãy để tôi dừng dự án đầu tiên.
+
+23
+00:01:51,580 --> 00:02:00,280
+Nhấp chuột phải, thêm một mục mới và với phiên bản mới của Visual Studio, họ đã triển khai chế độ xem nhỏ
+
+24
+00:02:00,280 --> 00:02:00,850
+gọn.
+
+25
+00:02:01,360 --> 00:02:08,949
+Tôi thích điều đó khi tôi phải thêm tệp CSS, nhưng đối với giao diện, chúng tôi có thể nhấp vào hiển thị tất cả các mẫu tại đây.
+
+26
+00:02:08,949 --> 00:02:15,070
+Giao diện và đổi tên thành I unit of work.
+
+27
+00:02:15,910 --> 00:02:20,890
+Hãy thêm điều đó và chúng tôi sẽ biến giao diện này thành giao diện công khai.
+
+28
+00:02:22,020 --> 00:02:24,690
+Và ở đây chúng ta sẽ có tất cả các kho lưu trữ.
+
+29
+00:02:24,690 --> 00:02:30,090
+Vì vậy, tôi phân loại kho lưu trữ và chúng tôi sẽ chỉ truy cập vào bên trong đó.
+
+30
+00:02:30,540 --> 00:02:35,280
+Tiếp theo, chúng ta có thể triển khai phương thức toàn cầu ở đây như lưu.
+
+31
+00:02:36,060 --> 00:02:43,710
+Bây giờ việc thực hiện chúng ta sẽ lấy danh mục kho lưu trữ như thế nào sẽ được thực hiện trong thư mục kho lưu trữ, chúng
+
+32
+00:02:43,710 --> 00:02:47,040
+ta sẽ tạo ra tôi có thể sử dụng chế độ xem nhỏ gọn.
+
+33
+00:02:47,040 --> 00:02:49,200
+Tôi chỉ cần tệp lớp.
+
+34
+00:02:49,230 --> 00:02:51,840
+Tôi sẽ gọi đơn vị làm việc đó.
+
+35
+00:02:54,800 --> 00:03:00,440
+Đây sẽ là một lớp công khai và nó sẽ triển khai giao diện đơn vị công việc I.
+
+36
+00:03:01,130 --> 00:03:05,460
+Chúng tôi sẽ nhấn dấu chấm điều khiển và triển khai giao diện.
+
+37
+00:03:05,480 --> 00:03:06,470
+Hoàn hảo.
+
+38
+00:03:07,220 --> 00:03:11,270
+Chúng tôi cần triển khai cho kho lưu trữ danh mục tại đây.
+
+39
+00:03:11,300 --> 00:03:16,310
+Hãy để tôi thêm một getter và setter riêng ngay tại đó.
+
+40
+00:03:17,680 --> 00:03:25,000
+Bây giờ, giống như trong kho lưu trữ danh mục, chúng tôi đã có ngữ cảnh DB ứng dụng bằng cách sử dụng phép nội xạ phụ thuộc, chúng
+
+41
+00:03:25,000 --> 00:03:29,470
+tôi sẽ làm điều tương tự và điều đó sẽ được thực hiện trong đơn vị công việc.
+
+42
+00:03:29,770 --> 00:03:31,240
+Ngay chỗ này.
+
+43
+00:03:32,260 --> 00:03:38,140
+Chúng tôi sẽ có tên lớp là đơn vị công việc ở đây và chúng tôi không có bất kỳ lớp cơ sở nào.
+
+44
+00:03:38,170 --> 00:03:43,810
+Chúng tôi có thể xóa nó ngay tại đây, nơi chúng tôi có kho lưu trữ danh mục.
+
+45
+00:03:43,840 --> 00:03:46,290
+Chúng ta có thể thêm nó vào hàm tạo.
+
+46
+00:03:46,300 --> 00:03:48,670
+Hãy để tôi cắt và dán nó ở đây.
+
+47
+00:03:48,790 --> 00:03:57,220
+Tôi sẽ gọi danh mục đó và chúng tôi sẽ nói danh mục bằng kho lưu trữ danh mục mới.
+
+48
+00:03:58,630 --> 00:04:02,050
+Và chúng ta sẽ chuyển bối cảnh DB ngay tại đó.
+
+49
+00:04:02,710 --> 00:04:08,680
+Và chúng tôi gặp lỗi ở đây vì trong giao diện, chúng tôi gọi kho lưu trữ danh mục đó.
+
+50
+00:04:08,710 --> 00:04:13,960
+Chúng tôi thay đổi điều đó thành danh mục ở đây và hoàn hảo, lỗi sẽ biến mất.
+
+51
+00:04:14,410 --> 00:04:22,540
+Vì vậy, bây giờ trong đơn vị công việc, chúng tôi có thứ gì đó cho kho lưu trữ danh mục nơi chúng tôi cũng chuyển Dbcontext.
+
+52
+00:04:23,350 --> 00:04:26,500
+Cuối cùng, hãy để tôi sửa đổi lưu ở đây.
+
+53
+00:04:26,530 --> 00:04:30,250
+Cắt nó và dán việc thực hiện ở đây.
+
+54
+00:04:30,250 --> 00:04:35,710
+Và chúng tôi không cần phương thức lưu bên trong kho lưu trữ riêng lẻ.
+
+55
+00:04:36,190 --> 00:04:39,730
+Tôi cũng sẽ phải xóa nó khỏi giao diện.
+
+56
+00:04:40,750 --> 00:04:43,690
+Và hoàn hảo có vẻ tốt.
+
+57
+00:04:44,650 --> 00:04:52,180
+Vì vậy, với điều đó, đơn vị công việc của chúng tôi có vẻ tốt và nó có triển khai cho kho lưu trữ danh mục.
+
+58
+00:04:52,870 --> 00:04:57,400
+Hãy để tôi đóng cả hai tệp ở đây và trong video tiếp theo.
+
+59
+00:04:57,400 --> 00:05:01,660
+Hãy để tôi làm việc trên bộ điều khiển danh mục, không phải kho lưu trữ.
+
+60
+00:05:01,670 --> 00:05:04,030
+Tôi đã vô tình đóng nó lại.
+
+61
+00:05:04,750 --> 00:05:07,720
+Chúng tôi có bộ điều khiển danh mục ở đây.
+
+62
+00:05:07,720 --> 00:05:10,870
+Chúng tôi không muốn sử dụng kho lưu trữ danh mục.
+
+63
+00:05:10,900 --> 00:05:18,820
+Chúng tôi muốn sử dụng đơn vị công việc mà chúng tôi đã định cấu hình vì bên trong nó cũng có kho lưu trữ danh
+
+64
+00:05:18,820 --> 00:05:19,390
+mục.
+

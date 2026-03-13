@@ -1,0 +1,228 @@
+1
+00:00:02,280 --> 00:00:03,450
+Instructor: Now we have to replace
+
+2
+00:00:03,450 --> 00:00:06,660
+the CategoryRepository with unitOfWork
+
+3
+00:00:06,660 --> 00:00:08,042
+in the web project.
+
+4
+00:00:08,880 --> 00:00:11,430
+First we will go to Program.cs
+
+5
+00:00:11,430 --> 00:00:15,900
+and we will have to register that to dependency injection.
+
+6
+00:00:15,900 --> 00:00:19,560
+We no longer require the CategoryRepository.
+
+7
+00:00:19,560 --> 00:00:21,963
+We need unitOfWork this time.
+
+8
+00:00:23,040 --> 00:00:24,790
+So perfect, we have unitOfWork
+
+9
+00:00:25,650 --> 00:00:29,220
+and then unitOfWork internally creates an object
+
+10
+00:00:29,220 --> 00:00:33,180
+or implementation of categoryRepository.
+
+11
+00:00:33,180 --> 00:00:36,090
+So here we will have unitOfWork
+
+12
+00:00:36,090 --> 00:00:38,013
+and let me call that _unitOfWork.
+
+13
+00:00:40,590 --> 00:00:43,590
+We will get that using dependency injection
+
+14
+00:00:43,590 --> 00:00:45,273
+and we will call that unitOfWork.
+
+15
+00:00:47,760 --> 00:00:52,323
+And right here, _unitOfWork is equal to unitOfWork.
+
+16
+00:00:54,540 --> 00:00:57,690
+Now, in unitOfWork we have Category
+
+17
+00:00:57,690 --> 00:00:59,043
+and there we have GetAll.
+
+18
+00:00:59,940 --> 00:01:03,600
+So previously when we were using the CategoryRepository
+
+19
+00:01:03,600 --> 00:01:05,820
+we did not have to access that.
+
+20
+00:01:05,820 --> 00:01:07,380
+But now in unitOfWork
+
+21
+00:01:07,380 --> 00:01:10,650
+we have to write which object we are working on
+
+22
+00:01:10,650 --> 00:01:13,410
+or which repository we are working on.
+
+23
+00:01:13,410 --> 00:01:16,773
+And then we can do everything like before.
+
+24
+00:01:17,760 --> 00:01:22,200
+I will copy this, paste it in all the places here.
+
+25
+00:01:22,200 --> 00:01:24,120
+And when we have the Save,
+
+26
+00:01:24,120 --> 00:01:26,490
+we do not have that in repository.
+
+27
+00:01:26,490 --> 00:01:29,670
+That is directly inside unitOfWork.
+
+28
+00:01:29,670 --> 00:01:32,133
+So we do not need the repository name.
+
+29
+00:01:33,210 --> 00:01:38,210
+Then in the edit here we will paste unitOfWork.Category.
+
+30
+00:01:38,640 --> 00:01:41,700
+Same goes for Update or Save.
+
+31
+00:01:41,700 --> 00:01:43,863
+We only have unitOfWork.
+
+32
+00:01:44,760 --> 00:01:45,593
+Perfect.
+
+33
+00:01:45,593 --> 00:01:48,513
+Let me modify in all the places.
+
+34
+00:01:49,834 --> 00:01:52,443
+And great, that looks good.
+
+35
+00:01:53,730 --> 00:01:56,280
+With that, let me run the project again
+
+36
+00:01:56,280 --> 00:01:59,493
+and see if everything works as expected.
+
+37
+00:02:01,560 --> 00:02:05,250
+Perfect. We are able to get all the category here.
+
+38
+00:02:05,250 --> 00:02:07,890
+Let me try to create one.
+
+39
+00:02:07,890 --> 00:02:09,240
+That works.
+
+40
+00:02:09,240 --> 00:02:12,900
+And DELETE is also functional.
+
+41
+00:02:12,900 --> 00:02:16,050
+So everything is working as expected,
+
+42
+00:02:16,050 --> 00:02:18,660
+but now we are using the unitOfWork
+
+43
+00:02:18,660 --> 00:02:21,093
+rather than directly the repository.
+
+44
+00:02:22,050 --> 00:02:24,420
+This gives us one advantage.
+
+45
+00:02:24,420 --> 00:02:26,550
+In unitOfWork we will have access
+
+46
+00:02:26,550 --> 00:02:29,820
+to all the repositories that we want,
+
+47
+00:02:29,820 --> 00:02:32,970
+but with that we have a disadvantage as well.
+
+48
+00:02:32,970 --> 00:02:34,800
+Like in the CategoryController
+
+49
+00:02:34,800 --> 00:02:37,770
+we only want CategoryRepository,
+
+50
+00:02:37,770 --> 00:02:41,160
+but in unitOfWork it will create implementation
+
+51
+00:02:41,160 --> 00:02:44,190
+of all the repositories that are registered,
+
+52
+00:02:44,190 --> 00:02:49,190
+like if we have product, if we have order, or shopping cart.
+
+53
+00:02:49,500 --> 00:02:52,440
+So there are pros and cons in both of them,
+
+54
+00:02:52,440 --> 00:02:55,650
+but personally speaking, I like the unitOfWork
+
+55
+00:02:55,650 --> 00:02:59,730
+implementation because it is much cleaner.
+
+56
+00:02:59,730 --> 00:03:01,530
+So with that configured,
+
+57
+00:03:01,530 --> 00:03:04,443
+let me continue from the next video.
+

@@ -1,0 +1,124 @@
+1
+00:00:01,750 --> 00:00:05,140
+Chúng tôi đã thêm mô hình sản phẩm vào dự án của mình.
+
+2
+00:00:05,410 --> 00:00:11,470
+Bây giờ chúng tôi chưa thêm tất cả các thuộc tính, nhưng tôi đã thêm các thuộc tính cơ bản vào lúc này.
+
+3
+00:00:11,890 --> 00:00:19,110
+Trước khi thêm bảng sản phẩm này vào cơ sở dữ liệu của mình, chúng tôi sẽ phải thêm bảng đó vào Ngữ cảnh DB của ứng dụng
+
+4
+00:00:19,120 --> 00:00:21,250
+bên trong quyền truy cập dữ liệu.
+
+5
+00:00:22,090 --> 00:00:32,080
+Vì vậy, hãy để tôi sao chép bộ DB này cho danh mục và chúng tôi sẽ đổi tên nó thành sản phẩm và tên bảng mà tôi
+
+6
+00:00:32,080 --> 00:00:34,090
+sẽ gọi là sản phẩm.
+
+7
+00:00:34,330 --> 00:00:36,070
+Bây giờ có vẻ tốt.
+
+8
+00:00:36,400 --> 00:00:39,720
+Trên hết, tôi cũng muốn xem sản phẩm.
+
+9
+00:00:39,730 --> 00:00:47,470
+Vì vậy, hãy để tôi sao chép dữ liệu băm ở đây, dán nó một lần nữa và sau đó chúng ta sẽ phải tạo các sản phẩm mới
+
+10
+00:00:47,470 --> 00:00:48,100
+ở đây.
+
+11
+00:00:49,090 --> 00:00:56,290
+Khi chúng tôi thấy nội dung nào đó, bạn có thể viết bất cứ điều gì bạn muốn, nhưng để đảm bảo tính nhất quán, tôi đã cung cấp
+
+12
+00:00:56,290 --> 00:00:57,700
+nội dung bên trong đó.
+
+13
+00:00:58,720 --> 00:01:03,430
+Nếu bạn mở phần tài nguyên và đoạn trích thứ sáu.
+
+14
+00:01:04,760 --> 00:01:06,950
+Chúng tôi có sản phẩm hạt giống.
+
+15
+00:01:07,220 --> 00:01:13,520
+Hãy để tôi mở bản sao đó và tôi sẽ dán nó vào bên trong dữ liệu băm.
+
+16
+00:01:13,850 --> 00:01:21,020
+Ở đó, tôi đang điền sáu sản phẩm và đây là tất cả các thuộc tính mà chúng tôi đã thêm vào trong
+
+17
+00:01:21,020 --> 00:01:26,330
+mô hình sản phẩm, do đó, nó phải hoàn toàn khớp với cấu hình đó.
+
+18
+00:01:26,360 --> 00:01:30,410
+Bây giờ chúng tôi có dữ liệu và chúng tôi có thể tạo bảng của mình.
+
+19
+00:01:31,410 --> 00:01:34,860
+Vì vậy, với điều đó, bạn có thể làm bài tập đầu tiên của mình.
+
+20
+00:01:35,490 --> 00:01:36,450
+Bên trong đó.
+
+21
+00:01:36,450 --> 00:01:39,180
+Tôi muốn bạn đẩy sản phẩm vào cơ sở dữ liệu.
+
+22
+00:01:39,180 --> 00:01:47,100
+Và khi bạn tạo bảng sản phẩm cùng với đó, tất cả sáu bản ghi cũng sẽ được tạo vì chúng tôi đã thêm
+
+23
+00:01:47,100 --> 00:01:49,740
+vào bên trong dữ liệu băm.
+
+24
+00:01:50,950 --> 00:01:58,270
+Khi bạn tạo bảng sản phẩm, thì bạn phải triển khai kho lưu trữ sản phẩm để truy cập dữ liệu.
+
+25
+00:01:58,750 --> 00:02:03,760
+Bạn sẽ tạo giao diện kho lưu trữ sản phẩm và triển khai giao diện đó.
+
+26
+00:02:03,910 --> 00:02:08,560
+Và sau đó, bạn cũng sẽ thêm nó vào đơn vị công việc.
+
+27
+00:02:08,979 --> 00:02:14,290
+Đó là cấu hình cơ bản mà bạn phải thực hiện cho nhiệm vụ đầu tiên của mình.
+
+28
+00:02:14,680 --> 00:02:16,270
+Thật là may mắn vì điều đó.
+
+29
+00:02:16,270 --> 00:02:22,420
+Và chúng tôi đã làm điều đó với kho lưu trữ danh mục và bảng danh mục.
+
+30
+00:02:22,720 --> 00:02:29,380
+Tất cả các bước đều giống hệt nhau, vì vậy tôi hy vọng bạn thực hành tốt trước khi chúng ta chuyển sang
+
+31
+00:02:29,380 --> 00:02:30,580
+video tiếp theo.
+

@@ -1,0 +1,160 @@
+1
+00:00:01,620 --> 00:00:05,560
+Next item that we want to work on is in category.
+
+2
+00:00:05,580 --> 00:00:12,840
+We have list and create new category, but we want to work on editing and existing category.
+
+3
+00:00:13,290 --> 00:00:19,050
+For that on the index page, we need buttons to edit or delete any category.
+
+4
+00:00:19,940 --> 00:00:29,000
+Let me open the bootstrap icons for that and look for an icon for edit, which will be a pencil icon.
+
+5
+00:00:29,910 --> 00:00:30,540
+Perfect.
+
+6
+00:00:30,540 --> 00:00:31,920
+This looks good.
+
+7
+00:00:32,070 --> 00:00:33,330
+Copy that.
+
+8
+00:00:33,420 --> 00:00:36,860
+And we will add that in the index page.
+
+9
+00:00:36,870 --> 00:00:40,590
+So index view of category.
+
+10
+00:00:41,410 --> 00:00:42,280
+Right here.
+
+11
+00:00:42,280 --> 00:00:51,340
+We will also add one more touch and I will add td element where we will have the edit and delete button.
+
+12
+00:00:52,660 --> 00:00:55,750
+And here let me create a div.
+
+13
+00:00:55,750 --> 00:01:06,130
+Give it bootstrap classes of 75 for the width and BTN group and give that a role of group as well.
+
+14
+00:01:06,820 --> 00:01:09,850
+Now within this div we want to links.
+
+15
+00:01:10,030 --> 00:01:15,370
+So we will have two anchor tag and what controller it will go to.
+
+16
+00:01:15,520 --> 00:01:19,060
+We will be working with the same category controller.
+
+17
+00:01:19,060 --> 00:01:24,520
+So we will write category and what action should we invoke?
+
+18
+00:01:25,340 --> 00:01:29,690
+When we edit a category, we will invoke the edit action.
+
+19
+00:01:30,350 --> 00:01:40,970
+And along with that, let me give it some bootstrap classes of BTN, BTN primary and margin X of two.
+
+20
+00:01:42,020 --> 00:01:50,120
+And the anchor tag here, we will paste the icon and I will write, edit, save that.
+
+21
+00:01:50,360 --> 00:01:53,270
+Let me see how the UI looks like.
+
+22
+00:01:53,390 --> 00:01:54,400
+Perfect.
+
+23
+00:01:54,410 --> 00:01:55,730
+Looks good.
+
+24
+00:01:55,940 --> 00:01:57,740
+Let me copy this.
+
+25
+00:01:58,010 --> 00:02:00,010
+Paste it one more time.
+
+26
+00:02:00,020 --> 00:02:02,240
+Next action will be delete.
+
+27
+00:02:02,540 --> 00:02:06,250
+Now, right now we do not have any of these actions.
+
+28
+00:02:06,260 --> 00:02:09,949
+We will be adding them in the upcoming videos.
+
+29
+00:02:11,060 --> 00:02:16,730
+That will be BTN delete here and I need a new icon for delete.
+
+30
+00:02:17,090 --> 00:02:20,660
+Let me search for a trash icon.
+
+31
+00:02:22,000 --> 00:02:23,620
+And trash fill.
+
+32
+00:02:23,620 --> 00:02:25,000
+That looks good.
+
+33
+00:02:25,270 --> 00:02:26,560
+Copy that.
+
+34
+00:02:26,650 --> 00:02:30,160
+Paste it right here.
+
+35
+00:02:32,480 --> 00:02:36,140
+And we forgot the text will be delete.
+
+36
+00:02:37,760 --> 00:02:38,960
+And perfect.
+
+37
+00:02:38,960 --> 00:02:42,260
+We need danger, not delete.
+
+38
+00:02:43,870 --> 00:02:44,550
+Great.
+
+39
+00:02:44,560 --> 00:02:48,400
+So our buttons for edit and delete are looking great.
+
+40
+00:02:48,910 --> 00:02:52,120
+Let me continue from the next video.
+

@@ -1,0 +1,220 @@
+1
+00:00:01,740 --> 00:00:09,150
+Bây giờ chúng ta cần tìm ra cách để đảm bảo rằng giỏ hàng đó chưa tồn tại cho người dùng và ID sản phẩm
+
+2
+00:00:09,180 --> 00:00:14,610
+đó, cả hai chỉ phải khớp với nhau thì đó là một mục nhập trùng lặp.
+
+3
+00:00:15,810 --> 00:00:22,020
+Vì vậy, những gì chúng ta có thể làm là vào giỏ hàng và lấy giỏ hàng từ cơ sở dữ liệu.
+
+4
+00:00:22,500 --> 00:00:27,780
+Vì vậy, chúng tôi sẽ nói gạch dưới đơn vị công việc, dot giỏ hàng dot get.
+
+5
+00:00:27,780 --> 00:00:34,920
+Và chúng tôi muốn có một giỏ hàng trong đó ID người dùng ứng dụng của bạn bằng với ID người dùng.
+
+6
+00:00:35,310 --> 00:00:40,950
+Và trên hết, chúng tôi muốn đảm bảo rằng ID sản phẩm cũng giống nhau.
+
+7
+00:00:41,530 --> 00:00:47,020
+Vì vậy, ID sản phẩm bằng với giỏ hàng chấm ID sản phẩm.
+
+8
+00:00:48,380 --> 00:00:53,510
+Nếu có bất kỳ mục nào trong cơ sở dữ liệu có cả hai mục phù hợp.
+
+9
+00:00:53,510 --> 00:01:00,590
+Vì vậy, nếu thẻ từ DB không phải là null, thì trong trường hợp đó, giỏ hàng đã tồn tại.
+
+10
+00:01:02,620 --> 00:01:06,040
+Trong phần khác ở đây, chúng ta phải thêm một giỏ hàng.
+
+11
+00:01:08,300 --> 00:01:11,750
+Để tôi cắt thẻ ở đây và dán nó vào đây.
+
+12
+00:01:11,750 --> 00:01:14,870
+Nhưng bây giờ làm thế nào để chúng tôi cập nhật giỏ hàng?
+
+13
+00:01:15,560 --> 00:01:22,130
+Đối với điều đó, những gì chúng tôi có thể làm là giỏ hàng từ DB được lấy từ cơ sở dữ liệu để chúng tôi có thể nói.
+
+14
+00:01:22,160 --> 00:01:30,680
+Giỏ hàng từ số lượng dấu chấm DB cộng bằng và chúng tôi có thể thêm số lượng bên trong số lượng dấu chấm trong giỏ hàng sẽ cung
+
+15
+00:01:30,710 --> 00:01:32,870
+cấp cho chúng tôi số lượng mới.
+
+16
+00:01:33,620 --> 00:01:39,950
+Khi chúng tôi có số lượng mới trên đơn vị công việc chấm giỏ hàng, chúng tôi đã cập nhật.
+
+17
+00:01:39,980 --> 00:01:41,690
+Chúng ta có thể gọi điều đó.
+
+18
+00:01:43,040 --> 00:01:48,260
+Với cấu hình đó, hãy để tôi chạy ứng dụng và xem nó có hoạt động không.
+
+19
+00:01:51,160 --> 00:01:53,260
+Tôi sẽ đăng nhập với cùng một người dùng.
+
+20
+00:01:53,290 --> 00:01:57,940
+Của khách hàng đây rồi cho em đi cùng sản phẩm với ạ.
+
+21
+00:01:57,940 --> 00:01:59,260
+Bầu trời tối.
+
+22
+00:01:59,500 --> 00:02:04,060
+Ngay bây giờ tôi không có bất kỳ sản phẩm nào vì tôi đã xóa mọi thứ.
+
+23
+00:02:04,540 --> 00:02:07,210
+Hãy để tôi thêm ba mục.
+
+24
+00:02:09,449 --> 00:02:10,680
+Điều đó đã làm việc.
+
+25
+00:02:10,710 --> 00:02:12,120
+Hãy để tôi xem.
+
+26
+00:02:12,390 --> 00:02:13,470
+Hoàn hảo.
+
+27
+00:02:13,710 --> 00:02:18,150
+Hãy để tôi cố gắng đi vào chi tiết và thêm bốn điều nữa.
+
+28
+00:02:18,900 --> 00:02:23,190
+Và nếu tôi thực thi ở đây, chúng ta sẽ thấy một vấn đề.
+
+29
+00:02:23,610 --> 00:02:26,070
+Nó tạo ra một bản ghi mới ở đây.
+
+30
+00:02:26,100 --> 00:02:31,020
+Hãy để tôi thêm một điểm sửa lỗi và tôi sẽ thử lại lần nữa.
+
+31
+00:02:32,080 --> 00:02:32,890
+Đếm một.
+
+32
+00:02:32,890 --> 00:02:34,120
+Đó là tốt.
+
+33
+00:02:34,330 --> 00:02:36,790
+Cắt từ DB không phải là null.
+
+34
+00:02:38,500 --> 00:02:39,340
+Hoàn hảo.
+
+35
+00:02:39,370 --> 00:02:44,050
+Nó đang được cập nhật, nhưng nó vẫn đang tạo một bản ghi mới.
+
+36
+00:02:44,170 --> 00:02:51,010
+Và lý do là nếu chúng ta kiểm tra giỏ hàng ở đây, bạn có thể thấy ID bằng không.
+
+37
+00:02:51,340 --> 00:02:54,460
+Vấn đề mà chúng tôi có ở đây là trong bản cập nhật.
+
+38
+00:02:54,490 --> 00:02:58,830
+Chúng ta nên chuyển giỏ hàng mà chúng ta đã lấy từ cơ sở dữ liệu.
+
+39
+00:02:58,840 --> 00:03:01,300
+Đó là nơi chúng tôi có số lượng mới.
+
+40
+00:03:02,550 --> 00:03:03,780
+Với điều đó được lưu lại.
+
+41
+00:03:03,780 --> 00:03:06,000
+Hãy để tôi loại bỏ điểm gỡ lỗi.
+
+42
+00:03:06,120 --> 00:03:08,220
+Chúng tôi sẽ phải xóa mọi thứ một lần nữa.
+
+43
+00:03:08,220 --> 00:03:10,110
+Đây, hãy để tôi làm điều đó.
+
+44
+00:03:11,280 --> 00:03:12,240
+Hoàn hảo.
+
+45
+00:03:12,240 --> 00:03:14,160
+Và hãy để tôi chạy cái này.
+
+46
+00:03:16,820 --> 00:03:18,530
+Chúng tôi sẽ đi vào chi tiết.
+
+47
+00:03:18,530 --> 00:03:20,720
+Tôi sẽ phải đăng nhập trước.
+
+48
+00:03:23,700 --> 00:03:26,760
+Và hãy để tôi thử thêm ba lần đếm.
+
+49
+00:03:27,630 --> 00:03:30,960
+Chuyển đến cơ sở dữ liệu hoạt động.
+
+50
+00:03:31,470 --> 00:03:33,780
+Thêm một số nữa ở đây.
+
+51
+00:03:35,830 --> 00:03:37,510
+Và hãy xem.
+
+52
+00:03:37,690 --> 00:03:38,620
+Hoàn hảo.
+
+53
+00:03:38,650 --> 00:03:41,530
+Bây giờ số lượng được cập nhật thành công.
+
+54
+00:03:42,400 --> 00:03:51,310
+Và nếu tôi cố gắng thêm một sản phẩm mới, chúng ta sẽ thấy một mục nhập mới với ID sản phẩm khác hoạt động.
+
+55
+00:03:51,310 --> 00:03:56,080
+Và cùng với đó, chúng tôi có thể thêm các thực thể vào giỏ hàng.
+

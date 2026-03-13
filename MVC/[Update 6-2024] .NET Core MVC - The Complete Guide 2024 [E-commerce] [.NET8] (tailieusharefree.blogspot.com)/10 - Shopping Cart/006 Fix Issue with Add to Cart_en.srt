@@ -1,0 +1,252 @@
+1
+00:00:01,950 --> 00:00:04,019
+Instructor: Now we need to figure out a way
+
+2
+00:00:04,019 --> 00:00:07,230
+to make sure that Cart does not already exist
+
+3
+00:00:07,230 --> 00:00:10,320
+while that User and ProductID.
+
+4
+00:00:10,320 --> 00:00:12,180
+Both of them must match.
+
+5
+00:00:12,180 --> 00:00:14,643
+Only then, it is a duplicate entry.
+
+6
+00:00:16,110 --> 00:00:19,440
+So, what we can do, is we can go to ShoppingCart
+
+7
+00:00:19,440 --> 00:00:22,770
+and get CartFrom database,
+
+8
+00:00:22,770 --> 00:00:27,770
+so will say _UnitOfWork.ShoppingCart.Get
+
+9
+00:00:28,110 --> 00:00:32,910
+and we want to get a ShoppingCart where U.ApplicationUserId
+
+10
+00:00:32,910 --> 00:00:37,470
+is equal equal to UserId and, on top of that,
+
+11
+00:00:37,470 --> 00:00:41,790
+we want to make sure that ProductId is also same.
+
+12
+00:00:41,790 --> 00:00:46,147
+So, ProductId is equal equal to ShoppingCart.ProductId
+
+13
+00:00:48,480 --> 00:00:51,660
+If there is any entry in the database,
+
+14
+00:00:51,660 --> 00:00:53,730
+with both of them matching,
+
+15
+00:00:53,730 --> 00:00:57,600
+so if CartFromdb is not null,
+
+16
+00:00:57,600 --> 00:01:00,393
+in that case, the ShoppingCart already exists.
+
+17
+00:01:02,790 --> 00:01:05,973
+In the else part here, we have to add a Cart.
+
+18
+00:01:08,490 --> 00:01:12,000
+Let me cut add Cart here and paste it here,
+
+19
+00:01:12,000 --> 00:01:15,037
+but now, how do we update the ShoppingCart?
+
+20
+00:01:15,930 --> 00:01:18,750
+Well that, what we can do is CartFromdb
+
+21
+00:01:18,750 --> 00:01:21,420
+is retrieved from the database.
+
+22
+00:01:21,420 --> 00:01:26,280
+So, we can say, CartFromdb.Count plus equal to
+
+23
+00:01:26,280 --> 00:01:30,990
+and we can add the Count that is inside ShoppingCart.Count
+
+24
+00:01:30,990 --> 00:01:32,823
+That will give us the new Count.
+
+25
+00:01:33,750 --> 00:01:38,750
+Once we have the new Count, on UnitOfWork.ShoppingCart
+
+26
+00:01:38,820 --> 00:01:41,643
+we have Update, we can invoke that.
+
+27
+00:01:43,110 --> 00:01:46,620
+With that configured, let me run the application
+
+28
+00:01:46,620 --> 00:01:48,273
+and see if that works.
+
+29
+00:01:51,210 --> 00:01:55,800
+I will log in with the same user of Customer here
+
+30
+00:01:55,800 --> 00:01:59,790
+and let me go to the same product, Dark Skies.
+
+31
+00:01:59,790 --> 00:02:02,040
+Right now, I do not have any product,
+
+32
+00:02:02,040 --> 00:02:04,800
+because I deleted everything.
+
+33
+00:02:04,800 --> 00:02:07,203
+Let me add three items.
+
+34
+00:02:09,509 --> 00:02:10,919
+That worked.
+
+35
+00:02:10,919 --> 00:02:13,980
+Let me see, perfect.
+
+36
+00:02:13,980 --> 00:02:18,100
+Let me try to go to Details and add four more
+
+37
+00:02:19,050 --> 00:02:23,880
+and if I execute here, we see an issue.
+
+38
+00:02:23,880 --> 00:02:26,340
+It creates a new record here.
+
+39
+00:02:26,340 --> 00:02:28,800
+Let me add a debugging point
+
+40
+00:02:28,800 --> 00:02:31,053
+and I will try that once again.
+
+41
+00:02:32,220 --> 00:02:34,620
+Count one, that is fine.
+
+42
+00:02:34,620 --> 00:02:39,480
+CartFromdb is not null, perfect.
+
+43
+00:02:39,480 --> 00:02:41,370
+It is calling it Update,
+
+44
+00:02:41,370 --> 00:02:44,490
+but still it is creating a new record
+
+45
+00:02:44,490 --> 00:02:48,307
+and the reason is if we examine the ShoppingCart here,
+
+46
+00:02:48,307 --> 00:02:51,660
+you can see the Id is zero.
+
+47
+00:02:51,660 --> 00:02:54,690
+The issue that we have here is in Update.
+
+48
+00:02:54,690 --> 00:02:57,600
+We should be passing the Cart that we retrieved
+
+49
+00:02:57,600 --> 00:03:01,293
+from database, that is where we have the new Count.
+
+50
+00:03:02,640 --> 00:03:06,390
+With that saved, let me remove debugging point.
+
+51
+00:03:06,390 --> 00:03:08,850
+We will have to delete things again here.
+
+52
+00:03:08,850 --> 00:03:12,540
+Let me do that, perfect,
+
+53
+00:03:12,540 --> 00:03:14,163
+and let me run this.
+
+54
+00:03:16,950 --> 00:03:18,540
+We will go to Details.
+
+55
+00:03:18,540 --> 00:03:20,620
+I will have to log in first
+
+56
+00:03:23,880 --> 00:03:26,763
+and let me try to add 3 Count.
+
+57
+00:03:27,870 --> 00:03:32,870
+Go to database, that works, add 1 more Count here,
+
+58
+00:03:35,940 --> 00:03:38,880
+and let's see, perfect.
+
+59
+00:03:38,880 --> 00:03:41,523
+Now, the Count is updated successfully,
+
+60
+00:03:42,690 --> 00:03:45,660
+and if I try to add a new product,
+
+61
+00:03:45,660 --> 00:03:50,340
+we should see a new entry with the different ProductId.
+
+62
+00:03:50,340 --> 00:03:54,690
+That works and, with that, we are able to add entities
+
+63
+00:03:54,690 --> 00:03:56,227
+to the ShoppingCart.
+

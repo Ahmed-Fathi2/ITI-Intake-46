@@ -1,0 +1,408 @@
+1
+00:00:01,490 --> 00:00:06,020
+Bây giờ tôi muốn bạn nghĩ về những gì sẽ có trên trang chỉnh sửa.
+
+2
+00:00:06,470 --> 00:00:13,550
+Về cơ bản, trang chỉnh sửa sẽ giống hệt như trang tạo, nhưng tên danh mục và thứ tự hiển
+
+3
+00:00:13,550 --> 00:00:19,640
+thị sẽ được điền dựa trên bất kỳ danh mục nào mà người dùng muốn chỉnh sửa.
+
+4
+00:00:20,390 --> 00:00:27,770
+Hơn nữa, khi chúng ta tạo một danh mục, chúng ta không quan tâm danh mục đó là gì, nhưng khi chỉnh sửa
+
+5
+00:00:27,770 --> 00:00:33,200
+một danh mục, chúng ta cần biết người dùng muốn chỉnh sửa danh mục nào.
+
+6
+00:00:33,230 --> 00:00:41,150
+Dựa vào đó, chúng tôi sẽ truy xuất danh mục đó trong phương thức hành động Nhận và chuyển danh mục đó sang chế độ xem của chúng tôi để hiển
+
+7
+00:00:41,150 --> 00:00:42,230
+thị danh mục đó.
+
+8
+00:00:42,970 --> 00:00:50,380
+Nhưng trước tiên, hãy để tôi thiết kế một chế độ xem trống trong đó khi chỉnh sửa, về cơ bản, nó sẽ hiển thị cùng một chế độ xem mà
+
+9
+00:00:50,380 --> 00:00:51,880
+chúng ta có đối với Tạo.
+
+10
+00:00:52,910 --> 00:00:55,370
+Chúng tôi sẽ quay lại mã của chúng tôi ở đây.
+
+11
+00:00:55,550 --> 00:00:57,180
+Dừng dự án.
+
+12
+00:00:57,200 --> 00:01:02,810
+Đầu tiên, chúng ta cần thêm phương thức hành động đó bên trong bộ điều khiển danh mục.
+
+13
+00:01:02,930 --> 00:01:09,500
+Hãy để tôi đóng mọi thứ khác và chúng ta sẽ có cả phương thức hành động get và post.
+
+14
+00:01:09,830 --> 00:01:15,110
+Khi chúng ta không định nghĩa bất cứ thứ gì ở đây theo mặc định, thì đó là một phương thức hành động get.
+
+15
+00:01:15,930 --> 00:01:23,600
+Vì vậy, chúng tôi có thể sao chép cả phương thức hành động get và post để tạo và dán nó một lần nữa.
+
+16
+00:01:23,610 --> 00:01:26,310
+Đổi tên để được chỉnh sửa ở đây.
+
+17
+00:01:27,480 --> 00:01:30,240
+Và chúng tôi cũng có bài chỉnh sửa.
+
+18
+00:01:31,180 --> 00:01:38,680
+Bây giờ khi chúng tôi đang làm việc với chỉnh sửa Giống như tôi đã nói trước đây, chúng tôi cần ID mà người dùng muốn chỉnh sửa.
+
+19
+00:01:40,000 --> 00:01:44,680
+Vì vậy, chúng tôi sẽ truy xuất ID tham số ngay tại đây.
+
+20
+00:01:46,020 --> 00:01:55,140
+Chúng tôi có thể biến nó thành null ở đây và sau đó chúng tôi có thể thêm xác thực rằng nếu ID là null hoặc nếu ID bằng 0, điều
+
+21
+00:01:55,140 --> 00:02:01,380
+đó có nghĩa đó không phải là ID hợp lệ để chúng tôi có thể trực tiếp quay lại.
+
+22
+00:02:01,380 --> 00:02:02,460
+Không tìm thấy.
+
+23
+00:02:03,270 --> 00:02:09,690
+Những gì bạn cũng có thể làm là bạn có thể có một trang lỗi và bạn có thể quay lại chế độ xem đó, đây
+
+24
+00:02:09,690 --> 00:02:13,920
+sẽ là một chế độ xem lỗi hiển thị nội dung nào đó không hợp lệ.
+
+25
+00:02:15,080 --> 00:02:18,590
+Nhưng tôi sẽ giữ mọi thứ siêu đơn giản ngay bây giờ.
+
+26
+00:02:19,540 --> 00:02:25,180
+Sau đó, nếu ID hợp lệ, chúng tôi cần truy xuất danh mục đó từ cơ sở dữ liệu.
+
+27
+00:02:25,750 --> 00:02:33,220
+Bây giờ, khi chúng tôi truy xuất tất cả các danh mục, chúng tôi đã thực hiện điều đó bằng cách sử dụng các danh mục dấu chấm DB gạch
+
+28
+00:02:33,640 --> 00:02:40,450
+dưới tương tự như vậy, nếu chúng tôi phải truy xuất một thực thể danh mục, lõi khung có các phương thức trợ giúp cho việc
+
+29
+00:02:40,480 --> 00:02:41,050
+đó.
+
+30
+00:02:42,180 --> 00:02:44,610
+Bây giờ chúng ta có nhiều cách để làm điều đó.
+
+31
+00:02:44,610 --> 00:02:48,540
+Vì vậy, hãy để tôi dành thời gian và chỉ cho bạn nhiều cách.
+
+32
+00:02:49,740 --> 00:03:00,270
+Nó sẽ là một đối tượng danh mục và tôi sẽ gọi danh mục đó từ DB bằng với DB gạch dưới. Thể loại. chúng ta có một phương thức là find find về cơ bản sẽ hoạt động trên khóa chính của mô hình đó.
+
+33
+00:03:00,270 --> 00:03:08,310
+Chúng tôi biết ID là khóa chính của danh mục, vì vậy nếu tôi chuyển
+
+34
+00:03:08,520 --> 00:03:16,410
+ID ở đây, nó sẽ tự động tìm và gán ID đó cho danh mục từ DB.
+
+35
+00:03:16,410 --> 00:03:19,530
+Chúng tôi có một cảnh báo ở đây rằng nó có thể là null.
+
+36
+00:03:20,500 --> 00:03:23,260
+Và điều đó không sao, bởi vì sau khi chúng tôi tìm thấy điều đó, chúng tôi sẽ kiểm tra tại đây xem danh mục từ DB có rỗng không.
+
+37
+00:03:23,260 --> 00:03:31,270
+Trong trường hợp đó, chúng tôi sẽ trở lại.
+
+38
+00:03:34,190 --> 00:03:36,860
+Không tìm thấy.
+
+39
+00:03:36,860 --> 00:03:37,880
+Nhưng nếu nó tìm thấy danh mục, thì chúng tôi sẽ chuyển danh mục đó sang chế độ xem của chúng tôi và hiển thị danh mục đó.
+
+40
+00:03:40,400 --> 00:03:46,730
+Rất hoàn hảo.
+
+41
+00:03:47,000 --> 00:03:48,110
+Đó là một cách để truy xuất danh mục.
+
+42
+00:03:48,110 --> 00:03:51,320
+Hãy để tôi xem nếu nó hoạt động.
+
+43
+00:03:51,950 --> 00:03:54,110
+Chúng tôi sẽ lo lắng về hành động đăng sau này.
+
+44
+00:03:54,650 --> 00:03:57,800
+Nhưng trước đó, để nó hoạt động,
+
+45
+00:03:57,800 --> 00:04:05,150
+chúng ta cần chuyển ID khi gọi phương thức hành động chỉnh sửa.
+
+46
+00:04:05,150 --> 00:04:05,930
+Nếu tôi chuyển đến hành động lập chỉ mục của danh mục nơi chúng tôi đang gọi chỉnh sửa, chúng tôi sẽ không chuyển ID.
+
+47
+00:04:06,690 --> 00:04:14,010
+Làm cách nào chúng tôi có thể chuyển ID khi chúng tôi đang gọi một liên kết ở đây?
+
+48
+00:04:14,790 --> 00:04:18,730
+Bởi vì nếu chúng tôi đang sử dụng thứ gì đó như href ở đây, chúng tôi có thể nói
+
+49
+00:04:18,750 --> 00:04:25,920
+rằng chúng tôi muốn chuyển đến danh mục chỉnh sửa dấu gạch chéo chuyển tiếp và sau đó chúng tôi có thể chuyển ID mà người dùng chọn ở đây.
+
+50
+00:04:25,920 --> 00:04:30,810
+Nhưng khi chúng tôi có trình trợ giúp thẻ, chúng tôi có một thứ gọi là ID tuyến đường ASP.
+
+51
+00:04:31,350 --> 00:04:37,170
+Với tuyến đường ASP.
+
+52
+00:04:38,310 --> 00:04:39,720
+Chúng tôi có thể vượt qua bất kỳ tài sản ngay tại đây.
+
+53
+00:04:39,750 --> 00:04:42,750
+Chúng ta có thể chuyển một thứ gọi là ID danh mục bằng và đó sẽ là ID trong OBJ.
+
+54
+00:04:43,110 --> 00:04:50,160
+Vì vậy, chúng ta phải sử dụng ký hiệu @ obj. nhận dạng.
+
+55
+00:04:50,370 --> 00:04:54,450
+Bạn có thể gọi đây là bất cứ điều gì bạn muốn.
+
+56
+00:04:55,580 --> 00:04:58,160
+Tôi sẽ gọi ID đó, bởi vì nếu chúng tôi kiểm tra bộ điều khiển danh mục, tôi có ID ngay tại đây.
+
+57
+00:04:58,190 --> 00:05:05,600
+Bằng cách đó, nó sẽ tự động ánh xạ đó.
+
+58
+00:05:05,630 --> 00:05:08,930
+Hoàn hảo.
+
+59
+00:05:10,230 --> 00:05:11,010
+Với cấu hình đó, hãy để tôi xem nó hoạt động.
+
+60
+00:05:11,100 --> 00:05:15,090
+Chúng tôi đi đến danh mục ở đây và chúng tôi sẽ chỉnh sửa scifi.
+
+61
+00:05:19,060 --> 00:05:23,680
+Chúng tôi có id là hai khi chúng tôi nhấn F10 ở đây.
+
+62
+00:05:24,420 --> 00:05:29,340
+Hoàn hảo.
+
+63
+00:05:30,270 --> 00:05:31,110
+Nó truy xuất danh mục đó.
+
+64
+00:05:31,110 --> 00:05:33,240
+Vì vậy, find đang hoạt động như mong đợi.
+
+65
+00:05:34,130 --> 00:05:37,130
+Bây giờ, như tôi đã nói trước đây, có nhiều cách để lấy một bản ghi.
+
+66
+00:05:37,520 --> 00:05:42,260
+Hãy để tôi cũng chỉ cho bạn những cách khác.
+
+67
+00:05:42,560 --> 00:05:45,470
+Tôi sẽ sao chép này.
+
+68
+00:05:45,980 --> 00:05:47,630
+Dán nó khoảng hai lần nữa ở đây.
+
+69
+00:05:48,390 --> 00:05:50,880
+Và tôi sẽ gọi đây là một và hai.
+
+70
+00:05:51,910 --> 00:05:54,190
+Đối với tên biến khác nhau.
+
+71
+00:05:54,220 --> 00:05:56,300
+Phương pháp tiếp theo chúng ta có một cái gì đó được gọi là đầu tiên hoặc mặc định.
+
+72
+00:05:56,320 --> 00:06:00,970
+Điều đó sẽ làm là nó sẽ sử dụng thao tác liên kết và chúng ta phải nói u. id bằng với ID đang được
+
+73
+00:06:01,680 --> 00:06:11,280
+chuyển ngay tại đây.
+
+74
+00:06:11,280 --> 00:06:13,650
+Bạn có thể biến trường này thành trường có thể rỗng và các cảnh báo sẽ biến mất.
+
+75
+00:06:15,060 --> 00:06:19,260
+Chúng ta đi thôi.
+
+76
+00:06:19,410 --> 00:06:20,800
+Nhưng trước tiên, mặc định của chúng tôi về cơ bản sẽ cố gắng tìm hiểu xem có bất kỳ bản ghi nào không.
+
+77
+00:06:20,820 --> 00:06:26,670
+Nếu không, nó sẽ trả về một đối tượng null.
+
+78
+00:06:26,700 --> 00:06:29,910
+Và điều đó sẽ được chỉ định ngay tại đây.
+
+79
+00:06:29,910 --> 00:06:32,730
+Đầu tiên, mặc định của chúng tôi sẽ hoạt động ngay cả khi ID không phải là chính.
+
+80
+00:06:34,040 --> 00:06:38,560
+Vì vậy, nếu bạn muốn tìm kiếm theo tên, bạn có thể nói tên ở đâu bằng hoặc bạn cũng có thể thực hiện . chứa.
+
+81
+00:06:38,570 --> 00:06:46,340
+Vì vậy, bạn có thể ưa thích với đầu tiên hoặc mặc định.
+
+82
+00:06:46,640 --> 00:06:50,000
+Nhưng khi bạn đang làm việc với find thì nó chỉ hoạt động trên khóa chính.
+
+83
+00:06:50,180 --> 00:06:55,160
+Vì vậy, bạn không thể thực hiện bất kỳ sửa đổi nào trong đó.
+
+84
+00:06:55,160 --> 00:06:58,730
+Vì vậy, đó là con đường khác.
+
+85
+00:07:00,240 --> 00:07:02,130
+Và cuối cùng, trên các danh mục,
+
+86
+00:07:02,130 --> 00:07:09,840
+chúng ta có một điều kiện tương tự như điều kiện đầu tiên hoặc mặc định, chúng ta có thể sử dụng thao tác liên kết và nói u. id bằng với ID và khi chúng tôi truy xuất nó trên đó, trước tiên
+
+87
+00:07:09,840 --> 00:07:19,770
+chúng tôi có thể thêm mặc định của mình.
+
+88
+00:07:19,770 --> 00:07:21,240
+Bây giờ, thông thường tôi
+
+89
+00:07:22,000 --> 00:07:28,420
+thích cách tiếp cận đầu tiên hoặc mặc định, trừ khi có một số tình huống mà bạn phải thực hiện khá nhiều
+
+90
+00:07:28,420 --> 00:07:35,410
+phép tính hoặc lọc và sau đó chỉ lấy đầu tiên hoặc mặc định, khi đó tôi sẽ sử dụng cách tiếp cận cuối cùng ở đây.
+
+91
+00:07:35,410 --> 00:07:36,850
+Nhưng nếu chúng ta thêm
+
+92
+00:07:37,540 --> 00:07:44,860
+một điểm sửa lỗi và nếu chúng ta chạy ứng dụng, chúng ta sẽ thấy cả ba điểm này hoạt động giống hệt nhau.
+
+93
+00:07:44,860 --> 00:07:46,330
+Tôi sẽ làm chỉnh sửa cho bài kiểm tra ở đây.
+
+94
+00:07:47,160 --> 00:07:49,650
+Nó đạt đến điểm dừng của chúng tôi và điền vào db1.
+
+95
+00:07:50,190 --> 00:07:55,710
+db2 phổ biến.
+
+96
+00:07:55,740 --> 00:07:58,100
+đông dân cư.
+
+97
+00:07:58,110 --> 00:07:59,520
+Hoàn hảo.
+
+98
+00:07:59,760 --> 00:08:00,780
+Vì vậy, cùng với đó, chúng ta đã thấy nhiều cách để truy xuất một trong các danh mục từ cơ sở dữ liệu.
+
+99
+00:08:01,260 --> 00:08:07,830
+Tôi sẽ bình luận về hai cái sau ở đây và điều đó có vẻ tốt.
+
+100
+00:08:08,520 --> 00:08:13,260
+Bây giờ chúng ta đang chuyển các danh mục đến dạng xem, chúng
+
+101
+00:08:14,280 --> 00:08:21,000
+ta có thể làm việc trên dạng xem và hiển thị tất cả các thuộc tính của danh mục.
+
+102
+00:08:21,000 --> 00:08:22,050
+Hãy để tôi làm điều đó trong video tiếp theo.
+

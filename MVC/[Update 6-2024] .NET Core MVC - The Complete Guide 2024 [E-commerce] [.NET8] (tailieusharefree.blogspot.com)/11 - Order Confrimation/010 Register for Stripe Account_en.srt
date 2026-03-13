@@ -1,0 +1,100 @@
+1
+00:00:01,859 --> 00:00:04,230
+Instructor: Now if the user is not a company
+
+2
+00:00:04,230 --> 00:00:08,400
+and if it is a customer, we need to process payment.
+
+3
+00:00:08,400 --> 00:00:11,650
+For that we will be using Stripe integration
+
+4
+00:00:12,540 --> 00:00:15,420
+In order to integrate that in our project,
+
+5
+00:00:15,420 --> 00:00:18,900
+first thing, we need to sign up for an account.
+
+6
+00:00:18,900 --> 00:00:20,730
+If you do not have an account,
+
+7
+00:00:20,730 --> 00:00:23,670
+make sure to sign up for a free account.
+
+8
+00:00:23,670 --> 00:00:27,273
+I already have one, so let me continue.
+
+9
+00:00:29,700 --> 00:00:31,590
+Once you are in the account
+
+10
+00:00:31,590 --> 00:00:34,680
+you might have an account right here.
+
+11
+00:00:34,680 --> 00:00:36,990
+We will be creating a new account
+
+12
+00:00:36,990 --> 00:00:40,200
+that way you can see everything from scratch.
+
+13
+00:00:40,200 --> 00:00:44,103
+I will call that as Bulky and Create account.
+
+14
+00:00:46,530 --> 00:00:47,363
+Perfect.
+
+15
+00:00:47,363 --> 00:00:49,080
+Once we have that here,
+
+16
+00:00:49,080 --> 00:00:52,863
+right now we are in the test mode and that is sufficient.
+
+17
+00:00:53,820 --> 00:00:56,880
+If you go to developers here, and if you look
+
+18
+00:00:56,880 --> 00:01:01,880
+for API keys, we need two API keys for Stripe.
+
+19
+00:01:01,890 --> 00:01:06,363
+One is a publishable key and the other one is a secret key.
+
+20
+00:01:07,410 --> 00:01:09,930
+Now, do not try to use the same keys here
+
+21
+00:01:09,930 --> 00:01:13,290
+because I will be updating them after the videos
+
+22
+00:01:13,290 --> 00:01:18,290
+for security purpose, but you can sign up for your account
+
+23
+00:01:18,630 --> 00:01:23,250
+and get your own publishable and secret keys for free.
+
+24
+00:01:23,250 --> 00:01:24,690
+So make sure to register
+
+25
+00:01:24,690 --> 00:01:28,803
+for an account before you continue from the next video.
+

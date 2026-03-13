@@ -1,0 +1,272 @@
+1
+00:00:02,100 --> 00:00:03,180
+Instructor: Before we work on
+
+2
+00:00:03,180 --> 00:00:04,440
+placing the order,
+
+3
+00:00:04,440 --> 00:00:05,700
+let me walk you through
+
+4
+00:00:05,700 --> 00:00:07,320
+the order status management
+
+5
+00:00:07,320 --> 00:00:10,620
+of what happens when an order is placed,
+
+6
+00:00:10,620 --> 00:00:12,753
+how the status will be updated.
+
+7
+00:00:13,770 --> 00:00:16,410
+So first, what will happen is when a customer
+
+8
+00:00:16,410 --> 00:00:18,030
+places an order,
+
+9
+00:00:18,030 --> 00:00:20,340
+they will have to make a payment.
+
+10
+00:00:20,340 --> 00:00:21,840
+Before they make a payment,
+
+11
+00:00:21,840 --> 00:00:24,150
+the order status will be pending,
+
+12
+00:00:24,150 --> 00:00:27,090
+and payment status will be pending.
+
+13
+00:00:27,090 --> 00:00:29,190
+Once the payment is successful
+
+14
+00:00:29,190 --> 00:00:31,530
+on the order confirmation page,
+
+15
+00:00:31,530 --> 00:00:34,140
+the order status will be approved,
+
+16
+00:00:34,140 --> 00:00:37,653
+and the payment status will also be approved.
+
+17
+00:00:38,490 --> 00:00:41,850
+After that, admin will start processing the order
+
+18
+00:00:41,850 --> 00:00:44,010
+so the order status will be updated
+
+19
+00:00:44,010 --> 00:00:45,210
+to processing,
+
+20
+00:00:45,210 --> 00:00:49,020
+but payment status always stays at approved
+
+21
+00:00:49,020 --> 00:00:51,000
+once it is approved.
+
+22
+00:00:51,000 --> 00:00:52,560
+when the order is shipped,
+
+23
+00:00:52,560 --> 00:00:55,170
+the status will be updated to shipped,
+
+24
+00:00:55,170 --> 00:00:59,010
+and payment status will remain as approved.
+
+25
+00:00:59,010 --> 00:01:01,560
+Now this is the flow that we have
+
+26
+00:01:01,560 --> 00:01:04,800
+for a customer placing an order,
+
+27
+00:01:04,800 --> 00:01:06,060
+but in our website,
+
+28
+00:01:06,060 --> 00:01:08,340
+we also have another scenario
+
+29
+00:01:08,340 --> 00:01:11,373
+where a company user is placing an order.
+
+30
+00:01:12,720 --> 00:01:15,390
+When a company user places an order,
+
+31
+00:01:15,390 --> 00:01:17,730
+they do not have to make any payment
+
+32
+00:01:17,730 --> 00:01:19,590
+because they will have 30 days
+
+33
+00:01:19,590 --> 00:01:21,360
+to make the payment.
+
+34
+00:01:21,360 --> 00:01:22,800
+So they will directly land
+
+35
+00:01:22,800 --> 00:01:25,020
+on the order confirmation page,
+
+36
+00:01:25,020 --> 00:01:27,810
+and they will see their status as approved,
+
+37
+00:01:27,810 --> 00:01:30,270
+and payment status will be approved
+
+38
+00:01:30,270 --> 00:01:31,803
+for delayed payment.
+
+39
+00:01:32,970 --> 00:01:34,980
+Next status will be processing,
+
+40
+00:01:34,980 --> 00:01:38,880
+which is same and shipped that is also same,
+
+41
+00:01:38,880 --> 00:01:41,010
+but the payment status for all of them
+
+42
+00:01:41,010 --> 00:01:44,400
+will be approved for delayed payment.
+
+43
+00:01:44,400 --> 00:01:47,520
+Then let's say after 10 days or 20 days,
+
+44
+00:01:47,520 --> 00:01:50,310
+whenever the company makes a payment,
+
+45
+00:01:50,310 --> 00:01:51,180
+at that point,
+
+46
+00:01:51,180 --> 00:01:55,650
+that payment status will be updated to approve,
+
+47
+00:01:55,650 --> 00:01:58,080
+and company user will have 30 days
+
+48
+00:01:58,080 --> 00:02:01,803
+to make the payment after the order is shipped.
+
+49
+00:02:02,730 --> 00:02:04,440
+So that is the default flow
+
+50
+00:02:04,440 --> 00:02:08,280
+that we will have when we are placing an order.
+
+51
+00:02:08,280 --> 00:02:09,840
+If it is a customer,
+
+52
+00:02:09,840 --> 00:02:12,420
+they will be navigated to make a payment.
+
+53
+00:02:12,420 --> 00:02:14,010
+If it is a company,
+
+54
+00:02:14,010 --> 00:02:16,650
+their status will directly be approved,
+
+55
+00:02:16,650 --> 00:02:19,440
+and the payment status will be approved
+
+56
+00:02:19,440 --> 00:02:20,883
+for delayed payment.
+
+57
+00:02:21,870 --> 00:02:24,510
+Now all of these order status here,
+
+58
+00:02:24,510 --> 00:02:27,300
+rather than having them in a magic string,
+
+59
+00:02:27,300 --> 00:02:29,100
+it makes sense to add them
+
+60
+00:02:29,100 --> 00:02:31,113
+to the static detail file.
+
+61
+00:02:32,400 --> 00:02:34,470
+So let me switch back here,
+
+62
+00:02:34,470 --> 00:02:37,230
+and navigate to static details,
+
+63
+00:02:37,230 --> 00:02:38,640
+and I will be creating
+
+64
+00:02:38,640 --> 00:02:41,790
+all the constant right here.
+
+65
+00:02:41,790 --> 00:02:45,540
+I have added the constant for order status here,
+
+66
+00:02:45,540 --> 00:02:48,033
+and here we have the payment status.
+
+67
+00:02:49,110 --> 00:02:50,550
+With that configured,
+
+68
+00:02:50,550 --> 00:02:53,253
+let me continue from the next video.
+

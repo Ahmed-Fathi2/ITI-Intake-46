@@ -1,0 +1,112 @@
+1
+00:00:01,650 --> 00:00:04,140
+Instructor: When you are working with data tables,
+
+2
+00:00:04,140 --> 00:00:06,573
+you have to be careful about one thing.
+
+3
+00:00:07,440 --> 00:00:09,300
+Number of columns that we have
+
+4
+00:00:09,300 --> 00:00:13,470
+in product.js here cannot exceed the number of
+
+5
+00:00:13,470 --> 00:00:16,890
+table header or DH that we have
+
+6
+00:00:16,890 --> 00:00:19,860
+inside the CSS HTML.
+
+7
+00:00:19,860 --> 00:00:23,850
+Right now you can see we have six columns right here
+
+8
+00:00:23,850 --> 00:00:25,530
+in product.js.
+
+9
+00:00:25,530 --> 00:00:26,790
+We have five.
+
+10
+00:00:26,790 --> 00:00:30,030
+If you have less columns than the (indistinct)header,
+
+11
+00:00:30,030 --> 00:00:31,530
+that is okay.
+
+12
+00:00:31,530 --> 00:00:34,170
+But if I add more columns here
+
+13
+00:00:34,170 --> 00:00:36,993
+let me copy and paste that once again.
+
+14
+00:00:37,920 --> 00:00:42,780
+And if I go back here, that is also functional.
+
+15
+00:00:42,780 --> 00:00:45,300
+It populated the same data here.
+
+16
+00:00:45,300 --> 00:00:47,820
+But if I copy that one more time,
+
+17
+00:00:47,820 --> 00:00:51,000
+now we have seven columns right here,
+
+18
+00:00:51,000 --> 00:00:53,820
+and we have six columns in the view.
+
+19
+00:00:53,820 --> 00:00:58,710
+If I save that, you can see it does not work in the console.
+
+20
+00:00:58,710 --> 00:01:01,053
+We have an error right here.
+
+21
+00:01:02,130 --> 00:01:05,730
+So always remember that columns must match.
+
+22
+00:01:05,730 --> 00:01:08,040
+One column that I have left here is for
+
+23
+00:01:08,040 --> 00:01:09,780
+edit and delete buttons.
+
+24
+00:01:09,780 --> 00:01:12,590
+So basically we should only have five columns
+
+25
+00:01:12,590 --> 00:01:14,553
+in product.js.
+
+26
+00:01:15,600 --> 00:01:17,760
+Let me revert back the change here.
+
+27
+00:01:17,760 --> 00:01:20,520
+If you want to add one more column here,
+
+28
+00:01:20,520 --> 00:01:24,693
+you will also have to add a th element right here.
+

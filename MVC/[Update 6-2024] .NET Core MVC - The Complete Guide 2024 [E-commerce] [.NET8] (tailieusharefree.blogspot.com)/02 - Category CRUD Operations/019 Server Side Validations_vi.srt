@@ -1,0 +1,336 @@
+1
+00:00:01,830 --> 00:00:06,060
+Bây giờ khi chúng tôi đang tạo một danh mục mới, chúng tôi muốn xác thực.
+
+2
+00:00:06,600 --> 00:00:08,580
+Một xác nhận có thể được hiển thị.
+
+3
+00:00:08,580 --> 00:00:13,470
+Thứ tự không thể ít hơn một và tên danh mục là bắt buộc.
+
+4
+00:00:13,500 --> 00:00:21,090
+Chúng tôi cũng có thể thêm một số xác nhận rằng tên danh mục phải ít hơn, giả sử, 20 ký tự.
+
+5
+00:00:21,810 --> 00:00:28,650
+Thông thường trong . net khi chúng tôi phải sử dụng xác thực, chúng tôi phải sử dụng JavaScript và chúng tôi phải
+
+6
+00:00:28,650 --> 00:00:29,370
+viết tất cả mã.
+
+7
+00:00:29,980 --> 00:00:37,570
+Nhưng vơi . net, chúng tôi đã tích hợp các xác thực đó và hỗ trợ cho jQuery đã được thêm
+
+8
+00:00:37,570 --> 00:00:38,560
+vào trong dự án.
+
+9
+00:00:39,130 --> 00:00:42,910
+Hãy xem cách chúng ta có thể sử dụng điều đó và thêm xác thực.
+
+10
+00:00:44,180 --> 00:00:46,280
+Chúng ta sẽ quay trở lại dự án ở đây.
+
+11
+00:00:46,280 --> 00:00:52,640
+Và trước tiên, chúng ta sẽ làm việc với xác thực phía máy chủ, nằm trong bộ điều khiển.
+
+12
+00:00:53,120 --> 00:00:57,290
+Khi chúng tôi thêm một danh mục, chúng tôi muốn có một số xác thực.
+
+13
+00:00:57,950 --> 00:01:07,280
+Bên trong mô hình danh mục, chúng tôi đã thêm một số chú thích dữ liệu như tên là bắt buộc, nhưng tiếp theo đối với thứ tự hiển
+
+14
+00:01:07,280 --> 00:01:13,370
+thị, chúng tôi muốn xác thực phạm vi và chúng tôi cũng có chú thích dữ liệu đó.
+
+15
+00:01:13,760 --> 00:01:17,210
+Vì vậy, với phạm vi, chúng tôi có thể cung cấp giá trị tối thiểu.
+
+16
+00:01:17,240 --> 00:01:21,740
+Nó phải là một và tối đa chúng tôi sẽ thêm 100.
+
+17
+00:01:21,770 --> 00:01:26,390
+Điều đó có nghĩa là chúng ta sẽ có từ 1 đến 100 cho thứ tự hiển thị.
+
+18
+00:01:27,430 --> 00:01:34,780
+Sau đó đối với tên ở đây, chúng tôi sẽ thêm chú thích dữ liệu có độ dài tối đa và chúng tôi có
+
+19
+00:01:34,780 --> 00:01:37,690
+thể nói độ dài tối đa sẽ là 30 ký tự.
+
+20
+00:01:39,130 --> 00:01:44,470
+Với cấu hình đó, chúng tôi đã thêm các xác thực cần thiết trong danh mục.
+
+21
+00:01:44,800 --> 00:01:49,540
+Nhưng việc xác thực này sẽ được triển khai như thế nào trên trang tạo? net đã tích hợp sẵn trình trợ giúp thẻ cho điều đó.
+
+22
+00:01:51,030 --> 00:01:54,480
+Nơi chúng tôi có đầu vào ở đây.
+
+23
+00:01:55,140 --> 00:01:57,020
+Giả sử nếu có một số thông báo lỗi với tên, thì chúng tôi muốn hiển thị thông báo đó ngay tại đây.
+
+24
+00:01:57,030 --> 00:02:03,300
+Nhưng ngay cả trước khi chúng tôi hiển thị, hãy để tôi chuyển đến bộ điều khiển danh mục.
+
+25
+00:02:03,660 --> 00:02:08,340
+Ở đây, chúng tôi sẽ thêm một điều kiện F và có một thứ gọi là Trạng thái mô hình. là hợp lệ.
+
+26
+00:02:09,360 --> 00:02:14,850
+Điều này về cơ bản sẽ kiểm tra xem trạng thái mô hình mà chúng ta có, là đối tượng danh mục ở đây, nếu đối tượng đó hợp lệ, điều đó có nghĩa là nó sẽ chuyển
+
+27
+00:02:14,880 --> 00:02:16,530
+đến danh mục và kiểm tra tất cả các xác thực.
+
+28
+00:02:17,300 --> 00:02:24,530
+Nếu nó được yêu cầu, thì bất cứ điều gì đang được điền ở đây trong tên phải được điền.
+
+29
+00:02:24,530 --> 00:02:30,500
+Nếu không, thì trạng thái mô hình không hợp lệ và nó sẽ không vào cơ sở dữ liệu và lưu danh mục.
+
+30
+00:02:30,770 --> 00:02:38,030
+Hãy để tôi chạy cái này và xem những gì sẽ xảy ra.
+
+31
+00:02:38,720 --> 00:02:46,760
+Chúng tôi đi đến danh mục tạo.
+
+32
+00:02:48,140 --> 00:02:51,380
+Và nếu chúng tôi nhấn tạo ngay bây giờ, nó sẽ đưa chúng tôi trở lại trang nhưng không thêm danh mục.
+
+33
+00:02:54,240 --> 00:02:56,910
+Nếu tôi có thứ tự hiển thị ở đây không hoạt động.
+
+34
+00:02:56,910 --> 00:03:03,060
+Tương tự, nếu tôi có tên ở đây, nhưng nếu thứ tự hiển thị bằng 0, nó sẽ không
+
+35
+00:03:03,760 --> 00:03:07,390
+hoạt động vì chúng tôi có xác thực phạm vi.
+
+36
+00:03:07,690 --> 00:03:15,670
+Nếu chúng tôi thêm một điểm sửa lỗi ở đây, bạn cũng sẽ nhận thấy giá trị trạng thái mô hình.
+
+37
+00:03:15,670 --> 00:03:17,260
+Hãy nhấn tạo ở đây.
+
+38
+00:03:18,730 --> 00:03:23,980
+hợp lệ là sai.
+
+39
+00:03:24,620 --> 00:03:26,630
+Nếu bạn kiểm tra trạng thái mô hình ở đây, bạn sẽ nhận thấy trong chế
+
+40
+00:03:27,110 --> 00:03:29,090
+độ xem kết quả, nó sẽ hiển thị chính xác những gì nó đang kiểm tra.
+
+41
+00:03:29,390 --> 00:03:36,800
+Tên hợp lệ, nhưng thứ tự hiển thị không hợp lệ.
+
+42
+00:03:36,800 --> 00:03:37,730
+Nếu bạn mở rộng hơn nữa, nó cũng sẽ hiển thị thông báo lỗi chính xác.
+
+43
+00:03:39,150 --> 00:03:43,290
+Rất hoàn hảo.
+
+44
+00:03:44,110 --> 00:03:49,750
+Các xác thực của chúng tôi đang hoạt động trong dự án, nhưng ngay bây giờ, nếu có điều gì đó không hợp lệ, nó sẽ chuyển hướng đến trang chỉ mục và chúng tôi không
+
+45
+00:03:50,790 --> 00:03:51,840
+thể xem các thông báo lỗi đó.
+
+46
+00:03:51,870 --> 00:03:58,860
+Vì điều đó.
+
+47
+00:03:58,890 --> 00:04:03,690
+Những gì chúng tôi sẽ làm là dừng ứng dụng.
+
+48
+00:04:04,720 --> 00:04:05,350
+Nếu mọi thứ đều hợp lệ, hãy tạo và quay lại chỉ mục.
+
+49
+00:04:05,350 --> 00:04:08,080
+Khác, chúng tôi muốn quay lại chế độ xem.
+
+50
+00:04:08,260 --> 00:04:12,810
+Cùng với đó, hãy để tôi chạy ứng dụng và lần này nó sẽ ở trên trang ở đây.
+
+51
+00:04:12,820 --> 00:04:16,180
+Nhưng chúng tôi sẽ không thấy bất kỳ xác thực hoặc bất kỳ thông báo lỗi nào.
+
+52
+00:04:17,529 --> 00:04:23,350
+Chúng ta đã thấy ở Model State.
+
+53
+00:04:23,350 --> 00:04:28,300
+Chúng tôi có thông báo lỗi chính xác hiển thị cực kỳ đơn giản và chúng tôi nên biết
+
+54
+00:04:29,430 --> 00:04:31,650
+ơn người trợ giúp gắn thẻ vì điều đó.
+
+55
+00:04:31,650 --> 00:04:39,510
+Để hiển thị thông báo lỗi bên trong.
+
+56
+00:04:39,510 --> 00:04:40,350
+Gắn thẻ người trợ giúp.
+
+57
+00:04:41,350 --> 00:04:43,330
+Chúng tôi có một thứ gọi là xác thực ASP và nó sẽ đánh giá mọi thứ dựa trên mô hình hiện tại.
+
+58
+00:04:43,360 --> 00:04:44,110
+Vì vậy, xác thực ASP cho điều này là xác thực cho mô hình tên.
+
+59
+00:04:44,110 --> 00:04:51,880
+Chúng ta có thể tạo cho nó một lớp văn bản bootstrap nguy hiểm đối với màu đỏ.
+
+60
+00:04:52,590 --> 00:04:57,490
+Sao chép cái đó.
+
+61
+00:04:57,510 --> 00:05:03,090
+Chúng ta sẽ phải thêm một nhịp nữa cho thứ tự hiển thị.
+
+62
+00:05:04,460 --> 00:05:05,570
+Vì vậy, bây giờ, nếu có bất kỳ lỗi nào với tên, nó sẽ được hiển thị ở đây.
+
+63
+00:05:05,600 --> 00:05:10,190
+Nếu có bất kỳ lỗi nào về thứ tự hiển thị, nó sẽ tự động được hiển thị tại đây.
+
+64
+00:05:12,610 --> 00:05:17,130
+Và đó là sức mạnh của tag helpers.
+
+65
+00:05:17,140 --> 00:05:22,630
+Khi bạn lưu nó, chúng tôi sẽ phải khởi động lại ứng dụng.
+
+66
+00:05:22,780 --> 00:05:25,780
+Hãy vào danh mục ở đây và tạo một danh mục.
+
+67
+00:05:26,540 --> 00:05:30,830
+Hoàn hảo.
+
+68
+00:05:32,940 --> 00:05:37,140
+Nếu chúng tôi thử để trống ở đây, nó sẽ hiển thị xác thực.
+
+69
+00:05:37,380 --> 00:05:38,220
+Và nếu chúng ta có phạm vi một.
+
+70
+00:05:38,250 --> 00:05:42,270
+Hoàn hảo.
+
+71
+00:05:42,720 --> 00:05:45,180
+Rằng sẽ rất tốt.
+
+72
+00:05:45,480 --> 00:05:46,470
+Bây giờ chúng tôi có xác thực phía máy chủ.
+
+73
+00:05:47,640 --> 00:05:48,900
+Nhưng nếu chúng ta muốn thay đổi thông báo đang được hiển thị ở đây thì sao?
+
+74
+00:05:48,930 --> 00:05:51,480
+Siêu đơn giản là tốt.
+
+75
+00:05:51,810 --> 00:05:56,310
+Với chú thích dữ liệu, chúng tôi chuyển đến đây và với phạm vi, chúng tôi có trường thông báo lỗi tùy chỉnh.
+
+76
+00:05:57,060 --> 00:05:59,010
+Và chúng tôi có thể cung cấp thông báo lỗi tùy chỉnh tại đây.
+
+77
+00:05:59,010 --> 00:06:06,360
+Ở đây chúng tôi đã có kết thúc.
+
+78
+00:06:07,320 --> 00:06:10,710
+Chúng tôi đang thay thế nó bằng dấu gạch nối.
+
+79
+00:06:11,190 --> 00:06:12,770
+Hãy để tôi khởi động lại và xem nếu nó hoạt động.
+
+80
+00:06:12,780 --> 00:06:15,240
+Chúng tôi đi đến danh mục ở đây tạo.
+
+81
+00:06:15,660 --> 00:06:19,140
+Và hoàn hảo.
+
+82
+00:06:21,410 --> 00:06:24,560
+Chúng tôi có thông báo lỗi tùy chỉnh.
+
+83
+00:06:27,250 --> 00:06:28,720
+Rất hoàn hảo.
+
+84
+00:06:28,750 --> 00:06:31,450
+Cùng với đó, chúng tôi đã thấy trình trợ giúp thẻ và xác thực phía máy chủ.
+

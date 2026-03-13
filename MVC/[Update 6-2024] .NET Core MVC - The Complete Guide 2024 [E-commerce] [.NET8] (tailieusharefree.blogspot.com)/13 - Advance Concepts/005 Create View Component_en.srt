@@ -1,0 +1,452 @@
+1
+00:00:01,549 --> 00:00:02,520
+Instructor: Right now,
+
+2
+00:00:02,520 --> 00:00:05,040
+one thing that we have to do in a hacky way
+
+3
+00:00:05,040 --> 00:00:09,450
+is whenever a user logs in and we land on the HOME page,
+
+4
+00:00:09,450 --> 00:00:13,800
+we are getting the session here and we are setting that.
+
+5
+00:00:13,800 --> 00:00:16,980
+But what if we do not want that hacky way?
+
+6
+00:00:16,980 --> 00:00:20,250
+What if we want the page model in _layout
+
+7
+00:00:20,250 --> 00:00:22,500
+where it is getting the shopping cart,
+
+8
+00:00:22,500 --> 00:00:25,140
+it should automatically check all of that,
+
+9
+00:00:25,140 --> 00:00:27,600
+and if it does not have a value,
+
+10
+00:00:27,600 --> 00:00:29,580
+it should go to the database
+
+11
+00:00:29,580 --> 00:00:31,863
+and find out the count on its own?
+
+12
+00:00:32,790 --> 00:00:36,120
+So here, we are talking about having a page model
+
+13
+00:00:36,120 --> 00:00:40,248
+or rather a backend file for _layout.
+
+14
+00:00:40,248 --> 00:00:44,610
+Now, that is not technically possible with _layout,
+
+15
+00:00:44,610 --> 00:00:46,770
+but we have something special
+
+16
+00:00:46,770 --> 00:00:49,920
+which can accomplish the same functionality,
+
+17
+00:00:49,920 --> 00:00:52,537
+and that is view component.
+
+18
+00:00:52,537 --> 00:00:55,440
+Now, typically, I explain what something is
+
+19
+00:00:55,440 --> 00:00:56,910
+before we program,
+
+20
+00:00:56,910 --> 00:00:59,730
+but view component is one of those things
+
+21
+00:00:59,730 --> 00:01:03,090
+where we have some configuration that we have to do,
+
+22
+00:01:03,090 --> 00:01:07,230
+but after that is done, everything will come together.
+
+23
+00:01:07,230 --> 00:01:10,440
+It is one of the advanced concepts in MVC,
+
+24
+00:01:10,440 --> 00:01:12,510
+so make sure to follow along
+
+25
+00:01:12,510 --> 00:01:16,201
+because there is some syntax that you have to follow.
+
+26
+00:01:16,201 --> 00:01:20,940
+Now, view component is exactly similar to a partial view.
+
+27
+00:01:20,940 --> 00:01:24,570
+But the difference here is your model or partial view
+
+28
+00:01:24,570 --> 00:01:28,140
+will have a page model or a code behind file
+
+29
+00:01:28,140 --> 00:01:31,263
+where you can do some programmings for your UI.
+
+30
+00:01:32,545 --> 00:01:35,520
+But if you are working with partial view,
+
+31
+00:01:35,520 --> 00:01:38,091
+you do not have a page model.
+
+32
+00:01:38,091 --> 00:01:40,380
+In order to get started,
+
+33
+00:01:40,380 --> 00:01:43,650
+where we have our main web project here,
+
+34
+00:01:43,650 --> 00:01:46,980
+inside there, I will create a new folder,
+
+35
+00:01:46,980 --> 00:01:50,759
+and I will have to stop the application, of course,
+
+36
+00:01:50,759 --> 00:01:55,092
+and we will rename that to be ViewComponents.
+
+37
+00:01:55,092 --> 00:01:59,610
+Inside that folder, we will be adding our view components
+
+38
+00:01:59,610 --> 00:02:02,760
+which will basically be a Class file.
+
+39
+00:02:02,760 --> 00:02:05,040
+Now, we can call this anything we want
+
+40
+00:02:05,040 --> 00:02:08,400
+like in our case it is a shopping cart count,
+
+41
+00:02:08,400 --> 00:02:10,919
+so we can call it ShoppingCart.
+
+42
+00:02:10,919 --> 00:02:12,450
+But after that file,
+
+43
+00:02:12,450 --> 00:02:17,040
+we have to append a special word which is ViewComponent,
+
+44
+00:02:17,040 --> 00:02:19,980
+and then we will add .cs.
+
+45
+00:02:19,980 --> 00:02:24,450
+That is a keyword that is needed for view component.
+
+46
+00:02:24,450 --> 00:02:26,853
+So let me add that.
+
+47
+00:02:26,853 --> 00:02:30,060
+Along with that, other thing that we have to do
+
+48
+00:02:30,060 --> 00:02:32,640
+is this particular view component
+
+49
+00:02:32,640 --> 00:02:36,240
+must inherit from ViewComponent.
+
+50
+00:02:36,240 --> 00:02:38,783
+And, again, this is ViewComponent, not ViewComponents.
+
+51
+00:02:40,200 --> 00:02:42,693
+We have to add that using statement.
+
+52
+00:02:43,700 --> 00:02:47,400
+Now, this will be the backend file for our view component,
+
+53
+00:02:47,400 --> 00:02:50,583
+so we need to think about what we want to do here.
+
+54
+00:02:51,600 --> 00:02:55,020
+We basically have to go to the shopping cart database
+
+55
+00:02:55,020 --> 00:02:58,590
+and get the shopping cart for a logged-in user.
+
+56
+00:02:58,590 --> 00:03:01,140
+So we need to inject unitOfWork,
+
+57
+00:03:01,140 --> 00:03:04,443
+and we can do that using dependency injection.
+
+58
+00:03:05,280 --> 00:03:09,090
+Then inside here, we will create a method that will handle
+
+59
+00:03:09,090 --> 00:03:12,213
+the backend functionality for our ShoppingCartViewComponent.
+
+60
+00:03:13,894 --> 00:03:18,894
+It will return async Task, I can call it IActionResult,
+
+61
+00:03:19,350 --> 00:03:22,140
+but we know it will be a view component,
+
+62
+00:03:22,140 --> 00:03:26,220
+so we can directly say IViewComponentResult.
+
+63
+00:03:26,220 --> 00:03:28,710
+That will be the return type.
+
+64
+00:03:28,710 --> 00:03:32,010
+Now, the name of the function will be InvokeAsync,
+
+65
+00:03:32,010 --> 00:03:34,080
+and that is what will be used
+
+66
+00:03:34,080 --> 00:03:36,540
+when we invoke the view component
+
+67
+00:03:36,540 --> 00:03:40,380
+which we will see in the upcoming videos.
+
+68
+00:03:40,380 --> 00:03:43,530
+So name of the method here is InvokeAsync,
+
+69
+00:03:43,530 --> 00:03:46,470
+and there, we need to retrieve the userId
+
+70
+00:03:46,470 --> 00:03:48,797
+of the logged-in user.
+
+71
+00:03:48,797 --> 00:03:53,700
+Let me go and open the Areas, Controller.
+
+72
+00:03:53,700 --> 00:03:56,760
+We have Customer, HomeController.
+
+73
+00:03:56,760 --> 00:04:01,760
+Let me copy this code right here. Cut that from the index.
+
+74
+00:04:02,580 --> 00:04:04,503
+Paste it right here.
+
+75
+00:04:07,451 --> 00:04:10,770
+Now, right here, if the claim is not null,
+
+76
+00:04:10,770 --> 00:04:13,800
+we are getting the session and setting that.
+
+77
+00:04:13,800 --> 00:04:15,870
+Else, if the claim is null,
+
+78
+00:04:15,870 --> 00:04:19,320
+we can directly clear the session right here,
+
+79
+00:04:19,320 --> 00:04:23,098
+so HttpContext.Session.Clear.
+
+80
+00:04:23,098 --> 00:04:26,880
+And that way, we do not have to do that in the Logout,
+
+81
+00:04:26,880 --> 00:04:29,103
+so I can remove that as well.
+
+82
+00:04:30,420 --> 00:04:34,560
+Inside the Logout where we added the functionality,
+
+83
+00:04:34,560 --> 00:04:37,440
+we no longer require that.
+
+84
+00:04:37,440 --> 00:04:39,749
+Perfect. That looks good.
+
+85
+00:04:39,749 --> 00:04:41,970
+Now, what we want to return here
+
+86
+00:04:41,970 --> 00:04:45,270
+is the actual count to our view.
+
+87
+00:04:45,270 --> 00:04:48,540
+So here, we will say return back to the View,
+
+88
+00:04:48,540 --> 00:04:49,920
+and we need the count
+
+89
+00:04:49,920 --> 00:04:54,820
+that is inside HttpContext.Session.GetInt32
+
+90
+00:04:56,820 --> 00:04:58,113
+SD.SessionCart.
+
+91
+00:04:59,746 --> 00:05:03,810
+When we clear everything, it will be zero,
+
+92
+00:05:03,810 --> 00:05:07,263
+so we can return back that integer value.
+
+93
+00:05:08,280 --> 00:05:09,450
+So now you can think
+
+94
+00:05:09,450 --> 00:05:12,060
+about we are returning something to the View,
+
+95
+00:05:12,060 --> 00:05:14,100
+and the model is an integer.
+
+96
+00:05:14,100 --> 00:05:15,600
+That looks good.
+
+97
+00:05:15,600 --> 00:05:20,580
+But where will we create the view of this ViewComponent?
+
+98
+00:05:20,580 --> 00:05:22,320
+Before we add that file,
+
+99
+00:05:22,320 --> 00:05:26,100
+I can make this code a little more elegant.
+
+100
+00:05:26,100 --> 00:05:31,100
+Right here, I can check if HttpContext.Session.GetInt32
+
+101
+00:05:34,439 --> 00:05:37,410
+SD.SessionCart,
+
+102
+00:05:37,410 --> 00:05:39,420
+if that is not null,
+
+103
+00:05:39,420 --> 00:05:42,510
+then basically we have a session that is loaded.
+
+104
+00:05:42,510 --> 00:05:47,160
+We do not have to go to database, so we can return that.
+
+105
+00:05:47,160 --> 00:05:52,160
+So return View, and we can return back that entity.
+
+106
+00:05:52,740 --> 00:05:54,390
+But if that is null,
+
+107
+00:05:54,390 --> 00:05:57,183
+only then we have to retrieve that item.
+
+108
+00:05:58,140 --> 00:06:02,340
+So rather than that, let me make it if it is null,
+
+109
+00:06:02,340 --> 00:06:04,740
+then we will set the session here.
+
+110
+00:06:04,740 --> 00:06:08,580
+Else, we do not want to set our session.
+
+111
+00:06:08,580 --> 00:06:12,543
+We will directly return whatever is set in our session.
+
+112
+00:06:13,740 --> 00:06:18,090
+So, basically, the code behind for ViewComponent looks good.
+
+113
+00:06:18,090 --> 00:06:21,573
+Let me add the frontend view in the next video.
+

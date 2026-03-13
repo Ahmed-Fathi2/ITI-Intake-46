@@ -1,0 +1,488 @@
+1
+00:00:02,250 --> 00:00:05,700
+-: Now once the order header and details is created
+
+2
+00:00:05,700 --> 00:00:09,210
+we have to add one more logic right here.
+
+3
+00:00:09,210 --> 00:00:13,110
+Let me copy the if condition, paste it here,
+
+4
+00:00:13,110 --> 00:00:18,000
+and if it is a regular customer, we need to capture payment,
+
+5
+00:00:18,000 --> 00:00:21,933
+and for that we will add Stripe logic right here.
+
+6
+00:00:24,191 --> 00:00:25,674
+I will change the comment here.
+
+7
+00:00:25,674 --> 00:00:29,370
+It is a regular customer and that looks good.
+
+8
+00:00:29,370 --> 00:00:31,650
+Now the stripe processing, we will do that
+
+9
+00:00:31,650 --> 00:00:35,400
+in the upcoming videos, but right now let's assume
+
+10
+00:00:35,400 --> 00:00:39,660
+that it is a company account and once the order is created
+
+11
+00:00:39,660 --> 00:00:43,923
+we need to redirect them to an order confirmation page.
+
+12
+00:00:44,790 --> 00:00:46,440
+So let me redirect them
+
+13
+00:00:46,440 --> 00:00:51,060
+to another action and we will create that right here.
+
+14
+00:00:51,060 --> 00:00:53,430
+Public eye action result.
+
+15
+00:00:53,430 --> 00:00:56,910
+Let me call that order confirmation
+
+16
+00:00:56,910 --> 00:00:59,220
+and we will pass the integer
+
+17
+00:00:59,220 --> 00:01:01,023
+which will be order ID.
+
+18
+00:01:02,543 --> 00:01:04,709
+Right now, we will keep things super simple.
+
+19
+00:01:04,709 --> 00:01:07,710
+Return back to the view with that ID,
+
+20
+00:01:07,710 --> 00:01:10,053
+and let me create this view.
+
+21
+00:01:11,010 --> 00:01:13,473
+It will be order confirmation.
+
+22
+00:01:14,790 --> 00:01:17,700
+Make sure the spelling is correct there,
+
+23
+00:01:17,700 --> 00:01:19,950
+and what will be the model.
+
+24
+00:01:19,950 --> 00:01:23,973
+It will be an integer and that will be the order ID.
+
+25
+00:01:25,470 --> 00:01:28,170
+Now here we do not want return view.
+
+26
+00:01:28,170 --> 00:01:32,700
+We wanted to redirect to an action and that will
+
+27
+00:01:32,700 --> 00:01:37,143
+be name of order confirmation.
+
+28
+00:01:38,640 --> 00:01:41,610
+Along with that, we need to pass the order ID
+
+29
+00:01:41,610 --> 00:01:45,090
+so we will pass a new object there where we will
+
+30
+00:01:45,090 --> 00:01:49,470
+say ID is equal to shopping cart view model dot
+
+31
+00:01:49,470 --> 00:01:53,880
+order header dot ID, so that way it will pass the
+
+32
+00:01:53,880 --> 00:01:58,023
+ID here and we will return that back to the view.
+
+33
+00:01:59,040 --> 00:02:02,523
+Let me design a simple view right here.
+
+34
+00:02:03,540 --> 00:02:06,720
+Let me create two deals there, one with a class
+
+35
+00:02:06,720 --> 00:02:09,464
+of container, row padding top of four, and the
+
+36
+00:02:09,464 --> 00:02:14,464
+other one with column 12 and text center inside there
+
+37
+00:02:15,840 --> 00:02:20,340
+in the H 1, we'll display order placed successfully.
+
+38
+00:02:20,340 --> 00:02:25,340
+And then let me also display your order number is
+
+39
+00:02:25,380 --> 00:02:26,973
+at the rate model.
+
+40
+00:02:28,110 --> 00:02:30,210
+I will add a few lines here.
+
+41
+00:02:30,210 --> 00:02:35,210
+Let me do that , and after that I want to display an image
+
+42
+00:02:36,622 --> 00:02:39,390
+inside the snippets folder,
+
+43
+00:02:39,390 --> 00:02:41,130
+I have that image.
+
+44
+00:02:41,130 --> 00:02:45,210
+Let me go back in images, I will copy the book
+
+45
+00:02:45,210 --> 00:02:50,210
+and lawn leaf image and we will add that in www root images.
+
+46
+00:02:52,680 --> 00:02:56,733
+Open that and we will paste it right there.
+
+47
+00:02:58,541 --> 00:03:01,050
+Then, right here we can use the IMG tag.
+
+48
+00:03:01,050 --> 00:03:04,500
+SRC is equal to images.
+
+49
+00:03:04,500 --> 00:03:07,893
+In there we have the lawn leaf and width.
+
+50
+00:03:08,804 --> 00:03:11,820
+Let me give that 65%.
+
+51
+00:03:11,820 --> 00:03:15,600
+After that, let me create one more div with column 12,
+
+52
+00:03:15,600 --> 00:03:19,080
+text center, and a custom color.
+
+53
+00:03:19,080 --> 00:03:23,370
+Add a line there, and I will write your order
+
+54
+00:03:23,370 --> 00:03:26,583
+has been placed successfully.
+
+55
+00:03:28,290 --> 00:03:31,740
+Perfect. That UI looks good.
+
+56
+00:03:31,740 --> 00:03:33,510
+We have a spelling mistake here.
+
+57
+00:03:33,510 --> 00:03:36,840
+Let me correct that and perfect.
+
+58
+00:03:36,840 --> 00:03:39,390
+Now with that, if I run the application
+
+59
+00:03:39,390 --> 00:03:41,430
+and try to place an order
+
+60
+00:03:41,430 --> 00:03:44,583
+for the company account, things will not work.
+
+61
+00:03:49,110 --> 00:03:50,190
+Right here.
+
+62
+00:03:50,190 --> 00:03:53,970
+Let me log into the company account that I have.
+
+63
+00:03:53,970 --> 00:03:55,500
+If you do not have one
+
+64
+00:03:55,500 --> 00:03:59,070
+make sure to register for a company account
+
+65
+00:03:59,070 --> 00:04:01,773
+and let me add a few items to the cart.
+
+66
+00:04:03,784 --> 00:04:05,130
+I believe I had a few items,
+
+67
+00:04:05,130 --> 00:04:08,880
+and perfect, order total is 450.
+
+68
+00:04:08,880 --> 00:04:11,940
+If I go to summary and place order,
+
+69
+00:04:11,940 --> 00:04:13,863
+we will see an exception.
+
+70
+00:04:15,090 --> 00:04:18,000
+Perfect. You can see an error occurred
+
+71
+00:04:18,000 --> 00:04:21,750
+while saving the entity. See inner exception
+
+72
+00:04:21,750 --> 00:04:26,703
+and violation of primary key constraint in ASP Net users.
+
+73
+00:04:27,690 --> 00:04:31,233
+Pause the video and find out why this is happening.
+
+74
+00:04:32,610 --> 00:04:35,490
+I have intentionally introduced this bug,
+
+75
+00:04:35,490 --> 00:04:39,243
+but I want you guys to figure out on what is going on here.
+
+76
+00:04:41,825 --> 00:04:44,400
+I hope you guys were able to figure that out.
+
+77
+00:04:44,400 --> 00:04:48,720
+What I did is when we were creating the post action method
+
+78
+00:04:48,720 --> 00:04:51,930
+I populated application user.
+
+79
+00:04:51,930 --> 00:04:54,660
+Now typically what happens is when you are
+
+80
+00:04:54,660 --> 00:04:56,970
+populating a record here
+
+81
+00:04:56,970 --> 00:05:00,300
+and you are telling entity framework code that, hey,
+
+82
+00:05:00,300 --> 00:05:02,490
+I want to add the order header,
+
+83
+00:05:02,490 --> 00:05:03,960
+it will also add all
+
+84
+00:05:03,960 --> 00:05:07,170
+the corresponding navigation properties.
+
+85
+00:05:07,170 --> 00:05:08,520
+It will think that okay
+
+86
+00:05:08,520 --> 00:05:11,790
+you are trying to create a new entity.
+
+87
+00:05:11,790 --> 00:05:13,390
+If you do not want that
+
+88
+00:05:14,529 --> 00:05:16,140
+then you should never populate a navigation
+
+89
+00:05:16,140 --> 00:05:19,740
+property when you are trying to insert a record
+
+90
+00:05:19,740 --> 00:05:23,673
+in Entity Framework Core, always remember that.
+
+91
+00:05:24,630 --> 00:05:28,050
+So work around to this particular issue is we
+
+92
+00:05:28,050 --> 00:05:33,050
+can have a new application user, call that application user,
+
+93
+00:05:33,690 --> 00:05:37,260
+and then right here we will access that application
+
+94
+00:05:37,260 --> 00:05:40,683
+user also in this if condition.
+
+95
+00:05:42,120 --> 00:05:44,270
+So that is one thing that you should always
+
+96
+00:05:45,615 --> 00:05:48,171
+remember when you see that Entity Framework Core
+
+97
+00:05:48,171 --> 00:05:50,133
+is trying to add a navigation property,
+
+98
+00:05:51,568 --> 00:05:54,750
+most likely the navigation property is populated.
+
+99
+00:05:54,750 --> 00:05:58,620
+If you want, you can explicitly set that to be null as well
+
+100
+00:05:58,620 --> 00:06:01,740
+but we know that will not be populated here
+
+101
+00:06:01,740 --> 00:06:02,840
+so this will work now.
+
+102
+00:06:04,560 --> 00:06:08,193
+With that configured, let me run the application.
+
+103
+00:06:09,930 --> 00:06:12,540
+We are logged into our company account.
+
+104
+00:06:12,540 --> 00:06:16,260
+Let me go to the shopping cart summary
+
+105
+00:06:16,260 --> 00:06:21,210
+and let me add all one here to see if that works.
+
+106
+00:06:21,210 --> 00:06:23,070
+Place order.
+
+107
+00:06:23,070 --> 00:06:27,270
+Perfect. We see our order confirmation page and
+
+108
+00:06:27,270 --> 00:06:31,920
+if we navigate to our database, examine the order header,
+
+109
+00:06:31,920 --> 00:06:36,556
+order ID is 5 here and we go to the right.
+
+110
+00:06:36,556 --> 00:06:40,800
+Perfect. We have the details right here.
+
+111
+00:06:40,800 --> 00:06:42,810
+Inside the order details,
+
+112
+00:06:42,810 --> 00:06:44,730
+we have three record
+
+113
+00:06:44,730 --> 00:06:47,070
+because we had three different products,
+
+114
+00:06:47,070 --> 00:06:50,040
+their account, and their individual price.
+
+115
+00:06:50,040 --> 00:06:51,903
+Everything is looking great.
+
+116
+00:06:53,400 --> 00:06:55,980
+With that configured, our shopping cart logic
+
+117
+00:06:55,980 --> 00:07:00,980
+for company is looking good and we are able to place order.
+
+118
+00:07:00,990 --> 00:07:04,350
+One thing that you should remember here is for company
+
+119
+00:07:04,350 --> 00:07:07,770
+the initial order status is directly approved
+
+120
+00:07:07,770 --> 00:07:11,703
+and the payment status is approved for delayed payment.
+
+121
+00:07:12,540 --> 00:07:14,340
+So with that configured
+
+122
+00:07:14,340 --> 00:07:17,103
+let me continue from the next video.
+

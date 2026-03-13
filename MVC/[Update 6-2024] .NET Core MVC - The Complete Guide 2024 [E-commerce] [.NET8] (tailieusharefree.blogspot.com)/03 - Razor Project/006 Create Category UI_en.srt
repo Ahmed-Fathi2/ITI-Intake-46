@@ -1,0 +1,272 @@
+1
+00:00:01,950 --> 00:00:05,190
+Instructor: We are able to display all the categories.
+
+2
+00:00:05,190 --> 00:00:07,470
+If I run the application again
+
+3
+00:00:07,470 --> 00:00:09,753
+and if I go to Categories there,
+
+4
+00:00:10,590 --> 00:00:13,260
+if I click the Create New Category,
+
+5
+00:00:13,260 --> 00:00:17,010
+you can see it is not able to route to that page.
+
+6
+00:00:17,010 --> 00:00:19,050
+If it was an MVC application
+
+7
+00:00:19,050 --> 00:00:22,380
+you will see an error message, Page not found.
+
+8
+00:00:22,380 --> 00:00:25,500
+But in Razor pages, if it does not found
+
+9
+00:00:25,500 --> 00:00:28,083
+I have noticed it does not even redirect.
+
+10
+00:00:29,010 --> 00:00:31,920
+So next we have to create these categories
+
+11
+00:00:31,920 --> 00:00:33,393
+and the create page.
+
+12
+00:00:34,644 --> 00:00:38,550
+We will open the solution explorer inside categories.
+
+13
+00:00:38,550 --> 00:00:41,130
+I will add a new Razor page
+
+14
+00:00:41,130 --> 00:00:45,633
+which will be empty and we will call that as create.
+
+15
+00:00:48,170 --> 00:00:49,003
+Perfect.
+
+16
+00:00:49,003 --> 00:00:51,180
+We have the corresponding page model.
+
+17
+00:00:51,180 --> 00:00:54,030
+Now the UI will be exactly same
+
+18
+00:00:54,030 --> 00:00:59,030
+so we can go to views, category create, copy, close that
+
+19
+00:00:59,910 --> 00:01:04,910
+and also minimize this, paste it right here, go to the top.
+
+20
+00:01:06,870 --> 00:01:09,720
+We do not have a model for category
+
+21
+00:01:09,720 --> 00:01:12,993
+but we will have to create that in page model.
+
+22
+00:01:14,190 --> 00:01:19,190
+So when we go to create cshtml.css in the Razor project here
+
+23
+00:01:20,670 --> 00:01:22,383
+we will have to create that.
+
+24
+00:01:23,370 --> 00:01:26,970
+On top of that we need application DB context.
+
+25
+00:01:26,970 --> 00:01:30,930
+So let me copy these lines, paste it here.
+
+26
+00:01:30,930 --> 00:01:35,930
+We will have to change the constructor name to create model.
+
+27
+00:01:35,940 --> 00:01:38,700
+Let me add the using statement here.
+
+28
+00:01:38,700 --> 00:01:41,940
+And we do not have list of category.
+
+29
+00:01:41,940 --> 00:01:46,750
+When we are creating, we will be working with one category
+
+30
+00:01:47,640 --> 00:01:52,020
+add the using statement and perfect.
+
+31
+00:01:52,020 --> 00:01:56,100
+If we go to the Razor page here, we do not have name
+
+32
+00:01:56,100 --> 00:01:58,743
+but we have category.name.
+
+33
+00:01:59,850 --> 00:02:03,600
+We will have to replace that in all the places.
+
+34
+00:02:03,600 --> 00:02:04,900
+So let me do that
+
+35
+00:02:07,890 --> 00:02:09,990
+and perfect.
+
+36
+00:02:09,990 --> 00:02:11,580
+We do not have controller.
+
+37
+00:02:11,580 --> 00:02:13,593
+We have asp-page,
+
+38
+00:02:15,450 --> 00:02:19,780
+that will be categories/index
+
+39
+00:02:21,090 --> 00:02:23,103
+and that looks good.
+
+40
+00:02:24,510 --> 00:02:28,293
+Let me run the application and see if that works.
+
+41
+00:02:29,910 --> 00:02:34,910
+We go to category here, create, and it is not working
+
+42
+00:02:35,215 --> 00:02:37,170
+in index.
+
+43
+00:02:37,170 --> 00:02:39,340
+We need a forward slash here
+
+44
+00:02:41,340 --> 00:02:44,070
+and perfect, that works.
+
+45
+00:02:44,070 --> 00:02:46,290
+It loads the empty category.
+
+46
+00:02:46,290 --> 00:02:50,490
+When we hit create, we have the validation as well because
+
+47
+00:02:50,490 --> 00:02:55,490
+in create here we have validation script partial
+
+48
+00:02:55,620 --> 00:03:00,153
+and that is also present by default in Razor pages.
+
+49
+00:03:01,260 --> 00:03:03,720
+So you can see everything is the same.
+
+50
+00:03:03,720 --> 00:03:06,810
+When we hit back to list, that doesn't work
+
+51
+00:03:06,810 --> 00:03:09,600
+we need a forward slash there.
+
+52
+00:03:09,600 --> 00:03:14,400
+And let me modify in index right here.
+
+53
+00:03:14,400 --> 00:03:16,563
+This will be categories.
+
+54
+00:03:20,190 --> 00:03:21,993
+Yep, that looks good.
+
+55
+00:03:22,920 --> 00:03:25,680
+Perfect, so we can go back now.
+
+56
+00:03:25,680 --> 00:03:26,820
+Edit and delete.
+
+57
+00:03:26,820 --> 00:03:31,650
+We have not added those pages, so that will not work.
+
+58
+00:03:31,650 --> 00:03:34,440
+But create new category is working.
+
+59
+00:03:34,440 --> 00:03:38,910
+If you type something and hit create, nothing happens.
+
+60
+00:03:38,910 --> 00:03:40,830
+Because what we have right now
+
+61
+00:03:40,830 --> 00:03:43,950
+in the page model is only the get handler
+
+62
+00:03:43,950 --> 00:03:47,043
+and that is not even doing anything
+
+63
+00:03:47,043 --> 00:03:49,770
+because when we create a category
+
+64
+00:03:49,770 --> 00:03:53,880
+we want to load the empty page and display the text box.
+
+65
+00:03:53,880 --> 00:03:58,620
+So that is okay, but how do we add a post endpoint here?
+
+66
+00:03:58,620 --> 00:04:01,050
+So when we hit the submit button
+
+67
+00:04:01,050 --> 00:04:03,363
+we want to create that category.
+
+68
+00:04:04,260 --> 00:04:06,993
+Let me show you that in the next video.
+

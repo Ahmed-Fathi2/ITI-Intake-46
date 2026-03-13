@@ -1,0 +1,352 @@
+1
+00:00:01,810 --> 00:00:02,440
+Ngay lập tức.
+
+2
+00:00:02,440 --> 00:00:05,050
+Chúng tôi đã làm việc để tạo ra sản phẩm mới.
+
+3
+00:00:05,050 --> 00:00:11,590
+Và tôi đã nói trước đây, chúng tôi chỉ làm việc ở đó và không chỉnh sửa vì tôi muốn cho bạn thấy một điều trong
+
+4
+00:00:11,590 --> 00:00:12,730
+kịch bản này.
+
+5
+00:00:12,970 --> 00:00:19,480
+Khi bạn nhìn vào trang Tạo, nó trông giống hệt với những gì chúng tôi có để chỉnh sửa, nhưng các chi
+
+6
+00:00:19,480 --> 00:00:20,740
+tiết đã được điền.
+
+7
+00:00:20,740 --> 00:00:28,990
+Khi bạn chọn chỉnh sửa nhiều lần trong ứng dụng, những gì người dùng có là họ có một trang duy nhất để tạo và chỉnh
+
+8
+00:00:28,990 --> 00:00:36,310
+sửa và dựa trên việc có ID ở đây hay không, họ truy xuất và hiển thị trang đó và cập nhật hiển thị thay
+
+9
+00:00:36,310 --> 00:00:43,330
+vì tạo theo cách đó, có một trang duy nhất để tạo và cập nhật và đó chính xác là những gì chúng
+
+10
+00:00:43,330 --> 00:00:45,070
+tôi muốn làm.
+
+11
+00:00:45,770 --> 00:00:50,990
+Chúng tôi đã thấy các trang khác nhau để tạo và cập nhật khi chúng tôi làm việc với danh mục.
+
+12
+00:00:50,990 --> 00:00:56,150
+Nhưng đối với sản phẩm, tôi muốn kết hợp cả hai trong một trang.
+
+13
+00:00:56,930 --> 00:01:04,430
+Trước khi chúng ta làm việc trên The View ở đây, chúng ta cần sửa đổi bộ điều khiển nơi chúng ta có bộ điều khiển
+
+14
+00:01:04,430 --> 00:01:08,120
+tạo thay vì tạo một cái tên có ý nghĩa hơn là vô lý.
+
+15
+00:01:08,360 --> 00:01:16,460
+Và điều tôi muốn nói là vô lý là viết tắt của cập nhật và chứng chỉ về cơ bản là sự kết hợp của chèn.
+
+16
+00:01:16,670 --> 00:01:25,010
+Vì vậy, nếu bạn có cập nhật và chèn, bạn loại bỏ thứ này và bạn nghĩ ra một điều vô lý và cái tên đó thường
+
+17
+00:01:25,010 --> 00:01:30,470
+được sử dụng khi bạn kết hợp, cập nhật và chèn vào một chức năng.
+
+18
+00:01:31,560 --> 00:01:32,640
+Trong vô lý.
+
+19
+00:01:32,640 --> 00:01:35,670
+Bạn có thể có hoặc bạn có thể không có ID.
+
+20
+00:01:36,000 --> 00:01:42,150
+Nếu bạn đang tạo thì sẽ không có ID, nhưng nếu bạn đang cập nhật thì bạn sẽ có ID.
+
+21
+00:01:42,840 --> 00:01:50,790
+Chức năng mà bạn có ở đây có vẻ tốt để tạo, nhưng nếu có ID, thì về cơ bản, chúng tôi phải truy xuất
+
+22
+00:01:50,790 --> 00:01:57,390
+sản phẩm đó và gán nó cho sản phẩm này bên trong mô hình chế độ xem sản phẩm.
+
+23
+00:01:58,500 --> 00:02:07,560
+Vì vậy, những gì chúng ta có thể làm là ngay tại đây, có một điều kiện if và nếu ID là null hoặc nếu ID bằng 0, điều đó
+
+24
+00:02:07,560 --> 00:02:13,500
+có nghĩa là nó được tạo và chúng ta có thể trực tiếp quay lại chế độ xem.
+
+25
+00:02:14,390 --> 00:02:15,800
+Trong phần khác.
+
+26
+00:02:15,830 --> 00:02:20,720
+Điều đó có nghĩa đây là chức năng cập nhật vì có ID.
+
+27
+00:02:20,870 --> 00:02:28,760
+Điều này sẽ bằng và nếu chúng tôi có cập nhật thì chúng tôi sẽ phải điền vào mô hình xem sản phẩm
+
+28
+00:02:28,760 --> 00:02:34,730
+Sản phẩm DOT bằng với đơn vị gạch dưới của sản phẩm dấu chấm sản phẩm.
+
+29
+00:02:34,760 --> 00:02:38,630
+Chúng tôi có chức năng nhận và chúng tôi cần chuyển liên kết.
+
+30
+00:02:38,630 --> 00:02:45,230
+Toán tử bạn đi đến u. id bằng với id.
+
+31
+00:02:46,400 --> 00:02:53,510
+Chúng tôi đang sử dụng get here và không get all vì chúng tôi biết điều này sẽ chỉ trả về hoặc lý tưởng nhất
+
+32
+00:02:53,510 --> 00:02:56,780
+là nó chỉ trả về một bản ghi và đó là sản phẩm.
+
+33
+00:02:57,740 --> 00:03:04,070
+Khi chúng tôi truy xuất điều đó, chúng tôi có thể quay lại chế độ xem và quay lại mô hình chế độ xem sản phẩm.
+
+34
+00:03:05,430 --> 00:03:11,100
+Vì vậy, chức năng đầu tiên ở đây là để tạo và chức năng sau là để cập nhật.
+
+35
+00:03:11,730 --> 00:03:15,510
+Với điều đó, bộ điều khiển vô lý ở đây có vẻ tốt.
+
+36
+00:03:15,660 --> 00:03:20,040
+Chúng ta cũng cần sửa đổi phương thức hành động bài đăng cho vô lý.
+
+37
+00:03:20,370 --> 00:03:25,410
+Và khi chúng tôi đang cập nhật, nếu bạn nhớ, hãy để tôi đi tạo.
+
+38
+00:03:25,440 --> 00:03:28,260
+Chúng tôi đã thêm dữ liệu biểu mẫu nhiều phần.
+
+39
+00:03:29,130 --> 00:03:35,280
+Khi một tệp được tải lên ở đây, chúng tôi sẽ lấy tệp đó ở đây trong tệp biểu mẫu I.
+
+40
+00:03:36,030 --> 00:03:40,740
+Chúng tôi sẽ biến trường đó thành trường có thể vô hiệu hóa và để tôi gọi đó là tệp.
+
+41
+00:03:41,760 --> 00:03:48,570
+Bây giờ, ngay bây giờ, tôi không muốn tập trung vào những gì chúng ta sẽ làm ở đây, hay đúng hơn là bất kỳ chức năng nào ở đây.
+
+42
+00:03:48,780 --> 00:03:50,810
+Chúng tôi sẽ làm điều đó sau này.
+
+43
+00:03:50,820 --> 00:03:51,810
+Chúng tôi không cần.
+
+44
+00:03:51,840 --> 00:03:54,660
+Chỉnh sửa Tôi có thể loại bỏ chúng hoàn toàn.
+
+45
+00:03:56,550 --> 00:03:57,540
+Hoàn hảo.
+
+46
+00:03:57,660 --> 00:03:59,030
+Vì vậy, bài viết vô lý.
+
+47
+00:03:59,040 --> 00:04:00,450
+Chúng tôi sẽ trở lại với điều đó.
+
+48
+00:04:00,450 --> 00:04:02,670
+Nhưng hãy để tôi sửa đổi quan điểm.
+
+49
+00:04:02,680 --> 00:04:12,750
+Vì vậy, nếu tôi quay lại quan điểm của quản trị viên tạo sản phẩm, chúng tôi sẽ sửa đổi điều đó là vô lý và chúng tôi sẽ
+
+50
+00:04:12,750 --> 00:04:13,260
+xóa.
+
+51
+00:04:13,260 --> 00:04:15,300
+Chỉnh sửa Chúng tôi không cần điều đó.
+
+52
+00:04:16,920 --> 00:04:20,430
+Được rồi, hãy để tôi mở chứng chỉ và làm việc với nó.
+
+53
+00:04:20,880 --> 00:04:25,860
+Khi chúng ta ở trong biểu mẫu, chúng ta nên có ID trong thuộc tính ẩn.
+
+54
+00:04:25,860 --> 00:04:30,180
+Bằng cách đó, khi chúng tôi đăng bài, chúng tôi luôn có thông tin đó.
+
+55
+00:04:31,500 --> 00:04:34,380
+Sau đó, nơi chúng ta có tiêu đề tạo sản phẩm.
+
+56
+00:04:34,380 --> 00:04:38,790
+Ở đây, nếu có ID, đây sẽ là sản phẩm cập nhật.
+
+57
+00:04:38,790 --> 00:04:41,130
+Vì vậy, chúng ta phải làm cho điều đó năng động.
+
+58
+00:04:41,370 --> 00:04:46,830
+Chúng tôi sẽ sử dụng ký hiệu THÊM ở đây và chúng tôi có thể kiểm tra mô hình. sản phẩm. nhận dạng.
+
+59
+00:04:47,700 --> 00:04:55,290
+Nếu đó không phải là số 0, thì chúng tôi sẽ hiển thị cập nhật khác, chúng tôi sẽ hiển thị tạo.
+
+60
+00:04:56,120 --> 00:05:00,300
+Chúng tôi có thể xóa sản phẩm tạo này và sản phẩm đó sẽ năng động.
+
+61
+00:05:00,320 --> 00:05:02,390
+Để tôi chạy ứng dụng.
+
+62
+00:05:04,080 --> 00:05:11,070
+Chúng tôi sẽ không thể điều hướng điều đó trực tiếp bởi vì khi chúng tôi chuyển sang sản phẩm, điều này sẽ chuyển sang hành
+
+63
+00:05:11,070 --> 00:05:11,920
+động tạo.
+
+64
+00:05:11,940 --> 00:05:14,340
+Chúng tôi sẽ phải sửa đổi điều đó.
+
+65
+00:05:14,760 --> 00:05:18,030
+Đó là bố cục gạch dưới bên trong ở đây.
+
+66
+00:05:19,890 --> 00:05:21,720
+Bộ điều khiển sản phẩm.
+
+67
+00:05:21,840 --> 00:05:24,840
+Chúng tôi có hành động chỉ mục có vẻ tốt.
+
+68
+00:05:24,880 --> 00:05:29,520
+Rất tiếc, nó nằm trong chỉ mục ở đó.
+
+69
+00:05:29,520 --> 00:05:31,080
+Nó sẽ là vô lý.
+
+70
+00:05:32,420 --> 00:05:37,220
+Hãy để tôi cuộn xuống nơi chúng tôi đã thêm nó sẽ là hành động tương tự.
+
+71
+00:05:37,250 --> 00:05:38,420
+phi lý.
+
+72
+00:05:38,630 --> 00:05:43,880
+Lưu nó và chúng ta cần dừng lại và khởi động lại.
+
+73
+00:05:46,320 --> 00:05:54,380
+Hãy để tôi điều hướng đến sản phẩm ở đây và chúng tôi nhấn tạo hoàn hảo mới để trở nên vô lý ở đây.
+
+74
+00:05:54,390 --> 00:05:58,890
+Nếu tôi quay lại và cố gắng chỉnh sửa, nó sẽ chuyển sang cùng một chế độ xem.
+
+75
+00:05:58,890 --> 00:06:03,990
+Nhưng bạn có thể thấy dữ liệu được điền và chúng tôi thấy sản phẩm cập nhật.
+
+76
+00:06:04,970 --> 00:06:07,850
+Hãy để tôi cũng sửa đổi văn bản nút ở đây.
+
+77
+00:06:07,850 --> 00:06:10,700
+Vì vậy, hãy để tôi quay lại Upsert.
+
+78
+00:06:11,680 --> 00:06:14,170
+Chúng tôi có nút ở đây.
+
+79
+00:06:14,170 --> 00:06:23,110
+Chúng ta cũng có thể thêm một điều kiện if và giống như mô hình if. sản phẩm. id nếu đó không phải là số không.
+
+80
+00:06:23,990 --> 00:06:27,920
+Sau đó, chúng tôi muốn cập nhật khác, chúng tôi sẽ tiếp tục tạo.
+
+81
+00:06:28,720 --> 00:06:33,730
+Sao chép cái này, dán nó vào đây và gọi nó là bản cập nhật.
+
+82
+00:06:34,430 --> 00:06:34,820
+Hiện nay.
+
+83
+00:06:34,820 --> 00:06:39,720
+Ngay bây giờ tôi đang giữ mọi thứ cực kỳ đơn giản, nhưng chúng tôi có điều kiện if other.
+
+84
+00:06:39,740 --> 00:06:44,630
+Tiếp theo, chúng tôi sẽ bổ sung thêm một số xác nhận khi cập nhật.
+
+85
+00:06:44,660 --> 00:06:52,370
+Đó là lý do tại sao tôi đã thêm một điều kiện if other thay vì chức năng nội tuyến chỉ đổi tên văn
+
+86
+00:06:52,370 --> 00:06:53,330
+bản ở đây.
+
+87
+00:06:54,620 --> 00:06:55,700
+Rất hoàn hảo.
+
+88
+00:06:55,700 --> 00:07:00,890
+Với cấu hình đó, nếu tôi quay lại, chúng tôi sẽ có bản cập nhật và điều đó có vẻ tốt.
+

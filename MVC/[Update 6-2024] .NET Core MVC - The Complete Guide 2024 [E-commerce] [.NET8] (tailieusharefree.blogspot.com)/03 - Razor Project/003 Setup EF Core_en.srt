@@ -1,0 +1,252 @@
+1
+00:00:01,650 --> 00:00:04,590
+I hope you were able to complete the assignment.
+
+2
+00:00:04,860 --> 00:00:07,540
+Now when we have to use SQL Server.
+
+3
+00:00:07,560 --> 00:00:14,670
+First thing that we need here are the NuGet packages and we can do that in multiple ways.
+
+4
+00:00:14,910 --> 00:00:19,890
+We already have those NuGet packages in the bulky web project, which is MVC.
+
+5
+00:00:20,250 --> 00:00:28,830
+So if I right click on the solution here and select Manage NuGet packages for solution, well you can
+
+6
+00:00:28,830 --> 00:00:35,040
+notice here that Dotnet eight Preview two has been released, but we will continue with the first preview
+
+7
+00:00:35,040 --> 00:00:35,610
+that we have.
+
+8
+00:00:35,640 --> 00:00:36,630
+That's okay.
+
+9
+00:00:36,870 --> 00:00:44,010
+But what I want to tell you here is on the right side, you can see on bulky Web the version is installed.
+
+10
+00:00:44,280 --> 00:00:51,420
+If you select the other project as well, then it will install the same version inside the razor project
+
+11
+00:00:51,420 --> 00:00:51,990
+as well.
+
+12
+00:00:52,980 --> 00:00:57,030
+So if I install that, accept this.
+
+13
+00:00:57,420 --> 00:00:58,320
+Perfect.
+
+14
+00:00:58,320 --> 00:01:02,320
+That package is installed inside the razor project as well.
+
+15
+00:01:02,320 --> 00:01:05,140
+Now you can see that right here.
+
+16
+00:01:05,440 --> 00:01:10,360
+The other packages here are not installed in the razor project.
+
+17
+00:01:10,660 --> 00:01:16,420
+So we can install them using the same method, but we can do something better.
+
+18
+00:01:16,930 --> 00:01:23,380
+We know that we want the same packages that are in the web project so we can right click, edit the
+
+19
+00:01:23,380 --> 00:01:27,980
+project file and I can copy all of the NuGet packages.
+
+20
+00:01:28,000 --> 00:01:30,400
+We have the version here as well.
+
+21
+00:01:30,940 --> 00:01:36,370
+Close that and I will open the project file for Razor page.
+
+22
+00:01:37,030 --> 00:01:39,640
+Inside there we only have one.
+
+23
+00:01:39,670 --> 00:01:45,610
+We will remove that and paste everything that we copied from the MVC project.
+
+24
+00:01:46,310 --> 00:01:51,380
+What that will do is it will automatically install all of the NuGet packages.
+
+25
+00:01:51,560 --> 00:01:56,330
+Let me show that right here so you can see.
+
+26
+00:01:56,360 --> 00:02:01,190
+Everything is done automatically and we do not have to do much things.
+
+27
+00:02:01,610 --> 00:02:08,060
+This is another way of working with NuGet packages because if you directly add in the project file,
+
+28
+00:02:08,060 --> 00:02:15,350
+that is the ultimate location where a NuGet package is added and from there it will be installed and
+
+29
+00:02:15,350 --> 00:02:17,810
+available in your project.
+
+30
+00:02:18,440 --> 00:02:20,010
+Our packages are installed now.
+
+31
+00:02:20,030 --> 00:02:25,300
+we need to work on adding the application DB context here.
+
+32
+00:02:25,310 --> 00:02:27,410
+So let me add that.
+
+33
+00:02:30,410 --> 00:02:33,560
+And then we can go to the data application.
+
+34
+00:02:33,560 --> 00:02:39,620
+DB Context, copy everything and paste it right here.
+
+35
+00:02:40,010 --> 00:02:46,520
+Now I hope you did not copy and paste everything and you manually typed that because you have to learn
+
+36
+00:02:46,520 --> 00:02:54,200
+on how to seed the data, how to overwrite the on model, creating, how to add DB set and so on.
+
+37
+00:02:54,950 --> 00:03:01,910
+When we add the using statement, do not add reference to bulky web we need from the current project
+
+38
+00:03:01,910 --> 00:03:04,580
+which is bulky web razor.
+
+39
+00:03:06,230 --> 00:03:09,080
+Perfect DB Context looks good.
+
+40
+00:03:09,110 --> 00:03:11,720
+Next, we need Program.cs.
+
+41
+00:03:11,750 --> 00:03:14,570
+There we have to add the connection string.
+
+42
+00:03:15,410 --> 00:03:16,700
+Copy this line.
+
+43
+00:03:16,700 --> 00:03:17,870
+Close that.
+
+44
+00:03:17,900 --> 00:03:25,310
+Go to program.cs here and we will add that we will add the using statement as well.
+
+45
+00:03:26,190 --> 00:03:27,630
+And perfect.
+
+46
+00:03:28,520 --> 00:03:29,720
+That looks good.
+
+47
+00:03:30,460 --> 00:03:36,670
+Finally, the last thing that we have to do is add migration and create the tables.
+
+48
+00:03:37,660 --> 00:03:41,230
+For that, we will go to tools package manager console.
+
+49
+00:03:41,230 --> 00:03:44,980
+And here you have to be careful about one thing.
+
+50
+00:03:45,220 --> 00:03:53,350
+Previously we only had one project, so the default project was bulky web, but now we want to add migrations
+
+51
+00:03:53,350 --> 00:03:56,020
+and everything on the Razor project.
+
+52
+00:03:56,020 --> 00:04:03,460
+So you have to select that and you will say add migration, add category to DB.
+
+53
+00:04:07,680 --> 00:04:08,280
+Perfect.
+
+54
+00:04:08,280 --> 00:04:14,040
+If you take a look at the migration, it is adding category and it is inserting data.
+
+55
+00:04:15,180 --> 00:04:16,380
+Looks good.
+
+56
+00:04:16,649 --> 00:04:18,959
+Let me update the database.
+
+57
+00:04:20,640 --> 00:04:21,390
+Perfect.
+
+58
+00:04:21,510 --> 00:04:23,240
+That is done as well.
+
+59
+00:04:23,250 --> 00:04:31,710
+If we go back to SQL Server, we should have a new database which is bulky razor we should have
+
+60
+00:04:31,710 --> 00:04:35,280
+the categories table with three categories.
+
+61
+00:04:36,020 --> 00:04:42,620
+So entity framework code has been set up in our project and you can see how fast it is to get started
+
+62
+00:04:42,620 --> 00:04:44,420
+with EF core in.
+
+63
+00:04:44,670 --> 00:04:46,130
+.Net application.
+

@@ -1,0 +1,100 @@
+1
+00:00:01,500 --> 00:00:06,000
+Let me give you a brief overview of what we will cover in this course.
+
+2
+00:00:06,420 --> 00:00:12,630
+Now, as we know, we are building a real world application, so our final project will have an entire
+
+3
+00:00:12,630 --> 00:00:13,770
+architecture.
+
+4
+00:00:14,280 --> 00:00:21,450
+When we work with entity framework for database, we will be using repository pattern and unit of work.
+
+5
+00:00:22,080 --> 00:00:26,860
+Then we will see temp data view back view data in .net core.
+
+6
+00:00:26,880 --> 00:00:32,640
+What are the differences between them and ideally when you should use each one of them?
+
+7
+00:00:33,030 --> 00:00:38,130
+We will also see API controllers along with razor pages.
+
+8
+00:00:38,750 --> 00:00:45,380
+Then we will integrate many advanced features like sweet alerts, rich text editor, data tables with
+
+9
+00:00:45,620 --> 00:00:46,330
+.net core.
+
+10
+00:00:46,340 --> 00:00:49,670
+So basically many JavaScript packages.
+
+11
+00:00:51,020 --> 00:00:54,780
+After that, we will integrate security in our application.
+
+12
+00:00:54,800 --> 00:01:02,720
+For that, we will use the .net identity and we will implement roles and authorization in our application.
+
+13
+00:01:03,290 --> 00:01:10,340
+In order to capture payments, we will be using Stripe payment and we will also see how to process refund
+
+14
+00:01:10,370 --> 00:01:11,840
+using Stripe.
+
+15
+00:01:11,870 --> 00:01:18,140
+Then we will see sessions in .net core and how to send emails using SendGrid.
+
+16
+00:01:18,560 --> 00:01:25,340
+We will also build a user management in our website where basically we will manage all the users.
+
+17
+00:01:25,340 --> 00:01:27,980
+We can toggle their roles dynamically.
+
+18
+00:01:29,160 --> 00:01:33,330
+On top of that, we will implement social login using Facebook.
+
+19
+00:01:33,360 --> 00:01:37,530
+That way they do not have to enter all the details when the sign up.
+
+20
+00:01:37,950 --> 00:01:45,270
+We will also look at some advanced concepts like view components in .net core and how to see database
+
+21
+00:01:45,270 --> 00:01:47,400
+using DB initializer.
+
+22
+00:01:48,920 --> 00:01:55,760
+Once the application is complete, we will deploy the complete application to Azure and that way you
+
+23
+00:01:55,760 --> 00:01:59,570
+will gain experience on how to deploy your application.
+
+24
+00:01:59,960 --> 00:02:04,190
+Now what I have covered right now is at 10,000 ft overview.
+
+25
+00:02:04,490 --> 00:02:08,780
+So let me continue with our journey from the next video.
+

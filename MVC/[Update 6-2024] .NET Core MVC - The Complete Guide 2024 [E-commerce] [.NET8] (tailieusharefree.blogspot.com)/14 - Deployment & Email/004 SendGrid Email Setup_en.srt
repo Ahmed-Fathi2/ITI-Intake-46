@@ -1,0 +1,528 @@
+1
+00:00:01,770 --> 00:00:04,260
+-: In the upcoming videos, we will see
+
+2
+00:00:04,260 --> 00:00:07,230
+how to send email using SendGrid.
+
+3
+00:00:07,230 --> 00:00:10,440
+And these two videos are optional videos
+
+4
+00:00:10,440 --> 00:00:13,320
+and the reason I am saying that is because
+
+5
+00:00:13,320 --> 00:00:16,620
+when you want to use SendGrid to send out emails,
+
+6
+00:00:16,620 --> 00:00:18,930
+you need a domain email.
+
+7
+00:00:18,930 --> 00:00:21,060
+When you are working professionally
+
+8
+00:00:21,060 --> 00:00:24,960
+you will always have a domain email from your workplace.
+
+9
+00:00:24,960 --> 00:00:27,030
+But if you are learning something,
+
+10
+00:00:27,030 --> 00:00:30,753
+it might be possible that you do not have a domain email.
+
+11
+00:00:31,920 --> 00:00:34,290
+If you do not have a domain email,
+
+12
+00:00:34,290 --> 00:00:36,960
+SendGrid email will not work.
+
+13
+00:00:36,960 --> 00:00:40,980
+And that is actually true for other email providers as well.
+
+14
+00:00:40,980 --> 00:00:43,773
+They prefer you have a domain email.
+
+15
+00:00:44,640 --> 00:00:47,250
+So if you do not have a domain email,
+
+16
+00:00:47,250 --> 00:00:49,170
+you can just watch the video
+
+17
+00:00:49,170 --> 00:00:53,253
+and see how easy it is to implement the email functionality.
+
+18
+00:00:54,330 --> 00:00:56,310
+That being said, we will be using
+
+19
+00:00:56,310 --> 00:00:59,403
+SendGrid to send emails in our project.
+
+20
+00:01:00,360 --> 00:01:02,130
+First, let me sign in here,
+
+21
+00:01:02,130 --> 00:01:04,379
+because I already have an account.
+
+22
+00:01:04,379 --> 00:01:06,270
+If you do not have an account,
+
+23
+00:01:06,270 --> 00:01:09,333
+you can always sign up for a free account.
+
+24
+00:01:11,250 --> 00:01:14,370
+Once you log in there, on the profile,
+
+25
+00:01:14,370 --> 00:01:17,043
+we have something called Account Settings.
+
+26
+00:01:18,540 --> 00:01:20,940
+Inside there, before we do anything else,
+
+27
+00:01:20,940 --> 00:01:24,630
+there is something called a Sender Authentication.
+
+28
+00:01:24,630 --> 00:01:28,770
+There you have to basically verify your domain name.
+
+29
+00:01:28,770 --> 00:01:33,300
+I have already verified, hello at dot net mastery dot com.
+
+30
+00:01:33,300 --> 00:01:36,213
+Because of that, I am able to use SendGrid.
+
+31
+00:01:37,140 --> 00:01:39,420
+Now if you are creating your account,
+
+32
+00:01:39,420 --> 00:01:43,140
+you will have to verify a single sender identity.
+
+33
+00:01:43,140 --> 00:01:45,540
+You will enter the details here,
+
+34
+00:01:45,540 --> 00:01:49,860
+and it will guide you on how to verify that identity.
+
+35
+00:01:49,860 --> 00:01:54,060
+If that identity is not verified using a domain email,
+
+36
+00:01:54,060 --> 00:01:56,970
+then SendGrid will not work.
+
+37
+00:01:56,970 --> 00:02:00,120
+So again, if you do not have a domain email,
+
+38
+00:02:00,120 --> 00:02:03,120
+and you only have Gmail or Yahoo,
+
+39
+00:02:03,120 --> 00:02:05,730
+do not try SendGrid, it will not work.
+
+40
+00:02:05,730 --> 00:02:09,449
+But you can watch the video and see how easy it is
+
+41
+00:02:09,449 --> 00:02:12,423
+to implement email in dot net core.
+
+42
+00:02:13,350 --> 00:02:16,500
+Now, similar to Stripe, with SendGrid as well,
+
+43
+00:02:16,500 --> 00:02:19,110
+we need an API Key.
+
+44
+00:02:19,110 --> 00:02:24,090
+So let me create a new API key here, with full access.
+
+45
+00:02:24,090 --> 00:02:27,720
+Key name, let me call that as bulky.
+
+46
+00:02:27,720 --> 00:02:30,780
+Create and view, and perfect.
+
+47
+00:02:30,780 --> 00:02:32,790
+Let me copy that.
+
+48
+00:02:32,790 --> 00:02:36,120
+We will paste our keys in the same location,
+
+49
+00:02:36,120 --> 00:02:39,540
+which is appsettings.jason here.
+
+50
+00:02:39,540 --> 00:02:44,370
+And right here, we'll add a section of SendGrid,
+
+51
+00:02:44,370 --> 00:02:48,090
+and in there we will use a key name of secret key
+
+52
+00:02:48,090 --> 00:02:51,573
+and let me paste the secret right here.
+
+53
+00:02:52,590 --> 00:02:56,340
+Now if you remember, previously we saw some issue
+
+54
+00:02:56,340 --> 00:03:00,930
+with sending emails because of that in the utility project.
+
+55
+00:03:00,930 --> 00:03:03,510
+We implemented the email sender,
+
+56
+00:03:03,510 --> 00:03:08,190
+which basically implements the build in Iemail sender.
+
+57
+00:03:08,190 --> 00:03:11,010
+We will enhance this email sender
+
+58
+00:03:11,010 --> 00:03:13,623
+and accent grid support right here.
+
+59
+00:03:14,490 --> 00:03:18,120
+So first thing, inside the utility project,
+
+60
+00:03:18,120 --> 00:03:22,140
+manage NuGet Packages, and there we will browse
+
+61
+00:03:22,140 --> 00:03:24,033
+for the SendGrid package.
+
+62
+00:03:26,100 --> 00:03:30,720
+Perfect, we have the package here. Let me install that.
+
+63
+00:03:30,720 --> 00:03:33,900
+And then we are ready to use SendGrid
+
+64
+00:03:33,900 --> 00:03:36,390
+inside the email sender.
+
+65
+00:03:36,390 --> 00:03:39,393
+Now using SendGrid here is super simple.
+
+66
+00:03:40,440 --> 00:03:43,530
+First we need to access our key here,
+
+67
+00:03:43,530 --> 00:03:46,770
+so let me create a property to store that key.
+
+68
+00:03:46,770 --> 00:03:50,250
+And in the constructor here, previously we saw
+
+69
+00:03:50,250 --> 00:03:52,740
+that with Stripe we created a class
+
+70
+00:03:52,740 --> 00:03:54,720
+that resembles the property.
+
+71
+00:03:54,720 --> 00:03:58,860
+And we used to populate that in Program dot CS.
+
+72
+00:03:58,860 --> 00:04:00,990
+Another way of accessing them,
+
+73
+00:04:00,990 --> 00:04:05,970
+is we can access the Iconfiguration directly here.
+
+74
+00:04:05,970 --> 00:04:08,043
+Call that and let's go config.
+
+75
+00:04:09,270 --> 00:04:12,480
+Then to populate the SendGrid secret here
+
+76
+00:04:12,480 --> 00:04:15,180
+we will access and that's called config.
+
+77
+00:04:15,180 --> 00:04:18,060
+There we have a method GetValue,
+
+78
+00:04:18,060 --> 00:04:20,220
+where we have to define the type.
+
+79
+00:04:20,220 --> 00:04:23,310
+And here we need to write the key name.
+
+80
+00:04:23,310 --> 00:04:26,910
+Now in app settings, we have section of SendGrid,
+
+81
+00:04:26,910 --> 00:04:28,920
+copy and paste that.
+
+82
+00:04:28,920 --> 00:04:31,860
+We have a key with the name of secret key.
+
+83
+00:04:31,860 --> 00:04:36,273
+So we will separate that by colon and paste that secret key.
+
+84
+00:04:37,140 --> 00:04:39,570
+That will reveal the secret value
+
+85
+00:04:39,570 --> 00:04:42,183
+and assign that to SendGrid secret.
+
+86
+00:04:43,440 --> 00:04:45,990
+Finally, right here, we have to add
+
+87
+00:04:45,990 --> 00:04:48,780
+the logic to send an email.
+
+88
+00:04:48,780 --> 00:04:51,000
+When we are working with SendGrid,
+
+89
+00:04:51,000 --> 00:04:53,760
+we first have to create a client,
+
+90
+00:04:53,760 --> 00:04:56,643
+which is inside SendGrid client.
+
+91
+00:04:58,080 --> 00:05:00,210
+And inside the parameter here,
+
+92
+00:05:00,210 --> 00:05:03,153
+we have to press the SendGrid secret key.
+
+93
+00:05:04,010 --> 00:05:06,660
+And that way it will create a client.
+
+94
+00:05:06,660 --> 00:05:09,513
+Then we need to add the from email address.
+
+95
+00:05:10,380 --> 00:05:15,380
+So we will say variable from is equal to a new email address
+
+96
+00:05:15,780 --> 00:05:18,780
+and that email address you can see it is inside
+
+97
+00:05:18,780 --> 00:05:21,930
+SendGrid dot helpers dot mail.
+
+98
+00:05:21,930 --> 00:05:24,930
+And there we will write the email,
+
+99
+00:05:24,930 --> 00:05:29,340
+which I have used to verify the single sender identity.
+
+100
+00:05:29,340 --> 00:05:32,463
+Which is hello at dot net mastery dot com.
+
+101
+00:05:33,510 --> 00:05:36,940
+Next, we can give a title here like Bulky Book
+
+102
+00:05:37,920 --> 00:05:40,083
+and that looks good for the email.
+
+103
+00:05:41,640 --> 00:05:44,313
+Then what email do we want to send email to?
+
+104
+00:05:45,240 --> 00:05:47,910
+So to will be new email address
+
+105
+00:05:47,910 --> 00:05:50,430
+and that we'll receive in the parameter of the
+
+106
+00:05:50,430 --> 00:05:53,070
+method right here.
+
+107
+00:05:53,070 --> 00:05:56,040
+Finally, we have the message itself,
+
+108
+00:05:56,040 --> 00:06:00,300
+message is equal to mail helper dot
+
+109
+00:06:00,300 --> 00:06:03,630
+there is a method, create single email.
+
+110
+00:06:03,630 --> 00:06:07,950
+Now previously in older version of SendGrid it was different
+
+111
+00:06:07,950 --> 00:06:11,730
+but they have simplified it with create single email.
+
+112
+00:06:11,730 --> 00:06:12,840
+If you have a template,
+
+113
+00:06:12,840 --> 00:06:16,470
+you can use create single template email.
+
+114
+00:06:16,470 --> 00:06:19,500
+We have a single email, we can add that,
+
+115
+00:06:19,500 --> 00:06:22,740
+and we have simple parameter from email
+
+116
+00:06:22,740 --> 00:06:27,150
+we have that in from, to email is inside to,
+
+117
+00:06:27,150 --> 00:06:30,060
+subject will receive that in the parameter,
+
+118
+00:06:30,060 --> 00:06:35,060
+and then we can give plain text content or string HTML.
+
+119
+00:06:35,760 --> 00:06:39,150
+Plain text content, let me keep that empty.
+
+120
+00:06:39,150 --> 00:06:42,420
+But finally we have some HTML content
+
+121
+00:06:42,420 --> 00:06:47,283
+that we will receive in the parameter which is HTML message.
+
+122
+00:06:48,150 --> 00:06:49,740
+So with that, we have drafted
+
+123
+00:06:49,740 --> 00:06:52,410
+the message that we need to send.
+
+124
+00:06:52,410 --> 00:06:56,790
+Finally, on client we will call the send email async
+
+125
+00:06:56,790 --> 00:06:58,920
+and we'll pass our message
+
+126
+00:06:58,920 --> 00:07:01,773
+and that will finally send the email.
+
+127
+00:07:02,670 --> 00:07:04,590
+So you can see how easy it was
+
+128
+00:07:04,590 --> 00:07:07,080
+to implement the Iemail sender.
+
+129
+00:07:07,080 --> 00:07:11,760
+It was adding about five lines of code and that's about it.
+
+130
+00:07:11,760 --> 00:07:15,480
+That is how easy SendGrid implementation is,
+
+131
+00:07:15,480 --> 00:07:18,060
+when it goes to dot net core.
+
+132
+00:07:18,060 --> 00:07:20,763
+Let me test that in the next video.
+

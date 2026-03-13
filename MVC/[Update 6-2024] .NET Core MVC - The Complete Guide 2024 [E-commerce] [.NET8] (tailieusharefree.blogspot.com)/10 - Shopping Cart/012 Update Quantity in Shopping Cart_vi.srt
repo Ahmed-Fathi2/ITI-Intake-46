@@ -1,0 +1,276 @@
+1
+00:00:01,440 --> 00:00:07,650
+Bây giờ chúng tôi muốn triển khai giảm dần và xóa mặt hàng khỏi giỏ hàng.
+
+2
+00:00:08,130 --> 00:00:13,230
+Nếu tôi quay lại và xem mã, chúng tôi có tất cả chúng ngay tại đây.
+
+3
+00:00:13,900 --> 00:00:19,420
+Vì vậy, những gì chúng tôi có thể làm là nơi chúng tôi có thẻ neo, chúng tôi có thể gọi một hành động mới.
+
+4
+00:00:19,420 --> 00:00:29,620
+Và để tăng, hãy để tôi gọi đó là cộng cho giảm, hãy để tôi gọi một hành động mới, đó là trừ.
+
+5
+00:00:29,620 --> 00:00:35,290
+Và để xóa ở đây, chúng tôi sẽ có một hành động xóa ASP.
+
+6
+00:00:36,640 --> 00:00:44,020
+Khi chúng tôi đang cập nhật bất kỳ số lượng nào, chúng tôi cần biết ID giỏ hàng Dựa vào đó, chúng tôi có thể chuyển đổi số lượng.
+
+7
+00:00:44,650 --> 00:00:52,330
+Vì vậy, khi gọi hành động ở đây, chúng ta cần chuyển ID sẽ là ID giỏ hàng dưới dạng tham số.
+
+8
+00:00:52,330 --> 00:00:59,980
+Vì vậy, định tuyến ASP và để tôi gọi ID giỏ hàng đó bằng mặt hàng. nhận dạng.
+
+9
+00:01:02,230 --> 00:01:05,800
+Sao chép và dán nó cho cả ba người trong số họ.
+
+10
+00:01:06,820 --> 00:01:07,750
+Hoàn hảo.
+
+11
+00:01:07,780 --> 00:01:12,340
+Bây giờ chúng ta cần tạo phương thức hành động này trong bộ điều khiển giỏ hàng.
+
+12
+00:01:12,700 --> 00:01:16,180
+Trong chỉ mục ở đây, chúng tôi chưa định nghĩa bất kỳ bộ điều khiển nào.
+
+13
+00:01:16,180 --> 00:01:20,080
+Do đó, nó sẽ nhìn vào bên trong cùng một bộ điều khiển.
+
+14
+00:01:21,100 --> 00:01:24,850
+Và để làm được điều đó, chúng ta có thể trực tiếp tạo hành động của bộ điều khiển.
+
+15
+00:01:24,850 --> 00:01:29,180
+Và tôi sẽ làm điều đó trước phương thức private mà chúng ta có ở đây.
+
+16
+00:01:29,200 --> 00:01:32,740
+Bằng cách đó, tất cả các phương pháp hành động ở lại với nhau.
+
+17
+00:01:33,280 --> 00:01:40,720
+Chúng ta sẽ tạo phương thức hành động đầu tiên sẽ là công khai. Tên kết quả hành động sẽ là dấu cộng ở đây và
+
+18
+00:01:40,720 --> 00:01:45,550
+thuộc tính mà chúng ta sẽ nhận được ở đây sẽ là ID giỏ hàng số nguyên.
+
+19
+00:01:46,360 --> 00:01:48,970
+Vậy kiểu trả về ở đây sẽ là gì?
+
+20
+00:01:49,670 --> 00:01:56,870
+Chà, chúng tôi sẽ quay lại chế độ xem sau khi chúng tôi tăng số lượng để tăng số lượng.
+
+21
+00:01:56,900 --> 00:02:03,560
+Trước tiên, chúng tôi phải truy xuất giỏ hàng từ cơ sở dữ liệu bằng đơn vị công việc, chấm giỏ hàng chấm
+
+22
+00:02:03,560 --> 00:02:06,920
+lấy và chúng tôi sẽ lấy giỏ hàng đó dựa trên ID.
+
+23
+00:02:08,330 --> 00:02:12,620
+Vì vậy, bạn. id bằng với id giỏ hàng.
+
+24
+00:02:14,300 --> 00:02:17,500
+Khi chúng tôi truy xuất điều đó, chúng tôi phải cập nhật số lượng.
+
+25
+00:02:17,510 --> 00:02:22,550
+Vì vậy, tính từ số dấu chấm DB cộng bằng một.
+
+26
+00:02:23,920 --> 00:02:32,500
+Và sau đó, chúng ta phải gọi đơn vị công việc dot giỏ hàng dot cập nhật giỏ hàng từ DB và đơn vị công việc
+
+27
+00:02:32,500 --> 00:02:33,550
+dot save.
+
+28
+00:02:34,250 --> 00:02:35,960
+Điều đó sẽ cập nhật thẻ.
+
+29
+00:02:35,990 --> 00:02:43,610
+Nhưng một khi chúng tôi cập nhật, chúng tôi phải quay lại chế độ xem chỉ mục của bộ điều khiển thẻ, đây sẽ
+
+30
+00:02:43,610 --> 00:02:45,170
+là trang giỏ hàng.
+
+31
+00:02:45,770 --> 00:02:54,440
+Vì vậy, chúng ta có thể nói chuyển hướng trở lại chỉ mục hành động, nhưng thay vì chuỗi ma thuật, chúng ta có thể sử dụng tên của và chúng
+
+32
+00:02:54,440 --> 00:02:56,090
+ta có thể sử dụng chỉ mục.
+
+33
+00:02:56,510 --> 00:02:58,840
+Vì vậy, cộng ở đây có vẻ tốt.
+
+34
+00:02:58,850 --> 00:03:02,630
+Hãy để tôi sao chép và dán vào đây để trừ.
+
+35
+00:03:03,500 --> 00:03:07,910
+Và trong trường hợp bị trừ, chúng ta phải cẩn thận về một điều.
+
+36
+00:03:08,060 --> 00:03:10,710
+Nếu số đếm bằng một.
+
+37
+00:03:10,730 --> 00:03:17,480
+Trong trường hợp đó, chúng tôi muốn xóa mặt hàng đó vì chúng tôi không muốn một mặt hàng có số lượng bằng 0
+
+38
+00:03:17,480 --> 00:03:18,560
+trong giỏ hàng.
+
+39
+00:03:19,360 --> 00:03:27,760
+Vì vậy, chúng tôi có thể nói nếu số chấm thẻ bằng một hoặc chúng tôi có thể nói nếu nhỏ hơn một, thì chúng tôi
+
+40
+00:03:27,760 --> 00:03:30,070
+muốn xóa số đó khỏi giỏ hàng.
+
+41
+00:03:31,700 --> 00:03:32,750
+Trong khác.
+
+42
+00:03:32,750 --> 00:03:37,460
+Chúng tôi sẽ giảm số lượng xuống một và chúng tôi sẽ lưu các thay đổi.
+
+43
+00:03:38,090 --> 00:03:45,530
+Vì vậy, hãy để tôi cắt cái này từ đây, dán nó vào bên trong và nơi chúng ta phải xóa nó, chúng ta có thể nói đơn vị
+
+44
+00:03:45,530 --> 00:03:49,130
+công việc gạch dưới, dấu chấm giỏ hàng dấu chấm xóa.
+
+45
+00:03:49,310 --> 00:03:51,730
+Chúng tôi muốn xóa giỏ hàng khỏi DB.
+
+46
+00:03:53,200 --> 00:03:56,860
+Với cấu hình đó, điểm trừ cũng có vẻ tốt.
+
+47
+00:03:56,890 --> 00:03:59,050
+Sao chép và dán lại.
+
+48
+00:03:59,080 --> 00:04:07,240
+Cái cuối cùng là xóa và chúng tôi chỉ muốn xóa để có thể xóa mọi thứ khác.
+
+49
+00:04:07,750 --> 00:04:09,130
+Và hoàn hảo.
+
+50
+00:04:09,130 --> 00:04:10,990
+Tôi tin rằng có vẻ tốt.
+
+51
+00:04:11,020 --> 00:04:16,420
+Hãy để tôi nhấn ctrl và ctrl D để căn chỉnh mọi thứ ở đây.
+
+52
+00:04:17,589 --> 00:04:19,839
+Và hoàn hảo.
+
+53
+00:04:20,260 --> 00:04:21,760
+Rằng sẽ rất tốt.
+
+54
+00:04:21,790 --> 00:04:26,350
+Hãy để tôi khởi động lại ứng dụng và xem nó có hoạt động không.
+
+55
+00:04:28,660 --> 00:04:29,500
+Hoàn hảo.
+
+56
+00:04:29,770 --> 00:04:32,200
+Hãy để tôi đi đến giỏ hàng ở đây.
+
+57
+00:04:32,230 --> 00:04:35,500
+Hãy để tôi chọn nút trừ và.
+
+58
+00:04:35,500 --> 00:04:36,130
+Tuyệt vời.
+
+59
+00:04:36,160 --> 00:04:39,940
+Tổng số cũng như số lượng ở đây đã được cập nhật.
+
+60
+00:04:40,180 --> 00:04:43,150
+Bạn có thể thấy nó đang sửa đổi cả hai.
+
+61
+00:04:43,720 --> 00:04:46,270
+Hãy để tôi cố gắng loại bỏ chúng nhiều hơn.
+
+62
+00:04:49,790 --> 00:04:52,170
+Và hoàn hảo có vẻ tốt.
+
+63
+00:04:52,190 --> 00:04:57,260
+Nếu tôi loại bỏ điều này hơn nữa, hãy để tôi tạo ra số lượng một cái.
+
+64
+00:04:57,260 --> 00:05:02,690
+Và bây giờ nếu tôi xóa nó sẽ xóa mặt hàng này khỏi giỏ hàng.
+
+65
+00:05:02,810 --> 00:05:04,130
+Điều đó hoạt động.
+
+66
+00:05:04,670 --> 00:05:10,430
+Hãy để tôi thử thêm một mục nữa ở đây và tôi sẽ vào giỏ hàng.
+
+67
+00:05:10,520 --> 00:05:14,210
+Hãy để tôi nhấp vào xóa ở đây và hoàn thiện.
+
+68
+00:05:14,210 --> 00:05:15,740
+Điều đó cũng hoạt động.
+
+69
+00:05:16,070 --> 00:05:22,130
+Vì vậy, các chức năng tăng giảm và loại bỏ đang hoạt động như mong đợi.
+

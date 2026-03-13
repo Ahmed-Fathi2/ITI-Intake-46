@@ -1,0 +1,188 @@
+1
+00:00:01,480 --> 00:00:05,950
+Now in our category page, we are displaying all the categories.
+
+2
+00:00:05,950 --> 00:00:09,430
+But what if a user wants to create a category?
+
+3
+00:00:10,030 --> 00:00:16,930
+For that, we need a button here that will take us to a new page which will be dedicated to creating
+
+4
+00:00:16,930 --> 00:00:17,980
+a category.
+
+5
+00:00:19,300 --> 00:00:23,200
+So let me add that button and add some styling.
+
+6
+00:00:23,920 --> 00:00:25,990
+Rather than playing simple H1.
+
+7
+00:00:25,990 --> 00:00:28,000
+Here, let me remove that.
+
+8
+00:00:28,060 --> 00:00:35,920
+I will add a div, give it a class of container and we will close that div at the very end.
+
+9
+00:00:36,680 --> 00:00:37,730
+Right there.
+
+10
+00:00:39,350 --> 00:00:45,470
+Then we will add a div, give it a class of row and padding top of four.
+
+11
+00:00:45,590 --> 00:00:49,400
+These are just bootstrap classes that we are using.
+
+12
+00:00:50,580 --> 00:00:52,530
+We are defining a container.
+
+13
+00:00:52,530 --> 00:00:56,380
+And inside there we have a row in bootstrap.
+
+14
+00:00:56,400 --> 00:00:59,730
+Row is divided into 12 columns in a page.
+
+15
+00:00:59,910 --> 00:01:03,720
+So one row will basically have 12 columns.
+
+16
+00:01:04,050 --> 00:01:10,920
+What we want to do is inside that div class of row, we will be using six columns.
+
+17
+00:01:10,950 --> 00:01:14,340
+That means we are left with other six column.
+
+18
+00:01:15,460 --> 00:01:19,330
+We will add those other six column right here.
+
+19
+00:01:20,110 --> 00:01:25,930
+So the six columns on the left side, which is the left hand side of the page, we want to display the
+
+20
+00:01:25,930 --> 00:01:26,680
+heading.
+
+21
+00:01:27,480 --> 00:01:35,700
+We will use H2 here and we will give it a bootstrap classes of text primary, which is black color.
+
+22
+00:01:36,720 --> 00:01:39,630
+There we will display category list.
+
+23
+00:01:39,780 --> 00:01:41,400
+Let me save that.
+
+24
+00:01:41,400 --> 00:01:42,000
+And.
+
+25
+00:01:42,000 --> 00:01:42,700
+Perfect.
+
+26
+00:01:42,730 --> 00:01:43,740
+Looks good.
+
+27
+00:01:44,340 --> 00:01:50,790
+On the right side here, we want to add the button to add a new category, and that button will be on
+
+28
+00:01:50,790 --> 00:01:51,920
+the right side.
+
+29
+00:01:51,930 --> 00:01:59,580
+So with column six, we will add something like text and that will make sure it floats to the right
+
+30
+00:01:59,580 --> 00:02:00,240
+side.
+
+31
+00:02:00,950 --> 00:02:01,790
+Inside there.
+
+32
+00:02:01,790 --> 00:02:06,350
+We want an anchor tag and that will take us to some controller.
+
+33
+00:02:06,350 --> 00:02:09,650
+And inside there it will invoke some action.
+
+34
+00:02:09,889 --> 00:02:15,440
+What it is, we have not defined that, but we will do that in the upcoming videos.
+
+35
+00:02:16,240 --> 00:02:24,910
+We will give it the bootstrap classes of BTN BTN primary and let me say create new category.
+
+36
+00:02:26,360 --> 00:02:30,100
+Along with that, let me add a bootstrap icon as well.
+
+37
+00:02:30,110 --> 00:02:34,370
+So I will search for a plus icon.
+
+38
+00:02:36,300 --> 00:02:38,130
+And we have the plus circle.
+
+39
+00:02:38,130 --> 00:02:39,600
+Let me use that.
+
+40
+00:02:39,900 --> 00:02:44,130
+Paste it right here and let's go back.
+
+41
+00:02:44,940 --> 00:02:45,690
+Perfect.
+
+42
+00:02:45,720 --> 00:02:48,000
+We have create new category.
+
+43
+00:02:49,120 --> 00:02:55,840
+Along with padding top for let me do padding bottom and I think three will be good.
+
+44
+00:02:57,540 --> 00:02:58,320
+Perfect.
+
+45
+00:02:58,320 --> 00:03:02,580
+That looks much better for our category list page.
+
+46
+00:03:03,230 --> 00:03:07,510
+Now, what should happen when we click the button of create new category?
+
+47
+00:03:07,520 --> 00:03:10,340
+Let me do that in the next video.
+

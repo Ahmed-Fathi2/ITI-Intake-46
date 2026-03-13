@@ -1,0 +1,138 @@
+﻿using ITI.Application.Dtos;
+using ITI.Application.Interfaces.Services;
+using System.ComponentModel;
+using System.Drawing;
+using System.Windows.Forms;
+
+namespace ITI.WinForms
+{
+    public class DepartmentForm : Form
+    {
+        private readonly IDepartmentService departmentService;
+        private readonly IInstractorService instractorService;
+
+        private DataGridView grid;
+        private TextBox nameTxt;
+        private TextBox locationTxt;
+        private ComboBox managerCombo;
+        private Button addBtn;
+        private Button updateBtn;
+        private Button deleteBtn;
+
+        public DepartmentForm(IDepartmentService departmentService, IInstractorService instractorService)
+        {
+            this.departmentService = departmentService;
+            this.instractorService = instractorService;
+            InitializeComponent();
+            LoadInstructors();
+            LoadDepartments();
+        }
+
+        private void InitializeComponent()
+        {
+            Text = "Departments";
+            ClientSize = new Size(700, 500);
+
+            grid = new DataGridView { Location = new Point(20, 20), Size = new Size(640, 250), ReadOnly = true, AutoGenerateColumns = true };
+            nameTxt = new TextBox { Location = new Point(120, 290), Size = new Size(200, 25) };
+            locationTxt = new TextBox { Location = new Point(120, 330), Size = new Size(200, 25) };
+            managerCombo = new ComboBox { Location = new Point(120, 370), Size = new Size(200, 25), DropDownStyle = ComboBoxStyle.DropDownList };
+
+            var nameLbl = new Label { Text = "Name", Location = new Point(20, 290), Size = new Size(80, 25) };
+            var locLbl = new Label { Text = "Location", Location = new Point(20, 330), Size = new Size(80, 25) };
+            var manLbl = new Label { Text = "Manager", Location = new Point(20, 370), Size = new Size(80, 25) };
+
+            addBtn = new Button { Text = "Add", Location = new Point(360, 290), Size = new Size(100, 30) };
+            updateBtn = new Button { Text = "Update", Location = new Point(360, 330), Size = new Size(100, 30) };
+            deleteBtn = new Button { Text = "Delete", Location = new Point(360, 370), Size = new Size(100, 30) };
+
+            Controls.AddRange(new Control[] { grid, nameTxt, locationTxt, managerCombo, nameLbl, locLbl, manLbl, addBtn, updateBtn, deleteBtn });
+
+            addBtn.Click += AddBtn_Click;
+            updateBtn.Click += UpdateBtn_Click;
+            deleteBtn.Click += DeleteBtn_Click;
+            grid.SelectionChanged += Grid_SelectionChanged;
+        }
+
+        private void LoadDepartments()
+        {
+            var list = departmentService.GetAll().ToList();
+            grid.DataSource = null;
+            grid.DataSource = new BindingList<AllDepartmentDto>(list);
+        }
+
+        private void LoadInstructors()
+        {
+            var list = instractorService.GetAll().ToList();
+            // add placeholder for no manager
+            var items = new List<AllInstractorDto?>();
+            items.Add(null);
+            items.AddRange(list);
+
+            managerCombo.DataSource = null;
+            // For nullable items, use a small wrapper list with Display and Value
+            var displayList = items.Select(i => new { Id = i?.Id ?? 0, Name = i == null ? "-- None --" : i.FullName }).ToList();
+            managerCombo.DisplayMember = "Name";
+            managerCombo.ValueMember = "Id";
+            managerCombo.DataSource = displayList;
+        }
+
+        private void AddBtn_Click(object? sender, EventArgs e)
+        {
+            int? managerId = null;
+            if (managerCombo.SelectedValue is int v && v != 0) managerId = v;
+            var dto = new CreateDepartmentDto(nameTxt.Text, locationTxt.Text, managerId);
+            departmentService.Add(dto);
+            ClearInputs();
+            LoadDepartments();
+        }
+
+        private void UpdateBtn_Click(object? sender, EventArgs e)
+        {
+            if (grid.CurrentRow?.DataBoundItem is AllDepartmentDto dto)
+            {
+                int? managerId = null;
+                if (managerCombo.SelectedValue is int v && v != 0) managerId = v;
+                var update = new UpdateDepartmentDto(dto.Id, nameTxt.Text, locationTxt.Text, managerId);
+                departmentService.Update(update);
+                LoadDepartments();
+            }
+        }
+
+        private void DeleteBtn_Click(object? sender, EventArgs e)
+        {
+            if (grid.CurrentRow?.DataBoundItem is AllDepartmentDto dto)
+            {
+                var r = MessageBox.Show("Delete this department?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (r == DialogResult.Yes)
+                {
+                    departmentService.Delete(dto.Id);
+                    LoadDepartments();
+                    ClearInputs();
+                }
+            }
+        }
+
+        private void Grid_SelectionChanged(object? sender, EventArgs e)
+        {
+            if (grid.CurrentRow?.DataBoundItem is AllDepartmentDto dto)
+            {
+                nameTxt.Text = dto.Name;
+                locationTxt.Text = dto.Location ?? string.Empty;
+
+                // ManagerId is nullable in AllDepartmentDto; handle null safely
+                if (dto.ManagerId.HasValue)
+                    managerIdNum.Value = dto.ManagerId.Value;
+                else
+                    managerIdNum.Value = managerIdNum.Minimum;
+            }
+        }
+
+        private void ClearInputs()
+        {
+            nameTxt.Text = string.Empty;
+            locationTxt.Text = string.Empty;
+            managerIdNum.Value = 0;
+        }
+    }
+}

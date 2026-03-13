@@ -1,0 +1,316 @@
+1
+00:00:01,468 --> 00:00:05,070
+-: We have the category controller where we were
+
+2
+00:00:05,070 --> 00:00:07,689
+using application DB context
+
+3
+00:00:07,689 --> 00:00:11,220
+but now we do not have to use this directly.
+
+4
+00:00:11,220 --> 00:00:14,790
+We can access the category repository.
+
+5
+00:00:14,790 --> 00:00:16,890
+How will we do that?
+
+6
+00:00:16,890 --> 00:00:20,160
+Rather than application DB context, we will say
+
+7
+00:00:20,160 --> 00:00:24,180
+that we want an implementation of category repository
+
+8
+00:00:24,180 --> 00:00:26,850
+and we are asking dependency injection
+
+9
+00:00:26,850 --> 00:00:28,923
+to provide that implementation.
+
+10
+00:00:30,240 --> 00:00:32,400
+Then on the underscore DB
+
+11
+00:00:32,400 --> 00:00:35,703
+we have all the helper methods that we have created.
+
+12
+00:00:36,870 --> 00:00:39,450
+Well, rather than underscore DB
+
+13
+00:00:39,450 --> 00:00:42,993
+it makes sense to call this category repository.
+
+14
+00:00:44,940 --> 00:00:48,783
+That way it makes more sense when we are consuming that.
+
+15
+00:00:49,890 --> 00:00:51,120
+Perfect.
+
+16
+00:00:51,120 --> 00:00:53,400
+So when we have to retrieve everything
+
+17
+00:00:53,400 --> 00:00:58,400
+we have underscore category repo dot get all.
+
+18
+00:00:58,410 --> 00:01:03,410
+We created that, scroll down where we had to create,
+
+19
+00:01:04,170 --> 00:01:09,170
+we had the underscore cat repo dot add method
+
+20
+00:01:09,330 --> 00:01:12,090
+and when we have to save the changes
+
+21
+00:01:12,090 --> 00:01:16,173
+we will say underscore cat repo dot save.
+
+22
+00:01:18,120 --> 00:01:20,070
+Great, that looks good.
+
+23
+00:01:20,070 --> 00:01:22,230
+Let me scroll down further.
+
+24
+00:01:22,230 --> 00:01:25,980
+When we had to retrieve the category for edit
+
+25
+00:01:25,980 --> 00:01:29,850
+we will go to underscore category repo dot.
+
+26
+00:01:29,850 --> 00:01:33,090
+We have the cat and we will pass the link
+
+27
+00:01:33,090 --> 00:01:38,090
+operator u goes to u dot ID is equal, equal to id.
+
+28
+00:01:41,190 --> 00:01:44,940
+That way we are using category repository here.
+
+29
+00:01:44,940 --> 00:01:47,040
+Next we have update.
+
+30
+00:01:47,040 --> 00:01:52,040
+Let me copy what we have for add here, paste it right here
+
+31
+00:01:52,920 --> 00:01:55,470
+and we have update.
+
+32
+00:01:55,470 --> 00:01:57,030
+That looks good.
+
+33
+00:01:57,030 --> 00:02:02,030
+We have the find again, let's copy the edit one,
+
+34
+00:02:02,400 --> 00:02:06,840
+paste it here and we have the find again,
+
+35
+00:02:06,840 --> 00:02:11,840
+paste it right there and we have the underscore category
+
+36
+00:02:12,000 --> 00:02:16,173
+repo dot remove and save changes.
+
+37
+00:02:18,240 --> 00:02:22,200
+Perfect, so you can see with this we have our repository
+
+38
+00:02:22,200 --> 00:02:23,880
+in place.
+
+39
+00:02:23,880 --> 00:02:27,990
+If we save everything, we no longer have application
+
+40
+00:02:27,990 --> 00:02:30,900
+DB context right here.
+
+41
+00:02:30,900 --> 00:02:33,358
+When we run the application, we will run
+
+42
+00:02:33,358 --> 00:02:36,450
+into an error message.
+
+43
+00:02:36,450 --> 00:02:40,230
+I want to show you, because this is a common error message
+
+44
+00:02:40,230 --> 00:02:41,223
+many times.
+
+45
+00:02:42,060 --> 00:02:45,270
+You can see I click on category and it says
+
+46
+00:02:45,270 --> 00:02:49,251
+unable to resolve for type I category repository
+
+47
+00:02:49,251 --> 00:02:52,803
+while attempting to activate the category controller.
+
+48
+00:02:53,970 --> 00:02:56,331
+Whenever you see unable to resolve service
+
+49
+00:02:56,331 --> 00:02:58,860
+for type, the first thing you should
+
+50
+00:02:58,860 --> 00:03:01,401
+-: Think about is there is some issue when
+
+51
+00:03:01,401 --> 00:03:05,310
+registering that service to the container.
+
+52
+00:03:05,310 --> 00:03:08,220
+Because here you are asking dependency injection to
+
+53
+00:03:08,220 --> 00:03:13,220
+provide an implementation of the I category repository.
+
+54
+00:03:13,500 --> 00:03:16,590
+But have you even registered that service
+
+55
+00:03:16,590 --> 00:03:19,470
+in the dependency injection container?
+
+56
+00:03:19,470 --> 00:03:20,493
+We have not.
+
+57
+00:03:21,390 --> 00:03:24,540
+So that is one thing that you should always remember.
+
+58
+00:03:24,540 --> 00:03:26,490
+If there is any service
+
+59
+00:03:26,490 --> 00:03:30,333
+you have to register that to dependency injection.
+
+60
+00:03:31,470 --> 00:03:33,450
+Now what will be the lifetime?
+
+61
+00:03:33,450 --> 00:03:36,390
+Typically scoped is the most common one
+
+62
+00:03:36,390 --> 00:03:39,930
+and that should be used so that for one request
+
+63
+00:03:39,930 --> 00:03:41,913
+it'll use the same service.
+
+64
+00:03:42,810 --> 00:03:47,810
+So here we have the interface as I category repository
+
+65
+00:03:47,970 --> 00:03:52,350
+and implementation is in category repository
+
+66
+00:03:52,350 --> 00:03:56,613
+at the using statement there and perfect.
+
+67
+00:03:57,540 --> 00:03:59,659
+Now we have added the category repository
+
+68
+00:03:59,659 --> 00:04:02,400
+in the dependency injection.
+
+69
+00:04:02,400 --> 00:04:06,030
+So in controller, when we want the implementation
+
+70
+00:04:06,030 --> 00:04:09,780
+the program knows that I have to give the implementation
+
+71
+00:04:09,780 --> 00:04:11,913
+of category repository.
+
+72
+00:04:13,320 --> 00:04:14,700
+Let me run this
+
+73
+00:04:14,700 --> 00:04:19,700
+and everything will work exactly the same like it used to.
+
+74
+00:04:19,800 --> 00:04:22,830
+With application DB context
+
+75
+00:04:22,830 --> 00:04:25,320
+we can see all the categories here.
+
+76
+00:04:25,320 --> 00:04:30,320
+If I try to create one, that worked, I can delete that
+
+77
+00:04:31,570 --> 00:04:33,570
+and perfect.
+
+78
+00:04:33,570 --> 00:04:36,240
+All the grid operations are working.
+
+79
+00:04:36,240 --> 00:04:39,663
+But now we are doing that with our repository.
+

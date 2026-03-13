@@ -1,0 +1,592 @@
+1
+00:00:01,780 --> 00:00:04,210
+Bây giờ hãy để tôi làm việc trên nút đầu tiên.
+
+2
+00:00:04,210 --> 00:00:05,620
+Bắt đầu xử lý.
+
+3
+00:00:05,650 --> 00:00:08,980
+Khi quản trị viên nhấn nút, hãy bắt đầu xử lý.
+
+4
+00:00:08,980 --> 00:00:13,960
+Về cơ bản, chúng tôi phải cập nhật trạng thái đơn hàng tại đây để xử lý.
+
+5
+00:00:14,670 --> 00:00:16,740
+Đó là thẳng về phía trước.
+
+6
+00:00:17,370 --> 00:00:19,740
+Vì vậy, ngay tại đây trong nút.
+
+7
+00:00:19,950 --> 00:00:25,110
+Hãy để tôi thêm một hành động ESP và nó sẽ bắt đầu xử lý.
+
+8
+00:00:25,820 --> 00:00:28,610
+Sau đó, hãy để tôi tạo phương thức hành động này.
+
+9
+00:00:28,880 --> 00:00:30,110
+Ở đâu.
+
+10
+00:00:31,400 --> 00:00:33,530
+Hãy để tôi làm điều đó ngay tại đây.
+
+11
+00:00:33,980 --> 00:00:41,690
+Đó sẽ là phương thức hành động đăng bài HTTP và chúng tôi cần các từ khóa được ủy quyền giống như chúng tôi có ở đây.
+
+12
+00:00:42,200 --> 00:00:43,430
+Sao chép cái đó.
+
+13
+00:00:43,430 --> 00:00:45,030
+Dán nó ở đây.
+
+14
+00:00:45,050 --> 00:00:47,540
+Kết quả hành động mắt công khai.
+
+15
+00:00:47,720 --> 00:00:50,150
+Hãy để tôi sao chép tên hành động.
+
+16
+00:00:50,660 --> 00:00:54,620
+Bắt đầu xử lý để tránh bất kỳ lỗi chính tả nào.
+
+17
+00:00:55,420 --> 00:00:56,320
+Bên trong đó.
+
+18
+00:00:56,320 --> 00:01:01,930
+Chúng tôi phải gọi đơn vị công việc chấm thứ tự tiêu đề cập nhật trạng thái chấm.
+
+19
+00:01:03,670 --> 00:01:13,060
+Chúng ta cần chuyển ID nằm trong tiêu đề thứ tự dấu chấm bên trong VM, ID dấu chấm và trạng thái tiếp theo sẽ là gì?
+
+20
+00:01:13,720 --> 00:01:18,130
+Đó là trạng thái chấm SDP đang xử lý.
+
+21
+00:01:19,110 --> 00:01:24,060
+Chúng tôi không muốn cập nhật bất kỳ trạng thái thanh toán nào sẽ giữ nguyên như hiện tại.
+
+22
+00:01:25,160 --> 00:01:31,460
+Sau đó, gạch dưới đơn vị công việc sẽ lưu dấu chấm và chúng tôi có thể hiển thị dữ liệu tạm thời.
+
+23
+00:01:32,000 --> 00:01:38,300
+Sao chép và chuyển hướng trở lại ID đặt hàng bên trong.
+
+24
+00:01:38,300 --> 00:01:42,530
+Đặt hàng xem mô hình chấm đặt hàng tiêu đề. nhận dạng.
+
+25
+00:01:43,770 --> 00:01:47,610
+Hãy để tôi chạy ứng dụng và xem nó có hoạt động không.
+
+26
+00:01:49,320 --> 00:01:51,960
+Để tôi đi quản lý đơn hàng đây.
+
+27
+00:01:52,770 --> 00:01:56,640
+Và rất tiếc, chúng ta có một ngoại lệ ở đây.
+
+28
+00:01:56,730 --> 00:02:00,060
+Đó là bởi vì người dùng chưa đăng nhập.
+
+29
+00:02:00,510 --> 00:02:03,820
+Vâng, bộ điều khiển đơn hàng hoàn chỉnh.
+
+30
+00:02:03,840 --> 00:02:06,270
+Chúng tôi có thể thêm từ khóa được ủy quyền.
+
+31
+00:02:07,260 --> 00:02:08,970
+Hãy để tôi chạy nó một lần nữa.
+
+32
+00:02:09,800 --> 00:02:11,690
+Và điều đó sẽ hoạt động ngay bây giờ.
+
+33
+00:02:12,750 --> 00:02:22,440
+Nếu tôi nhấp vào quản lý đơn đặt hàng, nó sẽ chuyển hướng tôi đăng nhập và hoàn thiện nó được chấp thuận cho việc thanh toán chậm.
+
+34
+00:02:22,470 --> 00:02:29,670
+Nếu tôi bắt đầu xử lý hoàn hảo, chúng tôi sẽ thấy máy nướng bánh mì và trạng thái hiện tại đang xử lý.
+
+35
+00:02:30,300 --> 00:02:33,600
+Trạng thái tiếp theo mà chúng ta thấy là đơn đặt hàng.
+
+36
+00:02:33,960 --> 00:02:38,640
+Khi người dùng click đặt hàng chúng tôi sẽ thay đổi trạng thái.
+
+37
+00:02:38,640 --> 00:02:43,710
+Nhưng chúng tôi muốn đảm bảo rằng nhà cung cấp dịch vụ và theo dõi được phổ biến.
+
+38
+00:02:43,920 --> 00:02:48,510
+Nếu chúng trống, thì đơn đặt hàng giao hàng không thể được xử lý.
+
+39
+00:02:49,750 --> 00:02:57,040
+Chúng tôi đã thêm cảnh báo ngọt ngào trong dự án, vì vậy hãy để tôi sử dụng thông báo đó để thêm các xác thực đó.
+
+40
+00:02:58,180 --> 00:03:06,790
+Hãy để tôi quay lại và làm điều đó trong phần chi tiết ở đây nơi tôi có đơn đặt hàng giao hàng, tôi sẽ thêm một sự kiện
+
+41
+00:03:06,790 --> 00:03:11,380
+onClick tại đây và chúng tôi sẽ trả về đầu vào xác thực.
+
+42
+00:03:13,300 --> 00:03:16,240
+Tôi sẽ tạo điều đó trong phần ở đây.
+
+43
+00:03:18,020 --> 00:03:23,780
+Scripts và để tôi căn chỉnh Ctrl a Ctrl D.
+
+44
+00:03:28,120 --> 00:03:29,350
+Bên trong đó.
+
+45
+00:03:29,350 --> 00:03:33,430
+Chúng tôi có xác nhận trên trang này cho khoảng ASP.
+
+46
+00:03:33,430 --> 00:03:34,420
+Đó là đâu?
+
+47
+00:03:34,450 --> 00:03:36,220
+Chúng tôi có xác nhận.
+
+48
+00:03:36,220 --> 00:03:39,670
+Vì vậy, chúng ta nên bao gồm các tập lệnh xác thực.
+
+49
+00:03:39,670 --> 00:03:40,540
+một phần.
+
+50
+00:03:41,610 --> 00:03:46,890
+Hãy để tôi thêm nó vào đây và sau đó tôi sẽ thêm một JavaScript tùy chỉnh.
+
+51
+00:03:47,250 --> 00:03:49,480
+Chúng tôi sẽ tạo chức năng.
+
+52
+00:03:49,500 --> 00:03:53,910
+Hãy để tôi sao chép tên để tránh bất kỳ lỗi chính tả nào ở đó.
+
+53
+00:03:54,210 --> 00:03:57,780
+Và bên trong đó chúng ta sẽ có điều kiện if.
+
+54
+00:03:57,780 --> 00:04:01,560
+Chúng tôi sẽ nói tài liệu dot lấy phần tử theo ID.
+
+55
+00:04:02,100 --> 00:04:05,560
+Hãy để tôi thêm một ID của số theo dõi.
+
+56
+00:04:05,580 --> 00:04:13,620
+Tôi chưa thêm điều đó, nhưng tôi sẽ làm điều đó sau khi thêm giá trị dấu chấm điều kiện.
+
+57
+00:04:14,660 --> 00:04:16,550
+Nếu đó là sản phẩm nào.
+
+58
+00:04:17,250 --> 00:04:19,800
+Trong trường hợp đó, tôi muốn một cảnh báo ngọt ngào.
+
+59
+00:04:21,120 --> 00:04:28,260
+Chúng tôi sẽ nói một chấm lửa mà chúng tôi muốn tiêu đề lỗi sẽ là rất tiếc, văn bản sẽ là.
+
+60
+00:04:28,260 --> 00:04:32,190
+Vui lòng nhập số theo dõi và chúng tôi sẽ trả lại sai.
+
+61
+00:04:32,940 --> 00:04:34,200
+Hãy để tôi sao chép này.
+
+62
+00:04:34,230 --> 00:04:37,800
+Nếu có điều kiện dán nó một lần nữa ở đây.
+
+63
+00:04:38,160 --> 00:04:47,760
+Id tiếp theo hãy để tôi gọi đó là nhà cung cấp dịch vụ và chúng tôi sẽ hiển thị vui lòng nhập nhà cung cấp dịch vụ trả về sai.
+
+64
+00:04:48,150 --> 00:04:49,530
+Khác chúng tôi sẽ trở lại.
+
+65
+00:04:49,530 --> 00:04:50,130
+ĐÚNG VẬY.
+
+66
+00:04:51,660 --> 00:04:57,210
+Chúng tôi cần thêm cả hai ID này, vì vậy hãy để tôi tìm kiếm Nhà cung cấp dịch vụ.
+
+67
+00:04:58,250 --> 00:05:01,940
+Chúng tôi sẽ thêm ID ở đây của Carrier.
+
+68
+00:05:04,420 --> 00:05:07,650
+Và để tôi xuống lấy số theo dõi.
+
+69
+00:05:07,660 --> 00:05:08,380
+Sao chép cái đó.
+
+70
+00:05:08,380 --> 00:05:09,520
+Chính xác.
+
+71
+00:05:09,730 --> 00:05:12,580
+Và tôi sẽ tìm kiếm để theo dõi.
+
+72
+00:05:13,420 --> 00:05:17,200
+Tôi sẽ thêm ID ở đây của số theo dõi.
+
+73
+00:05:18,340 --> 00:05:19,150
+Hoàn hảo.
+
+74
+00:05:19,270 --> 00:05:22,150
+Và để tôi khởi động lại ứng dụng.
+
+75
+00:05:26,650 --> 00:05:28,870
+Hãy để tôi đăng nhập lại với tư cách quản trị viên.
+
+76
+00:05:28,870 --> 00:05:29,770
+Đây.
+
+77
+00:05:30,190 --> 00:05:31,870
+Quản lý đơn hàng.
+
+78
+00:05:33,090 --> 00:05:41,460
+Và nếu tôi nhấp vào đơn đặt hàng giao hàng, bạn có thể thấy điều gì đó đang xảy ra ở đây và Người vận chuyển không được thiết
+
+79
+00:05:41,460 --> 00:05:42,090
+lập.
+
+80
+00:05:42,870 --> 00:05:45,900
+Nếu tôi làm mới ở đây, điều đó sẽ quay trở lại.
+
+81
+00:05:46,110 --> 00:05:50,760
+Vì vậy, về cơ bản xác thực đầu vào không được kích hoạt.
+
+82
+00:05:51,240 --> 00:05:53,910
+Tôi đã thêm nó vào đúng chưa?
+
+83
+00:05:54,090 --> 00:05:55,620
+Vâng, tôi đã làm.
+
+84
+00:05:56,810 --> 00:06:03,520
+Hãy để tôi nhấn F12 ở đây và để tôi đăng nhập lại với tư cách quản trị viên.
+
+85
+00:06:06,560 --> 00:06:11,060
+Để mình vào quản lý đơn hàng đây cho mình nhấn F12.
+
+86
+00:06:11,960 --> 00:06:15,590
+Hãy để tôi đi đến nguồn ở đây và làm mới trang.
+
+87
+00:06:15,770 --> 00:06:25,400
+Bên trong JS Vâng, bên trong các chi tiết ở đây, Nếu tôi cuộn xuống, tôi có JavaScript ngay tại đây.
+
+88
+00:06:25,520 --> 00:06:29,650
+Hãy để tôi thêm một số điểm sửa lỗi và lên tàu.
+
+89
+00:06:29,660 --> 00:06:34,520
+Đặt hàng phần tử dot get tài liệu theo ID.
+
+90
+00:06:35,900 --> 00:06:38,750
+Vì vậy, nó nói rằng giá trị là null.
+
+91
+00:06:39,730 --> 00:06:42,280
+Về cơ bản nó đang trở lại đúng ở đây.
+
+92
+00:06:42,280 --> 00:06:44,020
+Và tại sao vậy?
+
+93
+00:06:44,590 --> 00:06:46,510
+Vâng, chúng tôi có một vấn đề ở đây.
+
+94
+00:06:46,510 --> 00:06:50,980
+Chúng tôi có một bằng duy nhất mà không nên làm việc.
+
+95
+00:06:51,220 --> 00:06:54,070
+Điều này sẽ bằng với.
+
+96
+00:06:54,070 --> 00:06:56,470
+Và đó là một sai lầm ngớ ngẩn ở đó.
+
+97
+00:06:56,860 --> 00:06:59,290
+Hãy để tôi khởi động lại ứng dụng.
+
+98
+00:07:02,970 --> 00:07:05,670
+Đó là một lỗi phổ biến với JavaScript.
+
+99
+00:07:05,670 --> 00:07:12,740
+Nhưng bây giờ hãy để tôi thử và hoàn thiện nó báo vui lòng nhập số theo dõi.
+
+100
+00:07:12,750 --> 00:07:15,840
+Nếu tôi nhập nó, thì nó hoạt động.
+
+101
+00:07:16,200 --> 00:07:19,680
+Vì vậy, xác thực JavaScript của chúng tôi đang hoạt động.
+
+102
+00:07:19,770 --> 00:07:22,350
+Hãy để tôi thêm trạng thái cập nhật.
+
+103
+00:07:23,810 --> 00:07:26,090
+Chúng ta sẽ đi đặt hàng Controller.
+
+104
+00:07:26,450 --> 00:07:31,760
+Hãy để tôi sao chép dán bắt đầu xử lý một lần nữa.
+
+105
+00:07:32,800 --> 00:07:35,830
+Và tôi sẽ gọi lệnh giao hàng đó.
+
+106
+00:07:36,610 --> 00:07:38,200
+Hãy để tôi sao chép điều đó.
+
+107
+00:07:38,200 --> 00:07:42,880
+Và chúng ta phải đặt tên cho hành động đó ngay tại đây.
+
+108
+00:07:43,330 --> 00:07:44,920
+hành động ASP.
+
+109
+00:07:45,040 --> 00:07:46,240
+Vận chuyển đơn hàng.
+
+110
+00:07:47,430 --> 00:07:48,350
+Hoàn hảo.
+
+111
+00:07:48,360 --> 00:07:52,740
+Bây giờ, trong trường hợp này, chúng tôi muốn cập nhật trạng thái sẽ được vận chuyển.
+
+112
+00:07:53,350 --> 00:07:59,050
+Nhưng trên hết, chúng tôi cũng phải cập nhật thông tin theo dõi và nhà cung cấp dịch vụ.
+
+113
+00:07:59,780 --> 00:08:05,750
+Vì vậy, những gì chúng tôi có thể làm là trước tiên chúng tôi sẽ truy xuất tiêu đề đơn hàng từ cơ sở dữ liệu.
+
+114
+00:08:06,260 --> 00:08:08,240
+Chúng tôi sẽ lấy nó trước.
+
+115
+00:08:08,240 --> 00:08:14,570
+Và sau đó, chúng tôi muốn cập nhật trạng thái đặt hàng của nhà cung cấp dịch vụ theo dõi và ngày vận chuyển.
+
+116
+00:08:15,180 --> 00:08:18,540
+Vì vậy, hãy để tôi cập nhật tất cả bốn thuộc tính đó.
+
+117
+00:08:18,540 --> 00:08:22,920
+Và cuối cùng, chúng tôi cũng muốn cập nhật ngày đến hạn thanh toán.
+
+118
+00:08:23,160 --> 00:08:30,210
+Nếu trạng thái thanh toán là chậm thanh toán thì chúng ta cũng phải cập nhật ngày đến hạn thanh toán.
+
+119
+00:08:30,690 --> 00:08:41,130
+Vì vậy, nếu trạng thái thanh toán dấu chấm tiêu đề đơn hàng bằng với dấu chấm ST thanh toán bị trì hoãn, thì chúng tôi muốn cập nhật
+
+120
+00:08:41,130 --> 00:08:49,890
+ngày đến hạn thanh toán dấu chấm tiêu đề đơn hàng bằng với ngày thời gian dấu chấm bây giờ dấu chấm thêm ngày.
+
+121
+00:08:50,220 --> 00:08:52,830
+Chúng tôi muốn thêm 30 ngày.
+
+122
+00:08:53,190 --> 00:08:57,360
+Điều đó sẽ cung cấp cho họ 30 ròng để thực hiện thanh toán.
+
+123
+00:08:58,360 --> 00:09:00,370
+Bây giờ, đây chỉ là ngày.
+
+124
+00:09:00,520 --> 00:09:05,740
+Đối với điều đó, chúng tôi sẽ nói ngày chỉ có dấu chấm từ ngày giờ.
+
+125
+00:09:05,980 --> 00:09:08,890
+Và ở đó chúng ta phải vượt qua thời gian ngày tháng.
+
+126
+00:09:08,890 --> 00:09:13,540
+Nó sẽ chuyển đổi nó thành ngày duy nhất và chúng tôi sẽ chỉ định nó.
+
+127
+00:09:14,550 --> 00:09:23,220
+Cuối cùng, khi tất cả những điều đó đã hoàn tất, chúng tôi sẽ nói đơn vị công việc, thứ tự chấm, tiêu đề, cập nhật dấu chấm và
+
+128
+00:09:23,220 --> 00:09:27,420
+chúng tôi sẽ chuyển tiêu đề đơn hàng và lưu các thay đổi.
+
+129
+00:09:28,720 --> 00:09:35,980
+Đối với máy nướng bánh mì ở đây, chúng tôi sẽ thông báo đơn hàng đã được vận chuyển thành công và chúng tôi sẽ chuyển hướng trở lại chi
+
+130
+00:09:35,980 --> 00:09:36,970
+tiết đơn hàng.
+
+131
+00:09:37,690 --> 00:09:41,620
+Với cấu hình đó, hãy để tôi khởi động lại ứng dụng.
+
+132
+00:09:44,520 --> 00:09:51,060
+Hãy để tôi đăng nhập ở đây với tư cách quản trị viên và tôi đã tạo thêm một vài đơn đặt hàng.
+
+133
+00:09:51,990 --> 00:09:53,070
+Ngay chỗ này.
+
+134
+00:09:53,100 --> 00:09:55,200
+Để tôi đi quản lý trật tự.
+
+135
+00:09:55,200 --> 00:10:00,770
+Và chúng tôi có một cái đang được xử lý và một khách hàng đã được chấp thuận.
+
+136
+00:10:00,780 --> 00:10:02,340
+Hãy để tôi đến đó.
+
+137
+00:10:02,520 --> 00:10:05,820
+Chúng tôi bắt đầu xử lý ngày giao hàng.
+
+138
+00:10:05,850 --> 00:10:09,060
+Chúng tôi phải nhập một thông tin theo dõi.
+
+139
+00:10:09,980 --> 00:10:12,160
+Và nếu tôi nhấn thứ tự thay đổi.
+
+140
+00:10:12,170 --> 00:10:12,890
+Hoàn hảo.
+
+141
+00:10:12,920 --> 00:10:15,200
+Tình trạng đơn hàng có vẻ tốt.
+
+142
+00:10:15,470 --> 00:10:21,380
+Hãy để tôi quay lại một trong những đơn đặt hàng của công ty ở đây và bắt đầu xử lý đơn đặt hàng đó.
+
+143
+00:10:23,200 --> 00:10:26,830
+Thêm một số thông tin theo dõi và gửi đơn đặt hàng.
+
+144
+00:10:27,190 --> 00:10:28,210
+Hoàn hảo.
+
+145
+00:10:29,160 --> 00:10:35,700
+Giờ đây, khi một đơn đặt hàng của công ty được giao, bạn có thể thấy nút Thanh toán ngay được kích hoạt tại
+
+146
+00:10:35,730 --> 00:10:39,390
+đây và trên thanh toán đó, ngày đến hạn cũng được điền.
+
+147
+00:10:39,970 --> 00:10:44,200
+Vì vậy, đơn đặt hàng tàu hoàn hảo đang hoạt động như mong đợi.
+
+148
+00:10:44,470 --> 00:10:47,620
+Hãy để tôi tiếp tục từ video tiếp theo.
+

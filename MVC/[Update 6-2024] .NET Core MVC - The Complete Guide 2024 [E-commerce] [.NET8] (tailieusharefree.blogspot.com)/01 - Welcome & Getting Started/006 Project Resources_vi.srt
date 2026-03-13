@@ -1,0 +1,84 @@
+1
+00:00:01,500 --> 00:00:06,630
+Khi bạn làm việc với khóa học, bạn sẽ cần một số tài nguyên dự án.
+
+2
+00:00:06,990 --> 00:00:13,200
+Tôi đã thêm tất cả các tài nguyên của dự án vào một nơi, đó là . thuần thục. com.
+
+3
+00:00:13,770 --> 00:00:18,270
+Vì vậy, nếu bạn điều hướng đến các khóa học, hãy đi đến chi tiết khóa học.
+
+4
+00:00:18,270 --> 00:00:21,450
+Ở đây chúng tôi có một vài điều ngay tại đây.
+
+5
+00:00:22,140 --> 00:00:28,710
+Đầu tiên, tôi có bản xem trước trực tiếp của dự án cuối cùng mà bạn sẽ xây dựng nếu bạn muốn điều hướng.
+
+6
+00:00:28,740 --> 00:00:30,900
+Tiếp theo, tôi có mã GitHub.
+
+7
+00:00:31,520 --> 00:00:36,290
+Chà, hãy để tôi quay lại và mở nó trong một tab mới ở đây và ở đó.
+
+8
+00:00:36,290 --> 00:00:41,080
+Nếu bạn để ý, tôi có tất cả các cam kết dựa trên tên bài giảng.
+
+9
+00:00:41,090 --> 00:00:44,480
+Vì vậy, chúng tôi có phần và sau đó là tên bài giảng.
+
+10
+00:00:44,660 --> 00:00:50,090
+Nếu chư vị đến đó, chư vị có thể thấy chính xác trong bài giảng đó đã sửa đổi cái gì.
+
+11
+00:00:50,480 --> 00:00:57,530
+Vì vậy, nếu điều gì đó không phù hợp với bạn, bạn có thể vào đây và xem chính xác cam kết đó để đảm bảo rằng bạn
+
+12
+00:00:57,530 --> 00:00:59,540
+không có bất kỳ điều gì khác.
+
+13
+00:01:00,210 --> 00:01:02,190
+Đó là một nguồn tài nguyên tuyệt vời.
+
+14
+00:01:02,860 --> 00:01:04,989
+Sau đó, chúng tôi có nội dung khóa học.
+
+15
+00:01:05,260 --> 00:01:09,340
+Đảm bảo tải xuống và để tôi mở tệp đó.
+
+16
+00:01:09,730 --> 00:01:13,810
+Khi bạn mở nó, bạn sẽ thấy hai thư mục bên trong đó.
+
+17
+00:01:13,990 --> 00:01:20,710
+Nếu bạn đang tham gia khóa học cũ về . net six, có tất cả các tài nguyên dựa trên khóa học cũ.
+
+18
+00:01:20,710 --> 00:01:27,370
+Nhưng nếu bạn đang dùng . net tám, có tất cả các tài nguyên dự án nơi chúng tôi có tất
+
+19
+00:01:27,370 --> 00:01:29,290
+cả hình ảnh đang được sử dụng.
+
+20
+00:01:29,380 --> 00:01:36,850
+Chúng tôi có các đoạn mã cho bài giảng và tôi có bản PowerPoint cuối cùng mà bạn có thể sử dụng trong dự án của mình.
+
+21
+00:01:37,670 --> 00:01:44,120
+Vì vậy, hãy đảm bảo tải xuống tất cả tài nguyên dự án trước khi bạn chuyển sang video tiếp theo.
+

@@ -1,0 +1,144 @@
+1
+00:00:01,609 --> 00:00:10,190
+Trong người dùng video cuối cùng, chúng tôi có thể thực hiện tất cả các thao tác CRUD trên danh mục bằng kho lưu trữ của chúng tôi.
+
+2
+00:00:10,730 --> 00:00:16,550
+Nhưng trước video cuối cùng và video hiện tại, có gì đó đã thay đổi trên máy của tôi.
+
+3
+00:00:16,880 --> 00:00:24,770
+Và điều tôi muốn nói là nếu tôi quay lại và kiểm tra tệp Appsettings. json, bạn nhớ tên máy chủ là dấu
+
+4
+00:00:24,770 --> 00:00:25,970
+chấm.
+
+5
+00:00:26,450 --> 00:00:31,790
+Bây giờ, nếu tôi đến đây và nếu tôi kết nối bằng DOT, nó không hoạt động.
+
+6
+00:00:32,330 --> 00:00:39,080
+Chà, tôi đã phải đặt lại máy tính xách tay của mình vì một số lý do và vì vậy tôi gặp phải sự cố này.
+
+7
+00:00:40,210 --> 00:00:42,340
+Vậy bây giờ giải pháp là gì?
+
+8
+00:00:42,370 --> 00:00:46,750
+DB cục bộ chuyển tiếp DB cục bộ của MySQL.
+
+9
+00:00:47,200 --> 00:00:50,440
+Tôi có thể kết nối với máy chủ cụ thể đó.
+
+10
+00:00:51,250 --> 00:00:59,320
+Để làm được điều đó, tôi có thể nhấn vào biểu tượng kết nối tại đây và sao chép biểu tượng này và chúng tôi sẽ cập nhật biểu tượng đó bên trong
+
+11
+00:00:59,380 --> 00:01:00,820
+máy chủ ngay tại đây.
+
+12
+00:01:00,880 --> 00:01:07,480
+Nếu chúng tôi kiểm tra điều đó, bạn có thể thấy thay vì một dấu gạch chéo ngược, nó sẽ tự động thêm hai dấu
+
+13
+00:01:07,480 --> 00:01:10,060
+gạch chéo ngược và điều đó có vẻ tốt.
+
+14
+00:01:10,360 --> 00:01:16,950
+Nhưng bây giờ bạn có thể thắc mắc rằng, này, chúng tôi đã di chuyển, chúng tôi có dữ liệu bên trong cơ sở dữ liệu.
+
+15
+00:01:16,960 --> 00:01:19,150
+Điều gì xảy ra với tất cả những điều đó?
+
+16
+00:01:19,570 --> 00:01:24,850
+Chà, bởi vì chúng tôi đang sử dụng khung thực thể, những thứ cốt lõi cực kỳ đơn giản.
+
+17
+00:01:25,000 --> 00:01:31,360
+Chúng tôi không có cơ sở dữ liệu cồng kềnh ở đây để tạo cơ sở dữ liệu đó bên trong bảng điều khiển trình quản lý gói.
+
+18
+00:01:31,390 --> 00:01:35,170
+Tất cả những gì chúng ta phải viết là cơ sở dữ liệu cập nhật lệnh.
+
+19
+00:01:35,320 --> 00:01:37,760
+Chúng tôi không phải thêm bất kỳ di chuyển nào.
+
+20
+00:01:37,780 --> 00:01:44,780
+Chúng tôi chỉ phải cập nhật cơ sở dữ liệu vì tất cả quá trình di chuyển đã có trong mã của chúng tôi.
+
+21
+00:01:45,860 --> 00:01:51,590
+Với một dòng đó, nếu tôi chạy ứng dụng ngay bây giờ, mọi thứ sẽ hoạt động như cũ.
+
+22
+00:01:52,370 --> 00:01:58,730
+Bạn có thể thấy danh mục và chúng tôi có ba danh mục mà chúng tôi đã tạo cơ sở dữ liệu của mình.
+
+23
+00:01:59,270 --> 00:02:06,230
+Cùng với đó, tôi muốn bạn phân tích tầm quan trọng của việc di chuyển và việc bắt đầu một dự án dễ dàng
+
+24
+00:02:06,230 --> 00:02:07,130
+như thế nào.
+
+25
+00:02:07,640 --> 00:02:14,420
+Ví dụ: nếu một nhà phát triển mới phải thiết lập mã này trên máy tính xách tay của họ, họ chỉ cần sao
+
+26
+00:02:14,450 --> 00:02:18,290
+chép kho lưu trữ và nhấn lệnh cập nhật cơ sở dữ liệu.
+
+27
+00:02:18,680 --> 00:02:25,970
+Ngay bây giờ, nó là một máy chủ SQL cục bộ, nhưng nếu đó là Azure SQL, thì họ chỉ cần chạy cơ sở dữ
+
+28
+00:02:25,970 --> 00:02:30,830
+liệu cập nhật lệnh và mã sẽ tự động hoạt động trên máy của họ.
+
+29
+00:02:31,490 --> 00:02:38,960
+Và ĐIỀU ĐÓ khiến tôi nhớ lại những ngày xưa tốt đẹp của mình khi tôi phải dành gần một ngày để thiết lập mã
+
+30
+00:02:38,960 --> 00:02:45,590
+trên máy của mình vì hồi đó chúng tôi có nhiều phụ thuộc và chúng tôi phải xử lý tất cả chúng.
+
+31
+00:02:46,270 --> 00:02:50,830
+Nhưng với lõi khung thực thể, bạn có thể xem cơ sở dữ liệu có khác không.
+
+32
+00:02:50,860 --> 00:02:52,660
+Nó không mất nhiều thời gian.
+
+33
+00:02:52,660 --> 00:03:00,250
+Chúng tôi chỉ phải cập nhật chuỗi kết nối chạy lệnh cập nhật cơ sở dữ liệu di chuyển được đẩy tự động và chúng
+
+34
+00:03:00,250 --> 00:03:02,350
+tôi đang thiết lập và chạy.
+
+35
+00:03:03,220 --> 00:03:08,710
+Vì vậy, tôi muốn nó nhanh chóng chỉ cho bạn cách bạn có thể dễ dàng cập nhật chuỗi kết nối.
+
+36
+00:03:08,710 --> 00:03:12,370
+Và một lần nữa, mang theo dự án của bạn với tất cả các danh mục.
+

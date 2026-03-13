@@ -1,0 +1,144 @@
+1
+00:00:01,650 --> 00:00:06,630
+Bây giờ chúng ta có thể xem tất cả các đơn đặt hàng ở đây, nhưng còn chi tiết đơn hàng thì sao?
+
+2
+00:00:07,580 --> 00:00:15,890
+Chúng ta cần tạo phương thức hành động đó và truy xuất tất cả các chi tiết đơn hàng trong chỉ mục tại đây nếu chúng ta cuộn xuống.
+
+3
+00:00:16,400 --> 00:00:18,380
+Vâng, không phải ở đây theo thứ tự.
+
+4
+00:00:18,380 --> 00:00:21,560
+JS Chúng tôi đang chuyển nó dưới dạng id đơn hàng.
+
+5
+00:00:22,620 --> 00:00:27,480
+Vì vậy, hãy để tôi tạo phương thức hành động đó trong bộ điều khiển đơn hàng.
+
+6
+00:00:28,470 --> 00:00:29,900
+Hãy để tôi làm điều đó.
+
+7
+00:00:29,910 --> 00:00:31,020
+Khu vực.
+
+8
+00:00:32,439 --> 00:00:33,450
+Hoàn hảo.
+
+9
+00:00:33,460 --> 00:00:34,800
+Ngay chỗ này.
+
+10
+00:00:34,810 --> 00:00:38,380
+Tôi có thể sao chép chỉ mục, dán nó vào đây.
+
+11
+00:00:38,980 --> 00:00:43,840
+Gọi đó là chi tiết và số nguyên sẽ là ID đơn hàng.
+
+12
+00:00:45,100 --> 00:00:50,920
+Dựa trên ID đơn đặt hàng đó, chúng tôi có một mô hình xem đơn đặt hàng mà chúng tôi có thể điền vào.
+
+13
+00:00:51,990 --> 00:00:52,770
+Trong đó.
+
+14
+00:00:52,770 --> 00:00:58,530
+Chúng tôi cần truy xuất tiêu đề đơn hàng mà chúng tôi sẽ thực hiện từ đơn vị công việc.
+
+15
+00:00:58,530 --> 00:01:01,320
+Chấm tiêu đề đơn hàng chấm lấy.
+
+16
+00:01:01,980 --> 00:01:11,760
+Chúng tôi sẽ nhận được điều đó bằng cách sử dụng u đi đến u. id bằng với id đơn hàng và chúng tôi có thể bao gồm người dùng ứng
+
+17
+00:01:11,760 --> 00:01:12,540
+dụng.
+
+18
+00:01:14,730 --> 00:01:15,830
+Trông tôt đây.
+
+19
+00:01:15,840 --> 00:01:24,420
+Chúng tôi cũng có thể truy xuất chi tiết đơn hàng từ đơn vị chi tiết đơn hàng sản xuất, chấm lấy tất cả vì sẽ có
+
+20
+00:01:24,420 --> 00:01:27,150
+nhiều hơn một chi tiết đơn hàng.
+
+21
+00:01:28,030 --> 00:01:33,880
+Chúng tôi sẽ nhận được điều đó dựa trên ID đơn hàng bằng với ID đơn hàng.
+
+22
+00:01:35,020 --> 00:01:39,970
+Và cái này sẽ không phải là id tác giả mà là ID tiêu đề tác giả.
+
+23
+00:01:40,690 --> 00:01:42,310
+Hãy để tôi sửa nó.
+
+24
+00:01:43,110 --> 00:01:50,520
+Khi chúng tôi truy xuất chi tiết đơn đặt hàng, hãy để tôi bao gồm các thuộc tính để nhận tất cả chi tiết sản phẩm.
+
+25
+00:01:51,790 --> 00:01:55,090
+Điều đó có vẻ tốt cho mô hình xem đơn đặt hàng.
+
+26
+00:01:55,420 --> 00:01:57,940
+Để tôi gọi món đó cho VM.
+
+27
+00:01:58,600 --> 00:02:03,790
+Và khi quay lại View, chúng ta sẽ chuyển qua model view order.
+
+28
+00:02:04,550 --> 00:02:11,390
+Hãy để tôi thêm một điểm gỡ lỗi ở đây và xem liệu mô hình xem đơn đặt hàng có được phổ biến hay không.
+
+29
+00:02:12,110 --> 00:02:14,750
+Chúng ta sẽ vào phần quản lý đơn hàng tại đây.
+
+30
+00:02:15,520 --> 00:02:17,050
+Nhấp vào chỉnh sửa.
+
+31
+00:02:17,830 --> 00:02:20,410
+Nó sẽ đạt điểm dừng của chúng tôi ở đây.
+
+32
+00:02:20,920 --> 00:02:22,300
+Và hoàn hảo.
+
+33
+00:02:22,330 --> 00:02:24,970
+Chúng tôi có các chi tiết đặt hàng ở đó.
+
+34
+00:02:25,330 --> 00:02:29,290
+Tiêu đề đơn đặt hàng cũng nhìn tốt.
+
+35
+00:02:29,800 --> 00:02:36,010
+Hoàn hảo đến mức nó đang phổ biến mọi thứ ở đây, nhưng chúng ta cần thêm chế độ xem đó.
+
+36
+00:02:36,490 --> 00:02:40,960
+Vì vậy, hãy để tôi tạo chế độ xem chi tiết trong video tiếp theo.
+

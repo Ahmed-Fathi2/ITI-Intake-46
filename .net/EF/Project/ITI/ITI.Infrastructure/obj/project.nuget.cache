@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oXx2wqaR9dE=",
+  "dgSpecHash": "FqgaA3+4hEo=",
   "success": true,
-  "projectFilePath": "F:\\ITI\\.net\\EF\\Project\\ITI\\ITI.Infrastructure\\ITI.Infrastructure.csproj",
+  "projectFilePath": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\ITI.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dell\\.nuget\\packages\\azure.core\\1.47.1\\azure.core.1.47.1.nupkg.sha512",
     "C:\\Users\\dell\\.nuget\\packages\\azure.identity\\1.14.2\\azure.identity.1.14.2.nupkg.sha512",
@@ -62,15 +62,5 @@
     "C:\\Users\\dell\\.nuget\\packages\\system.security.cryptography.pkcs\\9.0.4\\system.security.cryptography.pkcs.9.0.4.nupkg.sha512",
     "C:\\Users\\dell\\.nuget\\packages\\system.security.cryptography.protecteddata\\10.0.3\\system.security.cryptography.protecteddata.10.0.3.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1900",
-      "level": "Warning",
-      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json.",
-      "projectPath": "F:\\ITI\\.net\\EF\\Project\\ITI\\ITI.Infrastructure\\ITI.Infrastructure.csproj",
-      "warningLevel": 1,
-      "filePath": "F:\\ITI\\.net\\EF\\Project\\ITI\\ITI.Infrastructure\\ITI.Infrastructure.csproj",
-      "targetGraphs": []
-    }
-  ]
+  "logs": []
 }

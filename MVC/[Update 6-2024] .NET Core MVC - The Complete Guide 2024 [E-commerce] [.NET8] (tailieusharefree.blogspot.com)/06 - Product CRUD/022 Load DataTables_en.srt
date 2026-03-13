@@ -1,0 +1,588 @@
+1
+00:00:01,800 --> 00:00:03,900
+Instructor: We have to create JavaScript
+
+2
+00:00:03,900 --> 00:00:06,030
+to post an Ajax request
+
+3
+00:00:06,030 --> 00:00:07,443
+and load data.
+
+4
+00:00:08,430 --> 00:00:11,220
+So that will be a little bit tricky,
+
+5
+00:00:11,220 --> 00:00:14,100
+so let me walk you through all of that here.
+
+6
+00:00:14,100 --> 00:00:16,200
+In the wwroot folder,
+
+7
+00:00:16,200 --> 00:00:19,200
+we have css, js.
+
+8
+00:00:19,200 --> 00:00:22,170
+Right there, let me add a new file.
+
+9
+00:00:22,170 --> 00:00:24,333
+I will stop the application.
+
+10
+00:00:25,590 --> 00:00:27,360
+New item,
+
+11
+00:00:27,360 --> 00:00:31,083
+and I will call that product.js.
+
+12
+00:00:32,430 --> 00:00:33,573
+Let's add that.
+
+13
+00:00:35,220 --> 00:00:39,540
+Now if we go back, let me copy what we have for DataTable,
+
+14
+00:00:39,540 --> 00:00:42,000
+paste it right here.
+
+15
+00:00:42,000 --> 00:00:44,160
+We are loading the DataTable here,
+
+16
+00:00:44,160 --> 00:00:47,313
+but we need to do that on document.ready.
+
+17
+00:00:48,330 --> 00:00:52,290
+Because of jQuery, we can use $ document.ready
+
+18
+00:00:52,290 --> 00:00:55,110
+and we will call a method loadDataTable.
+
+19
+00:00:56,520 --> 00:00:59,130
+Let me create that function here.
+
+20
+00:00:59,130 --> 00:01:04,129
+And inside there, I will basically cut and paste this code
+
+21
+00:01:04,590 --> 00:01:08,490
+in a variable dataTable is equal to.
+
+22
+00:01:08,490 --> 00:01:10,143
+And let me paste that.
+
+23
+00:01:11,220 --> 00:01:13,350
+You can see it is looking for something
+
+24
+00:01:13,350 --> 00:01:17,100
+called as myTable, and that we will add later on.
+
+25
+00:01:17,100 --> 00:01:18,510
+Do not worry.
+
+26
+00:01:18,510 --> 00:01:23,510
+Rather than myTable, let me call that tblData.
+
+27
+00:01:23,760 --> 00:01:28,760
+First thing, we need the API URL that is inside admin.
+
+28
+00:01:28,950 --> 00:01:31,353
+We have product and getall,
+
+29
+00:01:32,550 --> 00:01:35,550
+that should retrieve all the records.
+
+30
+00:01:35,550 --> 00:01:40,470
+Now once we retrieve those records, we have to format that.
+
+31
+00:01:40,470 --> 00:01:42,930
+If I go back to the documentation
+
+32
+00:01:42,930 --> 00:01:45,870
+and go to the Data tab here
+
+33
+00:01:45,870 --> 00:01:47,790
+and scroll down,
+
+34
+00:01:47,790 --> 00:01:52,440
+you can see we can render columns and that can have data.
+
+35
+00:01:52,440 --> 00:01:54,930
+The first property here is data.
+
+36
+00:01:54,930 --> 00:01:57,420
+But because we are using Ajax here,
+
+37
+00:01:57,420 --> 00:02:00,300
+that will automatically be loaded.
+
+38
+00:02:00,300 --> 00:02:03,090
+So we can copy the columns here,
+
+39
+00:02:03,090 --> 00:02:04,770
+go back to the code,
+
+40
+00:02:04,770 --> 00:02:09,300
+and I can paste it after the curly bracket, add a comma,
+
+41
+00:02:09,300 --> 00:02:11,790
+and we will add columns.
+
+42
+00:02:11,790 --> 00:02:14,913
+The columns here will be inside the colon here.
+
+43
+00:02:15,960 --> 00:02:20,133
+And the Ajax as well, we will add that in double quotes.
+
+44
+00:02:21,060 --> 00:02:24,210
+I will add that in curly bracket for the values,
+
+45
+00:02:24,210 --> 00:02:25,560
+add a comma,
+
+46
+00:02:25,560 --> 00:02:28,110
+and let me format that a little bit
+
+47
+00:02:28,110 --> 00:02:30,093
+so that everything makes sense.
+
+48
+00:02:31,080 --> 00:02:33,330
+We need the closing curly bracket here.
+
+49
+00:02:33,330 --> 00:02:34,770
+Let me add that.
+
+50
+00:02:34,770 --> 00:02:36,540
+And perfect.
+
+51
+00:02:36,540 --> 00:02:37,830
+Things are looking good,
+
+52
+00:02:37,830 --> 00:02:41,370
+but in the Ajax here, we can directly use that,
+
+53
+00:02:41,370 --> 00:02:43,650
+or we can define the URL.
+
+54
+00:02:43,650 --> 00:02:45,600
+Because when we have Ajax call,
+
+55
+00:02:45,600 --> 00:02:49,650
+it is possible you want more options or more properties
+
+56
+00:02:49,650 --> 00:02:52,260
+that is why it is an object.
+
+57
+00:02:52,260 --> 00:02:53,973
+Next we have the columns.
+
+58
+00:02:55,200 --> 00:02:59,520
+Now we have the data here and we have field names.
+
+59
+00:02:59,520 --> 00:03:02,790
+And along with that, we can also give some option
+
+60
+00:03:02,790 --> 00:03:05,613
+like what will be width of all the columns.
+
+61
+00:03:06,540 --> 00:03:10,200
+Before we work on adding the column names here,
+
+62
+00:03:10,200 --> 00:03:13,830
+let me actually go back to our index here.
+
+63
+00:03:13,830 --> 00:03:16,830
+And where we are displaying the foreach loop,
+
+64
+00:03:16,830 --> 00:03:19,620
+that is no longer needed
+
+65
+00:03:19,620 --> 00:03:22,593
+because we will be using DataTable for that.
+
+66
+00:03:23,520 --> 00:03:25,440
+In here, all we have to do
+
+67
+00:03:25,440 --> 00:03:28,203
+is we need to add the ID of tblData.
+
+68
+00:03:29,280 --> 00:03:33,630
+So where we have the table, we will give that ID.
+
+69
+00:03:33,630 --> 00:03:35,460
+We do not need the tbody.
+
+70
+00:03:35,460 --> 00:03:36,570
+We can remove that.
+
+71
+00:03:36,570 --> 00:03:41,190
+DataTable will take care of configuring all of that.
+
+72
+00:03:41,190 --> 00:03:45,060
+Only thing that we have to do is add the JavaScript code.
+
+73
+00:03:45,060 --> 00:03:48,330
+So we will add a section for scripts.
+
+74
+00:03:48,330 --> 00:03:50,850
+And inside there, we will add the reference
+
+75
+00:03:50,850 --> 00:03:54,753
+to src js product.js.
+
+76
+00:03:55,680 --> 00:03:59,640
+We have already added DataTable in the underscored layout.
+
+77
+00:03:59,640 --> 00:04:02,790
+So with that configured, let me run this
+
+78
+00:04:02,790 --> 00:04:05,460
+and I want to show you an error message
+
+79
+00:04:05,460 --> 00:04:09,993
+which is very common when you are working with DataTables.
+
+80
+00:04:10,860 --> 00:04:14,880
+We go to product here and we have a warning.
+
+81
+00:04:14,880 --> 00:04:18,120
+It says requested unknown parameter name
+
+82
+00:04:18,120 --> 00:04:20,670
+for row zero column zero.
+
+83
+00:04:20,670 --> 00:04:23,190
+You can see we are asking for name here
+
+84
+00:04:23,190 --> 00:04:25,650
+and it does not find that.
+
+85
+00:04:25,650 --> 00:04:29,280
+The reason is the JSON object that controller returns
+
+86
+00:04:29,280 --> 00:04:31,620
+it does not have anything with name.
+
+87
+00:04:31,620 --> 00:04:36,423
+But if I change that to be title and if I refresh here,
+
+88
+00:04:37,560 --> 00:04:41,610
+this time you can see the error is position not found.
+
+89
+00:04:41,610 --> 00:04:44,610
+That is because the column names are not valid,
+
+90
+00:04:44,610 --> 00:04:48,183
+but title gets populated if you click Okay.
+
+91
+00:04:49,110 --> 00:04:51,750
+So you can see the issue right here.
+
+92
+00:04:51,750 --> 00:04:54,483
+We need to have the exact column names.
+
+93
+00:04:56,010 --> 00:04:59,760
+So if we go to index here, copy all of them,
+
+94
+00:04:59,760 --> 00:05:00,843
+like ISBN,
+
+95
+00:05:01,860 --> 00:05:02,793
+Price,
+
+96
+00:05:03,690 --> 00:05:05,523
+and we have the Author,
+
+97
+00:05:06,510 --> 00:05:08,040
+let me save that.
+
+98
+00:05:08,040 --> 00:05:10,350
+Go back here and refresh.
+
+99
+00:05:10,350 --> 00:05:12,930
+You can see it is still not working.
+
+100
+00:05:12,930 --> 00:05:14,763
+Why is that the case?
+
+101
+00:05:15,960 --> 00:05:19,680
+Well, it has to match what the API is return
+
+102
+00:05:19,680 --> 00:05:21,543
+and it is case sensitive.
+
+103
+00:05:22,440 --> 00:05:25,650
+So we need to know what the API is returning.
+
+104
+00:05:25,650 --> 00:05:28,320
+We can copy and paste this.
+
+105
+00:05:28,320 --> 00:05:32,103
+Let me call the api product/getall.
+
+106
+00:05:34,200 --> 00:05:37,020
+We can copy this API,
+
+107
+00:05:37,020 --> 00:05:39,900
+go to JSON formatter,
+
+108
+00:05:39,900 --> 00:05:42,060
+open that in a new tab,
+
+109
+00:05:42,060 --> 00:05:45,180
+and let me paste our API code.
+
+110
+00:05:45,180 --> 00:05:47,740
+Let me go back and copy that once again
+
+111
+00:05:48,600 --> 00:05:50,760
+and paste it here.
+
+112
+00:05:50,760 --> 00:05:52,290
+And perfect.
+
+113
+00:05:52,290 --> 00:05:55,830
+You can see it is title, isbn, author,
+
+114
+00:05:55,830 --> 00:05:58,140
+listPrice has a capital P.
+
+115
+00:05:58,140 --> 00:06:02,283
+So if you want to display that, it must exactly match.
+
+116
+00:06:03,510 --> 00:06:05,280
+So let's do that.
+
+117
+00:06:05,280 --> 00:06:07,350
+We will keep this open here.
+
+118
+00:06:07,350 --> 00:06:09,180
+And where is that?
+
+119
+00:06:09,180 --> 00:06:12,600
+Right here, we have isbn, all lowercase.
+
+120
+00:06:12,600 --> 00:06:14,970
+Copy, paste that.
+
+121
+00:06:14,970 --> 00:06:18,810
+listPrice, copy and paste that.
+
+122
+00:06:18,810 --> 00:06:22,230
+Author, all lowercase.
+
+123
+00:06:22,230 --> 00:06:24,963
+And finally, we want the category name.
+
+124
+00:06:26,010 --> 00:06:29,880
+Category name, if we go here, it is inside category
+
+125
+00:06:29,880 --> 00:06:31,950
+and then we have name.
+
+126
+00:06:31,950 --> 00:06:34,478
+So you have to write category.
+
+127
+00:06:34,478 --> 00:06:38,850
+and then the property inside there is name,
+
+128
+00:06:38,850 --> 00:06:41,850
+that is exactly what you have to use.
+
+129
+00:06:41,850 --> 00:06:45,840
+And once you do that, the error goes away.
+
+130
+00:06:45,840 --> 00:06:48,750
+So if you notice that error message,
+
+131
+00:06:48,750 --> 00:06:50,850
+that means in your DataTable,
+
+132
+00:06:50,850 --> 00:06:54,150
+your property names are not valid.
+
+133
+00:06:54,150 --> 00:06:56,610
+Now if I go to index here,
+
+134
+00:06:56,610 --> 00:07:00,900
+let me add a width of 100% for the table.
+
+135
+00:07:00,900 --> 00:07:04,230
+And that looks much better.
+
+136
+00:07:04,230 --> 00:07:09,230
+With that we have Title, ISBN, Price, Author, and Category.
+
+137
+00:07:09,540 --> 00:07:12,900
+We can modify some of the width in the product.js,
+
+138
+00:07:12,900 --> 00:07:15,489
+like title can take 25%.
+
+139
+00:07:15,489 --> 00:07:18,630
+ISBN, that's okay.
+
+140
+00:07:18,630 --> 00:07:20,880
+This can take 10%.
+
+141
+00:07:20,880 --> 00:07:22,773
+Author can take up 20.
+
+142
+00:07:24,000 --> 00:07:26,760
+And category name, that looks good.
+
+143
+00:07:26,760 --> 00:07:31,260
+If I sum them up, it is total of 85, I believe.
+
+144
+00:07:31,260 --> 00:07:33,540
+So we have 15 more.
+
+145
+00:07:33,540 --> 00:07:38,100
+In that 15 more, I want to display two buttons.
+
+146
+00:07:38,100 --> 00:07:43,100
+So how can we add custom buttons where we have the columns?
+
+147
+00:07:43,260 --> 00:07:45,903
+Let me show that in the next video.
+

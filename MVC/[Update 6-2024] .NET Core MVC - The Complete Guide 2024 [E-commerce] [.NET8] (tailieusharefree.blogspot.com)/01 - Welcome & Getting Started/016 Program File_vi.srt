@@ -1,0 +1,256 @@
+1
+00:00:01,670 --> 00:00:06,380
+Bây giờ tôi muốn bao gồm một tệp chính, đó là Program. cs.
+
+2
+00:00:06,710 --> 00:00:11,420
+Trong các phiên bản cũ hơn của . net Core, chúng tôi từng có hai tệp.
+
+3
+00:00:11,510 --> 00:00:15,710
+Chúng tôi đã có Chương trình. cs và chúng tôi đã có Startup. cs.
+
+4
+00:00:16,100 --> 00:00:22,970
+Nhưng với phiên bản mới hơn, tệp . net đã kết hợp cả hai tệp đó trong một tệp, đó là tệp
+
+5
+00:00:22,970 --> 00:00:24,830
+Program. tập tin cs.
+
+6
+00:00:25,620 --> 00:00:27,690
+Bây giờ, ở đây, hãy để tôi thu nhỏ.
+
+7
+00:00:27,690 --> 00:00:33,900
+Và khi chúng ta phải cấu hình một ứng dụng mạng, có hai điều mà bạn nên nhớ.
+
+8
+00:00:34,140 --> 00:00:41,130
+Đầu tiên, chúng tôi phải thêm một số dịch vụ vào vùng chứa của mình và tiếp theo, chúng tôi phải định cấu hình đường dẫn yêu cầu.
+
+9
+00:00:41,830 --> 00:00:43,670
+Trong chương trình. cs.
+
+10
+00:00:43,720 --> 00:00:46,630
+Đó là hai việc đang được xử lý.
+
+11
+00:00:47,390 --> 00:00:47,750
+Đầu tiên.
+
+12
+00:00:47,750 --> 00:00:51,860
+Bạn có thể thấy có ứng dụng web dấu chấm của trình tạo tạo trình tạo.
+
+13
+00:00:51,890 --> 00:00:55,310
+Trên trình xây dựng đó, chúng tôi đang thêm một số dịch vụ.
+
+14
+00:00:55,670 --> 00:01:03,980
+Hiện tại chúng tôi đang sử dụng MVC cho kiến trúc của mình và đó là lý do tại sao trên builder. dịch vụ mà nó đã thêm một thứ gọi là bộ điều khiển
+
+15
+00:01:03,980 --> 00:01:06,440
+THÊM với chế độ xem.
+
+16
+00:01:06,800 --> 00:01:13,190
+Bằng cách đó, nó biết rằng, được thôi, ứng dụng của chúng ta sẽ sử dụng các bộ điều khiển và những bộ điều khiển
+
+17
+00:01:13,190 --> 00:01:17,480
+đó đã được xác định trong tệp . net, vì vậy tôi biết cách xử lý dịch vụ đó.
+
+18
+00:01:18,410 --> 00:01:24,710
+Trong tương lai, chúng tôi sẽ bổ sung thêm nhiều dịch vụ bên trong Chương trình. tập tin cs.
+
+19
+00:01:25,070 --> 00:01:31,940
+Giống như nếu chúng ta phải tiêm thứ gì đó bằng cách sử dụng phép tiêm phụ thuộc, đây là một khía cạnh rất quan trọng trong. lõi mạng.
+
+20
+00:01:31,940 --> 00:01:32,960
+Chúng tôi sẽ đưa tất cả chúng vào bên trong các dịch vụ ngay tại đây.
+
+21
+00:01:32,990 --> 00:01:38,000
+Và điều tiếp theo mà chúng tôi có là chúng tôi phải định cấu hình đường dẫn yêu cầu.
+
+22
+00:01:39,020 --> 00:01:43,610
+Đường ống về cơ bản có nghĩa là khi có yêu cầu đến một ứng dụng, bạn muốn xử lý yêu cầu đó như thế nào?
+
+23
+00:01:44,390 --> 00:01:50,510
+Bây giờ, một điều mà bạn thấy ở dòng chín ở đây là chúng tôi có ứng dụng. môi trường. là sự phát triển.
+
+24
+00:01:50,960 --> 00:01:57,800
+Đây là cùng một biến môi trường mà chúng ta đã thấy trong cài đặt khởi chạy.
+
+25
+00:01:58,010 --> 00:02:02,510
+Dot JSON đang phát triển là một trình trợ giúp được tích hợp sẵn và bạn có thể thấy chúng tôi cũng có giai đoạn sản xuất.
+
+26
+00:02:02,510 --> 00:02:10,990
+Nhưng nếu bạn có một số tên môi trường tùy chỉnh, bạn có thể sử dụng môi trường và chuyển nó vào đó.
+
+27
+00:02:11,000 --> 00:02:17,870
+Bây giờ điều đó quá kỹ thuật, nhưng tôi chỉ muốn cung cấp cho bạn một số
+
+28
+00:02:18,470 --> 00:02:25,310
+thông tin tổng quan về cách các biến môi trường đang được sử dụng.
+
+29
+00:02:25,310 --> 00:02:26,390
+Ở đây chúng tôi đang nói
+
+30
+00:02:26,750 --> 00:02:33,380
+rằng nếu môi trường không phát triển, thì chúng tôi muốn sử dụng trình xử lý ngoại lệ và chúng tôi muốn chuyển hướng đến trang chủ lỗi.
+
+31
+00:02:33,380 --> 00:02:36,950
+Nhưng nếu đó là sự phát triển, thì chúng tôi muốn thấy ngoại lệ đó.
+
+32
+00:02:37,310 --> 00:02:41,380
+Đó là lý do tại sao chúng ta có điều kiện if này.
+
+33
+00:02:41,390 --> 00:02:44,210
+Sau đó, trong quy trình của chúng tôi, chúng tôi đã thêm https, chuyển hướng và ứng dụng. sử dụng sử dụng các tập tin tĩnh.
+
+34
+00:02:45,540 --> 00:02:52,500
+Khi chúng tôi thêm tệp tĩnh sử dụng, nó sẽ định cấu hình
+
+35
+00:02:52,740 --> 00:02:59,760
+đường dẫn tuyến đường www và tất cả các tệp tĩnh trong đó sẽ có thể truy cập được trong ứng dụng của chúng tôi.
+
+36
+00:02:59,760 --> 00:03:03,060
+Sau đó, chúng tôi sẽ thêm định tuyến vào đường dẫn yêu cầu và chúng tôi có quyền.
+
+37
+00:03:03,950 --> 00:03:09,830
+Bây giờ, bỏ qua ủy quyền này ngay bây giờ.
+
+38
+00:03:10,190 --> 00:03:12,860
+Chúng tôi sẽ đề cập đến điều đó khi chúng tôi có xác thực và ủy quyền trong dự án của mình.
+
+39
+00:03:12,890 --> 00:03:17,960
+Nhưng theo mặc định trong đường dẫn yêu cầu, chỉ cần thêm quyền đó.
+
+40
+00:03:18,230 --> 00:03:24,020
+Nếu bạn thậm chí quên điều đó, Điều đó không sao cả.
+
+41
+00:03:24,710 --> 00:03:27,260
+Tiếp theo, chúng ta có một thứ quan trọng.
+
+42
+00:03:27,650 --> 00:03:30,290
+Bây giờ, khi chúng tôi có một ứng dụng, chúng tôi đang cho nó biết cách thức hoạt động của định tuyến.
+
+43
+00:03:30,560 --> 00:03:35,660
+Và để làm được điều đó, chúng tôi có lộ trình điều khiển bản đồ chấm ứng dụng.
+
+44
+00:03:36,020 --> 00:03:39,740
+Về cơ bản, nó có một mẫu mặc định là nếu không có gì
+
+45
+00:03:39,860 --> 00:03:46,850
+được xác định trong tuyến đường, bạn nên chuyển đến một thứ gọi là bộ điều khiển gia đình.
+
+46
+00:03:46,850 --> 00:03:48,720
+Bên trong đó bạn hãy vào mục index action và ID ở đây có thể xác định được hay không.
+
+47
+00:03:48,740 --> 00:03:55,190
+Một dấu chấm hỏi trong . net về cơ bản có nghĩa là ID có thể được xác định hoặc có thể là null.
+
+48
+00:03:55,580 --> 00:04:01,670
+Vì vậy, chúng tôi đang xác định tuyến đường mặc định mà nó sẽ đi theo.
+
+49
+00:04:02,300 --> 00:04:06,410
+Và cuối cùng chúng ta có ứng dụng. run về cơ bản sẽ chạy dự án.
+
+50
+00:04:07,090 --> 00:04:12,070
+Bây giờ, nó có thể gây nhầm lẫn về những gì đang xảy ra ở đây.
+
+51
+00:04:13,030 --> 00:04:16,870
+Tại sao tôi cần Program. tập tin cs?
+
+52
+00:04:16,870 --> 00:04:19,540
+Tất cả những thứ ...... này là gì?
+
+53
+00:04:19,540 --> 00:04:20,589
+Đường ống phần mềm trung gian?
+
+54
+00:04:20,589 --> 00:04:22,440
+Những từ rất lạ.
+
+55
+00:04:22,450 --> 00:04:24,520
+Đừng lo lắng, khi chúng ta tiến bộ với khóa học, mọi thứ sẽ bắt đầu có ý nghĩa.
+
+56
+00:04:24,760 --> 00:04:31,000
+Lý do tôi dành năm phút cho tệp này ngay bây giờ là vì bạn có một ý tưởng
+
+57
+00:04:31,580 --> 00:04:38,840
+sơ bộ rằng có một tệp mà nếu tôi phải thêm một dịch vụ vào vùng chứa hoặc tôi phải định
+
+58
+00:04:38,840 --> 00:04:45,410
+cấu hình phần mềm trung gian, tôi phải chuyển sang chương trình. tập tin cs.
+
+59
+00:04:45,410 --> 00:04:47,750
+Đó là tất cả những
+
+60
+00:04:48,050 --> 00:04:54,620
+gì tôi muốn bạn tiêu hóa trong năm phút này và có một ý tưởng sơ bộ về những gì tôi đã nói.
+
+61
+00:04:54,620 --> 00:04:55,280
+Nếu không có gì ở đây có ý nghĩa, thì không sao.
+
+62
+00:04:55,310 --> 00:04:58,410
+Bạn chỉ nên nhớ điều đó khi bạn phải cấu hình thứ gì đó trong đường dẫn.
+
+63
+00:04:58,430 --> 00:05:03,070
+Chương trình. cs là nơi bạn phải đi với sự hiểu biết đó.
+
+64
+00:05:03,080 --> 00:05:08,870
+Hãy để tôi tiếp tục từ video tiếp theo.
+

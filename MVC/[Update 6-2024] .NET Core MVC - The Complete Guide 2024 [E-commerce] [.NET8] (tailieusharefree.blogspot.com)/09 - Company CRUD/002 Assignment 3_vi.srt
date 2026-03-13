@@ -1,0 +1,40 @@
+1
+00:00:01,650 --> 00:00:04,200
+Chúng tôi muốn tăng cường ứng dụng của chúng tôi.
+
+2
+00:00:04,200 --> 00:00:10,890
+Và đã đến lúc thực hiện nhiệm vụ thứ ba của chúng ta, nơi bạn phải làm một việc mà bạn đã làm trước đó.
+
+3
+00:00:11,760 --> 00:00:18,660
+Và điều tôi muốn nói là bạn phải tạo một mô hình mới hoặc một bảng mới trong cơ sở dữ
+
+4
+00:00:18,660 --> 00:00:22,590
+liệu với tên công ty và tên bảng sẽ là công ty.
+
+5
+00:00:22,830 --> 00:00:25,590
+Đó là những gì chúng tôi đã được sử dụng cho đến nay.
+
+6
+00:00:25,590 --> 00:00:30,480
+Và bên trong đó, đây là tất cả các thuộc tính mà bạn phải tạo.
+
+7
+00:00:31,530 --> 00:00:36,420
+Tên sẽ là thuộc tính bắt buộc và mọi thứ khác sẽ là tùy chọn.
+
+8
+00:00:37,070 --> 00:00:41,210
+Bạn phải thêm công ty vào kho lưu trữ và đơn vị công việc.
+
+9
+00:00:41,210 --> 00:00:47,900
+Và cuối cùng, bạn sẽ phải thực hiện các thao tác CRUD trên công ty bằng bảng dữ liệu.
+
+10
+00:00:48,820 --> 00:00:55,420
+Vì vậy, chúc bạn may mắn với nhiệm vụ đó và tôi sẽ chỉ cho bạn cách thực hiện tất cả những nhiệm vụ đó trong video tiếp theo.
+

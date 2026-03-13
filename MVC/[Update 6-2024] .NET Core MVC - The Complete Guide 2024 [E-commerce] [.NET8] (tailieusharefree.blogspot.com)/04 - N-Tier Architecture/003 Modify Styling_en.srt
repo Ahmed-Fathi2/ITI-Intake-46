@@ -1,0 +1,476 @@
+1
+00:00:00,300 --> 00:00:02,580
+-: Before we work on anything else
+
+2
+00:00:02,580 --> 00:00:05,990
+I want to modify the basic designs that we have
+
+3
+00:00:05,990 --> 00:00:09,483
+on the Bootstrap theme that is being used in the course.
+
+4
+00:00:11,100 --> 00:00:14,370
+We are using Bootswatch for our project
+
+5
+00:00:14,370 --> 00:00:17,076
+and if we take a look at the themes,
+
+6
+00:00:17,076 --> 00:00:19,320
+there are multiple themes that are available.
+
+7
+00:00:19,320 --> 00:00:22,650
+What I want to do is switch from the luxe theme
+
+8
+00:00:22,650 --> 00:00:26,823
+to the sandstone here, and doing that is super simple.
+
+9
+00:00:27,660 --> 00:00:30,690
+We can download the Bootstrap file here
+
+10
+00:00:30,690 --> 00:00:32,520
+and let me open that.
+
+11
+00:00:32,520 --> 00:00:35,130
+We will copy everything here.
+
+12
+00:00:35,130 --> 00:00:40,130
+Let's go back to our project here and www root CSS.
+
+13
+00:00:41,910 --> 00:00:46,910
+Well, we updated that directly in the CSS here.
+
+14
+00:00:47,070 --> 00:00:48,930
+We have the luxe theme.
+
+15
+00:00:48,930 --> 00:00:50,640
+Let me remove that
+
+16
+00:00:50,640 --> 00:00:55,640
+and paste the new theme right here, which is sandstone.
+
+17
+00:00:56,730 --> 00:00:59,190
+With that, if I run the application
+
+18
+00:00:59,190 --> 00:01:02,280
+you will see the new theme in action
+
+19
+00:01:02,280 --> 00:01:05,099
+but on top of that I want to change the button
+
+20
+00:01:05,099 --> 00:01:07,503
+colors that we have by default.
+
+21
+00:01:09,120 --> 00:01:13,500
+Now rather than typing all of that HTML and CSS
+
+22
+00:01:13,500 --> 00:01:17,100
+what I have done is I have provided all the snippets
+
+23
+00:01:17,100 --> 00:01:20,970
+and you can download them from .NET match suite.com.
+
+24
+00:01:20,970 --> 00:01:23,370
+There if you go to course detail,
+
+25
+00:01:23,370 --> 00:01:25,860
+you can get all the snippets
+
+26
+00:01:25,860 --> 00:01:28,440
+so make sure to download all of them.
+
+27
+00:01:28,440 --> 00:01:32,250
+And in the attachments we are in section four.
+
+28
+00:01:32,250 --> 00:01:35,223
+We have site dot CSS inside there.
+
+29
+00:01:36,090 --> 00:01:40,170
+If you open that, there is quite a few CSS right here.
+
+30
+00:01:40,170 --> 00:01:44,430
+But mainly what I'm doing is changing the BTN outline
+
+31
+00:01:44,430 --> 00:01:49,410
+the BG success and main Bootstrap classes that we are using
+
+32
+00:01:49,410 --> 00:01:53,283
+like BTN primary and BTN Success.
+
+33
+00:01:54,120 --> 00:01:56,850
+So copy all of that here.
+
+34
+00:01:56,850 --> 00:01:59,190
+We will go to our solution.
+
+35
+00:01:59,190 --> 00:02:04,190
+We have a site dot CSS inside our CSS folder.
+
+36
+00:02:04,320 --> 00:02:09,090
+Delete everything that is there and paste all the classes.
+
+37
+00:02:09,090 --> 00:02:12,060
+Now I am not introducing custom classes.
+
+38
+00:02:12,060 --> 00:02:15,630
+I am basically overriding the classes that are there
+
+39
+00:02:15,630 --> 00:02:20,460
+in Bootstrap so that way we will not be using new classes.
+
+40
+00:02:20,460 --> 00:02:23,100
+We will be using the old classes,
+
+41
+00:02:23,100 --> 00:02:27,030
+and it is like a Bootswatch theme and perfect.
+
+42
+00:02:27,030 --> 00:02:29,520
+With that you can see new design is
+
+43
+00:02:29,520 --> 00:02:34,520
+in effect, and we have a nice color palette right here.
+
+44
+00:02:34,950 --> 00:02:39,000
+I like this color palette more than what we had before.
+
+45
+00:02:39,000 --> 00:02:42,030
+And I also want to change some designing
+
+46
+00:02:42,030 --> 00:02:46,350
+with the create category and all the other pages.
+
+47
+00:02:46,350 --> 00:02:48,870
+Let me do that real quick.
+
+48
+00:02:48,870 --> 00:02:51,930
+So we'll go to create category
+
+49
+00:02:51,930 --> 00:02:56,930
+we'll go to views category create right here.
+
+50
+00:02:57,924 --> 00:02:58,757
+Let me start fresh.
+
+51
+00:02:58,757 --> 00:03:03,510
+We'll add a div, give it a class of card and shadow.
+
+52
+00:03:03,510 --> 00:03:06,900
+Along with that we'll say border zero
+
+53
+00:03:06,900 --> 00:03:09,123
+and margin top of four.
+
+54
+00:03:10,560 --> 00:03:14,130
+Inside the main card here we will add another div
+
+55
+00:03:14,130 --> 00:03:16,180
+which will be for card header
+
+56
+00:03:17,266 --> 00:03:18,816
+and let me add the closing div.
+
+57
+00:03:20,190 --> 00:03:22,110
+Perfect, that looks good.
+
+58
+00:03:22,110 --> 00:03:24,780
+Then we will add the header here.
+
+59
+00:03:24,780 --> 00:03:27,450
+Inside the class of row,
+
+60
+00:03:27,450 --> 00:03:32,450
+we will set div, class column 12, text center.
+
+61
+00:03:34,020 --> 00:03:37,410
+And in the H 2 we have create category.
+
+62
+00:03:37,410 --> 00:03:40,500
+Let me cut that, paste it here
+
+63
+00:03:40,500 --> 00:03:45,303
+and give it the class of text white and padding Y of two.
+
+64
+00:03:46,170 --> 00:03:49,100
+After that, when the card header here
+
+65
+00:03:49,100 --> 00:03:52,353
+we will add another div for the card body.
+
+66
+00:03:53,370 --> 00:03:58,290
+So Bootstrap classes, card body here and padding four.
+
+67
+00:03:59,910 --> 00:04:03,540
+Perfect. Let me cut the form
+
+68
+00:04:03,540 --> 00:04:05,613
+and paste it right here.
+
+69
+00:04:06,840 --> 00:04:10,050
+Inside the form, let me give it a Bootstrap class
+
+70
+00:04:10,050 --> 00:04:15,050
+of row and see how the UI looks right now.
+
+71
+00:04:15,450 --> 00:04:19,470
+I do not see the site dot CSS coming into picture.
+
+72
+00:04:19,470 --> 00:04:22,350
+So let me see underscored layout.
+
+73
+00:04:22,350 --> 00:04:26,070
+We have site dot CSS after the Bootstraps,
+
+74
+00:04:26,070 --> 00:04:28,110
+so that should work.
+
+75
+00:04:28,110 --> 00:04:29,190
+But let me move it
+
+76
+00:04:29,190 --> 00:04:33,543
+at the very end here and let me restart the project.
+
+77
+00:04:35,774 --> 00:04:40,774
+Let's go to category and create new category.
+
+78
+00:04:40,890 --> 00:04:43,140
+Perfect. This looks much better.
+
+79
+00:04:43,140 --> 00:04:45,570
+Exactly what I want.
+
+80
+00:04:45,570 --> 00:04:47,460
+Let me go back again
+
+81
+00:04:47,460 --> 00:04:52,460
+and I do not want the HR here, remove the first row as well.
+
+82
+00:04:53,370 --> 00:04:56,913
+And I do not need the margin top four as well.
+
+83
+00:04:57,990 --> 00:05:02,010
+Where we have the class margin bottom three and row,
+
+84
+00:05:02,010 --> 00:05:05,460
+we already are inside row in form.
+
+85
+00:05:05,460 --> 00:05:07,470
+So what I can do is add a class
+
+86
+00:05:07,470 --> 00:05:11,463
+of form, floating, padding Y 2, and column 12.
+
+87
+00:05:12,576 --> 00:05:14,850
+Where we have the input element,
+
+88
+00:05:14,850 --> 00:05:19,020
+I will modify the class from padding zero to form control
+
+89
+00:05:19,020 --> 00:05:23,820
+border zero and shadow, and where we have the input element
+
+90
+00:05:23,820 --> 00:05:28,200
+I will say MS two, that looks good.
+
+91
+00:05:28,200 --> 00:05:30,030
+Let me copy the classes
+
+92
+00:05:30,030 --> 00:05:33,360
+and apply them for display order as well.
+
+93
+00:05:33,360 --> 00:05:38,253
+Again, all of them are Bootstrap classes nothing fancy.
+
+94
+00:05:39,720 --> 00:05:44,720
+Rather than BTN secondary, let me do BTN outline primary.
+
+95
+00:05:47,700 --> 00:05:51,993
+Let me save that, and let's see the difference now.
+
+96
+00:05:53,400 --> 00:05:57,510
+The hard reload for some reason is not working.
+
+97
+00:05:57,510 --> 00:06:00,870
+You can see it is not checked again for some reason.
+
+98
+00:06:00,870 --> 00:06:02,313
+So let me restart.
+
+99
+00:06:05,130 --> 00:06:08,353
+Perfect. It is checked now, category
+
+100
+00:06:08,353 --> 00:06:13,353
+and let me go to create category, and great.
+
+101
+00:06:13,380 --> 00:06:18,180
+The category name looks good here but something is off.
+
+102
+00:06:18,180 --> 00:06:20,160
+Let me go back.
+
+103
+00:06:20,160 --> 00:06:22,560
+When we use the form floating here,
+
+104
+00:06:22,560 --> 00:06:25,230
+the input will come first,
+
+105
+00:06:25,230 --> 00:06:28,860
+and that will have all of these classes.
+
+106
+00:06:28,860 --> 00:06:30,903
+So let me switch that around.
+
+107
+00:06:33,330 --> 00:06:38,100
+I added them to label by mistake and perfect.
+
+108
+00:06:38,100 --> 00:06:40,770
+We can copy and paste it here
+
+109
+00:06:40,770 --> 00:06:44,883
+modify the ASP 4 to be display order.
+
+110
+00:06:47,640 --> 00:06:51,153
+We will have to rebuild. Let me do that.
+
+111
+00:06:53,670 --> 00:06:58,670
+Category create, and perfect, category name looks good.
+
+112
+00:07:00,960 --> 00:07:04,980
+Let me see. Something is off with the display order.
+
+113
+00:07:04,980 --> 00:07:07,473
+We do not have the form floating.
+
+114
+00:07:08,550 --> 00:07:13,550
+Add that here and it will refresh, and perfect.
+
+115
+00:07:16,170 --> 00:07:17,313
+That looks good.
+
+116
+00:07:18,240 --> 00:07:21,963
+So with the row here, let me add padding top two.
+
+117
+00:07:22,860 --> 00:07:26,703
+And that looks much better for the create category.
+
+118
+00:07:27,630 --> 00:07:31,440
+Let me apply all of these changes to the other pages
+
+119
+00:07:31,440 --> 00:07:32,823
+in the next video.
+

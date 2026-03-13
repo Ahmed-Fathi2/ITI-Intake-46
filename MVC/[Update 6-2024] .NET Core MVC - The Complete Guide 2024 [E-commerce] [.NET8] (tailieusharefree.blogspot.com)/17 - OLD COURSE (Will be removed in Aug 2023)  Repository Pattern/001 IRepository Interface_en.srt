@@ -1,0 +1,612 @@
+1
+00:00:01,589 --> 00:00:03,930
+Instructor: We want to implement a repository pattern
+
+2
+00:00:03,930 --> 00:00:07,110
+for data access inside our project.
+
+3
+00:00:07,110 --> 00:00:08,760
+Since this is a big project,
+
+4
+00:00:08,760 --> 00:00:11,670
+it is always good to have a repository pattern
+
+5
+00:00:11,670 --> 00:00:14,610
+rather than accessing the database directly,
+
+6
+00:00:14,610 --> 00:00:18,333
+like we are doing inside the controller right here.
+
+7
+00:00:19,260 --> 00:00:21,750
+So, let me close all the tabs here,
+
+8
+00:00:21,750 --> 00:00:25,410
+and we will start fresh with our data access project.
+
+9
+00:00:25,410 --> 00:00:28,110
+We need to create a repository.
+
+10
+00:00:28,110 --> 00:00:31,170
+So, first thing first, let me create a folder here
+
+11
+00:00:31,170 --> 00:00:33,450
+with the name of Repository.
+
+12
+00:00:33,450 --> 00:00:34,650
+And inside there,
+
+13
+00:00:34,650 --> 00:00:38,348
+we will create a folder for IRepository,
+
+14
+00:00:38,348 --> 00:00:40,260
+which will hold all the interface,
+
+15
+00:00:40,260 --> 00:00:43,773
+and the implementation will be inside Repository.
+
+16
+00:00:44,790 --> 00:00:49,050
+So we can move our IRepository inside the Repository folder,
+
+17
+00:00:49,050 --> 00:00:50,460
+like that.
+
+18
+00:00:50,460 --> 00:00:52,980
+So first, let me implement the interface
+
+19
+00:00:52,980 --> 00:00:55,170
+inside the IRepository,
+
+20
+00:00:55,170 --> 00:00:57,360
+we will implement interface,
+
+21
+00:00:57,360 --> 00:01:00,150
+and I will call that IRepository.
+
+22
+00:01:00,150 --> 00:01:01,830
+Let's add that.
+
+23
+00:01:01,830 --> 00:01:04,290
+This will be a public interface,
+
+24
+00:01:04,290 --> 00:01:07,350
+and this interface should be generic.
+
+25
+00:01:07,350 --> 00:01:09,270
+Right now, we have category,
+
+26
+00:01:09,270 --> 00:01:12,330
+but as we move forward, we will have cover type,
+
+27
+00:01:12,330 --> 00:01:17,190
+company, user, order header, order details, and much more.
+
+28
+00:01:17,190 --> 00:01:21,780
+This repository should be able to handle all of the classes.
+
+29
+00:01:21,780 --> 00:01:25,350
+We can say here that this will be a generic repository
+
+30
+00:01:25,350 --> 00:01:27,270
+where T is a class.
+
+31
+00:01:27,270 --> 00:01:29,610
+It does not matter what class it will be,
+
+32
+00:01:29,610 --> 00:01:31,770
+we do not have to define that here,
+
+33
+00:01:31,770 --> 00:01:33,990
+it will just be a class.
+
+34
+00:01:33,990 --> 00:01:36,750
+Then it can be a category that we have right now,
+
+35
+00:01:36,750 --> 00:01:39,870
+or maybe order header, order details.
+
+36
+00:01:39,870 --> 00:01:41,280
+We don't care about that,
+
+37
+00:01:41,280 --> 00:01:46,280
+inside our repository, this will be a generic repository.
+
+38
+00:01:46,410 --> 00:01:47,760
+So, hypothetically,
+
+39
+00:01:47,760 --> 00:01:51,273
+let's assume that this T is a category for now.
+
+40
+00:01:52,320 --> 00:01:53,340
+In that case,
+
+41
+00:01:53,340 --> 00:01:57,210
+what will be the common methods that we want to implement?
+
+42
+00:01:57,210 --> 00:01:58,230
+To check those out,
+
+43
+00:01:58,230 --> 00:02:00,600
+we can go back to our web project.
+
+44
+00:02:00,600 --> 00:02:03,150
+In there, we have the Controller folder.
+
+45
+00:02:03,150 --> 00:02:05,190
+Let me minimize that.
+
+46
+00:02:05,190 --> 00:02:07,380
+And inside the controller's folder
+
+47
+00:02:07,380 --> 00:02:09,660
+let's open Controller.
+
+48
+00:02:09,660 --> 00:02:10,919
+So you can see here,
+
+49
+00:02:10,919 --> 00:02:12,690
+we have an IEnumerable
+
+50
+00:02:12,690 --> 00:02:15,390
+where we are getting all the categories.
+
+51
+00:02:15,390 --> 00:02:19,380
+So we need to implement that here in the generic category.
+
+52
+00:02:19,380 --> 00:02:23,340
+Return type should be an IEnumerable of T,
+
+53
+00:02:23,340 --> 00:02:25,800
+T basically can be any class,
+
+54
+00:02:25,800 --> 00:02:28,560
+it can be category when we are using
+
+55
+00:02:28,560 --> 00:02:30,603
+inside the category controller.
+
+56
+00:02:31,470 --> 00:02:33,870
+We do not want any parameters here,
+
+57
+00:02:33,870 --> 00:02:36,540
+we just want to retrieve all the categories,
+
+58
+00:02:36,540 --> 00:02:39,240
+that is our first requirement.
+
+59
+00:02:39,240 --> 00:02:40,920
+Then if we scroll down,
+
+60
+00:02:40,920 --> 00:02:44,280
+we have a requirement to add a category.
+
+61
+00:02:44,280 --> 00:02:46,290
+So when we are adding a category,
+
+62
+00:02:46,290 --> 00:02:49,350
+we are passing the object that needs to be added,
+
+63
+00:02:49,350 --> 00:02:52,140
+which is an object of the class.
+
+64
+00:02:52,140 --> 00:02:54,780
+So, let's implement that right here.
+
+65
+00:02:54,780 --> 00:02:56,970
+The return type will be void,
+
+66
+00:02:56,970 --> 00:02:59,040
+method name, we can give it Add,
+
+67
+00:02:59,040 --> 00:03:00,300
+and in the parameter,
+
+68
+00:03:00,300 --> 00:03:03,363
+we will give the entity that needs to be added.
+
+69
+00:03:04,590 --> 00:03:06,840
+Let's go back to our controller.
+
+70
+00:03:06,840 --> 00:03:09,690
+Next requirement that we have is Edit,
+
+71
+00:03:09,690 --> 00:03:13,443
+and inside Edit, we want to find that based on the id.
+
+72
+00:03:14,400 --> 00:03:17,730
+Now, if you remember here, you can use directly Find,
+
+73
+00:03:17,730 --> 00:03:21,630
+that works if what you are finding is a primary key.
+
+74
+00:03:21,630 --> 00:03:23,940
+But if that is not a primary key,
+
+75
+00:03:23,940 --> 00:03:28,113
+you can use FirstOrDefault to find that based on the id.
+
+76
+00:03:29,070 --> 00:03:30,990
+Of course, with FirstOrDefault,
+
+77
+00:03:30,990 --> 00:03:33,750
+you need the using statement of LINQ.
+
+78
+00:03:33,750 --> 00:03:37,440
+But with that, this approach will work on any column,
+
+79
+00:03:37,440 --> 00:03:38,763
+not just the id.
+
+80
+00:03:39,660 --> 00:03:42,030
+So, let's say if you want to find the category
+
+81
+00:03:42,030 --> 00:03:46,530
+where Name is equal to some name that you have here,
+
+82
+00:03:46,530 --> 00:03:48,870
+this will work with FirstOrDefault,
+
+83
+00:03:48,870 --> 00:03:51,450
+but it'll not work with Find.
+
+84
+00:03:51,450 --> 00:03:54,840
+So rather than implementing Find in our repository,
+
+85
+00:03:54,840 --> 00:03:58,443
+it makes sense to implement something like FirstOrDefault.
+
+86
+00:03:59,490 --> 00:04:02,340
+So we can go back to the IRepository,
+
+87
+00:04:02,340 --> 00:04:04,710
+and let's implement the FirstOrDefault
+
+88
+00:04:04,710 --> 00:04:06,660
+at the very beginning.
+
+89
+00:04:06,660 --> 00:04:10,080
+What will be the return type of FirstOrDefault?
+
+90
+00:04:10,080 --> 00:04:14,130
+It'll return an object of the class that we want.
+
+91
+00:04:14,130 --> 00:04:16,529
+So this will be the generic class, T,
+
+92
+00:04:16,529 --> 00:04:18,899
+that will be the return type.
+
+93
+00:04:18,899 --> 00:04:22,623
+We can call this method as GetFirstOrDefault.
+
+94
+00:04:24,810 --> 00:04:27,420
+And what will be the parameter here?
+
+95
+00:04:27,420 --> 00:04:30,660
+The parameter that we want here is this expression,
+
+96
+00:04:30,660 --> 00:04:32,610
+or something similar.
+
+97
+00:04:32,610 --> 00:04:36,960
+We can have this exact expression inside the parameter.
+
+98
+00:04:36,960 --> 00:04:39,660
+Because this is an expression inside there,
+
+99
+00:04:39,660 --> 00:04:42,990
+we have a function that is handling some scenarios
+
+100
+00:04:42,990 --> 00:04:45,270
+and filtering data.
+
+101
+00:04:45,270 --> 00:04:47,640
+To implement this exact function,
+
+102
+00:04:47,640 --> 00:04:50,010
+if we go to our IRepository,
+
+103
+00:04:50,010 --> 00:04:52,830
+we will say we want an expression here.
+
+104
+00:04:52,830 --> 00:04:56,310
+We'll press Control + . for LINQ.Expression,
+
+105
+00:04:56,310 --> 00:04:59,040
+because that is a LINQ expression.
+
+106
+00:04:59,040 --> 00:05:00,570
+Inside that expression,
+
+107
+00:05:00,570 --> 00:05:03,630
+we have a function where the first parameter
+
+108
+00:05:03,630 --> 00:05:07,620
+is the generic class, and the output will be boolean.
+
+109
+00:05:07,620 --> 00:05:09,723
+We will call that as filter.
+
+110
+00:05:10,710 --> 00:05:12,930
+This will be a required property
+
+111
+00:05:12,930 --> 00:05:16,290
+when we are calling the GetFirstOrDefault,
+
+112
+00:05:16,290 --> 00:05:19,170
+because if we are recruiting only one record,
+
+113
+00:05:19,170 --> 00:05:22,410
+we will always need a filter condition.
+
+114
+00:05:22,410 --> 00:05:23,243
+So with that,
+
+115
+00:05:23,243 --> 00:05:27,780
+we have handled this GetFirstOrDefault scenario perfectly.
+
+116
+00:05:27,780 --> 00:05:29,670
+We can use this if you want,
+
+117
+00:05:29,670 --> 00:05:33,030
+or you can un-comment the code that we had before,
+
+118
+00:05:33,030 --> 00:05:34,773
+it will still work the same.
+
+119
+00:05:35,610 --> 00:05:37,170
+Next, let's scroll down.
+
+120
+00:05:37,170 --> 00:05:41,073
+We have the edit post, where we are updating some record.
+
+121
+00:05:41,970 --> 00:05:43,410
+Now, update is something
+
+122
+00:05:43,410 --> 00:05:46,530
+that will not be common for all the repository.
+
+123
+00:05:46,530 --> 00:05:48,900
+Because let's say when you're updating category,
+
+124
+00:05:48,900 --> 00:05:50,580
+you have a different logic,
+
+125
+00:05:50,580 --> 00:05:52,260
+when you're updating a product,
+
+126
+00:05:52,260 --> 00:05:55,140
+you have a different logic because you have images
+
+127
+00:05:55,140 --> 00:05:57,600
+that needs to be updated.
+
+128
+00:05:57,600 --> 00:06:00,510
+So update is not something that will be consistent
+
+129
+00:06:00,510 --> 00:06:03,390
+across all the models that we have.
+
+130
+00:06:03,390 --> 00:06:06,690
+Because of that, it makes sense not to include that
+
+131
+00:06:06,690 --> 00:06:08,853
+inside the generic repository.
+
+132
+00:06:09,810 --> 00:06:13,350
+So we will come back to update in the later videos.
+
+133
+00:06:13,350 --> 00:06:16,530
+After that, we have Delete, in which we have Find,
+
+134
+00:06:16,530 --> 00:06:19,740
+we have implemented the GetFirstOrDefault,
+
+135
+00:06:19,740 --> 00:06:22,080
+and we have the POST action method
+
+136
+00:06:22,080 --> 00:06:24,510
+where we are removing something.
+
+137
+00:06:24,510 --> 00:06:28,050
+Inside Remove here, we just want to remove an entity,
+
+138
+00:06:28,050 --> 00:06:32,490
+so we have to pass that, and the return type will be void.
+
+139
+00:06:32,490 --> 00:06:34,800
+So we can copy the Add here,
+
+140
+00:06:34,800 --> 00:06:36,543
+paste it again for Remove.
+
+141
+00:06:38,880 --> 00:06:41,190
+Lastly, it is possible you want to remove
+
+142
+00:06:41,190 --> 00:06:42,870
+more than one entity,
+
+143
+00:06:42,870 --> 00:06:46,233
+so for that, we have something called as RemoveRange.
+
+144
+00:06:47,220 --> 00:06:48,930
+When we want to RemoveRange,
+
+145
+00:06:48,930 --> 00:06:51,630
+we will receive more than one entity here,
+
+146
+00:06:51,630 --> 00:06:53,400
+so rather than T here,
+
+147
+00:06:53,400 --> 00:06:56,430
+we will receive an IEnumerable of T,
+
+148
+00:06:56,430 --> 00:06:58,863
+which is a collection of entities.
+
+149
+00:06:59,760 --> 00:07:03,540
+So with that, our generic repository looks good.
+
+150
+00:07:03,540 --> 00:07:05,340
+As we proceed with the course,
+
+151
+00:07:05,340 --> 00:07:07,620
+we will face some complex scenarios,
+
+152
+00:07:07,620 --> 00:07:11,043
+and we will come back here to modify our repository.
+
+153
+00:07:11,910 --> 00:07:15,183
+So with that, let's continue from the next video.
+

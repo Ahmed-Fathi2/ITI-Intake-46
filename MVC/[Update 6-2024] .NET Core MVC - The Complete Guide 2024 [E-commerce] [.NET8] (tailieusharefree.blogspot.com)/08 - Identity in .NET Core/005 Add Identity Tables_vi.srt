@@ -1,0 +1,232 @@
+1
+00:00:01,680 --> 00:00:09,090
+Bây giờ trong ứng dụng của chúng tôi, nếu chúng tôi nhấp vào đăng ký hoặc nếu chúng tôi nhấp vào đăng nhập, bạn sẽ nhận thấy rằng nó không
+
+2
+00:00:09,090 --> 00:00:09,990
+hoạt động.
+
+3
+00:00:10,750 --> 00:00:16,780
+Bạn có thể tạm dừng video và cố gắng suy nghĩ hoặc thậm chí có thể Google về lý do tại sao điều đó không hiệu quả không?
+
+4
+00:00:16,990 --> 00:00:23,740
+Nó hơi phức tạp một chút, nhưng tôi muốn bạn xem liệu bạn có thể xác định được những gì còn thiếu hay không.
+
+5
+00:00:23,740 --> 00:00:29,170
+Và để gợi ý cho bạn, thiếu một cái gì đó trong Program. tập tin cs.
+
+6
+00:00:30,990 --> 00:00:33,570
+Tôi hy vọng bạn có thể tìm ra điều đó.
+
+7
+00:00:33,900 --> 00:00:38,770
+Bây giờ, nếu tôi quay lại dự án ở đây, chúng tôi đã thêm phần đăng nhập.
+
+8
+00:00:38,790 --> 00:00:40,440
+Hãy để tôi kiểm tra điều đó.
+
+9
+00:00:41,160 --> 00:00:49,530
+Khi chúng tôi đăng nhập một phần, chúng tôi có khu vực Aspx, nhưng chúng tôi không thấy bộ điều khiển ASP hoặc hành động ASP
+
+10
+00:00:49,530 --> 00:00:50,670
+để định tuyến.
+
+11
+00:00:50,760 --> 00:00:57,330
+Chúng tôi muốn xem trang ASP và nếu bạn còn nhớ thì trang đó được sử dụng cho các trang dao cạo.
+
+12
+00:00:57,630 --> 00:01:05,220
+Vì vậy, những gì chúng tôi có ở đây thực sự chính xác bởi vì đăng ký và tất cả các trang nhận dạng thực sự là các trang
+
+13
+00:01:05,220 --> 00:01:06,120
+dao cạo.
+
+14
+00:01:06,570 --> 00:01:12,090
+Nhưng trong chương trình. cs, chúng tôi chỉ hỗ trợ cho MVC.
+
+15
+00:01:12,480 --> 00:01:19,170
+Nếu chúng tôi quay lại đây, đó là tuyến đường đang được hỗ trợ và chúng tôi không có bất kỳ dịch vụ nào cho
+
+16
+00:01:19,170 --> 00:01:24,270
+biết điều đó, xin chào, ứng dụng của chúng tôi cũng sẽ có các trang dao cạo.
+
+17
+00:01:25,200 --> 00:01:31,620
+Vì vậy, chúng tôi cần thêm cấu hình cơ bản đó và thông báo cho ứng dụng của chúng tôi trong services.
+
+18
+00:01:31,620 --> 00:01:35,070
+Chúng tôi sẽ đăng ký thêm các trang dao cạo.
+
+19
+00:01:35,670 --> 00:01:42,960
+Và sau đó, nơi chúng tôi có đường dẫn ở đây, chúng tôi sẽ nói bản đồ chấm ứng dụng, trang dao cạo.
+
+20
+00:01:43,590 --> 00:01:49,260
+Điều đó sẽ đảm bảo rằng nó thêm một định tuyến cần thiết để ánh xạ các trang dao cạo.
+
+21
+00:01:50,160 --> 00:01:56,100
+Với cấu hình đó bây giờ, đăng ký và đăng nhập sẽ hoạt động như mong đợi.
+
+22
+00:02:00,430 --> 00:02:02,770
+Nếu tôi bấm vào đăng ký ở đây.
+
+23
+00:02:02,950 --> 00:02:03,730
+Hoàn hảo.
+
+24
+00:02:03,760 --> 00:02:11,890
+Chúng tôi có một trang đăng ký mặc định do nhóm Dotnet cung cấp và có mật khẩu email và xác nhận
+
+25
+00:02:11,890 --> 00:02:12,760
+mật khẩu.
+
+26
+00:02:13,580 --> 00:02:17,510
+Nếu tôi nhấp vào đăng nhập ở đây, chúng tôi có email và mật khẩu.
+
+27
+00:02:17,510 --> 00:02:26,360
+Vì vậy, bạn có thể thấy nhiều trang đã được triển khai và cung cấp cho chúng tôi bằng danh tính Dotnet.
+
+28
+00:02:27,290 --> 00:02:34,310
+Nhưng trước khi chúng ta tiến hành đăng nhập và đăng ký, giả sử khi chúng ta đăng ký một người dùng, người dùng này
+
+29
+00:02:34,340 --> 00:02:36,890
+sẽ được lưu ở đâu trong cơ sở dữ liệu?
+
+30
+00:02:37,160 --> 00:02:40,340
+Chúng tôi không có bất kỳ bảng nào trong cơ sở dữ liệu.
+
+31
+00:02:41,020 --> 00:02:48,580
+Nhưng điều thực sự xảy ra là do danh tính, khi chúng ta thêm di chuyển, nó sẽ tự động thêm di chuyển
+
+32
+00:02:48,580 --> 00:02:53,020
+để tạo tất cả các bảng liên quan đến danh tính.
+
+33
+00:02:53,630 --> 00:02:54,950
+Để tôi xem.
+
+34
+00:02:55,190 --> 00:02:57,500
+Chúng tôi sẽ đóng tất cả các tab ở đây.
+
+35
+00:02:57,710 --> 00:03:03,770
+Công cụ, bảng điều khiển trình quản lý gói và tôi sẽ thêm di chuyển.
+
+36
+00:03:03,890 --> 00:03:06,800
+Thêm bảng nhận dạng.
+
+37
+00:03:07,550 --> 00:03:11,570
+Chúng ta phải thay đổi dự án mặc định và nhấn enter.
+
+38
+00:03:12,530 --> 00:03:13,340
+Hoàn hảo.
+
+39
+00:03:13,340 --> 00:03:18,020
+Bạn có thể thấy trong quá trình di chuyển, nó đang tạo một bảng ASP. NET cuộn.
+
+40
+00:03:18,350 --> 00:03:26,030
+ASP. NET, yêu cầu cuộn bảng và nhiều bảng khác liên quan đến danh tính.
+
+41
+00:03:26,600 --> 00:03:33,450
+Vì vậy, tất cả cấu hình bảng này đã được thực hiện trong danh tính Dotnet.
+
+42
+00:03:33,470 --> 00:03:38,090
+Tất cả những gì chúng ta phải làm là thêm cơ sở dữ liệu di chuyển và cập nhật.
+
+43
+00:03:40,240 --> 00:03:41,530
+Bạn có thể nghĩ về.
+
+44
+00:03:41,530 --> 00:03:46,780
+Nếu bạn phải thực hiện tất cả việc triển khai này, sẽ mất khá nhiều thời gian.
+
+45
+00:03:46,780 --> 00:03:53,920
+Và sau đó, khi nói đến bảo mật, bạn cần phải rất chắc chắn rằng mọi thứ đều siêu chắc chắn.
+
+46
+00:03:54,100 --> 00:04:00,490
+Nhóm Dotnet đã đảm nhận tất cả những điều đó và chúng tôi có thể tự tin sử dụng điều đó.
+
+47
+00:04:01,150 --> 00:04:07,480
+Khi đã xong, nếu tôi quay lại Máy chủ SQL và kiểm tra các bảng, thật tuyệt.
+
+48
+00:04:07,510 --> 00:04:12,520
+Chúng tôi có rất nhiều bảng mới được tạo để nhận dạng.
+
+49
+00:04:14,440 --> 00:04:21,640
+Bảng chính ở đây là bảng người dùng và bạn có thể nhận thấy tất cả các bảng liên quan đến danh
+
+50
+00:04:21,640 --> 00:04:24,370
+tính sẽ có ASP. NET trước tên bảng.
+
+51
+00:04:24,370 --> 00:04:29,020
+Vì vậy, bảng người dùng về cơ bản là ASP. NET vai trò người dùng.
+
+52
+00:04:29,020 --> 00:04:31,240
+Bảng là ASP. NET vai trò.
+
+53
+00:04:31,870 --> 00:04:37,660
+Trong bảng người dùng, chúng tôi có email tên người dùng, chúng tôi cũng có số điện thoại.
+
+54
+00:04:37,660 --> 00:04:44,980
+Nhưng có thể bạn muốn có nhiều thuộc tính hơn trong bảng người dùng, chẳng hạn như bạn có thể cần địa
+
+55
+00:04:44,980 --> 00:04:48,970
+chỉ của người dùng, tên đầy đủ của người dùng, v.v.
+
+56
+00:04:49,740 --> 00:04:57,780
+Vì vậy, bây giờ câu hỏi đặt ra là làm thế nào chúng ta có thể sửa đổi bảng người dùng hiện có và thêm nhiều cột hơn dựa trên yêu cầu
+
+57
+00:04:57,780 --> 00:04:58,890
+của chúng ta?
+
+58
+00:04:59,610 --> 00:05:02,610
+Hãy để tôi cho bạn thấy điều đó trong video tiếp theo.
+

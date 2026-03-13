@@ -1,0 +1,48 @@
+﻿@page "/todo"
+
+<PageTitle>ToDo</PageTitle>
+
+<h1>ToDo</h1>
+
+<div class="mb-2">
+    <input @bind="newItem" @bind:event="oninput" placeholder="Add a new todo" class="form-control" />
+    <button class="btn btn-primary mt-2" @onclick="Add">Add</button>
+</div>
+
+<ul class="list-group">
+    @foreach (var item in items)
+    {
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <input type="checkbox" class="form-check-input me-2" @bind="item.IsDone" />
+                <span class="@(item.IsDone ? "text-decoration-line-through" : "")">@item.Text</span>
+            </div>
+            <button class="btn btn-sm btn-danger" @onclick="() => Remove(item)">Delete</button>
+        </li>
+    }
+</ul>
+
+@code {
+    class TodoItem
+    {
+        public string Text { get; set; } = string.Empty;
+        public bool IsDone { get; set; }
+    }
+
+    List<TodoItem> items = new();
+    string newItem = string.Empty;
+
+    void Add()
+    {
+        if (!string.IsNullOrWhiteSpace(newItem))
+        {
+            items.Add(new TodoItem { Text = newItem.Trim() });
+            newItem = string.Empty;
+        }
+    }
+
+    void Remove(TodoItem item)
+    {
+        items.Remove(item);
+    }
+}

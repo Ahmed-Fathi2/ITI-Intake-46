@@ -1,0 +1,524 @@
+1
+00:00:01,490 --> 00:00:05,630
+Bây giờ, một điều mà tôi muốn làm là đăng ký và đăng nhập giao diện người dùng.
+
+2
+00:00:05,900 --> 00:00:08,960
+Hãy để tôi thay đổi giao diện người dùng mặc định một chút.
+
+3
+00:00:08,990 --> 00:00:11,450
+Bạn có thể thấy chúng tôi có hai phân vùng ở đây.
+
+4
+00:00:11,480 --> 00:00:15,520
+Thay vào đó, hãy để tôi đăng ký toàn bộ trang.
+
+5
+00:00:15,530 --> 00:00:17,600
+Tôi sẽ chuyển phần bên dưới.
+
+6
+00:00:17,600 --> 00:00:18,470
+Đăng ký.
+
+7
+00:00:19,490 --> 00:00:21,650
+Vì vậy, hãy để tôi chuyển trở lại đây.
+
+8
+00:00:21,650 --> 00:00:26,920
+Chúng tôi có trang đăng ký ở đây, nơi chúng tôi có cột MD4.
+
+9
+00:00:26,990 --> 00:00:29,840
+Hãy để tôi làm cho nó cột MD 12.
+
+10
+00:00:30,020 --> 00:00:34,550
+Và cái còn lại, tôi cũng sẽ làm cho nó là MD 12.
+
+11
+00:00:35,810 --> 00:00:37,170
+Trông tôt đây.
+
+12
+00:00:37,190 --> 00:00:44,540
+Sau đó, hãy để tôi quay lại đây và tôi sẽ thêm một div với loại thẻ.
+
+13
+00:00:45,290 --> 00:00:47,250
+Và tôi sẽ cho nó một cái bóng.
+
+14
+00:00:47,270 --> 00:00:50,840
+Đường viền bằng 0 lề trên cùng của bốn.
+
+15
+00:00:51,260 --> 00:00:55,890
+Trong div đó, tôi sẽ tạo thêm ba div cho tiêu đề thẻ.
+
+16
+00:00:55,910 --> 00:00:58,970
+Bên trong tôi có hàng và cột 12.
+
+17
+00:00:59,850 --> 00:01:01,830
+Tôi sẽ thêm H1 ở đó.
+
+18
+00:01:01,830 --> 00:01:07,440
+Vì vậy, hãy xóa nó khỏi đây và thay vì H1, hãy để tôi đặt nó ở H2.
+
+19
+00:01:07,470 --> 00:01:16,110
+Cung cấp cho nó một lớp đệm Y2 và văn bản màu trắng và chúng tôi sẽ hiển thị thanh ghi.
+
+20
+00:01:16,410 --> 00:01:18,900
+Chúng tôi không cần dữ liệu xem này.
+
+21
+00:01:19,440 --> 00:01:22,020
+Hãy để tôi xem làm thế nào nó đang đi cùng.
+
+22
+00:01:22,920 --> 00:01:25,020
+Điều này có vẻ tốt cho tiêu đề của chúng tôi.
+
+23
+00:01:25,970 --> 00:01:27,650
+Và sau đó chúng ta có cá tuyết.
+
+24
+00:01:27,650 --> 00:01:29,380
+Chúng tôi có tiêu đề cá tuyết.
+
+25
+00:01:29,390 --> 00:01:32,960
+Chúng tôi sẽ thêm một bữa tiệc cá tuyết khác.
+
+26
+00:01:34,550 --> 00:01:36,470
+Và phần đệm của bốn.
+
+27
+00:01:36,920 --> 00:01:41,380
+Trong đó, chúng tôi sẽ dán toàn bộ hàng mà chúng tôi có ở đây.
+
+28
+00:01:41,390 --> 00:01:47,330
+Vì vậy, hãy để tôi cắt và dán nó và nơi chúng tôi có hàng, hãy để tôi thêm phần đệm.
+
+29
+00:01:47,360 --> 00:01:48,680
+Đầu bốn.
+
+30
+00:01:49,660 --> 00:01:53,260
+Hãy để tôi quay lại và xem mọi thứ đang diễn ra như thế nào.
+
+31
+00:01:53,290 --> 00:01:55,480
+Nhìn tốt hơn nhiều ở đây.
+
+32
+00:01:55,810 --> 00:01:57,810
+Bây giờ tạo một tài khoản mới.
+
+33
+00:01:57,820 --> 00:02:00,790
+Hãy để tôi đưa nó vào giữa màn hình.
+
+34
+00:02:01,360 --> 00:02:05,410
+Vì vậy, nơi chúng ta có H2 ở đây, hãy để tôi tạo ra H3 đó.
+
+35
+00:02:05,890 --> 00:02:11,350
+Tôi sẽ tạo phần đệm này thành ba và tôi sẽ thêm một số lớp khởi động ở đây.
+
+36
+00:02:11,350 --> 00:02:18,220
+Đường viền, đường viền dưới cùng, một số phần đệm và văn bản phụ với trung tâm văn bản.
+
+37
+00:02:19,420 --> 00:02:20,050
+Hoàn hảo.
+
+38
+00:02:20,050 --> 00:02:21,160
+Tạo tài khoản mới.
+
+39
+00:02:21,160 --> 00:02:22,180
+Nó có vẻ tốt.
+
+40
+00:02:22,180 --> 00:02:24,970
+Và tôi tin rằng chúng ta phải h. r.
+
+41
+00:02:25,090 --> 00:02:27,850
+Hãy để tôi loại bỏ một và.
+
+42
+00:02:27,850 --> 00:02:28,480
+Tuyệt vời.
+
+43
+00:02:29,070 --> 00:02:30,030
+Bây giờ gửi email.
+
+44
+00:02:30,030 --> 00:02:34,560
+Tôi muốn nó có chiều rộng đầy đủ, nhưng tất cả các trường khác tôi sẽ tạo chúng.
+
+45
+00:02:34,560 --> 00:02:36,190
+Cột MD sáu.
+
+46
+00:02:36,210 --> 00:02:43,680
+Bằng cách đó, họ sẽ chỉ lấy sáu cột và văn bản ở đây, hãy để tôi làm cho văn bản đó bị tắt tiếng.
+
+47
+00:02:43,980 --> 00:02:50,610
+Vì vậy, tất cả các nhãn ở đây, hãy để tôi thêm một loại lề là hai và văn bản bị tắt tiếng.
+
+48
+00:02:50,970 --> 00:02:55,740
+Tôi sẽ thêm điều đó cho tất cả các nhãn có vẻ tốt.
+
+49
+00:02:55,740 --> 00:02:59,310
+Hãy để tôi lưu nó và hoàn thiện.
+
+50
+00:02:59,310 --> 00:03:00,750
+Tôi thích cái đó.
+
+51
+00:03:00,750 --> 00:03:07,560
+Bây giờ email ở đây, tôi muốn nó ở cột 12 nhưng mọi thứ khác tôi sẽ để nó ở cột 6.
+
+52
+00:03:09,410 --> 00:03:11,420
+Tôi sẽ thêm nó cho màn hình trung bình.
+
+53
+00:03:11,420 --> 00:03:13,880
+Vì vậy, hãy để tôi sửa chữa điều đó là tốt.
+
+54
+00:03:16,000 --> 00:03:16,810
+Hoàn hảo.
+
+55
+00:03:16,840 --> 00:03:19,300
+Nếu tôi lưu nó và quay lại.
+
+56
+00:03:19,540 --> 00:03:20,900
+Trông tôt đây.
+
+57
+00:03:20,920 --> 00:03:23,050
+Tôi cần phải đặt nó trong một hàng.
+
+58
+00:03:23,780 --> 00:03:30,140
+Vì vậy, nơi chúng tôi có biểu mẫu ở đây, tôi sẽ thêm một lớp hàng và nó sẽ thêm điều đó.
+
+59
+00:03:30,140 --> 00:03:31,100
+Hoàn hảo.
+
+60
+00:03:31,340 --> 00:03:33,260
+Điều đó có vẻ tốt hơn nhiều.
+
+61
+00:03:34,530 --> 00:03:35,790
+Nút ở đây.
+
+62
+00:03:35,790 --> 00:03:37,230
+Hãy để tôi sửa nó.
+
+63
+00:03:37,380 --> 00:03:42,270
+Tôi cũng sẽ thêm nó vào một div, tạo cho nó một lớp cột 12.
+
+64
+00:03:45,180 --> 00:03:47,040
+Và hãy xem.
+
+65
+00:03:47,040 --> 00:03:47,850
+Tuyệt vời.
+
+66
+00:03:48,420 --> 00:03:51,090
+Trường hợp chúng tôi phải sử dụng một dịch vụ khác.
+
+67
+00:03:51,270 --> 00:03:58,890
+Tôi muốn thêm một dòng ở đây và nhập văn bản hoặc để họ có thể sử dụng sổ đăng ký này hoặc họ có thể đăng nhập
+
+68
+00:03:58,890 --> 00:04:06,450
+bằng một số dịch vụ khác mà bạn có thể định cấu hình nếu muốn, như xác thực Facebook, xác thực Google, Twitter
+
+69
+00:04:06,450 --> 00:04:10,020
+hoặc bất kỳ dịch vụ bên thứ ba nào khác.
+
+70
+00:04:10,980 --> 00:04:13,890
+Nhưng ngay bây giờ, tôi chỉ muốn thêm dòng đó.
+
+71
+00:04:14,340 --> 00:04:20,399
+Vì vậy, nếu chúng tôi quay lại đây, chúng tôi sẽ phải thêm một số dòng trong CSS.
+
+72
+00:04:20,550 --> 00:04:22,800
+Chúng tôi có sáu.
+
+73
+00:04:22,830 --> 00:04:26,100
+Hãy để tôi dán chính xác những gì tôi đang làm.
+
+74
+00:04:26,190 --> 00:04:28,230
+Tôi đang thêm một màu ở đây.
+
+75
+00:04:28,230 --> 00:04:32,880
+Uốn cong một cái, tạo cho nó một đường viền dưới cùng và một lề.
+
+76
+00:04:33,180 --> 00:04:37,310
+Bây giờ tôi đang làm điều này trước và sau khi sử dụng CSS.
+
+77
+00:04:37,320 --> 00:04:41,010
+Vì vậy, chúng tôi sẽ phải cung cấp cho văn bản phân chia lớp này.
+
+78
+00:04:41,520 --> 00:04:46,800
+Hãy để tôi đi đăng ký ở đây và nơi chúng tôi có thể sử dụng dịch vụ khác.
+
+79
+00:04:46,890 --> 00:04:48,630
+Tôi sẽ thêm một đoạn.
+
+80
+00:04:48,660 --> 00:04:53,550
+Cung cấp cho lớp văn bản dải phân cách và flex.
+
+81
+00:04:54,890 --> 00:04:55,910
+Bên trong đó.
+
+82
+00:04:55,910 --> 00:04:59,540
+Tôi sẽ viết qua đây và xóa cái này ở đây.
+
+83
+00:04:59,900 --> 00:05:03,320
+Hãy lưu lại và quay lại.
+
+84
+00:05:03,620 --> 00:05:04,390
+Hoàn hảo.
+
+85
+00:05:04,400 --> 00:05:06,020
+Tôi thích ở đây.
+
+86
+00:05:06,020 --> 00:05:09,470
+Nhưng hãy để tôi thêm một số phần đệm vào.
+
+87
+00:05:10,900 --> 00:05:13,600
+Và tôi nghĩ ba sẽ tốt hơn.
+
+88
+00:05:14,020 --> 00:05:14,840
+Hoàn hảo.
+
+89
+00:05:14,860 --> 00:05:16,780
+Điều đó có vẻ tốt hơn nhiều.
+
+90
+00:05:17,200 --> 00:05:19,480
+Cùng với đó, chúng tôi có giao diện người dùng đã đăng ký.
+
+91
+00:05:19,510 --> 00:05:20,830
+Trông tôt đây.
+
+92
+00:05:20,860 --> 00:05:23,320
+Quy tắc chọn mà chúng tôi có ở đây.
+
+93
+00:05:23,320 --> 00:05:27,280
+Hãy để tôi làm cả cột md6 đó.
+
+94
+00:05:27,940 --> 00:05:29,860
+Và hãy để tôi lưu nó.
+
+95
+00:05:30,610 --> 00:05:31,570
+Hoàn hảo.
+
+96
+00:05:32,350 --> 00:05:35,380
+Vì vậy, giao diện người dùng đăng ký của chúng tôi trông rất tuyệt.
+
+97
+00:05:35,500 --> 00:05:39,730
+Hãy để tôi thêm mã tương tự bên trong thông tin đăng nhập.
+
+98
+00:05:40,450 --> 00:05:43,870
+Vì vậy, lần này chúng ta sẽ đi đến giao diện người dùng đăng nhập.
+
+99
+00:05:44,410 --> 00:05:50,980
+Khu vực nhận dạng đăng nhập nơi chúng tôi có cột md.
+
+100
+00:05:51,520 --> 00:05:53,110
+Đây sẽ là 12.
+
+101
+00:05:53,470 --> 00:05:54,820
+Cuộn xuống.
+
+102
+00:05:55,120 --> 00:05:57,270
+Đây cũng sẽ là 12.
+
+103
+00:05:57,280 --> 00:06:02,680
+Và nếu tôi đi đăng ký, tôi có thể sao chép thẻ đoạn văn ở đây.
+
+104
+00:06:03,930 --> 00:06:07,860
+Dán nó vào phần ở đây và loại bỏ cho.
+
+105
+00:06:09,020 --> 00:06:10,460
+Hãy để tôi xem.
+
+106
+00:06:11,680 --> 00:06:12,340
+Hoàn hảo.
+
+107
+00:06:12,340 --> 00:06:13,320
+Có vẻ tốt.
+
+108
+00:06:13,330 --> 00:06:15,400
+Để tôi thêm thẻ vào đây.
+
+109
+00:06:15,550 --> 00:06:25,870
+Vì vậy, chúng tôi đi tới sổ đăng ký của mình và tôi sẽ sao chép mọi thứ cho đến khi thân thẻ dán vào phần đăng nhập tại đây.
+
+110
+00:06:26,140 --> 00:06:29,050
+Và hãy để tôi thêm các thẻ div đóng.
+
+111
+00:06:30,910 --> 00:06:32,950
+Hoàn hảo trong bữa tiệc thẻ.
+
+112
+00:06:32,950 --> 00:06:34,890
+Ở đây, hãy để tôi sao chép hàng.
+
+113
+00:06:34,900 --> 00:06:38,710
+Thay vì cắt nó và dán nó ngay tại đó.
+
+114
+00:06:39,490 --> 00:06:44,170
+Chúng tôi sẽ hiển thị đăng nhập ở đây và chúng tôi không cần dữ liệu chế độ xem này.
+
+115
+00:06:44,410 --> 00:06:45,880
+Hãy để tôi làm sạch nó.
+
+116
+00:06:46,870 --> 00:06:47,380
+Tuyệt vời.
+
+117
+00:06:47,380 --> 00:06:49,810
+Giao diện người dùng của chúng tôi trông đẹp hơn nhiều.
+
+118
+00:06:49,840 --> 00:06:52,210
+Tôi sẽ sắp xếp ba liên kết này.
+
+119
+00:06:52,990 --> 00:06:55,590
+Chúng tôi có điều đó trong div chính ở đây.
+
+120
+00:06:55,600 --> 00:07:00,550
+Tôi có thể sử dụng bootstrap flex và biện minh cho nội dung giữa.
+
+121
+00:07:00,580 --> 00:07:05,350
+Điều đó sẽ mang lại cho tất cả chúng trong một dòng và hoàn hảo.
+
+122
+00:07:05,710 --> 00:07:08,560
+Điều này có vẻ tốt hơn nhiều so với những gì tôi đã có.
+
+123
+00:07:09,370 --> 00:07:14,770
+Và cùng với đó, giao diện người dùng đăng ký và đăng nhập của chúng tôi trông đẹp hơn nhiều.
+
+124
+00:07:15,190 --> 00:07:21,120
+Tôi sẽ căn cái này vào giữa, vì vậy hãy để tôi sửa nó và đăng ký.
+
+125
+00:07:21,130 --> 00:07:23,260
+Chúng tôi có một số lớp học.
+
+126
+00:07:24,050 --> 00:07:27,980
+Sao chép và dán chúng vào nơi chúng ta có lợi thế.
+
+127
+00:07:29,240 --> 00:07:31,280
+Và làm cho tuổi đó lên ba.
+
+128
+00:07:33,690 --> 00:07:36,590
+Vấn đề thực tế là chúng ta không cần thêm không khí.
+
+129
+00:07:36,930 --> 00:07:38,010
+Loại bỏ điều đó.
+
+130
+00:07:39,030 --> 00:07:43,310
+Tuyệt vời với thông tin đăng nhập và đăng ký của chúng tôi được cập nhật.
+
+131
+00:07:43,320 --> 00:07:46,140
+Hãy để tôi tiếp tục trong video tiếp theo.
+

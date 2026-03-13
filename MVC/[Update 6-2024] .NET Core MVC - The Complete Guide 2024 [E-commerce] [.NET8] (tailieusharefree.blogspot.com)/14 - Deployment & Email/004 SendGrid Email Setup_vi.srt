@@ -1,0 +1,372 @@
+1
+00:00:01,770 --> 00:00:06,750
+Trong các video sắp tới, chúng ta sẽ xem cách gửi email bằng SendGrid.
+
+2
+00:00:06,900 --> 00:00:10,200
+Và hai video này là video tùy chọn.
+
+3
+00:00:10,200 --> 00:00:17,070
+Và lý do tôi nói vậy là vì khi chúng tôi muốn sử dụng SendGrid để gửi email, bạn cần có một
+
+4
+00:00:17,070 --> 00:00:18,420
+email tên miền.
+
+5
+00:00:18,600 --> 00:00:24,720
+Khi bạn đang làm việc chuyên nghiệp, bạn sẽ luôn có một email tên miền từ nơi làm việc của mình.
+
+6
+00:00:24,720 --> 00:00:30,690
+Nhưng nếu bạn đang tìm hiểu điều gì đó, có thể bạn không có email tên miền.
+
+7
+00:00:31,590 --> 00:00:36,600
+Nếu bạn không có email tên miền, email SendGrid sẽ không hoạt động.
+
+8
+00:00:36,600 --> 00:00:40,740
+Và điều đó thực sự đúng với các nhà cung cấp email khác.
+
+9
+00:00:40,740 --> 00:00:43,740
+Họ thích bạn có một email tên miền.
+
+10
+00:00:44,450 --> 00:00:51,470
+Vì vậy, nếu bạn không có email tên miền, bạn chỉ cần xem video và xem việc triển khai chức năng email
+
+11
+00:00:51,470 --> 00:00:53,210
+dễ dàng như thế nào.
+
+12
+00:00:54,120 --> 00:00:59,400
+Điều đó đang được nói, chúng tôi sẽ sử dụng SendGrid để gửi email trong dự án của chúng tôi.
+
+13
+00:01:00,300 --> 00:01:04,110
+Trước tiên, hãy để tôi đăng nhập tại đây vì tôi đã có tài khoản.
+
+14
+00:01:04,140 --> 00:01:09,360
+Nếu chưa có tài khoản, bạn luôn có thể đăng ký một tài khoản miễn phí.
+
+15
+00:01:11,090 --> 00:01:17,030
+Khi bạn đăng nhập vào đó trên hồ sơ, chúng tôi có một thứ gọi là cài đặt tài khoản.
+
+16
+00:01:18,320 --> 00:01:19,280
+Bên trong đó.
+
+17
+00:01:19,280 --> 00:01:23,990
+Trước khi chúng tôi làm bất cứ điều gì khác, có một thứ gọi là xác thực người gửi.
+
+18
+00:01:24,320 --> 00:01:28,550
+Ở đó bạn phải xác minh cơ bản tên miền của mình.
+
+19
+00:01:28,700 --> 00:01:30,560
+Tôi đã xác minh rồi.
+
+20
+00:01:30,590 --> 00:01:33,070
+Xin chào tại dotnet mastery. com.
+
+21
+00:01:33,080 --> 00:01:36,200
+Do đó tôi có thể sử dụng SendGrid.
+
+22
+00:01:36,830 --> 00:01:42,890
+Bây giờ nếu bạn đang tạo tài khoản của mình, bạn sẽ phải xác minh danh tính của một người gửi.
+
+23
+00:01:42,920 --> 00:01:49,280
+Bạn sẽ nhập các chi tiết ở đây và nó sẽ hướng dẫn bạn cách xác minh danh tính đó.
+
+24
+00:01:49,670 --> 00:01:56,330
+Nếu danh tính đó không được xác minh bằng email tên miền thì SendGrid sẽ không hoạt động.
+
+25
+00:01:56,660 --> 00:02:02,870
+Vì vậy, một lần nữa, nếu bạn không có email tên miền và bạn chỉ có Gmail hoặc Yahoo!
+
+26
+00:02:02,900 --> 00:02:04,290
+Đừng thử SendGrid.
+
+27
+00:02:04,310 --> 00:02:05,510
+Nó sẽ không làm việc.
+
+28
+00:02:05,510 --> 00:02:12,380
+Nhưng bạn có thể xem video và thấy việc triển khai email trong lõi dotnet dễ dàng như thế nào.
+
+29
+00:02:13,070 --> 00:02:18,420
+Bây giờ, tương tự như Stripe với SendGrid, chúng tôi cần một khóa API.
+
+30
+00:02:18,900 --> 00:02:24,890
+Vì vậy, hãy để tôi tạo một khóa API mới tại đây với tên khóa truy cập đầy đủ.
+
+31
+00:02:24,900 --> 00:02:30,770
+Hãy để tôi gọi đó là cồng kềnh, tạo và xem và hoàn thiện.
+
+32
+00:02:30,780 --> 00:02:32,220
+Hãy để tôi sao chép điều đó.
+
+33
+00:02:32,640 --> 00:02:42,480
+Chúng tôi sẽ dán các khóa của mình vào cùng một vị trí là cài đặt ứng dụng. json tại đây và ngay tại đây, chúng tôi sẽ thêm một phần của SendGrid
+
+34
+00:02:42,480 --> 00:02:47,910
+và trong đó chúng tôi sẽ sử dụng tên khóa là khóa bí mật.
+
+35
+00:02:47,910 --> 00:02:51,630
+Và hãy để tôi dán bí mật ngay tại đây.
+
+36
+00:02:52,400 --> 00:02:57,850
+Bây giờ, nếu bạn còn nhớ trước đây chúng tôi đã thấy một số vấn đề khi gửi email.
+
+37
+00:02:57,860 --> 00:03:05,090
+Do đó, trong dự án tiện ích, chúng tôi đã triển khai trình gửi email, về cơ bản triển khai
+
+38
+00:03:05,090 --> 00:03:07,670
+trình gửi email tích hợp.
+
+39
+00:03:08,090 --> 00:03:13,610
+Chúng tôi sẽ cải tiến người gửi email này và thêm hỗ trợ SendGrid ngay tại đây.
+
+40
+00:03:14,180 --> 00:03:24,020
+Vì vậy, điều đầu tiên bên trong dự án tiện ích, hãy quản lý các gói NuGet và ở đó chúng tôi sẽ duyệt tìm gói SendGrid.
+
+41
+00:03:25,990 --> 00:03:26,560
+Hoàn hảo.
+
+42
+00:03:26,560 --> 00:03:28,250
+Chúng tôi có gói ở đây.
+
+43
+00:03:28,270 --> 00:03:29,890
+Hãy để tôi cài đặt nó.
+
+44
+00:03:30,540 --> 00:03:35,670
+Và sau đó chúng tôi đã sẵn sàng sử dụng SendGrid bên trong người gửi email.
+
+45
+00:03:36,060 --> 00:03:39,390
+Bây giờ, sử dụng SendGrid ở đây cực kỳ đơn giản.
+
+46
+00:03:40,350 --> 00:03:43,140
+Trước tiên, chúng ta cần truy cập khóa của mình tại đây.
+
+47
+00:03:43,260 --> 00:03:46,500
+Vì vậy, hãy để tôi tạo một thuộc tính để lưu trữ khóa đó.
+
+48
+00:03:46,500 --> 00:03:53,550
+Và trong hàm tạo ở đây, trước đây chúng ta đã thấy rằng với Stripe, chúng ta đã tạo một lớp giống với thuộc tính và chúng ta
+
+49
+00:03:53,550 --> 00:03:58,140
+đã sử dụng để điền lớp đó vào Program. cs.
+
+50
+00:03:58,710 --> 00:04:05,520
+Một cách khác để truy cập chúng là chúng ta có thể truy cập cấu hình I trực tiếp tại đây.
+
+51
+00:04:05,730 --> 00:04:08,040
+Gọi cấu hình gạch dưới đó.
+
+52
+00:04:09,060 --> 00:04:11,550
+Sau đó để cư bí mật lưới cát.
+
+53
+00:04:11,550 --> 00:04:14,890
+Ở đây chúng tôi sẽ truy cập cấu hình gạch dưới.
+
+54
+00:04:14,910 --> 00:04:21,959
+Ở đó chúng ta có một phương thức get value trong đó chúng ta phải xác định loại và ở đây chúng ta cần viết tên
+
+55
+00:04:21,959 --> 00:04:22,560
+khóa.
+
+56
+00:04:23,010 --> 00:04:30,540
+Bây giờ trong cài đặt ứng dụng, chúng tôi có phần sao chép và dán lưới cát mà chúng tôi có một khóa có tên là
+
+57
+00:04:30,540 --> 00:04:31,590
+khóa bí mật.
+
+58
+00:04:31,620 --> 00:04:36,240
+Vì vậy, chúng tôi sẽ phân tách nó bằng dấu hai chấm và dán khóa bí mật đó.
+
+59
+00:04:36,950 --> 00:04:42,170
+Điều đó sẽ lấy giá trị bí mật và gán giá trị đó cho bí mật SendGrid.
+
+60
+00:04:43,300 --> 00:04:47,950
+Cuối cùng, ngay tại đây, chúng ta phải thêm logic để gửi email.
+
+61
+00:04:48,590 --> 00:04:56,720
+Khi chúng tôi đang làm việc với SendGrid, trước tiên chúng tôi phải tạo một ứng dụng khách bên trong ứng dụng khách SendGrid.
+
+62
+00:04:57,900 --> 00:05:00,090
+Và chèn tham số vào đây.
+
+63
+00:05:00,090 --> 00:05:03,090
+Chúng ta phải chuyển khóa bí mật SendGrid.
+
+64
+00:05:03,880 --> 00:05:06,100
+Theo cách đó, nó sẽ tạo ra một khách hàng.
+
+65
+00:05:06,400 --> 00:05:09,490
+Sau đó, chúng ta cần thêm địa chỉ email từ.
+
+66
+00:05:10,150 --> 00:05:15,430
+Vì vậy, chúng tôi sẽ nói biến từ bằng với địa chỉ email mới.
+
+67
+00:05:15,430 --> 00:05:21,310
+Và địa chỉ email đó bạn có thể thấy nó nằm bên trong SendGrid dot helpers dot mail.
+
+68
+00:05:21,640 --> 00:05:29,740
+Và ở đó, chúng tôi sẽ viết email mà tôi đã sử dụng để xác minh danh tính người gửi duy nhất, đó là lời chào tại thành
+
+69
+00:05:29,740 --> 00:05:32,410
+thạo dotnet. com.
+
+70
+00:05:33,320 --> 00:05:36,980
+Tiếp theo, chúng ta có thể đặt tiêu đề ở đây như Bulky Bulk.
+
+71
+00:05:37,690 --> 00:05:40,030
+Và điều đó có vẻ tốt cho email.
+
+72
+00:05:41,410 --> 00:05:44,650
+Sau đó chúng ta muốn gửi email đến email nào?
+
+73
+00:05:44,920 --> 00:05:52,420
+Vì vậy, hai sẽ là địa chỉ email mới và chúng tôi nhận được trong tham số của phương thức ngay tại đây.
+
+74
+00:05:52,810 --> 00:05:55,600
+Cuối cùng, chúng tôi có thông điệp chính nó.
+
+75
+00:05:55,780 --> 00:06:00,040
+Tin nhắn bằng dấu chấm của người trợ giúp thư.
+
+76
+00:06:00,070 --> 00:06:03,100
+Có một phương pháp tạo email đơn.
+
+77
+00:06:03,340 --> 00:06:09,940
+Bây giờ, trước đây trong phiên bản SendGrid cũ hơn, nó đã khác, nhưng họ đã đơn giản hóa nó bằng
+
+78
+00:06:09,940 --> 00:06:11,510
+cách tạo một email.
+
+79
+00:06:11,530 --> 00:06:15,880
+Nếu bạn có một mẫu, bạn có thể sử dụng tạo email mẫu đơn.
+
+80
+00:06:16,300 --> 00:06:22,690
+Chúng tôi có một email duy nhất, chúng tôi có thể thêm email đó và chúng tôi có tham số đơn giản từ email.
+
+81
+00:06:22,690 --> 00:06:24,970
+Chúng tôi có điều đó trong từ hai.
+
+82
+00:06:24,970 --> 00:06:27,700
+Email nằm trong hai chủ đề.
+
+83
+00:06:27,700 --> 00:06:36,340
+Chúng tôi nhận được điều đó trong tham số và sau đó chúng tôi có thể cung cấp nội dung văn bản thuần túy hoặc chuỗi HTML, nội dung văn bản
+
+84
+00:06:36,340 --> 00:06:37,120
+thuần túy.
+
+85
+00:06:37,150 --> 00:06:38,890
+Hãy để tôi giữ nó trống rỗng.
+
+86
+00:06:38,890 --> 00:06:47,390
+Nhưng cuối cùng, chúng tôi có một số nội dung HTML mà chúng tôi sẽ nhận được trong tham số, đó là thông báo HTML.
+
+87
+00:06:47,890 --> 00:06:51,700
+Vì vậy, với điều đó, chúng tôi đã soạn thảo thông điệp mà chúng tôi cần gửi.
+
+88
+00:06:52,150 --> 00:07:00,340
+Cuối cùng, trên máy khách, chúng tôi sẽ gọi gửi email không đồng bộ và chúng tôi sẽ chuyển tin nhắn của mình và điều đó cuối
+
+89
+00:07:00,370 --> 00:07:01,720
+cùng sẽ gửi email.
+
+90
+00:07:02,370 --> 00:07:06,880
+Vì vậy, bạn có thể thấy việc triển khai trình gửi email dễ dàng như thế nào.
+
+91
+00:07:06,900 --> 00:07:10,980
+Nó đã thêm khoảng năm dòng mã và đó là về nó.
+
+92
+00:07:11,670 --> 00:07:17,280
+Đó là cách triển khai tiếng Phạn dễ dàng khi nói đến lõi Dotnet.
+
+93
+00:07:17,790 --> 00:07:20,760
+Hãy để tôi kiểm tra điều đó trong video tiếp theo.
+

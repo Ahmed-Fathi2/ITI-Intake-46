@@ -1,0 +1,164 @@
+1
+00:00:01,859 --> 00:00:07,680
+Hãy để tôi chạy ứng dụng ở đây và để tôi điều hướng đến giỏ hàng.
+
+2
+00:00:07,830 --> 00:00:09,870
+Một khi đã tải.
+
+3
+00:00:10,260 --> 00:00:11,280
+Hoàn hảo.
+
+4
+00:00:11,460 --> 00:00:18,180
+Bây giờ, khi chúng tôi nhấn vào trang tóm tắt ở đây, những gì chúng tôi thấy ở phía bên trái về cơ bản là tiêu
+
+5
+00:00:18,180 --> 00:00:25,800
+đề đơn hàng và ở phía bên phải mà chúng tôi thấy có thể là chi tiết đơn hàng hoặc cũng có thể là thông tin về giỏ hàng.
+
+6
+00:00:26,070 --> 00:00:33,120
+Nếu chúng ta phải suy nghĩ về một mô hình chế độ xem cho chế độ xem cụ thể này, chúng tôi có tiêu đề đơn hàng tại đây và ngay tại
+
+7
+00:00:33,120 --> 00:00:37,710
+đây, chúng tôi sẽ nhận được tất cả các chi tiết sản phẩm bên trong giỏ hàng.
+
+8
+00:00:38,460 --> 00:00:46,730
+Nếu tôi quay lại ứng dụng và nơi chúng tôi có mô hình chế độ xem giỏ hàng, thì nó ở đâu trong
+
+9
+00:00:46,740 --> 00:00:48,240
+các mô hình.
+
+10
+00:00:49,540 --> 00:00:50,560
+Bên trong đây.
+
+11
+00:00:50,560 --> 00:00:54,190
+Chúng tôi đã có tổng số đơn đặt hàng và danh sách giỏ hàng.
+
+12
+00:00:54,220 --> 00:01:01,510
+Ở đó, chúng ta có thể thêm một thuộc tính nữa, đó là tiêu đề đơn hàng và có thể hoạt động như một ViewModel.
+
+13
+00:01:02,630 --> 00:01:03,590
+Rất hoàn hảo.
+
+14
+00:01:03,590 --> 00:01:05,450
+Chúng tôi có tiêu đề đặt hàng ở đây.
+
+15
+00:01:05,720 --> 00:01:10,850
+Bây giờ nếu bạn kiểm tra tiêu đề đơn đặt hàng, chúng tôi có tổng số một đơn đặt hàng tài sản.
+
+16
+00:01:11,150 --> 00:01:18,470
+Vì vậy, thay vì có tổng đơn hàng ở đây và bên trong tiêu đề đơn hàng, chúng ta có thể sử dụng tổng đơn hàng bên trong
+
+17
+00:01:18,470 --> 00:01:22,040
+tiêu đề đơn hàng và chúng ta có thể xóa cái này.
+
+18
+00:01:22,670 --> 00:01:26,780
+Khi chúng tôi loại bỏ điều đó, mọi thứ sẽ bị hỏng trong trang web của chúng tôi.
+
+19
+00:01:26,810 --> 00:01:29,000
+Hãy để tôi xây dựng và thể hiện điều đó.
+
+20
+00:01:30,360 --> 00:01:31,800
+Xây dựng thất bại ở đây.
+
+21
+00:01:31,800 --> 00:01:39,780
+Và nếu chúng tôi quay lại nơi chúng tôi đang truy cập vào tổng số đơn đặt hàng bây giờ, chúng tôi sẽ phải truy cập tổng số đơn đặt hàng
+
+22
+00:01:39,780 --> 00:01:41,970
+bên trong tiêu đề dấu chấm đó.
+
+23
+00:01:43,090 --> 00:01:45,990
+Chúng tôi cũng sẽ phải sửa đổi điều đó trong chế độ xem.
+
+24
+00:01:46,000 --> 00:01:48,310
+Vì vậy, nhấp chuột phải vào xem.
+
+25
+00:01:48,340 --> 00:01:55,810
+Chúng tôi đang hiển thị tổng số đơn đặt hàng ở đây, vì vậy chúng tôi sẽ điều hướng đến tổng số đơn đặt hàng có dấu chấm ở tiêu đề đơn hàng.
+
+26
+00:01:57,200 --> 00:01:58,280
+Với điều đó tại chỗ.
+
+27
+00:01:58,280 --> 00:02:03,290
+Nếu tôi chạy ứng dụng, giỏ hàng sẽ hoạt động giống hệt nhau.
+
+28
+00:02:03,290 --> 00:02:08,539
+Nhưng lần này nó sẽ sử dụng mô hình xem với tiêu đề đơn hàng.
+
+29
+00:02:08,990 --> 00:02:14,570
+Và chúng tôi có một ngoại lệ vì tôi tin rằng tiêu đề đơn đặt hàng ở đây là rỗng.
+
+30
+00:02:14,720 --> 00:02:22,400
+Vì vậy, khi chúng tôi có mô hình xem giỏ hàng, chúng tôi có thể nói tiêu đề đơn hàng bằng mới và điều đó sẽ khắc phục
+
+31
+00:02:22,400 --> 00:02:23,360
+điều đó.
+
+32
+00:02:23,390 --> 00:02:26,060
+Hãy để tôi chạy ứng dụng một lần nữa.
+
+33
+00:02:27,430 --> 00:02:31,090
+Chúng tôi đi đến giỏ hàng của chúng tôi ở đây và hoàn hảo.
+
+34
+00:02:31,090 --> 00:02:32,410
+Đó là làm việc.
+
+35
+00:02:33,270 --> 00:02:36,630
+Hãy để tôi thêm một mục nữa vào giỏ hàng ở đây.
+
+36
+00:02:37,730 --> 00:02:40,100
+Và chúng tôi có hai mục.
+
+37
+00:02:40,640 --> 00:02:41,430
+Hoàn hảo.
+
+38
+00:02:41,450 --> 00:02:42,470
+Có vẻ tốt.
+
+39
+00:02:43,170 --> 00:02:49,710
+Bây giờ, khi chúng tôi nhấp vào tóm tắt ở đây, mô hình cho trang này cũng sẽ là mô hình xem
+
+40
+00:02:49,740 --> 00:02:53,700
+giỏ hàng và chúng tôi sẽ phải điền chi tiết thẻ.
+
+41
+00:02:54,430 --> 00:02:57,190
+Hãy để tôi làm điều đó trong video tiếp theo.
+

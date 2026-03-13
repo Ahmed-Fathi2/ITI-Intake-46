@@ -1,0 +1,260 @@
+1
+00:00:01,670 --> 00:00:06,380
+Now I want to cover a main file, which is Program.cs.
+
+2
+00:00:06,710 --> 00:00:11,420
+In the older versions of .net Core, we used to have two files.
+
+3
+00:00:11,510 --> 00:00:15,710
+We had Program.cs and we had Startup.cs.
+
+4
+00:00:16,100 --> 00:00:22,970
+But with the newer version, the .net team has combined both of those files in one file, which is
+
+5
+00:00:22,970 --> 00:00:24,830
+the Program.cs file.
+
+6
+00:00:25,620 --> 00:00:27,690
+Now, here, let me zoom out.
+
+7
+00:00:27,690 --> 00:00:33,900
+And when we have to configure a net application, there are two things that you should remember.
+
+8
+00:00:34,140 --> 00:00:41,130
+First, we have to add some services to our container, and next we have to configure the request pipeline.
+
+9
+00:00:41,830 --> 00:00:43,670
+In the program.cs.
+
+10
+00:00:43,720 --> 00:00:46,630
+Those are the two things that are being handled.
+
+11
+00:00:47,390 --> 00:00:47,750
+First.
+
+12
+00:00:47,750 --> 00:00:51,860
+You can see there is builder dot web application that creates a builder.
+
+13
+00:00:51,890 --> 00:00:55,310
+On that builder, we are adding some services.
+
+14
+00:00:55,670 --> 00:01:03,980
+Right now we are using MVC for our architecture and that is why on builder.services it has added something
+
+15
+00:01:03,980 --> 00:01:06,440
+called as ADD controllers with views.
+
+16
+00:01:06,800 --> 00:01:13,190
+That way it knows that, okay, our application will be using controllers and those are already defined
+
+17
+00:01:13,190 --> 00:01:17,480
+in the .net project, so I know how to handle that service.
+
+18
+00:01:18,410 --> 00:01:24,710
+In future we will be adding many more services inside Program.cs file.
+
+19
+00:01:25,070 --> 00:01:31,940
+Like if we have to inject something using dependency injection, which is a very critical aspect in
+
+20
+00:01:31,940 --> 00:01:32,960
+.net core.
+
+21
+00:01:32,990 --> 00:01:38,000
+We will inject all of them inside the services right here.
+
+22
+00:01:39,020 --> 00:01:43,610
+And the next thing that we have is we have to configure the request pipeline.
+
+23
+00:01:44,390 --> 00:01:50,510
+Pipeline basically means that when a request comes to an application, how do you want to process that?
+
+24
+00:01:50,960 --> 00:01:57,800
+Now, one thing that you see on line nine here is we have app.environment.is development.
+
+25
+00:01:58,010 --> 00:02:02,510
+This is the same environment variable that we saw in launch settings.
+
+26
+00:02:02,510 --> 00:02:10,990
+Dot JSON is development is a built in helper and you can see we also have is production staging.
+
+27
+00:02:11,000 --> 00:02:17,870
+But if you have some custom environment name you can use is environment and pass it there as well.
+
+28
+00:02:18,470 --> 00:02:25,310
+That's too technical for now, but I just wanted to give you some overview on how the environment variables
+
+29
+00:02:25,310 --> 00:02:26,390
+are being used.
+
+30
+00:02:26,750 --> 00:02:33,380
+Here we are saying that if the environment is not development, then we want to use an exception handler
+
+31
+00:02:33,380 --> 00:02:36,950
+and we want to redirect to home error page.
+
+32
+00:02:37,310 --> 00:02:41,380
+But if it is development, then we want to see that exception.
+
+33
+00:02:41,390 --> 00:02:44,210
+That is why we have this if condition.
+
+34
+00:02:45,540 --> 00:02:52,500
+After that, in our pipeline we have added https, redirect and app.use use static files.
+
+35
+00:02:52,740 --> 00:02:59,760
+When we add the use static files, it will configure the www route path and all the static files in
+
+36
+00:02:59,760 --> 00:03:03,060
+there will be accessible in our application.
+
+37
+00:03:03,950 --> 00:03:09,830
+After that, we are adding routing to the request pipeline and we have authorization.
+
+38
+00:03:10,190 --> 00:03:12,860
+Now, ignore this authorization right now.
+
+39
+00:03:12,890 --> 00:03:17,960
+We will cover that when we have authentication and authorization in our project.
+
+40
+00:03:18,230 --> 00:03:24,020
+But by default in the request pipeline, just have that authorization is added.
+
+41
+00:03:24,710 --> 00:03:27,260
+If you even forget that, That's okay.
+
+42
+00:03:27,650 --> 00:03:30,290
+Next, we have something that is important.
+
+43
+00:03:30,560 --> 00:03:35,660
+Now, when we have an application, we are telling it how the routing should work.
+
+44
+00:03:36,020 --> 00:03:39,740
+And for that we have app dot map controller route.
+
+45
+00:03:39,860 --> 00:03:46,850
+It basically has a default pattern that if nothing is defined in the route, you should go to something
+
+46
+00:03:46,850 --> 00:03:48,720
+called as a home controller.
+
+47
+00:03:48,740 --> 00:03:55,190
+Inside there you should go to index action and ID here can be defined or not.
+
+48
+00:03:55,580 --> 00:04:01,670
+A question mark in .net basically means that ID can be defined or it can be null.
+
+49
+00:04:02,300 --> 00:04:06,410
+So we are defining the default route that it should follow.
+
+50
+00:04:07,090 --> 00:04:12,070
+And finally we have app .run that will basically run the project.
+
+51
+00:04:13,030 --> 00:04:16,870
+Now, it might be confusing on what is going on here.
+
+52
+00:04:16,870 --> 00:04:19,540
+Why do I need Program.cs file?
+
+53
+00:04:19,540 --> 00:04:20,589
+What is all this?
+
+54
+00:04:20,589 --> 00:04:22,440
+Middleware pipeline?
+
+55
+00:04:22,450 --> 00:04:24,520
+Very strange words.
+
+56
+00:04:24,760 --> 00:04:31,000
+Do not worry, when we progress with the course, everything will start making much sense.
+
+57
+00:04:31,580 --> 00:04:38,840
+The reason I spent five minutes on this file right now is you have a rough idea that there is one file
+
+58
+00:04:38,840 --> 00:04:45,410
+where if I have to add a service to the container or I have to configure the middleware, I have to
+
+59
+00:04:45,410 --> 00:04:47,750
+go to program.cs file.
+
+60
+00:04:48,050 --> 00:04:54,620
+That is all that I want you to digest from this five minutes and have a rough idea of what I talked
+
+61
+00:04:54,620 --> 00:04:55,280
+about.
+
+62
+00:04:55,310 --> 00:04:58,410
+If nothing here makes sense, that's okay.
+
+63
+00:04:58,430 --> 00:05:03,070
+You should only remember that when you have to configure something in the pipeline.
+
+64
+00:05:03,080 --> 00:05:08,870
+Program.cs is the place you have to go with that understanding.
+
+65
+00:05:08,870 --> 00:05:11,810
+Let me continue from the next video.
+

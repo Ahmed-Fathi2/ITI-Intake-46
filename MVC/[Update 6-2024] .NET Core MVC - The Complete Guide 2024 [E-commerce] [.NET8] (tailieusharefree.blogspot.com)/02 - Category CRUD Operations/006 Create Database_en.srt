@@ -1,0 +1,232 @@
+1
+00:00:01,880 --> 00:00:08,480
+Now that we have application DB context that is being configured in our project, how do we actually
+
+2
+00:00:08,480 --> 00:00:09,950
+create a database?
+
+3
+00:00:10,370 --> 00:00:16,219
+And I have said before, all the setup that is needed for entity framework core is complete.
+
+4
+00:00:16,490 --> 00:00:18,770
+So basically it was not that much.
+
+5
+00:00:18,800 --> 00:00:26,060
+If you see, we had to add couple of lines in Program.cs and we basically had to create a class file
+
+6
+00:00:26,060 --> 00:00:31,820
+that will implement the default DB context that comes in entity framework core.
+
+7
+00:00:32,119 --> 00:00:38,930
+That is all that we have to do and entity framework code is configured and ready to be consumed.
+
+8
+00:00:39,380 --> 00:00:41,390
+But how will we use that?
+
+9
+00:00:41,900 --> 00:00:47,750
+First thing that we will do is we will actually create a database based on the connection string.
+
+10
+00:00:47,780 --> 00:00:51,560
+I want to create a database of name Bulky.
+
+11
+00:00:53,020 --> 00:01:00,610
+Let me switch back to SQL Server here and connect to my server, which is a .here, and examine the database.
+
+12
+00:01:00,640 --> 00:01:02,800
+We do not have it right here.
+
+13
+00:01:03,600 --> 00:01:09,640
+Let me go back to Visual Studio and we will go to Tools NuGet Package Manager.
+
+14
+00:01:09,660 --> 00:01:12,120
+We have package manager console.
+
+15
+00:01:13,190 --> 00:01:13,830
+Right here.
+
+16
+00:01:13,830 --> 00:01:17,820
+We have to write a few commands to work with entity framework core.
+
+17
+00:01:17,820 --> 00:01:22,620
+And because of that, if you remember, we installed a NuGet package as well.
+
+18
+00:01:23,190 --> 00:01:30,090
+Now when we change something like if we add a model and if we want to create a table of that model,
+
+19
+00:01:30,090 --> 00:01:33,540
+we have to do something called as add migration.
+
+20
+00:01:33,930 --> 00:01:36,900
+But right now we do not want to do anything.
+
+21
+00:01:36,900 --> 00:01:40,440
+We want to create the simple database that we have.
+
+22
+00:01:41,200 --> 00:01:48,040
+And for that, all we have to do is write the command update database and press enter.
+
+23
+00:01:48,940 --> 00:01:53,800
+When we press enter, you will notice we run into an error message.
+
+24
+00:01:54,010 --> 00:01:55,220
+And perfect.
+
+25
+00:01:55,240 --> 00:01:59,320
+It says the connection string property has not been initialized.
+
+26
+00:01:59,410 --> 00:02:05,780
+And that is correct because in Program.cs we have default connection one.
+
+27
+00:02:05,800 --> 00:02:08,080
+It should be default connection.
+
+28
+00:02:08,139 --> 00:02:11,830
+That is what we have in Appsettings.json.
+
+29
+00:02:13,100 --> 00:02:21,080
+So with that configured, if I open package manager console and run that same command once again, it
+
+30
+00:02:21,080 --> 00:02:23,480
+will display another error message.
+
+31
+00:02:24,230 --> 00:02:25,160
+And perfect.
+
+32
+00:02:25,160 --> 00:02:29,330
+This time it says keyword not supported, which is server.
+
+33
+00:02:29,870 --> 00:02:33,980
+I have introduced an error message in connection string as well.
+
+34
+00:02:34,010 --> 00:02:41,030
+That way if something does not work, you know that either it is not able to read the connection or
+
+35
+00:02:41,030 --> 00:02:44,630
+something in connection string is not valid.
+
+36
+00:02:45,450 --> 00:02:47,050
+Rather than colon here.
+
+37
+00:02:47,070 --> 00:02:55,650
+This will be equal to if you save that and then if you run it once again now, it will create the database
+
+38
+00:02:55,650 --> 00:02:56,910
+successfully.
+
+39
+00:02:57,720 --> 00:02:58,380
+Perfect.
+
+40
+00:02:58,380 --> 00:03:03,350
+You can see down here and it says something that no migrations were applied.
+
+41
+00:03:03,360 --> 00:03:05,940
+Database is already up to date.
+
+42
+00:03:06,210 --> 00:03:08,220
+What does it mean by that?
+
+43
+00:03:08,700 --> 00:03:10,080
+Do not worry.
+
+44
+00:03:10,290 --> 00:03:14,850
+Let me go back to SQL Server and refresh the database.
+
+45
+00:03:15,000 --> 00:03:19,950
+We have a new database with the name of bulky and inside tables.
+
+46
+00:03:19,950 --> 00:03:22,110
+We will have one table.
+
+47
+00:03:22,710 --> 00:03:27,240
+That table is DBO.EFMigrations History.
+
+48
+00:03:27,850 --> 00:03:28,270
+Now.
+
+49
+00:03:28,270 --> 00:03:30,010
+What is migration history?
+
+50
+00:03:30,040 --> 00:03:31,570
+What is migration?
+
+51
+00:03:31,600 --> 00:03:32,650
+Do not worry.
+
+52
+00:03:32,680 --> 00:03:40,270
+Right now for this video, I want you to remember what we did based on the connection string that we
+
+53
+00:03:40,270 --> 00:03:40,900
+have.
+
+54
+00:03:40,930 --> 00:03:45,460
+We used a command update database to create a database.
+
+55
+00:03:45,550 --> 00:03:47,710
+That is all that we did right now.
+
+56
+00:03:48,340 --> 00:03:55,660
+Now, the next task that we want to do is if you examine Solution Explorer, we have the category model.
+
+57
+00:03:55,990 --> 00:04:02,530
+I want to create a table for category, and that table will have these three columns.
+
+58
+00:04:03,410 --> 00:04:06,770
+Let me show you how to do that in the next video.
+

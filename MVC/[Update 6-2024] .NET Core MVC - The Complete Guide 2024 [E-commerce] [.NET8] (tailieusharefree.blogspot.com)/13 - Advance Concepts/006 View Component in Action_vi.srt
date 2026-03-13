@@ -1,0 +1,196 @@
+1
+00:00:01,920 --> 00:00:08,189
+Chúng tôi đã tạo thành phần chế độ xem, nhưng chúng tôi phải tạo chế độ xem cho thành phần chế độ xem của mình.
+
+2
+00:00:08,520 --> 00:00:09,660
+Bây giờ quan điểm đó.
+
+3
+00:00:09,690 --> 00:00:12,120
+Bạn không thể tạo bất cứ nơi nào bạn thích.
+
+4
+00:00:12,150 --> 00:00:18,270
+Có một định dạng nhất định mà bạn phải tuân theo và định dạng đó sẽ nằm trong thư mục dùng chung.
+
+5
+00:00:18,630 --> 00:00:25,710
+Vì vậy, trong thư mục dùng chung, chúng ta sẽ phải tạo một thư mục mới với tên của các thành phần.
+
+6
+00:00:25,710 --> 00:00:33,450
+Và trong thư mục đó, chúng ta sẽ phải tạo một thư mục khác có tên của thành phần chế độ xem của chúng
+
+7
+00:00:33,450 --> 00:00:35,520
+ta, đó là Giỏ hàng.
+
+8
+00:00:35,970 --> 00:00:38,190
+Tên phải khớp chính xác.
+
+9
+00:00:38,860 --> 00:00:43,720
+Trong thư mục giỏ hàng đó, chúng tôi sẽ tạo một chế độ xem mới.
+
+10
+00:00:43,840 --> 00:00:50,410
+Nó sẽ là một khung nhìn trống với tên của dấu chấm CSS mặc định, HTML.
+
+11
+00:00:50,890 --> 00:00:55,270
+Về cơ bản, đây sẽ là chế độ xem cho thành phần chế độ xem của chúng ta.
+
+12
+00:00:55,720 --> 00:00:59,500
+Bây giờ bạn có thể thấy khi chúng tôi quay trở lại, nó là một số nguyên.
+
+13
+00:00:59,500 --> 00:01:03,460
+Vì vậy, ở đây mô hình sẽ là một số nguyên.
+
+14
+00:01:03,580 --> 00:01:06,490
+Và sau đó những gì chúng ta muốn hiển thị ở đây?
+
+15
+00:01:06,520 --> 00:01:14,530
+Chà, nếu chúng ta chuyển đến bố cục được gạch dưới nơi chúng ta có giỏ hàng, chúng ta muốn biểu tượng đó ở đó và tôi
+
+16
+00:01:14,530 --> 00:01:17,400
+muốn hiển thị số lượng ngay tại đây.
+
+17
+00:01:17,410 --> 00:01:19,510
+Vì vậy, đó sẽ là mô hình.
+
+18
+00:01:20,730 --> 00:01:24,090
+Điều đó có vẻ tốt cho chế độ xem của thành phần xem.
+
+19
+00:01:24,570 --> 00:01:31,620
+Bây giờ, thành phần chế độ xem giỏ hàng này, chúng tôi muốn thêm thành phần đó vào bố cục được gạch dưới ngay tại đây.
+
+20
+00:01:31,950 --> 00:01:36,360
+Để đơn giản, chúng ta không cần điều kiện if other nữa.
+
+21
+00:01:36,360 --> 00:01:44,280
+Và bên trong thẻ neo ngay tại đây, chúng tôi sẽ nói đang chờ và chúng tôi muốn thêm thành phần, vì vậy
+
+22
+00:01:44,280 --> 00:01:53,130
+chúng tôi có dấu chấm gọi thành phần không đồng bộ và ở đó chúng tôi phải viết tên thành phần, đó là giỏ hàng.
+
+23
+00:01:53,610 --> 00:01:58,380
+Và cùng với đó, thành phần xem sẽ tự động được đưa vào.
+
+24
+00:01:59,370 --> 00:02:03,660
+Hãy để tôi chạy ứng dụng và xem mọi thứ có hoạt động không.
+
+25
+00:02:04,320 --> 00:02:10,860
+Nếu bạn nhớ bây giờ trên trang chủ, chúng tôi không còn đếm để truy xuất phiên của mình nữa.
+
+26
+00:02:11,700 --> 00:02:13,500
+Chúng tôi có một lỗi ở đây.
+
+27
+00:02:13,500 --> 00:02:14,990
+Và để tôi xem.
+
+28
+00:02:15,000 --> 00:02:17,580
+Nó không thể tìm thấy chế độ xem.
+
+29
+00:02:17,610 --> 00:02:19,920
+Nó nên ở trong các thành phần.
+
+30
+00:02:20,830 --> 00:02:21,390
+Rất tiếc.
+
+31
+00:02:21,390 --> 00:02:25,290
+Chúng tôi mắc lỗi chính tả và điều đó sẽ không hiệu quả.
+
+32
+00:02:25,680 --> 00:02:28,300
+Nó phải khớp chính xác với điều đó.
+
+33
+00:02:28,320 --> 00:02:31,050
+Vì vậy, đây sẽ là các thành phần.
+
+34
+00:02:32,920 --> 00:02:35,680
+Với điều đó, hãy để tôi bắt đầu lại ở đây.
+
+35
+00:02:39,780 --> 00:02:40,980
+Và hoàn hảo.
+
+36
+00:02:40,980 --> 00:02:41,980
+Điều đó hoạt động.
+
+37
+00:02:42,000 --> 00:02:45,720
+Tôi có thêm một dấu chấm phẩy không cần thiết ở đây.
+
+38
+00:02:45,720 --> 00:02:47,370
+Hãy để tôi loại bỏ cái đó.
+
+39
+00:02:48,990 --> 00:02:55,590
+Tôi có thêm một dấu chấm phẩy ở đây không cần thiết và hoàn hảo.
+
+40
+00:02:55,740 --> 00:03:01,830
+Nếu bạn vẫn thấy thông báo lỗi mà bạn đã thấy trước đó, hãy đảm bảo làm sạch giải pháp và xây dựng
+
+41
+00:03:01,830 --> 00:03:03,270
+lại giải pháp đó.
+
+42
+00:03:03,600 --> 00:03:05,970
+Nhưng bây giờ chúng ta không có ở đây.
+
+43
+00:03:06,120 --> 00:03:14,140
+Nếu tôi đăng nhập với tư cách quản trị viên, chúng tôi có hai và nếu tôi đăng xuất, nó sẽ được đặt thành 0.
+
+44
+00:03:14,160 --> 00:03:15,210
+Hoàn hảo.
+
+45
+00:03:15,630 --> 00:03:21,510
+Vì vậy, bạn có thể thấy mọi thứ đang hoạt động như mong đợi với thành phần chế độ xem của chúng tôi.
+
+46
+00:03:21,540 --> 00:03:30,360
+Hãy để tôi đăng nhập với tư cách là một công ty và thêm một số mặt hàng vào giỏ hàng và đảm bảo rằng mọi thứ đều hoạt động.
+
+47
+00:03:34,160 --> 00:03:34,790
+Hoàn hảo.
+
+48
+00:03:34,790 --> 00:03:35,930
+Trông tôt đây.
+
+49
+00:03:36,290 --> 00:03:40,760
+Với điều đó, hãy để tôi tiếp tục từ video tiếp theo.
+

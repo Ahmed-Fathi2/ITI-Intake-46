@@ -1,0 +1,460 @@
+1
+00:00:01,640 --> 00:00:07,730
+Bây giờ, điều tôi muốn làm là nếu tôi đi đến sản phẩm ở đây, hãy để tôi thêm hình ảnh cho tất cả sản phẩm.
+
+2
+00:00:08,060 --> 00:00:11,780
+Giống như kẹo bông gòn, chúng ta có hình ảnh phía trước.
+
+3
+00:00:11,870 --> 00:00:15,440
+Tôi đã thêm nhiều hình ảnh hơn trong tài nguyên dự án.
+
+4
+00:00:15,440 --> 00:00:20,930
+Vì vậy, nếu bạn đến đó trong các hình ảnh, bạn sẽ thấy hai hình ảnh cho kẹo bông.
+
+5
+00:00:21,140 --> 00:00:23,300
+Tôi sẽ thêm cái sau ở đây.
+
+6
+00:00:23,300 --> 00:00:24,530
+Nhấn cập nhật.
+
+7
+00:00:25,640 --> 00:00:26,330
+Hãy để tôi xem.
+
+8
+00:00:26,330 --> 00:00:27,730
+Trông tôt đây.
+
+9
+00:00:27,740 --> 00:00:29,450
+Hãy để tôi quay trở lại đây.
+
+10
+00:00:29,630 --> 00:00:31,400
+Bầu trời tối.
+
+11
+00:00:31,670 --> 00:00:33,680
+Tôi sẽ thêm hình ảnh phía sau.
+
+12
+00:00:33,890 --> 00:00:36,950
+Cập nhật phần thời gian đó.
+
+13
+00:00:38,400 --> 00:00:40,950
+Hãy để tôi chọn giao diện người dùng trở lại đây.
+
+14
+00:00:41,190 --> 00:00:45,150
+Cập nhật điều đó và để tôi đi đến trang chủ.
+
+15
+00:00:45,510 --> 00:00:46,080
+Hoàn hảo.
+
+16
+00:00:46,080 --> 00:00:47,370
+Trông tôt đây.
+
+17
+00:00:48,030 --> 00:00:49,890
+Hãy để tôi đi đến sản phẩm.
+
+18
+00:00:50,160 --> 00:00:52,590
+Tiếp theo, chúng tôi có lá và thắc mắc.
+
+19
+00:00:52,620 --> 00:00:54,060
+Bây giờ, khi bạn chọn.
+
+20
+00:00:54,090 --> 00:00:59,460
+Đảm bảo rằng vào đây bạn sẽ nhìn thấy lá và hình ảnh trước sau như một.
+
+21
+00:00:59,880 --> 00:01:04,530
+Hình ảnh cụ thể đó sẽ được hiển thị trước hình ảnh khác.
+
+22
+00:01:04,830 --> 00:01:06,300
+Cái nào đây?
+
+23
+00:01:06,300 --> 00:01:07,980
+Đá trong đại dương.
+
+24
+00:01:09,090 --> 00:01:10,950
+Hãy để tôi cập nhật điều đó.
+
+25
+00:01:10,950 --> 00:01:14,550
+Và cái cuối cùng biến mất trong hoàng hôn.
+
+26
+00:01:15,740 --> 00:01:16,790
+Hoàn hảo.
+
+27
+00:01:17,150 --> 00:01:18,920
+Hãy cập nhật.
+
+28
+00:01:19,540 --> 00:01:21,760
+Và chúng tôi đi đến trang chủ.
+
+29
+00:01:21,790 --> 00:01:22,670
+Tuyệt vời.
+
+30
+00:01:22,720 --> 00:01:24,750
+Vâng, lá và tự hỏi.
+
+31
+00:01:24,760 --> 00:01:27,050
+Chúng tôi có hình ảnh trở lại đầu tiên.
+
+32
+00:01:27,070 --> 00:01:29,560
+Vì vậy, chúng tôi sẽ đi đến sản phẩm ở đây.
+
+33
+00:01:30,010 --> 00:01:34,480
+Xóa cái này và tải cái sau lên lại.
+
+34
+00:01:37,720 --> 00:01:38,270
+Tuyệt vời.
+
+35
+00:01:38,290 --> 00:01:39,670
+Điều đó sẽ sửa chữa nó.
+
+36
+00:01:40,660 --> 00:01:47,710
+Nếu bạn muốn thực hiện trước một bước này, điều bạn có thể làm là có một trang nơi bạn có thể quản
+
+37
+00:01:47,710 --> 00:01:54,250
+lý tất cả hình ảnh và về cơ bản là đặt thứ tự hoặc đặt hình ảnh chính cần được hiển thị.
+
+38
+00:01:54,580 --> 00:02:01,690
+Bạn có thể tạo một cột mới trong cơ sở dữ liệu cho cột đó và theo dõi cột nào là hình ảnh chính cho sản phẩm.
+
+39
+00:02:02,500 --> 00:02:05,710
+Nhưng chúng ta sẽ không đi sâu vào những phức tạp đó.
+
+40
+00:02:05,860 --> 00:02:08,680
+Những gì chúng ta có ngay bây giờ có vẻ tốt.
+
+41
+00:02:08,770 --> 00:02:12,130
+Những gì tôi muốn làm bây giờ là trên các chi tiết ở đây.
+
+42
+00:02:12,130 --> 00:02:19,090
+Tôi muốn hiển thị cả hình ảnh mà chúng tôi đã thêm, vì vậy chúng tôi sẽ có một băng chuyền ở đây và hiển
+
+43
+00:02:19,090 --> 00:02:21,370
+thị tất cả hình ảnh để bắt đầu.
+
+44
+00:02:21,370 --> 00:02:25,420
+Chúng ta có thể tìm kiếm bootstrap five Carousel.
+
+45
+00:02:27,940 --> 00:02:29,620
+Hãy để tôi cuộn xuống.
+
+46
+00:02:30,790 --> 00:02:32,380
+Cái này có vẻ tốt.
+
+47
+00:02:32,410 --> 00:02:35,260
+Hãy để tôi sao chép div này hoàn toàn.
+
+48
+00:02:35,770 --> 00:02:37,750
+Quay trở lại mã của chúng tôi.
+
+49
+00:02:38,910 --> 00:02:41,130
+Và chúng tôi sẽ đi đến bộ điều khiển nhà.
+
+50
+00:02:41,130 --> 00:02:42,210
+Chúng tôi có các chi tiết.
+
+51
+00:02:42,210 --> 00:02:43,020
+Hoạt động.
+
+52
+00:02:43,020 --> 00:02:44,700
+Chuyển đến chế độ xem đó.
+
+53
+00:02:44,850 --> 00:02:47,400
+Chúng tôi có hình ảnh ngay tại đây.
+
+54
+00:02:47,670 --> 00:02:48,810
+Loại bỏ điều đó.
+
+55
+00:02:48,960 --> 00:02:52,920
+Tạo khoảng trống và để tôi dán mã đó.
+
+56
+00:02:53,740 --> 00:02:54,250
+Đây.
+
+57
+00:02:54,250 --> 00:02:58,340
+Chúng ta sẽ phải sáng tạo để Carousel hoạt động.
+
+58
+00:02:58,360 --> 00:03:06,490
+Bạn có thể thấy chúng tôi phải cung cấp dữ liệu trên một slide và chúng tôi phải cung cấp cho nó số không, một và hai và sau đó là nơi chúng tôi
+
+59
+00:03:06,490 --> 00:03:07,390
+có hình ảnh.
+
+60
+00:03:07,590 --> 00:03:13,030
+Xem ở đây, nếu chỉ số bằng 0, chúng ta phải cho nó một lớp hoạt động.
+
+61
+00:03:13,600 --> 00:03:17,260
+Vì vậy, điều đầu tiên tôi có thể làm là thêm một điều kiện nếu.
+
+62
+00:03:17,290 --> 00:03:25,570
+Nếu hình ảnh sản phẩm chấm của sản phẩm mẫu không phải là null và số chấm của sản phẩm chấm của sản phẩm mẫu
+
+63
+00:03:25,750 --> 00:03:27,370
+là số chấm lớn hơn 0.
+
+64
+00:03:27,400 --> 00:03:29,320
+Sau đó, chúng tôi muốn một băng chuyền.
+
+65
+00:03:29,740 --> 00:03:35,020
+Để tôi cắt băng chuyền này, dán nó vào trong điều kiện if.
+
+66
+00:03:36,010 --> 00:03:41,680
+Sau đó, đối với tất cả hình ảnh sản phẩm, chúng tôi sẽ phải lặp lại trong một vòng lặp ngay tại đây.
+
+67
+00:03:42,460 --> 00:03:46,210
+Vì vậy, chúng tôi sẽ có một cho mỗi biến vòng lặp.
+
+68
+00:03:46,540 --> 00:03:49,690
+Hãy để tôi gọi hình ảnh đó bằng index.
+
+69
+00:03:49,840 --> 00:03:57,800
+Bên trong ta có model dot product dot product image, dot select.
+
+70
+00:03:57,800 --> 00:04:03,110
+Và bây giờ chúng tôi cần phép chiếu vì chúng tôi cũng muốn chỉ mục của hình ảnh.
+
+71
+00:04:03,410 --> 00:04:09,950
+Vì vậy, chúng tôi có thể chiếu bằng cách sử dụng lựa chọn ở đây, điều chúng tôi muốn từ lựa chọn là chính hình ảnh.
+
+72
+00:04:09,980 --> 00:04:17,160
+Trên hết, tôi muốn một cái gì đó giống như một chỉ mục và chúng tôi muốn chuyển đổi nó thành một đối tượng mới.
+
+73
+00:04:17,180 --> 00:04:26,750
+Đối tượng đó sẽ là một đối tượng tùy chỉnh, trong đó đầu tiên sẽ là loại hình ảnh sản phẩm và đó là hình ảnh.
+
+74
+00:04:27,110 --> 00:04:30,270
+Tiếp theo, những gì chúng tôi muốn là chính chỉ mục.
+
+75
+00:04:30,290 --> 00:04:34,010
+Vì vậy, chỉ mục bằng với chỉ mục.
+
+76
+00:04:34,730 --> 00:04:42,620
+Chỉ mục này sẽ tự động cung cấp cho chúng tôi các giá trị không một và hai dựa trên bất kỳ chỉ mục nào mà hình ảnh này
+
+77
+00:04:42,650 --> 00:04:45,770
+có trong hình ảnh sản phẩm ngay tại đây.
+
+78
+00:04:46,900 --> 00:04:49,360
+Vì vậy, hãy để tôi đi bên phải ở đây.
+
+79
+00:04:49,930 --> 00:04:52,990
+Tôi phải thêm một dấu ngoặc đóng ở đây.
+
+80
+00:04:53,410 --> 00:04:54,940
+Và hoàn hảo.
+
+81
+00:04:54,940 --> 00:04:56,890
+Tôi tin rằng có vẻ tốt.
+
+82
+00:04:56,920 --> 00:05:01,390
+Hãy để tôi chia nó ra thành nhiều dòng khác nhau để dễ đọc hơn.
+
+83
+00:05:02,350 --> 00:05:03,610
+Và hoàn hảo.
+
+84
+00:05:05,170 --> 00:05:06,060
+Bên trong đó.
+
+85
+00:05:06,070 --> 00:05:07,990
+Hãy để tôi cắt nút ở đây.
+
+86
+00:05:07,990 --> 00:05:09,730
+Dán nó một lần.
+
+87
+00:05:10,030 --> 00:05:11,560
+Di chuyển sang bên phải.
+
+88
+00:05:11,590 --> 00:05:18,970
+Chúng tôi muốn chỉ mục ở đây, vì vậy tôi sẽ thêm hình ảnh thêm tỷ lệ với chỉ mục dấu chấm chỉ mục.
+
+89
+00:05:19,630 --> 00:05:26,080
+Bây giờ, điều tiếp theo mà bạn nhận thấy ở đây là có một loại hoạt động và chỉ áp dụng nếu chỉ số
+
+90
+00:05:26,080 --> 00:05:26,980
+bằng không.
+
+91
+00:05:27,220 --> 00:05:31,480
+Bạn không thấy điều đó trên chỉ mục một và hai ngay tại đây.
+
+92
+00:05:32,100 --> 00:05:36,390
+Vì vậy, chúng ta phải năng động hơn trong cách phân công lớp học ở đây.
+
+93
+00:05:36,750 --> 00:05:41,310
+Chúng tôi sẽ nói tại hình ảnh với chỉ mục dấu chấm chỉ số.
+
+94
+00:05:41,550 --> 00:05:45,540
+Nếu đó là số không, thì chúng tôi muốn có một lớp đang hoạt động.
+
+95
+00:05:46,710 --> 00:05:47,040
+Khác.
+
+96
+00:05:47,070 --> 00:05:48,750
+Chúng tôi không muốn bất kỳ lớp học nào.
+
+97
+00:05:50,070 --> 00:05:52,110
+Điều đó có vẻ tốt cho nút.
+
+98
+00:05:52,650 --> 00:05:56,970
+Chúng tôi cũng phải làm điều gì đó tương tự với mặt hàng băng chuyền.
+
+99
+00:05:58,630 --> 00:06:00,420
+Hãy để tôi loại bỏ hai div này.
+
+100
+00:06:00,430 --> 00:06:02,860
+Chúng tôi cần một cho mỗi ngay tại đây.
+
+101
+00:06:03,100 --> 00:06:04,270
+Sao chép cái này.
+
+102
+00:06:04,300 --> 00:06:05,770
+Dán nó ở đây.
+
+103
+00:06:05,920 --> 00:06:11,320
+Thêm khung đóng hoạt động lại sẽ dựa trên chỉ mục.
+
+104
+00:06:11,710 --> 00:06:19,150
+Vì vậy, hãy để tôi cắt phần này ở đây và chúng tôi sẽ nói thêm hình ảnh với chỉ mục dấu chấm chỉ mục.
+
+105
+00:06:19,420 --> 00:06:25,840
+Nếu đó là số không, thì chúng tôi muốn lớp vật phẩm băng chuyền và hoạt động khác.
+
+106
+00:06:25,840 --> 00:06:29,080
+Chúng tôi chỉ muốn loại mặt hàng băng chuyền.
+
+107
+00:06:30,010 --> 00:06:37,810
+Cuối cùng, chúng ta cần SRC ở đây sẽ nằm trong hình ảnh với hình ảnh sản phẩm có dấu chấm chỉ mục.
+
+108
+00:06:37,810 --> 00:06:41,110
+Bên trong đó, chúng tôi có URL hình ảnh.
+
+109
+00:06:42,220 --> 00:06:46,570
+Bây giờ nếu bạn muốn đơn giản, chúng ta có thể gọi trực tiếp hình ảnh này.
+
+110
+00:06:46,570 --> 00:06:49,150
+Chúng ta có thể sử dụng bất cứ tên nào chúng ta muốn.
+
+111
+00:06:49,600 --> 00:06:54,130
+Vì vậy, hãy để tôi sửa đổi điều đó và tôi tin rằng điều này có vẻ tốt.
+
+112
+00:06:54,340 --> 00:06:58,970
+Chúng ta sẽ phải lưu và quay lại đây và hoàn thiện.
+
+113
+00:06:59,000 --> 00:07:07,010
+Chúng tôi có một thanh trượt ở đây với băng chuyền và nếu tôi di chuyển về phía trước, tôi có thể thấy hình ảnh trông rất tuyệt.
+
+114
+00:07:07,550 --> 00:07:13,280
+Chúng tôi sẽ có chức năng tương tự cho các sản phẩm khác và hoàn hảo.
+
+115
+00:07:13,400 --> 00:07:20,840
+Cùng với đó, chúng tôi có một băng chuyền đẹp mắt mà chúng tôi đã triển khai để hiển thị tất cả hình ảnh chi tiết về sản phẩm.
+

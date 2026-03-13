@@ -1,0 +1,164 @@
+1
+00:00:00,260 --> 00:00:04,220
+Are you looking for the ultimate course to learn .net core MVC?
+
+2
+00:00:04,730 --> 00:00:07,250
+If so, you are at the right place.
+
+3
+00:00:07,820 --> 00:00:14,150
+My name is Bhrugen and welcome to the Complete Guide to ASP.NET Core MVC Course.
+
+4
+00:00:14,980 --> 00:00:19,750
+This course is all about .net core, starting from Ground zero.
+
+5
+00:00:20,080 --> 00:00:27,190
+We will be building multiple application and we will understand both MVC and Razor pages.
+
+6
+00:00:27,460 --> 00:00:34,720
+Even though this course is focused on MVC, I will show you how to build a small application using razor
+
+7
+00:00:34,720 --> 00:00:42,820
+pages because later when we implement identity, which is provided by Microsoft, that is built using
+
+8
+00:00:42,820 --> 00:00:44,200
+razor pages.
+
+9
+00:00:44,770 --> 00:00:48,670
+So it is good to have a basic idea about them as well.
+
+10
+00:00:49,260 --> 00:00:57,210
+Once we mastered the fundamentals behind MVC and .net core application, then we will build or rather
+
+11
+00:00:57,210 --> 00:01:03,060
+enhance that application to build e-commerce application using MVC.
+
+12
+00:01:03,900 --> 00:01:10,980
+I have been a .net developer for over ten years now and my main focus is to remove the difficulty that
+
+13
+00:01:10,980 --> 00:01:15,660
+I faced when I was learning MVC or even switching to.
+
+14
+00:01:15,900 --> 00:01:16,800
+.Net core.
+
+15
+00:01:17,190 --> 00:01:24,540
+I will have more than ten assignments and my main focus is not to teach you the perfect world scenario.
+
+16
+00:01:24,720 --> 00:01:31,560
+Because of that, I have intentionally introduced bugs and errors while programming, and then I show
+
+17
+00:01:31,560 --> 00:01:35,910
+you the common errors and how to debug and resolve them.
+
+18
+00:01:36,680 --> 00:01:42,710
+That is very critical when you are learning a new programming language, because chances are you will
+
+19
+00:01:42,710 --> 00:01:46,580
+encounter error message when you are programming yourself.
+
+20
+00:01:47,080 --> 00:01:52,780
+now .net is changing and there are updates every year with the new version.
+
+21
+00:01:52,990 --> 00:01:57,370
+Because of that, I will always try to keep the course up to date.
+
+22
+00:01:57,400 --> 00:02:04,000
+That way you do not have to struggle when something does not work because of the version update.
+
+23
+00:02:05,430 --> 00:02:13,080
+This will be a lengthy course with complex functionalities because my main focus is to give you a great
+
+24
+00:02:13,080 --> 00:02:15,930
+exposure to real world project.
+
+25
+00:02:16,260 --> 00:02:23,130
+But do not worry, I will be there to guide you through every complex functionality that we will build.
+
+26
+00:02:23,870 --> 00:02:27,860
+Before we get started, I have one small advice for you.
+
+27
+00:02:27,890 --> 00:02:34,970
+Many times when we are learning a new technology, it feels daunting and you might feel in some videos
+
+28
+00:02:34,970 --> 00:02:37,190
+that this is not making sense.
+
+29
+00:02:38,080 --> 00:02:43,420
+But in case if a video does not make complete sense, follow what I am doing.
+
+30
+00:02:43,420 --> 00:02:48,910
+And I can assure you that in the next few videos, everything will start making sense.
+
+31
+00:02:49,700 --> 00:02:56,360
+When you are learning something new, you might have to write or program that step a few times before
+
+32
+00:02:56,360 --> 00:02:59,120
+the complete logic starts making sense.
+
+33
+00:02:59,540 --> 00:03:04,610
+And I have covered all the steps that are needed for that in this course.
+
+34
+00:03:04,940 --> 00:03:10,130
+So if you ever feel it is too much, take a break and come back next day.
+
+35
+00:03:10,370 --> 00:03:13,310
+Don't try to hurry yourself through the course.
+
+36
+00:03:13,340 --> 00:03:19,490
+Take your time and once you complete the course, I can personally guarantee that you will be proud
+
+37
+00:03:19,490 --> 00:03:24,230
+of the final application that you will build by the end of this course.
+
+38
+00:03:24,500 --> 00:03:31,790
+And along with that, you will also understand all the basic foundations, common errors that are encountered
+
+39
+00:03:31,790 --> 00:03:33,590
+and how to resolve them.
+
+40
+00:03:34,190 --> 00:03:41,510
+I hope you will join me in this exciting journey of learning .net core MVC by building an e-commerce
+
+41
+00:03:41,510 --> 00:03:42,650
+application.
+

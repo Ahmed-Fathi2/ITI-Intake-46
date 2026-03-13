@@ -1,0 +1,112 @@
+1
+00:00:01,890 --> 00:00:04,950
+Cuối cùng, chúng tôi sẽ tiến hành xóa một danh mục.
+
+2
+00:00:05,430 --> 00:00:11,940
+Khi chúng tôi xóa một danh mục, chúng tôi muốn hiển thị mọi thứ chúng tôi thực hiện trong phần chỉnh sửa, nhưng mọi thứ sẽ
+
+3
+00:00:11,940 --> 00:00:12,870
+bị vô hiệu hóa.
+
+4
+00:00:13,480 --> 00:00:19,930
+Vì vậy, hãy để tôi sao chép những gì chúng tôi có để chỉnh sửa phương pháp hành động cho mèo và đăng và dán nó một lần nữa.
+
+5
+00:00:19,930 --> 00:00:23,530
+Ở đây chúng tôi sẽ đổi tên thành xóa.
+
+6
+00:00:24,860 --> 00:00:32,630
+Bây giờ trong bài viết xóa, bạn có thể lấy đối tượng danh mục hoàn chỉnh hoặc bạn chỉ có thể lấy ID mà người
+
+7
+00:00:32,630 --> 00:00:33,770
+dùng muốn xóa.
+
+8
+00:00:34,690 --> 00:00:41,290
+Trong trường hợp đó, chúng ta không thể sử dụng cùng một tên cho phương thức hành động vì khi đó các tham số
+
+9
+00:00:41,290 --> 00:00:43,450
+cũng giống nhau cho get và post.
+
+10
+00:00:43,780 --> 00:00:51,460
+Vì vậy, chúng tôi sẽ phải đổi tên bài đăng này thành xóa bài đăng và chúng tôi phải nói rõ ràng ở đây rằng tên đó là
+
+11
+00:00:51,460 --> 00:00:53,080
+xóa cho điểm cuối này.
+
+12
+00:00:54,510 --> 00:01:00,330
+Bởi vì trong biểu mẫu khi chúng tôi đăng, nó sẽ tìm kiếm cùng một phương thức hành động xóa.
+
+13
+00:01:01,200 --> 00:01:08,730
+Để làm điều đó với bài đăng HTTP, chúng tôi có thể nói rõ ràng rằng tên hành động của điểm cuối này là xóa,
+
+14
+00:01:08,760 --> 00:01:12,510
+mặc dù chúng tôi có một tên khác ngay tại đây.
+
+15
+00:01:13,900 --> 00:01:16,270
+Phương thức hành động get có vẻ tốt.
+
+16
+00:01:16,270 --> 00:01:18,670
+Chúng tôi muốn truy xuất danh mục đó.
+
+17
+00:01:18,670 --> 00:01:21,280
+Nhưng làm cách nào để xóa danh mục đó?
+
+18
+00:01:22,080 --> 00:01:27,870
+Bây giờ khi chúng ta phải xóa, trước tiên chúng ta phải tìm danh mục đó từ cơ sở dữ liệu.
+
+19
+00:01:28,260 --> 00:01:38,310
+Vì vậy, chúng tôi sẽ nói danh mục OBJ bằng db gạch dưới. Thể loại. tìm dựa trên ID và sau đó nếu OBJ là
+
+20
+00:01:38,340 --> 00:01:42,540
+null, chúng tôi sẽ trả về không tìm thấy.
+
+21
+00:01:43,580 --> 00:01:46,610
+Nếu OBJ không phải là null hoặc dấu gạch dưới db.
+
+22
+00:01:46,910 --> 00:01:56,270
+Chúng tôi có các danh mục và ở đó chúng tôi có phương thức loại bỏ mong đợi đối tượng danh mục để chúng tôi có thể chuyển đối tượng mà
+
+23
+00:01:56,270 --> 00:02:00,920
+chúng tôi đã truy xuất từ cơ sở dữ liệu và chuyển đối tượng đó.
+
+24
+00:02:01,830 --> 00:02:07,590
+Cuối cùng, chúng ta sẽ phải lưu các thay đổi và quay lại hành động lập chỉ mục.
+
+25
+00:02:08,259 --> 00:02:09,600
+Và hoàn hảo.
+
+26
+00:02:09,610 --> 00:02:10,870
+Trông tôt đây.
+
+27
+00:02:11,260 --> 00:02:16,390
+Cùng với đó, chúng ta có các phương thức hành động get và post để xóa.
+
+28
+00:02:17,250 --> 00:02:20,190
+Hãy để tôi tiếp tục từ video tiếp theo.
+

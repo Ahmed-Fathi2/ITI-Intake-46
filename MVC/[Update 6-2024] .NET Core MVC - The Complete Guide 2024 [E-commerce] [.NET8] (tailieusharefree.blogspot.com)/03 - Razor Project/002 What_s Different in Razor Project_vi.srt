@@ -1,0 +1,312 @@
+1
+00:00:02,160 --> 00:00:04,530
+Trước bất cứ điều gì khác chúng tôi muốn xem.
+
+2
+00:00:04,530 --> 00:00:08,070
+Một số điều tương tự giữa cả hai dự án là gì?
+
+3
+00:00:08,280 --> 00:00:11,130
+Vì vậy, hãy để tôi mở rộng dự án ở đây.
+
+4
+00:00:11,860 --> 00:00:13,360
+Và hoàn hảo.
+
+5
+00:00:13,390 --> 00:00:17,920
+Bạn sẽ nhận thấy trong dự án Razer, chúng tôi có cài đặt ứng dụng . JSON.
+
+6
+00:00:18,190 --> 00:00:24,340
+Điều này hoàn toàn giống như chúng ta có trong dự án MVC và tất cả các kết nối hoặc cài đặt.
+
+7
+00:00:24,340 --> 00:00:28,420
+Chúng tôi sẽ đặt chúng trong cài đặt ứng dụng. Tệp JSON.
+
+8
+00:00:29,080 --> 00:00:33,310
+Sau đó chương trình. cs cũng hoàn toàn giống nhau.
+
+9
+00:00:33,310 --> 00:00:37,630
+Chà, chức năng giống nhau, nhưng các tệp sẽ khác.
+
+10
+00:00:37,900 --> 00:00:46,810
+Bạn có thể thấy trong MVC, nó đã thêm bộ điều khiển với chế độ xem, nhưng trong các trang dao cạo, nó đã thêm trình tạo. dịch vụ. các trang dao cạo vào thùng chứa.
+
+11
+00:00:46,810 --> 00:00:49,210
+Bằng cách đó, ứng dụng sẽ biết
+
+12
+00:00:49,860 --> 00:00:57,060
+rằng nó sẽ sử dụng các trang dao cạo so với MVC, đó là bộ điều khiển và chế độ xem.
+
+13
+00:00:57,060 --> 00:00:58,110
+Nếu bạn cuộn xuống tuyến đường mặc định.
+
+14
+00:00:59,060 --> 00:01:01,340
+Ngoài ra, chúng tôi đã có bộ điều khiển và hành động trong ứng dụng MVC.
+
+15
+00:01:01,340 --> 00:01:05,810
+Nhưng khi nói đến các trang dao cạo, việc định tuyến rất đơn giản và chúng tôi có các trang dao cạo bản đồ.
+
+16
+00:01:06,420 --> 00:01:13,710
+Bây giờ, cách định tuyến hoạt động trong ứng dụng trang dao cạo
+
+17
+00:01:14,870 --> 00:01:22,250
+là bất kỳ thứ gì bên trong thư mục trang sẽ là tuyến đường.
+
+18
+00:01:22,250 --> 00:01:23,180
+Vì vậy, nếu trong
+
+19
+00:01:23,510 --> 00:01:29,660
+thư mục pages có trang index, bạn gõ trực tiếp index và đó sẽ là trang mặc định.
+
+20
+00:01:29,660 --> 00:01:30,290
+Nếu bạn nhập quyền riêng tư, chúng tôi có trang quyền riêng tư ở đây.
+
+21
+00:01:30,500 --> 00:01:35,240
+Vì vậy, về cơ bản, bất kể cấu trúc thư mục nào trong thư
+
+22
+00:01:35,600 --> 00:01:42,650
+mục pages, đó sẽ là định tuyến chính xác mà chúng tôi sẽ theo dõi trong URL.
+
+23
+00:01:42,650 --> 00:01:45,230
+Và tất nhiên, chúng ta sẽ sớm thấy điều đó trong video sắp tới.
+
+24
+00:01:46,030 --> 00:01:50,380
+Nhưng chúng tôi sẽ quay lại thư mục trang sau giây lát.
+
+25
+00:01:51,210 --> 00:01:54,540
+Khác với Cài đặt ứng dụng và Chương trình. cs, chúng tôi có www Root, cũng giống hệt như ứng dụng MVC.
+
+26
+00:01:54,750 --> 00:02:04,440
+Và sau đó tài sản vẫn giữ nguyên, các phụ thuộc vẫn giữ nguyên.
+
+27
+00:02:05,280 --> 00:02:10,120
+Điều duy nhất khác biệt lớn là chúng tôi không có bộ điều khiển, mô hình hoặc chế độ xem.
+
+28
+00:02:10,139 --> 00:02:15,930
+Chúng tôi chỉ có một thứ, đó là các trang.
+
+29
+00:02:16,290 --> 00:02:19,740
+Và những trang này khác với những gì chúng tôi có cho bộ điều khiển hoặc chế độ xem.
+
+30
+00:02:20,460 --> 00:02:25,650
+Ở đây chúng ta có trang chỉ mục, đó là index. csHTML.
+
+31
+00:02:26,910 --> 00:02:31,180
+Nếu bạn nhấp đúp vào đó,
+
+32
+00:02:31,200 --> 00:02:38,370
+nó vẫn có cú pháp dao cạo đó, nơi bạn có thể sử dụng dấu tại và sử dụng mã C#.
+
+33
+00:02:38,370 --> 00:02:38,900
+Nhưng trên hết, có một thứ gọi là chỉ thị @page.
+
+34
+00:02:38,910 --> 00:02:43,560
+Chỉ thị thêm trang này được sử dụng cho các trang dao cạo.
+
+35
+00:02:44,350 --> 00:02:48,040
+Và nếu bạn mở rộng mũi tên ở đây, chúng ta có tệp . Tập tin CS.
+
+36
+00:02:48,040 --> 00:02:52,840
+Cái này . Tệp CS không phải là mã đằng sau tệp mà chúng tôi có trong tệp . ứng dụng mạng.
+
+37
+00:02:53,260 --> 00:03:00,100
+Nó là một bản viết lại hoàn chỉnh và về cơ bản nó là một mô hình trang cho trang dao cạo râu mà chúng tôi có.
+
+38
+00:03:00,460 --> 00:03:07,510
+Bạn có thể thấy nó mở rộng từ mô hình trang bên trong tệp . gói lõi mạng.
+
+39
+00:03:08,140 --> 00:03:13,750
+Mô hình trang sẽ có tất cả các điểm cuối nhận
+
+40
+00:03:14,780 --> 00:03:21,440
+và đăng mà chúng ta thường có trong bộ điều khiển mà chúng ta đã thấy trong dự án đầu tiên.
+
+41
+00:03:21,440 --> 00:03:23,360
+Vì vậy, bạn có thể thấy trên Cat là trình xử lý mặc định cho phương thức hành động của mèo.
+
+42
+00:03:23,940 --> 00:03:29,010
+Việc đặt tên ở đây phải phù hợp.
+
+43
+00:03:29,660 --> 00:03:31,640
+Vì vậy, về cơ bản bật là bắt buộc và sau đó nếu là nhận, nó sẽ là nhận.
+
+44
+00:03:31,640 --> 00:03:37,100
+Nếu là post, chúng ta sẽ có on post handler.
+
+45
+00:03:37,130 --> 00:03:41,240
+Bây giờ tôi sẽ không đi sâu vào các trang dao cạo bởi vì nó có lộ trình riêng và nó có thể dài.
+
+46
+00:03:42,590 --> 00:03:49,490
+Nhưng tôi sẽ cung cấp cho bạn một ý tưởng ngắn gọn về cách thực hiện thao tác CRUD trong các trang dao cạo.
+
+47
+00:03:49,490 --> 00:03:55,930
+Bằng cách đó bạn cảm thấy thoải mái với các trang dao cạo.
+
+48
+00:03:55,940 --> 00:03:59,630
+Bây giờ bên trong các trang, bạn sẽ thấy một cái gì đó phổ biến được chia sẻ.
+
+49
+00:04:00,910 --> 00:04:04,810
+Chúng tôi có phần tập lệnh xác thực và bố cục gạch dưới hoàn toàn giống với MVC.
+
+50
+00:04:04,810 --> 00:04:10,810
+Chúng tôi có chế độ xem, quá trình nhập và chế độ xem bắt đầu giống hệt nhau và chúng tôi có một trang lỗi để hiển thị thông báo lỗi.
+
+51
+00:04:11,410 --> 00:04:20,290
+Nhưng trước khi chúng tôi làm bất cứ điều gì khác ở đây, chẳng hạn như làm việc trên các trang dao cạo
+
+52
+00:04:20,890 --> 00:04:27,790
+hoặc bất cứ thứ gì, tôi muốn định cấu hình Lõi khung thực thể trong dự án này.
+
+53
+00:04:27,790 --> 00:04:31,180
+Cấu hình sẽ giống hệt nhau.
+
+54
+00:04:32,130 --> 00:04:34,890
+Vì vậy, những gì tôi sẽ làm là nhấp chuột
+
+55
+00:04:35,310 --> 00:04:43,770
+phải vào đây, thêm một thư mục mới dành cho các mô hình và tôi sẽ thực sự sao chép mô hình mà chúng tôi có cho danh mục.
+
+56
+00:04:43,770 --> 00:04:47,700
+Hãy để tôi sao chép này.
+
+57
+00:04:48,330 --> 00:04:50,130
+Đóng nó trong các mô hình, thêm một lớp mới.
+
+58
+00:04:50,610 --> 00:04:55,230
+Không sao chép lớp và dán nó vào đây vì sau đó không gian tên sẽ được sao chép.
+
+59
+00:04:56,400 --> 00:05:02,010
+Thay vào đó, chúng tôi sẽ dán nó ở đây và hoàn thiện.
+
+60
+00:05:02,490 --> 00:05:06,900
+Vì vậy, cùng với đó, chúng tôi đã thêm mô hình danh mục trong dự án Razor.
+
+61
+00:05:07,080 --> 00:05:11,910
+Nhiệm vụ của bạn là cấu hình lõi khung thực thể trong dự án này.
+
+62
+00:05:12,420 --> 00:05:17,340
+Nó sẽ yêu cầu các gói chính xác mà chúng tôi đã làm trong dự án MVC
+
+63
+00:05:17,370 --> 00:05:24,480
+và bạn sẽ phải tạo một lớp ngữ cảnh DB ứng dụng mà bạn sẽ thực hiện bên trong thư mục dữ liệu.
+
+64
+00:05:24,480 --> 00:05:30,570
+Vì vậy, cấu hình tất cả các bước.
+
+65
+00:05:31,650 --> 00:05:33,630
+Cấu hình chương trình. cs.
+
+66
+00:05:33,630 --> 00:05:35,730
+Hãy chắc chắn để hạt giống các loại là tốt.
+
+67
+00:05:35,760 --> 00:05:38,580
+Điều cuối cùng tôi sẽ làm trước khi kết thúc video này là cài đặt ứng dụng.
+
+68
+00:05:39,230 --> 00:05:44,320
+Hãy để tôi sao chép chuỗi kết nối này từ MVC.
+
+69
+00:05:44,330 --> 00:05:47,720
+Dán nó ngay tại đây và tôi sẽ thay đổi tên cơ sở dữ liệu từ cồng kềnh thành cồng kềnh_razor.
+
+70
+00:05:48,960 --> 00:05:57,570
+Hoàn hảo.
+
+71
+00:05:59,270 --> 00:06:00,100
+Vì vậy, bạn có chuỗi kết nối trong dự án Razer, bạn cần định cấu hình lõi khung thực thể.
+
+72
+00:06:00,110 --> 00:06:06,420
+Tạo cơ sở dữ liệu chứa bảng danh mục với ba danh mục, giống như chúng ta đã làm với dự án MVC.
+
+73
+00:06:06,440 --> 00:06:15,110
+Điều đó sẽ giúp bạn thực hành thiết lập lõi khung thực thể trong một dự án.
+
+74
+00:06:15,980 --> 00:06:22,070
+Vì vậy, hãy hoàn thành tất cả các bước nhưng không cập nhật cơ sở dữ liệu hoặc thêm quá trình di chuyển.
+
+75
+00:06:23,610 --> 00:06:29,550
+Làm mọi thứ cho cấu hình.
+
+76
+00:06:29,850 --> 00:06:32,460
+Và khi bạn đang ở bước thêm di chuyển, hãy theo dõi tôi trong video tiếp theo.
+
+77
+00:06:32,460 --> 00:06:38,750
+Bằng cách đó, tôi muốn cho bạn thấy một điều mà bạn phải cẩn thận.
+
+78
+00:06:38,760 --> 00:06:43,380
+Vì vậy, chúc bạn may mắn với nhiệm vụ đó và tôi sẽ chỉ cho bạn cách thực hiện trong video tiếp theo.
+

@@ -1,0 +1,244 @@
+1
+00:00:01,790 --> 00:00:04,550
+Chúng tôi có hình ảnh đang được hiển thị ở đây.
+
+2
+00:00:04,550 --> 00:00:07,970
+Chúng tôi cũng có thể thêm một nút xóa bên dưới mỗi hình ảnh.
+
+3
+00:00:07,970 --> 00:00:12,290
+Vì vậy, nếu người dùng muốn xóa bất kỳ hình ảnh nào, họ có thể xóa hình ảnh đó.
+
+4
+00:00:12,290 --> 00:00:18,620
+Và tất nhiên, nếu họ muốn thêm thời điểm cập nhật tại đây, họ luôn có thể chọn một bản
+
+5
+00:00:18,620 --> 00:00:20,330
+cập nhật hình ảnh mới.
+
+6
+00:00:20,330 --> 00:00:24,500
+Và tôi tin rằng bây giờ chúng ta có ba hình ảnh.
+
+7
+00:00:25,410 --> 00:00:28,830
+Vì vậy, hãy để tôi thêm một nút xóa ngay tại đây.
+
+8
+00:00:29,340 --> 00:00:36,030
+Chúng ta sẽ quay trở lại điều vô lý ở đây và chúng ta sẽ có một hành động ASP thẻ neo.
+
+9
+00:00:36,150 --> 00:00:38,700
+Hãy để tôi gọi đó là hình ảnh xóa.
+
+10
+00:00:38,850 --> 00:00:48,120
+Chúng tôi sẽ thêm một số lớp bootstrap của BTN, nguy hiểm BTN và khi chúng tôi xóa bất kỳ hình ảnh nào, chúng tôi cần ID hình ảnh,
+
+11
+00:00:48,120 --> 00:00:52,170
+chúng tôi sẽ chuyển nó dưới dạng tuyến đường ASP.
+
+12
+00:00:52,200 --> 00:00:57,300
+Id hình ảnh bằng để thêm hình ảnh. nhận dạng.
+
+13
+00:00:59,080 --> 00:01:01,000
+Hãy để tôi giấu điều này ở đây.
+
+14
+00:01:01,660 --> 00:01:03,550
+Chúng tôi sẽ viết xóa ở đó.
+
+15
+00:01:03,550 --> 00:01:08,160
+Và hãy để tôi thêm một biểu tượng bootstrap để lấp đầy thùng rác.
+
+16
+00:01:08,170 --> 00:01:12,760
+Lưu rằng chúng ta sẽ phải xây dựng lại thời gian này.
+
+17
+00:01:14,180 --> 00:01:16,970
+Hãy để tôi đi để chỉnh sửa sản phẩm.
+
+18
+00:01:18,830 --> 00:01:20,000
+Và hoàn hảo.
+
+19
+00:01:20,030 --> 00:01:21,920
+Chúng tôi có một nút xóa.
+
+20
+00:01:22,810 --> 00:01:25,240
+Vì vậy, hãy làm cho chức năng đó.
+
+21
+00:01:25,450 --> 00:01:29,350
+Chúng ta cần tạo một phương thức hành động, xóa hình ảnh.
+
+22
+00:01:29,650 --> 00:01:32,230
+Hãy để tôi làm điều đó ngay tại đây.
+
+23
+00:01:33,170 --> 00:01:42,020
+Trong tham số ở đây, chúng tôi sẽ nhận được ID hình ảnh, ID này sẽ là một số nguyên dựa trên ID hình ảnh.
+
+24
+00:01:42,290 --> 00:01:49,070
+Chúng tôi sẽ chuyển đến đơn vị công việc chấm hình ảnh sản phẩm và chúng tôi sẽ truy xuất hình ảnh mà chúng tôi phải xóa.
+
+25
+00:01:49,760 --> 00:01:54,020
+Tiếp theo, chúng tôi sẽ kiểm tra xem hình ảnh cần xóa có phải là null hay không.
+
+26
+00:01:55,310 --> 00:01:59,780
+Trong trường hợp đó, chúng tôi cần kiểm tra xem URL có phải là null hay không.
+
+27
+00:02:00,410 --> 00:02:07,060
+Vì vậy, nếu không phải chuỗi. là hình ảnh rỗng hoặc trống sẽ bị xóa.
+
+28
+00:02:07,070 --> 00:02:09,169
+URL hình ảnh chấm.
+
+29
+00:02:09,169 --> 00:02:16,250
+Miễn là nó không rỗng hoặc trống, chúng ta có thể truy xuất đường dẫn hình ảnh cũ và xóa nó.
+
+30
+00:02:16,820 --> 00:02:24,050
+Chúng tôi sẽ phải lấy đường dẫn hình ảnh cũ và xóa rằng chúng tôi đang làm điều gì đó tương tự ngay tại đây.
+
+31
+00:02:24,230 --> 00:02:29,330
+Vì vậy, hãy để tôi sao chép những gì chúng tôi có trong phần xóa khi chúng tôi xóa sản phẩm.
+
+32
+00:02:29,570 --> 00:02:33,500
+Lần này chúng tôi chỉ muốn xóa hình ảnh trực tiếp.
+
+33
+00:02:34,650 --> 00:02:36,110
+Vì vậy, con đường hình ảnh cũ.
+
+34
+00:02:36,120 --> 00:02:37,740
+Chúng tôi có đường dẫn tuyến đường web.
+
+35
+00:02:37,770 --> 00:02:44,880
+Trên hết, chúng tôi sẽ kết hợp hình ảnh sẽ bị xóa và chúng tôi sẽ cắt dấu gạch chéo ngược.
+
+36
+00:02:45,930 --> 00:02:53,010
+Nếu tệp tồn tại, chúng tôi sẽ xóa tệp đó và sau khi hoàn tất, chúng tôi sẽ thông báo đơn vị công việc dot
+
+37
+00:02:53,010 --> 00:02:55,020
+product image dot remove.
+
+38
+00:02:55,170 --> 00:03:03,270
+Chúng tôi muốn xóa bản ghi đó khỏi cơ sở dữ liệu để hình ảnh bị xóa và dấu gạch dưới đơn vị công việc lưu dấu
+
+39
+00:03:03,270 --> 00:03:03,930
+chấm.
+
+40
+00:03:04,500 --> 00:03:07,380
+Sau đó, hãy để tôi thêm dữ liệu tạm thời để cảnh báo.
+
+41
+00:03:07,410 --> 00:03:09,960
+Chúng tôi sẽ hiển thị xóa thành công.
+
+42
+00:03:11,280 --> 00:03:13,220
+Cuối cùng, chúng tôi muốn chuyển hướng trở lại.
+
+43
+00:03:13,250 --> 00:03:16,660
+Vì vậy, chuyển hướng trở lại hành động.
+
+44
+00:03:16,680 --> 00:03:25,740
+Chúng tôi muốn quay lại tên của Upsert Action và chúng tôi muốn điều hướng đến ID sản phẩm đó bởi vì nếu bạn biết hành
+
+45
+00:03:25,740 --> 00:03:29,340
+động vô lý, hãy để tôi chuyển sang phần nhận.
+
+46
+00:03:29,370 --> 00:03:39,120
+Chúng tôi cần chuyển ID Vì vậy, ngay tại đây, chúng tôi sẽ chuyển ID bằng và chúng tôi cần ID sản phẩm mà chúng tôi có
+
+47
+00:03:39,120 --> 00:03:42,300
+thể truy xuất từ hình ảnh này để xóa.
+
+48
+00:03:42,300 --> 00:03:48,690
+Vì vậy, ngay tại đây tôi có thể nói số nguyên ID sản phẩm bằng với hình ảnh sẽ bị xóa.
+
+49
+00:03:48,690 --> 00:03:49,890
+Chấm ID sản phẩm.
+
+50
+00:03:50,700 --> 00:03:53,400
+Chúng tôi sẽ vượt qua điều đó ngay tại đây.
+
+51
+00:03:54,360 --> 00:03:57,360
+Tôi tin rằng có vẻ tốt để xóa hình ảnh.
+
+52
+00:03:57,360 --> 00:04:01,110
+Hãy để tôi lưu cái này và khởi động lại ứng dụng.
+
+53
+00:04:02,670 --> 00:04:04,950
+Chúng tôi sẽ đi đến sản phẩm ở đây.
+
+54
+00:04:05,580 --> 00:04:10,140
+Hãy để tôi đi đến sản phẩm mới và cố gắng xóa một hình ảnh.
+
+55
+00:04:10,350 --> 00:04:17,100
+Tôi cũng sẽ mở thư mục sản phẩm bảy có ba hình ảnh ở đây.
+
+56
+00:04:17,220 --> 00:04:18,990
+Hãy để tôi xóa một cái.
+
+57
+00:04:19,320 --> 00:04:22,029
+Nó tải lại trang và hoàn hảo.
+
+58
+00:04:22,050 --> 00:04:25,200
+Nó cũng loại bỏ nó khỏi vị trí.
+
+59
+00:04:25,200 --> 00:04:28,560
+Vì vậy, bạn có thể thấy rằng nó đang hoạt động như mong đợi.
+
+60
+00:04:29,280 --> 00:04:33,120
+Tôi phải nhấn f năm để làm mới và điều đó biến mất.
+
+61
+00:04:34,020 --> 00:04:38,850
+Vì vậy, bây giờ chúng tôi có thể quản lý hình ảnh cho một sản phẩm từ trang vô lý.
+

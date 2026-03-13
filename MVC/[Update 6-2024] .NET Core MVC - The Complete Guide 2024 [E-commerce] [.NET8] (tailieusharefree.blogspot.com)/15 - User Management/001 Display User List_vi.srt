@@ -1,0 +1,388 @@
+1
+00:00:02,090 --> 00:00:08,780
+Bây giờ điều tôi muốn làm là quản lý nội dung, tôi muốn tạo một phần để quản lý người dùng.
+
+2
+00:00:09,140 --> 00:00:13,160
+Trong đó tôi muốn hiển thị tất cả người dùng trong bảng dữ liệu.
+
+3
+00:00:13,190 --> 00:00:14,900
+Hãy để tôi làm điều đó đầu tiên.
+
+4
+00:00:15,930 --> 00:00:22,500
+Tôi sẽ đóng ứng dụng ở đây, chúng tôi có người dùng ứng dụng, nhưng chúng tôi cần tạo bộ điều khiển
+
+5
+00:00:22,500 --> 00:00:23,490
+người dùng.
+
+6
+00:00:24,120 --> 00:00:31,320
+Tôi sẽ thêm nó vào phần quản trị, sao chép bộ điều khiển và dán bộ điều khiển công ty vì nó
+
+7
+00:00:31,320 --> 00:00:36,210
+có bảng dữ liệu và để tôi gọi bộ điều khiển người dùng này.
+
+8
+00:00:37,330 --> 00:00:43,120
+Chúng tôi sẽ sao chép tên đó và tôi sẽ dán tên đó vào lớp và hàm tạo.
+
+9
+00:00:43,150 --> 00:00:44,530
+Trông tôt đây.
+
+10
+00:00:45,160 --> 00:00:48,580
+Bây giờ, trong chỉ mục ở đây, chúng tôi không muốn bất cứ điều gì.
+
+11
+00:00:48,610 --> 00:00:53,800
+Chúng tôi có thể trực tiếp quay lại chế độ xem vì chúng tôi sẽ sử dụng bảng dữ liệu.
+
+12
+00:00:54,250 --> 00:00:58,210
+Hãy để tôi loại bỏ những điều vô lý ở đây là không cần thiết.
+
+13
+00:00:58,600 --> 00:01:00,550
+Chúng tôi có lệnh gọi API.
+
+14
+00:01:01,550 --> 00:01:04,420
+Chúng tôi muốn truy xuất danh sách người dùng ứng dụng.
+
+15
+00:01:04,430 --> 00:01:10,160
+Hãy để tôi làm điều đó ở đây và đó sẽ là đơn vị công việc của người dùng ứng dụng chấm.
+
+16
+00:01:10,490 --> 00:01:17,540
+Nhưng bây giờ khi chúng tôi đang làm việc trên bộ điều khiển người dùng thay vì sử dụng đơn vị công việc, hãy để tôi trực
+
+17
+00:01:17,540 --> 00:01:22,160
+tiếp sử dụng ngữ cảnh DB của ứng dụng vì tôi cũng muốn hiển thị tuyến đường đó.
+
+18
+00:01:22,870 --> 00:01:28,510
+Vì vậy, nếu chúng ta muốn kết hợp điều đó, vì một số lý do, điều đó cũng có thể xảy ra.
+
+19
+00:01:28,750 --> 00:01:36,850
+Bây giờ, tôi không khuyến nghị điều này, nhưng bạn có thể thêm điều đó ngay tại đây ở cuối phần này.
+
+20
+00:01:36,850 --> 00:01:45,070
+Tôi cũng sẽ giải thích lý do chính xác tại sao ban đầu tôi sử dụng bối cảnh cơ sở dữ liệu ứng dụng cho bộ điều khiển này, chúng tôi trực
+
+21
+00:01:45,070 --> 00:01:47,800
+tiếp có bối cảnh cơ sở dữ liệu ứng dụng.
+
+22
+00:01:47,830 --> 00:01:52,270
+Chúng tôi có thể sử dụng điều đó để truy xuất tất cả người dùng trên dấu gạch dưới.
+
+23
+00:01:52,270 --> 00:01:59,500
+DB Chúng tôi có người dùng ứng dụng và ở đó khi chúng tôi phải lấy mọi thứ, chúng tôi sẽ sử dụng cú pháp where.
+
+24
+00:01:59,500 --> 00:02:04,480
+Nhưng nếu chúng tôi muốn lấy tất cả ID người dùng, thì chúng tôi không cần ở đâu cả.
+
+25
+00:02:04,480 --> 00:02:05,440
+Cú pháp.
+
+26
+00:02:06,380 --> 00:02:07,220
+Ngay chỗ này.
+
+27
+00:02:07,220 --> 00:02:09,320
+Chúng tôi muốn bao gồm công ty.
+
+28
+00:02:09,350 --> 00:02:11,150
+Vì vậy, hãy để tôi làm điều đó.
+
+29
+00:02:11,180 --> 00:02:12,860
+u. công ty.
+
+30
+00:02:12,890 --> 00:02:14,870
+Chuyển đổi nó thành một danh sách.
+
+31
+00:02:15,610 --> 00:02:17,980
+Sau đó, chúng tôi sẽ trả lại danh sách đó ở đây.
+
+32
+00:02:17,980 --> 00:02:21,430
+Và hãy để tôi gọi danh sách người dùng OBJ đó.
+
+33
+00:02:21,580 --> 00:02:23,320
+Điều đó nghe có vẻ tốt.
+
+34
+00:02:23,950 --> 00:02:28,240
+Nếu chúng tôi nghĩ về điều đó, tất cả người dùng của chúng tôi sẽ không phải là người dùng của công ty.
+
+35
+00:02:28,240 --> 00:02:33,850
+Vì vậy, nếu người dùng không phải là người dùng của công ty, chúng tôi phải tự làm một việc khác.
+
+36
+00:02:33,850 --> 00:02:35,470
+Chúng ta sẽ thấy một sự miễn trừ.
+
+37
+00:02:35,740 --> 00:02:39,100
+Hãy để tôi sửa điều đó khi chúng ta thấy ngoại lệ đó.
+
+38
+00:02:40,310 --> 00:02:43,100
+Sau đó, chúng tôi không có bất kỳ tính năng xóa nào ở đây.
+
+39
+00:02:43,130 --> 00:02:46,850
+Hãy để tôi loại bỏ nó và chúng ta sẽ quay lại vấn đề này.
+
+40
+00:02:47,360 --> 00:02:49,430
+Vì vậy, có được tất cả là tìm kiếm tốt.
+
+41
+00:02:49,430 --> 00:02:51,050
+Chúng tôi có chỉ mục.
+
+42
+00:02:51,080 --> 00:02:53,780
+Tiếp theo, tôi phải thêm chế độ xem chỉ mục.
+
+43
+00:02:54,860 --> 00:02:56,210
+Chế độ xem dao cạo.
+
+44
+00:02:56,420 --> 00:02:58,520
+Hãy để tôi thêm điều đó ở đây.
+
+45
+00:02:59,000 --> 00:03:01,310
+Và hoàn hảo nó đã được thêm vào.
+
+46
+00:03:01,340 --> 00:03:02,800
+Để tôi kiểm tra hai lần.
+
+47
+00:03:02,810 --> 00:03:08,430
+Tôi có khu vực quản trị có vẻ tốt cho chế độ xem tại đây.
+
+48
+00:03:08,450 --> 00:03:14,090
+Hãy để tôi mở chế độ xem mà chúng tôi có cho chỉ mục sản phẩm.
+
+49
+00:03:14,120 --> 00:03:17,270
+Sao chép và dán nó ở đây.
+
+50
+00:03:18,300 --> 00:03:25,080
+Chúng tôi không có bất kỳ mô hình nào, chúng tôi có thể xóa mô hình đó và chúng tôi sẽ hiển thị danh sách người dùng tại đây.
+
+51
+00:03:25,530 --> 00:03:27,720
+Tôi không muốn tạo ra bất cứ thứ gì.
+
+52
+00:03:27,720 --> 00:03:29,460
+Chúng ta có thể loại bỏ điều đó.
+
+53
+00:03:29,880 --> 00:03:31,020
+Hoàn hảo.
+
+54
+00:03:31,500 --> 00:03:34,990
+Bây giờ ở đây chúng tôi muốn hiển thị tất cả các thuộc tính người dùng.
+
+55
+00:03:35,010 --> 00:03:39,450
+Vì vậy, hãy để tôi thêm tên, email, số điện thoại, công ty và hàng.
+
+56
+00:03:40,200 --> 00:03:43,320
+Đừng lo lắng về công ty và vai trò ngay bây giờ.
+
+57
+00:03:43,590 --> 00:03:46,800
+Đừng lo lắng về vai trò của người dùng ngay bây giờ.
+
+58
+00:03:46,830 --> 00:03:50,010
+Chúng tôi sẽ đề cập đến điều đó trong video sắp tới.
+
+59
+00:03:50,850 --> 00:03:53,220
+Chúng ta cần thêm tệp JavaScript.
+
+60
+00:03:53,250 --> 00:03:56,040
+Thay đổi điều này thành người dùng dot js.
+
+61
+00:03:56,070 --> 00:03:57,660
+Trông tôt đây.
+
+62
+00:03:57,960 --> 00:04:00,720
+Cuối cùng, chúng ta phải thêm JavaScript.
+
+63
+00:04:01,500 --> 00:04:08,190
+Để tôi sao chép công ty, dán lại, đổi tên thành người dùng dot js.
+
+64
+00:04:09,170 --> 00:04:13,100
+Sau đó, chúng ta cần sửa đổi JavaScript ngay tại đây.
+
+65
+00:04:14,000 --> 00:04:15,440
+Tên hợp lệ.
+
+66
+00:04:15,440 --> 00:04:16,519
+Cái tiếp theo là gì?
+
+67
+00:04:16,519 --> 00:04:16,970
+Chúng ta có?
+
+68
+00:04:16,970 --> 00:04:18,470
+Email và điện thoại.
+
+69
+00:04:18,649 --> 00:04:21,350
+Điện thoại email sẽ là số điện thoại.
+
+70
+00:04:21,350 --> 00:04:23,000
+Chúng tôi có điều đó ở cuối.
+
+71
+00:04:23,660 --> 00:04:25,400
+Hãy để tôi gõ nó ở đây.
+
+72
+00:04:25,670 --> 00:04:32,540
+Sau đó, chúng tôi có công ty và vai trò của công ty là bên trong công ty. tên nhưng vai trò.
+
+73
+00:04:32,540 --> 00:04:34,250
+Tôi không biết đó là nơi nào.
+
+74
+00:04:34,250 --> 00:04:36,860
+Vì vậy, hãy để tôi giữ trống cho bây giờ.
+
+75
+00:04:37,340 --> 00:04:40,580
+Với cấu hình ở đây, hãy để tôi xóa xóa.
+
+76
+00:04:40,580 --> 00:04:42,230
+Tôi không cần cái đó.
+
+77
+00:04:43,220 --> 00:04:44,660
+Và hoàn hảo.
+
+78
+00:04:44,690 --> 00:04:45,980
+Có vẻ tốt.
+
+79
+00:04:46,100 --> 00:04:57,320
+Hãy để tôi chuyển đến bố cục gạch dưới được chia sẻ của chế độ xem giải pháp và tôi sẽ sao chép người dùng tạo dán nó một
+
+80
+00:04:57,320 --> 00:04:58,230
+lần nữa.
+
+81
+00:04:58,250 --> 00:05:02,450
+Thôi thì để tôi chép vùng dễ hơn nhiều.
+
+82
+00:05:02,840 --> 00:05:07,460
+Hành động chỉ mục bộ điều khiển người dùng của quản trị viên.
+
+83
+00:05:08,330 --> 00:05:11,030
+Và tôi sẽ gọi người quản lý đó.
+
+84
+00:05:11,840 --> 00:05:15,470
+Hãy để tôi chạy ứng dụng và xem nó có hoạt động không.
+
+85
+00:05:18,330 --> 00:05:20,270
+Hãy để tôi đi đến quản lý nội dung.
+
+86
+00:05:20,280 --> 00:05:25,200
+Chúng tôi đã quản lý người dùng và chúng tôi có thể thấy thông báo lỗi bằng email.
+
+87
+00:05:25,290 --> 00:05:27,630
+Hãy để tôi xem tại sao lại như vậy.
+
+88
+00:05:29,140 --> 00:05:31,940
+Nếu bạn thấy ở đây, chúng tôi đã quên thay đổi điều này.
+
+89
+00:05:31,960 --> 00:05:33,690
+Nó sẽ không phải là công ty.
+
+90
+00:05:33,700 --> 00:05:36,370
+Nó sẽ là người dùng và nhận được tất cả.
+
+91
+00:05:37,280 --> 00:05:39,140
+Hãy để tôi làm mới ở đây.
+
+92
+00:05:40,890 --> 00:05:42,150
+Và hoàn hảo.
+
+93
+00:05:42,180 --> 00:05:46,500
+Bây giờ, nếu bạn thấy ở đây, chúng tôi chỉ xem xét một người dùng.
+
+94
+00:05:46,830 --> 00:05:52,540
+Nếu tôi vào cơ sở dữ liệu và kiểm tra ASP. NET, chúng tôi có ba người dùng.
+
+95
+00:05:52,560 --> 00:05:55,530
+Tại sao tôi chỉ thấy một người dùng ở đây?
+
+96
+00:05:56,130 --> 00:06:00,720
+Hãy thử tạm dừng video và phân tích những gì đang diễn ra ở đây.
+
+97
+00:06:01,260 --> 00:06:05,040
+Tôi sẽ hướng dẫn bạn giải pháp trong video tiếp theo.
+

@@ -1,0 +1,84 @@
+1
+00:00:01,800 --> 00:00:03,719
+Instructor: We have unit of work in place
+
+2
+00:00:03,719 --> 00:00:05,820
+for our product repository.
+
+3
+00:00:05,820 --> 00:00:08,280
+It is time for the second assignment
+
+4
+00:00:08,280 --> 00:00:11,250
+where you have to create product controller
+
+5
+00:00:11,250 --> 00:00:15,690
+and action methods for the CRUD functionality.
+
+6
+00:00:15,690 --> 00:00:19,170
+After you create the controller and action methods,
+
+7
+00:00:19,170 --> 00:00:21,480
+then you will have to create view
+
+8
+00:00:21,480 --> 00:00:23,610
+for all the crowd operations
+
+9
+00:00:23,610 --> 00:00:27,033
+and add client side and server side validation.
+
+10
+00:00:27,900 --> 00:00:30,900
+All of the steps here, we have already done that
+
+11
+00:00:30,900 --> 00:00:35,430
+for category controller, so you have to replicate them.
+
+12
+00:00:35,430 --> 00:00:37,680
+And the only reason I am making you
+
+13
+00:00:37,680 --> 00:00:39,810
+replicate them once again
+
+14
+00:00:39,810 --> 00:00:42,330
+is that you will gain some experience
+
+15
+00:00:42,330 --> 00:00:45,600
+on how to work with all the create functionalities
+
+16
+00:00:45,600 --> 00:00:49,050
+with models, views, and controller.
+
+17
+00:00:49,050 --> 00:00:51,330
+The only difference this time is
+
+18
+00:00:51,330 --> 00:00:52,920
+that you have more properties
+
+19
+00:00:52,920 --> 00:00:56,370
+and product than category model.
+
+20
+00:00:56,370 --> 00:00:59,730
+So make sure to practice all the CRUD operations
+
+21
+00:00:59,730 --> 00:01:03,453
+and I will show you how to do that in the next video.
+

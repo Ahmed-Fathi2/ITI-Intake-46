@@ -74,8 +74,10 @@ namespace Lab1
 
             //Console.WriteLine("==================================");
 
-            //var stdsWithDeptsone = db.Students.Include(x => x.Department).Where(x=>x.DepartmentId == 1);
+            var stdsWithDeptsone = db.Students.Where(x => x.DepartmentId == 1);
 
+
+            var memeoryEnumerable = students.Where(x => x.DepartmentId == 1);
 
             //foreach (var std in stdsWithDeptsone)
             //{

@@ -1,0 +1,240 @@
+1
+00:00:01,890 --> 00:00:03,820
+Bây giờ chúng ta có một chút thách thức.
+
+2
+00:00:03,840 --> 00:00:07,560
+Chúng tôi sẽ hiển thị vai trò của người dùng đã đăng nhập như thế nào?
+
+3
+00:00:07,830 --> 00:00:15,630
+Nếu chúng ta truy cập cơ sở dữ liệu ở đây, chúng ta biết rằng các vai trò nằm trong ASP. NET, nhưng bảng nối các vai trò
+
+4
+00:00:15,630 --> 00:00:22,320
+và bảng người dùng là ASP. NET, nơi chúng tôi có ánh xạ.
+
+5
+00:00:22,530 --> 00:00:29,580
+Vì vậy, về cơ bản, chúng tôi phải kết hợp cả ba bảng đó khi chúng tôi phải truy cập bất kỳ bảng nhận dạng tích hợp nào, chúng
+
+6
+00:00:29,580 --> 00:00:37,230
+tôi có thể truy cập chúng từ dbcontext bằng cách xóa ASP. NET trước tên bảng.
+
+7
+00:00:37,530 --> 00:00:43,080
+Vì vậy, nếu chúng ta muốn truy cập ASP. NET, nó sẽ là vai trò người dùng.
+
+8
+00:00:43,230 --> 00:00:48,240
+Nếu chúng ta muốn truy cập ASP. NET, nó sẽ là bảng vai trò.
+
+9
+00:00:49,350 --> 00:00:57,840
+Vì vậy, những gì chúng tôi có thể làm là đối với mỗi người dùng trong danh sách người dùng ở đây, chúng tôi có thể tìm ra ID vai trò của người dùng đó.
+
+10
+00:00:58,550 --> 00:01:04,940
+Chúng tôi có thể làm điều đó với sự trợ giúp của, tôi sẽ nói ID quy tắc biến là bằng.
+
+11
+00:01:04,970 --> 00:01:11,270
+Bây giờ những gì chúng ta có thể làm ở đây là chuyển đến DB gạch dưới và điều hướng đến bảng vai trò người dùng.
+
+12
+00:01:11,300 --> 00:01:16,490
+Nhưng điều đó có nghĩa là trong mỗi vòng lặp, nó sẽ chuyển đến cơ sở dữ liệu mọi lúc.
+
+13
+00:01:17,300 --> 00:01:25,040
+Vì vậy, hơn thế nữa, điều có ý nghĩa ở đây là chúng ta có thể nói vai trò người dùng thay đổi bằng với dấu
+
+14
+00:01:25,040 --> 00:01:29,420
+gạch dưới DB vai trò người dùng dấu chấm hai danh sách.
+
+15
+00:01:30,320 --> 00:01:32,780
+Bằng cách đó, chúng ta sẽ có bảng ánh xạ.
+
+16
+00:01:33,530 --> 00:01:39,530
+Sau đó, hãy để tôi cũng lấy bảng quy tắc dấu gạch dưới DB dot quy tắc dot hai danh sách.
+
+17
+00:01:40,310 --> 00:01:42,110
+Với cả hai bảng ở đây.
+
+18
+00:01:42,110 --> 00:01:44,330
+Bên trong người dùng, chúng tôi có ID người dùng.
+
+19
+00:01:44,690 --> 00:01:51,260
+Dựa trên ID người dùng đó, chúng tôi có thể tìm ID vai trò từ bảng vai trò người dùng.
+
+20
+00:01:51,940 --> 00:02:01,450
+Vì vậy, ngay tại đây, chúng tôi sẽ nói vai trò của người dùng dấu chấm đầu tiên hoặc mặc định và chúng tôi muốn tìm u đi
+
+21
+00:02:01,810 --> 00:02:10,330
+đến u dấu chấm id người dùng bằng với người dùng. id và từ bản ghi đó, chúng tôi chỉ quan tâm đến ID vai trò.
+
+22
+00:02:11,860 --> 00:02:16,570
+Khi chúng tôi biết ID vai trò từ bảng vai trò người dùng, nó ở đâu?
+
+23
+00:02:16,570 --> 00:02:18,220
+Để tôi mở cái đó.
+
+24
+00:02:19,260 --> 00:02:25,860
+Từ đây, chúng ta sẽ biết ID vai trò Dựa vào đó, chúng ta có thể tìm thấy tên vai trò từ bảng vai trò.
+
+25
+00:02:26,870 --> 00:02:37,130
+Vì vậy, tiếp theo, những gì chúng ta có thể làm là chúng ta có thể có một vai trò ở đây từ các vai trò có dấu chấm đầu tiên hoặc mặc định u chuyển sang u. id bằng với vai trò
+
+26
+00:02:37,130 --> 00:02:39,470
+ID.
+
+27
+00:02:40,780 --> 00:02:46,750
+Bây giờ vai trò này mà chúng tôi tìm thấy cho người dùng, chúng tôi phải chuyển lại vai trò đó trong dữ liệu.
+
+28
+00:02:47,290 --> 00:02:51,760
+Nhưng trong người dùng ứng dụng, chúng tôi không có gì để lưu trữ vai trò đó.
+
+29
+00:02:52,650 --> 00:02:57,630
+Vì vậy, chúng tôi có thể thêm một cột ở đây, nhưng chúng tôi không muốn thêm cột đó vào cơ sở dữ liệu.
+
+30
+00:02:57,780 --> 00:03:02,970
+Vì vậy, tôi sẽ sử dụng không được ánh xạ và tôi sẽ thêm thuộc tính chuỗi của quy tắc.
+
+31
+00:03:04,030 --> 00:03:08,020
+Điều đó sẽ đảm bảo rằng điều này không được đẩy vào cơ sở dữ liệu.
+
+32
+00:03:08,710 --> 00:03:14,250
+Hãy để tôi tiếp tục chỉnh sửa ở đây và đóng phần này lại nơi chúng tôi đang lưu trữ vai trò.
+
+33
+00:03:14,260 --> 00:03:21,010
+Ở đây chúng ta có thể lưu trữ vai trò dấu chấm bên trong của người dùng là bình đẳng và hoàn hảo.
+
+34
+00:03:21,220 --> 00:03:26,590
+Bằng cách đó, vai trò dấu chấm của người dùng sẽ được điền và từ bảng vai trò.
+
+35
+00:03:26,590 --> 00:03:31,510
+Chúng tôi muốn lấy cột tên và gán nó ngay tại đây.
+
+36
+00:03:32,410 --> 00:03:35,890
+Với người dùng được định cấu hình đó giờ đây sẽ có vai trò.
+
+37
+00:03:36,250 --> 00:03:43,030
+Nếu chúng ta chuyển đến tên của người dùng, dấu chấm J của cột đó sẽ là vai trò và điều đó sẽ hoạt động.
+
+38
+00:03:43,800 --> 00:03:49,560
+Hãy để tôi xây dựng lại và áp dụng các thay đổi để đảm bảo rằng chúng tôi không bỏ sót điều gì.
+
+39
+00:03:50,180 --> 00:03:53,400
+Để đảm bảo rằng chúng ta không bỏ lỡ bất cứ điều gì ở đây.
+
+40
+00:03:53,400 --> 00:03:55,620
+Và để tôi xem nó trông như thế nào.
+
+41
+00:03:56,670 --> 00:03:58,590
+Tôi sẽ phải đăng nhập lại.
+
+42
+00:04:01,210 --> 00:04:03,790
+Và để mình đi quản lý user.
+
+43
+00:04:06,000 --> 00:04:07,590
+Chúng tôi có thể có một ngoại lệ.
+
+44
+00:04:07,590 --> 00:04:08,520
+Hãy để tôi xem.
+
+45
+00:04:08,550 --> 00:04:09,690
+Vâng, chúng tôi làm.
+
+46
+00:04:10,440 --> 00:04:12,990
+Hãy cho tôi xem ID hợp lệ.
+
+47
+00:04:13,200 --> 00:04:18,480
+Chà, tôi tin rằng ID này thậm chí không có ánh xạ trong bảng quy tắc.
+
+48
+00:04:18,899 --> 00:04:24,180
+Đó có thể là một trong những người dùng bị lỗi, vì vậy chúng tôi sẽ phải dọn bàn của mình.
+
+49
+00:04:24,180 --> 00:04:29,640
+Hãy để tôi xem ASP. NET có ID bằng.
+
+50
+00:04:30,470 --> 00:04:32,810
+Và đó là người dùng ứng dụng.
+
+51
+00:04:33,470 --> 00:04:39,140
+Nếu chúng ta truy cập ASP. NET trong đó ID bằng với vai trò đó.
+
+52
+00:04:39,470 --> 00:04:41,090
+Chà, ID người dùng của nó.
+
+53
+00:04:44,710 --> 00:04:46,510
+Chúng tôi không có bất kỳ hồ sơ.
+
+54
+00:04:46,690 --> 00:04:50,230
+Vì vậy, những gì chúng tôi có thể làm là tôi có thể xóa hồ sơ đó.
+
+55
+00:04:50,740 --> 00:04:55,840
+Đó là một kỷ lục mà chúng tôi không quan tâm và hoàn thiện nên hoạt động.
+
+56
+00:04:57,460 --> 00:05:02,950
+Thông thường, khi chúng tôi đang thử nghiệm, sẽ có nhiều thứ giả mạo trong cơ sở dữ liệu, vì vậy, việc dọn dẹp
+
+57
+00:05:02,950 --> 00:05:06,850
+cơ sở dữ liệu của chúng tôi khi chúng tôi sẵn sàng xuất bản là điều hợp lý.
+
+58
+00:05:08,360 --> 00:05:17,420
+Bây giờ, nếu tôi vào phần quản lý nội dung ở đây, quản lý người dùng và hoàn thiện, tôi có thể thấy tất cả các vai trò ở đây
+
+59
+00:05:17,420 --> 00:05:19,520
+và mọi thứ đều tuyệt vời.
+
+60
+00:05:20,150 --> 00:05:23,570
+Với điều đó, hãy để tôi tiếp tục trong video tiếp theo.
+

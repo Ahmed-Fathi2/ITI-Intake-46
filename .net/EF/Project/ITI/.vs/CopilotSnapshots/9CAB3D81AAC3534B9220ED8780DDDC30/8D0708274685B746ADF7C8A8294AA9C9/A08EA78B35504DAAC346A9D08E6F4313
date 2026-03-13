@@ -1,0 +1,50 @@
+﻿using ITI.Application.Dtos;
+using ITI.Application.Interfaces.Repositories;
+using ITI.Application.Interfaces.Services;
+using ITI.Domain.Entities;
+using System.Linq;
+
+namespace ITI.Application.Services
+{
+    public class StudentCourseService(IStudentCourseRepository studentCourseRepository, IStudentRepository studentRepository, ICourseRepository courseRepository) : IStudentCourseService
+    {
+        private readonly IStudentCourseRepository studentCourseRepository = studentCourseRepository;
+        private readonly IStudentRepository studentRepository = studentRepository;
+        private readonly ICourseRepository courseRepository = courseRepository;
+
+        public IEnumerable<AllStudentCourseDto> GetAll()
+        {
+            var list = studentCourseRepository.GetAll().ToList();
+            var students = studentRepository.GetAll().ToDictionary(s => s.Id);
+            var courses = courseRepository.GetAll().ToDictionary(c => c.Id);
+
+            return list.Select(sc => new AllStudentCourseDto(
+                sc.Id,
+                sc.StudentId,
+                sc.CourseId,
+                students.ContainsKey(sc.StudentId) ? $"{students[sc.StudentId].FirstName} {students[sc.StudentId].LastName}".Trim() : null,
+                courses.ContainsKey(sc.CourseId) ? courses[sc.CourseId].Name : null
+            )).ToList();
+        }
+
+        public AllStudentCourseDto? GetById(int id)
+        {
+            var sc = studentCourseRepository.GetById(id);
+            if (sc == null) return null;
+            var s = studentRepository.GetById(sc.StudentId);
+            var c = courseRepository.GetById(sc.CourseId);
+            return new AllStudentCourseDto(sc.Id, sc.StudentId, sc.CourseId, s == null ? null : $"{s.FirstName} {s.LastName}".Trim(), c?.Name);
+        }
+
+        public void Add(CreateStudentCourseDto dto)
+        {
+            var sc = new StudentCourse { StudentId = dto.StudentId, CourseId = dto.CourseId };
+            studentCourseRepository.Add(sc);
+        }
+
+        public void Delete(int id)
+        {
+            studentCourseRepository.Delete(id);
+        }
+    }
+}

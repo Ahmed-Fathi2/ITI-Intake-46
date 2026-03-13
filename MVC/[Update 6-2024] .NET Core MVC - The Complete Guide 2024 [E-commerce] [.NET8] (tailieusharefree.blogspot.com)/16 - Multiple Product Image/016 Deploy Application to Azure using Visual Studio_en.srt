@@ -1,0 +1,524 @@
+1
+00:00:01,650 --> 00:00:04,770
+Instructor: Now we need to deploy the application.
+
+2
+00:00:04,770 --> 00:00:06,780
+Let me stop it here.
+
+3
+00:00:06,780 --> 00:00:10,113
+Right click on the web project, select Publish.
+
+4
+00:00:11,100 --> 00:00:13,140
+Previously we had a published profile
+
+5
+00:00:13,140 --> 00:00:15,780
+where we were deploying that using GitHub
+
+6
+00:00:15,780 --> 00:00:18,450
+and we had the CI/CD pipeline.
+
+7
+00:00:18,450 --> 00:00:20,700
+We do not want that anymore.
+
+8
+00:00:20,700 --> 00:00:23,670
+We want to start a new publish here.
+
+9
+00:00:23,670 --> 00:00:27,603
+We'll select Azure and we'll go with Windows.
+
+10
+00:00:28,440 --> 00:00:32,970
+It'll automatically sign me in here, and perfect.
+
+11
+00:00:32,970 --> 00:00:35,340
+You can see based on the subscription
+
+12
+00:00:35,340 --> 00:00:38,670
+it is displaying me the existing app services.
+
+13
+00:00:38,670 --> 00:00:41,220
+We want to create a new one here.
+
+14
+00:00:41,220 --> 00:00:42,513
+Let me select that.
+
+15
+00:00:44,820 --> 00:00:48,990
+I will call that bulky-dotnetmastery.
+
+16
+00:00:48,990 --> 00:00:50,400
+That name is available.
+
+17
+00:00:50,400 --> 00:00:51,720
+That looks good.
+
+18
+00:00:51,720 --> 00:00:55,930
+Resource group, let me put that on DotNetMastery-LiveProject
+
+19
+00:00:56,940 --> 00:00:59,280
+and we need a hosting plan.
+
+20
+00:00:59,280 --> 00:01:01,590
+I can use any of the existing
+
+21
+00:01:01,590 --> 00:01:04,500
+but right here I can select a new plan
+
+22
+00:01:04,500 --> 00:01:09,500
+and let me call that BulkyBookWebFreePlan
+
+23
+00:01:09,510 --> 00:01:11,640
+and it'll be the free one.
+
+24
+00:01:11,640 --> 00:01:14,853
+Let me use that and create that.
+
+25
+00:01:15,870 --> 00:01:18,540
+With that, we are creating the app service.
+
+26
+00:01:18,540 --> 00:01:20,253
+So let me wait for that.
+
+27
+00:01:23,250 --> 00:01:25,080
+Perfect. That is done here.
+
+28
+00:01:25,080 --> 00:01:28,593
+Let me select next here and finish that.
+
+29
+00:01:30,930 --> 00:01:32,490
+Publish profile,
+
+30
+00:01:32,490 --> 00:01:34,140
+it is successful here.
+
+31
+00:01:34,140 --> 00:01:35,610
+Let me close.
+
+32
+00:01:35,610 --> 00:01:38,790
+And we see the new published profile.
+
+33
+00:01:38,790 --> 00:01:42,150
+Now when we are using .NET 8, it is in preview.
+
+34
+00:01:42,150 --> 00:01:44,520
+Because of that, the deployment mode,
+
+35
+00:01:44,520 --> 00:01:46,233
+we will have to edit that.
+
+36
+00:01:47,220 --> 00:01:49,320
+And let me expand this.
+
+37
+00:01:49,320 --> 00:01:51,660
+That will be self-contained.
+
+38
+00:01:51,660 --> 00:01:53,070
+If it was .NET 7
+
+39
+00:01:53,070 --> 00:01:55,320
+then you can use framework dependent.
+
+40
+00:01:55,320 --> 00:01:57,270
+But with the preview version
+
+41
+00:01:57,270 --> 00:01:59,253
+you have to use self-contained.
+
+42
+00:02:00,360 --> 00:02:05,360
+We scroll down here and it is asking us for database.
+
+43
+00:02:05,370 --> 00:02:07,620
+We do not have that here.
+
+44
+00:02:07,620 --> 00:02:08,910
+So let me save this,
+
+45
+00:02:08,910 --> 00:02:11,610
+and if you scroll down in Visual Studio
+
+46
+00:02:11,610 --> 00:02:14,250
+you can see in service dependencies
+
+47
+00:02:14,250 --> 00:02:18,930
+it says that, "Hey, a SQL Server database is needed."
+
+48
+00:02:18,930 --> 00:02:20,820
+If I select + here
+
+49
+00:02:20,820 --> 00:02:23,733
+I will be able to create that dependency.
+
+50
+00:02:24,810 --> 00:02:27,240
+So we will search for SQL Server
+
+51
+00:02:27,240 --> 00:02:30,660
+and we have the Azure SQL Database.
+
+52
+00:02:30,660 --> 00:02:33,570
+Let me select the Azure SQL Database
+
+53
+00:02:33,570 --> 00:02:37,650
+and we will create a new SQL database directly
+
+54
+00:02:37,650 --> 00:02:39,750
+from Visual Studio.
+
+55
+00:02:39,750 --> 00:02:42,810
+You can give it whatever database name you want.
+
+56
+00:02:42,810 --> 00:02:47,670
+Resource group will be the same, DotNetMastery-LiveProject.
+
+57
+00:02:47,670 --> 00:02:51,060
+And then we will create a new database server.
+
+58
+00:02:51,060 --> 00:02:56,060
+And let me call that bulkybookliveserver.
+
+59
+00:02:56,400 --> 00:02:59,220
+We need a username and password.
+
+60
+00:02:59,220 --> 00:03:00,780
+Let me add that.
+
+61
+00:03:00,780 --> 00:03:04,113
+Scroll down, we have a confirm password.
+
+62
+00:03:05,250 --> 00:03:06,873
+Perfect. That looks good.
+
+63
+00:03:07,830 --> 00:03:11,160
+So we are creating a new database server.
+
+64
+00:03:11,160 --> 00:03:13,080
+But one thing that is missing here
+
+65
+00:03:13,080 --> 00:03:16,170
+is when we are creating a new server here
+
+66
+00:03:16,170 --> 00:03:21,000
+it does not give us the option to select what is the type,
+
+67
+00:03:21,000 --> 00:03:22,860
+like is it a DTU version?
+
+68
+00:03:22,860 --> 00:03:25,080
+It is a production development?
+
+69
+00:03:25,080 --> 00:03:27,060
+We do not get that.
+
+70
+00:03:27,060 --> 00:03:30,423
+So that is one limitation that we have right here.
+
+71
+00:03:31,410 --> 00:03:34,560
+Let me create and see what happens.
+
+72
+00:03:34,560 --> 00:03:39,000
+If you create the SQL Server directly from Azure Portal
+
+73
+00:03:39,000 --> 00:03:42,360
+then you will be able to select what size you want.
+
+74
+00:03:42,360 --> 00:03:47,360
+But we do not have that option in Visual Studio right now.
+
+75
+00:03:47,520 --> 00:03:49,590
+Now that is not a big deal
+
+76
+00:03:49,590 --> 00:03:53,670
+because I can always go to Azure and create that database
+
+77
+00:03:53,670 --> 00:03:56,910
+but I want to show you from Visual Studio.
+
+78
+00:03:56,910 --> 00:03:58,863
+That is why we are using this.
+
+79
+00:04:02,100 --> 00:04:03,300
+Perfect. That is done.
+
+80
+00:04:03,300 --> 00:04:06,300
+We will select that, hit the next button
+
+81
+00:04:06,300 --> 00:04:08,700
+and we have the connection string,
+
+82
+00:04:08,700 --> 00:04:12,990
+here we will have to write the username and password
+
+83
+00:04:12,990 --> 00:04:13,823
+based on that,
+
+84
+00:04:13,823 --> 00:04:16,683
+connection string will automatically get that.
+
+85
+00:04:17,550 --> 00:04:20,430
+After that we can copy the connection string,
+
+86
+00:04:20,430 --> 00:04:22,560
+and if we add it here,
+
+87
+00:04:22,560 --> 00:04:26,043
+let me scroll down where we have database,
+
+88
+00:04:29,190 --> 00:04:32,280
+we will have to replace that with the new connection string
+
+89
+00:04:32,280 --> 00:04:33,510
+that we copied
+
+90
+00:04:33,510 --> 00:04:37,290
+and we will select use this connection string at runtime.
+
+91
+00:04:37,290 --> 00:04:38,640
+Save that.
+
+92
+00:04:38,640 --> 00:04:41,040
+And if we notice in the web project,
+
+93
+00:04:41,040 --> 00:04:44,070
+we have appsettings.Production.
+
+94
+00:04:44,070 --> 00:04:47,490
+We can go there and modify the connection string
+
+95
+00:04:47,490 --> 00:04:50,820
+because that way it'll use that connection string
+
+96
+00:04:50,820 --> 00:04:53,163
+once the application is deployed.
+
+97
+00:04:54,060 --> 00:04:55,620
+Save that here
+
+98
+00:04:55,620 --> 00:04:57,243
+and let me publish.
+
+99
+00:04:59,040 --> 00:05:00,990
+Now while it is publishing,
+
+100
+00:05:00,990 --> 00:05:03,273
+let me switch back to Azure portal.
+
+101
+00:05:04,710 --> 00:05:07,710
+There let me go to SQL database
+
+102
+00:05:07,710 --> 00:05:10,500
+and we have the new database here.
+
+103
+00:05:10,500 --> 00:05:11,730
+Let me scale down
+
+104
+00:05:11,730 --> 00:05:15,123
+because I know the computing here will be higher scale.
+
+105
+00:05:15,990 --> 00:05:18,930
+So if we go to Compute + storage,
+
+106
+00:05:18,930 --> 00:05:22,500
+you can see the estimated cost is 15 here.
+
+107
+00:05:22,500 --> 00:05:25,410
+Let me scale that down to basic.
+
+108
+00:05:25,410 --> 00:05:28,260
+That is good for our testing.
+
+109
+00:05:28,260 --> 00:05:31,653
+We did not get that option in Visual Studio.
+
+110
+00:05:32,640 --> 00:05:35,610
+Let me also go to SQL Servers here,
+
+111
+00:05:35,610 --> 00:05:37,160
+we have the bulkybookliveserver
+
+112
+00:05:39,000 --> 00:05:41,790
+and there if we go to networking tab,
+
+113
+00:05:41,790 --> 00:05:44,520
+when we create this from Visual Studio
+
+114
+00:05:44,520 --> 00:05:46,230
+it automatically checks
+
+115
+00:05:46,230 --> 00:05:50,910
+allow Azure services and resource to access the server.
+
+116
+00:05:50,910 --> 00:05:52,383
+So that is a good thing.
+
+117
+00:05:53,310 --> 00:05:56,700
+You can also add your IP address if you want.
+
+118
+00:05:56,700 --> 00:06:00,933
+And with that, let me go back and wait for the deployment.
+
+119
+00:06:03,720 --> 00:06:06,300
+Perfect, it is loading the application.
+
+120
+00:06:06,300 --> 00:06:07,773
+Let me see.
+
+121
+00:06:10,050 --> 00:06:11,490
+And great.
+
+122
+00:06:11,490 --> 00:06:14,970
+You can see our application is up and running here
+
+123
+00:06:14,970 --> 00:06:17,100
+and that looks great.
+
+124
+00:06:17,100 --> 00:06:21,330
+Let me log in here with admin@dotnetmastery.com
+
+125
+00:06:21,330 --> 00:06:23,850
+and see if that works.
+
+126
+00:06:23,850 --> 00:06:25,650
+That is also good.
+
+127
+00:06:25,650 --> 00:06:27,840
+We go to product here
+
+128
+00:06:27,840 --> 00:06:31,380
+and let me upload an image for cotton candy.
+
+129
+00:06:31,380 --> 00:06:32,820
+Where is that?
+
+130
+00:06:32,820 --> 00:06:33,963
+Right here.
+
+131
+00:06:35,520 --> 00:06:39,483
+We go back here, and that image is coming along.
+

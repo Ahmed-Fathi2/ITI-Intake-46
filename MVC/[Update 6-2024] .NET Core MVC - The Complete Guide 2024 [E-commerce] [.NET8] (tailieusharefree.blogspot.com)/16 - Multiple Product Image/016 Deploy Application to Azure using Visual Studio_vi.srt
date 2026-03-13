@@ -1,0 +1,424 @@
+1
+00:00:01,470 --> 00:00:04,140
+Bây giờ chúng ta cần triển khai ứng dụng.
+
+2
+00:00:04,680 --> 00:00:06,660
+Hãy để tôi dừng nó ở đây.
+
+3
+00:00:06,689 --> 00:00:10,050
+Nhấp chuột phải vào dự án web Chọn Xuất bản.
+
+4
+00:00:10,860 --> 00:00:18,160
+Trước đây, chúng tôi đã có một hồ sơ xuất bản nơi chúng tôi đang triển khai hồ sơ đó bằng GitHub và chúng tôi có quy trình CI CD.
+
+5
+00:00:18,180 --> 00:00:20,370
+Chúng tôi không muốn điều đó nữa.
+
+6
+00:00:20,400 --> 00:00:22,450
+Chúng tôi muốn bắt đầu xuất bản mới.
+
+7
+00:00:22,470 --> 00:00:27,630
+Ở đây chúng tôi sẽ chọn Azure và chúng tôi sẽ đi với Windows.
+
+8
+00:00:28,260 --> 00:00:32,700
+Nó sẽ tự động đăng nhập cho tôi ở đây và hoàn hảo.
+
+9
+00:00:32,729 --> 00:00:38,430
+Bạn có thể thấy dựa trên đăng ký, nó đang hiển thị cho tôi các dịch vụ ứng dụng hiện có.
+
+10
+00:00:38,460 --> 00:00:40,920
+Chúng tôi muốn tạo một cái mới ở đây.
+
+11
+00:00:41,010 --> 00:00:42,630
+Hãy để tôi chọn cái đó.
+
+12
+00:00:44,780 --> 00:00:48,410
+Tôi sẽ gọi đó là sự thông thạo Dotnet gạch nối cồng kềnh.
+
+13
+00:00:48,770 --> 00:00:50,360
+Tên đó có sẵn.
+
+14
+00:00:50,360 --> 00:00:51,530
+Trông tôt đây.
+
+15
+00:00:51,560 --> 00:00:52,730
+Nhóm tài nguyên.
+
+16
+00:00:52,730 --> 00:00:56,660
+Hãy để tôi đưa nó vào dự án Dotnet Mastery trực tiếp.
+
+17
+00:00:56,660 --> 00:00:58,730
+Và chúng tôi cần một kế hoạch lưu trữ.
+
+18
+00:00:58,970 --> 00:01:06,620
+Tôi có thể sử dụng bất kỳ gói nào hiện có, nhưng ngay tại đây, tôi có thể chọn một gói mới và để tôi gọi gói
+
+19
+00:01:06,620 --> 00:01:11,520
+đó là gói miễn phí trên web sách cồng kềnh và nó sẽ là gói miễn phí.
+
+20
+00:01:11,540 --> 00:01:14,900
+Hãy để tôi sử dụng nó và tạo ra nó.
+
+21
+00:01:15,560 --> 00:01:18,380
+Cùng với đó, chúng tôi đang tạo dịch vụ ứng dụng.
+
+22
+00:01:18,380 --> 00:01:20,300
+Vì vậy, hãy để tôi chờ đợi cho điều đó.
+
+23
+00:01:22,980 --> 00:01:23,550
+Hoàn hảo.
+
+24
+00:01:23,550 --> 00:01:24,910
+Điều đó được thực hiện ở đây.
+
+25
+00:01:24,930 --> 00:01:28,590
+Hãy để tôi chọn tiếp theo ở đây và kết thúc điều đó.
+
+26
+00:01:30,850 --> 00:01:32,130
+Hồ sơ đã công bố.
+
+27
+00:01:32,140 --> 00:01:33,980
+Nó thành công ở đây.
+
+28
+00:01:34,000 --> 00:01:38,080
+Hãy để tôi đóng và chúng tôi xem hồ sơ xuất bản mới.
+
+29
+00:01:38,500 --> 00:01:42,010
+Bây giờ, khi chúng tôi đang sử dụng Dotnet 8, nó sẽ ở dạng xem trước.
+
+30
+00:01:42,040 --> 00:01:44,310
+Do đó, chế độ triển khai.
+
+31
+00:01:44,320 --> 00:01:46,270
+Chúng tôi sẽ phải chỉnh sửa điều đó.
+
+32
+00:01:46,900 --> 00:01:49,040
+Và hãy để tôi mở rộng điều này.
+
+33
+00:01:49,060 --> 00:01:51,100
+Đó sẽ là khép kín.
+
+34
+00:01:51,460 --> 00:01:57,700
+Nếu là Dotnet 7, thì bạn có thể sử dụng phụ thuộc vào khung, nhưng với phiên bản xem trước, bạn
+
+35
+00:01:57,700 --> 00:01:59,290
+phải sử dụng khép kín.
+
+36
+00:02:00,320 --> 00:02:04,820
+Chúng tôi cuộn xuống đây và nó đang yêu cầu chúng tôi cung cấp cơ sở dữ liệu.
+
+37
+00:02:05,090 --> 00:02:07,040
+Chúng tôi không có điều đó ở đây.
+
+38
+00:02:07,310 --> 00:02:08,810
+Vì vậy, hãy để tôi tiết kiệm điều này.
+
+39
+00:02:08,810 --> 00:02:15,350
+Và nếu bạn cuộn xuống trong Visual Studio, bạn có thể thấy trong phần phụ thuộc dịch vụ, nó nói
+
+40
+00:02:15,500 --> 00:02:18,230
+rằng, cần có cơ sở dữ liệu SQL Server.
+
+41
+00:02:18,620 --> 00:02:23,750
+Nếu tôi chọn dấu cộng ở đây, tôi sẽ có thể tạo phần phụ thuộc đó.
+
+42
+00:02:24,560 --> 00:02:29,900
+Vì vậy, chúng tôi sẽ tìm kiếm SQL Server và chúng tôi có cơ sở dữ liệu Azure SQL.
+
+43
+00:02:30,350 --> 00:02:39,170
+Hãy để tôi chọn Cơ sở dữ liệu SQL Azure và chúng tôi sẽ tạo cơ sở dữ liệu SQL mới trực tiếp từ Visual Studio.
+
+44
+00:02:39,440 --> 00:02:42,590
+Bạn có thể đặt cho nó bất kỳ tên cơ sở dữ liệu nào bạn muốn.
+
+45
+00:02:42,620 --> 00:02:44,750
+Nhóm tài nguyên sẽ giống nhau.
+
+46
+00:02:44,810 --> 00:02:47,330
+Dự án Dotnet Mastery Live.
+
+47
+00:02:47,330 --> 00:02:50,750
+Và sau đó chúng ta sẽ tạo một máy chủ cơ sở dữ liệu mới.
+
+48
+00:02:50,750 --> 00:02:55,790
+Và hãy để tôi gọi máy chủ trực tiếp cuốn sách cồng kềnh đó.
+
+49
+00:02:56,120 --> 00:02:58,850
+Chúng tôi cần một tên người dùng và mật khẩu.
+
+50
+00:02:59,000 --> 00:03:00,790
+Hãy để tôi thêm điều đó.
+
+51
+00:03:00,810 --> 00:03:02,000
+Cuộn xuống.
+
+52
+00:03:02,010 --> 00:03:04,200
+Chúng tôi có một mật khẩu xác nhận.
+
+53
+00:03:05,210 --> 00:03:05,780
+Hoàn hảo.
+
+54
+00:03:05,780 --> 00:03:06,860
+Trông tôt đây.
+
+55
+00:03:07,660 --> 00:03:10,660
+Vì vậy, chúng tôi đang tạo một máy chủ cơ sở dữ liệu mới.
+
+56
+00:03:10,840 --> 00:03:17,500
+Nhưng một điều còn thiếu ở đây là khi chúng tôi tạo một máy chủ mới ở đây, nó không cung cấp
+
+57
+00:03:17,500 --> 00:03:21,190
+cho chúng tôi tùy chọn để chọn loại như thế nào?
+
+58
+00:03:21,220 --> 00:03:22,780
+Nó là một phiên bản?
+
+59
+00:03:22,780 --> 00:03:24,850
+Đó là một sự phát triển sản xuất.
+
+60
+00:03:24,880 --> 00:03:26,440
+Chúng tôi không nhận được điều đó.
+
+61
+00:03:26,770 --> 00:03:30,400
+Vì vậy, đó là một hạn chế mà chúng tôi có ngay tại đây.
+
+62
+00:03:31,120 --> 00:03:33,940
+Hãy để tôi tạo và xem những gì sẽ xảy ra.
+
+63
+00:03:34,360 --> 00:03:41,410
+Nếu bạn tạo Máy chủ SQL trực tiếp từ Cổng thông tin Azure, thì bạn sẽ có thể chọn kích thước bạn
+
+64
+00:03:41,410 --> 00:03:42,100
+muốn.
+
+65
+00:03:42,100 --> 00:03:46,720
+Nhưng chúng tôi không có tùy chọn đó trong Visual Studio ngay bây giờ.
+
+66
+00:03:47,260 --> 00:03:53,410
+Bây giờ đó không phải là vấn đề lớn vì tôi luôn có thể truy cập Azure và tạo cơ sở dữ liệu đó.
+
+67
+00:03:53,410 --> 00:03:58,840
+Nhưng tôi muốn cho bạn thấy từ Visual Studio đó là lý do tại sao chúng tôi đang sử dụng cái này.
+
+68
+00:04:01,710 --> 00:04:02,370
+Hoàn hảo.
+
+69
+00:04:02,370 --> 00:04:03,180
+Thế là xong.
+
+70
+00:04:03,180 --> 00:04:09,030
+Chúng tôi sẽ chọn cái đó, nhấn nút tiếp theo và chúng tôi có chuỗi kết nối ở đây.
+
+71
+00:04:09,030 --> 00:04:14,280
+Chúng tôi sẽ phải viết tên người dùng và mật khẩu dựa trên kết nối đó.
+
+72
+00:04:14,280 --> 00:04:16,740
+Chuỗi sẽ tự động nhận được điều đó.
+
+73
+00:04:17,399 --> 00:04:24,990
+Sau đó, chúng tôi có thể sao chép chuỗi kết nối và nếu chúng tôi thêm nó vào đây, hãy để tôi cuộn xuống nơi chúng tôi có
+
+74
+00:04:24,990 --> 00:04:26,040
+cơ sở dữ liệu.
+
+75
+00:04:29,100 --> 00:04:34,980
+Chúng tôi sẽ phải thay thế chuỗi đó bằng chuỗi kết nối mới mà chúng tôi đã sao chép và chúng tôi sẽ chọn
+
+76
+00:04:34,980 --> 00:04:38,340
+sử dụng chuỗi kết nối này khi chạy, hãy lưu chuỗi đó.
+
+77
+00:04:38,340 --> 00:04:45,690
+Và nếu chúng tôi nhận thấy trong dự án web, chúng tôi có sản xuất dấu chấm cài đặt ứng dụng, chúng tôi có thể đến
+
+78
+00:04:45,690 --> 00:04:53,190
+đó và sửa đổi chuỗi kết nối vì theo cách đó, nó sẽ sử dụng chuỗi kết nối đó sau khi ứng dụng được triển khai.
+
+79
+00:04:53,850 --> 00:04:57,240
+Lưu nó ở đây và để tôi xuất bản.
+
+80
+00:04:58,920 --> 00:05:03,210
+Bây giờ trong khi nó đang xuất bản, hãy để tôi quay lại Azure Portal.
+
+81
+00:05:04,790 --> 00:05:05,150
+Ở đó.
+
+82
+00:05:05,150 --> 00:05:10,190
+Hãy để tôi đi đến cơ sở dữ liệu SQL và chúng tôi có cơ sở dữ liệu mới ở đây.
+
+83
+00:05:10,250 --> 00:05:15,110
+Hãy để tôi thu nhỏ lại vì tôi biết máy tính ở đây sẽ có quy mô cao hơn.
+
+84
+00:05:15,760 --> 00:05:22,240
+Vì vậy, nếu chúng tôi chuyển đến Điện toán cộng với dung lượng lưu trữ, bạn có thể thấy chi phí ước tính là 15 ở đây.
+
+85
+00:05:22,270 --> 00:05:24,880
+Hãy để tôi thu nhỏ nó xuống mức cơ bản.
+
+86
+00:05:25,120 --> 00:05:27,520
+Đó là tốt cho thử nghiệm của chúng tôi.
+
+87
+00:05:28,210 --> 00:05:31,630
+Chúng tôi không có tùy chọn đó trong Visual Studio.
+
+88
+00:05:32,450 --> 00:05:34,690
+Hãy để tôi cũng đi đến Máy chủ SQL.
+
+89
+00:05:34,700 --> 00:05:35,350
+Đây.
+
+90
+00:05:35,360 --> 00:05:38,360
+Chúng tôi có máy chủ trực tiếp cuốn sách cồng kềnh.
+
+91
+00:05:38,660 --> 00:05:46,130
+Và ở đó, nếu chúng ta chuyển đến tab mạng, khi chúng ta tạo cái này từ Visual Studio, nó sẽ tự động kiểm tra việc
+
+92
+00:05:46,160 --> 00:05:50,420
+cho phép các dịch vụ Azure và Tài nguyên truy cập vào máy chủ.
+
+93
+00:05:50,600 --> 00:05:52,430
+Vì vậy, đó là một điều tốt.
+
+94
+00:05:53,200 --> 00:05:56,380
+Bạn cũng có thể thêm địa chỉ IP của mình nếu muốn.
+
+95
+00:05:56,380 --> 00:06:01,030
+Và với điều đó, hãy để tôi quay trở lại và chờ triển khai.
+
+96
+00:06:03,590 --> 00:06:04,220
+Hoàn hảo.
+
+97
+00:06:04,220 --> 00:06:06,220
+Nó đang tải ứng dụng.
+
+98
+00:06:06,230 --> 00:06:07,730
+Hãy để tôi xem.
+
+99
+00:06:09,850 --> 00:06:11,050
+Và tuyệt vời.
+
+100
+00:06:11,170 --> 00:06:16,390
+Bạn có thể thấy ứng dụng của chúng tôi đang hoạt động ở đây và nó trông rất tuyệt.
+
+101
+00:06:16,930 --> 00:06:23,440
+Hãy để tôi đăng nhập tại đây với quản trị viên tại dotnet mastery. com và xem nó có hoạt động không.
+
+102
+00:06:23,560 --> 00:06:25,330
+Điều đó cũng tốt.
+
+103
+00:06:25,360 --> 00:06:31,300
+Chúng tôi đi đến sản phẩm ở đây và để tôi tải lên một hình ảnh cho kẹo bông.
+
+104
+00:06:31,300 --> 00:06:32,590
+Đó là đâu?
+
+105
+00:06:32,770 --> 00:06:33,940
+Ngay chỗ này.
+
+106
+00:06:35,360 --> 00:06:39,530
+Chúng tôi quay lại đây và hình ảnh đó đang xuất hiện.
+

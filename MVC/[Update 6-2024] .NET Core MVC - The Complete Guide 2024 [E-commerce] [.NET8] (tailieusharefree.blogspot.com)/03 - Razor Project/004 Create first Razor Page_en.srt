@@ -1,0 +1,256 @@
+1
+00:00:01,890 --> 00:00:03,719
+Instructor: Now we want to work on the same
+
+2
+00:00:03,719 --> 00:00:05,152
+functionalities that we have
+
+3
+00:00:05,152 --> 00:00:08,193
+in the M V C project with category.
+
+4
+00:00:09,210 --> 00:00:11,353
+In the web project or the M V C project,
+
+5
+00:00:11,353 --> 00:00:14,058
+we had controller, but that is not something
+
+6
+00:00:14,058 --> 00:00:17,853
+that we have when we work with razor pages.
+
+7
+00:00:18,690 --> 00:00:20,610
+There we have the pages
+
+8
+00:00:20,610 --> 00:00:23,280
+and in there we have to organize things.
+
+9
+00:00:23,280 --> 00:00:28,260
+So what we will do is create a new folder for category
+
+10
+00:00:28,260 --> 00:00:31,770
+and inside there for a list of all the categories,
+
+11
+00:00:31,770 --> 00:00:35,070
+I will create a new razor page.
+
+12
+00:00:35,070 --> 00:00:38,583
+We don't have view here, we have razor pages.
+
+13
+00:00:39,780 --> 00:00:43,350
+When we say a razor page, we have the empty razor page.
+
+14
+00:00:43,350 --> 00:00:46,140
+We will get started with that.
+
+15
+00:00:46,140 --> 00:00:47,910
+The index page, we can call that
+
+16
+00:00:47,910 --> 00:00:52,020
+for categories where we are listing all the categories.
+
+17
+00:00:52,020 --> 00:00:56,070
+But I have one small suggestion, so let me close this.
+
+18
+00:00:56,070 --> 00:00:58,230
+And where we have the category,
+
+19
+00:00:58,230 --> 00:01:01,440
+if you know in model we have the same name.
+
+20
+00:01:01,440 --> 00:01:03,210
+If you want to use the same name,
+
+21
+00:01:03,210 --> 00:01:06,330
+you can go ahead and do that, but then you will
+
+22
+00:01:06,330 --> 00:01:09,873
+have to add the complete using statements many times.
+
+23
+00:01:10,710 --> 00:01:12,420
+In order to avoid that,
+
+24
+00:01:12,420 --> 00:01:14,970
+I will rename this to be categories.
+
+25
+00:01:14,970 --> 00:01:17,673
+That way we do not have to be explicit.
+
+26
+00:01:18,750 --> 00:01:23,220
+Then in categories, we will add the razor page, MT one.
+
+27
+00:01:23,220 --> 00:01:25,140
+We want to start fresh
+
+28
+00:01:25,140 --> 00:01:29,253
+and let me call that Index dot CS HDML.
+
+29
+00:01:30,600 --> 00:01:33,150
+Now in this page you notice something different
+
+30
+00:01:33,150 --> 00:01:36,540
+than when we added a view in M V C.
+
+31
+00:01:36,540 --> 00:01:40,020
+So again, in M V C, I use the term view.
+
+32
+00:01:40,020 --> 00:01:42,990
+In razor pages, we have the razor page
+
+33
+00:01:42,990 --> 00:01:46,023
+and the CS file will be page model.
+
+34
+00:01:46,860 --> 00:01:50,193
+That will be the terminology that I will be using.
+
+35
+00:01:51,060 --> 00:01:52,665
+So in razor page, we have
+
+36
+00:01:52,665 --> 00:01:56,160
+at model that is already being defined
+
+37
+00:01:56,160 --> 00:01:57,477
+and if you examine the path,
+
+38
+00:01:57,477 --> 00:02:01,473
+that is the exact file that we have in the CS file.
+
+39
+00:02:02,580 --> 00:02:06,450
+If you think about that in the M V C, we had to define that.
+
+40
+00:02:06,450 --> 00:02:10,560
+In razor pages, it already creates that CS file and
+
+41
+00:02:10,560 --> 00:02:13,260
+adds that in the add statement.
+
+42
+00:02:13,260 --> 00:02:16,332
+And before that we have the ad page that defines
+
+43
+00:02:16,332 --> 00:02:19,263
+that this will be a razor page.
+
+44
+00:02:20,220 --> 00:02:24,090
+We do not need this here, we can just have an H one
+
+45
+00:02:24,090 --> 00:02:28,053
+and we can say category list like that.
+
+46
+00:02:29,280 --> 00:02:33,030
+With that one line, let me run the razor project.
+
+47
+00:02:33,030 --> 00:02:36,060
+We will have the startup project as a razor
+
+48
+00:02:36,060 --> 00:02:38,370
+throughout this section.
+
+49
+00:02:38,370 --> 00:02:42,120
+So do that and we will run the project.
+
+50
+00:02:42,120 --> 00:02:43,620
+And perfect.
+
+51
+00:02:43,620 --> 00:02:47,850
+Now how will we route to the new page that we added?
+
+52
+00:02:47,850 --> 00:02:50,040
+That is inside categories,
+
+53
+00:02:50,040 --> 00:02:52,980
+so routing is pretty straightforward.
+
+54
+00:02:52,980 --> 00:02:56,490
+Whatever is the location inside the pages folder,
+
+55
+00:02:56,490 --> 00:02:58,110
+that will be the route.
+
+56
+00:02:58,110 --> 00:03:00,840
+So categories, and then index.
+
+57
+00:03:00,840 --> 00:03:03,780
+And we have the category list.
+
+58
+00:03:03,780 --> 00:03:07,380
+Now index is always optional, so if you remove that
+
+59
+00:03:07,380 --> 00:03:09,093
+it will load the same page.
+
+60
+00:03:09,930 --> 00:03:12,919
+But with razor pages, we do not have the complex routing
+
+61
+00:03:12,919 --> 00:03:16,110
+of adding controller action method,
+
+62
+00:03:16,110 --> 00:03:18,033
+and then the route parameters.
+
+63
+00:03:19,200 --> 00:03:22,803
+Razor pages has very straightforward routing.
+
+64
+00:03:23,640 --> 00:03:27,933
+With that configured, let me continue from the next video.
+

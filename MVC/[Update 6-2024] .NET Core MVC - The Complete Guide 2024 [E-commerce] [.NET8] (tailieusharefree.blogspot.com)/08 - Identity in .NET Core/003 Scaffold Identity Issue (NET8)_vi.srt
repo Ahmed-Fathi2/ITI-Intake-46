@@ -1,0 +1,128 @@
+1
+00:00:01,660 --> 00:00:08,860
+Nhận dạng giàn giáo là một trong những thứ luôn có một số vấn đề từ những gì tôi đã gặp phải.
+
+2
+00:00:09,010 --> 00:00:14,230
+Và lần này cũng không khác gì khi chúng ta dàn dựng danh tính.
+
+3
+00:00:14,260 --> 00:00:20,800
+Nếu tôi trực tiếp chạy ứng dụng, bạn sẽ nhận thấy chúng tôi có một ngoại lệ ở đây, nơi chúng tôi đang thấy
+
+4
+00:00:20,800 --> 00:00:23,260
+một ngoại lệ kỳ lạ với đơn vị công việc.
+
+5
+00:00:24,130 --> 00:00:28,600
+Bây giờ vì tôi đã làm việc với danh tính và tôi biết chính xác họ đang làm gì.
+
+6
+00:00:28,630 --> 00:00:35,860
+Về cơ bản, họ đã thêm ngữ cảnh DB ứng dụng mới thay vì sử dụng ứng dụng hiện có.
+
+7
+00:00:35,860 --> 00:00:37,270
+Bối cảnh DB.
+
+8
+00:00:37,420 --> 00:00:40,720
+Bây giờ tại sao họ đang làm điều đó, tôi không biết.
+
+9
+00:00:40,720 --> 00:00:44,180
+Nhưng danh tính luôn có vấn đề này.
+
+10
+00:00:44,950 --> 00:00:52,720
+Vì vậy, để khắc phục điều đó, bạn chỉ cần tìm kiếm ngữ cảnh DB của ứng dụng và bạn có thể thấy trong khu vực nhận dạng,
+
+11
+00:00:52,750 --> 00:00:55,120
+họ đã thêm một ứng dụng mới.
+
+12
+00:00:55,120 --> 00:00:56,830
+Bối cảnh DB là tốt.
+
+13
+00:00:57,540 --> 00:00:59,310
+Mà không cần thiết.
+
+14
+00:00:59,490 --> 00:01:05,349
+Bối cảnh cơ sở dữ liệu ứng dụng này về cơ bản đang triển khai bối cảnh cơ sở dữ liệu nhận dạng.
+
+15
+00:01:05,370 --> 00:01:08,250
+Đó là những gì chúng tôi đã có trong ứng dụng của chúng tôi.
+
+16
+00:01:08,250 --> 00:01:10,020
+bối cảnh DB là tốt.
+
+17
+00:01:10,020 --> 00:01:16,200
+Và bạn có thể thấy dựa trên việc tạo mô hình, đó cũng là những gì chúng tôi đã thêm vào.
+
+18
+00:01:16,440 --> 00:01:22,620
+Điều duy nhất mà chúng tôi không có trong bối cảnh DB ứng dụng của mình là danh tính.
+
+19
+00:01:22,650 --> 00:01:23,850
+ngữ cảnh DB.
+
+20
+00:01:23,880 --> 00:01:28,410
+Chúng tôi chưa xác định người dùng mặc định không bắt buộc.
+
+21
+00:01:28,410 --> 00:01:36,480
+Nó là tùy chọn, nhưng bạn luôn có thể xác định điều đó và hoàn thiện rằng nó hoàn toàn giống nhau.
+
+22
+00:01:37,080 --> 00:01:42,930
+Vì vậy, những gì chúng tôi có thể làm là đóng mọi thứ ở đây và để tôi xóa ứng dụng.
+
+23
+00:01:42,930 --> 00:01:47,430
+Bối cảnh DB nằm trong dự án web sách cồng kềnh.
+
+24
+00:01:48,420 --> 00:01:49,950
+Chúng tôi không cần điều đó.
+
+25
+00:01:50,430 --> 00:01:54,450
+Với điều đó đã bị xóa, hãy để tôi cố gắng xây dựng giải pháp.
+
+26
+00:01:56,610 --> 00:01:57,180
+Hoàn hảo.
+
+27
+00:01:57,180 --> 00:01:58,910
+Mọi thứ đều thành công.
+
+28
+00:01:58,920 --> 00:02:03,210
+Hãy để tôi thử chạy dự án và xem nó có hoạt động không.
+
+29
+00:02:04,020 --> 00:02:05,490
+Và hoàn hảo.
+
+30
+00:02:05,490 --> 00:02:07,380
+Tất cả mọi thứ là chức năng.
+
+31
+00:02:08,039 --> 00:02:14,700
+Vì vậy, bây giờ ứng dụng của chúng tôi đang hoạt động như mong đợi với danh tính được dàn dựng.
+
+32
+00:02:15,360 --> 00:02:21,600
+Và với điều đó được định cấu hình ngay bây giờ, hãy để tôi hướng dẫn bạn tất cả các thay đổi trong video tiếp theo.
+

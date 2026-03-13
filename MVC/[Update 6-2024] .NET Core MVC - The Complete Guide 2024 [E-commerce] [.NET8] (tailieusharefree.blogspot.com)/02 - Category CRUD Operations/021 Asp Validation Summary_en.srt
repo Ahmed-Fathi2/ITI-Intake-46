@@ -1,0 +1,268 @@
+1
+00:00:02,550 --> 00:00:10,410
+Last video we added validation summary all because of that, along with the individual validation that
+
+2
+00:00:10,410 --> 00:00:11,000
+we have.
+
+3
+00:00:11,010 --> 00:00:15,780
+It also displays all the validation in the summary right here.
+
+4
+00:00:16,170 --> 00:00:23,490
+But on top of that, for our custom validation, if we make both the values same and press create,
+
+5
+00:00:23,520 --> 00:00:27,180
+we see that in the validation summary as well.
+
+6
+00:00:28,070 --> 00:00:29,270
+That is great.
+
+7
+00:00:29,300 --> 00:00:36,920
+But now if we go to category controller, I added that custom error under the name or under the key
+
+8
+00:00:36,920 --> 00:00:38,420
+value of name.
+
+9
+00:00:38,720 --> 00:00:42,800
+Let me add one more validation here and not restart.
+
+10
+00:00:42,800 --> 00:00:44,840
+I want to stop the website.
+
+11
+00:00:45,720 --> 00:00:50,160
+And in the controller copy and paste it one more time.
+
+12
+00:00:51,250 --> 00:00:52,060
+This time.
+
+13
+00:00:52,060 --> 00:00:55,740
+If the value of name is equal equal to test.
+
+14
+00:00:55,750 --> 00:01:02,980
+In that case, I want to display another validation or an error message, but that will not be under
+
+15
+00:01:02,980 --> 00:01:04,060
+any key name.
+
+16
+00:01:04,060 --> 00:01:11,470
+It will be empty and I will display test is an invalid value.
+
+17
+00:01:13,580 --> 00:01:16,730
+And I can convert this to be lower here.
+
+18
+00:01:17,120 --> 00:01:17,960
+Perfect.
+
+19
+00:01:18,840 --> 00:01:23,160
+So with that configured, let me run this and try that.
+
+20
+00:01:26,810 --> 00:01:36,770
+We go to category here and we have the category name, We put that as test display order as zero and
+
+21
+00:01:36,770 --> 00:01:37,490
+perfect.
+
+22
+00:01:37,520 --> 00:01:40,220
+It displays both of the validation.
+
+23
+00:01:40,370 --> 00:01:47,210
+But you can see because we did not validate or because we did not have the name here inside the key,
+
+24
+00:01:47,240 --> 00:01:54,500
+it did not bind that to the category name, but it displays that validation in the global summary that
+
+25
+00:01:54,500 --> 00:01:55,310
+we have.
+
+26
+00:01:55,880 --> 00:02:01,310
+And that is because in ASP validation summary, we have that as all.
+
+27
+00:02:02,150 --> 00:02:07,220
+Now let's see what is different if I change that to be model only.
+
+28
+00:02:08,500 --> 00:02:17,080
+So rather than all, if this is model only and if I restart the application, when we say model only,
+
+29
+00:02:17,080 --> 00:02:23,460
+it will only display the values that have error in model but not any properties.
+
+30
+00:02:23,500 --> 00:02:29,320
+So let me try test here and zero and it will only display the error.
+
+31
+00:02:29,320 --> 00:02:31,840
+That test is invalid value.
+
+32
+00:02:32,590 --> 00:02:39,100
+You can see it does not display property related validations in the validation summary.
+
+33
+00:02:40,490 --> 00:02:48,080
+So when it says model only, it will not display any error messages related to a property like name
+
+34
+00:02:48,080 --> 00:02:49,430
+or display order.
+
+35
+00:02:49,880 --> 00:02:54,060
+The other error that we have is not related to any properties.
+
+36
+00:02:54,080 --> 00:02:58,790
+Because of that we are able to see test is an invalid value.
+
+37
+00:03:00,200 --> 00:03:04,280
+And the final option that we have is none here.
+
+38
+00:03:04,490 --> 00:03:06,890
+And that is self explanatory.
+
+39
+00:03:06,920 --> 00:03:11,810
+It will not display any error message in the validation summary.
+
+40
+00:03:11,840 --> 00:03:13,400
+Let me show that.
+
+41
+00:03:19,140 --> 00:03:22,470
+We have an exception here because that is not set.
+
+42
+00:03:22,680 --> 00:03:26,130
+I can just add obj.name.
+
+43
+00:03:26,860 --> 00:03:31,030
+Is not null and perfect.
+
+44
+00:03:31,270 --> 00:03:32,560
+Let's try that.
+
+45
+00:03:34,620 --> 00:03:36,810
+We go to category here?
+
+46
+00:03:37,600 --> 00:03:42,860
+Create and try that and perfect with none.
+
+47
+00:03:42,880 --> 00:03:45,970
+It does not display any error message.
+
+48
+00:03:46,300 --> 00:03:47,410
+So perfect.
+
+49
+00:03:47,410 --> 00:03:52,150
+With that you can see the difference between all model only and none.
+
+50
+00:03:52,540 --> 00:03:56,500
+Now one real time use case is on the login page.
+
+51
+00:03:56,650 --> 00:03:59,410
+What you can do is username and password.
+
+52
+00:03:59,410 --> 00:04:01,330
+Both will be required fields.
+
+53
+00:04:01,330 --> 00:04:06,130
+So in that case, if they do not input that you can display them right here.
+
+54
+00:04:06,130 --> 00:04:13,480
+But if the input that and something is not valid, then you can add a custom error message and display
+
+55
+00:04:13,480 --> 00:04:18,399
+that using model only in the ASP validation summary.
+
+56
+00:04:18,820 --> 00:04:25,660
+But for now we will go back to the application and let me remove this custom.
+
+57
+00:04:25,660 --> 00:04:30,670
+I only added because I want it to show the model only difference.
+
+58
+00:04:30,670 --> 00:04:35,740
+And in the create here we can make this as model only.
+
+59
+00:04:37,650 --> 00:04:38,340
+Perfect.
+
+60
+00:04:38,370 --> 00:04:39,610
+Save that.
+
+61
+00:04:39,630 --> 00:04:42,220
+Or rather, I do not need the validation summary.
+
+62
+00:04:42,240 --> 00:04:45,060
+For now I can just comment that out.
+
+63
+00:04:45,090 --> 00:04:49,800
+We have the individual validation and that should be sufficient.
+
+64
+00:04:49,950 --> 00:04:53,370
+I can comment out the custom validation as well.
+
+65
+00:04:54,140 --> 00:04:54,710
+With that.
+
+66
+00:04:54,710 --> 00:05:01,130
+If I restart the application, we still have the basic property validations that are being displayed.
+
+67
+00:05:01,840 --> 00:05:06,340
+So with that in place, let me continue from the next video.
+

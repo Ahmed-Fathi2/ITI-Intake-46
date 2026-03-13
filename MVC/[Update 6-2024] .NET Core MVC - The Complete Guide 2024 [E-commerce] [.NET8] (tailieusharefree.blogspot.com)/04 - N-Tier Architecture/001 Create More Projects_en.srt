@@ -1,0 +1,244 @@
+1
+00:00:01,980 --> 00:00:03,360
+Instructor: Now the Razor project
+
+2
+00:00:03,360 --> 00:00:05,310
+that we implemented was only
+
+3
+00:00:05,310 --> 00:00:07,440
+for learning purpose.
+
+4
+00:00:07,440 --> 00:00:08,730
+We do not want that
+
+5
+00:00:08,730 --> 00:00:11,280
+in our main project for Bulky,
+
+6
+00:00:11,280 --> 00:00:13,833
+so let me remove that project here.
+
+7
+00:00:15,510 --> 00:00:16,950
+and perfect.
+
+8
+00:00:16,950 --> 00:00:18,840
+It is no longer there,
+
+9
+00:00:18,840 --> 00:00:23,130
+and in the Bulky, let me create more project.
+
+10
+00:00:23,130 --> 00:00:24,810
+Typically, when we are working
+
+11
+00:00:24,810 --> 00:00:26,670
+with a real-world project
+
+12
+00:00:26,670 --> 00:00:30,630
+we do not like to cluster everything together.
+
+13
+00:00:30,630 --> 00:00:31,463
+Like right now,
+
+14
+00:00:31,463 --> 00:00:33,270
+you can see we have the data here.
+
+15
+00:00:33,270 --> 00:00:35,430
+We have all the models here.
+
+16
+00:00:35,430 --> 00:00:39,030
+If we have any constants, we will add them here.
+
+17
+00:00:39,030 --> 00:00:41,430
+But in a real-world application,
+
+18
+00:00:41,430 --> 00:00:43,440
+it is best to keep everything
+
+19
+00:00:43,440 --> 00:00:45,873
+separate in its own project.
+
+20
+00:00:46,710 --> 00:00:47,970
+So we will be creating
+
+21
+00:00:47,970 --> 00:00:50,520
+class projects in solution.
+
+22
+00:00:50,520 --> 00:00:52,320
+Select a new project,
+
+23
+00:00:52,320 --> 00:00:55,443
+and we will search for a class library.
+
+24
+00:00:56,580 --> 00:00:58,680
+First one that we want to create
+
+25
+00:00:58,680 --> 00:01:02,523
+will be Bulky.DataAccess.
+
+26
+00:01:04,950 --> 00:01:06,840
+This project will have everything
+
+27
+00:01:06,840 --> 00:01:08,820
+related to database.
+
+28
+00:01:08,820 --> 00:01:10,920
+Like we have the DB context,
+
+29
+00:01:10,920 --> 00:01:13,620
+we will move that in the data access
+
+30
+00:01:13,620 --> 00:01:15,453
+along with the migrations.
+
+31
+00:01:16,350 --> 00:01:20,580
+So let me select that with the .NET framework.
+
+32
+00:01:20,580 --> 00:01:21,960
+Perfect.
+
+33
+00:01:21,960 --> 00:01:23,910
+Next one, let me create
+
+34
+00:01:23,910 --> 00:01:26,820
+the same class library here,
+
+35
+00:01:26,820 --> 00:01:29,340
+and that one will be Bulky.
+
+36
+00:01:29,340 --> 00:01:30,810
+Let me make sure the name.
+
+37
+00:01:30,810 --> 00:01:31,643
+Yep.
+
+38
+00:01:31,643 --> 00:01:32,643
+It will be Bulky.
+
+39
+00:01:33,630 --> 00:01:35,730
+And then we will move all the models
+
+40
+00:01:35,730 --> 00:01:37,353
+in its own project.
+
+41
+00:01:38,400 --> 00:01:40,713
+Select that and create.
+
+42
+00:01:41,820 --> 00:01:44,550
+Finally, I want to add one more project,
+
+43
+00:01:44,550 --> 00:01:48,783
+which will be Bulky.Utility.
+
+44
+00:01:49,620 --> 00:01:51,930
+For all the utilities that we will add
+
+45
+00:01:51,930 --> 00:01:53,430
+in our project,
+
+46
+00:01:53,430 --> 00:01:55,560
+like email functionality
+
+47
+00:01:55,560 --> 00:01:58,590
+or maybe constants for our application,
+
+48
+00:01:58,590 --> 00:02:02,433
+we will have all of them in the utility project.
+
+49
+00:02:03,450 --> 00:02:06,270
+Let me create that project as well,
+
+50
+00:02:06,270 --> 00:02:08,733
+and I will remove all the class files.
+
+51
+00:02:12,930 --> 00:02:15,180
+We will be creating new class files
+
+52
+00:02:15,180 --> 00:02:17,880
+when needed but perfect.
+
+53
+00:02:17,880 --> 00:02:20,310
+Now back to the MVC project.
+
+54
+00:02:20,310 --> 00:02:22,020
+We have the Bulky Web.
+
+55
+00:02:22,020 --> 00:02:23,400
+Bulky Utility.
+
+56
+00:02:23,400 --> 00:02:24,900
+Bulky Models.
+
+57
+00:02:24,900 --> 00:02:27,273
+And Bulky Data Access.
+
+58
+00:02:28,440 --> 00:02:29,970
+In the next video,
+
+59
+00:02:29,970 --> 00:02:32,670
+let me remove all the logic that is bundled
+
+60
+00:02:32,670 --> 00:02:34,020
+in the Bulky Web
+
+61
+00:02:34,020 --> 00:02:36,603
+to the individual class libraries.
+

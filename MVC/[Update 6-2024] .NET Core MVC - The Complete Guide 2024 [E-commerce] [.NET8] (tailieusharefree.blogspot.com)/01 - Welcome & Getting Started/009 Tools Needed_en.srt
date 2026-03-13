@@ -1,0 +1,52 @@
+1
+00:00:01,819 --> 00:00:05,480
+Now, when we are programming, we will require some tools.
+
+2
+00:00:05,990 --> 00:00:09,500
+These are the three tools that you will need for this course.
+
+3
+00:00:10,160 --> 00:00:14,120
+First, you will have to install .net seven or .NET eight.
+
+4
+00:00:14,450 --> 00:00:19,670
+When you are taking this course, if .net eight or latest version of .net.
+
+5
+00:00:19,700 --> 00:00:25,880
+If that is in preview, then make sure to download the preview version and follow along.
+
+6
+00:00:26,510 --> 00:00:34,100
+You will require Visual Studio 2022 if you are using .net seven because .net eight is in preview
+
+7
+00:00:34,100 --> 00:00:34,940
+right now.
+
+8
+00:00:35,060 --> 00:00:42,890
+But if you download .net eight then you can download Visual Studio 2022 preview and with that we will
+
+9
+00:00:42,890 --> 00:00:45,170
+be able to use .net eight.
+
+10
+00:00:46,540 --> 00:00:53,080
+Finally, for the database, we will require SQL Server and SQL Server Management Studio.
+
+11
+00:00:53,440 --> 00:00:59,440
+So basically you can follow along with this course using .net seven or .net eight.
+
+12
+00:01:00,950 --> 00:01:08,480
+I will also have links to everything in the description of the video, so make sure to download them
+
+13
+00:01:08,480 --> 00:01:11,720
+and let me continue from the next video.
+

@@ -1,0 +1,168 @@
+1
+00:00:01,540 --> 00:00:07,570
+Khi bạn đang làm việc với Core framework thực thể và bạn chỉ mới bắt đầu, bạn có thể gặp phải một
+
+2
+00:00:07,570 --> 00:00:13,450
+số vấn đề với quá trình di chuyển và một số thứ có thể không hoạt động dựa trên những gì bạn mong
+
+3
+00:00:13,450 --> 00:00:14,320
+đợi.
+
+4
+00:00:14,320 --> 00:00:20,440
+Và migration là thứ rất dễ bị hỏng nếu bạn không chú ý.
+
+5
+00:00:21,620 --> 00:00:24,370
+Bạn luôn có thể khôi phục quá trình di chuyển.
+
+6
+00:00:24,380 --> 00:00:28,550
+Bạn có thể thực hiện nhiều thay đổi hơn, tạo mô hình, thêm di chuyển mới.
+
+7
+00:00:28,550 --> 00:00:35,030
+Nhưng vì một số lý do, nếu mọi thứ bị hỏng và bạn muốn bắt đầu lại từ đầu khi học, bạn phải làm
+
+8
+00:00:35,030 --> 00:00:35,810
+thế nào?
+
+9
+00:00:36,500 --> 00:00:38,900
+Làm điều đó là khá đơn giản.
+
+10
+00:00:39,110 --> 00:00:42,650
+Vì vậy, hãy để tôi chỉ cho bạn cách làm điều đó trong video này.
+
+11
+00:00:43,500 --> 00:00:48,360
+Điều đầu tiên, chúng tôi sẽ truy cập SQL Server tại đây và mọi thứ đều bị hỏng.
+
+12
+00:00:48,360 --> 00:00:52,920
+Vì vậy, chúng tôi sẽ xóa cơ sở dữ liệu cồng kềnh ngay tại đây.
+
+13
+00:00:53,520 --> 00:00:54,900
+Hãy xóa nó đi.
+
+14
+00:00:55,700 --> 00:00:59,600
+Tiếp theo, chúng ta sẽ quay lại đây bên trong phần truy cập dữ liệu.
+
+15
+00:00:59,630 --> 00:01:01,220
+Chúng tôi có những cuộc di cư.
+
+16
+00:01:01,640 --> 00:01:05,610
+Bây giờ quá trình di chuyển của chúng tôi bị hỏng và chúng tôi muốn bắt đầu lại từ đầu.
+
+17
+00:01:05,630 --> 00:01:08,630
+Bạn có thể xóa hoàn toàn các lần di chuyển.
+
+18
+00:01:09,550 --> 00:01:10,360
+Hoàn hảo.
+
+19
+00:01:10,570 --> 00:01:12,340
+Bây giờ, không có di cư.
+
+20
+00:01:12,340 --> 00:01:15,330
+Không có cơ sở dữ liệu để bắt đầu mới.
+
+21
+00:01:15,340 --> 00:01:21,010
+Bạn có thể đi tới các công cụ, bảng điều khiển trình quản lý gói và thêm một lần di chuyển mới.
+
+22
+00:01:22,110 --> 00:01:30,060
+Chúng tôi biết ngay bây giờ chúng tôi chỉ thêm mô hình danh mục để có thể nói thêm danh mục vào DB và chúng
+
+23
+00:01:30,060 --> 00:01:32,760
+tôi cũng đang tạo bảng danh mục.
+
+24
+00:01:33,570 --> 00:01:38,070
+Vì vậy, chúng tôi sẽ nói thêm danh mục vào DB và bảng hạt giống.
+
+25
+00:01:38,430 --> 00:01:43,980
+Bây giờ khi bạn thực hiện điều này, bạn sẽ thấy một thông báo lỗi và thế là xong.
+
+26
+00:01:43,980 --> 00:01:46,500
+Dự án Mục tiêu là trang web cồng kềnh.
+
+27
+00:01:46,710 --> 00:01:54,930
+Bây giờ chúng tôi đã chuyển dữ liệu của mình sang dự án truy cập dữ liệu, vì vậy dự án mặc định phải được cập nhật để truy cập
+
+28
+00:01:54,930 --> 00:01:55,800
+dữ liệu.
+
+29
+00:01:56,220 --> 00:02:02,230
+Vì vậy, dự án mặc định sẽ là truy cập dữ liệu và dự án khởi động mặc định là web cồng kềnh.
+
+30
+00:02:02,250 --> 00:02:07,110
+Với cấu hình đó, nếu tôi chạy cái này, nó sẽ thêm di chuyển.
+
+31
+00:02:07,830 --> 00:02:14,220
+Bây giờ, ngay bây giờ không có sự di chuyển nào trước đó, vì vậy những gì nó sẽ làm là nó sẽ xác định tất cả những
+
+32
+00:02:14,220 --> 00:02:17,190
+thay đổi mà nó phải đẩy sang một cơ sở dữ liệu mới.
+
+33
+00:02:17,400 --> 00:02:21,600
+Nó phải tạo bảng danh mục, nó phải chèn dữ liệu.
+
+34
+00:02:21,600 --> 00:02:23,940
+Và đó là tất cả những gì chúng ta có lúc này.
+
+35
+00:02:24,820 --> 00:02:32,440
+Với cấu hình đó, chúng tôi có thể nhấn cơ sở dữ liệu cập nhật lệnh và cơ sở dữ liệu của chúng tôi sẽ được điền.
+
+36
+00:02:33,980 --> 00:02:34,610
+Hoàn hảo.
+
+37
+00:02:34,610 --> 00:02:44,270
+Nếu chúng tôi quay lại và làm mới cơ sở dữ liệu ở đây, chúng tôi sẽ có các bảng cồng kềnh và chúng tôi sẽ có các danh mục được điền.
+
+38
+00:02:45,760 --> 00:02:46,480
+Tuyệt vời.
+
+39
+00:02:46,630 --> 00:02:53,740
+Vì vậy, nhược điểm duy nhất lần này là nếu bạn đã thêm một số danh mục mới, thì những danh mục đó sẽ không khả dụng
+
+40
+00:02:53,770 --> 00:02:55,990
+vì chúng tôi đang bắt đầu làm mới.
+
+41
+00:02:56,740 --> 00:03:03,100
+Nhưng về cơ bản, bất cứ lúc nào trong video, nếu quá trình di chuyển của bạn bị hỏng và bạn không biết cách
+
+42
+00:03:03,100 --> 00:03:06,850
+đặt lại cơ sở dữ liệu của mình, thì đây là video mà bạn nên tìm.
+

@@ -1,0 +1,456 @@
+1
+00:00:01,430 --> 00:00:07,700
+Bây giờ trong ứng dụng có giỏ hàng, nếu người dùng thêm mặt hàng vào giỏ hàng, chúng
+
+2
+00:00:07,730 --> 00:00:12,200
+tôi muốn hiển thị số lượng mặt hàng bên trong giỏ hàng.
+
+3
+00:00:12,930 --> 00:00:19,650
+Bây giờ, thông thường khi chúng tôi làm việc với ứng dụng mạng truyền thống, chúng tôi có một thứ gọi là phiên.
+
+4
+00:00:20,040 --> 00:00:27,180
+Chúng tôi cũng có các phiên trong lõi Dotnet, nhưng trong dự án mặc định, nó không được thêm vào theo mặc định.
+
+5
+00:00:28,050 --> 00:00:35,130
+Chúng tôi phải định cấu hình ứng dụng của mình để thêm phiên và bất cứ khi nào chúng tôi phải thực hiện một số cấu hình, chúng tôi sẽ thực hiện
+
+6
+00:00:35,130 --> 00:00:38,520
+điều đó trong chương trình. tập tin cs.
+
+7
+00:00:38,880 --> 00:00:44,760
+Vì vậy, ngay tại đó chúng tôi có trình xây dựng. services, chúng tôi sẽ phải thêm hai điều ở đây.
+
+8
+00:00:45,060 --> 00:00:51,870
+Đầu tiên, chúng ta phải thêm một thứ gọi là bộ nhớ cache phân tán, sau đó chúng ta phải thêm phiên.
+
+9
+00:00:52,290 --> 00:00:56,520
+Khi chúng tôi thêm phiên, chúng tôi có thể định cấu hình nhiều thuộc tính.
+
+10
+00:00:56,610 --> 00:00:59,790
+Tôi đang thêm ba tùy chọn ngay tại đây.
+
+11
+00:01:00,850 --> 00:01:04,120
+Vì vậy, đó là thêm phiên vào dịch vụ.
+
+12
+00:01:04,360 --> 00:01:08,950
+Nhưng chúng tôi cũng phải thêm phiên trong đường dẫn yêu cầu của mình.
+
+13
+00:01:09,610 --> 00:01:14,860
+Vì vậy, sau khi ủy quyền, chúng tôi sẽ nói phiên sử dụng dấu chấm ứng dụng.
+
+14
+00:01:15,070 --> 00:01:20,140
+Và cùng với đó, ứng dụng của chúng tôi hiện được định cấu hình để sử dụng phiên.
+
+15
+00:01:20,800 --> 00:01:25,540
+Nhưng sau đó, câu hỏi chính là làm cách nào để thêm phiên vào dự án?
+
+16
+00:01:27,090 --> 00:01:28,770
+Vâng để làm điều đó.
+
+17
+00:01:28,800 --> 00:01:35,070
+Đầu tiên, tôi không thích sử dụng chuỗi ma thuật, vì vậy hãy để tôi thêm một hằng số cho phiên.
+
+18
+00:01:35,340 --> 00:01:44,130
+Tôi sẽ gọi thẻ phiên hằng số công khai đó và tôi sẽ gán cho nó một giá trị giỏ mua hàng phiên Khi chúng ta làm việc với
+
+19
+00:01:44,130 --> 00:01:47,460
+phiên, về cơ bản nó là một giá trị khóa.
+
+20
+00:01:47,460 --> 00:01:50,040
+Vì vậy, chúng tôi chỉ đưa ra một tên khóa duy nhất.
+
+21
+00:01:50,040 --> 00:01:55,170
+Bằng cách đó, chúng tôi có thể truy cập hoặc đặt phiên của chúng tôi trong dự án.
+
+22
+00:01:55,880 --> 00:02:03,170
+Câu hỏi tiếp theo mà bạn phải hỏi là chúng tôi sẽ đặt phiên ở đâu trước tiên khi chúng tôi thêm bất kỳ mặt hàng
+
+23
+00:02:03,170 --> 00:02:06,920
+nào vào giỏ hàng bên trong bộ điều khiển gia đình?
+
+24
+00:02:07,890 --> 00:02:10,740
+Chúng tôi có các chi tiết ngay tại đây.
+
+25
+00:02:10,740 --> 00:02:13,380
+Chúng tôi đang thêm các mặt hàng mới vào giỏ hàng.
+
+26
+00:02:13,830 --> 00:02:20,130
+Bất cứ khi nào chúng tôi thêm mặt hàng mới vào giỏ hàng, chúng tôi sẽ thêm giá trị đó vào phiên.
+
+27
+00:02:20,960 --> 00:02:24,140
+Vì vậy, để thiết lập điều đó, nó khá đơn giản.
+
+28
+00:02:24,350 --> 00:02:27,470
+Chúng tôi có httpcontext trên đó.
+
+29
+00:02:27,470 --> 00:02:35,840
+Chúng tôi sẽ nói thiết lập dấu chấm phiên Int32 và khi chúng tôi thiết lập điều đó, chúng tôi cần một khóa và một giá trị.
+
+30
+00:02:35,960 --> 00:02:42,650
+Bây giờ, thay vì sử dụng các chuỗi ma thuật, chúng tôi đã thêm một hằng số cho tên khóa bên
+
+31
+00:02:42,680 --> 00:02:51,800
+trong thẻ phiên chấm chi tiết tĩnh và giá trị sẽ là gì Bây giờ để có giá trị, chúng tôi phải truy cập cơ sở dữ liệu và lấy tất
+
+32
+00:02:51,800 --> 00:02:59,540
+cả giỏ hàng cho ID người dùng đó ngay tại đây Chúng tôi đang lấy ID đó cho ID người dùng cũng như ID sản
+
+33
+00:02:59,540 --> 00:03:08,000
+phẩm, nhưng về cơ bản, chúng tôi phải lấy ID đó cho ID người dùng để tôi có thể sao chép và dán nó vào đây.
+
+34
+00:03:08,450 --> 00:03:16,190
+Và hãy để tôi thêm dấu ngoặc đóng ở đó, trên đó chúng tôi sẽ gọi số lượng và về cơ bản đó sẽ là số
+
+35
+00:03:16,190 --> 00:03:21,060
+lượng các mục riêng biệt mà người dùng đã đăng nhập có.
+
+36
+00:03:21,840 --> 00:03:26,460
+Vì vậy, theo cách đó, chúng tôi đang thiết lập phiên của Số nguyên ngay tại đây.
+
+37
+00:03:26,820 --> 00:03:31,200
+Khi bạn làm việc với lõi Dotnet, bạn đã đặt int và đặt chuỗi.
+
+38
+00:03:31,230 --> 00:03:33,810
+Chúng có sẵn theo mặc định.
+
+39
+00:03:34,140 --> 00:03:41,070
+Nhưng nếu bạn muốn triển khai tùy chỉnh như đặt đối tượng tùy chỉnh, bạn cũng có thể làm điều đó, nhưng
+
+40
+00:03:41,070 --> 00:03:43,530
+điều đó yêu cầu một số cấu hình.
+
+41
+00:03:44,340 --> 00:03:49,050
+Nhưng đối với trường hợp của chúng tôi, đầu cuối đang hoạt động như mong đợi.
+
+42
+00:03:49,860 --> 00:03:55,680
+Bây giờ trên trang bố cục nơi chúng tôi có giỏ hàng, chúng tôi muốn hiển thị số lượng này có trong
+
+43
+00:03:55,680 --> 00:03:57,030
+phiên của chúng tôi.
+
+44
+00:03:57,330 --> 00:04:01,230
+Vì vậy, chúng tôi muốn truy cập phiên trong bố cục được gạch chân.
+
+45
+00:04:01,530 --> 00:04:07,440
+Nếu bạn cố truy cập ngữ cảnh HTTP trong bố cục gạch dưới, nó sẽ không hoạt động.
+
+46
+00:04:07,710 --> 00:04:13,830
+Khi bạn đang ở trong chế độ xem nếu bạn muốn thứ gì đó, bạn phải tiêm thứ đó một cách rõ ràng.
+
+47
+00:04:14,190 --> 00:04:21,209
+Và để thêm trình truy cập bối cảnh HTTP, trước tiên chúng ta phải thêm câu lệnh sử dụng.
+
+48
+00:04:21,240 --> 00:04:25,170
+Microsoft DOT, ASP. NET Core chấm http.
+
+49
+00:04:27,080 --> 00:04:37,370
+Khi bạn làm điều đó, thì chúng ta có thể thêm một trình truy cập ngữ cảnh HTTP và tôi sẽ gọi nó là cùng một trình truy cập ngữ cảnh
+
+50
+00:04:37,370 --> 00:04:38,210
+HTTP.
+
+51
+00:04:39,430 --> 00:04:44,610
+Sử dụng trình truy cập ngữ cảnh đó, chúng tôi có thể truy cập phiên giỏ hàng.
+
+52
+00:04:44,620 --> 00:04:47,800
+Chúng tôi có thể truy cập phiên giỏ hàng.
+
+53
+00:04:48,430 --> 00:04:50,020
+Hãy để tôi cuộn xuống.
+
+54
+00:04:50,020 --> 00:04:53,260
+Chúng tôi có điều đó ngay tại đây và ngay tại đây.
+
+55
+00:04:53,260 --> 00:04:55,570
+Hãy để tôi thêm một điều kiện nếu.
+
+56
+00:04:55,570 --> 00:05:02,920
+Chúng tôi sẽ nói nếu trình truy cập bối cảnh http, bối cảnh http chấm, phiên chấm.
+
+57
+00:05:03,190 --> 00:05:06,790
+Và ở đó trước khi chúng tôi sử dụng tập hợp trong 32.
+
+58
+00:05:06,790 --> 00:05:08,740
+Nhưng nay chúng tôi muốn lấy lại.
+
+59
+00:05:08,770 --> 00:05:16,360
+Vì vậy, chúng tôi sẽ sử dụng get trong 32 và tên khóa nằm trong C dot session cart.
+
+60
+00:05:17,300 --> 00:05:18,920
+Nếu đó không phải là null.
+
+61
+00:05:18,920 --> 00:05:21,770
+Trong trường hợp đó, chúng tôi muốn hiển thị số không.
+
+62
+00:05:22,720 --> 00:05:27,940
+Nếu đó không phải là null, thì chúng tôi muốn truy xuất giá trị và hiển thị giá trị đó.
+
+63
+00:05:28,240 --> 00:05:35,360
+Vì vậy, ngay tại đây với nbsp, chúng ta có thể truy xuất giá trị đó và hiển thị giá trị đó trong dấu ngoặc tròn.
+
+64
+00:05:35,380 --> 00:05:38,620
+Vì vậy, trình truy cập ngữ cảnh http.
+
+65
+00:05:40,140 --> 00:05:42,040
+Chấm httpcontext.
+
+66
+00:05:42,060 --> 00:05:44,220
+Chấm Phiên, chấm.
+
+67
+00:05:44,220 --> 00:05:49,860
+Tham gia 32 và chúng tôi sẽ nói số phiên chấm SDP.
+
+68
+00:05:50,890 --> 00:05:59,080
+Bây giờ, trong phần khác ở đây, về cơ bản tôi có thể sao chép và dán lại phần này và chúng tôi sẽ hiển thị số không.
+
+69
+00:05:59,950 --> 00:06:05,290
+Với cấu hình đó, hãy để tôi chạy ứng dụng và xem nó có hoạt động không.
+
+70
+00:06:08,140 --> 00:06:10,020
+Chúng tôi không có ngay bây giờ.
+
+71
+00:06:10,030 --> 00:06:12,670
+Để em đăng nhập test thử.
+
+72
+00:06:13,720 --> 00:06:17,590
+Và hãy để tôi thử thêm một mặt hàng vào giỏ hàng.
+
+73
+00:06:18,840 --> 00:06:20,550
+Chúng tôi có một ngoại lệ ở đây.
+
+74
+00:06:20,550 --> 00:06:22,590
+Để tôi xem đó là gì.
+
+75
+00:06:23,190 --> 00:06:27,000
+Tham chiếu đối tượng không được đặt thành phiên bản của một đối tượng.
+
+76
+00:06:27,420 --> 00:06:30,540
+Vâng, hãy để tôi kiểm tra những gì đang xảy ra ở đó.
+
+77
+00:06:30,930 --> 00:06:37,470
+Và tôi tin rằng đây là một vấn đề bởi vì chúng tôi đang làm điều đó trước khi đơn vị công việc được lưu.
+
+78
+00:06:37,500 --> 00:06:40,650
+Vì vậy, hãy để tôi cắt nó và lưu nó trước.
+
+79
+00:06:40,680 --> 00:06:43,350
+Bằng cách đó, hồ sơ ở bên trong đó.
+
+80
+00:06:43,350 --> 00:06:46,780
+Và tôi cũng sẽ phải thêm bản cập nhật Save Inside.
+
+81
+00:06:46,800 --> 00:06:48,780
+Vì vậy, đừng quên điều đó.
+
+82
+00:06:49,650 --> 00:06:52,140
+Và hãy để tôi chạy nó một lần nữa.
+
+83
+00:06:52,770 --> 00:06:56,100
+Tôi tin rằng không có mục nào ở đó vì điều đó.
+
+84
+00:06:56,100 --> 00:06:58,080
+Đó là ném ngoại lệ.
+
+85
+00:06:59,610 --> 00:07:02,640
+Hãy để tôi thử thêm mục một lần nữa.
+
+86
+00:07:02,790 --> 00:07:06,600
+Đếm để thêm vào giỏ hàng và hoàn thiện.
+
+87
+00:07:06,750 --> 00:07:11,940
+Ngay khi chúng tôi chọn Thêm vào giỏ hàng, bạn có thể thấy hai mặt hàng đang được hiển thị.
+
+88
+00:07:12,390 --> 00:07:19,530
+Nhưng điều đó không hoàn toàn đúng bởi vì nếu bạn quay trở lại nhà và nếu bạn
+
+89
+00:07:19,530 --> 00:07:24,720
+cố gắng thêm lại cùng một mục, thì số đếm vẫn là hai.
+
+90
+00:07:25,140 --> 00:07:30,270
+Chúng tôi muốn số lượng ở đây là các mục riêng biệt chứ không phải bất kỳ thứ gì khác.
+
+91
+00:07:30,900 --> 00:07:38,610
+Lý do nó hiển thị hai ở đây là do chúng tôi có một số lỗi và hãy để tôi chỉ ra rằng chúng tôi
+
+92
+00:07:38,610 --> 00:07:41,130
+có lỗi ở đâu đó ngay tại đây.
+
+93
+00:07:41,610 --> 00:07:43,830
+Cố gắng tìm ra lỗi đó là gì.
+
+94
+00:07:43,830 --> 00:07:49,770
+Do đó, thay vì hiển thị một ở đây, nó sẽ hiển thị hai bản ghi.
+
+95
+00:07:50,430 --> 00:07:58,470
+Để cho bạn thêm một ví dụ ở đây, nếu tôi thêm nhiều mặt hàng vào giỏ hàng ở đây, hãy để tôi làm điều đó.
+
+96
+00:07:58,500 --> 00:08:01,930
+Bạn có thể thấy bây giờ nó được cập nhật lên năm.
+
+97
+00:08:02,200 --> 00:08:07,960
+Một cái gì đó đáng nghi đang xảy ra và cố gắng tìm hiểu những gì đang xảy ra ở đây.
+
+98
+00:08:09,540 --> 00:08:10,200
+Được rồi.
+
+99
+00:08:10,200 --> 00:08:12,720
+Tôi hy vọng bạn có thể tìm ra điều đó.
+
+100
+00:08:12,900 --> 00:08:18,960
+Lý do khi chúng ta nói số đếm ở đây, nó thực sự nhận được giá trị của số đếm.
+
+101
+00:08:18,990 --> 00:08:25,860
+Nếu tôi đi tới giỏ hàng, bạn có thể thấy số lượng là năm và đó là lý do tại sao nó hiển thị năm ngay
+
+102
+00:08:25,860 --> 00:08:26,460
+tại đó.
+
+103
+00:08:27,900 --> 00:08:36,390
+Những gì chúng ta cần làm ở đây là lỗi đầu tiên chứ không phải là chúng ta muốn lấy tất cả và ở đó
+
+104
+00:08:36,419 --> 00:08:39,750
+nếu chúng ta đếm thì nó sẽ đếm được.
+
+105
+00:08:40,260 --> 00:08:44,280
+Tôi sẽ phải thêm một chức năng ở đó và điều đó có vẻ tốt.
+
+106
+00:08:44,520 --> 00:08:51,450
+Trước đây, chúng tôi chỉ nhận được một giỏ hàng, nhưng chúng tôi cần lấy tất cả giỏ hàng và
+
+107
+00:08:51,450 --> 00:08:53,310
+sau đó đếm ngay tại đó.
+
+108
+00:08:53,610 --> 00:08:57,930
+Vì vậy, với cấu hình đó, hãy để tôi khởi động lại ứng dụng.
+
+109
+00:08:59,270 --> 00:09:02,510
+Bây giờ, phiên ban đầu ở đây chưa được thiết lập.
+
+110
+00:09:02,540 --> 00:09:05,390
+Chúng tôi sẽ xử lý điều đó trong video sắp tới.
+
+111
+00:09:05,390 --> 00:09:11,510
+Nhưng nếu tôi thêm một mục mới ở đây, bạn sẽ thấy số đếm chính xác và đó là ba.
+
+112
+00:09:11,540 --> 00:09:15,500
+Nếu chúng tôi điều hướng đến đó, chúng tôi có ba mục riêng biệt.
+
+113
+00:09:16,010 --> 00:09:19,310
+Vì vậy, điều đó có vẻ tốt cho giỏ hàng của chúng tôi.
+
+114
+00:09:19,730 --> 00:09:22,820
+Hãy để tôi tiếp tục từ video tiếp theo.
+

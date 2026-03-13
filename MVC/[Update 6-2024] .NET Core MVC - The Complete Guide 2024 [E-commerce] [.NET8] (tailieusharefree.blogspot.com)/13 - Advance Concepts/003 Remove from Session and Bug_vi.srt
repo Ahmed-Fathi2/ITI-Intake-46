@@ -1,0 +1,288 @@
+1
+00:00:01,830 --> 00:00:06,560
+Điều tiếp theo mà tôi muốn xử lý là khi khách hàng truy cập vào trang chủ.
+
+2
+00:00:06,570 --> 00:00:12,960
+Nếu họ đã đăng nhập, thì chúng tôi muốn truy xuất phiên của họ hơn là hiển thị chúng.
+
+3
+00:00:12,960 --> 00:00:13,680
+Số không.
+
+4
+00:00:14,220 --> 00:00:18,270
+Và khi chúng tôi đăng xuất, chúng tôi phải xóa phiên đó.
+
+5
+00:00:19,190 --> 00:00:24,270
+Trước tiên, hãy để tôi xử lý tình huống khác trên trang chỉ mục bộ điều khiển gia đình.
+
+6
+00:00:24,290 --> 00:00:27,950
+Chúng tôi có thể lấy ID người dùng của người dùng đã đăng nhập.
+
+7
+00:00:28,820 --> 00:00:34,950
+Vì vậy, ngay tại đây, chúng tôi có thể lấy ID người dùng, nhưng giá trị có thể là null ở đây.
+
+8
+00:00:34,970 --> 00:00:43,190
+Vì vậy, hãy để tôi nhận yêu cầu ở đây và chúng tôi sẽ kiểm tra xem giá trị dấu chấm yêu cầu có phải là null hay không.
+
+9
+00:00:44,210 --> 00:00:47,230
+Chà, trong trường hợp này, tôi tin rằng yêu cầu sẽ không có giá trị.
+
+10
+00:00:47,240 --> 00:00:51,740
+Vì vậy, nếu đó không phải là null, điều đó có nghĩa là người dùng đã đăng nhập.
+
+11
+00:00:52,350 --> 00:00:57,270
+Vì vậy, trong trường hợp đó, chúng ta có thể lấy phiên và thiết lập nó.
+
+12
+00:00:57,570 --> 00:00:58,980
+Sao chép cái đó.
+
+13
+00:00:59,190 --> 00:01:01,130
+Dán nó ngay tại đây.
+
+14
+00:01:01,140 --> 00:01:05,250
+ID người dùng sẽ nằm trong giá trị dấu chấm xác nhận quyền sở hữu.
+
+15
+00:01:06,420 --> 00:01:10,740
+Hãy để tôi thêm một điểm gỡ lỗi ở đây và xem nó có hoạt động không.
+
+16
+00:01:15,810 --> 00:01:19,770
+Chúng tôi đăng nhập tại đây và xác nhận quyền sở hữu là null.
+
+17
+00:01:19,770 --> 00:01:21,200
+Vì vậy, chúng tôi tiếp tục.
+
+18
+00:01:21,210 --> 00:01:22,500
+Điều đó thật tốt.
+
+19
+00:01:23,040 --> 00:01:25,440
+Tiếp theo, hãy để tôi đăng nhập ở đây.
+
+20
+00:01:26,340 --> 00:01:27,750
+Quản trị viên kiểm tra.
+
+21
+00:01:29,520 --> 00:01:32,190
+Và bây giờ chúng tôi có yêu cầu dân cư.
+
+22
+00:01:32,220 --> 00:01:35,170
+Nó lấy đó và hoàn hảo.
+
+23
+00:01:35,190 --> 00:01:37,350
+Nó thêm điều đó vào phiên của chúng tôi.
+
+24
+00:01:37,800 --> 00:01:38,710
+Tuyệt vời.
+
+25
+00:01:38,730 --> 00:01:45,480
+Vì vậy, khi người dùng đăng nhập bây giờ, họ sẽ có thể xem số lượng giỏ hàng của họ.
+
+26
+00:01:45,570 --> 00:01:47,520
+Bên trong điều hướng.
+
+27
+00:01:48,120 --> 00:01:52,230
+Nhưng bây giờ khi người dùng đăng xuất, chúng tôi cần xóa phiên.
+
+28
+00:01:52,230 --> 00:01:57,600
+Và nếu ai đó loại bỏ một mục ở đây, chúng tôi cần phải giảm.
+
+29
+00:01:58,770 --> 00:02:01,320
+Hãy để tôi điều hướng đến giỏ hàng đầu tiên.
+
+30
+00:02:01,350 --> 00:02:06,870
+Chúng tôi sẽ quay lại ứng dụng và nơi chúng tôi có bộ điều khiển giỏ hàng.
+
+31
+00:02:06,870 --> 00:02:12,120
+Hãy để tôi đóng tất cả các tab ở đây bên trong bộ điều khiển giỏ hàng.
+
+32
+00:02:12,810 --> 00:02:14,850
+Chúng tôi có phương pháp hành động.
+
+33
+00:02:14,850 --> 00:02:19,920
+Hãy để tôi cuộn xuống cộng trừ và hoàn thiện.
+
+34
+00:02:19,950 --> 00:02:21,450
+Chúng ta cần hai thứ này.
+
+35
+00:02:22,110 --> 00:02:29,220
+Sau khi nhấn lưu tại đây, chúng ta có thể đặt httpcontext dot session dot set int 32.
+
+36
+00:02:29,580 --> 00:02:34,680
+Tên hằng số là giỏ hàng và giá trị phiên chấm điểm SD.
+
+37
+00:02:34,710 --> 00:02:44,160
+Chúng tôi sẽ phải lấy điều đó từ đơn vị công việc dot giỏ hàng dot get all và bạn truy cập id người dùng ứng dụng
+
+38
+00:02:44,160 --> 00:02:52,410
+dot của bạn bằng với chúng tôi có giỏ hàng từ DB nhưng điều đó thực sự bị xóa ngay tại đây.
+
+39
+00:02:53,010 --> 00:02:55,950
+Vì vậy, chúng tôi sẽ phải làm một cái gì đó ưa thích.
+
+40
+00:02:55,950 --> 00:03:04,380
+Hãy để tôi lấy ID đó từ ID người dùng ứng dụng Khateeb dot và chúng tôi sẽ đếm số lượng ở đó.
+
+41
+00:03:05,200 --> 00:03:08,230
+Nhưng tại thời điểm này, thẻ đó sẽ bị xóa.
+
+42
+00:03:09,100 --> 00:03:10,470
+Bây giờ, ngay tại đây.
+
+43
+00:03:10,480 --> 00:03:11,350
+Ngay chỗ này.
+
+44
+00:03:11,350 --> 00:03:16,090
+Khi chúng tôi cố gắng truy cập thẻ từ DB, chúng tôi đã xóa thẻ đó.
+
+45
+00:03:16,090 --> 00:03:21,640
+Vì vậy, tôi có thể cắt cái này và dán nó trước khi đơn vị công việc chấm lưu.
+
+46
+00:03:21,640 --> 00:03:24,700
+Và ở đó chúng ta có số đếm.
+
+47
+00:03:24,730 --> 00:03:31,120
+Hãy để tôi giảm nó xuống một vì trong dòng tiếp theo, chúng tôi sẽ xóa bản ghi đó.
+
+48
+00:03:31,860 --> 00:03:37,050
+Hãy để tôi sao chép cái này và tôi cũng sẽ dán cái đó để xóa ngay tại đây.
+
+49
+00:03:38,080 --> 00:03:40,750
+Và thẻ hoàn hảo từ DB.
+
+50
+00:03:41,620 --> 00:03:44,640
+Hãy để tôi xem nếu đó là những gì tôi đang sử dụng ở đây.
+
+51
+00:03:44,650 --> 00:03:46,540
+Vâng, điều đó có vẻ tốt.
+
+52
+00:03:47,330 --> 00:03:50,180
+Phá vỡ điều này trong dòng khác nhau ở đây.
+
+53
+00:03:50,510 --> 00:03:53,900
+Và hãy để tôi thêm điều này trước tuyên bố loại bỏ.
+
+54
+00:03:56,510 --> 00:03:57,110
+Hoàn hảo.
+
+55
+00:03:57,110 --> 00:03:58,370
+Trông tôt đây.
+
+56
+00:03:58,400 --> 00:04:02,870
+Hãy để tôi xây dựng lại ở đây và cố gắng loại bỏ một mục.
+
+57
+00:04:05,610 --> 00:04:07,740
+Trước tiên chúng ta cần đăng nhập tại đây.
+
+58
+00:04:07,740 --> 00:04:09,000
+Hãy để tôi làm điều đó.
+
+59
+00:04:11,590 --> 00:04:13,780
+Chúng tôi có ba mục ở đây.
+
+60
+00:04:13,780 --> 00:04:18,100
+Và ngay bây giờ, khi bạn cố gắng xóa, bạn sẽ thấy một điều kỳ lạ.
+
+61
+00:04:18,490 --> 00:04:21,550
+Hãy để tôi thử xóa bất kỳ một bản ghi nào ở đây.
+
+62
+00:04:21,550 --> 00:04:24,070
+Và bạn thấy chúng tôi có một ngoại lệ.
+
+63
+00:04:24,400 --> 00:04:30,700
+Trường hợp ngoại lệ không rõ ràng, nhưng nó cung cấp một số ý tưởng về những gì đang diễn ra.
+
+64
+00:04:31,240 --> 00:04:39,610
+Bây giờ, điều này hơi phức tạp một chút, nhưng để cung cấp cho bạn một gợi ý ở đây, vấn đề là do trong kho lưu trữ,
+
+65
+00:04:39,610 --> 00:04:43,720
+chúng tôi có thứ gì đó có theo dõi và không có theo dõi.
+
+66
+00:04:44,320 --> 00:04:51,820
+Vì vậy, hãy cố gắng tìm hiểu và tìm ra chính xác điều gì sai và tại sao bạn lại thấy thông báo lỗi này.
+
+67
+00:04:53,300 --> 00:05:00,370
+Lý do chính tại sao tôi để bạn tìm hiểu vấn đề là gì bởi vì đó là cách các dự án trong thế giới thực của bạn sẽ
+
+68
+00:05:00,370 --> 00:05:01,270
+hoạt động.
+
+69
+00:05:01,420 --> 00:05:07,720
+Khi bạn đang làm việc, bạn sẽ gặp phải ngoại lệ và bạn sẽ phải tìm hiểu điều gì đang xảy
+
+70
+00:05:07,720 --> 00:05:08,230
+ra.
+
+71
+00:05:08,650 --> 00:05:12,830
+Vì vậy, hãy thử Google và xem liệu bạn có thể đưa ra giải pháp hay không.
+
+72
+00:05:13,010 --> 00:05:16,580
+Nếu không, hãy để tôi tiếp tục từ video tiếp theo.
+

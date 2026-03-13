@@ -1,0 +1,268 @@
+1
+00:00:02,550 --> 00:00:10,410
+Video trước chúng tôi đã thêm tóm tắt xác thực tất cả vì điều đó, cùng với xác thực riêng lẻ mà chúng tôi
+
+2
+00:00:10,410 --> 00:00:11,000
+có.
+
+3
+00:00:11,010 --> 00:00:15,780
+Nó cũng hiển thị tất cả xác thực trong phần tóm tắt ngay tại đây.
+
+4
+00:00:16,170 --> 00:00:23,490
+Nhưng trên hết, để xác thực tùy chỉnh của chúng tôi, nếu chúng tôi tạo cả hai giá trị giống nhau và nhấn tạo,
+
+5
+00:00:23,520 --> 00:00:27,180
+chúng tôi cũng thấy điều đó trong tóm tắt xác thực.
+
+6
+00:00:28,070 --> 00:00:29,270
+Cái đó thật tuyệt.
+
+7
+00:00:29,300 --> 00:00:36,920
+Nhưng bây giờ nếu chúng ta chuyển đến bộ điều khiển danh mục, tôi đã thêm lỗi tùy chỉnh đó dưới tên hoặc dưới giá
+
+8
+00:00:36,920 --> 00:00:38,420
+trị chính của tên.
+
+9
+00:00:38,720 --> 00:00:42,800
+Hãy để tôi thêm một xác thực nữa ở đây và không khởi động lại.
+
+10
+00:00:42,800 --> 00:00:44,840
+Tôi muốn dừng trang web.
+
+11
+00:00:45,720 --> 00:00:50,160
+Và trong bộ điều khiển sao chép và dán nó một lần nữa.
+
+12
+00:00:51,250 --> 00:00:52,060
+Thời gian này.
+
+13
+00:00:52,060 --> 00:00:55,740
+Nếu giá trị của name bằng với test.
+
+14
+00:00:55,750 --> 00:01:02,980
+Trong trường hợp đó, tôi muốn hiển thị một xác thực khác hoặc một thông báo lỗi, nhưng thông báo đó sẽ không nằm dưới bất
+
+15
+00:01:02,980 --> 00:01:04,060
+kỳ tên khóa nào.
+
+16
+00:01:04,060 --> 00:01:11,470
+Nó sẽ trống và tôi sẽ hiển thị giá trị kiểm tra là không hợp lệ.
+
+17
+00:01:13,580 --> 00:01:16,730
+Và tôi có thể chuyển đổi cái này thành thấp hơn ở đây.
+
+18
+00:01:17,120 --> 00:01:17,960
+Hoàn hảo.
+
+19
+00:01:18,840 --> 00:01:23,160
+Vì vậy, với cấu hình đó, hãy để tôi chạy cái này và thử cái đó.
+
+20
+00:01:26,810 --> 00:01:36,770
+Chúng tôi đi đến danh mục ở đây và chúng tôi có tên danh mục, Chúng tôi đặt thứ tự hiển thị thử nghiệm đó là 0 và hoàn
+
+21
+00:01:36,770 --> 00:01:37,490
+hảo.
+
+22
+00:01:37,520 --> 00:01:40,220
+Nó hiển thị cả hai xác nhận.
+
+23
+00:01:40,370 --> 00:01:47,210
+Nhưng bạn có thể thấy vì chúng tôi không xác thực hoặc vì chúng tôi không có tên ở đây bên trong khóa
+
+24
+00:01:47,240 --> 00:01:54,500
+nên nó không liên kết tên đó với tên danh mục, nhưng nó hiển thị xác thực đó trong bản tóm tắt chung mà chúng
+
+25
+00:01:54,500 --> 00:01:55,310
+tôi có.
+
+26
+00:01:55,880 --> 00:02:01,310
+Và đó là bởi vì trong bản tóm tắt xác thực ASP, chúng tôi có tất cả.
+
+27
+00:02:02,150 --> 00:02:07,220
+Bây giờ hãy xem điều gì khác biệt nếu tôi thay đổi nó thành mô hình duy nhất.
+
+28
+00:02:08,500 --> 00:02:17,080
+Vì vậy, thay vì tất cả, nếu đây chỉ là mô hình và nếu tôi khởi động lại ứng dụng, khi chúng tôi nói chỉ mô hình, thì nó sẽ
+
+29
+00:02:17,080 --> 00:02:23,460
+chỉ hiển thị các giá trị có lỗi trong mô hình chứ không hiển thị bất kỳ thuộc tính nào.
+
+30
+00:02:23,500 --> 00:02:29,320
+Vì vậy, hãy để tôi thử kiểm tra ở đây và số 0 và nó sẽ chỉ hiển thị lỗi.
+
+31
+00:02:29,320 --> 00:02:31,840
+Bài kiểm tra đó có giá trị không hợp lệ.
+
+32
+00:02:32,590 --> 00:02:39,100
+Bạn có thể thấy nó không hiển thị các xác thực liên quan đến thuộc tính trong phần tóm tắt xác thực.
+
+33
+00:02:40,490 --> 00:02:48,080
+Vì vậy, khi chỉ mô hình, nó sẽ không hiển thị bất kỳ thông báo lỗi nào liên quan đến thuộc tính như tên hoặc
+
+34
+00:02:48,080 --> 00:02:49,430
+thứ tự hiển thị.
+
+35
+00:02:49,880 --> 00:02:54,060
+Lỗi khác mà chúng tôi gặp phải không liên quan đến bất kỳ thuộc tính nào.
+
+36
+00:02:54,080 --> 00:02:58,790
+Do đó, chúng tôi có thể thấy test là một giá trị không hợp lệ.
+
+37
+00:03:00,200 --> 00:03:04,280
+Và tùy chọn cuối cùng mà chúng tôi có là không có ở đây.
+
+38
+00:03:04,490 --> 00:03:06,890
+Và đó là tự giải thích.
+
+39
+00:03:06,920 --> 00:03:11,810
+Nó sẽ không hiển thị bất kỳ thông báo lỗi nào trong phần tóm tắt xác thực.
+
+40
+00:03:11,840 --> 00:03:13,400
+Hãy để tôi chỉ ra điều đó.
+
+41
+00:03:19,140 --> 00:03:22,470
+Chúng tôi có một ngoại lệ ở đây vì nó chưa được đặt.
+
+42
+00:03:22,680 --> 00:03:26,130
+Tôi chỉ có thể thêm obj. tên.
+
+43
+00:03:26,860 --> 00:03:31,030
+Không phải là vô giá trị và hoàn hảo.
+
+44
+00:03:31,270 --> 00:03:32,560
+Hãy thử điều đó.
+
+45
+00:03:34,620 --> 00:03:36,810
+Chúng tôi đi đến danh mục ở đây?
+
+46
+00:03:37,600 --> 00:03:42,860
+Tạo và thử điều đó và hoàn hảo với không có gì.
+
+47
+00:03:42,880 --> 00:03:45,970
+Nó không hiển thị bất kỳ thông báo lỗi nào.
+
+48
+00:03:46,300 --> 00:03:47,410
+Rất hoàn hảo.
+
+49
+00:03:47,410 --> 00:03:52,150
+Cùng với đó, bạn có thể thấy sự khác biệt giữa chỉ tất cả các kiểu máy và không có kiểu máy nào.
+
+50
+00:03:52,540 --> 00:03:56,500
+Bây giờ một trường hợp sử dụng thời gian thực là trên trang đăng nhập.
+
+51
+00:03:56,650 --> 00:03:59,410
+Những gì bạn có thể làm là tên người dùng và mật khẩu.
+
+52
+00:03:59,410 --> 00:04:01,330
+Cả hai sẽ là các trường bắt buộc.
+
+53
+00:04:01,330 --> 00:04:06,130
+Vì vậy, trong trường hợp đó, nếu họ không nhập, bạn có thể hiển thị chúng ngay tại đây.
+
+54
+00:04:06,130 --> 00:04:13,480
+Nhưng nếu đầu vào that và something không hợp lệ, thì bạn có thể thêm thông báo lỗi tùy chỉnh và chỉ
+
+55
+00:04:13,480 --> 00:04:18,399
+hiển thị mô hình đó bằng mô hình trong bản tóm tắt xác thực ASP.
+
+56
+00:04:18,820 --> 00:04:25,660
+Nhưng bây giờ chúng tôi sẽ quay lại ứng dụng và để tôi xóa tùy chỉnh này.
+
+57
+00:04:25,660 --> 00:04:30,670
+Tôi chỉ thêm vào vì tôi muốn nó hiển thị sự khác biệt duy nhất của mô hình.
+
+58
+00:04:30,670 --> 00:04:35,740
+Và trong phần tạo ở đây, chúng ta chỉ có thể biến nó thành mô hình.
+
+59
+00:04:37,650 --> 00:04:38,340
+Hoàn hảo.
+
+60
+00:04:38,370 --> 00:04:39,610
+Lưu vào đó.
+
+61
+00:04:39,630 --> 00:04:42,220
+Hay đúng hơn, tôi không cần bản tóm tắt xác nhận.
+
+62
+00:04:42,240 --> 00:04:45,060
+Hiện tại tôi chỉ có thể nhận xét điều đó.
+
+63
+00:04:45,090 --> 00:04:49,800
+Chúng tôi có xác nhận cá nhân và điều đó là đủ.
+
+64
+00:04:49,950 --> 00:04:53,370
+Tôi cũng có thể nhận xét xác thực tùy chỉnh.
+
+65
+00:04:54,140 --> 00:04:54,710
+Với.
+
+66
+00:04:54,710 --> 00:05:01,130
+Nếu tôi khởi động lại ứng dụng, chúng tôi vẫn có các xác thực thuộc tính cơ bản đang được hiển thị.
+
+67
+00:05:01,840 --> 00:05:06,340
+Vì vậy, với điều đó, hãy để tôi tiếp tục từ video tiếp theo.
+

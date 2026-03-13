@@ -1,0 +1,404 @@
+1
+00:00:02,260 --> 00:00:09,520
+Bây giờ chúng ta cần hiển thị một mẫu trong bảng dữ liệu ở đây dựa trên việc người dùng bị khóa hay mở khóa.
+
+2
+00:00:10,180 --> 00:00:13,720
+Vì vậy, chúng ta phải làm một số tính toán ngay tại đây.
+
+3
+00:00:14,290 --> 00:00:21,490
+Và khi chúng tôi đang làm việc với dữ liệu cùng với ID, chúng tôi cũng cần giá trị của phần cuối khóa, vì dựa
+
+4
+00:00:21,730 --> 00:00:27,070
+vào đó, chúng tôi có thể biết liệu người dùng có bị khóa hay mở khóa hay không.
+
+5
+00:00:27,640 --> 00:00:34,120
+Vì vậy, trong dữ liệu, nếu chúng ta muốn truy xuất nhiều hơn một giá trị, chúng ta có thể làm điều đó bằng cách tách chúng ra.
+
+6
+00:00:34,120 --> 00:00:40,240
+Vì vậy, ID sẽ ở bên trong ID, Chúng tôi muốn một biến khác là kết thúc khóa.
+
+7
+00:00:41,390 --> 00:00:44,300
+Và đó sẽ là từ cuối khóa.
+
+8
+00:00:44,870 --> 00:00:46,310
+Rất hoàn hảo.
+
+9
+00:00:46,310 --> 00:00:48,800
+Tôi tin rằng có vẻ tốt ở đây.
+
+10
+00:00:52,150 --> 00:00:52,780
+Tuyệt vời.
+
+11
+00:00:53,140 --> 00:00:57,220
+Vì vậy, dữ liệu bây giờ là một đối tượng và nó có hai giá trị.
+
+12
+00:00:58,090 --> 00:01:02,320
+Khi chúng tôi đang ở chức năng kết xuất ở đây, chúng tôi muốn lấy ngày hôm nay.
+
+13
+00:01:03,330 --> 00:01:09,270
+Để làm điều đó, chúng ta sẽ nói biến hôm nay bằng ngày mới dấu chấm lấy thời gian.
+
+14
+00:01:09,720 --> 00:01:16,290
+Sau đó, ngày kết thúc khóa mà chúng tôi có, chúng tôi sẽ phải chuyển đổi ngày đó trong thời gian nhất định, về cơ bản sẽ chuyển
+
+15
+00:01:16,290 --> 00:01:18,720
+đổi ngày đó thành giá trị số nguyên.
+
+16
+00:01:18,720 --> 00:01:23,070
+Và dựa vào hai giá trị nguyên đó, chúng ta có thể so sánh.
+
+17
+00:01:23,160 --> 00:01:31,560
+Vì vậy, chúng tôi có thể nói nếu khóa lớn hơn ngày hôm nay, điều đó có nghĩa là người dùng hiện đã đăng xuất và chúng tôi cần
+
+18
+00:01:31,560 --> 00:01:35,340
+hiển thị cho họ một nút để mở khóa tài khoản của họ.
+
+19
+00:01:35,910 --> 00:01:41,640
+Vì vậy, hãy để tôi sao chép câu lệnh trả về cho HTML ở đây, dán nó ngay tại đây.
+
+20
+00:01:41,640 --> 00:01:47,010
+Và chúng ta phải làm cho nó năng động hơn và thay đổi vài thứ bên trong đó.
+
+21
+00:01:47,460 --> 00:01:54,570
+Điều đầu tiên thay vì div ở đây, hãy để tôi tạo một div khác cho nó một lớp trung tâm văn bản.
+
+22
+00:01:55,400 --> 00:01:56,360
+Bên trong đó.
+
+23
+00:01:56,360 --> 00:02:00,110
+Tôi sẽ thêm một thẻ neo để mở khóa bất kỳ tài khoản nào.
+
+24
+00:02:00,530 --> 00:02:04,640
+Tôi đã thêm một biểu tượng bootstrap ở đây và nó có vẻ ổn.
+
+25
+00:02:05,060 --> 00:02:12,140
+Tiếp theo, hãy để tôi thêm một thẻ neo nữa ở đây, chúng tôi sẽ sử dụng thẻ này trong các video sau để cập nhật quyền.
+
+26
+00:02:12,950 --> 00:02:15,320
+Vì vậy, có vẻ tốt cho bị khóa.
+
+27
+00:02:15,650 --> 00:02:20,450
+Hãy để tôi sao chép phần này và dán lại vào phần khác ở đây.
+
+28
+00:02:20,630 --> 00:02:27,230
+Và đó sẽ là nếu người dùng được mở khóa, thì chúng tôi muốn hiển thị để khóa họ.
+
+29
+00:02:27,740 --> 00:02:28,580
+Nút khóa.
+
+30
+00:02:28,580 --> 00:02:31,670
+Chúng ta có thể hiển thị chúng trong nguy hiểm như thế.
+
+31
+00:02:33,030 --> 00:02:37,260
+Hãy để tôi xây dựng lại và áp dụng các thay đổi và xem nó có hoạt động không.
+
+32
+00:02:37,650 --> 00:02:40,650
+Theo mặc định, mọi thứ sẽ được mở khóa.
+
+33
+00:02:40,680 --> 00:02:43,050
+Vì vậy, chúng ta sẽ thấy nút khóa.
+
+34
+00:02:45,010 --> 00:02:51,640
+Nếu tôi vào quản lý người dùng hoàn hảo, mọi thứ sẽ được mở khóa và chúng tôi thấy nút khóa.
+
+35
+00:02:52,240 --> 00:02:54,700
+Nhưng tôi nghĩ rằng nó nên là một cách khác xung quanh.
+
+36
+00:02:54,700 --> 00:02:59,650
+Nếu người dùng được mở khóa, chúng ta sẽ thấy trạng thái mở khóa hiện tại tại đây.
+
+37
+00:03:00,190 --> 00:03:05,950
+Vì vậy, hãy để tôi cắt cái này từ đây, dán nó vào đây và lật ngược lại.
+
+38
+00:03:06,280 --> 00:03:10,480
+Lưu và hoàn thiện Ngay bây giờ người dùng đã được mở khóa.
+
+39
+00:03:10,510 --> 00:03:14,860
+Bạn có thể nhấp vào đây để khóa người dùng và điều đó có vẻ tốt.
+
+40
+00:03:15,010 --> 00:03:20,230
+Sau đó, để được phép ở đây, hãy để tôi tạo 150 pixel đó.
+
+41
+00:03:21,720 --> 00:03:22,860
+Và hoàn hảo.
+
+42
+00:03:22,860 --> 00:03:23,910
+Trông tôt đây.
+
+43
+00:03:24,980 --> 00:03:31,640
+Vì vậy, bây giờ chúng tôi đã mở khóa ở đây, chúng tôi muốn tiếp tục khi chúng tôi nhấn nút ở đây, nó sẽ khóa người
+
+44
+00:03:31,640 --> 00:03:32,420
+dùng.
+
+45
+00:03:33,470 --> 00:03:37,230
+Để làm được điều đó, chúng ta phải gọi cùng một điểm cuối trong cả hai.
+
+46
+00:03:37,250 --> 00:03:42,980
+Chúng tôi sẽ thêm một onClick tại đây và để tôi gọi phương thức đó là mở khóa khóa.
+
+47
+00:03:43,010 --> 00:03:46,940
+Ở đó chúng ta phải chuyển ID Đó sẽ là một chuỗi.
+
+48
+00:03:47,660 --> 00:03:56,450
+Tôi sẽ chuyển điều đó trong một trích dẫn và đó sẽ là dữ liệu. id bởi vì bây giờ trong dữ liệu chúng tôi có hai thuộc tính.
+
+49
+00:03:57,350 --> 00:04:00,380
+Hãy để tôi tạo chức năng này ở cuối đây.
+
+50
+00:04:00,380 --> 00:04:06,590
+Nhưng trước đó, hãy để tôi sao chép cái này khi nhấp vào, dán nó cho cái kia.
+
+51
+00:04:07,710 --> 00:04:09,540
+Sau đó, chúng tôi sẽ cuộn xuống.
+
+52
+00:04:09,660 --> 00:04:13,890
+Ngay đây mình sẽ tạo chức năng khóa, mở khóa đó.
+
+53
+00:04:14,100 --> 00:04:21,690
+Và bên trong đó, chúng tôi sẽ có một yêu cầu Ajax nơi chúng tôi phải đăng bộ điều khiển người dùng quản trị viên.
+
+54
+00:04:21,720 --> 00:04:25,200
+Chúng tôi có khóa mở khóa có vẻ tốt.
+
+55
+00:04:25,860 --> 00:04:30,990
+Cùng với đó, dữ liệu của chúng tôi nằm trong ID, nhưng chúng tôi phải xâu chuỗi dữ liệu đó.
+
+56
+00:04:30,990 --> 00:04:38,130
+Vì vậy, chúng tôi sẽ nói json. stringify và loại nội dung là ứng dụng chấm JSON.
+
+57
+00:04:39,330 --> 00:04:46,600
+Bây giờ, khi thành công, chúng tôi muốn thêm một chức năng và chúng tôi sẽ lấy lại dữ liệu dưới dạng JSON.
+
+58
+00:04:46,620 --> 00:04:55,020
+Chúng tôi muốn hiển thị thông báo này trong thông báo máy nướng bánh mì và tải lại bảng dữ liệu trên dữ liệu.
+
+59
+00:04:55,020 --> 00:05:02,940
+Nếu chúng tôi nhận thấy nó đang vượt qua thành công để chúng tôi có thể nói nếu dữ liệu chấm thành công là đúng, chúng tôi muốn hiển
+
+60
+00:05:02,940 --> 00:05:07,410
+thị thông báo máy nướng bánh mì và chúng tôi muốn tải lại bảng dữ liệu.
+
+61
+00:05:07,590 --> 00:05:11,730
+Với cấu hình đó, hãy để tôi khởi động lại ứng dụng.
+
+62
+00:05:13,470 --> 00:05:17,250
+Hãy để tôi quay lại và thêm một điểm sửa lỗi ngay tại đây.
+
+63
+00:05:18,970 --> 00:05:21,250
+Và để tôi xem nếu nó hoạt động.
+
+64
+00:05:21,520 --> 00:05:23,380
+Chúng tôi nhấn mở khóa ở đây.
+
+65
+00:05:23,380 --> 00:05:25,780
+Nó chạm vào điểm ngắt mà chúng tôi nhấn.
+
+66
+00:05:25,780 --> 00:05:28,720
+Tiếp tục và không có gì xảy ra.
+
+67
+00:05:29,110 --> 00:05:34,030
+Chà, nếu bạn làm mới trang ở đây, bạn có thể thấy người dùng đã bị khóa.
+
+68
+00:05:34,030 --> 00:05:34,780
+Thực vậy.
+
+69
+00:05:35,550 --> 00:05:39,420
+Vì vậy, về cơ bản, bảng dữ liệu không được làm mới ở đây.
+
+70
+00:05:39,720 --> 00:05:43,470
+Hãy để tôi xem nếu chúng ta có điều đó trong một bảng dữ liệu biến đổi.
+
+71
+00:05:43,800 --> 00:05:45,540
+Chúng tôi thực sự có điều đó.
+
+72
+00:05:45,540 --> 00:05:49,610
+Nhưng không hiểu sao lại để mình bấm mở khóa ở đây.
+
+73
+00:05:49,620 --> 00:05:51,540
+Mở cửa sổ giao diện điều khiển.
+
+74
+00:05:51,690 --> 00:05:52,440
+Rất tiếc.
+
+75
+00:05:52,470 --> 00:05:54,270
+Máy nướng bánh mì không được xác định.
+
+76
+00:05:55,540 --> 00:06:02,680
+Tôi nghĩ rằng tôi đã thêm nó vào bố cục chính, nhưng hãy để tôi kiểm tra thông báo đó.
+
+77
+00:06:03,190 --> 00:06:08,050
+Tôi có thể sao chép cả hai điều này trong bố cục chính.
+
+78
+00:06:09,550 --> 00:06:12,040
+Và để tôi xem nếu nó hoạt động.
+
+79
+00:06:15,010 --> 00:06:15,790
+Hoàn hảo.
+
+80
+00:06:15,820 --> 00:06:22,720
+Cùng với đó, mọi thứ đang hoạt động như mong đợi, nhưng chúng tôi đang hiển thị xóa thành công.
+
+81
+00:06:22,930 --> 00:06:25,150
+Có gì đó không đúng.
+
+82
+00:06:25,480 --> 00:06:27,880
+Điều này sẽ không được xóa thành công.
+
+83
+00:06:27,910 --> 00:06:30,340
+Hãy để tôi nói Hoạt động thành công.
+
+84
+00:06:31,570 --> 00:06:32,830
+Chúng tôi mở khóa ở đây.
+
+85
+00:06:32,830 --> 00:06:33,760
+Điều đó đã làm việc.
+
+86
+00:06:33,790 --> 00:06:35,470
+Chúng tôi đã khóa tài khoản.
+
+87
+00:06:35,500 --> 00:06:37,060
+Chúng tôi đã mở khóa nó.
+
+88
+00:06:37,090 --> 00:06:38,140
+Hoàn hảo.
+
+89
+00:06:38,230 --> 00:06:40,960
+Hãy để tôi xem nếu khóa thực sự hoạt động.
+
+90
+00:06:40,990 --> 00:06:43,840
+Chúng tôi đã khóa khách hàng tại Gmail tại đây.
+
+91
+00:06:44,740 --> 00:06:46,810
+Để tôi khám đây.
+
+92
+00:06:47,440 --> 00:06:48,850
+Khách hàng ở đâu?
+
+93
+00:06:48,850 --> 00:06:49,630
+Tại Gmail.
+
+94
+00:06:49,630 --> 00:06:50,950
+Ngay chỗ này.
+
+95
+00:06:52,420 --> 00:06:53,220
+Hoàn hảo.
+
+96
+00:06:53,230 --> 00:06:56,580
+Bạn có thể thấy ngày kết thúc khóa là 3023.
+
+97
+00:06:56,590 --> 00:07:05,320
+Vì vậy, một nghìn năm nữa, nếu tôi đăng xuất khỏi đây và cố gắng đăng nhập với khách hàng, tôi sẽ thấy
+
+98
+00:07:05,320 --> 00:07:07,560
+thông báo lỗi bị khóa.
+
+99
+00:07:07,570 --> 00:07:08,920
+Vui lòng thử lại.
+
+100
+00:07:10,230 --> 00:07:11,160
+Quá tuyệt vời.
+
+101
+00:07:11,280 --> 00:07:16,080
+Các chức năng khóa và mở khóa của chúng tôi đang hoạt động như mong đợi.
+

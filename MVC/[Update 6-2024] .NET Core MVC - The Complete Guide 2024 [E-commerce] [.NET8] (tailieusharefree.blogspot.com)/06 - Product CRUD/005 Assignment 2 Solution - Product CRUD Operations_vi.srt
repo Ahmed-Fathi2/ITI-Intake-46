@@ -1,0 +1,568 @@
+1
+00:00:01,910 --> 00:00:06,410
+Tôi hy vọng bạn có thể hoàn thành tất cả các thao tác CRUD với sản phẩm.
+
+2
+00:00:06,740 --> 00:00:11,110
+Tôi không muốn bạn thấy tôi gõ mọi thứ ở đây vì điều đó.
+
+3
+00:00:11,120 --> 00:00:19,790
+Những gì tôi sẽ làm là sao chép những gì chúng tôi có cho danh mục và dán cái đó cho sản phẩm và sửa đổi thật nhanh.
+
+4
+00:00:20,900 --> 00:00:24,050
+Vì vậy, hãy quay lại mã của chúng tôi ở đây.
+
+5
+00:00:24,440 --> 00:00:34,070
+Ở đâu Bên trong các khu vực ở đây, bộ điều khiển quản trị, sao chép và dán bộ điều khiển và tôi sẽ đổi tên nó thành
+
+6
+00:00:34,100 --> 00:00:36,200
+bộ điều khiển sản phẩm.
+
+7
+00:00:37,860 --> 00:00:44,120
+Hãy để tôi sao chép tên đó và tôi sẽ sửa đổi tên lớp và tên hàm tạo.
+
+8
+00:00:44,210 --> 00:00:46,940
+Mọi thứ khác có vẻ tốt ở đây.
+
+9
+00:00:46,970 --> 00:00:51,680
+Bất cứ nơi nào chúng tôi có danh mục, tôi sẽ phải thay thế danh mục đó bằng sản phẩm.
+
+10
+00:00:52,570 --> 00:01:04,450
+Vì vậy, tôi có thể thực hiện Ctrl shift f thay thế trong tệp và trong tệp hiện tại, tôi sẽ thay thế danh mục bằng sản phẩm.
+
+11
+00:01:05,790 --> 00:01:09,240
+Tôi sẽ phù hợp với trường hợp ở đây và thay thế tất cả.
+
+12
+00:01:09,720 --> 00:01:14,820
+Bây giờ, ở đây, đảm bảo rằng bạn chỉ làm điều đó trong tài liệu hiện tại.
+
+13
+00:01:14,940 --> 00:01:18,570
+Khi bạn hoàn thành điều đó, chúng ta hãy xem ở đây.
+
+14
+00:01:18,930 --> 00:01:19,710
+Hoàn hảo.
+
+15
+00:01:19,710 --> 00:01:27,330
+Về đơn vị công việc, chúng tôi sẽ đi vào sản phẩm và truy xuất tất cả sản phẩm mà chúng tôi đã tạo.
+
+16
+00:01:27,360 --> 00:01:29,940
+Chúng tôi không cần xác nhận tùy chỉnh.
+
+17
+00:01:29,940 --> 00:01:32,130
+Vì vậy, tôi có thể loại bỏ điều đó.
+
+18
+00:01:32,280 --> 00:01:34,560
+Và điều này có vẻ tốt.
+
+19
+00:01:35,010 --> 00:01:43,350
+Bên trong phương thức chỉnh sửa get, chúng tôi đang truy xuất sản phẩm ở đây và thay vì danh mục, hãy
+
+20
+00:01:43,350 --> 00:01:47,370
+để tôi đổi tên danh mục này thành chữ thường.
+
+21
+00:01:47,370 --> 00:01:55,080
+Chúng tôi sẽ đổi tên nó thành sản phẩm chữ thường trong tài liệu hiện tại và điều đó có vẻ tốt.
+
+22
+00:01:55,650 --> 00:01:56,580
+Hoàn hảo.
+
+23
+00:01:56,580 --> 00:02:01,640
+Còn những bài edit ở đây chúng tôi đang cập nhật bên trong phần xóa.
+
+24
+00:02:01,650 --> 00:02:02,700
+Chúng tôi đang tìm nạp.
+
+25
+00:02:02,700 --> 00:02:09,970
+Điều đó có vẻ tốt trong bài đăng xóa ở đây, chúng tôi truy xuất sản phẩm và xóa sản phẩm đó.
+
+26
+00:02:10,449 --> 00:02:13,600
+Vì vậy, với bộ điều khiển trông tuyệt vời.
+
+27
+00:02:13,930 --> 00:02:17,910
+Bây giờ chúng tôi cần thêm chế độ xem cho ứng dụng của mình.
+
+28
+00:02:17,920 --> 00:02:22,690
+Nếu quay lại, chúng ta cần tạo các khung nhìn cho thao tác CRUD.
+
+29
+00:02:23,390 --> 00:02:26,120
+Chúng tôi đã có lượt xem cho danh mục của mình.
+
+30
+00:02:26,150 --> 00:02:28,580
+Sao chép và dán lại.
+
+31
+00:02:29,420 --> 00:02:30,870
+Thư mục hoàn chỉnh.
+
+32
+00:02:30,890 --> 00:02:36,980
+Tôi sẽ đổi tên nó thành sản phẩm và để tôi xem những gì chúng tôi có trong chỉ mục.
+
+33
+00:02:37,690 --> 00:02:38,860
+Trong tất cả chúng.
+
+34
+00:02:38,860 --> 00:02:41,460
+Chúng ta phải thay thế danh mục bằng sản phẩm.
+
+35
+00:02:41,470 --> 00:02:45,970
+Vì vậy, một cách tiếp cận dễ dàng hơn là để tôi mở tất cả chúng ở đây.
+
+36
+00:02:47,400 --> 00:02:49,210
+Đóng bộ điều khiển sản phẩm.
+
+37
+00:02:49,230 --> 00:02:52,290
+Chúng tôi chỉ có bốn chế độ xem mở ở đây.
+
+38
+00:02:52,320 --> 00:02:53,890
+Dịch chuyển điều khiển f.
+
+39
+00:02:53,910 --> 00:03:03,390
+Thay thế trong tệp và chúng tôi sẽ thay thế tệp đó trong tất cả các tài liệu đang mở là tất cả các chế độ xem cho sản phẩm của chúng tôi.
+
+40
+00:03:04,450 --> 00:03:09,400
+Thay thế tất cả không tìm thấy bất kỳ bằng chữ thường.
+
+41
+00:03:09,490 --> 00:03:12,400
+Hãy để tôi làm điều đó với chữ hoa ở đây.
+
+42
+00:03:14,370 --> 00:03:15,420
+Và hoàn hảo.
+
+43
+00:03:15,420 --> 00:03:16,380
+Điều đó đã làm việc.
+
+44
+00:03:17,260 --> 00:03:20,530
+Bây giờ chúng ta có một thuộc tính khác bên trong sản phẩm.
+
+45
+00:03:20,530 --> 00:03:23,540
+Vì vậy, thay vì tên, chúng tôi có tiêu đề.
+
+46
+00:03:23,560 --> 00:03:28,030
+Hãy để tôi đổi tên nó và dán nó hai lần.
+
+47
+00:03:28,810 --> 00:03:31,430
+Sau tiêu đề, chúng tôi có mô tả.
+
+48
+00:03:31,450 --> 00:03:33,640
+Hãy để tôi sửa đổi điều đó.
+
+49
+00:03:34,750 --> 00:03:36,730
+Và dán nó vào đây.
+
+50
+00:03:37,210 --> 00:03:39,670
+Tôi sẽ sao chép và dán này.
+
+51
+00:03:40,410 --> 00:03:42,560
+Khoảng năm lần nữa ở đây.
+
+52
+00:03:42,740 --> 00:03:45,040
+Sau đó, chúng tôi có ISBN.
+
+53
+00:03:45,050 --> 00:03:46,880
+Hãy để tôi sửa đổi điều đó.
+
+54
+00:03:53,240 --> 00:03:55,460
+Tiếp theo, chúng ta có tác giả.
+
+55
+00:03:57,000 --> 00:03:59,100
+Sau đó, chúng tôi có giá.
+
+56
+00:03:59,130 --> 00:04:00,630
+Đầu tiên chúng ta có danh sách.
+
+57
+00:04:00,630 --> 00:04:01,440
+Giá.
+
+58
+00:04:01,680 --> 00:04:03,420
+Tiếp theo chúng ta có giá.
+
+59
+00:04:03,420 --> 00:04:04,260
+50.
+
+60
+00:04:04,290 --> 00:04:06,570
+Vâng, trước tiên chúng tôi có giá.
+
+61
+00:04:06,900 --> 00:04:11,040
+Khi đó chúng ta sẽ có giá 50 và giá 100.
+
+62
+00:04:11,070 --> 00:04:14,580
+Vì vậy, hãy sao chép và dán hai lần nữa vào đây.
+
+63
+00:04:14,730 --> 00:04:16,890
+Chúng tôi có giá 50.
+
+64
+00:04:18,410 --> 00:04:21,529
+Và cuối cùng, chúng ta có giá 100.
+
+65
+00:04:24,870 --> 00:04:25,440
+Tuyệt vời.
+
+66
+00:04:25,470 --> 00:04:27,600
+Điều đó có vẻ tốt cho việc tạo ra.
+
+67
+00:04:27,630 --> 00:04:29,670
+Hãy để tôi sao chép này.
+
+68
+00:04:31,260 --> 00:04:36,330
+Và đi đến chỉnh sửa ở đây, dán nó ngay tại đây.
+
+69
+00:04:38,930 --> 00:04:39,800
+Hoàn hảo.
+
+70
+00:04:39,800 --> 00:04:41,650
+Chèn xóa là tốt.
+
+71
+00:04:41,660 --> 00:04:46,490
+Chúng tôi sẽ phải dán nó và chúng tôi sẽ xóa xác thực.
+
+72
+00:04:57,040 --> 00:05:02,500
+Trên hết, hãy để tôi tắt tất cả các trường nhập liệu khi chúng tôi đang xóa.
+
+73
+00:05:04,240 --> 00:05:07,990
+Đối với một thực tế có vẻ tốt.
+
+74
+00:05:08,740 --> 00:05:11,110
+Cuối cùng, chúng ta có chỉ mục ở đây.
+
+75
+00:05:11,260 --> 00:05:12,580
+Cuộn xuống.
+
+76
+00:05:12,820 --> 00:05:13,330
+Và.
+
+77
+00:05:13,330 --> 00:05:17,380
+Và trong chỉ mục tôi muốn hiển thị năm thuộc tính.
+
+78
+00:05:17,410 --> 00:05:18,160
+Tiêu đề.
+
+79
+00:05:18,190 --> 00:05:19,240
+ISBN.
+
+80
+00:05:19,270 --> 00:05:21,010
+Giá niêm yết tại đây.
+
+81
+00:05:21,040 --> 00:05:25,620
+Tác giả và thể loại nơi chúng tôi có cho mỗi.
+
+82
+00:05:25,630 --> 00:05:28,270
+Ở đây chúng tôi không cần bất kỳ thứ tự nào.
+
+83
+00:05:29,430 --> 00:05:31,950
+Và đầu tiên chúng ta có tiêu đề.
+
+84
+00:05:32,910 --> 00:05:35,580
+Tiếp theo chúng ta có ISBN.
+
+85
+00:05:35,610 --> 00:05:36,360
+Rất tiếc.
+
+86
+00:05:36,390 --> 00:05:37,590
+Không phải cái đó.
+
+87
+00:05:38,290 --> 00:05:40,030
+Chỉ ISBN.
+
+88
+00:05:40,880 --> 00:05:44,780
+Sao chép và dán ba lần nữa.
+
+89
+00:05:45,740 --> 00:05:47,840
+Chúng tôi có giá niêm yết.
+
+90
+00:05:48,230 --> 00:05:50,660
+Tiếp theo, chúng ta có tác giả.
+
+91
+00:05:50,900 --> 00:05:54,710
+Và cuối cùng, ngay tại đây, tôi muốn danh mục.
+
+92
+00:05:54,890 --> 00:06:01,010
+Nhưng trong mô hình hiện tại của chúng tôi, chúng tôi không biết danh mục sách hoặc sản phẩm là gì.
+
+93
+00:06:01,310 --> 00:06:06,200
+Chúng tôi sẽ đề cập đến điều đó trong các video sắp tới, nhưng điều này có vẻ tốt.
+
+94
+00:06:06,650 --> 00:06:16,040
+Với điều đó, hãy để tôi thêm một điều hướng vào đó trong chế độ xem bố cục được gạch dưới, bố cục được
+
+95
+00:06:16,040 --> 00:06:16,940
+chia sẻ.
+
+96
+00:06:16,970 --> 00:06:18,740
+Chúng tôi có danh sách thả xuống.
+
+97
+00:06:18,770 --> 00:06:20,030
+Sao chép li.
+
+98
+00:06:20,240 --> 00:06:22,160
+Dán nó một lần nữa.
+
+99
+00:06:22,490 --> 00:06:25,340
+Điều này sẽ dành cho sản phẩm.
+
+100
+00:06:27,710 --> 00:06:29,570
+Và điều đó có vẻ tốt.
+
+101
+00:06:30,570 --> 00:06:32,910
+Tôi tin rằng đó là tất cả những gì cần thiết.
+
+102
+00:06:32,910 --> 00:06:36,750
+Nhưng hãy để tôi chạy dự án và đảm bảo rằng nó hoạt động.
+
+103
+00:06:38,900 --> 00:06:43,160
+Chúng tôi sẽ đi đến sản phẩm quản lý nội dung ở đây và.
+
+104
+00:06:43,160 --> 00:06:44,090
+Tuyệt vời.
+
+105
+00:06:44,210 --> 00:06:46,820
+Chúng tôi có danh sách sản phẩm ở đây.
+
+106
+00:06:47,030 --> 00:06:49,010
+Để mình sửa thử.
+
+107
+00:06:49,490 --> 00:06:50,390
+Hoàn hảo.
+
+108
+00:06:50,390 --> 00:06:51,560
+Trông tôt đây.
+
+109
+00:06:51,590 --> 00:06:52,040
+Rất tiếc.
+
+110
+00:06:52,040 --> 00:06:58,280
+Mô tả là hai lần và chỉnh sửa để tôi loại bỏ một.
+
+111
+00:06:59,000 --> 00:07:04,640
+Và thay vì nhập ở đây, hãy để tôi thay đổi nó thành một vùng văn bản.
+
+112
+00:07:04,970 --> 00:07:11,180
+Khi chúng tôi có vùng văn bản, chúng tôi cần thẻ đóng rõ ràng, nếu không nó sẽ không hoạt động.
+
+113
+00:07:11,840 --> 00:07:14,870
+Khi chúng tôi lưu nó, hãy quay lại.
+
+114
+00:07:14,900 --> 00:07:17,990
+Tải lại nóng bắt đầu và hoàn hảo.
+
+115
+00:07:17,990 --> 00:07:19,430
+Chúng tôi có một khu vực văn bản.
+
+116
+00:07:19,460 --> 00:07:26,150
+Tất nhiên, hiện tại điều này chưa hoàn hảo, nhưng chúng tôi sẽ sửa đổi điều đó trong các video sắp tới.
+
+117
+00:07:26,360 --> 00:07:31,100
+Ngay bây giờ, nếu tôi cố gắng cập nhật một cái gì đó ở đây, nó sẽ hoạt động.
+
+118
+00:07:31,100 --> 00:07:33,620
+Và hoàn hảo đó là làm việc.
+
+119
+00:07:34,500 --> 00:07:36,600
+Hãy để tôi hoàn nguyên nó trở lại đây.
+
+120
+00:07:36,630 --> 00:07:39,450
+Hãy để tôi tạo ra một sản phẩm giả ở đây.
+
+121
+00:07:40,800 --> 00:07:43,770
+Tạo mà hoạt động.
+
+122
+00:07:43,800 --> 00:07:46,230
+Hãy để tôi cố gắng xóa nó.
+
+123
+00:07:46,890 --> 00:07:48,300
+Và hoàn hảo.
+
+124
+00:07:48,330 --> 00:07:51,720
+Tất cả các hoạt động đang làm việc như mong đợi.
+
+125
+00:07:52,590 --> 00:07:56,690
+Bất cứ điều gì tôi sẽ thay đổi ngay bây giờ là thêm một chút không gian.
+
+126
+00:07:56,700 --> 00:07:58,620
+Vì vậy, hãy để tôi quay trở lại.
+
+127
+00:08:00,550 --> 00:08:05,590
+Và trong tất cả các chế độ xem ở đây, nơi chúng tôi có lề trên là bốn.
+
+128
+00:08:05,620 --> 00:08:08,050
+Hãy để tôi làm cho lề đó y.
+
+129
+00:08:08,230 --> 00:08:11,080
+Lưu nó trong bản chỉnh sửa.
+
+130
+00:08:11,350 --> 00:08:12,150
+Hoàn hảo.
+
+131
+00:08:12,160 --> 00:08:13,270
+Trông tôt đây.
+
+132
+00:08:13,600 --> 00:08:18,040
+Vì vậy, tôi sẽ thêm lề này y bốn vào tất cả các vị trí.
+
+133
+00:08:18,190 --> 00:08:19,390
+Xóa là tốt.
+
+134
+00:08:19,390 --> 00:08:21,250
+Tôi cần lề y.
+
+135
+00:08:21,470 --> 00:08:27,130
+Tạo lề y chỉ mục lề y.
+
+136
+00:08:27,680 --> 00:08:28,540
+Hoàn hảo.
+
+137
+00:08:28,540 --> 00:08:29,990
+Hãy để tôi cứu tất cả.
+
+138
+00:08:30,010 --> 00:08:31,360
+Quay lại đây.
+
+139
+00:08:32,840 --> 00:08:34,360
+Và hoàn hảo.
+
+140
+00:08:34,370 --> 00:08:38,000
+Bây giờ mọi thứ trông sạch sẽ hơn nhiều.
+
+141
+00:08:38,659 --> 00:08:42,370
+Nhưng về cơ bản, chúng tôi có hoạt động lưới sản phẩm.
+
+142
+00:08:42,380 --> 00:08:45,230
+Những người đang làm việc như mong đợi.
+

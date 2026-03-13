@@ -1,0 +1,232 @@
+1
+00:00:01,859 --> 00:00:03,600
+Instructor: One more thing that I want to add
+
+2
+00:00:03,600 --> 00:00:06,660
+in the course is what if in social logins,
+
+3
+00:00:06,660 --> 00:00:09,003
+how can we give Microsoft login?
+
+4
+00:00:09,840 --> 00:00:13,050
+For that, you will go to portal.azure.com
+
+5
+00:00:13,050 --> 00:00:16,172
+and you will search for app registrations.
+
+6
+00:00:17,160 --> 00:00:18,420
+We will click there
+
+7
+00:00:18,420 --> 00:00:23,420
+and we will create a new registration, call that bulky login
+
+8
+00:00:24,450 --> 00:00:27,330
+and what type of accounts will we allow?
+
+9
+00:00:27,330 --> 00:00:31,050
+We will allow accounts in any organizational directory
+
+10
+00:00:31,050 --> 00:00:33,303
+and personal Microsoft accounts.
+
+11
+00:00:34,350 --> 00:00:36,870
+Then we have to select a platform.
+
+12
+00:00:36,870 --> 00:00:41,550
+We will select that and we need a redirect U R I.
+
+13
+00:00:41,550 --> 00:00:43,470
+Let me run the application,
+
+14
+00:00:43,470 --> 00:00:48,470
+copy the local host U R I for now and paste it right here.
+
+15
+00:00:48,870 --> 00:00:50,763
+Select the register button.
+
+16
+00:00:52,200 --> 00:00:55,833
+And perfect. With that, we have few things right here.
+
+17
+00:00:56,670 --> 00:00:59,940
+First thing we need to create a client credential.
+
+18
+00:00:59,940 --> 00:01:02,223
+So let me create a client secret.
+
+19
+00:01:03,390 --> 00:01:07,650
+We'll call that bulky secret and the expiration.
+
+20
+00:01:07,650 --> 00:01:10,500
+Let me set that to be 24 months.
+
+21
+00:01:10,500 --> 00:01:11,703
+Let me add that.
+
+22
+00:01:13,380 --> 00:01:16,053
+Perfect. We have the secret ID here.
+
+23
+00:01:17,550 --> 00:01:20,250
+Now let me go back to the project here.
+
+24
+00:01:20,250 --> 00:01:25,250
+In the web project, I will select manage new get packages.
+
+25
+00:01:25,500 --> 00:01:28,143
+Whoops, let me stop the application,
+
+26
+00:01:29,190 --> 00:01:31,443
+and let me search for Microsoft dot
+
+27
+00:01:31,443 --> 00:01:34,860
+ASP net code authentication.
+
+28
+00:01:34,860 --> 00:01:39,480
+If I scroll down here, I should have Microsoft account.
+
+29
+00:01:39,480 --> 00:01:40,893
+Let me install that.
+
+30
+00:01:43,710 --> 00:01:45,240
+Perfect. That is done.
+
+31
+00:01:45,240 --> 00:01:49,473
+We will have to register that in program dot cs.
+
+32
+00:01:50,700 --> 00:01:53,910
+So copy this, paste it one more time.
+
+33
+00:01:53,910 --> 00:01:56,730
+We will say add Microsoft account.
+
+34
+00:01:56,730 --> 00:01:59,910
+There, we don't have app ID and Secret.
+
+35
+00:01:59,910 --> 00:02:04,443
+We have something called as Client ID and Client Secret.
+
+36
+00:02:05,970 --> 00:02:07,890
+Let me go back here.
+
+37
+00:02:07,890 --> 00:02:12,660
+I will copy the value that will be Client secret
+
+38
+00:02:12,660 --> 00:02:14,129
+and then client ID here.
+
+39
+00:02:14,129 --> 00:02:16,920
+We'll go to the overview tab.
+
+40
+00:02:16,920 --> 00:02:19,680
+We have that right here,
+
+41
+00:02:19,680 --> 00:02:21,390
+paste it there.
+
+42
+00:02:21,390 --> 00:02:25,008
+And I believe I forgot one thing in the web here
+
+43
+00:02:25,008 --> 00:02:28,830
+where we have the redirect, like in Facebook,
+
+44
+00:02:28,830 --> 00:02:31,650
+we have sign-in hyphen Facebook.
+
+45
+00:02:31,650 --> 00:02:35,073
+Here we have sign-in hyphen Microsoft.
+
+46
+00:02:36,420 --> 00:02:40,653
+Save that here and let me run the application.
+
+47
+00:02:43,800 --> 00:02:47,943
+We will navigate to register, collect Microsoft here.
+
+48
+00:02:48,810 --> 00:02:50,373
+Let me try that,
+
+49
+00:02:52,620 --> 00:02:54,810
+and it looks good.
+
+50
+00:02:54,810 --> 00:02:56,490
+Let me see.
+
+51
+00:02:56,490 --> 00:02:59,880
+Perfect. Registration is successful.
+
+52
+00:02:59,880 --> 00:03:02,220
+I can hit the register button.
+
+53
+00:03:02,220 --> 00:03:03,513
+And there we go.
+
+54
+00:03:04,470 --> 00:03:05,790
+If I log out
+
+55
+00:03:05,790 --> 00:03:10,650
+and next time when I go to log in here, I can use Microsoft,
+
+56
+00:03:10,650 --> 00:03:15,003
+select my email and it'll automatically sign me in.
+
+57
+00:03:15,990 --> 00:03:18,750
+So you can see how easy it was to implement
+
+58
+00:03:18,750 --> 00:03:21,423
+social sign in using Microsoft.
+

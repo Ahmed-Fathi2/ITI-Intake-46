@@ -1,0 +1,212 @@
+1
+00:00:01,760 --> 00:00:07,560
+Bây giờ chúng ta cần thêm logic xóa để chúng ta có bộ điều khiển nhận tất cả trong sản phẩm.
+
+2
+00:00:07,580 --> 00:00:09,140
+Hãy để tôi sao chép điều đó.
+
+3
+00:00:09,230 --> 00:00:14,810
+Dán nó một lần nữa vào đây và để tôi gọi http đó xóa ở đây.
+
+4
+00:00:15,960 --> 00:00:18,120
+Chúng tôi sẽ đặt tên này là xóa.
+
+5
+00:00:18,150 --> 00:00:20,850
+Khi chúng tôi đang xóa, chúng tôi cần ID.
+
+6
+00:00:22,690 --> 00:00:29,740
+Dựa trên ID ở đây, chúng tôi sẽ truy xuất sản phẩm của mình và để tôi lưu trữ sản phẩm đó để xóa chứ
+
+7
+00:00:29,740 --> 00:00:31,030
+không phải OBJ.
+
+8
+00:00:33,280 --> 00:00:35,950
+Nếu sản phẩm bị xóa là null.
+
+9
+00:00:37,780 --> 00:00:45,190
+Trong trường hợp đó, tôi sẽ trả về JSON trong đối tượng mà tôi sẽ nói thành công là sai và thông báo
+
+10
+00:00:45,190 --> 00:00:46,420
+lỗi khi xóa.
+
+11
+00:00:47,200 --> 00:00:52,750
+Nhưng nếu điều đó hợp lệ, thì trước khi xóa sản phẩm, chúng tôi cũng cần xóa hình ảnh của sản phẩm đó.
+
+12
+00:00:53,080 --> 00:00:58,200
+Vì vậy, chúng tôi sẽ nói đường dẫn hình ảnh cũ thay đổi là bằng.
+
+13
+00:00:58,210 --> 00:01:05,740
+Và nếu tôi đến Upsert nơi tôi đang kết hợp đường dẫn, logic đó, tôi có thể sao chép cái này.
+
+14
+00:01:07,370 --> 00:01:10,310
+Và chúng tôi sẽ dán nó ngay tại đây.
+
+15
+00:01:10,640 --> 00:01:11,480
+Hoàn hảo.
+
+16
+00:01:11,480 --> 00:01:13,730
+Vì vậy, chúng tôi sẽ xóa đường dẫn cũ ở đây.
+
+17
+00:01:13,730 --> 00:01:23,420
+Chúng tôi cần đường dẫn tuyến đường w-w-w mà chúng tôi có thể nhận được từ môi trường máy chủ web dot Đường dẫn webroot URL
+
+18
+00:01:23,420 --> 00:01:26,390
+hình ảnh bên trong sản phẩm sẽ bị xóa.
+
+19
+00:01:26,720 --> 00:01:28,820
+URL hình ảnh chấm.
+
+20
+00:01:28,820 --> 00:01:31,100
+Hãy để tôi phá vỡ điều này ở đây.
+
+21
+00:01:31,520 --> 00:01:32,570
+Hoàn hảo.
+
+22
+00:01:33,680 --> 00:01:35,960
+Vì vậy, chúng tôi xóa hình ảnh ở đây.
+
+23
+00:01:35,990 --> 00:01:40,370
+Tiếp theo chúng ta sẽ nói Unitofwork dot product dot remove.
+
+24
+00:01:40,940 --> 00:01:44,120
+Chúng tôi muốn xóa sản phẩm cần xóa.
+
+25
+00:01:45,120 --> 00:01:48,180
+Và gạch dưới đơn vị công việc dấu chấm lưu.
+
+26
+00:01:49,160 --> 00:01:56,570
+Cuối cùng, nơi chúng tôi phải trả lại JSON ở đây, chúng tôi sẽ nói thành công là đúng và xóa thông báo thành công.
+
+27
+00:01:57,470 --> 00:01:59,460
+Hãy để tôi dừng những thay đổi.
+
+28
+00:01:59,480 --> 00:02:00,690
+Chúng tôi có một lỗi.
+
+29
+00:02:00,710 --> 00:02:02,690
+Để tôi xem đó là gì.
+
+30
+00:02:06,500 --> 00:02:09,110
+Nó nói xóa đã tồn tại.
+
+31
+00:02:10,250 --> 00:02:12,530
+Để tôi xem nó ở đâu.
+
+32
+00:02:16,440 --> 00:02:23,400
+Và vâng, tất nhiên chúng tôi cần xóa chức năng xóa hiện có mà chúng tôi có và
+
+33
+00:02:23,400 --> 00:02:27,710
+tôi cũng sẽ xóa chế độ xem xóa trong khu vực.
+
+34
+00:02:27,720 --> 00:02:29,340
+Chúng tôi có xóa.
+
+35
+00:02:30,270 --> 00:02:31,710
+Hãy loại bỏ điều đó.
+
+36
+00:02:33,980 --> 00:02:39,170
+Cùng với đó, hãy để tôi thêm một điểm gỡ lỗi ở đây và chuyển đến sản phẩm dot JS.
+
+37
+00:02:39,830 --> 00:02:44,960
+Bây giờ nếu tôi sao chép cái này, hãy dán nó vào đây hơn là vô lý.
+
+38
+00:02:44,960 --> 00:02:53,030
+Nếu tôi nói xóa ở đây và tôi chỉ có thể chuyển tiếp id dấu gạch chéo, hãy để tôi chạy và cho bạn thấy điều gì sẽ xảy ra.
+
+39
+00:02:55,630 --> 00:03:00,430
+Chúng tôi đi đến sản phẩm ở đây chúng tôi có sản phẩm giả ở đây.
+
+40
+00:03:00,430 --> 00:03:08,140
+Nếu tôi nhấn xóa ở đây, API sẽ không được gọi vì API đó đã xóa http ở đó.
+
+41
+00:03:08,140 --> 00:03:13,030
+Nhưng nếu tôi xóa xóa http đó, hãy xem điều gì sẽ xảy ra.
+
+42
+00:03:17,000 --> 00:03:20,660
+Chúng tôi đi đến sản phẩm và việc xóa sẽ hoạt động ngay bây giờ.
+
+43
+00:03:21,200 --> 00:03:21,890
+Hoàn hảo.
+
+44
+00:03:21,890 --> 00:03:23,510
+Nó đạt đến điểm dừng của chúng tôi.
+
+45
+00:03:23,540 --> 00:03:27,710
+Nó sẽ xóa hình ảnh và nó cũng sẽ xóa sản phẩm.
+
+46
+00:03:27,890 --> 00:03:29,840
+Nếu tôi tiếp tục ở đây.
+
+47
+00:03:30,350 --> 00:03:31,180
+Hoàn hảo.
+
+48
+00:03:31,190 --> 00:03:35,570
+Nó nói thành công là đúng và thông báo xóa thành công.
+
+49
+00:03:36,290 --> 00:03:40,130
+Nếu tôi quay lại đây, sản phẩm đó không còn nữa.
+
+50
+00:03:40,460 --> 00:03:45,650
+Vì vậy, API của chúng tôi thực sự đang được gọi và nó trả về JSON.
+
+51
+00:03:45,980 --> 00:03:51,080
+Nhưng điều thường xảy ra là khi chúng tôi xóa, chúng tôi muốn xác nhận.
+
+52
+00:03:51,650 --> 00:03:58,610
+Để làm được điều đó, chúng tôi sẽ sử dụng cảnh báo ngọt ngào và để tôi chỉ cho bạn cách thêm cảnh báo đó vào dự án của chúng ta trong video
+
+53
+00:03:58,610 --> 00:03:59,330
+tiếp theo.
+

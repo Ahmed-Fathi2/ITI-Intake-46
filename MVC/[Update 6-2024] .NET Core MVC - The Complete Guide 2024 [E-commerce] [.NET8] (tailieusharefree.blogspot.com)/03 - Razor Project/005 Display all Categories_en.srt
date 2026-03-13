@@ -1,0 +1,456 @@
+1
+00:00:01,980 --> 00:00:04,320
+-: Now, we have the Category List here
+
+2
+00:00:04,320 --> 00:00:06,420
+but we need to load all the categories
+
+3
+00:00:06,420 --> 00:00:08,763
+from database and display them.
+
+4
+00:00:09,810 --> 00:00:14,310
+How will we do that when we are working with controller?
+
+5
+00:00:14,310 --> 00:00:17,550
+Let me move back to the old application here.
+
+6
+00:00:17,550 --> 00:00:20,400
+We used to get ApplicationDbContext
+
+7
+00:00:20,400 --> 00:00:22,360
+using dependency injection
+
+8
+00:00:23,520 --> 00:00:28,290
+and then we were easily able to retrieve all the categories.
+
+9
+00:00:28,290 --> 00:00:30,690
+It will be same when we are working
+
+10
+00:00:30,690 --> 00:00:33,003
+with the Razor project as well.
+
+11
+00:00:33,930 --> 00:00:38,340
+In the Razor project, in the cs file, which is PageModel,
+
+12
+00:00:38,340 --> 00:00:40,593
+here we will have the constructor.
+
+13
+00:00:41,550 --> 00:00:45,523
+First, we will have a private readonly ApplicationDbContext.
+
+14
+00:00:48,240 --> 00:00:50,790
+Let me call that _db
+
+15
+00:00:50,790 --> 00:00:55,200
+and ctor, tap tap, for the constructor here
+
+16
+00:00:55,200 --> 00:00:58,410
+and we will get ApplicationDbContext.
+
+17
+00:00:58,410 --> 00:01:00,873
+Assign that to the local variable.
+
+18
+00:01:01,980 --> 00:01:04,319
+After that, let me create a property,
+
+19
+00:01:04,319 --> 00:01:07,173
+which will be List of Category,
+
+20
+00:01:09,420 --> 00:01:12,063
+and that will hold all the categories.
+
+21
+00:01:13,560 --> 00:01:16,740
+I will call that CategoryList here
+
+22
+00:01:16,740 --> 00:01:21,740
+and we need to populate this using Entity Framework Core.
+
+23
+00:01:21,780 --> 00:01:26,780
+So, CategoryList is equal to _db.Categories.ToList.
+
+24
+00:01:28,560 --> 00:01:31,770
+That is exactly what we were doing in the controller,
+
+25
+00:01:31,770 --> 00:01:35,703
+but now, we have to do that in the OnGet handler.
+
+26
+00:01:36,990 --> 00:01:39,960
+Now, when we have the OnGet and Post handler,
+
+27
+00:01:39,960 --> 00:01:42,780
+we do not have to write return View.
+
+28
+00:01:42,780 --> 00:01:45,630
+You can see the return type is void here
+
+29
+00:01:45,630 --> 00:01:48,840
+because whatever we are setting here in the model,
+
+30
+00:01:48,840 --> 00:01:51,030
+it is easily accessible
+
+31
+00:01:51,030 --> 00:01:54,330
+because that is the model that we have.
+
+32
+00:01:54,330 --> 00:01:55,860
+So, when we return back,
+
+33
+00:01:55,860 --> 00:01:58,530
+we do not have to write anything else.
+
+34
+00:01:58,530 --> 00:02:01,143
+It will automatically bind everything.
+
+35
+00:02:02,040 --> 00:02:04,020
+So, now all we have to do is
+
+36
+00:02:04,020 --> 00:02:06,570
+on the Index Razor Page here,
+
+37
+00:02:06,570 --> 00:02:10,803
+directly access that model and display all the categories.
+
+38
+00:02:11,670 --> 00:02:15,000
+View, we can copy that from Views.
+
+39
+00:02:15,000 --> 00:02:17,400
+We have the Category Index.
+
+40
+00:02:17,400 --> 00:02:20,820
+Copy that and make sure to close this file
+
+41
+00:02:20,820 --> 00:02:22,590
+because the names are the same.
+
+42
+00:02:22,590 --> 00:02:24,450
+So, you might get confused
+
+43
+00:02:24,450 --> 00:02:27,360
+and end up working on a different file.
+
+44
+00:02:27,360 --> 00:02:29,400
+So, if you have to copy,
+
+45
+00:02:29,400 --> 00:02:32,913
+copy that, minimize it, and close the file.
+
+46
+00:02:34,380 --> 00:02:38,130
+I will paste all the code that we copied right here
+
+47
+00:02:38,130 --> 00:02:40,920
+and we do not need the model anymore.
+
+48
+00:02:40,920 --> 00:02:42,153
+Let's remove that.
+
+49
+00:02:44,370 --> 00:02:47,910
+Then, we have to worry about the tag helpers.
+
+50
+00:02:47,910 --> 00:02:51,970
+Previously, we had the tag helpers for controller and action
+
+51
+00:02:52,920 --> 00:02:56,433
+but with Razor Pages we have asp-page.
+
+52
+00:02:57,360 --> 00:02:58,950
+Using asp-page,
+
+53
+00:02:58,950 --> 00:03:01,950
+we can define the route where we have to go
+
+54
+00:03:01,950 --> 00:03:03,960
+when we create a category
+
+55
+00:03:03,960 --> 00:03:07,843
+that will be inside Categories/.
+
+56
+00:03:08,850 --> 00:03:12,450
+We will create Razor Page with the name of Create.
+
+57
+00:03:12,450 --> 00:03:14,520
+We do not have action there.
+
+58
+00:03:14,520 --> 00:03:17,613
+We have to give the complete route like this.
+
+59
+00:03:18,540 --> 00:03:22,200
+Now, if you are not case sensitive, that's okay here.
+
+60
+00:03:22,200 --> 00:03:23,643
+So, let me add that.
+
+61
+00:03:25,080 --> 00:03:27,900
+We scroll down, we have the table here,
+
+62
+00:03:27,900 --> 00:03:29,880
+but where we have the Model,
+
+63
+00:03:29,880 --> 00:03:32,640
+we do not have the category list.
+
+64
+00:03:32,640 --> 00:03:36,030
+We have that inside Model that will be a property
+
+65
+00:03:36,030 --> 00:03:37,530
+with the name of CategoryList.
+
+66
+00:03:38,520 --> 00:03:42,870
+So, if I go back, rather than Model directly in there,
+
+67
+00:03:42,870 --> 00:03:45,450
+we will have CategoryList
+
+68
+00:03:45,450 --> 00:03:48,540
+because model is the complete IndexModel.
+
+69
+00:03:48,540 --> 00:03:50,260
+Inside there, we have CategoryList
+
+70
+00:03:51,390 --> 00:03:54,813
+and that can be easily accessed like here.
+
+71
+00:03:55,650 --> 00:03:57,270
+We need to change the route here.
+
+72
+00:03:57,270 --> 00:03:59,170
+This will be asp-page
+
+73
+00:04:00,270 --> 00:04:03,870
+and it will be Category/edit.
+
+74
+00:04:03,870 --> 00:04:08,310
+Remove the action and where we have to pass the id,
+
+75
+00:04:08,310 --> 00:04:10,230
+asp-route is still valid
+
+76
+00:04:10,230 --> 00:04:13,350
+if you are working with Razor Pages.
+
+77
+00:04:13,350 --> 00:04:16,320
+So, when we add it, if we have to pass the id,
+
+78
+00:04:16,320 --> 00:04:20,163
+we can pass asp-route-id and that will work.
+
+79
+00:04:21,089 --> 00:04:25,920
+So, copy this asp-page and paste that for delete.
+
+80
+00:04:25,920 --> 00:04:28,050
+This will be delete.
+
+81
+00:04:28,050 --> 00:04:29,640
+We will still pass the id.
+
+82
+00:04:29,640 --> 00:04:32,523
+That needs to be edited and deleted.
+
+83
+00:04:33,360 --> 00:04:35,853
+Everything else stays the same.
+
+84
+00:04:36,690 --> 00:04:38,250
+With that configured,
+
+85
+00:04:38,250 --> 00:04:42,120
+let me run the project and see if that works.
+
+86
+00:04:42,120 --> 00:04:43,770
+We forgot one thing here.
+
+87
+00:04:43,770 --> 00:04:46,380
+Let me go back while it is running.
+
+88
+00:04:46,380 --> 00:04:50,733
+Inside the _Layout, we have to add categories.
+
+89
+00:04:51,630 --> 00:04:53,823
+So, copy this li here.
+
+90
+00:04:55,200 --> 00:04:58,260
+You can see we have the asp-page here.
+
+91
+00:04:58,260 --> 00:05:02,087
+That will go to categories/index
+
+92
+00:05:05,160 --> 00:05:08,310
+and we'll display Category here.
+
+93
+00:05:08,310 --> 00:05:10,833
+Let me see how that looks here.
+
+94
+00:05:12,270 --> 00:05:14,310
+We have Category.
+
+95
+00:05:14,310 --> 00:05:15,333
+Click that.
+
+96
+00:05:16,290 --> 00:05:18,000
+And perfect.
+
+97
+00:05:18,000 --> 00:05:21,000
+Right now, we are not using any Bootswatch theme.
+
+98
+00:05:21,000 --> 00:05:23,280
+So, these are the default classes
+
+99
+00:05:23,280 --> 00:05:27,480
+but you can see everything is working with Razor Pages
+
+100
+00:05:27,480 --> 00:05:31,800
+and we have our Index Page that is functional.
+
+101
+00:05:31,800 --> 00:05:34,290
+If you want to add the Bootstrap Icons here,
+
+102
+00:05:34,290 --> 00:05:35,550
+you can do that.
+
+103
+00:05:35,550 --> 00:05:37,530
+But, I think this looks good
+
+104
+00:05:37,530 --> 00:05:39,903
+for the category list right now.
+
+105
+00:05:41,100 --> 00:05:42,750
+Before I end the video,
+
+106
+00:05:42,750 --> 00:05:44,280
+if I go back and,
+
+107
+00:05:44,280 --> 00:05:48,360
+in the cshtml rather than OnGet here,
+
+108
+00:05:48,360 --> 00:05:50,370
+if this was only Get,
+
+109
+00:05:50,370 --> 00:05:53,370
+you will notice things will not work
+
+110
+00:05:53,370 --> 00:05:55,740
+because that On is required.
+
+111
+00:05:55,740 --> 00:05:59,733
+If I click on Category, you can see things are not working.
+
+112
+00:06:00,870 --> 00:06:05,040
+So, when we have a Get action method inside Razor Pages,
+
+113
+00:06:05,040 --> 00:06:08,100
+it must match the exact name, OnGet,
+
+114
+00:06:08,100 --> 00:06:10,233
+or else it will not work.
+

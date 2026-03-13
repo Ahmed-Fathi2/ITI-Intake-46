@@ -1,0 +1,276 @@
+1
+00:00:01,950 --> 00:00:03,120
+Instructor: Now we need to deploy
+
+2
+00:00:03,120 --> 00:00:05,790
+the web application to Azure.
+
+3
+00:00:05,790 --> 00:00:08,670
+Right now .NET 8 is in preview,
+
+4
+00:00:08,670 --> 00:00:12,480
+so rather than facing some issues with the preview version
+
+5
+00:00:12,480 --> 00:00:15,120
+we can convert or downgrade our application
+
+6
+00:00:15,120 --> 00:00:19,620
+to .NET 7 only to learn how the hosting works
+
+7
+00:00:19,620 --> 00:00:22,050
+and see that in action.
+
+8
+00:00:22,050 --> 00:00:24,990
+So we will edit the project file here.
+
+9
+00:00:24,990 --> 00:00:29,310
+Let me open that and it will be .NET 7.
+
+10
+00:00:29,310 --> 00:00:31,623
+The version I know is 7.0.3,
+
+11
+00:00:33,750 --> 00:00:38,193
+so I will replace that in all of them right here.
+
+12
+00:00:47,340 --> 00:00:48,690
+And perfect.
+
+13
+00:00:48,690 --> 00:00:52,320
+I believe that looks good for the web project.
+
+14
+00:00:52,320 --> 00:00:53,640
+Save that.
+
+15
+00:00:53,640 --> 00:00:57,097
+Let me update the utility this time.
+
+16
+00:00:57,097 --> 00:01:01,023
+.NET 7 and 7.0.3.
+
+17
+00:01:02,220 --> 00:01:03,873
+Check the other one.
+
+18
+00:01:04,867 --> 00:01:06,513
+.NET 7.
+
+19
+00:01:07,890 --> 00:01:10,650
+7.0.3.
+
+20
+00:01:10,650 --> 00:01:13,020
+Edit project file.
+
+21
+00:01:13,020 --> 00:01:15,180
+Now, the only packages that we will update
+
+22
+00:01:15,180 --> 00:01:16,920
+where you see preview
+
+23
+00:01:16,920 --> 00:01:20,553
+and not any other package like Stripe or SendGrid.
+
+24
+00:01:21,780 --> 00:01:25,470
+We only want to touch the Microsoft packages
+
+25
+00:01:25,470 --> 00:01:28,110
+and perfect, that looks good.
+
+26
+00:01:28,110 --> 00:01:30,480
+With that, let me run the application
+
+27
+00:01:30,480 --> 00:01:33,300
+and everything should work as it is.
+
+28
+00:01:33,300 --> 00:01:36,540
+Let me see which one is the issue.
+
+29
+00:01:36,540 --> 00:01:38,220
+I believe I forgot something
+
+30
+00:01:38,220 --> 00:01:41,790
+in the web project, edit project file.
+
+31
+00:01:41,790 --> 00:01:42,870
+Whoops.
+
+32
+00:01:42,870 --> 00:01:47,760
+7.0.3 and that looks good.
+
+33
+00:01:47,760 --> 00:01:49,023
+Let me run this.
+
+34
+00:01:51,720 --> 00:01:54,060
+We are facing one issue here,
+
+35
+00:01:54,060 --> 00:01:58,050
+because date only has been introduced with .NET 8
+
+36
+00:01:58,050 --> 00:02:01,860
+and it is not available with .NET 7.
+
+37
+00:02:01,860 --> 00:02:06,860
+So that will be a little bit of an issue for our deployment.
+
+38
+00:02:06,930 --> 00:02:11,700
+To modify that, we will have to change quite a few things.
+
+39
+00:02:11,700 --> 00:02:13,920
+First, in the data here,
+
+40
+00:02:13,920 --> 00:02:18,000
+well, we have to go to models where we have order header,
+
+41
+00:02:18,000 --> 00:02:22,290
+change it from date only to date time
+
+42
+00:02:22,290 --> 00:02:24,670
+and now if I build the application
+
+43
+00:02:25,560 --> 00:02:28,110
+it looks like it is working here.
+
+44
+00:02:28,110 --> 00:02:29,910
+Let me run this.
+
+45
+00:02:29,910 --> 00:02:34,653
+We were converting that and that should not work right here.
+
+46
+00:02:35,755 --> 00:02:39,810
+It'll be DateTime.Now.Add 30 days.
+
+47
+00:02:39,810 --> 00:02:41,250
+And with that change
+
+48
+00:02:41,250 --> 00:02:45,033
+let me run the application and see if that works.
+
+49
+00:02:45,870 --> 00:02:49,353
+Let me try to place an order as a company user.
+
+50
+00:02:54,930 --> 00:02:57,120
+We have few things in the card.
+
+51
+00:02:57,120 --> 00:02:59,370
+That should be okay.
+
+52
+00:02:59,370 --> 00:03:01,563
+Let me add one more here.
+
+53
+00:03:02,550 --> 00:03:05,943
+Navigate to the cart and place order.
+
+54
+00:03:07,830 --> 00:03:08,670
+Perfect.
+
+55
+00:03:08,670 --> 00:03:10,710
+Order number is 2010.
+
+56
+00:03:10,710 --> 00:03:14,493
+Let me log out and log in as an admin.
+
+57
+00:03:19,860 --> 00:03:24,780
+Let me manage that order, which is 2010 here.
+
+58
+00:03:24,780 --> 00:03:28,140
+Start processing, add the carrier
+
+59
+00:03:28,140 --> 00:03:30,663
+and tracking and ship order.
+
+60
+00:03:31,560 --> 00:03:32,393
+Perfect.
+
+61
+00:03:32,393 --> 00:03:33,840
+We have the payment due date
+
+62
+00:03:33,840 --> 00:03:36,423
+and that is working as expected.
+
+63
+00:03:37,800 --> 00:03:41,340
+So with that, everything is looking good on local host
+
+64
+00:03:41,340 --> 00:03:44,763
+and the project is downgraded to .NET 7.
+
+65
+00:03:45,750 --> 00:03:47,883
+Let me close all the tabs here.
+
+66
+00:03:49,770 --> 00:03:52,900
+I will commit that with .NET 7 downgrade
+
+67
+00:03:54,120 --> 00:03:56,400
+and perfect, that worked.
+
+68
+00:03:56,400 --> 00:04:00,120
+So our code is all checked in and in the next video
+
+69
+00:04:00,120 --> 00:04:03,603
+let's work on deploying that to an app service.
+

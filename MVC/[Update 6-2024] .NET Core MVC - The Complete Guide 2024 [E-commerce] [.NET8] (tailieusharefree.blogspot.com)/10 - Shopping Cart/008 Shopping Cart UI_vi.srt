@@ -1,0 +1,160 @@
+1
+00:00:01,730 --> 00:00:08,870
+Bây giờ chúng tôi muốn làm việc trên bộ điều khiển giỏ hàng để chúng tôi có thể hiển thị mọi thứ trên giao diện người dùng và
+
+2
+00:00:08,870 --> 00:00:10,130
+hiển thị giỏ hàng.
+
+3
+00:00:11,070 --> 00:00:13,950
+Để làm được điều đó, chúng ta sẽ phải làm khá nhiều việc.
+
+4
+00:00:14,760 --> 00:00:21,870
+Điều đầu tiên chúng ta cần tạo bộ điều khiển và chúng ta sẽ làm điều đó trong bộ điều khiển khách
+
+5
+00:00:21,870 --> 00:00:27,900
+hàng vì giỏ hàng sẽ hướng tới khách hàng và tôi gọi đó là bộ điều khiển giỏ hàng.
+
+6
+00:00:30,530 --> 00:00:31,400
+Bên trong đó.
+
+7
+00:00:31,400 --> 00:00:33,140
+Chúng tôi có hành động chỉ mục.
+
+8
+00:00:33,140 --> 00:00:36,790
+Để tôi bấm chuột phải vào xem không được.
+
+9
+00:00:36,800 --> 00:00:38,870
+Chúng ta phải thêm chế độ xem.
+
+10
+00:00:38,990 --> 00:00:41,330
+Hãy để tôi tạo chế độ xem chỉ mục.
+
+11
+00:00:42,580 --> 00:00:48,300
+Bây giờ tôi có bố cục được gạch chân, chúng ta cần thêm biểu tượng giỏ hàng ở đó.
+
+12
+00:00:48,310 --> 00:00:52,450
+Vì vậy, hãy để tôi cuộn ở đó và để tôi sao chép.
+
+13
+00:00:52,450 --> 00:00:52,780
+Và.
+
+14
+00:00:52,800 --> 00:00:55,330
+Lee Vâng, đó là danh sách thả xuống bên trong.
+
+15
+00:00:55,330 --> 00:00:57,130
+Hãy để tôi sao chép cái này.
+
+16
+00:00:58,000 --> 00:01:06,670
+Dán nó bên ngoài nhận xét ở đây, khu vực sẽ là khách hàng, nhưng bộ điều khiển sẽ là bộ điều khiển giỏ hàng.
+
+17
+00:01:07,090 --> 00:01:09,760
+Và chúng ta muốn viết gì ở đây?
+
+18
+00:01:10,120 --> 00:01:12,820
+Tôi sẽ sử dụng biểu tượng bootstrap.
+
+19
+00:01:12,820 --> 00:01:19,960
+Vì vậy, lớp là theo, theo giỏ hàng và theo mặc định, hãy để tôi hiển thị số 0 bên trong đó.
+
+20
+00:01:21,060 --> 00:01:27,600
+Cùng với đó, hãy để tôi chạy cái này và xem liệu chúng ta có thể điều hướng đến trang chỉ mục hay không.
+
+21
+00:01:31,360 --> 00:01:33,250
+Một giỏ mua hàng có vẻ tốt.
+
+22
+00:01:33,250 --> 00:01:38,170
+Nếu tôi nhấp vào đó, chúng tôi sẽ chuyển đến giỏ hàng của khách hàng và quyền riêng tư.
+
+23
+00:01:38,200 --> 00:01:38,830
+Rất tiếc.
+
+24
+00:01:38,830 --> 00:01:41,350
+Phương thức hành động sẽ là index.
+
+25
+00:01:41,650 --> 00:01:43,570
+Đó là thủ phạm.
+
+26
+00:01:44,720 --> 00:01:51,920
+Nếu tôi quay lại đây và nếu tôi nhấp vào đó, bạn có thể thấy thông báo không tìm thấy trang này.
+
+27
+00:01:52,430 --> 00:01:57,500
+Bạn có thể cố gắng tìm ra hoặc nghĩ ra lý do về những gì chúng ta đang thiếu không?
+
+28
+00:01:58,510 --> 00:02:02,770
+Nếu bạn nói rằng chúng tôi không đề cập đến khu vực này ở đây, bạn đã đúng.
+
+29
+00:02:03,430 --> 00:02:07,420
+Chúng tôi phải cung cấp cho đó một khu vực của khách hàng.
+
+30
+00:02:08,080 --> 00:02:10,780
+Và điều đó sẽ khắc phục vấn đề.
+
+31
+00:02:10,810 --> 00:02:13,120
+Chúng ta sẽ phải xây dựng lại ở đây.
+
+32
+00:02:13,540 --> 00:02:15,670
+Hãy để tôi chờ đợi cho điều đó.
+
+33
+00:02:19,930 --> 00:02:25,660
+Và nếu tôi nhấp vào lần này, trang trống hoàn hảo sẽ được tải ở đây.
+
+34
+00:02:26,380 --> 00:02:34,570
+Bây giờ, chúng tôi không muốn lãng phí thời gian để viết HTML và CSS vì điều đó trong đoạn mã tài nguyên
+
+35
+00:02:34,600 --> 00:02:37,900
+dự án mà chúng tôi đang ở trong phần mười.
+
+36
+00:02:38,230 --> 00:02:44,230
+Tôi có giao diện người dùng giỏ hàng, hoàn toàn là HTML và CSS.
+
+37
+00:02:44,260 --> 00:02:50,290
+Bạn có thể sao chép và dán nó vào chế độ xem chỉ mục cho giỏ hàng.
+
+38
+00:02:50,320 --> 00:02:59,710
+Lưu nó và nếu bạn trở lại hoàn hảo, bạn có một mẫu cơ bản đang hoạt động và bây giờ tất cả những gì bạn phải làm
+
+39
+00:02:59,710 --> 00:03:05,320
+là truy xuất giỏ hàng đó và sửa đổi tất cả các thuộc tính ở đây.
+
+40
+00:03:06,350 --> 00:03:09,050
+Hãy để tôi làm điều đó trong video tiếp theo.
+

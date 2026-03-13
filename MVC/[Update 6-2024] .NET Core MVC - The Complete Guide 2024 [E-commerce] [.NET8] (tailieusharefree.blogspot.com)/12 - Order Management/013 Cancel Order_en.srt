@@ -1,0 +1,292 @@
+1
+00:00:01,890 --> 00:00:03,750
+Instructor: Button that I want to work on
+
+2
+00:00:03,750 --> 00:00:06,000
+is Cancel Order.
+
+3
+00:00:06,000 --> 00:00:09,960
+So let me go back here actually to the orders.
+
+4
+00:00:09,960 --> 00:00:13,470
+And if we have something that is approved here.
+
+5
+00:00:13,470 --> 00:00:15,600
+This is a customer order.
+
+6
+00:00:15,600 --> 00:00:20,190
+So if we cancel the order, we want to update the status.
+
+7
+00:00:20,190 --> 00:00:23,910
+But on top of that, I want to show you one more thing.
+
+8
+00:00:23,910 --> 00:00:27,780
+We actually want to give a refund to this customer,
+
+9
+00:00:27,780 --> 00:00:30,720
+and we have the Payment Intent ID.
+
+10
+00:00:30,720 --> 00:00:35,553
+Based on that, we can use Stripe to easily give refund.
+
+11
+00:00:36,720 --> 00:00:38,580
+Let me show that.
+
+12
+00:00:38,580 --> 00:00:42,000
+We will go back here in the Details,
+
+13
+00:00:42,000 --> 00:00:44,103
+where we have the Cancel Order.
+
+14
+00:00:44,940 --> 00:00:48,333
+Let me add an asp-action of CancelOrder.
+
+15
+00:00:50,610 --> 00:00:54,243
+Copy that, and we will create an action method.
+
+16
+00:00:55,200 --> 00:00:58,710
+Let me copy this action method for ShipOrder,
+
+17
+00:00:58,710 --> 00:01:01,620
+paste it here with the closing bracket,
+
+18
+00:01:01,620 --> 00:01:04,903
+and I will copy the action name CancelOrder.
+
+19
+00:01:07,140 --> 00:01:07,973
+Perfect.
+
+20
+00:01:10,140 --> 00:01:12,480
+When we have to cancel the order,
+
+21
+00:01:12,480 --> 00:01:16,320
+first we will retrieve that order from database.
+
+22
+00:01:16,320 --> 00:01:18,780
+And then, inside orderHeader,
+
+23
+00:01:18,780 --> 00:01:21,510
+we can check the PaymentStatus.
+
+24
+00:01:21,510 --> 00:01:26,193
+If PaymentStatus==SD.PaymentStatusApproved,
+
+25
+00:01:27,330 --> 00:01:30,150
+that means payment was already done
+
+26
+00:01:30,150 --> 00:01:32,313
+and we have to give them a refund.
+
+27
+00:01:33,420 --> 00:01:35,910
+Now in order to give them a refund,
+
+28
+00:01:35,910 --> 00:01:38,640
+we will create a variable options
+
+29
+00:01:38,640 --> 00:01:42,450
+of new RefundCreateOptions.
+
+30
+00:01:42,450 --> 00:01:45,873
+And you can see that is inside the Stripe class.
+
+31
+00:01:46,980 --> 00:01:48,900
+That looks good.
+
+32
+00:01:48,900 --> 00:01:51,900
+Inside there, you can give some Reason,
+
+33
+00:01:51,900 --> 00:01:55,580
+like RefundReasons.RequestedByCustomer.
+
+34
+00:01:57,150 --> 00:02:00,900
+And you have to provide the Payment Intent ID
+
+35
+00:02:00,900 --> 00:02:04,337
+that is inside orderHeader.PaymentIntentId.
+
+36
+00:02:06,570 --> 00:02:08,340
+Once you have the option,
+
+37
+00:02:08,340 --> 00:02:11,520
+then again we have to create a service.
+
+38
+00:02:11,520 --> 00:02:14,670
+But this time, it will be a RefundService,
+
+39
+00:02:14,670 --> 00:02:17,040
+which is inside Stripe.
+
+40
+00:02:17,040 --> 00:02:20,564
+And then, we will get a refund object
+
+41
+00:02:20,564 --> 00:02:25,564
+by calling the service.Create with the options.
+
+42
+00:02:26,970 --> 00:02:28,890
+Simple as that.
+
+43
+00:02:28,890 --> 00:02:31,560
+With that, the refund has been processed.
+
+44
+00:02:31,560 --> 00:02:35,070
+And if you want, you can also log the refund status
+
+45
+00:02:35,070 --> 00:02:39,753
+or the refund ID in your database by creating a new field.
+
+46
+00:02:40,710 --> 00:02:42,690
+What I will do is right here,
+
+47
+00:02:42,690 --> 00:02:46,667
+I will update unitOfWork.OrderHeader.UpdateStatus.
+
+48
+00:02:49,290 --> 00:02:53,310
+Change that to be orderHeader.Id.
+
+49
+00:02:53,310 --> 00:02:57,330
+The ID is inside orderHeader.Id.
+
+50
+00:02:57,330 --> 00:03:00,900
+And the status will be StatusCancelled.
+
+51
+00:03:00,900 --> 00:03:04,653
+Payment status will be SD.StatusRefunded.
+
+52
+00:03:07,590 --> 00:03:09,360
+In the else part here,
+
+53
+00:03:09,360 --> 00:03:12,480
+we are not going to give them any refund,
+
+54
+00:03:12,480 --> 00:03:15,453
+so we will directly say StatusCancelled.
+
+55
+00:03:16,680 --> 00:03:18,750
+Finally, we have to save the changes,
+
+56
+00:03:18,750 --> 00:03:21,930
+so let me copy that from the top here,
+
+57
+00:03:21,930 --> 00:03:23,640
+paste it here,
+
+58
+00:03:23,640 --> 00:03:27,540
+and I will say, "Order Cancelled Successfully."
+
+59
+00:03:27,540 --> 00:03:28,773
+Redirect back.
+
+60
+00:03:30,240 --> 00:03:32,580
+Perfect. That looks good.
+
+61
+00:03:32,580 --> 00:03:36,273
+Let me save this and restart the application.
+
+62
+00:03:37,230 --> 00:03:39,810
+We are logged in as the admin here.
+
+63
+00:03:39,810 --> 00:03:42,600
+Let me go to Manage Order.
+
+64
+00:03:42,600 --> 00:03:47,600
+And Customer, let me go there and click Cancel Order.
+
+65
+00:03:49,740 --> 00:03:52,230
+Perfect. Order canceled.
+
+66
+00:03:52,230 --> 00:03:54,360
+Then, let me go to Stripe
+
+67
+00:03:54,360 --> 00:03:58,590
+and see if a refund request actually came through.
+
+68
+00:03:58,590 --> 00:04:02,040
+We will go to Payments here, and perfect.
+
+69
+00:04:02,040 --> 00:04:04,710
+You can see refund has been initiated.
+
+70
+00:04:04,710 --> 00:04:09,570
+And Payment Intent, if you notice, ends in SAD,
+
+71
+00:04:09,570 --> 00:04:12,423
+and that is what we have right here.
+
+72
+00:04:13,680 --> 00:04:18,089
+So canceling an order is working as expected,
+
+73
+00:04:18,089 --> 00:04:22,233
+and we are giving them a refund if the payment was made.
+

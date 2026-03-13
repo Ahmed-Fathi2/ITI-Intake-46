@@ -1,0 +1,228 @@
+1
+00:00:01,800 --> 00:00:05,280
+Bây giờ chúng ta cần triển khai ứng dụng Web lên Azure.
+
+2
+00:00:05,550 --> 00:00:08,450
+Hiện tại, Dotnet 8 đang ở chế độ xem trước.
+
+3
+00:00:08,460 --> 00:00:15,030
+Vì vậy, thay vì đối mặt với một số vấn đề với phiên bản xem trước, chúng tôi chỉ có thể chuyển đổi hoặc hạ cấp ứng
+
+4
+00:00:15,030 --> 00:00:21,450
+dụng của mình xuống Dotnet 7 để tìm hiểu cách hoạt động của dịch vụ lưu trữ và xem hoạt động của ứng dụng đó.
+
+5
+00:00:21,870 --> 00:00:24,870
+Vì vậy, chúng tôi sẽ chỉnh sửa tệp dự án ở đây.
+
+6
+00:00:24,900 --> 00:00:28,980
+Hãy để tôi mở nó và nó sẽ là Dotnet 7.
+
+7
+00:00:29,010 --> 00:00:38,190
+Phiên bản tôi biết là 7. 0. 3, vì vậy tôi sẽ thay thế nó trong tất cả chúng ngay tại đây.
+
+8
+00:00:47,300 --> 00:00:48,640
+Và hoàn hảo.
+
+9
+00:00:48,650 --> 00:00:51,890
+Tôi tin rằng điều đó có vẻ tốt cho dự án web.
+
+10
+00:00:52,040 --> 00:00:53,390
+Lưu vào đó.
+
+11
+00:00:53,420 --> 00:00:56,450
+Để mình cập nhật tiện ích lần này.
+
+12
+00:00:56,960 --> 00:01:01,010
+Mạng bảy và 7. 0. 3.
+
+13
+00:01:01,940 --> 00:01:03,830
+Kiểm tra cái khác.
+
+14
+00:01:04,910 --> 00:01:10,310
+Mạng 77. 0. 3.
+
+15
+00:01:10,550 --> 00:01:12,260
+Chỉnh sửa tệp dự án.
+
+16
+00:01:12,800 --> 00:01:19,760
+Giờ đây, các gói duy nhất mà chúng tôi sẽ cập nhật ở nơi bạn xem bản xem trước chứ không phải bất kỳ gói nào
+
+17
+00:01:19,760 --> 00:01:26,360
+khác như Stripe hoặc SendGrid, chúng tôi chỉ muốn chạm vào các gói của Microsoft và hoàn thiện.
+
+18
+00:01:26,360 --> 00:01:27,410
+Trông tôt đây.
+
+19
+00:01:27,770 --> 00:01:32,990
+Cùng với đó, hãy để tôi chạy ứng dụng và mọi thứ sẽ hoạt động như bình thường.
+
+20
+00:01:33,020 --> 00:01:35,840
+Hãy để tôi xem cái nào là vấn đề.
+
+21
+00:01:36,470 --> 00:01:39,710
+Tôi tin rằng tôi đã quên điều gì đó trong dự án web.
+
+22
+00:01:40,310 --> 00:01:41,740
+Chỉnh sửa tệp dự án.
+
+23
+00:01:41,750 --> 00:01:44,900
+Rất tiếc 7. 0. 3.
+
+24
+00:01:45,800 --> 00:01:47,630
+Và điều đó có vẻ tốt.
+
+25
+00:01:47,640 --> 00:01:49,080
+Hãy để tôi chạy cái này.
+
+26
+00:01:51,650 --> 00:01:59,930
+Chúng tôi đang phải đối mặt với một vấn đề ở đây vì ngày chỉ được giới thiệu với mạng tám và nó không khả dụng với.
+
+27
+00:02:00,170 --> 00:02:01,070
+Mạng bảy.
+
+28
+00:02:01,550 --> 00:02:09,410
+Vì vậy, đó sẽ là một vấn đề nhỏ đối với việc triển khai của chúng tôi. Để sửa đổi điều đó, chúng tôi sẽ phải thay
+
+29
+00:02:09,410 --> 00:02:10,910
+đổi khá nhiều thứ.
+
+30
+00:02:11,390 --> 00:02:13,520
+Đầu tiên trong dữ liệu ở đây.
+
+31
+00:02:13,610 --> 00:02:17,510
+Chà, chúng ta phải đi đến các mô hình nơi chúng ta có tiêu đề đơn hàng.
+
+32
+00:02:17,690 --> 00:02:21,980
+Thay đổi nó từ chỉ ngày thành ngày giờ.
+
+33
+00:02:21,980 --> 00:02:27,870
+Và bây giờ nếu tôi xây dựng ứng dụng, có vẻ như nó đang hoạt động ở đây.
+
+34
+00:02:27,890 --> 00:02:29,480
+Hãy để tôi chạy cái này.
+
+35
+00:02:29,600 --> 00:02:34,670
+Chúng tôi đã chuyển đổi nó và nó sẽ không hoạt động ngay tại đây.
+
+36
+00:02:35,090 --> 00:02:39,110
+Nó sẽ là ngày giờ chấm giờ, thêm 30 ngày.
+
+37
+00:02:39,530 --> 00:02:44,990
+Và với sự thay đổi đó, hãy để tôi chạy ứng dụng và xem nó có hoạt động không.
+
+38
+00:02:45,710 --> 00:02:49,430
+Hãy để tôi thử đặt hàng với tư cách là người dùng của công ty.
+
+39
+00:02:54,720 --> 00:02:58,830
+Chúng tôi có vài thứ trong giỏ hàng sẽ ổn thôi.
+
+40
+00:02:59,160 --> 00:03:01,530
+Hãy để tôi thêm một cái nữa ở đây.
+
+41
+00:03:02,530 --> 00:03:05,230
+Điều hướng đến giỏ hàng và địa điểm.
+
+42
+00:03:05,230 --> 00:03:05,920
+Đặt hàng.
+
+43
+00:03:07,690 --> 00:03:08,500
+Hoàn hảo.
+
+44
+00:03:08,530 --> 00:03:10,580
+Số thứ tự là 2010.
+
+45
+00:03:10,600 --> 00:03:14,500
+Hãy để tôi đăng xuất và đăng nhập với tư cách quản trị viên.
+
+46
+00:03:19,670 --> 00:03:23,210
+Hãy để tôi quản lý đơn hàng đó, đó là năm 2010.
+
+47
+00:03:23,240 --> 00:03:24,080
+Đây.
+
+48
+00:03:24,770 --> 00:03:26,240
+Bắt đầu xử lý.
+
+49
+00:03:26,750 --> 00:03:30,650
+Thêm nhà vận chuyển và theo dõi và đặt hàng.
+
+50
+00:03:31,130 --> 00:03:31,970
+Hoàn hảo.
+
+51
+00:03:32,000 --> 00:03:36,440
+Chúng tôi có ngày đến hạn thanh toán và ngày đó đang hoạt động như mong đợi.
+
+52
+00:03:37,490 --> 00:03:44,750
+Vì vậy, mọi thứ đều ổn trên máy chủ cục bộ và dự án bị hạ cấp xuống Dotnet bảy.
+
+53
+00:03:45,440 --> 00:03:47,840
+Hãy để tôi đóng tất cả các tab ở đây.
+
+54
+00:03:49,700 --> 00:03:55,010
+Tôi sẽ cam kết điều đó với. net bảy hạ cấp và hoàn hảo.
+
+55
+00:03:55,010 --> 00:03:55,940
+Điều đó đã làm việc.
+
+56
+00:03:56,090 --> 00:03:58,370
+Vì vậy, tất cả mã của chúng tôi đã được kiểm tra.
+
+57
+00:03:58,370 --> 00:04:03,560
+Và trong video tiếp theo, chúng ta hãy bắt đầu triển khai dịch vụ đó cho một dịch vụ ứng dụng.
+

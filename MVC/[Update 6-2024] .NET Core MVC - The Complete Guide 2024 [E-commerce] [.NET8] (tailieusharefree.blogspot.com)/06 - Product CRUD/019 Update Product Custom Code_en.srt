@@ -1,0 +1,404 @@
+1
+00:00:02,250 --> 00:00:04,810
+-: We have added the code to update the product
+
+2
+00:00:05,752 --> 00:00:08,640
+and remove old image if that exists.
+
+3
+00:00:08,640 --> 00:00:11,662
+Let me see that in action here.
+
+4
+00:00:11,662 --> 00:00:13,020
+We have an old image.
+
+5
+00:00:13,020 --> 00:00:17,430
+Let me pin this so we can see the old image being deleted.
+
+6
+00:00:17,430 --> 00:00:19,593
+And let me upload a new image.
+
+7
+00:00:20,730 --> 00:00:23,040
+We will hit update here.
+
+8
+00:00:23,040 --> 00:00:25,950
+And you notice here the new image was added
+
+9
+00:00:25,950 --> 00:00:28,383
+but the old one was not deleted.
+
+10
+00:00:29,370 --> 00:00:32,520
+Let's debug and see what happened.
+
+11
+00:00:32,520 --> 00:00:34,803
+We will add a break point here.
+
+12
+00:00:35,910 --> 00:00:40,353
+Let's go back and try to update a new image here.
+
+13
+00:00:41,670 --> 00:00:44,733
+Update and let's see.
+
+14
+00:00:46,950 --> 00:00:50,250
+It did not go into the F condition here
+
+15
+00:00:50,250 --> 00:00:54,270
+and for some reason the image URL is null.
+
+16
+00:00:54,270 --> 00:00:58,770
+The reason behind that is if I go back to the absurd view
+
+17
+00:00:58,770 --> 00:01:00,750
+we have the image URL
+
+18
+00:01:00,750 --> 00:01:04,170
+but it is not there in any input field.
+
+19
+00:01:04,170 --> 00:01:07,140
+Because of that, when the form is posted
+
+20
+00:01:07,140 --> 00:01:08,673
+it does not stay there.
+
+21
+00:01:09,810 --> 00:01:12,450
+We will have to add the image URL
+
+22
+00:01:12,450 --> 00:01:14,640
+in a hidden field as well
+
+23
+00:01:14,640 --> 00:01:17,103
+and that should resolve our issue.
+
+24
+00:01:18,300 --> 00:01:22,593
+With that configured, let me run the application once again.
+
+25
+00:01:25,110 --> 00:01:29,700
+Let me go to product and one with the image here.
+
+26
+00:01:29,700 --> 00:01:31,860
+Let me delete the other image here
+
+27
+00:01:31,860 --> 00:01:34,840
+because I know that is fake one
+
+28
+00:01:36,270 --> 00:01:39,960
+and I just have the last image that is there.
+
+29
+00:01:39,960 --> 00:01:43,000
+Let me try to update this one, update,
+
+30
+00:01:46,800 --> 00:01:49,860
+and it should go inside the if condition.
+
+31
+00:01:49,860 --> 00:01:51,630
+Perfect, that works.
+
+32
+00:01:51,630 --> 00:01:56,220
+If I continue here, you can see the old image was deleted
+
+33
+00:01:56,220 --> 00:01:58,590
+and we have the new guid.
+
+34
+00:01:58,590 --> 00:02:02,133
+If we click edit here, we have the new image.
+
+35
+00:02:03,000 --> 00:02:07,110
+Perfect, update image is working as expected,
+
+36
+00:02:07,110 --> 00:02:08,340
+but one issue is
+
+37
+00:02:08,340 --> 00:02:12,030
+let's say we are only updating the title here.
+
+38
+00:02:12,030 --> 00:02:15,720
+If I save that, image stay as is.
+
+39
+00:02:15,720 --> 00:02:19,533
+But if I go to edit here, image is still there.
+
+40
+00:02:20,550 --> 00:02:24,870
+One thing that I will show here is EF Core is smart.
+
+41
+00:02:24,870 --> 00:02:27,930
+If I update this to be the title here
+
+42
+00:02:27,930 --> 00:02:30,870
+and let me add a debugging point once again,
+
+43
+00:02:30,870 --> 00:02:33,360
+we are not modifying the image here.
+
+44
+00:02:33,360 --> 00:02:35,310
+If I press update
+
+45
+00:02:35,310 --> 00:02:38,430
+you will notice it goes to the update here
+
+46
+00:02:38,430 --> 00:02:43,290
+and it has the new product that has everything right here
+
+47
+00:02:43,290 --> 00:02:46,830
+and the product here title is updated.
+
+48
+00:02:46,830 --> 00:02:50,670
+EF Core will basically update all the properties right here
+
+49
+00:02:50,670 --> 00:02:52,440
+along with title.
+
+50
+00:02:52,440 --> 00:02:56,790
+So if in case somehow the image URL was empty here
+
+51
+00:02:56,790 --> 00:03:00,813
+then that image would be removed from the table entry.
+
+52
+00:03:01,830 --> 00:03:04,650
+So what we can do is in this case
+
+53
+00:03:04,650 --> 00:03:08,610
+even though the update is working, when we are updating
+
+54
+00:03:08,610 --> 00:03:13,110
+we can be explicit about what needs to be updated.
+
+55
+00:03:13,110 --> 00:03:15,480
+So right now everything is working
+
+56
+00:03:15,480 --> 00:03:19,290
+but if you want, you can be explicit.
+
+57
+00:03:19,290 --> 00:03:22,620
+If we go to repository, product repository,
+
+58
+00:03:22,620 --> 00:03:26,400
+we have the update method right here.
+
+59
+00:03:26,400 --> 00:03:29,610
+Rather than directly updating the object here
+
+60
+00:03:29,610 --> 00:03:33,000
+we can retrieve the product object from database,
+
+61
+00:03:33,000 --> 00:03:37,020
+based on the OBJ ID that we receive right here.
+
+62
+00:03:37,020 --> 00:03:39,940
+And once we have that product from the database
+
+63
+00:03:41,268 --> 00:03:43,290
+we can manually update that.
+
+64
+00:03:43,290 --> 00:03:46,499
+So we can say if OBJ from Db is not now
+
+65
+00:03:46,499 --> 00:03:51,499
+then we want to update which properties.
+
+66
+00:03:51,510 --> 00:03:53,550
+We will have to do a manual mapping
+
+67
+00:03:53,550 --> 00:03:55,590
+for all of those properties.
+
+68
+00:03:55,590 --> 00:03:57,900
+And after that we can be explicit
+
+69
+00:03:57,900 --> 00:04:02,900
+that if OBJ dot image URL is not null,
+
+70
+00:04:02,940 --> 00:04:06,390
+only then you update the image URL.
+
+71
+00:04:06,390 --> 00:04:08,580
+If you have any other custom logic
+
+72
+00:04:08,580 --> 00:04:10,980
+you can add that here as well.
+
+73
+00:04:10,980 --> 00:04:15,360
+But this is how you can do a manual mapping if you want.
+
+74
+00:04:15,360 --> 00:04:16,200
+And that is one
+
+75
+00:04:16,200 --> 00:04:20,790
+of the reason I have update inside the individual repository
+
+76
+00:04:20,790 --> 00:04:23,403
+and not in the generic repository.
+
+77
+00:04:24,540 --> 00:04:27,990
+With that configured, if you run the application
+
+78
+00:04:27,990 --> 00:04:31,380
+everything will still work the same.
+
+79
+00:04:31,380 --> 00:04:34,050
+Let me see that in action.
+
+80
+00:04:34,050 --> 00:04:37,590
+And let me also examine the product image here.
+
+81
+00:04:37,590 --> 00:04:40,530
+So have that side by side.
+
+82
+00:04:40,530 --> 00:04:44,793
+I will update the title here and maybe the description.
+
+83
+00:04:46,560 --> 00:04:49,410
+We update that, hit the debugging point.
+
+84
+00:04:49,410 --> 00:04:54,410
+Let me remove that and perfect, both of them are updated.
+
+85
+00:04:55,920 --> 00:04:58,590
+Final thing, we have the category ID that is being
+
+86
+00:04:58,590 --> 00:05:01,830
+displayed here, but we need to display that
+
+87
+00:05:01,830 --> 00:05:03,783
+inside the product index.
+
+88
+00:05:04,650 --> 00:05:07,140
+Let me do that in the next video.
+
+89
+00:05:07,140 --> 00:05:09,990
+But before that, let me add image to all
+
+90
+00:05:09,990 --> 00:05:12,240
+of the other books that I have.
+
+91
+00:05:12,240 --> 00:05:17,240
+So Fortune of Time, I will select that, update.
+
+92
+00:05:18,510 --> 00:05:21,963
+Dark Skies, I have an image for that.
+
+93
+00:05:25,890 --> 00:05:28,383
+Next, Vanish in the Sunset,
+
+94
+00:05:32,310 --> 00:05:34,473
+we have cotton candy,
+
+95
+00:05:38,040 --> 00:05:41,013
+and Rock in the Ocean,
+
+96
+00:05:44,910 --> 00:05:47,103
+Leaves and Wonders.
+
+97
+00:05:51,180 --> 00:05:54,660
+Perfect. We will not delete these two right now.
+
+98
+00:05:54,660 --> 00:05:57,840
+We will handle that in the upcoming videos,
+
+99
+00:05:57,840 --> 00:06:00,390
+but if we add it, perfect.
+
+100
+00:06:00,390 --> 00:06:04,143
+The images are now coming up for all the books.
+
+101
+00:06:05,130 --> 00:06:08,613
+Perfect. Let me continue from the next video.
+

@@ -22,17 +22,47 @@ namespace ITI.WinForms
 
             ApplicationConfiguration.Initialize();
 
-            var form = ServiceProvider.GetRequiredService<Form1>();
+            MainMenuForm form;
+            try
+            {
+                form = ServiceProvider.GetRequiredService<MainMenuForm>();
+            }
+            catch (Exception ex)
+            {
+                // If DI resolution fails, fall back to constructing the MainMenuForm directly
+                System.Diagnostics.Debug.WriteLine($"DI failed to resolve MainMenuForm: {ex.Message}");
+                form = new MainMenuForm();
+            }
+
             System.Windows.Forms.Application.Run(form);
         }
 
         private static void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<Form1>();
+            services.AddTransient<MainMenuForm>();
+            services.AddTransient<DepartmentForm>();
+            services.AddTransient<InstractorForm>();
+            services.AddTransient<CourseForm>();
+            services.AddTransient<StudentCourseForm>();
+            services.AddTransient<CourseSessionForm>();
+            services.AddTransient<CourseSessionAttendanceForm>();
 
             services.AddDbContext<AppDbContext>();
             services.AddScoped<IStudentService,StudentService>();
             services.AddScoped<IStudentRepository,StudentRepository>();
+            services.AddScoped<IDepartmentService,DepartmentService>();
+            services.AddScoped<IDepartmentRepository,DepartmentRepository>();
+            services.AddScoped<IInstractorService,InstractorService>();
+            services.AddScoped<IInstractorRepository,InstractorRepository>();
+            services.AddScoped<IStudentCourseService,StudentCourseService>();
+            services.AddScoped<IStudentCourseRepository,StudentCourseRepository>();
+            services.AddScoped<ICourseService,CourseService>();
+            services.AddScoped<ICourseRepository,CourseRepository>();
+            services.AddScoped<ICourseSessionService,CourseSessionService>();
+            services.AddScoped<ICourseSessionRepository,CourseSessionRepository>();
+            services.AddScoped<ICourseSessionAttendanceService,CourseSessionAttendanceService>();
+            services.AddScoped<ICourseSessionAttendanceRepository,CourseSessionAttendanceRepository>();
 
 
         }

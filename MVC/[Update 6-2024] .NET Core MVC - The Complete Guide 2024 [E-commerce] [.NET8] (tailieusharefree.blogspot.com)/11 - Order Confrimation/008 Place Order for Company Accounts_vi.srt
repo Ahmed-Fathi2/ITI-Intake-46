@@ -1,0 +1,384 @@
+1
+00:00:02,040 --> 00:00:08,610
+Bây giờ, khi tiêu đề và chi tiết đơn đặt hàng được tạo, chúng ta phải thêm một logic nữa ngay tại đây.
+
+2
+00:00:08,970 --> 00:00:17,400
+Để mình copy điều kiện if dán vào đây và nếu là khách quen thì bắt thanh toán.
+
+3
+00:00:17,670 --> 00:00:21,930
+Và để làm được điều đó, chúng tôi sẽ thêm logic Stripe ngay tại đây.
+
+4
+00:00:23,040 --> 00:00:24,870
+Tôi sẽ thay đổi bình luận ở đây.
+
+5
+00:00:24,870 --> 00:00:28,680
+Đó là một khách hàng thường xuyên và điều đó có vẻ tốt.
+
+6
+00:00:29,070 --> 00:00:33,240
+Bây giờ là phần xử lý sọc, chúng tôi sẽ thực hiện điều đó trong các video sắp tới.
+
+7
+00:00:33,240 --> 00:00:40,860
+Nhưng ngay bây giờ, hãy giả sử rằng đó là tài khoản công ty và sau khi đơn hàng được tạo, chúng tôi cần chuyển
+
+8
+00:00:40,860 --> 00:00:43,890
+hướng họ đến trang xác nhận đơn hàng.
+
+9
+00:00:44,490 --> 00:00:50,720
+Vì vậy, hãy để tôi chuyển hướng họ sang một hành động khác và chúng ta sẽ tạo hành động đó ngay tại đây.
+
+10
+00:00:50,730 --> 00:00:53,130
+Kết quả hành động công khai.
+
+11
+00:00:53,160 --> 00:01:02,380
+Hãy để tôi gọi xác nhận đơn hàng đó và chúng tôi sẽ chuyển số nguyên sẽ là ID đơn hàng Ngay bây giờ, chúng tôi sẽ giữ
+
+12
+00:01:02,380 --> 00:01:04,629
+mọi thứ cực kỳ đơn giản.
+
+13
+00:01:04,629 --> 00:01:10,090
+Quay lại chế độ xem với ID đó và để tôi tạo chế độ xem này.
+
+14
+00:01:10,910 --> 00:01:13,400
+Nó sẽ được xác nhận đơn hàng.
+
+15
+00:01:14,680 --> 00:01:17,440
+Hãy chắc chắn rằng chính tả là chính xác ở đó.
+
+16
+00:01:17,440 --> 00:01:19,420
+Và những gì sẽ là mô hình?
+
+17
+00:01:19,600 --> 00:01:23,770
+Nó sẽ là một số nguyên và đó sẽ là ID đơn hàng.
+
+18
+00:01:25,240 --> 00:01:27,910
+Bây giờ ở đây chúng tôi không muốn xem lại.
+
+19
+00:01:27,940 --> 00:01:31,150
+Chúng tôi muốn nó chuyển hướng đến một hành động.
+
+20
+00:01:31,450 --> 00:01:34,330
+Và đó sẽ là tên của.
+
+21
+00:01:35,370 --> 00:01:37,110
+Xác nhận đơn hàng.
+
+22
+00:01:38,600 --> 00:01:45,320
+Cùng với đó, chúng tôi cần chuyển ID đơn hàng, vì vậy chúng tôi sẽ chuyển một đối tượng mới ở đó chúng tôi sẽ nói ID bằng
+
+23
+00:01:45,350 --> 00:01:50,990
+với tiêu đề đơn hàng của mô hình xem giỏ hàng. nhận dạng.
+
+24
+00:01:52,130 --> 00:01:58,040
+Vì vậy, theo cách đó, nó sẽ chuyển ID ở đây và chúng tôi sẽ trả lại ID đó cho Chế độ xem.
+
+25
+00:01:58,880 --> 00:02:02,510
+Hãy để tôi thiết kế một cái nhìn đơn giản ngay tại đây.
+
+26
+00:02:03,500 --> 00:02:10,910
+Hãy để tôi tạo hai div ở đó, một có lớp đệm hàng vùng chứa, trên cùng là bốn và div còn
+
+27
+00:02:10,910 --> 00:02:14,000
+lại có cột 12 và trung tâm văn bản.
+
+28
+00:02:14,890 --> 00:02:20,050
+Bên trong đó ở chữ H chúng ta sẽ hiển thị đơn hàng đã đặt thành công.
+
+29
+00:02:20,050 --> 00:02:26,920
+Và sau đó hãy để tôi cũng hiển thị số đơn đặt hàng của bạn ở mô hình tỷ lệ.
+
+30
+00:02:28,090 --> 00:02:30,130
+Tôi sẽ thêm một vài dòng ở đây.
+
+31
+00:02:30,220 --> 00:02:31,750
+Hãy để tôi làm điều đó.
+
+32
+00:02:32,810 --> 00:02:36,170
+Và sau đó, tôi muốn hiển thị một hình ảnh.
+
+33
+00:02:36,890 --> 00:02:39,050
+Bên trong thư mục đoạn trích.
+
+34
+00:02:39,080 --> 00:02:40,990
+Tôi có hình ảnh đó.
+
+35
+00:02:41,000 --> 00:02:43,630
+Hãy để tôi trở lại trong hình ảnh.
+
+36
+00:02:43,640 --> 00:02:52,040
+Tôi sẽ sao chép cuốn sách và tìm hiểu hình ảnh chiếc lá và chúng tôi sẽ thêm điều đó vào w. w. w hình ảnh gốc.
+
+37
+00:02:52,670 --> 00:02:56,660
+Mở nó và chúng tôi sẽ dán nó ngay tại đó.
+
+38
+00:02:57,560 --> 00:03:00,770
+Sau đó, ngay tại đây, chúng ta có thể sử dụng thẻ IMG.
+
+39
+00:03:01,190 --> 00:03:03,980
+SRC bằng hình ảnh.
+
+40
+00:03:04,160 --> 00:03:07,980
+Trong đó, chúng tôi có chiều rộng và chiều rộng của bãi cỏ.
+
+41
+00:03:08,000 --> 00:03:10,640
+Hãy để tôi đưa ra 65% đó.
+
+42
+00:03:11,690 --> 00:03:18,350
+Sau đó, hãy để tôi tạo thêm một div với trung tâm văn bản ở cột 12 và một màu tùy chỉnh.
+
+43
+00:03:18,740 --> 00:03:21,830
+Thêm một dòng ở đó và tôi sẽ viết.
+
+44
+00:03:21,860 --> 00:03:26,600
+Đơn đặt hàng của bạn đã được đặt thành công.
+
+45
+00:03:27,910 --> 00:03:28,840
+Hoàn hảo.
+
+46
+00:03:28,930 --> 00:03:31,090
+Trông tôt đây.
+
+47
+00:03:31,450 --> 00:03:33,460
+Chúng tôi có một lỗi chính tả ở đây.
+
+48
+00:03:33,460 --> 00:03:34,840
+Hãy để tôi sửa nó.
+
+49
+00:03:34,840 --> 00:03:36,220
+Và hoàn hảo.
+
+50
+00:03:36,460 --> 00:03:43,420
+Bây giờ, với điều đó, nếu tôi chạy ứng dụng và cố gắng đặt hàng cho tài khoản công ty, mọi thứ sẽ không
+
+51
+00:03:43,420 --> 00:03:44,560
+hoạt động.
+
+52
+00:03:48,890 --> 00:03:50,040
+Ngay chỗ này.
+
+53
+00:03:50,060 --> 00:03:53,330
+Hãy để tôi đăng nhập vào tài khoản công ty mà tôi có.
+
+54
+00:03:53,690 --> 00:03:58,610
+Nếu bạn không có, hãy đảm bảo đăng ký tài khoản công ty.
+
+55
+00:03:58,700 --> 00:04:01,760
+Và hãy để tôi thêm một vài mặt hàng vào giỏ hàng.
+
+56
+00:04:02,810 --> 00:04:08,690
+Tôi tin rằng tôi đã có một vài mặt hàng và tổng số đơn đặt hàng hoàn hảo là 450.
+
+57
+00:04:08,720 --> 00:04:13,880
+Nếu tôi vào phần tóm tắt và đặt hàng, chúng ta sẽ thấy một ngoại lệ.
+
+58
+00:04:14,810 --> 00:04:15,770
+Hoàn hảo.
+
+59
+00:04:15,800 --> 00:04:19,820
+Bạn có thể thấy lỗi xảy ra khi lưu thực thể.
+
+60
+00:04:19,850 --> 00:04:26,720
+Xem Ngoại lệ bên trong và vi phạm ràng buộc khóa chính trong ASP. người dùng NET.
+
+61
+00:04:27,410 --> 00:04:31,250
+Tạm dừng video và tìm hiểu tại sao điều này lại xảy ra.
+
+62
+00:04:32,510 --> 00:04:39,200
+Tôi đã cố ý giới thiệu lỗi này, nhưng tôi muốn các bạn tìm ra điều gì đang xảy ra ở đây.
+
+63
+00:04:41,050 --> 00:04:43,900
+Tôi hy vọng các bạn đã có thể tìm ra điều đó.
+
+64
+00:04:44,110 --> 00:04:51,310
+Những gì tôi đã làm là khi chúng tôi tạo phương thức đăng hành động, tôi đã điền vào người dùng ứng dụng.
+
+65
+00:04:51,610 --> 00:04:58,900
+Bây giờ, điều thường xảy ra là khi bạn điền một bản ghi ở đây và bạn đang nói với lõi khung thực thể
+
+66
+00:04:58,900 --> 00:05:05,590
+rằng, này, tôi muốn thêm tiêu đề đơn hàng, nó cũng sẽ thêm tất cả các thuộc tính điều hướng
+
+67
+00:05:05,590 --> 00:05:06,610
+tương ứng.
+
+68
+00:05:06,850 --> 00:05:11,140
+Nó sẽ nghĩ rằng, được thôi, bạn đang cố tạo ra một thực thể mới.
+
+69
+00:05:11,620 --> 00:05:16,890
+Nếu bạn không muốn điều đó, thì bạn không bao giờ nên điền thuộc tính điều hướng.
+
+70
+00:05:16,900 --> 00:05:21,550
+Khi bạn đang cố gắng chèn một bản ghi vào lõi khung thực thể.
+
+71
+00:05:21,820 --> 00:05:23,680
+Hãy luôn nhớ điều đó.
+
+72
+00:05:24,400 --> 00:05:32,590
+Vì vậy, giải quyết vấn đề cụ thể này là chúng ta có thể có một người dùng ứng dụng mới, hãy gọi người dùng ứng
+
+73
+00:05:32,590 --> 00:05:33,370
+dụng đó.
+
+74
+00:05:33,370 --> 00:05:40,660
+Và sau đó ngay tại đây, chúng tôi sẽ truy cập người dùng ứng dụng đó cũng trong điều kiện if này.
+
+75
+00:05:41,900 --> 00:05:48,050
+Vì vậy, đó là một điều mà bạn phải luôn nhớ khi thấy mã khung thực thể đó đang cố gắng thêm
+
+76
+00:05:48,050 --> 00:05:50,120
+thuộc tính điều hướng.
+
+77
+00:05:50,150 --> 00:05:54,080
+Nhiều khả năng thuộc tính điều hướng được điền.
+
+78
+00:05:54,410 --> 00:05:58,360
+Nếu muốn, bạn cũng có thể đặt giá trị đó thành null một cách rõ ràng.
+
+79
+00:05:58,370 --> 00:06:01,490
+Nhưng chúng tôi biết rằng sẽ không được cư trú ở đây.
+
+80
+00:06:01,490 --> 00:06:03,440
+Vì vậy, điều này sẽ làm việc ngay bây giờ.
+
+81
+00:06:04,520 --> 00:06:08,180
+Với cấu hình đó, hãy để tôi chạy ứng dụng.
+
+82
+00:06:09,680 --> 00:06:12,350
+Chúng tôi đã đăng nhập vào tài khoản công ty của chúng tôi.
+
+83
+00:06:12,380 --> 00:06:20,630
+Hãy để tôi đi đến phần tóm tắt giỏ hàng và để tôi thêm tất cả vào đây để xem nó có hoạt động không.
+
+84
+00:06:20,930 --> 00:06:22,340
+Đặt hàng.
+
+85
+00:06:22,760 --> 00:06:23,750
+Hoàn hảo.
+
+86
+00:06:23,780 --> 00:06:31,700
+Chúng tôi thấy trang xác nhận đơn đặt hàng của mình và nếu chúng tôi điều hướng đến cơ sở dữ liệu của mình, hãy kiểm tra tiêu đề đơn hàng.
+
+87
+00:06:31,820 --> 00:06:36,350
+ID đơn đặt hàng là năm ở đây và chúng tôi chuyển sang bên phải.
+
+88
+00:06:36,530 --> 00:06:37,460
+Hoàn hảo.
+
+89
+00:06:37,490 --> 00:06:42,540
+Chúng tôi có các chi tiết ngay tại đây bên trong các chi tiết đặt hàng.
+
+90
+00:06:42,560 --> 00:06:49,680
+Chúng tôi có ba bản ghi vì chúng tôi có ba sản phẩm khác nhau, tài khoản và giá riêng của chúng.
+
+91
+00:06:49,700 --> 00:06:51,890
+Tất cả mọi thứ đang tìm kiếm tuyệt vời.
+
+92
+00:06:53,240 --> 00:06:59,660
+Với cấu hình đó, logic giỏ hàng của chúng tôi cho công ty trông ổn và chúng tôi có thể đặt
+
+93
+00:06:59,660 --> 00:07:00,350
+hàng.
+
+94
+00:07:00,620 --> 00:07:04,130
+Một điều mà bạn nên nhớ ở đây là dành cho công ty.
+
+95
+00:07:04,130 --> 00:07:11,750
+Trạng thái đặt hàng ban đầu được phê duyệt trực tiếp và trạng thái thanh toán được phê duyệt cho khoản thanh toán chậm.
+
+96
+00:07:12,350 --> 00:07:17,120
+Vì vậy, với cấu hình đó, hãy để tôi tiếp tục từ video tiếp theo.
+

@@ -1,0 +1,384 @@
+1
+00:00:01,670 --> 00:00:04,700
+Tôi hy vọng bạn có thể hoàn thành nhiệm vụ.
+
+2
+00:00:04,910 --> 00:00:07,550
+Nếu không, chúng ta hãy làm điều đó với nhau.
+
+3
+00:00:08,420 --> 00:00:10,880
+Tôi sẽ chuyển trở lại ứng dụng.
+
+4
+00:00:10,890 --> 00:00:16,550
+Dừng việc đó lại và chúng tôi sẽ thêm một mô hình xem cho trang quyền.
+
+5
+00:00:18,080 --> 00:00:21,470
+Tôi sẽ gọi đó là mô hình quan điểm quản lý vai trò.
+
+6
+00:00:23,100 --> 00:00:25,050
+Nó sẽ là một lớp công khai.
+
+7
+00:00:25,290 --> 00:00:30,030
+Và như tôi đã nói trước đây, chúng ta cần bốn thuộc tính trong mô hình này.
+
+8
+00:00:30,510 --> 00:00:37,260
+Bây giờ, thay vì thêm một vai trò hiện tại ở đây trong người dùng ứng dụng, chúng tôi đã có một vai trò, vì vậy chúng tôi có thể sử
+
+9
+00:00:37,260 --> 00:00:38,130
+dụng vai trò đó.
+
+10
+00:00:38,400 --> 00:00:41,670
+Vì vậy, chúng ta nên làm tốt với ba đặc tính này.
+
+11
+00:00:42,790 --> 00:00:48,220
+Với cấu hình đó trong bộ điều khiển người dùng, tôi cần thêm một phương thức hành động.
+
+12
+00:00:49,200 --> 00:00:53,910
+Phương thức hành động đó sẽ nhận ID người dùng trong tham số.
+
+13
+00:00:54,240 --> 00:01:02,760
+Vì vậy, từ người dùng onClick tại đây, chúng ta nên gọi phương thức hành động, đó là quản lý vai trò với ID người dùng.
+
+14
+00:01:03,420 --> 00:01:09,060
+Vì vậy, ngay tại đây, hãy để tôi thêm href cho điều đó và chuyển ID người dùng.
+
+15
+00:01:09,570 --> 00:01:12,450
+Tôi sẽ làm điều đó ở cả hai nơi.
+
+16
+00:01:13,020 --> 00:01:13,620
+Hoàn hảo.
+
+17
+00:01:13,620 --> 00:01:14,670
+Trông tôt đây.
+
+18
+00:01:16,760 --> 00:01:20,430
+Sau đó, chúng tôi sẽ quay lại bộ điều khiển người dùng tại đây.
+
+19
+00:01:20,450 --> 00:01:29,000
+Và dựa trên ID người dùng, tôi muốn lấy ID hàng để tôi có thể thực hiện từ bảng vai trò người dùng.
+
+20
+00:01:29,700 --> 00:01:34,320
+Khi chúng tôi ở đó, chúng tôi phải đưa vào mô hình chế độ xem quản lý quy tắc.
+
+21
+00:01:34,530 --> 00:01:38,370
+Và bên trong đó, chúng tôi cần người dùng ứng dụng.
+
+22
+00:01:38,400 --> 00:01:45,960
+Chúng tôi sẽ nhận được điều đó từ ứng dụng do người dùng chấm bao gồm, chúng tôi muốn bao gồm công ty và chúng tôi sẽ thực hiện
+
+23
+00:01:45,990 --> 00:01:48,960
+đầu tiên hoặc mặc định dựa trên ID người dùng.
+
+24
+00:01:50,500 --> 00:01:55,750
+Sau đó, tiếp theo chúng ta phải điền danh sách thả xuống cho danh sách hàng và danh sách công ty.
+
+25
+00:01:55,990 --> 00:01:59,200
+Chúng tôi đã làm điều đó trong quá khứ bằng cách sử dụng phép chiếu.
+
+26
+00:01:59,200 --> 00:02:01,900
+Vì vậy, đó chính xác là những gì chúng tôi sẽ làm.
+
+27
+00:02:02,880 --> 00:02:10,680
+Sau tất cả những điều đó bên trong mô hình chế độ xem vai trò, chúng tôi có người dùng ứng dụng và ở đó chúng tôi có một vai
+
+28
+00:02:10,680 --> 00:02:18,660
+trò của người dùng mà chúng tôi sẽ điền bằng cách sử dụng các vai trò dấu chấm DB gạch dưới dựa trên ID vai trò mà chúng tôi
+
+29
+00:02:18,660 --> 00:02:22,830
+đã truy xuất ở đây và chúng tôi muốn trích xuất tên từ đó.
+
+30
+00:02:23,680 --> 00:02:24,760
+Với cấu hình đó.
+
+31
+00:02:24,760 --> 00:02:29,410
+Khi chúng tôi quay lại chế độ xem, chúng tôi phải chuyển mô hình chế độ xem vai trò.
+
+32
+00:02:30,120 --> 00:02:31,380
+Rằng sẽ rất tốt.
+
+33
+00:02:31,620 --> 00:02:33,600
+Hãy để tôi tạo chế độ xem này.
+
+34
+00:02:34,620 --> 00:02:36,810
+Nó sẽ không phải là một chỉ mục.
+
+35
+00:02:36,840 --> 00:02:38,370
+Tên là gì?
+
+36
+00:02:39,030 --> 00:02:41,190
+Quản lý vai trò.
+
+37
+00:02:43,210 --> 00:02:45,670
+Để quan điểm ở đây được nhất quán.
+
+38
+00:02:45,700 --> 00:02:54,640
+Hãy để tôi sao chép nó từ Category Create và tôi sẽ dán nó ngay tại đây.
+
+39
+00:02:55,510 --> 00:03:00,400
+Điều đầu tiên chúng ta cần mô hình ở đây, nhưng nó không phát hiện ra điều đó.
+
+40
+00:03:00,520 --> 00:03:03,340
+Hãy để tôi mở nó một lần nữa.
+
+41
+00:03:04,320 --> 00:03:07,560
+Và vì một số lý do, nó không phát hiện ra điều đó.
+
+42
+00:03:07,590 --> 00:03:12,030
+Hãy để tôi sao chép và dán mô hình chế độ xem quản lý vai trò.
+
+43
+00:03:13,020 --> 00:03:15,990
+Hãy để tôi lưu cái này và mở lại.
+
+44
+00:03:16,470 --> 00:03:22,380
+Bây giờ, khi mọi thứ không hoạt động trong IntelliSense, đã đến lúc khởi động lại Visual Studio.
+
+45
+00:03:24,100 --> 00:03:29,200
+Tôi sẽ mở lại dự án và tôi hy vọng nó hoạt động.
+
+46
+00:03:30,370 --> 00:03:31,030
+Tuyệt vời.
+
+47
+00:03:31,060 --> 00:03:33,070
+Bây giờ nó đang được phát hiện.
+
+48
+00:03:33,730 --> 00:03:41,040
+Điều đầu tiên, chúng tôi sẽ thay đổi hàng đó thành hàng người dùng được quản lý và chúng tôi muốn hiển thị tên ở đây.
+
+49
+00:03:41,050 --> 00:03:48,220
+Vì vậy, người dùng ứng dụng. tên, chúng tôi sẽ hiển thị rằng nó sẽ ở dạng chỉ đọc.
+
+50
+00:03:49,540 --> 00:03:51,430
+Khi chúng tôi sẽ được đăng.
+
+51
+00:03:51,430 --> 00:03:55,070
+Đảm bảo rằng bạn có ID người dùng trong thuộc tính ẩn.
+
+52
+00:03:55,090 --> 00:03:57,730
+Bằng cách đó, chúng tôi có thể truy xuất ID người dùng đó.
+
+53
+00:03:58,720 --> 00:04:07,300
+Cuối cùng, chúng ta cần một danh sách thả xuống được chọn ở đây, vì vậy hãy chọn aspx cho vai trò dấu chấm của người dùng ứng dụng.
+
+54
+00:04:07,870 --> 00:04:15,160
+Chúng tôi sẽ lưu nó ở đó và danh sách thả xuống sẽ là danh sách hàng chấm mô hình.
+
+55
+00:04:16,240 --> 00:04:21,640
+Chúng tôi sẽ cung cấp cho lớp biểu mẫu đó một lựa chọn và điều đó sẽ tốt.
+
+56
+00:04:22,150 --> 00:04:30,310
+Chúng tôi cần một danh sách thả xuống khác cho ASP công ty sẽ là ID công ty và các mục sẽ là danh sách công ty.
+
+57
+00:04:31,140 --> 00:04:37,470
+Bây giờ chúng ta cần tự động chuyển đổi danh sách thả xuống này, nhưng hãy để tôi lo về điều đó sau.
+
+58
+00:04:37,650 --> 00:04:42,240
+Hãy để tôi gọi quy tắc cập nhật này ở đây và quay lại danh sách.
+
+59
+00:04:42,300 --> 00:04:43,980
+Tháo bộ điều khiển.
+
+60
+00:04:45,550 --> 00:04:46,330
+Hoàn hảo.
+
+61
+00:04:46,450 --> 00:04:51,010
+Cùng với đó, hãy để tôi chạy ứng dụng và xem nó có hoạt động không.
+
+62
+00:04:52,690 --> 00:04:55,690
+Chúng tôi đi để đăng nhập ở đây với tư cách là quản trị viên.
+
+63
+00:04:56,660 --> 00:04:58,550
+Quản lý nội dung.
+
+64
+00:04:58,970 --> 00:05:00,920
+Chúng tôi đã quản lý người dùng.
+
+65
+00:05:02,000 --> 00:05:02,990
+Nhân viên kiểm tra.
+
+66
+00:05:03,350 --> 00:05:04,370
+Hoàn hảo.
+
+67
+00:05:04,460 --> 00:05:11,900
+Chúng tôi thấy trình đơn thả xuống của công ty ở đây, nhưng điều đó chỉ hiển thị nếu trình đơn thả xuống ở đây là công ty.
+
+68
+00:05:12,650 --> 00:05:20,450
+Vì vậy, những gì tôi có thể làm là ngay tại đây, tôi có thể thêm một mã dao cạo và chúng ta có thể thiết lập một công ty biến đổi hiển thị.
+
+69
+00:05:20,450 --> 00:05:21,560
+Không trưng bày.
+
+70
+00:05:21,560 --> 00:05:28,880
+Và nếu vai trò chỉ là công ty thì chúng tôi sẽ đặt khối hiển thị trong ASP cho tại đây.
+
+71
+00:05:28,910 --> 00:05:33,860
+Hãy để tôi thêm phong cách năng động đó bằng cách sử dụng công ty hiển thị.
+
+72
+00:05:35,340 --> 00:05:35,850
+Với.
+
+73
+00:05:35,850 --> 00:05:43,770
+Nếu tôi lưu cái này bây giờ, nếu một nhân viên mở nó lên, nó sẽ không hiển thị nếu một công ty mở nó.
+
+74
+00:05:43,800 --> 00:05:45,930
+Chúng tôi thấy công ty giảm xuống.
+
+75
+00:05:46,440 --> 00:05:54,180
+Nhưng cuối cùng, chúng tôi cần chuyển đổi tùy chọn đó dựa trên ID vì ngay bây giờ nếu chúng tôi xin phép và nếu
+
+76
+00:05:54,180 --> 00:05:58,410
+một công ty được chọn, trình đơn thả xuống đó sẽ hiển thị.
+
+77
+00:05:59,420 --> 00:06:02,640
+Tôi tin rằng chúng tôi có logic đó trong sổ đăng ký.
+
+78
+00:06:02,660 --> 00:06:04,520
+Để tôi mở cái đó.
+
+79
+00:06:05,990 --> 00:06:09,680
+Và rất tiếc, nó nằm trong cshtml.
+
+80
+00:06:11,130 --> 00:06:12,550
+Ngay chỗ này.
+
+81
+00:06:12,570 --> 00:06:13,860
+Sao chép cái đó.
+
+82
+00:06:14,430 --> 00:06:20,100
+Quay trở lại quản lý vai trò và chúng tôi sẽ dán nó ngay tại đây.
+
+83
+00:06:21,090 --> 00:06:22,970
+Chúng ta cần lấy ID.
+
+84
+00:06:22,980 --> 00:06:24,840
+Vì vậy, hãy để tôi làm điều đó.
+
+85
+00:06:26,040 --> 00:06:27,300
+F12.
+
+86
+00:06:29,740 --> 00:06:33,100
+Vai trò là vai trò gạch dưới của người dùng ứng dụng.
+
+87
+00:06:34,270 --> 00:06:39,250
+Hãy để tôi sửa đổi điều đó và nơi chúng tôi có công ty.
+
+88
+00:06:40,610 --> 00:06:44,390
+Cái đó là ID công ty gạch dưới của người dùng ứng dụng.
+
+89
+00:06:47,140 --> 00:06:47,980
+Hoàn hảo.
+
+90
+00:06:48,100 --> 00:06:49,810
+Hãy quay lại đây.
+
+91
+00:06:49,810 --> 00:06:52,530
+Và nếu đó là công ty, nó có thể nhìn thấy được.
+
+92
+00:06:52,540 --> 00:06:55,450
+Nếu bất cứ điều gì khác mà đi.
+
+93
+00:06:55,750 --> 00:06:56,740
+Hoàn hảo.
+
+94
+00:06:56,740 --> 00:06:58,930
+Vì vậy, The View trông rất tuyệt.
+
+95
+00:06:59,140 --> 00:07:00,730
+Trong video tiếp theo.
+
+96
+00:07:00,730 --> 00:07:02,950
+Hãy làm việc trên nút cập nhật.
+

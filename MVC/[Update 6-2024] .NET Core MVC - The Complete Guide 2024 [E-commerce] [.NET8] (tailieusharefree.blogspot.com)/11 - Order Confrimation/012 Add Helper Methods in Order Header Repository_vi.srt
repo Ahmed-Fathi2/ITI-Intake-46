@@ -1,0 +1,216 @@
+1
+00:00:01,780 --> 00:00:08,290
+Bây giờ, trước khi chúng tôi thực sự xử lý khoản thanh toán qua Stripe, điều xảy ra là khi chúng tôi
+
+2
+00:00:08,290 --> 00:00:16,000
+truy cập Stripe, nó sẽ tạo một phiên và nếu phiên đó thành công, nó sẽ cung cấp cho chúng tôi ID mục đích thanh toán.
+
+3
+00:00:16,930 --> 00:00:24,880
+Nếu chúng tôi kiểm tra các mô hình của mình tại đây để tìm tiêu đề đơn đặt hàng, thì chúng tôi có một trường để lưu trữ ID mục đích thanh
+
+4
+00:00:24,880 --> 00:00:28,480
+toán, nhưng trường đó chỉ được tạo nếu phiên thành công.
+
+5
+00:00:29,080 --> 00:00:37,420
+Vì vậy, chúng ta cũng cần tạo thêm một thuộc tính ở đây, thuộc tính này sẽ là chuỗi và đó sẽ là ID phiên.
+
+6
+00:00:38,640 --> 00:00:42,390
+Bây giờ, làm cách nào để chúng tôi lấy ID phiên hoặc ID mục đích thanh toán?
+
+7
+00:00:42,690 --> 00:00:45,600
+Chúng tôi sẽ đề cập đến điều đó trong các video sắp tới.
+
+8
+00:00:45,600 --> 00:00:49,170
+Nhưng ngay bây giờ hãy để tôi thêm một di chuyển.
+
+9
+00:00:49,920 --> 00:00:57,990
+Thêm ID phiên vào tiêu đề đơn đặt hàng và để tôi cập nhật cơ sở dữ liệu.
+
+10
+00:01:00,620 --> 00:01:01,580
+Hoàn hảo.
+
+11
+00:01:01,580 --> 00:01:03,650
+Hãy để tôi cập nhật cơ sở dữ liệu.
+
+12
+00:01:05,990 --> 00:01:06,950
+Và tuyệt vời.
+
+13
+00:01:06,950 --> 00:01:08,090
+Trông tôt đây.
+
+14
+00:01:08,420 --> 00:01:13,460
+Bây giờ chúng tôi biết sẽ có một số cột có ID phiên và ID mục đích thanh toán.
+
+15
+00:01:13,820 --> 00:01:19,670
+Vì vậy, điều tôi sẽ làm là thêm một số phương thức trợ giúp tùy chỉnh vào tiêu đề đơn hàng.
+
+16
+00:01:20,580 --> 00:01:23,560
+Khi chúng ta vào kho tiêu đề đơn hàng.
+
+17
+00:01:23,580 --> 00:01:27,600
+Hãy để tôi mở cái đó và tiêu đề đơn đặt hàng.
+
+18
+00:01:28,080 --> 00:01:29,010
+Hoàn hảo.
+
+19
+00:01:29,040 --> 00:01:33,210
+Bây giờ chúng tôi có thể cập nhật nó thường cập nhật tiêu đề đơn hàng đầy đủ.
+
+20
+00:01:33,360 --> 00:01:40,200
+Nhưng nếu dựa trên ID, chúng tôi chỉ muốn cập nhật trạng thái đơn hàng hoặc trạng thái thanh toán.
+
+21
+00:01:41,010 --> 00:01:47,940
+Vì vậy, hãy để tôi tạo một trạng thái cập nhật phương thức trong đó trạng thái đơn hàng sẽ được yêu cầu, nhưng
+
+22
+00:01:47,940 --> 00:01:55,380
+trạng thái thanh toán có thể trống vì mỗi khi chúng tôi cập nhật trạng thái, rất có thể trạng thái đơn hàng sẽ được
+
+23
+00:01:55,380 --> 00:01:56,360
+cập nhật.
+
+24
+00:01:56,370 --> 00:02:03,060
+Nhưng trạng thái thanh toán, sau khi được phê duyệt, nó vẫn được phê duyệt mà chúng ta đã thấy trong trang trình bày.
+
+25
+00:02:03,270 --> 00:02:05,160
+Để tôi mang cái đó lên đây.
+
+26
+00:02:05,160 --> 00:02:07,110
+Bạn có thể thấy trạng thái thanh toán.
+
+27
+00:02:07,110 --> 00:02:10,500
+Một khi nó được phê duyệt, nó vẫn như đã được phê duyệt.
+
+28
+00:02:10,500 --> 00:02:17,820
+Và điều tương tự cũng áp dụng nếu nó được chấp thuận cho việc thanh toán chậm trễ, nó sẽ giữ nguyên điều đó trong khi trạng thái đơn đặt hàng
+
+29
+00:02:17,850 --> 00:02:19,530
+thực tế đang được cập nhật.
+
+30
+00:02:20,600 --> 00:02:25,250
+Vì vậy, trạng thái đơn hàng sẽ được yêu cầu, nhưng trạng thái thanh toán có thể là null.
+
+31
+00:02:25,820 --> 00:02:31,610
+Vì vậy, dựa trên ID tiêu đề đơn đặt hàng, chúng tôi cũng chỉ có thể cập nhật hai trường đó.
+
+32
+00:02:32,300 --> 00:02:36,260
+Bây giờ chúng ta cần triển khai hai điều này trong tiêu đề đơn hàng.
+
+33
+00:02:36,290 --> 00:02:38,030
+Hãy để tôi làm điều đó.
+
+34
+00:02:39,280 --> 00:02:40,540
+Đối với cả hai.
+
+35
+00:02:40,540 --> 00:02:46,090
+Chúng tôi sẽ phải truy xuất tiêu đề đơn hàng hoặc đơn hàng từ cơ sở dữ liệu dựa trên ID.
+
+36
+00:02:47,090 --> 00:02:50,180
+Sau đó, đầu tiên chúng tôi đang làm việc với trạng thái đơn hàng.
+
+37
+00:02:50,300 --> 00:02:58,880
+Nếu thứ tự từ DB không phải là null, chúng tôi có thể cập nhật thứ tự từ trạng thái thứ tự dấu chấm DB và sau đó chúng tôi
+
+38
+00:02:58,880 --> 00:03:02,660
+phải kiểm tra xem chuỗi. là null hoặc rỗng.
+
+39
+00:03:03,110 --> 00:03:04,730
+Tình trạng thanh toán.
+
+40
+00:03:04,790 --> 00:03:10,760
+Nếu đó không phải là null hoặc trống, thì chúng tôi sẽ cập nhật trạng thái thanh toán.
+
+41
+00:03:11,270 --> 00:03:18,800
+Điều đó có vẻ tốt ở đây, nhưng khi chúng tôi đang cập nhật ID phiên hoặc ID mục đích thanh toán tại thời điểm đó, trước tiên
+
+42
+00:03:18,800 --> 00:03:20,390
+chúng tôi cần kiểm tra.
+
+43
+00:03:20,420 --> 00:03:25,160
+Nếu không phải chuỗi. là null hoặc rỗng.
+
+44
+00:03:25,520 --> 00:03:26,780
+Id phiên.
+
+45
+00:03:27,200 --> 00:03:34,400
+Trong trường hợp đó, chúng tôi sẽ cập nhật thứ tự từ db chấm id phiên bằng với ID phiên.
+
+46
+00:03:35,180 --> 00:03:40,460
+Giờ đây, ID phiên được tạo khi người dùng cố gắng thanh toán.
+
+47
+00:03:40,640 --> 00:03:46,650
+Khi thành công, ID mục đích thanh toán sẽ được tạo.
+
+48
+00:03:47,190 --> 00:03:50,550
+Vì vậy, hãy để tôi sao chép và dán lại.
+
+49
+00:03:50,580 --> 00:03:56,700
+Nếu ID mục đích thanh toán không phải là null, điều đó có nghĩa là thanh toán đã thành công.
+
+50
+00:03:57,300 --> 00:04:00,630
+Trong trường hợp đó, chúng tôi sẽ cập nhật ID mục đích thanh toán.
+
+51
+00:04:01,080 --> 00:04:06,240
+Cùng với đó, chúng tôi muốn cập nhật một thứ khác, đó là ngày thanh toán.
+
+52
+00:04:06,830 --> 00:04:09,170
+Đó sẽ là dấu chấm ngày giờ.
+
+53
+00:04:10,360 --> 00:04:17,709
+Vì vậy, điều đó có vẻ tốt cho việc cập nhật mục đích thanh toán và cập nhật trạng thái trong kho lưu trữ của chúng tôi.
+
+54
+00:04:18,550 --> 00:04:21,430
+Hãy để tôi tiếp tục từ video tiếp theo.
+

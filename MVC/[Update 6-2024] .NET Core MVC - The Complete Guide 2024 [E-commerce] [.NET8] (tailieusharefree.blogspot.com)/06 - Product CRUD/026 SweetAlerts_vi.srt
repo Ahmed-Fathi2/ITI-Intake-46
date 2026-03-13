@@ -1,0 +1,272 @@
+1
+00:00:01,569 --> 00:00:03,670
+Khi chúng tôi đang xóa sản phẩm của mình.
+
+2
+00:00:03,670 --> 00:00:08,230
+Tôi muốn có một cảnh báo và để làm được điều đó, tôi sẽ sử dụng bộ cảnh báo thứ hai.
+
+3
+00:00:08,980 --> 00:00:13,600
+Nếu chúng tôi thấy thông báo ở đây, bạn có thể thấy đó là một thông báo ưa thích.
+
+4
+00:00:14,610 --> 00:00:19,190
+Hãy để tôi chuyển đến tab cài đặt ở đây và chúng tôi có CDN.
+
+5
+00:00:19,200 --> 00:00:23,910
+Hãy để tôi sao chép nó và tôi sẽ thêm nó vào dự án của chúng ta.
+
+6
+00:00:24,240 --> 00:00:26,460
+Tôi đã gạch dưới bố cục ở đây.
+
+7
+00:00:26,760 --> 00:00:28,140
+Hãy để tôi thêm điều đó.
+
+8
+00:00:29,460 --> 00:00:32,070
+Bây giờ làm thế nào để thực sự gọi điều đó.
+
+9
+00:00:32,460 --> 00:00:35,130
+Bây giờ, hãy để tôi đi đến các ví dụ ở đây.
+
+10
+00:00:35,130 --> 00:00:40,410
+Và nếu chúng ta cuộn xuống, chúng ta sẽ có một ví dụ với nút xác nhận.
+
+11
+00:00:40,440 --> 00:00:42,720
+Đây chính xác là những gì chúng tôi muốn.
+
+12
+00:00:42,840 --> 00:00:45,030
+Chúng tôi muốn một hộp xác nhận.
+
+13
+00:00:45,030 --> 00:00:47,340
+Và nếu họ chọn có, hãy xóa nó.
+
+14
+00:00:47,370 --> 00:00:49,740
+Sau đó, chúng tôi muốn xóa sản phẩm.
+
+15
+00:00:50,490 --> 00:00:53,730
+Vì vậy, tôi có thể sao chép lửa dot cảnh báo ngọt ngào.
+
+16
+00:00:54,360 --> 00:01:00,060
+Quay lại dự án của chúng ta tại đây và chúng ta sẽ thêm nó vào tệp JS chấm sản phẩm.
+
+17
+00:01:00,630 --> 00:01:02,550
+Hãy để tôi tạo một chức năng ở đây.
+
+18
+00:01:02,550 --> 00:01:07,440
+Xóa nơi chúng tôi sẽ nhận được URL cần được gọi.
+
+19
+00:01:08,470 --> 00:01:11,200
+Tôi sẽ dán lửa chấm cảnh báo ngọt ngào.
+
+20
+00:01:12,210 --> 00:01:14,330
+Bây giờ ở đây khi người dùng chọn.
+
+21
+00:01:14,340 --> 00:01:15,870
+Được rồi, hãy xóa nó đi.
+
+22
+00:01:15,900 --> 00:01:23,190
+Chúng tôi muốn thực hiện một yêu cầu Ajax tới bộ điều khiển của chúng tôi để xóa sản phẩm cụ thể này và tôi sẽ
+
+23
+00:01:23,190 --> 00:01:24,960
+thực hiện xóa http này.
+
+24
+00:01:24,990 --> 00:01:26,790
+Đó là những gì nó nên có.
+
+25
+00:01:27,810 --> 00:01:28,320
+Tôi sẽ làm.
+
+26
+00:01:28,320 --> 00:01:31,620
+Tiếp tục chỉnh sửa ở đây và chúng ta hãy quay trở lại.
+
+27
+00:01:32,010 --> 00:01:39,360
+Vì vậy, nếu nó được xác nhận, tôi sẽ nói Dollar chấm Ajax và chúng tôi sẽ có yêu cầu Ajax.
+
+28
+00:01:39,390 --> 00:01:46,080
+Trước tiên, chúng tôi sẽ có URL mà chúng tôi sẽ nhận được trong tham số của phương thức ngay tại đây.
+
+29
+00:01:46,500 --> 00:01:50,820
+Tiếp theo chúng ta cần loại và đó là xóa http.
+
+30
+00:01:50,940 --> 00:01:56,160
+Vì vậy, chúng tôi sẽ viết xóa ở đây và điều gì sẽ xảy ra nếu nó thành công?
+
+31
+00:01:57,270 --> 00:02:02,700
+Chà, nếu thành công, hãy để tôi có một chức năng mà chúng tôi sẽ lấy lại dữ liệu.
+
+32
+00:02:03,000 --> 00:02:06,850
+Nếu nó thành công, chúng ta trở lại đây làm gì?
+
+33
+00:02:06,870 --> 00:02:10,139
+Chúng tôi đang trả lại một thành công và một tin nhắn.
+
+34
+00:02:10,320 --> 00:02:14,490
+Vì vậy, điều đó sẽ có sẵn trong dữ liệu ngay tại đây.
+
+35
+00:02:15,090 --> 00:02:22,800
+Những gì tôi có thể làm là tôi chỉ có thể gọi dấu chấm thông báo máy nướng bánh mì của chúng ta thành công và chuyển thông báo dấu chấm dữ liệu đó.
+
+36
+00:02:23,400 --> 00:02:32,010
+Với cấu hình đó, chúng tôi phải chuyển URL này và chúng tôi sẽ phải thay thế href này bằng onClick.
+
+37
+00:02:32,640 --> 00:02:35,460
+Vì vậy, chúng tôi có URL có vẻ tốt.
+
+38
+00:02:35,460 --> 00:02:43,620
+Điều tôi có thể làm là tôi có thể thay thế href bằng onClick gọi chức năng xóa tại đây và tôi sẽ chuyển
+
+39
+00:02:43,770 --> 00:02:45,180
+nó ngay tại đây.
+
+40
+00:02:45,540 --> 00:02:47,040
+Trông tôt đây.
+
+41
+00:02:47,370 --> 00:02:52,230
+Với cấu hình đó, hãy để tôi xây dựng lại và xem nó có hoạt động không.
+
+42
+00:02:54,290 --> 00:02:56,330
+Chúng tôi đi đến sản phẩm ở đây?
+
+43
+00:02:57,440 --> 00:02:59,180
+Để mình thử xóa.
+
+44
+00:02:59,210 --> 00:02:59,990
+Hoàn hảo.
+
+45
+00:02:59,990 --> 00:03:02,300
+Nếu tôi nhấn hủy, không có gì xảy ra.
+
+46
+00:03:02,300 --> 00:03:06,770
+Nhưng khi tôi chọn có, xóa nó, nó chạm điểm cuối.
+
+47
+00:03:06,770 --> 00:03:15,010
+Và nếu tôi tiếp tục, bạn có thể thấy trên giao diện người dùng rằng sản phẩm vẫn hiển thị, nhưng không phải vậy.
+
+48
+00:03:15,020 --> 00:03:18,230
+Nếu tôi tải lại trang sản phẩm, nó sẽ biến mất.
+
+49
+00:03:18,710 --> 00:03:24,950
+Vì vậy, điều đang xảy ra là mặc dù sản phẩm đó đang bị xóa nhưng bảng dữ liệu không được
+
+50
+00:03:24,950 --> 00:03:25,880
+làm mới.
+
+51
+00:03:26,450 --> 00:03:27,380
+sảng khoái.
+
+52
+00:03:27,380 --> 00:03:29,390
+Đó là siêu đơn giản là tốt.
+
+53
+00:03:29,390 --> 00:03:38,060
+Nếu tôi quay lại sản phẩm dot js ở đây, khi chúng ta có kết quả thành công ở đây, chúng ta có thể nói bảng dữ liệu
+
+54
+00:03:38,060 --> 00:03:41,420
+dot Ajax dot tải lại bảng dữ liệu này.
+
+55
+00:03:41,420 --> 00:03:43,250
+Chúng tôi có điều đó ngay tại đây.
+
+56
+00:03:43,250 --> 00:03:49,310
+Nhưng để truy cập được, chúng ta cần tạo một biến có tên là bảng dữ liệu.
+
+57
+00:03:50,280 --> 00:03:50,880
+Với.
+
+58
+00:03:50,880 --> 00:03:56,370
+Nó sẽ có sẵn ngay tại đây và nó sẽ có thể tải lại.
+
+59
+00:03:57,830 --> 00:03:58,870
+Rất hoàn hảo.
+
+60
+00:03:58,880 --> 00:04:04,130
+Với cấu hình đó, hãy để tôi khởi động lại và kiểm tra lại mọi thứ một lần nữa.
+
+61
+00:04:05,050 --> 00:04:07,270
+Chúng ta sẽ phải tạo ra một sản phẩm mới.
+
+62
+00:04:07,510 --> 00:04:10,390
+Tôi không muốn xóa các sản phẩm hiện có.
+
+63
+00:04:18,269 --> 00:04:18,870
+Hoàn hảo.
+
+64
+00:04:18,870 --> 00:04:20,220
+Chúng tôi có cái đó ở đây.
+
+65
+00:04:20,220 --> 00:04:21,660
+Chúng tôi nhấn xóa.
+
+66
+00:04:21,690 --> 00:04:24,630
+Vâng, xóa nó, xóa thành công.
+
+67
+00:04:24,630 --> 00:04:28,740
+Và bảng dữ liệu cũng được tải lại với điều đó.
+
+68
+00:04:28,740 --> 00:04:33,660
+Chúng tôi có tất cả các chức năng CRUD để sản phẩm hoạt động như mong đợi.
+

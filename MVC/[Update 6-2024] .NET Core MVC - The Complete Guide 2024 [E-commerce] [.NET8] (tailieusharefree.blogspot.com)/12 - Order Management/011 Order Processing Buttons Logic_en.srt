@@ -1,0 +1,244 @@
+1
+00:00:01,920 --> 00:00:04,530
+Instructor: Now if we go to the details here,
+
+2
+00:00:04,530 --> 00:00:06,840
+we have few buttons.
+
+3
+00:00:06,840 --> 00:00:11,160
+Let me work on when these buttons should be displayed.
+
+4
+00:00:11,160 --> 00:00:14,070
+The first button here is pay now.
+
+5
+00:00:14,070 --> 00:00:17,730
+That button should only be displayed for company user
+
+6
+00:00:17,730 --> 00:00:21,660
+where the payment status is equal to delayed payment
+
+7
+00:00:21,660 --> 00:00:24,390
+and the order status is shipped
+
+8
+00:00:24,390 --> 00:00:27,510
+because a company, we are giving them net 30
+
+9
+00:00:27,510 --> 00:00:29,460
+and they can make the payment
+
+10
+00:00:29,460 --> 00:00:31,683
+after the order has been shipped.
+
+11
+00:00:32,640 --> 00:00:35,910
+So, let me add that if condition first
+
+12
+00:00:35,910 --> 00:00:39,780
+where we'll go back to the details, scroll down
+
+13
+00:00:39,780 --> 00:00:43,650
+and here, rather than input, let me change all of them
+
+14
+00:00:43,650 --> 00:00:44,763
+to be button.
+
+15
+00:00:50,460 --> 00:00:53,490
+We will also have the closing text there,
+
+16
+00:00:53,490 --> 00:00:55,893
+so let me make that change.
+
+17
+00:00:58,290 --> 00:01:01,110
+And we will add the text between them.
+
+18
+00:01:01,110 --> 00:01:05,250
+So, pay now, start processing.
+
+19
+00:01:05,250 --> 00:01:07,893
+Next, we have the ship order.
+
+20
+00:01:09,120 --> 00:01:11,523
+And we have cancel order.
+
+21
+00:01:13,290 --> 00:01:15,933
+Perfect, let me remove the value.
+
+22
+00:01:21,930 --> 00:01:23,523
+And that looks good.
+
+23
+00:01:24,570 --> 00:01:27,180
+Now, the pay now should only be visible
+
+24
+00:01:27,180 --> 00:01:31,500
+if payment status is equal to delayed payment
+
+25
+00:01:31,500 --> 00:01:35,040
+and the order status is shipped.
+
+26
+00:01:35,040 --> 00:01:39,243
+So, that is the first if condition right here.
+
+27
+00:01:40,680 --> 00:01:45,030
+Let me do control A, control KD to align that.
+
+28
+00:01:45,030 --> 00:01:48,180
+Next, we have the start processing.
+
+29
+00:01:48,180 --> 00:01:49,890
+Now, all of these buttons here
+
+30
+00:01:49,890 --> 00:01:53,850
+to start processing, ship order or cancel order,
+
+31
+00:01:53,850 --> 00:01:58,850
+we want them to be only accessible by admin or an employee.
+
+32
+00:01:59,460 --> 00:02:02,130
+So, we will add the if condition.
+
+33
+00:02:02,130 --> 00:02:05,190
+Uf user is admin or employee,
+
+34
+00:02:05,190 --> 00:02:09,183
+only then they will be able to access these buttons.
+
+35
+00:02:10,289 --> 00:02:14,460
+But even then, we do not want to display all the buttons.
+
+36
+00:02:14,460 --> 00:02:17,280
+Start processing should be displayed
+
+37
+00:02:17,280 --> 00:02:19,920
+if the status is approved.
+
+38
+00:02:19,920 --> 00:02:23,400
+So right here, if the status is approved,
+
+39
+00:02:23,400 --> 00:02:27,030
+then we will display start processing.
+
+40
+00:02:27,030 --> 00:02:29,700
+Now, if the order is in processing,
+
+41
+00:02:29,700 --> 00:02:32,823
+only then the ship order should be displayed.
+
+42
+00:02:33,720 --> 00:02:37,320
+So, if the order status is in process,
+
+43
+00:02:37,320 --> 00:02:40,500
+then we will display the ship order.
+
+44
+00:02:40,500 --> 00:02:43,740
+So, the last one that we have here
+
+45
+00:02:43,740 --> 00:02:47,953
+is if model.OrderHeader.OrderStatus.
+
+46
+00:02:49,980 --> 00:02:53,050
+If that is not equal to SD.StatusRefunded
+
+47
+00:02:55,410 --> 00:02:57,780
+and we will be adding more condition.
+
+48
+00:02:57,780 --> 00:02:59,760
+Let me copy this one.
+
+49
+00:02:59,760 --> 00:03:02,280
+So, if it is not refunded
+
+50
+00:03:02,280 --> 00:03:05,680
+and it should not be status canceled
+
+51
+00:03:06,780 --> 00:03:09,753
+and it should not be shipped as well.
+
+52
+00:03:11,100 --> 00:03:14,520
+So, if all of these three conditions are true,
+
+53
+00:03:14,520 --> 00:03:18,210
+only then we will allow them to cancel the order.
+
+54
+00:03:18,210 --> 00:03:21,870
+And again, to cancel order, they will have to contact
+
+55
+00:03:21,870 --> 00:03:26,193
+and only admin or employee can cancel a order.
+
+56
+00:03:27,390 --> 00:03:30,570
+So, this condition looks good.
+
+57
+00:03:30,570 --> 00:03:33,180
+Let me go back and perfect.
+
+58
+00:03:33,180 --> 00:03:37,350
+Now, we only see start processing and cancel order
+
+59
+00:03:37,350 --> 00:03:42,060
+because the payment status and order status are approved.
+
+60
+00:03:42,060 --> 00:03:46,320
+So, the logic that we added here is looking good.
+
+61
+00:03:46,320 --> 00:03:49,323
+Let me continue from the next video.
+

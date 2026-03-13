@@ -1,0 +1,176 @@
+1
+00:00:01,470 --> 00:00:08,460
+Khi chúng tôi đang làm việc với một trang web mới, thông thường chúng tôi có một cơ sở dữ liệu và bên trong đó chúng tôi có
+
+2
+00:00:08,460 --> 00:00:09,300
+nhiều bảng.
+
+3
+00:00:09,300 --> 00:00:14,940
+Và dựa trên bảng đó, chúng tôi thực hiện một số thao tác và hiển thị một số dữ liệu.
+
+4
+00:00:15,830 --> 00:00:22,400
+Trước khi chúng ta tìm hiểu tất cả những điều phức tạp ở đây, khi chúng ta làm việc với Entity Framework
+
+5
+00:00:22,430 --> 00:00:27,590
+Core và ứng dụng MVC, chúng ta không tạo bảng trực tiếp trong cơ sở dữ liệu.
+
+6
+00:00:28,010 --> 00:00:35,210
+Thay vào đó, chúng tôi tạo một mô hình trong dự án của mình và chúng tôi nói với khung thực thể rằng, này, dựa
+
+7
+00:00:35,210 --> 00:00:43,520
+trên mô hình mà tôi đã tạo ở đây, tôi muốn bạn tìm ra và tạo bảng bên trong cơ sở dữ liệu và thực hiện điều đó một cách tự động.
+
+8
+00:00:43,970 --> 00:00:51,230
+Bây giờ, điều đó có vẻ kỳ diệu ngay bây giờ, nhưng chính sức mạnh của lõi khung thực thể sẽ cho phép chúng tôi
+
+9
+00:00:51,230 --> 00:00:52,940
+làm tất cả những điều đó.
+
+10
+00:00:53,510 --> 00:00:58,700
+Trước khi chúng tôi làm bất cứ điều gì như vậy trong các mô hình của mình, chúng tôi phải tạo một mô hình.
+
+11
+00:00:59,030 --> 00:01:06,560
+Vì vậy, trong trang web cồng kềnh ở đây, chúng tôi có thư mục mô hình, nhấp chuột phải vào đó và chúng tôi sẽ thêm một lớp mới.
+
+12
+00:01:06,980 --> 00:01:10,180
+Bây giờ nó không cần phải nằm trong thư mục mô hình.
+
+13
+00:01:10,190 --> 00:01:12,010
+Không có quy tắc về điều đó.
+
+14
+00:01:12,020 --> 00:01:17,790
+Đó là một trong những thứ mà các mô hình chúng tôi thường thêm chúng vào thư mục mô hình.
+
+15
+00:01:18,000 --> 00:01:24,450
+Bạn có thể đổi tên thư mục đó nếu muốn, nhưng tôi muốn chỉ ra rằng các mô hình không phải là thứ bắt
+
+16
+00:01:24,450 --> 00:01:29,010
+buộc, giống như chúng ta có thư mục bộ điều khiển và chế độ xem.
+
+17
+00:01:29,040 --> 00:01:31,440
+Những tên đó không thể được cập nhật.
+
+18
+00:01:31,530 --> 00:01:35,400
+Chúng phải giống hệt nhau về tên, nhưng mô hình.
+
+19
+00:01:35,400 --> 00:01:37,440
+Bạn có thể thay đổi nó nếu bạn muốn.
+
+20
+00:01:37,770 --> 00:01:47,760
+Mô hình đầu tiên mà tôi muốn làm việc là mô hình danh mục, vì vậy tôi sẽ viết danh mục. CS và nhấn nút nhập.
+
+21
+00:01:48,590 --> 00:01:49,250
+Hoàn hảo.
+
+22
+00:01:49,250 --> 00:01:51,080
+Nó tạo ra một lớp ở đây.
+
+23
+00:01:51,080 --> 00:01:56,600
+Và bên trong lớp danh mục này, chúng tôi sẽ tạo nhiều thuộc tính.
+
+24
+00:01:57,050 --> 00:02:03,230
+Bây giờ, tất cả các thuộc tính mà chúng ta sẽ tạo trong lớp danh mục, về cơ bản chúng sẽ là tất
+
+25
+00:02:03,230 --> 00:02:06,740
+cả các cột mà chúng ta muốn trong bảng danh mục.
+
+26
+00:02:07,490 --> 00:02:09,110
+Cách ánh xạ đó hoạt động.
+
+27
+00:02:09,110 --> 00:02:10,009
+Đừng lo.
+
+28
+00:02:10,009 --> 00:02:14,260
+Ngay bây giờ tôi có thể viết prop ở đây và nhấn tab.
+
+29
+00:02:14,270 --> 00:02:15,890
+Nó là một đoạn mã.
+
+30
+00:02:15,920 --> 00:02:21,650
+Chúng tôi phải nhấn tab hai lần và nó sẽ tự động tạo một thuộc tính.
+
+31
+00:02:21,740 --> 00:02:23,630
+Tôi sẽ gọi đó là ID.
+
+32
+00:02:24,860 --> 00:02:32,150
+Tôi đã định nghĩa ID là thuộc tính số nguyên và về cơ bản đây sẽ là khóa chính của bảng.
+
+33
+00:02:33,080 --> 00:02:40,520
+Điều tiếp theo chúng ta có một thuộc tính khác sẽ là chuỗi và hãy để tôi gọi tên đó, đây sẽ là
+
+34
+00:02:40,520 --> 00:02:41,750
+tên danh mục.
+
+35
+00:02:41,900 --> 00:02:46,880
+Và thuộc tính cuối cùng mà tôi muốn ngay bây giờ là thứ tự hiển thị.
+
+36
+00:02:47,270 --> 00:02:54,030
+Nếu chúng tôi có nhiều danh mục, danh mục nào sẽ được hiển thị đầu tiên trên trang sẽ xác định
+
+37
+00:02:54,030 --> 00:02:55,350
+thứ tự hiển thị.
+
+38
+00:02:55,770 --> 00:02:56,820
+Rất hoàn hảo.
+
+39
+00:02:56,820 --> 00:02:59,610
+Chúng tôi đã tạo một lớp thể loại ở đây.
+
+40
+00:02:59,610 --> 00:03:02,400
+Trong đó chúng tôi đã thêm ba thuộc tính.
+
+41
+00:03:02,790 --> 00:03:10,590
+Mục tiếp theo mà tôi muốn tập trung vào là tôi đã nói rằng ID sẽ là khóa chính của bảng, nhưng làm thế nào chúng ta có thể
+
+42
+00:03:10,590 --> 00:03:13,770
+xác định rõ ràng điều đó trong mô hình của mình?
+
+43
+00:03:14,220 --> 00:03:18,750
+Để làm được điều đó, chúng ta phải sử dụng một thứ gọi là chú thích dữ liệu.
+
+44
+00:03:19,170 --> 00:03:22,650
+Hãy để tôi hướng dẫn bạn qua chúng trong video tiếp theo.
+

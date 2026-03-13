@@ -1,0 +1,624 @@
+1
+00:00:01,770 --> 00:00:03,150
+-: Now that we have user
+
+2
+00:00:03,150 --> 00:00:05,939
+who have actual roles in our website,
+
+3
+00:00:05,939 --> 00:00:08,820
+we can make one modification
+
+4
+00:00:08,820 --> 00:00:09,653
+and that is,
+
+5
+00:00:09,653 --> 00:00:13,170
+the content management should only be visible
+
+6
+00:00:13,170 --> 00:00:15,900
+if a user is admin.
+
+7
+00:00:15,900 --> 00:00:17,130
+If it is not,
+
+8
+00:00:17,130 --> 00:00:20,553
+then they should not see the content management right here.
+
+9
+00:00:21,450 --> 00:00:24,783
+So, how can we check role of a logged in user?
+
+10
+00:00:25,800 --> 00:00:28,830
+For that, if we go back to the application
+
+11
+00:00:28,830 --> 00:00:32,549
+and we have to add that inside the _layout
+
+12
+00:00:32,549 --> 00:00:34,890
+which is the master page.
+
+13
+00:00:34,890 --> 00:00:38,520
+There we have the dropdown right here.
+
+14
+00:00:38,520 --> 00:00:41,010
+To check role of a logged in user,
+
+15
+00:00:41,010 --> 00:00:45,270
+we can add an if condition using the razor syntax
+
+16
+00:00:45,270 --> 00:00:47,010
+and we have the user object
+
+17
+00:00:47,010 --> 00:00:50,550
+that is already available with the project.
+
+18
+00:00:50,550 --> 00:00:52,680
+So, we can check if user
+
+19
+00:00:52,680 --> 00:00:55,410
+that is a helper method IsInRole
+
+20
+00:00:55,410 --> 00:00:57,903
+and we can check the name of the role.
+
+21
+00:00:58,830 --> 00:01:01,260
+We need the static details here,
+
+22
+00:01:01,260 --> 00:01:03,480
+but it is not accessible.
+
+23
+00:01:03,480 --> 00:01:05,703
+We have to add the using statement.
+
+24
+00:01:07,110 --> 00:01:10,170
+We will say BulkyBook.utility
+
+25
+00:01:10,170 --> 00:01:12,690
+and if we do not want to add it here,
+
+26
+00:01:12,690 --> 00:01:17,690
+we can add that inside the ViewImports right here.
+
+27
+00:01:19,320 --> 00:01:23,643
+And let me also add that in the other views that we have.
+
+28
+00:01:24,540 --> 00:01:27,630
+So, in Areas actually.
+
+29
+00:01:27,630 --> 00:01:31,950
+Admin, Views, ViewImport.
+
+30
+00:01:31,950 --> 00:01:33,690
+Paste that.
+
+31
+00:01:33,690 --> 00:01:37,683
+Customer, Views, ViewImport.
+
+32
+00:01:39,270 --> 00:01:41,883
+And let me see the identity.
+
+33
+00:01:42,930 --> 00:01:45,003
+We have ViewImports.
+
+34
+00:01:46,080 --> 00:01:47,490
+Paste that.
+
+35
+00:01:47,490 --> 00:01:49,830
+Now, I will also paste the other two
+
+36
+00:01:49,830 --> 00:01:51,453
+inside Identity.
+
+37
+00:01:52,470 --> 00:01:54,360
+And I think I cut that.
+
+38
+00:01:54,360 --> 00:01:56,460
+So, perfect.
+
+39
+00:01:56,460 --> 00:01:57,900
+That looks good.
+
+40
+00:01:57,900 --> 00:02:00,000
+Let me close all the tabs.
+
+41
+00:02:00,000 --> 00:02:01,983
+I had too many tabs open.
+
+42
+00:02:02,880 --> 00:02:04,530
+Let me collapse all.
+
+43
+00:02:04,530 --> 00:02:07,980
+And we were working on Views, Shared,
+
+44
+00:02:07,980 --> 00:02:08,812
+and _layout.
+
+45
+00:02:09,840 --> 00:02:12,300
+So, now SD is accessible
+
+46
+00:02:12,300 --> 00:02:16,260
+and we can say if user is in role admin,
+
+47
+00:02:16,260 --> 00:02:19,833
+then we want to display this particular li.
+
+48
+00:02:21,060 --> 00:02:23,940
+If I save that and run the application,
+
+49
+00:02:23,940 --> 00:02:27,450
+you will notice that this dropdown will be hidden
+
+50
+00:02:27,450 --> 00:02:30,363
+unless the user is an admin user.
+
+51
+00:02:31,830 --> 00:02:34,200
+So, right now, we do not see that.
+
+52
+00:02:34,200 --> 00:02:37,143
+If we log in as test customer,
+
+53
+00:02:38,310 --> 00:02:40,473
+it'll not be available.
+
+54
+00:02:42,030 --> 00:02:43,650
+You can see that.
+
+55
+00:02:43,650 --> 00:02:46,440
+And if we log out here...
+
+56
+00:02:46,440 --> 00:02:49,263
+Let me log in as test admin.
+
+57
+00:02:50,250 --> 00:02:51,153
+Whoops.
+
+58
+00:02:52,140 --> 00:02:53,880
+It should be admin.
+
+59
+00:02:53,880 --> 00:02:55,083
+There we go.
+
+60
+00:02:58,980 --> 00:03:00,210
+And perfect.
+
+61
+00:03:00,210 --> 00:03:02,103
+Then, we are able to view that.
+
+62
+00:03:03,150 --> 00:03:05,160
+Now, here we are only toggling
+
+63
+00:03:05,160 --> 00:03:08,400
+when to display this content management,
+
+64
+00:03:08,400 --> 00:03:11,580
+but if someone has the URL here,
+
+65
+00:03:11,580 --> 00:03:13,560
+if the logout here,
+
+66
+00:03:13,560 --> 00:03:16,470
+and even then if they type the URL,
+
+67
+00:03:16,470 --> 00:03:19,140
+you can see they are able to access that
+
+68
+00:03:19,140 --> 00:03:21,120
+and manage categories.
+
+69
+00:03:21,120 --> 00:03:23,670
+That should not be possible.
+
+70
+00:03:23,670 --> 00:03:24,870
+We need to make sure
+
+71
+00:03:24,870 --> 00:03:28,800
+that only admin has access to this page.
+
+72
+00:03:28,800 --> 00:03:31,140
+Adding that is super simple.
+
+73
+00:03:31,140 --> 00:03:32,700
+And what we will do is...
+
+74
+00:03:32,700 --> 00:03:34,953
+Where we have the controller?
+
+75
+00:03:36,210 --> 00:03:39,873
+Let me go to Areas, Admin, Controller.
+
+76
+00:03:40,980 --> 00:03:43,380
+We are in the category Controller.
+
+77
+00:03:43,380 --> 00:03:46,920
+Here, we can add an authorized keyword
+
+78
+00:03:46,920 --> 00:03:51,920
+and we are telling that only the roles is equal to SD.
+
+79
+00:03:53,190 --> 00:03:57,750
+Admin can access all the controllers action method.
+
+80
+00:03:57,750 --> 00:04:00,990
+So, if a user tries to access the index action
+
+81
+00:04:00,990 --> 00:04:03,120
+or any other action method,
+
+82
+00:04:03,120 --> 00:04:05,430
+if their role is not admin,
+
+83
+00:04:05,430 --> 00:04:08,310
+they will not get that access.
+
+84
+00:04:08,310 --> 00:04:09,690
+This authorized keyword,
+
+85
+00:04:09,690 --> 00:04:13,410
+you can add that at the complete category controller.
+
+86
+00:04:13,410 --> 00:04:16,470
+That will apply to all the action methods.
+
+87
+00:04:16,470 --> 00:04:19,680
+But if you want to apply them individually,
+
+88
+00:04:19,680 --> 00:04:21,209
+you can also do that
+
+89
+00:04:21,209 --> 00:04:24,453
+on top of the individual action methods.
+
+90
+00:04:25,350 --> 00:04:28,350
+So, whichever route you want, you can select that.
+
+91
+00:04:28,350 --> 00:04:31,230
+I am going to apply that globally
+
+92
+00:04:31,230 --> 00:04:33,390
+for category controller
+
+93
+00:04:33,390 --> 00:04:35,643
+as well as product controller.
+
+94
+00:04:37,080 --> 00:04:41,073
+Once we do that, let me save the application here.
+
+95
+00:04:45,210 --> 00:04:47,733
+Let me log in as an admin first.
+
+96
+00:04:48,840 --> 00:04:51,333
+We should be able to access that.
+
+97
+00:04:53,100 --> 00:04:58,100
+Let me log out and let me log in here as test customer.
+
+98
+00:04:59,160 --> 00:05:02,040
+And if I paste that URL here,
+
+99
+00:05:02,040 --> 00:05:04,200
+you will see something odd.
+
+100
+00:05:04,200 --> 00:05:07,590
+It is going to account and then access denied.
+
+101
+00:05:07,590 --> 00:05:09,483
+But we do not have that page.
+
+102
+00:05:10,560 --> 00:05:14,310
+If you go back and search in the solution explorer,
+
+103
+00:05:14,310 --> 00:05:17,310
+we do actually have an access denied page,
+
+104
+00:05:17,310 --> 00:05:18,750
+let me show that,
+
+105
+00:05:18,750 --> 00:05:21,630
+which got added in the identity.
+
+106
+00:05:21,630 --> 00:05:24,690
+But that is inside identity area.
+
+107
+00:05:24,690 --> 00:05:26,760
+Here, it is trying to look directly
+
+108
+00:05:26,760 --> 00:05:29,520
+into account access denied.
+
+109
+00:05:29,520 --> 00:05:31,293
+If it was like this,
+
+110
+00:05:32,400 --> 00:05:35,670
+then that page is actually loading.
+
+111
+00:05:35,670 --> 00:05:39,510
+So, the default route for access denied is not working
+
+112
+00:05:39,510 --> 00:05:41,193
+and we have to overwrite that.
+
+113
+00:05:42,750 --> 00:05:45,030
+And it is not only that route.
+
+114
+00:05:45,030 --> 00:05:46,800
+If I log out here
+
+115
+00:05:46,800 --> 00:05:50,100
+and if I try to access the admin product,
+
+116
+00:05:50,100 --> 00:05:53,700
+you will notice it is redirecting me to log in.
+
+117
+00:05:53,700 --> 00:05:55,590
+Because a user is not logged in,
+
+118
+00:05:55,590 --> 00:05:57,450
+they cannot access that.
+
+119
+00:05:57,450 --> 00:05:59,370
+First, they have to be logged in
+
+120
+00:05:59,370 --> 00:06:02,760
+and then, they must have the role of admin.
+
+121
+00:06:02,760 --> 00:06:06,960
+So, here also, it is missing that particular area,
+
+122
+00:06:06,960 --> 00:06:08,760
+which is identity.
+
+123
+00:06:08,760 --> 00:06:11,493
+If we have that, then it'll work.
+
+124
+00:06:12,510 --> 00:06:15,600
+Now these are the default application path
+
+125
+00:06:15,600 --> 00:06:18,990
+that are set by default in the application.
+
+126
+00:06:18,990 --> 00:06:21,960
+But because we added the identity here,
+
+127
+00:06:21,960 --> 00:06:25,860
+we have to overwrite those default configuration
+
+128
+00:06:25,860 --> 00:06:29,793
+and we will do that inside Program.cs.
+
+129
+00:06:30,690 --> 00:06:35,223
+Let me minimize this and open Program.cs.
+
+130
+00:06:36,420 --> 00:06:39,030
+Inside the builder.Services,
+
+131
+00:06:39,030 --> 00:06:39,870
+we have something
+
+132
+00:06:39,870 --> 00:06:43,233
+called as builder.Services.ConfigureApplicationCookie.
+
+133
+00:06:44,850 --> 00:06:48,357
+And there on the option, we have login path,
+
+134
+00:06:48,357 --> 00:06:53,220
+logout path, access denied and other configuration.
+
+135
+00:06:53,220 --> 00:06:57,090
+Right now, I will only toggle these three configuration.
+
+136
+00:06:57,090 --> 00:07:00,723
+And with that, let me restart the application.
+
+137
+00:07:03,090 --> 00:07:06,960
+With that change, if I try to access admin product,
+
+138
+00:07:06,960 --> 00:07:09,300
+things will still not work.
+
+139
+00:07:09,300 --> 00:07:12,030
+It is still going to the old route.
+
+140
+00:07:12,030 --> 00:07:15,090
+What exactly is going on here?
+
+141
+00:07:15,090 --> 00:07:18,840
+Well, when you add ConfigureApplicationCookies,
+
+142
+00:07:18,840 --> 00:07:21,720
+there is one thing that you should remember,
+
+143
+00:07:21,720 --> 00:07:23,100
+you cannot add that
+
+144
+00:07:23,100 --> 00:07:25,260
+before you add identity.
+
+145
+00:07:25,260 --> 00:07:29,130
+So, we have to add that after line 16
+
+146
+00:07:29,130 --> 00:07:31,143
+and only then it will work.
+
+147
+00:07:32,100 --> 00:07:33,300
+With that saved,
+
+148
+00:07:33,300 --> 00:07:35,733
+let me restart the application.
+
+149
+00:07:40,920 --> 00:07:43,770
+This time, if I try admin category,
+
+150
+00:07:43,770 --> 00:07:46,080
+it redirects to the correct path.
+
+151
+00:07:46,080 --> 00:07:48,390
+And if I log in as customer,
+
+152
+00:07:48,390 --> 00:07:50,193
+we will see access denied.
+
+153
+00:07:51,210 --> 00:07:52,080
+Perfect.
+
+154
+00:07:52,080 --> 00:07:56,340
+With that, we have implemented authorization successfully
+
+155
+00:07:56,340 --> 00:07:58,620
+based on role of the user
+
+156
+00:07:58,620 --> 00:08:00,063
+that has logged in.
+

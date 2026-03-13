@@ -1,0 +1,216 @@
+1
+00:00:01,720 --> 00:00:05,240
+Hãy để tôi hướng dẫn các bạn qua cuộc hành trình của . lõi mạng.
+
+2
+00:00:05,260 --> 00:00:06,640
+Trong video này. net core có lẽ là thay đổi lớn nhất. net đã gặp phải ngôn ngữ lập trình.
+
+3
+00:00:07,350 --> 00:00:13,110
+Năm 2002, Microsoft giới thiệu web form và đó là một cuộc cách mạng vào thời điểm đó.
+
+4
+00:00:13,710 --> 00:00:20,880
+Nhưng các hình thức web có nhược điểm riêng của nó và cần phải khắc phục tất cả chúng.
+
+5
+00:00:21,150 --> 00:00:26,820
+Do đó, . net đã đưa ra một kiến trúc mới, đó là . mạng MVC.
+
+6
+00:00:27,270 --> 00:00:34,200
+Bây giờ, mặc dù tôi yêu thích MVC và
+
+7
+00:00:34,650 --> 00:00:44,460
+tôi đã xây dựng nhiều ứng dụng sử dụng MVC, nhưng nó vẫn có những sai sót riêng, giống như nó được tạo trên các thành phần của biểu mẫu web.
+
+8
+00:00:44,460 --> 00:00:48,630
+Do đó, nó được gắn chặt với IIS và cuối cùng là hệ điều hành Windows.
+
+9
+00:00:49,140 --> 00:00:56,130
+Nhưng với sự phát triển của sự phát triển, Microsoft đã phải theo kịp sự thay đổi của công nghệ.
+
+10
+00:00:56,250 --> 00:01:02,880
+Do đó, vào tháng 6 năm 2016, Microsoft đã phát hành lõi ASP Dotnet
+
+11
+00:01:04,000 --> 00:01:12,550
+và đây là phiên bản Dotnet đầu tiên được xây dựng dựa trên cái mới này. Khung lõi mạng.
+
+12
+00:01:12,550 --> 00:01:16,060
+Cái này . net đã được viết lại hoàn toàn và nó là phiên bản đa nền tảng.
+
+13
+00:01:16,360 --> 00:01:17,860
+Do đó, nó không bị ràng buộc với hệ điều hành Windows.
+
+14
+00:01:18,440 --> 00:01:25,550
+Bây giờ kể từ . net đã được viết lại, nó được viết với
+
+15
+00:01:25,790 --> 00:01:29,990
+kiến trúc đám mây và do đó nó cực kỳ mạnh mẽ.
+
+16
+00:01:30,550 --> 00:01:37,390
+Sau đó vào tháng 8 năm 2018, Microsoft đã phát hành phiên bản tiếp theo của . net Core, đó là . mạng, Lõi
+
+17
+00:01:37,420 --> 00:01:39,730
+2. 0.
+
+18
+00:01:40,390 --> 00:01:47,590
+Và sau đó, nhóm đã rất tích cực phát hành các phiên bản mới của . lõi mạng.
+
+19
+00:01:47,590 --> 00:01:48,550
+Gần đây họ đã hoàn thành điều đó vào tháng 11.
+
+20
+00:01:48,550 --> 00:01:55,270
+Mỗi năm họ sẽ phát hành phiên bản mới với các tính năng mới.
+
+21
+00:01:55,840 --> 00:01:58,420
+Vì vậy, vào tháng 11 năm 2022, . net Core bảy đã được phát hành và . net Core 8 sẽ được phát
+
+22
+00:01:58,420 --> 00:02:02,740
+hành vào tháng 11 năm 2023.
+
+23
+00:02:03,130 --> 00:02:10,810
+Bây giờ, mặc dù phiên bản cuối cùng của . Net 8 sẽ được phát hành vào năm 2023, chúng tôi có thể sử
+
+24
+00:02:10,810 --> 00:02:12,280
+dụng phiên bản xem trước của . net 8 bằng Visual Studio Preview.
+
+25
+00:02:12,990 --> 00:02:20,220
+Vì vậy, phiên bản xem trước đã có sẵn và đó là những gì chúng tôi sẽ sử dụng trong khóa học này.
+
+26
+00:02:20,220 --> 00:02:23,790
+Đó là một tổng quan nhỏ của. Net framework và sự phát triển của nó.
+
+27
+00:02:24,120 --> 00:02:29,640
+Bây giờ, điều đó đang được nói, tại sao bạn thậm chí nên học điều đó ở cốt lõi?
+
+28
+00:02:30,060 --> 00:02:32,550
+Và đâu là những ưu điểm mà lõi Dotnet mang lại khi bạn so sánh với lõi . ngôn ngữ mạng?
+
+29
+00:02:32,790 --> 00:02:35,370
+Danh sách này khá rộng.
+
+30
+00:02:36,220 --> 00:02:39,940
+Đầu tiên là cái đó. net là mã nguồn mở và nhanh.
+
+31
+00:02:39,940 --> 00:02:46,930
+Nếu bạn so sánh điều đó với truyền thống. Net, đã có khá nhiều điểm chuẩn và . lõi mạng rất nhanh.
+
+32
+00:02:48,050 --> 00:02:50,090
+Khi bạn so sánh điều đó với các biểu mẫu web hoặc thậm chí . mạng MVC.
+
+33
+00:02:50,780 --> 00:02:54,470
+Sau đó . net là đa nền tảng.
+
+34
+00:02:54,770 --> 00:02:56,930
+. net được gắn với IIS và windows, nhưng vì . net được viết lại, nó
+
+35
+00:02:57,140 --> 00:03:03,540
+đã loại bỏ sự phụ thuộc đó bằng . lõi mạng.
+
+36
+00:03:03,560 --> 00:03:07,880
+Và với . net, chúng tôi đã tích hợp sẵn tính năng tiêm phụ thuộc.
+
+37
+00:03:09,110 --> 00:03:11,870
+Tính năng tiêm phụ thuộc cực kỳ tuyệt vời khi bạn
+
+38
+00:03:12,290 --> 00:03:19,730
+sẽ đồng hành cùng khóa học và vào thời điểm bạn kết thúc khóa học, nếu bạn làm việc với . net, bạn không thể tưởng tượng mình quay lại mã
+
+39
+00:03:19,730 --> 00:03:22,550
+mà không có sự phụ thuộc.
+
+40
+00:03:23,240 --> 00:03:27,620
+Nó tiết kiệm rất nhiều thời gian và cực kỳ hiệu quả trong việc quản lý tất cả các phụ thuộc.
+
+41
+00:03:27,860 --> 00:03:34,790
+Với bất kỳ ngôn ngữ lập trình nào.
+
+42
+00:03:34,790 --> 00:03:41,270
+Điều quan trọng là các bản cập nhật mới hoặc phiên bản mới được phát hành phải dễ dàng nâng cấp.
+
+43
+00:03:41,270 --> 00:03:43,190
+Và đó là một trong những tính năng tuyệt vời với net core.
+
+44
+00:03:43,670 --> 00:03:49,940
+Các bản cập nhật thường rất trơn tru.
+
+45
+00:03:50,620 --> 00:03:52,450
+Và nhờ đó, bạn luôn có thể cập nhật phiên bản mới.
+
+46
+00:03:52,450 --> 00:03:58,930
+net core cũng thân thiện với đám mây.
+
+47
+00:03:59,080 --> 00:04:02,200
+Khi chúng ta di chuyển cùng với sự phát triển, ngày càng có nhiều
+
+48
+00:04:02,230 --> 00:04:05,230
+công ty đang nghiêng nhiều về phát triển đám mây và . net đã được xây dựng có lưu ý đến kiến trúc đám mây.
+
+49
+00:04:05,870 --> 00:04:10,130
+Vì vậy, đó là lý do tại sao nó rất linh hoạt khi chúng ta phải tích hợp. net với các công nghệ đám mây.
+
+50
+00:04:11,200 --> 00:04:13,930
+Cuối cùng, khi nói đến hiệu suất. net vượt quá tất cả các phiên bản trước đó và thậm chí cả các phiên bản mới được phát hành trong . lõi mạng.
+
+51
+00:04:14,440 --> 00:04:20,890
+Họ thay thế phiên bản trước.
+
+52
+00:04:20,890 --> 00:04:25,390
+Microsoft đã đầu tư rất nhiều vào . lõi mạng.
+
+53
+00:04:25,540 --> 00:04:32,140
+Điều đó cho chúng tôi một ý tưởng rõ ràng rằng Microsoft có kế hoạch dài hạn với công nghệ này.
+
+54
+00:04:32,500 --> 00:04:34,900
+Vì vậy, với phần tổng quan ngắn gọn đó, hãy để tôi tiếp tục từ video tiếp theo.
+

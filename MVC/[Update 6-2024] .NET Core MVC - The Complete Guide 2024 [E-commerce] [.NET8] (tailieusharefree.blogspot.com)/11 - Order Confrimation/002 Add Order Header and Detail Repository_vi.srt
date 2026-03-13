@@ -1,0 +1,140 @@
+1
+00:00:01,480 --> 00:00:08,320
+Bây giờ chúng tôi đã thêm tiêu đề đơn hàng và chi tiết đơn hàng trong mô hình và cơ sở dữ liệu của mình, chúng tôi cũng
+
+2
+00:00:08,320 --> 00:00:10,510
+cần thêm nó vào kho lưu trữ của mình.
+
+3
+00:00:10,930 --> 00:00:16,120
+Vì vậy, hãy để tôi sao chép kho lưu trữ danh mục, dán thêm hai lần nữa.
+
+4
+00:00:16,510 --> 00:00:19,450
+Đầu tiên, tôi sẽ làm việc trên giao diện ở đây.
+
+5
+00:00:20,170 --> 00:00:24,610
+Và chúng tôi sẽ đổi tên nó thành kho lưu trữ tiêu đề tôi đặt hàng.
+
+6
+00:00:26,310 --> 00:00:30,000
+Và chúng ta có kho chi tiết thứ tự mắt.
+
+7
+00:00:37,430 --> 00:00:41,690
+Hãy để tôi sao chép giao diện và sửa đổi mọi thứ ở đây.
+
+8
+00:00:47,950 --> 00:00:48,580
+Hoàn hảo.
+
+9
+00:00:48,580 --> 00:00:49,640
+Có vẻ tốt.
+
+10
+00:00:49,660 --> 00:00:51,640
+Sửa đổi tiêu đề đơn đặt hàng.
+
+11
+00:00:51,940 --> 00:00:53,440
+Sao chép cái đó.
+
+12
+00:00:56,410 --> 00:00:58,180
+Và hoàn hảo.
+
+13
+00:00:58,390 --> 00:01:01,630
+Tôi tin rằng có vẻ tốt cho giao diện.
+
+14
+00:01:01,780 --> 00:01:06,220
+Hãy để tôi sao chép việc thực hiện cho danh mục.
+
+15
+00:01:06,520 --> 00:01:08,650
+Dán nó hai lần nữa.
+
+16
+00:01:09,070 --> 00:01:13,540
+Sửa đổi nó thành tiêu đề đơn hàng và chi tiết đơn hàng.
+
+17
+00:01:21,030 --> 00:01:21,630
+Hoàn hảo.
+
+18
+00:01:21,630 --> 00:01:26,130
+Hãy để tôi sao chép tên đó và sửa đổi chi tiết đơn đặt hàng ở đây.
+
+19
+00:01:35,630 --> 00:01:37,070
+Và hoàn hảo.
+
+20
+00:01:37,070 --> 00:01:39,200
+Điều đó có vẻ tốt cho chi tiết đặt hàng.
+
+21
+00:01:39,470 --> 00:01:42,830
+Hãy để tôi làm việc trên kho lưu trữ tiêu đề đơn hàng.
+
+22
+00:01:52,230 --> 00:01:53,850
+Và hoàn hảo.
+
+23
+00:01:53,850 --> 00:01:55,080
+Trông tôt đây.
+
+24
+00:01:55,500 --> 00:02:02,110
+Hãy để tôi kết thúc mọi thứ ở đây và chúng ta cần thêm nó vào đơn vị công việc và tôi.
+
+25
+00:02:02,130 --> 00:02:03,300
+Đơn vị công việc.
+
+26
+00:02:04,920 --> 00:02:11,280
+Trước tiên, chúng tôi sẽ thêm chi tiết đơn đặt hàng tại đây và tôi có tiêu đề Tôi đặt hàng.
+
+27
+00:02:12,210 --> 00:02:13,470
+Có vẻ tốt.
+
+28
+00:02:13,500 --> 00:02:15,570
+Làm việc trên đơn vị công việc.
+
+29
+00:02:16,430 --> 00:02:19,160
+Tiêu đề đặt hàng công cộng.
+
+30
+00:02:20,670 --> 00:02:23,520
+Và chi tiết trật tự công cộng.
+
+31
+00:02:27,230 --> 00:02:29,210
+Chúng tôi cũng sẽ khởi tạo chúng.
+
+32
+00:02:29,240 --> 00:02:34,910
+Tiêu đề đơn hàng bằng tiêu đề đơn hàng mới và chi tiết đơn hàng.
+
+33
+00:02:35,150 --> 00:02:36,530
+Trông tôt đây.
+
+34
+00:02:37,280 --> 00:02:44,510
+Cùng với đó, chúng tôi đã định cấu hình đơn vị công việc của mình để sử dụng tiêu đề đơn hàng và kho lưu trữ chi tiết đơn hàng.
+
+35
+00:02:45,020 --> 00:02:48,260
+Hãy để tôi tiếp tục từ video tiếp theo.
+

@@ -1,0 +1,14 @@
+﻿<div class="alert alert-success text-center">
+    <h1> @Name is Added Successfully </h1>
+
+    <h3>if you need to add another todo press here</h3>
+    <button @onclick="Ok" class="btn btn-info">Ok</button>
+</div>
+
+@code {
+    [Parameter] public string Name { get; set; } = string.Empty;
+    void Ok()
+    {
+        MessagingCenter.Send(this, "ShowForm");
+    }
+}

@@ -1,0 +1,144 @@
+1
+00:00:01,609 --> 00:00:06,790
+We want to display all the categories on category list page that we added.
+
+2
+00:00:06,800 --> 00:00:13,370
+But every time when we run the application, we do not want to go here and type this in the URL.
+
+3
+00:00:13,670 --> 00:00:17,000
+Rather, I want to add something like category here.
+
+4
+00:00:17,000 --> 00:00:20,930
+When we click there, it will take us to this URL.
+
+5
+00:00:21,880 --> 00:00:25,570
+Now, where do we have this header that you see on the screen?
+
+6
+00:00:26,050 --> 00:00:29,530
+If you set underscored layout, you are correct.
+
+7
+00:00:29,800 --> 00:00:31,980
+Let me stop the application.
+
+8
+00:00:31,990 --> 00:00:39,940
+If we go to the shared folder, we have underscored layout there and there we have UL and LI elements
+
+9
+00:00:39,970 --> 00:00:43,570
+where we have the LI with the anchor tag.
+
+10
+00:00:44,190 --> 00:00:50,670
+Now, this anchor tag might seem a little different because in this anchor tag, we have something called
+
+11
+00:00:50,670 --> 00:00:52,410
+as ASP areas.
+
+12
+00:00:52,590 --> 00:00:54,630
+You can just delete that for now.
+
+13
+00:00:54,630 --> 00:01:01,470
+We don't care about them, but we have something called as ASP controller and ASP action.
+
+14
+00:01:01,860 --> 00:01:06,570
+These are tag helpers and they are useful when you are working with the.
+
+15
+00:01:06,810 --> 00:01:08,130
+.Net application.
+
+16
+00:01:08,400 --> 00:01:16,140
+You can think of them as helper function or helper entities that are available to you when we have the
+
+17
+00:01:16,140 --> 00:01:23,490
+anchor tag rather than having an href here and saying that okay, take me to forward slash home and
+
+18
+00:01:23,490 --> 00:01:24,740
+then index.
+
+19
+00:01:24,750 --> 00:01:31,770
+We have the helper tags here where we can say on the anchor tag, take me to the controller, which
+
+20
+00:01:31,770 --> 00:01:36,630
+is home controller, and in there take me to index action.
+
+21
+00:01:37,560 --> 00:01:44,040
+And if you look at that, it is more explicit that which controller, what action is being invoked when
+
+22
+00:01:44,140 --> 00:01:46,210
+we click on this anchor tag.
+
+23
+00:01:47,170 --> 00:01:50,250
+Let me copy this and paste it one more time.
+
+24
+00:01:50,320 --> 00:01:58,420
+Next thing that we want to go is category controller and action is index action.
+
+25
+00:01:59,050 --> 00:02:04,270
+What we want to call here is category and perfect.
+
+26
+00:02:04,270 --> 00:02:05,620
+That looks good.
+
+27
+00:02:06,500 --> 00:02:09,979
+These are just the bootstrap classes, so we will ignore them.
+
+28
+00:02:09,979 --> 00:02:14,150
+But basically we added another element right here.
+
+29
+00:02:15,410 --> 00:02:20,480
+With that configured, let me run the application and see if that works.
+
+30
+00:02:21,230 --> 00:02:21,930
+Perfect.
+
+31
+00:02:21,950 --> 00:02:27,250
+We have category and when we click there, it will hit our debugging point.
+
+32
+00:02:27,260 --> 00:02:29,690
+Let me remove and continue.
+
+33
+00:02:29,990 --> 00:02:31,490
+And perfect.
+
+34
+00:02:31,670 --> 00:02:37,760
+In order to remove, you just have to click that once again and it will remove that debugging point.
+
+35
+00:02:38,420 --> 00:02:39,560
+So perfect.
+
+36
+00:02:39,590 --> 00:02:45,410
+Now we can go to category and navigate between pages pretty easily.
+

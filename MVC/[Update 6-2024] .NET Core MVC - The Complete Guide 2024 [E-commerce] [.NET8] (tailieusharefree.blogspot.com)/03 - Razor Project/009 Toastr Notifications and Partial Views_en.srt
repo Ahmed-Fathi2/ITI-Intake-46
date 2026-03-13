@@ -1,0 +1,224 @@
+1
+00:00:02,250 --> 00:00:04,110
+Instructor: Finally we have to add toaster
+
+2
+00:00:04,110 --> 00:00:05,760
+in our project.
+
+3
+00:00:05,760 --> 00:00:07,320
+That will be straightforward
+
+4
+00:00:07,320 --> 00:00:10,443
+to what we did with M B C as well.
+
+5
+00:00:11,340 --> 00:00:15,270
+So we go here, we have the partial view,
+
+6
+00:00:15,270 --> 00:00:16,890
+copy that
+
+7
+00:00:16,890 --> 00:00:20,130
+and we will create the same partial view
+
+8
+00:00:20,130 --> 00:00:21,450
+inside
+
+9
+00:00:21,450 --> 00:00:24,120
+razor project, shared
+
+10
+00:00:24,120 --> 00:00:26,140
+add razor page
+
+11
+00:00:27,150 --> 00:00:31,177
+and we will call that underscore notification.
+
+12
+00:00:33,240 --> 00:00:36,630
+Right here you see it added the page and model
+
+13
+00:00:36,630 --> 00:00:40,020
+but that is not needed with partial view.
+
+14
+00:00:40,020 --> 00:00:42,600
+We can delete the dot CS file
+
+15
+00:00:42,600 --> 00:00:46,080
+and remove all the code, paste what we copied
+
+16
+00:00:46,080 --> 00:00:47,973
+from the M V C project.
+
+17
+00:00:49,260 --> 00:00:52,200
+We need to add this to our underscore layout.
+
+18
+00:00:52,200 --> 00:00:56,460
+So let me do that before render party here.
+
+19
+00:00:56,460 --> 00:00:58,380
+That looks good.
+
+20
+00:00:58,380 --> 00:01:03,060
+In underscore layout, we also need to add toaster U R L.
+
+21
+00:01:03,060 --> 00:01:05,583
+So let me copy that from here.
+
+22
+00:01:06,510 --> 00:01:11,510
+We will close the M V C project and add that here.
+
+23
+00:01:11,850 --> 00:01:13,290
+Perfect.
+
+24
+00:01:13,290 --> 00:01:15,180
+So toaster is added.
+
+25
+00:01:15,180 --> 00:01:16,330
+Now we need to configure
+
+26
+00:01:16,330 --> 00:01:20,883
+or rather set temp data on the post handlers.
+
+27
+00:01:21,720 --> 00:01:24,360
+For that, let me make sure
+
+28
+00:01:24,360 --> 00:01:28,530
+we are in the razor project in the create.
+
+29
+00:01:28,530 --> 00:01:31,860
+Before we redirect, we will set temp data
+
+30
+00:01:31,860 --> 00:01:36,090
+of success category created successfully
+
+31
+00:01:36,090 --> 00:01:39,090
+delete category
+
+32
+00:01:39,090 --> 00:01:41,970
+deleted successfully.
+
+33
+00:01:41,970 --> 00:01:46,970
+Edit will be category updated successfully
+
+34
+00:01:47,040 --> 00:01:49,350
+and that looks good.
+
+35
+00:01:49,350 --> 00:01:52,383
+Let me run and see if that works.
+
+36
+00:01:54,270 --> 00:01:56,103
+Go to category here,
+
+37
+00:01:58,470 --> 00:02:02,010
+try to edit history and Perfect.
+
+38
+00:02:02,010 --> 00:02:03,662
+We see the notification.
+
+39
+00:02:03,662 --> 00:02:06,570
+Let me update that back here.
+
+40
+00:02:06,570 --> 00:02:09,570
+And if we delete test two,
+
+41
+00:02:09,570 --> 00:02:10,949
+perfect.
+
+42
+00:02:10,949 --> 00:02:12,235
+All the toaster notification
+
+43
+00:02:12,235 --> 00:02:15,753
+and everything is working as expected.
+
+44
+00:02:16,680 --> 00:02:20,400
+Now with this, we have quickly learned crud operations
+
+45
+00:02:20,400 --> 00:02:24,270
+on both M V C and razor pages.
+
+46
+00:02:24,270 --> 00:02:27,270
+The reason I introduced you razor pages is
+
+47
+00:02:27,270 --> 00:02:30,210
+moving forward when we add identity,
+
+48
+00:02:30,210 --> 00:02:33,840
+using the dot net identity class library
+
+49
+00:02:33,840 --> 00:02:37,260
+that is built on top of razor pages.
+
+50
+00:02:37,260 --> 00:02:39,900
+So when you have to edit the page, you know
+
+51
+00:02:39,900 --> 00:02:43,280
+that razor page will have a page model where you will have
+
+52
+00:02:43,280 --> 00:02:45,243
+get and post handler.
+
+53
+00:02:46,140 --> 00:02:48,570
+With the practice that you have in this section
+
+54
+00:02:48,570 --> 00:02:53,040
+with razor pages, you should be able to update everything
+
+55
+00:02:53,040 --> 00:02:55,760
+with the identity pages that we will cover
+
+56
+00:02:55,760 --> 00:02:58,983
+in the later sections of the course.
+

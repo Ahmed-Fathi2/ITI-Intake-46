@@ -1,0 +1,248 @@
+1
+00:00:01,760 --> 00:00:08,780
+If I go to Solution Explorer and open the Program.cs file, you can see in the routing we have something
+
+2
+00:00:08,780 --> 00:00:11,060
+called as controller and action.
+
+3
+00:00:11,660 --> 00:00:14,090
+Remember these keywords for now.
+
+4
+00:00:14,780 --> 00:00:21,410
+If you open the Solution Explorer again, you will notice we have a folder with the name of controllers.
+
+5
+00:00:21,440 --> 00:00:24,350
+We have models and we have views.
+
+6
+00:00:25,050 --> 00:00:28,440
+That basically defines the MVC keyword.
+
+7
+00:00:28,950 --> 00:00:33,030
+MVC stands for models, Views and Controllers.
+
+8
+00:00:33,270 --> 00:00:36,480
+But how do all three of them come together?
+
+9
+00:00:36,930 --> 00:00:40,200
+Let me show you a brief overview about that.
+
+10
+00:00:40,710 --> 00:00:46,320
+In the MVC architecture, as I said, first letter stands for model.
+
+11
+00:00:46,530 --> 00:00:49,980
+Model represents the shape of the data.
+
+12
+00:00:50,280 --> 00:00:54,160
+So if you have any tables or if you have any classes.
+
+13
+00:00:54,180 --> 00:00:56,490
+Model will have all of that.
+
+14
+00:00:57,170 --> 00:01:03,050
+And what I mean by class is let's say you are building an e-commerce application where you have products,
+
+15
+00:01:03,050 --> 00:01:08,690
+you will have orders, you will have order details, shopping cart and much more.
+
+16
+00:01:08,990 --> 00:01:12,860
+Models will basically have all of those class files.
+
+17
+00:01:13,890 --> 00:01:19,320
+Next we have something called As View, which stands for the user interface.
+
+18
+00:01:19,960 --> 00:01:26,500
+So whatever you see on the screen, that is the view part of the MVC application.
+
+19
+00:01:26,770 --> 00:01:29,260
+So model represents the data.
+
+20
+00:01:29,260 --> 00:01:32,860
+And what you see on the screen is the user interface.
+
+21
+00:01:32,890 --> 00:01:40,780
+Like if you have a form or if you have a fancy chart that you see on the browser, all of that is represented
+
+22
+00:01:40,780 --> 00:01:41,800
+by The View.
+
+23
+00:01:42,560 --> 00:01:46,970
+View will control the HTML element of your web project.
+
+24
+00:01:47,480 --> 00:01:53,000
+Now you have the view where you have the fancy HTML that you see on the screen.
+
+25
+00:01:53,330 --> 00:02:00,740
+But when you have the data, you will have to process or even fetch that data because data might be
+
+26
+00:02:00,740 --> 00:02:02,030
+inside a database.
+
+27
+00:02:02,180 --> 00:02:09,380
+So you need something to fetch that data and display that in a table on your HTML view that you have.
+
+28
+00:02:09,800 --> 00:02:17,540
+That missing piece or heart of the MVC application is the controller, which is the last piece of the
+
+29
+00:02:17,540 --> 00:02:18,920
+missing block here.
+
+30
+00:02:19,610 --> 00:02:27,500
+Controller will basically handle the user request and it will act as an interface between model and
+
+31
+00:02:27,500 --> 00:02:28,070
+view.
+
+32
+00:02:28,490 --> 00:02:35,900
+What happens is when a user clicks on one of the button or opens the website, the request will first
+
+33
+00:02:35,900 --> 00:02:37,370
+go to the controller.
+
+34
+00:02:37,730 --> 00:02:42,180
+Controller will then determine what model it has to fetch.
+
+35
+00:02:42,210 --> 00:02:49,620
+It will retrieve all the data that is needed using the models and then it will pass all the data that
+
+36
+00:02:49,620 --> 00:02:53,160
+is required to be displayed to the view component.
+
+37
+00:02:53,610 --> 00:03:00,900
+What view will do is it will add all the data in its HTML formatting and pass that data back to the
+
+38
+00:03:00,900 --> 00:03:09,000
+controller and then controller will send that response back and the data or website will be displayed
+
+39
+00:03:09,000 --> 00:03:10,440
+on your screen.
+
+40
+00:03:10,770 --> 00:03:18,360
+So one thing that you should always remember is in an MVC architecture controller is heart of your application.
+
+41
+00:03:19,120 --> 00:03:25,420
+And it might sound like I'm repeating this over and over again, but MVC architecture can be tricky
+
+42
+00:03:25,420 --> 00:03:28,240
+to understand if you are getting started.
+
+43
+00:03:28,420 --> 00:03:30,550
+So let's walk through that again.
+
+44
+00:03:30,670 --> 00:03:35,080
+When a user opens a website, it goes to a controller.
+
+45
+00:03:35,410 --> 00:03:42,590
+Controller will then fetch data from the models or wherever it has to do process that data.
+
+46
+00:03:42,610 --> 00:03:46,460
+Like there might be some conversion or anything that it has to do.
+
+47
+00:03:46,480 --> 00:03:53,710
+And once the data is in good shape, it will pass that data to the view on that static HTML.
+
+48
+00:03:53,740 --> 00:03:57,310
+It will add the data that controller has passed.
+
+49
+00:03:57,550 --> 00:04:03,910
+Like in View, we might have defined that there is a table, but what data that table needs, we will
+
+50
+00:04:03,910 --> 00:04:06,220
+pass that from controller to the View.
+
+51
+00:04:06,250 --> 00:04:10,960
+Then Vue will add that data in the HTML and final content.
+
+52
+00:04:10,960 --> 00:04:18,339
+It will return back to the controller, which will ultimately be passed on to the user screen and user
+
+53
+00:04:18,339 --> 00:04:20,600
+can see the complete website.
+
+54
+00:04:21,230 --> 00:04:27,020
+This, my friends, is the basic architecture of an MVC application.
+
+55
+00:04:28,140 --> 00:04:35,140
+Our controller can have many action method action method basically define the endpoints in a controller
+
+56
+00:04:35,140 --> 00:04:38,430
+and we will uncover that in the next video.
+
+57
+00:04:38,440 --> 00:04:42,160
+But there is something called as action methods there as well.
+
+58
+00:04:42,640 --> 00:04:47,620
+If I go back to the website here, you can see where we have the default route.
+
+59
+00:04:47,650 --> 00:04:54,220
+We are saying that if nothing is defined, you should go to the home controller and there you have index
+
+60
+00:04:54,220 --> 00:04:56,560
+action and something called as ID.
+
+61
+00:04:57,610 --> 00:05:00,220
+Let's ignore that right now.
+
+62
+00:05:00,220 --> 00:05:06,970
+You know the basic MVC architecture and let's cover this routing in the next video.
+

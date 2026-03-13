@@ -1,0 +1,152 @@
+1
+00:00:01,920 --> 00:00:03,719
+Instructor: Now we have a repository
+
+2
+00:00:03,719 --> 00:00:07,350
+and we have an interface I repository.
+
+3
+00:00:07,350 --> 00:00:12,000
+We need our category to implement that repository.
+
+4
+00:00:12,000 --> 00:00:13,743
+So how do we do that?
+
+5
+00:00:14,790 --> 00:00:16,890
+In the I repository,
+
+6
+00:00:16,890 --> 00:00:20,070
+first, I will create a new interface
+
+7
+00:00:20,070 --> 00:00:21,240
+that will be
+
+8
+00:00:21,240 --> 00:00:22,380
+I
+
+9
+00:00:22,380 --> 00:00:24,060
+category
+
+10
+00:00:24,060 --> 00:00:25,173
+repository.
+
+11
+00:00:27,330 --> 00:00:30,030
+We will make this a public interface,
+
+12
+00:00:30,030 --> 00:00:31,620
+and that interface
+
+13
+00:00:31,620 --> 00:00:35,580
+will implement the I repository interface.
+
+14
+00:00:35,580 --> 00:00:38,970
+And this time when it implements the I repository,
+
+15
+00:00:38,970 --> 00:00:40,500
+we know what is the clause
+
+16
+00:00:40,500 --> 00:00:44,133
+on which we want the implementation for this repository.
+
+17
+00:00:44,970 --> 00:00:48,450
+That will be the category model where we want to
+
+18
+00:00:48,450 --> 00:00:50,223
+implement the interface.
+
+19
+00:00:51,150 --> 00:00:53,550
+That way, we are actually defining now
+
+20
+00:00:53,550 --> 00:00:55,500
+that when we need the implementation
+
+21
+00:00:55,500 --> 00:00:58,140
+for I category repository,
+
+22
+00:00:58,140 --> 00:01:02,430
+I want you to get the base functionality from repository.
+
+23
+00:01:02,430 --> 00:01:05,250
+What that will do is that we'll make sure we have all
+
+24
+00:01:05,250 --> 00:01:09,780
+of these base methods where entity will be category.
+
+25
+00:01:09,780 --> 00:01:11,104
+On top of that, if you remember,
+
+26
+00:01:11,104 --> 00:01:13,570
+we needed two more functionality
+
+27
+00:01:14,490 --> 00:01:17,373
+and those who are update and save methods.
+
+28
+00:01:18,240 --> 00:01:21,330
+So here we will have void update.
+
+29
+00:01:21,330 --> 00:01:26,130
+There, we will get the category and let me call that O B J
+
+30
+00:01:26,130 --> 00:01:30,033
+and we will also have a method to save the changes.
+
+31
+00:01:31,320 --> 00:01:34,770
+So this is the final category repository
+
+32
+00:01:34,770 --> 00:01:38,040
+interface that will implement the base functionality
+
+33
+00:01:38,040 --> 00:01:40,890
+that we have for all the repository.
+
+34
+00:01:40,890 --> 00:01:42,900
+Plus, we will have an update
+
+35
+00:01:42,900 --> 00:01:46,383
+and save for the category repository.
+
+36
+00:01:47,310 --> 00:01:52,260
+Now this is the interface we need to have its implementation
+
+37
+00:01:52,260 --> 00:01:55,230
+in the category repository.
+
+38
+00:01:55,230 --> 00:01:57,963
+Let me do that in the next video.
+

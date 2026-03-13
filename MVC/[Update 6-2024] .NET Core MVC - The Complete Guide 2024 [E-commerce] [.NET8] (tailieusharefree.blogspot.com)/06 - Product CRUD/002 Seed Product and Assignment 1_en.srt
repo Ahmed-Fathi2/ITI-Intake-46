@@ -1,0 +1,176 @@
+1
+00:00:02,009 --> 00:00:03,930
+Instructor: We have added the product model
+
+2
+00:00:03,930 --> 00:00:05,760
+to our project.
+
+3
+00:00:05,760 --> 00:00:08,460
+Now, we have not added all the properties,
+
+4
+00:00:08,460 --> 00:00:11,343
+but I have added the basic properties for now.
+
+5
+00:00:12,180 --> 00:00:15,540
+Before we add this product table to our database
+
+6
+00:00:15,540 --> 00:00:16,950
+we will have to add that
+
+7
+00:00:16,950 --> 00:00:21,303
+to application DbContext inside the data access.
+
+8
+00:00:22,290 --> 00:00:27,240
+So, let me copy this Db set for category
+
+9
+00:00:27,240 --> 00:00:31,740
+and we will rename that to be product and the table name,
+
+10
+00:00:31,740 --> 00:00:34,113
+I will call that as products.
+
+11
+00:00:35,454 --> 00:00:36,480
+Now, that looks good.
+
+12
+00:00:36,480 --> 00:00:39,930
+On top of that, I want to see the product as well.
+
+13
+00:00:39,930 --> 00:00:44,880
+So let me copy the has data here, paste it one more time
+
+14
+00:00:44,880 --> 00:00:48,093
+and then we will have to create new products here.
+
+15
+00:00:49,230 --> 00:00:53,010
+When we see something, you can write whatever you want,
+
+16
+00:00:53,010 --> 00:00:57,753
+but, for consistency, I have provided that inside snippets.
+
+17
+00:00:58,890 --> 00:01:01,983
+If you open the resources and snip it,
+
+18
+00:01:03,018 --> 00:01:07,530
+section six, we have seed products.
+
+19
+00:01:07,530 --> 00:01:10,260
+Let me open that, copy everything
+
+20
+00:01:10,260 --> 00:01:14,220
+and I will paste that inside the has data.
+
+21
+00:01:14,220 --> 00:01:17,490
+There I am populating six products,
+
+22
+00:01:17,490 --> 00:01:20,280
+and these are all the properties that we have added
+
+23
+00:01:20,280 --> 00:01:21,930
+in the product model,
+
+24
+00:01:21,930 --> 00:01:23,973
+so it should match perfectly.
+
+25
+00:01:25,020 --> 00:01:26,550
+With that configured,
+
+26
+00:01:26,550 --> 00:01:30,453
+now we have the data and we can see our table.
+
+27
+00:01:31,650 --> 00:01:35,670
+So with that, you can work on your first assignment.
+
+28
+00:01:35,670 --> 00:01:39,390
+Inside there, I want you to push product to the database
+
+29
+00:01:39,390 --> 00:01:42,960
+and when you create the product stable, along with that,
+
+30
+00:01:42,960 --> 00:01:46,740
+all the six records will also be created
+
+31
+00:01:46,740 --> 00:01:49,803
+because we added inside the has data.
+
+32
+00:01:51,090 --> 00:01:54,090
+Once you create the product stable, then you have
+
+33
+00:01:54,090 --> 00:01:58,980
+to implement the product repository for data access.
+
+34
+00:01:58,980 --> 00:02:02,220
+You will create the product repository interface
+
+35
+00:02:02,220 --> 00:02:04,230
+and implement that.
+
+36
+00:02:04,230 --> 00:02:07,893
+And after that, you will also add that to UnitOfWork.
+
+37
+00:02:09,330 --> 00:02:12,480
+That is the basic configuration that you have to do
+
+38
+00:02:12,480 --> 00:02:15,000
+for your first assignment.
+
+39
+00:02:15,000 --> 00:02:16,440
+So, good luck with that.
+
+40
+00:02:16,440 --> 00:02:18,360
+And we have already done that
+
+41
+00:02:18,360 --> 00:02:23,010
+with the category repository and the category table.
+
+42
+00:02:23,010 --> 00:02:25,290
+All the steps are exactly the same.
+
+43
+00:02:25,290 --> 00:02:27,390
+So, I hope you have good practice
+
+44
+00:02:27,390 --> 00:02:30,603
+before we move forward in the next video.
+

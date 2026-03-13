@@ -1,0 +1,296 @@
+1
+00:00:01,710 --> 00:00:04,800
+Instructor: In data table, we want buttons to edit
+
+2
+00:00:04,800 --> 00:00:06,783
+or delete any of the product.
+
+3
+00:00:07,620 --> 00:00:09,840
+If I go back to the code here,
+
+4
+00:00:09,840 --> 00:00:11,970
+we have basic columns,
+
+5
+00:00:11,970 --> 00:00:13,920
+but with that basic column,
+
+6
+00:00:13,920 --> 00:00:16,875
+we can make things super fancy.
+
+7
+00:00:16,875 --> 00:00:19,020
+Let me show you how to do that.
+
+8
+00:00:19,020 --> 00:00:22,350
+We will copy that, paste it one more time.
+
+9
+00:00:22,350 --> 00:00:23,520
+The next column,
+
+10
+00:00:23,520 --> 00:00:25,800
+whenever we are editing or deleting
+
+11
+00:00:25,800 --> 00:00:29,610
+any of the product, we need the product id.
+
+12
+00:00:29,610 --> 00:00:33,180
+So for data, we basically need the id here.
+
+13
+00:00:33,180 --> 00:00:35,520
+If I save this and go back,
+
+14
+00:00:35,520 --> 00:00:37,470
+it will display the id.
+
+15
+00:00:37,470 --> 00:00:40,680
+I do not want that to display the id.
+
+16
+00:00:40,680 --> 00:00:41,670
+Rather than that,
+
+17
+00:00:41,670 --> 00:00:44,613
+I want to display some buttons right here.
+
+18
+00:00:45,480 --> 00:00:46,950
+So for that what I can do
+
+19
+00:00:46,950 --> 00:00:49,860
+is there is something called as render.
+
+20
+00:00:49,860 --> 00:00:52,920
+And there we can define a custom render function
+
+21
+00:00:52,920 --> 00:00:53,823
+that we want.
+
+22
+00:00:54,720 --> 00:00:56,580
+So here, we will say function,
+
+23
+00:00:56,580 --> 00:00:59,370
+and the parameter we will take data,
+
+24
+00:00:59,370 --> 00:01:01,263
+which is basically the id.
+
+25
+00:01:02,190 --> 00:01:03,738
+Now here, inside the string,
+
+26
+00:01:03,738 --> 00:01:08,520
+we will have to write the HDML that we want to render.
+
+27
+00:01:08,520 --> 00:01:12,870
+Like if I add a div here with a closing div,
+
+28
+00:01:12,870 --> 00:01:14,820
+and if I said, "Hello,"
+
+29
+00:01:14,820 --> 00:01:17,070
+if I save that and go back,
+
+30
+00:01:17,070 --> 00:01:19,833
+you can see it displays "Hello" right there.
+
+31
+00:01:20,760 --> 00:01:21,989
+But rather than that,
+
+32
+00:01:21,989 --> 00:01:24,780
+in the div let me add a bootstrap class
+
+33
+00:01:24,780 --> 00:01:26,490
+of btn group,
+
+34
+00:01:26,490 --> 00:01:28,593
+give that a role of group.
+
+35
+00:01:29,490 --> 00:01:32,880
+Now, right now I have to write everything in single line,
+
+36
+00:01:32,880 --> 00:01:34,860
+but if we want multi-line,
+
+37
+00:01:34,860 --> 00:01:36,041
+we can use the symbol
+
+38
+00:01:36,041 --> 00:01:39,000
+which is on top of the ash track
+
+39
+00:01:39,000 --> 00:01:42,390
+where we can write multi-line HDML.
+
+40
+00:01:42,390 --> 00:01:44,220
+So you can see we can break it out
+
+41
+00:01:44,220 --> 00:01:45,720
+in different line,
+
+42
+00:01:45,720 --> 00:01:48,333
+and it still treats that as a string.
+
+43
+00:01:49,830 --> 00:01:51,870
+First, I will add an anchor tag here
+
+44
+00:01:51,870 --> 00:01:54,450
+with href that is empty right now.
+
+45
+00:01:54,450 --> 00:01:56,534
+We will add some bootstrap classes,
+
+46
+00:01:56,534 --> 00:02:00,033
+and I'm adding a pencil bootstrap icon.
+
+47
+00:02:01,320 --> 00:02:04,140
+If I save that here, go back,
+
+48
+00:02:04,140 --> 00:02:07,020
+perfect, We have the added button.
+
+49
+00:02:07,020 --> 00:02:09,120
+Similar, to add it here,
+
+50
+00:02:09,120 --> 00:02:10,860
+let me make some space
+
+51
+00:02:10,860 --> 00:02:12,870
+and add a delete button
+
+52
+00:02:12,870 --> 00:02:15,303
+with an icon for trash fill.
+
+53
+00:02:16,230 --> 00:02:19,440
+And great, that looks much better.
+
+54
+00:02:19,440 --> 00:02:21,780
+I can reduce the width here to make sure
+
+55
+00:02:21,780 --> 00:02:23,820
+that we have enough space.
+
+56
+00:02:23,820 --> 00:02:25,440
+So let me do that.
+
+57
+00:02:25,440 --> 00:02:30,240
+We will make this 10%, author can be 15,
+
+58
+00:02:30,240 --> 00:02:33,720
+and we can change this to be 25%.
+
+59
+00:02:33,720 --> 00:02:36,000
+Perfect. Looks good.
+
+60
+00:02:36,000 --> 00:02:38,130
+Now when a user clicks edit,
+
+61
+00:02:38,130 --> 00:02:40,230
+we need to write the href here.
+
+62
+00:02:40,230 --> 00:02:43,470
+So we have to redirect to admin area,
+
+63
+00:02:43,470 --> 00:02:46,920
+product controller, upsert action,
+
+64
+00:02:46,920 --> 00:02:49,173
+and there we have to pass the id.
+
+65
+00:02:50,070 --> 00:02:53,190
+So id, we have that in the data here,
+
+66
+00:02:53,190 --> 00:02:55,170
+so we can use the dollar sign
+
+67
+00:02:55,170 --> 00:02:57,175
+and use data because we are saying
+
+68
+00:02:57,175 --> 00:02:59,793
+data is basically the id.
+
+69
+00:03:00,750 --> 00:03:02,670
+With that, if I go back,
+
+70
+00:03:02,670 --> 00:03:05,160
+you can see edit it is functional
+
+71
+00:03:05,160 --> 00:03:08,520
+and that link is working as expected.
+
+72
+00:03:08,520 --> 00:03:09,900
+In the next video,
+
+73
+00:03:09,900 --> 00:03:12,660
+let me add an a EPA endpoint for delete
+
+74
+00:03:12,660 --> 00:03:14,073
+and then invoke that.
+

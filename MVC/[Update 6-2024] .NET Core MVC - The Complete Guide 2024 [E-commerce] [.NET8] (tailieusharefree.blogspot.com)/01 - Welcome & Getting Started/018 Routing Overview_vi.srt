@@ -1,0 +1,228 @@
+1
+00:00:03,170 --> 00:00:07,820
+Bây giờ chúng ta muốn hiểu định tuyến trong ứng dụng MVC.
+
+2
+00:00:08,240 --> 00:00:15,080
+Về cơ bản, định tuyến xác định điều đó trong URL khi bạn nhập nội dung nào đó mà nó sẽ gửi yêu cầu đó
+
+3
+00:00:15,080 --> 00:00:15,450
+đến.
+
+4
+00:00:16,129 --> 00:00:23,000
+Chúng tôi đã định cấu hình một tuyến mặc định ở đây, nhưng khi nói đến một ứng dụng MVC, chúng tôi có một mẫu nhất
+
+5
+00:00:23,000 --> 00:00:23,720
+định.
+
+6
+00:00:24,260 --> 00:00:30,590
+Và trước khi tôi cho bạn thấy điều đó trong ứng dụng, hãy để tôi hướng dẫn bạn qua phần trình bày ở đây để cung cấp
+
+7
+00:00:30,590 --> 00:00:32,030
+cho bạn một ý tưởng sơ bộ.
+
+8
+00:00:32,930 --> 00:00:40,580
+Bạn có thể thấy mẫu URL để định tuyến được xem xét sau tên miền localhost và số cổng
+
+9
+00:00:40,580 --> 00:00:42,020
+là tên miền.
+
+10
+00:00:43,090 --> 00:00:49,300
+Máy chủ cục bộ này có thể là google. com, có thể là . thuần thục. com hoặc bất cứ thứ gì bạn muốn.
+
+11
+00:00:49,570 --> 00:00:57,040
+Khi chúng tôi phải xem xét định tuyến, chúng tôi sẽ xóa phần đó và bất kỳ phần nào sau đó được coi là mẫu định
+
+12
+00:00:57,040 --> 00:00:57,820
+tuyến.
+
+13
+00:00:58,530 --> 00:01:00,450
+Trong một ứng dụng MVC.
+
+14
+00:01:00,450 --> 00:01:04,890
+Lộ trình điển hình mà chúng tôi có là một bộ điều khiển và sau đó là hành động.
+
+15
+00:01:05,640 --> 00:01:11,100
+Đó là hai từ mà bạn nên luôn luôn ghi nhớ và ghi nhớ.
+
+16
+00:01:11,370 --> 00:01:16,260
+Có một bộ điều khiển và bên trong bộ điều khiển có các phương thức hành động.
+
+17
+00:01:17,020 --> 00:01:19,540
+Hãy để tôi chỉ cho bạn điều đó với một ví dụ ở đây.
+
+18
+00:01:19,660 --> 00:01:26,290
+Trong URL đầu tiên này, bạn thấy chúng tôi có tên miền, là localhost, và sau đó chúng tôi có một
+
+19
+00:01:26,290 --> 00:01:32,230
+thứ gọi là danh mục dấu gạch chéo lên, chỉ mục dấu gạch chéo lên, và sau đó là số ba.
+
+20
+00:01:33,080 --> 00:01:40,010
+Vì vậy, điều đầu tiên bạn nhìn thấy sau tên miền là tên bộ điều khiển và điều tiếp theo với dấu gạch chéo
+
+21
+00:01:40,010 --> 00:01:42,710
+lên phía trước sẽ là tên hành động.
+
+22
+00:01:43,560 --> 00:01:47,520
+Sau đó, nếu có bất cứ thứ gì sẽ có ID.
+
+23
+00:01:48,540 --> 00:01:53,360
+ID là trường tùy chọn mà chúng ta đã thấy ở đây.
+
+24
+00:01:53,370 --> 00:01:55,710
+Bạn có thể thấy đó là dấu chấm hỏi.
+
+25
+00:01:56,510 --> 00:02:00,770
+Vì vậy, nếu chúng ta quay trở lại, điều đầu tiên sau tên miền là gì?
+
+26
+00:02:00,770 --> 00:02:02,490
+Đó là thể loại.
+
+27
+00:02:02,510 --> 00:02:04,460
+Sau đó, chúng ta có index.
+
+28
+00:02:04,460 --> 00:02:11,930
+Và sau đó, nếu có bất kỳ thứ gì hiện có sẽ được điền vào ID, thì đó là mẫu mặc định đã được xác định
+
+29
+00:02:11,930 --> 00:02:14,630
+trong tệp . dự án mạng.
+
+30
+00:02:15,020 --> 00:02:20,510
+Bây giờ, tất nhiên, chúng ta có thể sửa đổi một số thứ ở đây và chúng ta sẽ làm điều đó trong các video sau.
+
+31
+00:02:20,510 --> 00:02:22,910
+Nhưng đây là mẫu mặc định.
+
+32
+00:02:23,150 --> 00:02:28,340
+Chúng tôi có bộ điều khiển và bên trong đó chúng tôi có hành động dựa trên đó.
+
+33
+00:02:28,340 --> 00:02:35,180
+Tôi có một ví dụ ở đây và tôi muốn bạn tìm hiểu rằng dựa trên URL, danh mục sẽ là
+
+34
+00:02:35,180 --> 00:02:39,650
+gì và hành động sẽ là gì và liệu có ID hay không.
+
+35
+00:02:41,420 --> 00:02:46,860
+Ví dụ đầu tiên ở đây danh mục là bộ điều khiển và chỉ mục là hành động.
+
+36
+00:02:46,880 --> 00:02:50,600
+Chúng tôi không có bất kỳ ID nào, vì vậy ID sẽ không có giá trị.
+
+37
+00:02:51,710 --> 00:02:55,190
+Sau đó, chúng tôi chỉ có một cái gì đó gọi là danh mục.
+
+38
+00:02:55,730 --> 00:03:01,670
+Nếu không có hành động nào được xác định, thì theo mặc định, hành động đó sẽ là hành động lập chỉ mục.
+
+39
+00:03:02,060 --> 00:03:05,560
+Chúng tôi không có bất kỳ hành động nào được xác định trong ví dụ thứ hai.
+
+40
+00:03:05,570 --> 00:03:08,310
+Vì vậy, bộ điều khiển sẽ là danh mục.
+
+41
+00:03:08,330 --> 00:03:11,960
+Hành động sẽ được lập chỉ mục và ID sẽ là null.
+
+42
+00:03:13,150 --> 00:03:20,800
+Trong ví dụ thứ ba ở đây, chúng tôi có tên bộ điều khiển làm tên hành động danh mục là chỉnh sửa và sau
+
+43
+00:03:20,800 --> 00:03:23,950
+đó chúng tôi có một số ID có giá trị là ba.
+
+44
+00:03:24,990 --> 00:03:29,790
+Và ví dụ cuối cùng ở đây chúng ta có một bộ điều khiển với tên của sản phẩm.
+
+45
+00:03:29,820 --> 00:03:35,520
+Chúng tôi có một hành động với tên của chi tiết và ID có giá trị là ba.
+
+46
+00:03:36,000 --> 00:03:40,260
+Bây giờ bạn có thể tự hỏi tầm quan trọng của nhiệm vụ này là gì?
+
+47
+00:03:40,470 --> 00:03:44,620
+Chà, nó thực sự quan trọng từ bây giờ trở đi.
+
+48
+00:03:44,640 --> 00:03:52,170
+Nếu bạn nhìn vào một URL đang sử dụng kiến trúc MVC, bạn có thể biết tên bộ điều khiển và tên hành
+
+49
+00:03:52,170 --> 00:03:53,430
+động là gì.
+
+50
+00:03:53,880 --> 00:04:00,450
+Bây giờ, nếu tôi quay lại đây, chúng ta đang nói rằng bộ điều khiển mặc định là nhà và hành động là chỉ mục.
+
+51
+00:04:00,570 --> 00:04:07,170
+Về cơ bản, điều đó có nghĩa là nếu không có gì được xác định sau tên miền, nó sẽ thông báo cho ứng dụng rằng bạn
+
+52
+00:04:07,170 --> 00:04:11,760
+nên chuyển đến bộ điều khiển chính và phương thức hành động lập chỉ mục.
+
+53
+00:04:12,490 --> 00:04:18,310
+Đó là tuyến đường mặc định mà . net đã cấu hình trong Program. cs.
+
+54
+00:04:18,670 --> 00:04:25,030
+Nếu muốn, bạn có thể thay đổi tuyến mặc định đó, nhưng đó là tuyến mặc định và bạn biết
+
+55
+00:04:25,030 --> 00:04:28,810
+cách nó sẽ được chuyển thành URL nếu bạn muốn.
+
+56
+00:04:28,960 --> 00:04:30,670
+Bây giờ đủ nói chuyện.
+
+57
+00:04:30,700 --> 00:04:35,140
+Hãy để tôi chỉ cho bạn cách định tuyến trong hành động trong video tiếp theo.
+

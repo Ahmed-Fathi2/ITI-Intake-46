@@ -1,0 +1,296 @@
+1
+00:00:01,800 --> 00:00:03,540
+Narrator: We have added company
+
+2
+00:00:03,540 --> 00:00:07,050
+and we are able to perform the current operation,
+
+3
+00:00:07,050 --> 00:00:09,540
+but when a user is registered,
+
+4
+00:00:09,540 --> 00:00:12,300
+we have to assign that user that hey,
+
+5
+00:00:12,300 --> 00:00:14,733
+this user belongs to a company.
+
+6
+00:00:15,969 --> 00:00:19,680
+For that, we need to add a foreign key relation on our user.
+
+7
+00:00:20,910 --> 00:00:23,190
+We will go to data access.
+
+8
+00:00:23,190 --> 00:00:26,190
+Well, we first have to go to model here
+
+9
+00:00:26,190 --> 00:00:28,500
+where we have application user
+
+10
+00:00:28,500 --> 00:00:31,530
+and we have to add that foreign key relation
+
+11
+00:00:31,530 --> 00:00:33,153
+to the company table.
+
+12
+00:00:34,890 --> 00:00:39,810
+So first, we will add an integer and this will be nullable
+
+13
+00:00:39,810 --> 00:00:43,770
+because it is possible that the user is a customer user
+
+14
+00:00:43,770 --> 00:00:47,970
+and if it is customer, then they will not have a company.
+
+15
+00:00:47,970 --> 00:00:50,280
+But if it is a company user,
+
+16
+00:00:50,280 --> 00:00:53,340
+only then, they will have a company ID assigned
+
+17
+00:00:53,340 --> 00:00:54,663
+to their profile.
+
+18
+00:00:56,160 --> 00:00:58,290
+So for a fact, that looks good.
+
+19
+00:00:58,290 --> 00:01:01,470
+Next, we need the navigation property.
+
+20
+00:01:01,470 --> 00:01:03,900
+We will have to add the foreign key.
+
+21
+00:01:03,900 --> 00:01:06,390
+And there, we have to say that CompanyId
+
+22
+00:01:06,390 --> 00:01:10,290
+is the navigation property for this company that we have.
+
+23
+00:01:10,290 --> 00:01:13,440
+And we do not want to validate this company
+
+24
+00:01:13,440 --> 00:01:16,020
+because that will not be populated
+
+25
+00:01:16,020 --> 00:01:19,563
+when we are creating a user or anything else.
+
+26
+00:01:20,670 --> 00:01:24,150
+So that way, we have added the foreign key relation
+
+27
+00:01:24,150 --> 00:01:26,370
+on our user.
+
+28
+00:01:26,370 --> 00:01:29,430
+Change that we have made is in our core model.
+
+29
+00:01:29,430 --> 00:01:32,073
+So we will have to add a new migration.
+
+30
+00:01:34,500 --> 00:01:36,200
+I will call that addCompanyToUser.
+
+31
+00:01:38,130 --> 00:01:41,913
+And once that is done, we will have to update the database.
+
+32
+00:01:42,870 --> 00:01:44,970
+Perfect, you can see AddColumn.
+
+33
+00:01:44,970 --> 00:01:46,473
+Nullable is true.
+
+34
+00:01:47,640 --> 00:01:49,290
+That looks good.
+
+35
+00:01:49,290 --> 00:01:52,143
+Perfect, migration has been applied.
+
+36
+00:01:53,460 --> 00:01:57,603
+With that configured, let me run the application once again.
+
+37
+00:01:59,880 --> 00:02:02,490
+Now, if we go to register here,
+
+38
+00:02:02,490 --> 00:02:05,100
+if we select the role of company,
+
+39
+00:02:05,100 --> 00:02:08,370
+then right here, I want to show another dropdown
+
+40
+00:02:08,370 --> 00:02:11,913
+where I will display list of all the companies.
+
+41
+00:02:12,960 --> 00:02:16,500
+So let me modify that in the register.
+
+42
+00:02:16,500 --> 00:02:18,273
+I can search for that.
+
+43
+00:02:20,130 --> 00:02:24,360
+We want both the page model as well as the page.
+
+44
+00:02:24,360 --> 00:02:27,960
+First, we have to populate that registered dropdown
+
+45
+00:02:27,960 --> 00:02:30,573
+and pass that on to the Razor Page.
+
+46
+00:02:31,560 --> 00:02:35,310
+In order to access that, we will need unit of work
+
+47
+00:02:35,310 --> 00:02:39,213
+using dependency injection, so let me add that.
+
+48
+00:02:45,420 --> 00:02:50,310
+And then, we have to add CompanyId inside the input model.
+
+49
+00:02:50,310 --> 00:02:52,710
+Let me do that right here.
+
+50
+00:02:52,710 --> 00:02:54,870
+And we need a dropdown.
+
+51
+00:02:54,870 --> 00:02:57,130
+So copy the role list here
+
+52
+00:02:58,080 --> 00:03:00,903
+and modify that to be company list.
+
+53
+00:03:02,220 --> 00:03:06,480
+We have to populate the company list on the OnGet here.
+
+54
+00:03:06,480 --> 00:03:08,790
+So where we have the role list,
+
+55
+00:03:08,790 --> 00:03:12,603
+copy that, paste it for the company list.
+
+56
+00:03:13,770 --> 00:03:18,520
+For that, we will go to underscore unitOfWork.Company
+
+57
+00:03:19,800 --> 00:03:21,663
+and on there, we have GetAll.
+
+58
+00:03:22,740 --> 00:03:25,530
+Then, we will have the select statement
+
+59
+00:03:25,530 --> 00:03:29,940
+where we will transform that to a select list item.
+
+60
+00:03:29,940 --> 00:03:34,940
+Text will be i.Name and value will be i.Id.ToString.
+
+61
+00:03:39,780 --> 00:03:41,790
+Perfect, that looks good.
+
+62
+00:03:41,790 --> 00:03:44,220
+And we have the input.
+
+63
+00:03:44,220 --> 00:03:46,650
+We can go to our page here
+
+64
+00:03:46,650 --> 00:03:51,000
+and where we have the role here, let me copy this,
+
+65
+00:03:51,000 --> 00:03:55,470
+paste it one more time, and this will be company list,
+
+66
+00:03:55,470 --> 00:03:58,857
+and asp-for will be CompanyId.
+
+67
+00:04:00,960 --> 00:04:04,260
+We will display select company here.
+
+68
+00:04:04,260 --> 00:04:05,883
+And that looks good.
+
+69
+00:04:06,780 --> 00:04:10,230
+With that configured, let me switch back here
+
+70
+00:04:10,230 --> 00:04:13,110
+and we will have to restart the project.
+
+71
+00:04:13,110 --> 00:04:14,133
+Let me do that.
+
+72
+00:04:17,490 --> 00:04:21,750
+We go to register here, and great.
+
+73
+00:04:21,750 --> 00:04:25,020
+We have the dropdown to select a company.
+
+74
+00:04:25,020 --> 00:04:29,133
+With that configured, let me continue from the next video.
+

@@ -1,0 +1,212 @@
+1
+00:00:01,480 --> 00:00:05,800
+Chúng tôi muốn xóa URL hình ảnh khỏi mẫu sản phẩm của mình.
+
+2
+00:00:06,370 --> 00:00:10,210
+Vì vậy, hãy để tôi quay lại đây và đóng tất cả các tab.
+
+3
+00:00:10,300 --> 00:00:12,470
+Tôi sẽ mở mẫu sản phẩm.
+
+4
+00:00:12,490 --> 00:00:15,070
+Tôi xin dừng giải pháp tại đây.
+
+5
+00:00:16,020 --> 00:00:18,750
+Và chúng tôi muốn xóa URL hình ảnh.
+
+6
+00:00:18,750 --> 00:00:22,740
+Và tôi cũng đã thêm thuộc tính giả cho thuộc tính thử nghiệm.
+
+7
+00:00:22,770 --> 00:00:24,600
+Hãy để tôi loại bỏ điều đó là tốt.
+
+8
+00:00:25,200 --> 00:00:31,020
+Nhưng khi chúng tôi xóa URL hình ảnh, nếu chúng tôi xây dựng giải pháp, nó sẽ không hoạt động.
+
+9
+00:00:31,050 --> 00:00:35,160
+Chúng tôi sẽ phải xóa tham chiếu đó khỏi tất cả các địa điểm.
+
+10
+00:00:35,910 --> 00:00:39,990
+Vì vậy, hãy để tôi ghim cái này ở đây và bắt đầu từ cái đó.
+
+11
+00:00:41,050 --> 00:00:44,200
+Điều đầu tiên ở đây là trong trình khởi tạo DB.
+
+12
+00:00:44,200 --> 00:00:49,660
+Chúng tôi đang điền vào sản phẩm ban đầu mà chúng tôi có một URL hình ảnh trống.
+
+13
+00:00:49,870 --> 00:00:56,350
+Chúng tôi không có thuộc tính đó, vì vậy chúng tôi sẽ phải xóa dòng cụ thể này tại đây.
+
+14
+00:00:58,270 --> 00:00:59,130
+Hoàn hảo.
+
+15
+00:00:59,140 --> 00:01:00,820
+Hãy để tôi quay trở lại đây.
+
+16
+00:01:00,850 --> 00:01:01,660
+Rất tiếc.
+
+17
+00:01:01,840 --> 00:01:03,910
+Danh sách lỗi ở đây ở đâu?
+
+18
+00:01:04,030 --> 00:01:05,260
+Mã PIN đó.
+
+19
+00:01:05,770 --> 00:01:10,130
+Cái tiếp theo là khi chúng tôi đang cập nhật trong kho lưu trữ.
+
+20
+00:01:10,150 --> 00:01:11,980
+Chúng tôi không muốn điều này.
+
+21
+00:01:12,010 --> 00:01:13,600
+Hãy để tôi loại bỏ điều đó.
+
+22
+00:01:14,710 --> 00:01:18,970
+Sau đó, nơi chúng tôi đang hiển thị hình ảnh trong chế độ xem.
+
+23
+00:01:19,090 --> 00:01:21,850
+Tôi sẽ nhận xét tất cả chúng cho bây giờ.
+
+24
+00:01:26,700 --> 00:01:32,070
+Chúng tôi sẽ giữ chúng được chỉ huy và chúng tôi sẽ quay lại với chúng sau.
+
+25
+00:01:32,430 --> 00:01:36,360
+Trong bộ điều khiển sản phẩm, chúng tôi có phương pháp hành động UPSERT.
+
+26
+00:01:36,360 --> 00:01:42,810
+Vì vậy, khi chúng tôi đang tạo hoặc cập nhật, chúng tôi có logic để xử lý URL hình ảnh.
+
+27
+00:01:43,290 --> 00:01:45,930
+Tôi sẽ bình luận tất cả chúng ở đây.
+
+28
+00:01:47,640 --> 00:01:48,450
+Hoàn hảo.
+
+29
+00:01:48,450 --> 00:01:49,770
+Trông tôt đây.
+
+30
+00:01:51,890 --> 00:01:54,390
+Chúng tôi có một tài sản ẩn ở đâu đó.
+
+31
+00:01:54,410 --> 00:01:56,780
+Chúng tôi cũng sẽ nhận xét điều đó.
+
+32
+00:01:57,140 --> 00:02:04,310
+Và chúng tôi có một URL hình ảnh ASP để xóa nó trong phần xóa.
+
+33
+00:02:04,310 --> 00:02:08,810
+Khi chúng tôi xóa sản phẩm, chúng tôi có logic để xóa hình ảnh cũ.
+
+34
+00:02:09,199 --> 00:02:11,420
+Tôi cũng sẽ nhận xét như vậy.
+
+35
+00:02:11,900 --> 00:02:15,290
+Sau đó, hãy để tôi xem những gì đang chờ xử lý ở đây.
+
+36
+00:02:16,080 --> 00:02:21,840
+Thêm một lượt xem nữa và để tôi xem còn thiếu gì nữa không.
+
+37
+00:02:22,590 --> 00:02:23,280
+Không.
+
+38
+00:02:23,280 --> 00:02:25,720
+Tôi nghĩ rằng có vẻ tốt.
+
+39
+00:02:25,740 --> 00:02:26,520
+Chuẩn rồi.
+
+40
+00:02:26,850 --> 00:02:29,190
+Hãy để tôi xây dựng nó một lần nữa.
+
+41
+00:02:31,700 --> 00:02:32,290
+Hoàn hảo.
+
+42
+00:02:32,300 --> 00:02:33,530
+Nó đã thành công.
+
+43
+00:02:34,040 --> 00:02:39,590
+Vì vậy, khi chúng tôi xóa URL hình ảnh ở đây, chúng tôi phải thêm một lần di chuyển mới.
+
+44
+00:02:40,130 --> 00:02:43,610
+Vì vậy, trình quản lý gói, hãy để tôi cuộn xuống đây.
+
+45
+00:02:43,970 --> 00:02:45,980
+Thêm di chuyển.
+
+46
+00:02:47,210 --> 00:02:50,090
+Tôi sẽ gọi URL xóa hình ảnh đó.
+
+47
+00:02:52,850 --> 00:02:53,450
+Hoàn hảo.
+
+48
+00:02:53,450 --> 00:02:56,440
+Nó đang thả cột và điều đó có vẻ tốt.
+
+49
+00:02:56,450 --> 00:02:58,610
+Hãy để tôi cập nhật cơ sở dữ liệu.
+
+50
+00:03:01,480 --> 00:03:09,760
+Và tuyệt vời Với điều đó, chúng tôi đã xóa URL hình ảnh khỏi các sản phẩm và nếu tôi chạy ứng dụng thì lần này nó sẽ hoạt
+
+51
+00:03:09,760 --> 00:03:10,360
+động.
+
+52
+00:03:10,360 --> 00:03:13,150
+Nhưng chúng tôi không có hình ảnh với sản phẩm của chúng tôi.
+
+53
+00:03:13,720 --> 00:03:19,630
+Nhiệm vụ tiếp theo mà chúng tôi có là thêm URL hình ảnh vào một bảng riêng biệt.
+

@@ -1,0 +1,452 @@
+1
+00:00:01,650 --> 00:00:09,060
+Bây giờ chúng tôi có vai trò trong cơ sở dữ liệu của mình, khi chúng tôi đăng ký người dùng, tôi có thể thêm danh sách thả xuống ở đây nơi người
+
+2
+00:00:09,060 --> 00:00:11,460
+dùng có thể chọn bất kỳ vai trò hiện có nào.
+
+3
+00:00:11,970 --> 00:00:18,210
+Bây giờ, bạn có thể nói rằng, này, bạn đang trao cho ai đó quyền đăng ký người dùng quản trị
+
+4
+00:00:18,210 --> 00:00:19,650
+từ trang đăng ký.
+
+5
+00:00:19,680 --> 00:00:21,120
+Đó có phải là một cách tiếp cận tốt?
+
+6
+00:00:21,150 --> 00:00:22,470
+Tất nhiên là không.
+
+7
+00:00:22,680 --> 00:00:27,330
+Nhưng ngay bây giờ chúng tôi đang học hỏi nhiều điều và đó là lý do tại sao chúng tôi sẽ giữ nó ở đây.
+
+8
+00:00:27,330 --> 00:00:34,500
+Nhưng sau này trong các phần nâng cao, rõ ràng tôi sẽ xóa phần đó trước khi mã được triển khai.
+
+9
+00:00:35,280 --> 00:00:42,300
+Vì vậy, ngay bây giờ chúng tôi đang học mọi thứ và hoàn toàn ổn khi bạn đang học, nhưng khi bạn triển khai, hãy
+
+10
+00:00:42,330 --> 00:00:45,270
+đảm bảo rằng điều đó không đi vào sản xuất.
+
+11
+00:00:45,780 --> 00:00:47,970
+Vì vậy, chúng ta cần thêm một danh sách thả xuống.
+
+12
+00:00:48,270 --> 00:00:53,880
+Khi chúng tôi thêm danh sách thả xuống trên giao diện người dùng, chúng tôi cần chuyển một số thứ từ mô hình trang.
+
+13
+00:00:53,880 --> 00:00:59,370
+Bằng cách đó, nó sẽ có thể truy cập được trên trang và chúng tôi có thể hiển thị nó trong danh sách thả xuống.
+
+14
+00:00:59,970 --> 00:01:08,320
+Vì vậy, chúng tôi có mô hình trang ở đây và chúng tôi có mô hình đầu vào nơi chúng tôi có thuộc tính liên kết trong trang dao cạo.
+
+15
+00:01:08,890 --> 00:01:13,630
+Bên trong mô hình đầu vào đó, tôi sẽ thêm nhiều thuộc tính hơn.
+
+16
+00:01:14,350 --> 00:01:21,550
+Vì vậy, những gì chúng tôi sẽ làm là sau khi xác nhận mật khẩu, hãy để tôi tạo một thuộc tính sẽ là chuỗi hàng và sau đó
+
+17
+00:01:22,150 --> 00:01:25,660
+chúng tôi thực sự cần một danh sách thả xuống vai trò.
+
+18
+00:01:25,690 --> 00:01:30,490
+Để làm được điều đó, chúng ta cần có vô số mục trong danh sách được chọn.
+
+19
+00:01:31,540 --> 00:01:37,720
+Vì vậy, hãy để tôi kết thúc phần này ở đây và tôi sẽ thêm vào một số mục trong danh sách được chọn.
+
+20
+00:01:37,720 --> 00:01:43,480
+Gọi danh sách vai trò đó và để xác thực, tôi sẽ nói không bao giờ xác thực.
+
+21
+00:01:44,500 --> 00:01:51,520
+Khi chúng tôi có tôi có thể đếm được, chúng tôi cần điền vào bên trong khi bắt đầu ngay tại đây.
+
+22
+00:01:52,240 --> 00:01:57,340
+Vì vậy, chúng ta cần điền đầu vào bằng với mô hình đầu vào mới.
+
+23
+00:01:57,370 --> 00:01:59,720
+Chúng ta có thể sử dụng cú pháp mới ở đây.
+
+24
+00:01:59,740 --> 00:02:07,930
+Ở đó, chúng tôi muốn điền vào danh sách hàng và để truy cập tất cả các vai trò, thông thường chúng tôi sử dụng đơn vị công việc, nhưng
+
+25
+00:02:07,930 --> 00:02:15,400
+khi chúng tôi đang làm việc với danh tính, chúng tôi có trình quản lý vai trò bên trong đó, chúng tôi có các vai trò và sẽ
+
+26
+00:02:15,400 --> 00:02:17,950
+có danh sách tất cả các các vai diễn.
+
+27
+00:02:18,250 --> 00:02:20,260
+Bây giờ chúng tôi không muốn tất cả các vai trò.
+
+28
+00:02:20,260 --> 00:02:24,370
+Chúng tôi sẽ phải dự đoán đó là một mục danh sách được chọn.
+
+29
+00:02:24,370 --> 00:02:31,060
+Vì vậy, đối với phép chiếu, chúng ta sẽ sử dụng select và có thể nói X đi đến x. tên.
+
+30
+00:02:31,060 --> 00:02:38,410
+Chúng tôi chỉ quan tâm đến tên, chúng tôi chọn tên đó và một khi chúng tôi chọn tên đó, chúng tôi sẽ chiếu tên
+
+31
+00:02:38,410 --> 00:02:40,690
+đó vào mục danh sách đã chọn.
+
+32
+00:02:40,690 --> 00:02:45,190
+Vì vậy, tôi chuyển sang mục danh sách chọn mới.
+
+33
+00:02:46,160 --> 00:02:53,210
+Và chúng tôi muốn điền văn bản bằng I và giá trị cũng bằng I.
+
+34
+00:02:53,810 --> 00:03:00,680
+Những gì chúng tôi đang làm là từ các vai trò, chúng tôi chỉ chọn tên và bất kỳ thứ gì chúng tôi đang chọn ở đây,
+
+35
+00:03:00,680 --> 00:03:07,850
+chúng tôi sẽ thêm tên đó vào một mục danh sách đã chọn và chúng tôi sẽ thêm trường đó vào cả văn bản và giá trị.
+
+36
+00:03:08,540 --> 00:03:15,880
+Bạn có thể thấy các phép chiếu có thể trở nên siêu lạ mắt như thế nào và cách chúng đơn giản hóa nhiều dòng mã chỉ
+
+37
+00:03:15,890 --> 00:03:17,300
+trong vài dòng mã.
+
+38
+00:03:17,870 --> 00:03:24,310
+Bây giờ điều cuối cùng là hiển thị danh sách hàng cụ thể này bên trong thanh ghi của chúng ta.
+
+39
+00:03:24,320 --> 00:03:32,960
+Vì vậy, các khu vực chúng tôi có đăng ký ở đây và để tôi sao chép div này dán nó một lần nữa.
+
+40
+00:03:33,380 --> 00:03:37,480
+Chúng tôi không muốn bất kỳ xác nhận nào ở đây hoặc nhãn hiệu.
+
+41
+00:03:37,490 --> 00:03:39,860
+Tất cả những gì chúng ta cần là một trường chọn.
+
+42
+00:03:40,040 --> 00:03:51,110
+Vì vậy, bạn có thể sử dụng đầu vào hoặc bạn có thể sử dụng một lựa chọn ở đây trong đó ASP cho đó là đầu vào, hàng dấu chấm và các
+
+43
+00:03:51,140 --> 00:03:56,600
+mục ASP bằng với danh sách hàng dấu chấm đầu vào mô hình.
+
+44
+00:03:56,900 --> 00:04:00,290
+Đặt cho nó một tên lớp của biểu mẫu chọn.
+
+45
+00:04:01,750 --> 00:04:02,530
+Hoàn hảo.
+
+46
+00:04:02,770 --> 00:04:08,140
+Bây giờ, một lần nữa, khi bạn đang sử dụng ASP, nó sẽ tự động kiểm tra mô hình.
+
+47
+00:04:08,170 --> 00:04:14,200
+Nhưng nếu bạn đang sử dụng bất kỳ trình trợ giúp thẻ nào khác, bạn phải sử dụng mô hình THÊM trước đó.
+
+48
+00:04:15,390 --> 00:04:19,740
+Với cấu hình đó, hãy để tôi lưu và khởi động lại ứng dụng.
+
+49
+00:04:20,519 --> 00:04:26,550
+Tôi nghĩ rằng tôi phải khởi động lại vì tải lại nóng có thể không khởi động được, nhưng hãy xem.
+
+50
+00:04:27,780 --> 00:04:28,380
+Hoàn hảo.
+
+51
+00:04:28,410 --> 00:04:32,130
+Chúng tôi có quản trị viên, khách hàng, nhân viên và công ty.
+
+52
+00:04:33,320 --> 00:04:40,970
+Ngoài ra, tôi cũng có thể quay lại và trong phần chọn, tôi có thể thêm một tùy chọn bị tắt để chọn vai
+
+53
+00:04:40,970 --> 00:04:41,390
+trò.
+
+54
+00:04:42,200 --> 00:04:43,670
+Nếu tôi quay trở lại.
+
+55
+00:04:43,970 --> 00:04:44,840
+Hoàn hảo.
+
+56
+00:04:44,870 --> 00:04:45,920
+Có vẻ tốt.
+
+57
+00:04:46,870 --> 00:04:54,640
+Bây giờ chúng tôi đã thêm một vai trò trong giao diện người dùng, nhưng dựa trên lựa chọn của chúng tôi, chúng tôi phải chỉ định vai trò đó cho người dùng.
+
+58
+00:04:55,550 --> 00:05:03,200
+Làm điều đó cực kỳ đơn giản và chúng ta phải viết một dòng mã trong thanh ghi trên trình xử lý bài đăng.
+
+59
+00:05:04,550 --> 00:05:09,290
+Chúng tôi sẽ làm điều đó nếu người dùng tạo thành công ngay tại đây.
+
+60
+00:05:10,200 --> 00:05:14,450
+Bởi vì chúng tôi đang kiểm tra xem kết quả tạo người dùng có thành công hay không.
+
+61
+00:05:14,460 --> 00:05:17,100
+Nếu đúng như vậy, thì chúng tôi muốn chỉ định vai trò.
+
+62
+00:05:17,760 --> 00:05:22,530
+Trước tiên, chúng tôi sẽ kiểm tra xem vai trò dấu chấm đầu vào.
+
+63
+00:05:23,480 --> 00:05:30,170
+Nếu đó không phải là bây giờ hoặc đúng hơn là hãy để tôi thực hiện string. là null hoặc rỗng.
+
+64
+00:05:33,250 --> 00:05:41,370
+Nếu đó không phải là null hoặc trống, thì chúng tôi muốn chỉ định vai trò và chúng tôi sẽ nói đang chờ trên trình quản lý người dùng.
+
+65
+00:05:41,380 --> 00:05:45,100
+Chúng tôi có một phương thức trợ giúp thêm vào vai trò không đồng bộ.
+
+66
+00:05:45,460 --> 00:05:49,990
+Bây giờ bạn có thể thấy có hai phương pháp ở đây, vì vậy hãy cẩn thận khi bạn nhập.
+
+67
+00:05:50,170 --> 00:05:56,050
+Nếu bạn nhập thêm vào vai trò không đồng bộ, điều đó có nghĩa là bạn đang thêm nhiều vai trò cho một người dùng.
+
+68
+00:05:56,050 --> 00:06:02,470
+Bạn có thể thấy nó mong đợi vô số vai trò, nhưng chúng tôi chỉ thêm một vai trò.
+
+69
+00:06:02,470 --> 00:06:11,230
+Vì vậy, chúng tôi sẽ nói thêm vào vai trò không đồng bộ, chuyển người dùng của chúng tôi và vai trò đã được chọn bởi danh sách
+
+70
+00:06:11,620 --> 00:06:19,030
+thả xuống trong phần khác ở đây, tôi có thể sao chép và dán vai trò đó và về cơ bản nếu người dùng không chọn
+
+71
+00:06:19,030 --> 00:06:25,300
+bất kỳ thứ gì từ danh sách thả xuống, thì tôi muốn gán cho họ vai trò D dot của khách hàng.
+
+72
+00:06:26,080 --> 00:06:31,600
+Vì vậy, nếu vai trò dấu chấm đầu vào không rỗng hoặc trống, chúng tôi sẽ chỉ định vai trò khác.
+
+73
+00:06:31,600 --> 00:06:34,460
+Chúng tôi sẽ giao cho họ vai trò của khách hàng.
+
+74
+00:06:35,120 --> 00:06:36,650
+Nó là siêu đơn giản.
+
+75
+00:06:36,680 --> 00:06:42,290
+Cảm ơn tất cả các phương thức trợ giúp được cung cấp bởi danh tính mạng.
+
+76
+00:06:43,260 --> 00:06:47,040
+Với cấu hình đó, hãy để tôi khởi động lại ứng dụng.
+
+77
+00:06:47,550 --> 00:06:53,700
+Bất cứ khi nào tôi thực hiện thay đổi trong tệp CSS, tôi cảm thấy muốn khởi động lại chỉ để được xác nhận.
+
+78
+00:06:54,750 --> 00:06:57,240
+Bây giờ cho tôi đăng ký ở đây.
+
+79
+00:06:57,240 --> 00:07:04,410
+Tôi sẽ nói quản trị viên kiểm tra tại Gmail và chúng tôi sẽ chọn vai trò quản trị viên.
+
+80
+00:07:06,650 --> 00:07:14,480
+Và chúng tôi thấy một ngoại lệ ở đây khi nó đang tạo mã thông báo xác nhận email và đó là do cùng
+
+81
+00:07:14,480 --> 00:07:15,480
+một thứ.
+
+82
+00:07:15,530 --> 00:07:21,470
+Trước đây, chúng tôi đã sử dụng danh tính mặc định và bao gồm cả việc triển khai.
+
+83
+00:07:21,470 --> 00:07:26,660
+Nhưng khi chúng tôi có danh tính quảng cáo, nó không được đưa vào theo mặc định.
+
+84
+00:07:26,690 --> 00:07:34,760
+Vì vậy, chúng tôi phải thêm nhà cung cấp mã thông báo mặc định của quảng cáo vì khi chúng tôi đăng ký mô hình trang tại đây,
+
+85
+00:07:34,760 --> 00:07:42,380
+bạn có thể thấy nó đang tạo mã thông báo xác nhận email và điều đó yêu cầu nhà cung cấp mã thông báo mặc định.
+
+86
+00:07:43,370 --> 00:07:49,280
+Nhưng nếu bạn kiểm tra mã đó sau khi người dùng được tạo và vai trò được chỉ định.
+
+87
+00:07:49,640 --> 00:07:53,960
+Vì vậy, điều đó có nghĩa là người dùng của chúng tôi sẽ được tạo trong cơ sở dữ liệu.
+
+88
+00:07:53,990 --> 00:08:03,170
+Nếu tôi truy cập ASP. NET Hoàn hảo, chúng tôi có quản trị viên thử nghiệm ở đây và làm cách nào để xem liệu người dùng đó có được chỉ định
+
+89
+00:08:03,170 --> 00:08:04,310
+đúng vai trò hay không?
+
+90
+00:08:04,880 --> 00:08:12,900
+Chà, chúng ta có một bảng ánh xạ là ASP. NET ánh xạ người dùng tới các vai trò tương ứng của họ.
+
+91
+00:08:12,930 --> 00:08:19,200
+Nếu tôi chọn top 1000 và kiểm tra ID người dùng, nó sẽ kết thúc bằng 80.
+
+92
+00:08:19,350 --> 00:08:20,640
+Đúng rồi.
+
+93
+00:08:20,670 --> 00:08:28,620
+ID vai trò ở đây bắt đầu bằng 045 và nếu tôi vào bảng vai trò 045 là quản trị viên.
+
+94
+00:08:29,400 --> 00:08:34,080
+Vì vậy, điều đó có nghĩa là vai trò chính xác đã được chỉ định trong cơ sở dữ liệu của chúng tôi.
+
+95
+00:08:34,650 --> 00:08:37,470
+Để mình thử đăng ký 1 cái nữa xem sao.
+
+96
+00:08:37,710 --> 00:08:42,690
+Hãy quay lại và lần này chúng ta sẽ không thấy thông báo lỗi của mã thông báo.
+
+97
+00:08:43,320 --> 00:08:44,640
+Để tôi xem.
+
+98
+00:08:48,730 --> 00:08:51,550
+Lần này để tôi đăng ký một nhân viên.
+
+99
+00:08:53,840 --> 00:08:55,940
+Và chúng ta hãy đăng ký.
+
+100
+00:08:57,200 --> 00:08:58,010
+Hoàn hảo.
+
+101
+00:08:58,010 --> 00:09:00,000
+Chúng tôi không thấy lỗi đó ở đây.
+
+102
+00:09:00,020 --> 00:09:05,090
+Hãy để tôi đi đến cơ sở dữ liệu nhân viên kết thúc trong một chín.
+
+103
+00:09:05,720 --> 00:09:08,750
+Hãy để tôi làm mới ở đây và hoàn thiện.
+
+104
+00:09:08,780 --> 00:09:12,770
+Người dùng mới có một vai trò kết thúc bằng một chín, đó là nhân viên.
+
+105
+00:09:13,580 --> 00:09:20,540
+Bây giờ, cuối cùng, nếu chúng ta không chọn bất kỳ thứ gì theo mặc định, thì đó phải là khách hàng kết thúc bằng một trong hai.
+
+106
+00:09:20,570 --> 00:09:22,850
+Hãy để tôi kiểm tra điều đó là tốt.
+
+107
+00:09:24,260 --> 00:09:31,910
+Chúng tôi sẽ không chọn bất kỳ vai trò nào và đăng ký hoàn hảo nếu tôi đến đây.
+
+108
+00:09:31,910 --> 00:09:39,230
+Một lần nữa, khách hàng là một trong hai người dùng mới nên có một trong hai và điều đó có vẻ chính xác.
+
+109
+00:09:40,310 --> 00:09:47,360
+Vì vậy, với điều đó, chúng ta có thể thấy người dùng đang được tạo trong cơ sở dữ liệu của mình và vai trò nhân vật đang được gán
+
+110
+00:09:47,360 --> 00:09:48,950
+cho những người dùng đó.
+
+111
+00:09:49,220 --> 00:09:52,670
+Chúng tôi không phải viết nhiều mã để thực hiện điều đó.
+
+112
+00:09:52,700 --> 00:10:00,060
+Tất cả tín dụng đều dành cho phương thức trợ giúp tích hợp được cung cấp trong trình quản lý người dùng và trình quản lý vai trò.
+
+113
+00:10:01,290 --> 00:10:06,180
+Với cấu hình đó, hãy để tôi tiếp tục từ video tiếp theo.
+

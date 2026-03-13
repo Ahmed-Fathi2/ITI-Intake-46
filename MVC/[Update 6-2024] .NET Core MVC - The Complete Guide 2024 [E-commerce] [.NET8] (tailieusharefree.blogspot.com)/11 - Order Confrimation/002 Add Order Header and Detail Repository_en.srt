@@ -1,0 +1,132 @@
+1
+00:00:01,740 --> 00:00:03,780
+Announcer: Now that we have added order header
+
+2
+00:00:03,780 --> 00:00:07,170
+and order details in our model and database,
+
+3
+00:00:07,170 --> 00:00:11,250
+we need to add that to our repository as well.
+
+4
+00:00:11,250 --> 00:00:14,340
+So let me copy the category repository,
+
+5
+00:00:14,340 --> 00:00:16,770
+paste it two more times.
+
+6
+00:00:16,770 --> 00:00:20,250
+First I will work on the interface here
+
+7
+00:00:20,250 --> 00:00:24,550
+and we will rename that to be I order header repository
+
+8
+00:00:26,490 --> 00:00:30,033
+and we have the I order detail repository.
+
+9
+00:00:37,530 --> 00:00:41,733
+Let me copy the interface and modify things here as well.
+
+10
+00:00:48,210 --> 00:00:49,800
+Perfect, looks good.
+
+11
+00:00:49,800 --> 00:00:53,283
+Modify the order header, copy that,
+
+12
+00:00:56,640 --> 00:00:58,470
+and perfect.
+
+13
+00:00:58,470 --> 00:01:02,010
+I believe that looks good for the interface.
+
+14
+00:01:02,010 --> 00:01:06,750
+Let me copy the implementation bar category,
+
+15
+00:01:06,750 --> 00:01:11,750
+paste it two more times, modify that to be order header
+
+16
+00:01:11,970 --> 00:01:13,353
+and order detail.
+
+17
+00:01:21,330 --> 00:01:23,370
+Perfect, let me copy that name
+
+18
+00:01:23,370 --> 00:01:26,193
+and modify the order detail here.
+
+19
+00:01:35,880 --> 00:01:39,690
+And perfect, that looks good for order detail.
+
+20
+00:01:39,690 --> 00:01:42,873
+Let me work on the order header repository.
+
+21
+00:01:52,200 --> 00:01:55,740
+And perfect, that looks good.
+
+22
+00:01:55,740 --> 00:01:58,080
+Let me close everything here.
+
+23
+00:01:58,080 --> 00:02:03,080
+And we need to add that to unit of work and I unit of work.
+
+24
+00:02:05,040 --> 00:02:08,400
+First, we will add the order detail here
+
+25
+00:02:08,400 --> 00:02:13,400
+and I have the I order header, looks good.
+
+26
+00:02:13,740 --> 00:02:17,520
+Work on the unit of work, public.
+
+27
+00:02:17,520 --> 00:02:22,520
+I order header and public I order detail.
+
+28
+00:02:27,330 --> 00:02:29,370
+We will also initialize them.
+
+29
+00:02:29,370 --> 00:02:34,370
+Order header is equal to new order header and order detail.
+
+30
+00:02:35,460 --> 00:02:37,350
+That looks good.
+
+31
+00:02:37,350 --> 00:02:39,450
+With that, we have configured our unit
+
+32
+00:02:39,450 --> 00:02:44,450
+of work to use the order header and order detail repository.
+
+33
+00:02:45,240 --> 00:02:48,303
+Let me continue from the next video.
+

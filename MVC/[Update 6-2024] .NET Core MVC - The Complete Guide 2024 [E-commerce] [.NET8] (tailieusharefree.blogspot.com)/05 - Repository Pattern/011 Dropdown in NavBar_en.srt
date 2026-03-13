@@ -1,0 +1,196 @@
+1
+00:00:02,460 --> 00:00:04,680
+Instructor: Now we have our category,
+
+2
+00:00:04,680 --> 00:00:06,870
+but we will be adding product
+
+3
+00:00:06,870 --> 00:00:08,460
+in the upcoming video
+
+4
+00:00:08,460 --> 00:00:12,060
+where we will be performing CRUD operations.
+
+5
+00:00:12,060 --> 00:00:13,620
+Now before I add that,
+
+6
+00:00:13,620 --> 00:00:16,560
+let me add a dropdown in the navigation.
+
+7
+00:00:16,560 --> 00:00:19,590
+So I will go to get Bootstrap.com.
+
+8
+00:00:19,590 --> 00:00:22,320
+And let me go to the documentation.
+
+9
+00:00:22,320 --> 00:00:24,153
+Search for nav bar.
+
+10
+00:00:25,830 --> 00:00:27,300
+We have a dropdown here.
+
+11
+00:00:27,300 --> 00:00:28,920
+That looks good.
+
+12
+00:00:28,920 --> 00:00:32,940
+Let me copy the li here for dropdown.
+
+13
+00:00:32,940 --> 00:00:34,470
+Copy that.
+
+14
+00:00:34,470 --> 00:00:36,750
+Go back to our code.
+
+15
+00:00:36,750 --> 00:00:39,510
+We have under code layout open here,
+
+16
+00:00:39,510 --> 00:00:41,700
+if not, you can open that.
+
+17
+00:00:41,700 --> 00:00:44,010
+And after the li elements,
+
+18
+00:00:44,010 --> 00:00:46,893
+let me paste that right here.
+
+19
+00:00:48,150 --> 00:00:49,920
+We go back to the ui,
+
+20
+00:00:49,920 --> 00:00:53,130
+we have hard reload and that kicks in,
+
+21
+00:00:53,130 --> 00:00:55,380
+but I see a blue color,
+
+22
+00:00:55,380 --> 00:00:59,130
+and I think that is because of the CSS.
+
+23
+00:00:59,130 --> 00:00:59,963
+Yep.
+
+24
+00:00:59,963 --> 00:01:00,900
+I do not need that.
+
+25
+00:01:00,900 --> 00:01:03,300
+I can comment that out.
+
+26
+00:01:03,300 --> 00:01:06,480
+Save that and Perfect.
+
+27
+00:01:06,480 --> 00:01:07,443
+Looks good.
+
+28
+00:01:08,670 --> 00:01:12,420
+The first one here, I want that to be category.
+
+29
+00:01:12,420 --> 00:01:16,413
+Cut the li and paste it right here.
+
+30
+00:01:17,730 --> 00:01:20,010
+We will have to rebuild.
+
+31
+00:01:20,010 --> 00:01:21,813
+Let me wait for that.
+
+32
+00:01:26,220 --> 00:01:27,150
+And perfect.
+
+33
+00:01:27,150 --> 00:01:28,530
+We have category,
+
+34
+00:01:28,530 --> 00:01:30,963
+but I did not see the color here.
+
+35
+00:01:31,860 --> 00:01:34,893
+We will have to make that text dark.
+
+36
+00:01:35,880 --> 00:01:37,890
+Save that here.
+
+37
+00:01:37,890 --> 00:01:38,760
+And perfect.
+
+38
+00:01:38,760 --> 00:01:40,980
+We have that, but rather than that,
+
+39
+00:01:40,980 --> 00:01:44,463
+I can just give it a class of dropdown item,
+
+40
+00:01:45,720 --> 00:01:48,570
+and let's see if that works.
+
+41
+00:01:48,570 --> 00:01:49,403
+Perfect.
+
+42
+00:01:49,403 --> 00:01:50,236
+Much better.
+
+43
+00:01:51,450 --> 00:01:52,283
+After that,
+
+44
+00:01:52,283 --> 00:01:57,283
+I will leave the divider here and let's see.
+
+45
+00:01:57,540 --> 00:01:59,130
+That looks good.
+
+46
+00:01:59,130 --> 00:02:00,930
+Rather than drop down here,
+
+47
+00:02:00,930 --> 00:02:03,963
+let me make it content management.
+
+48
+00:02:05,640 --> 00:02:06,900
+And Perfect.
+
+49
+00:02:06,900 --> 00:02:07,983
+That looks good.
+

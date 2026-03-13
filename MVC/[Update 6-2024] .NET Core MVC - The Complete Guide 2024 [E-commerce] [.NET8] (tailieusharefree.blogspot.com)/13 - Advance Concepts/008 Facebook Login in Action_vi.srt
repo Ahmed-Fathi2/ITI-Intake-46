@@ -1,0 +1,396 @@
+1
+00:00:01,960 --> 00:00:05,710
+Bây giờ chúng ta cần thêm nhiều thuộc tính hơn để đăng nhập bên ngoài.
+
+2
+00:00:05,710 --> 00:00:07,150
+Vì vậy, hãy để tôi làm điều đó.
+
+3
+00:00:07,150 --> 00:00:08,950
+Đó là tài khoản bên trong.
+
+4
+00:00:09,650 --> 00:00:11,990
+Nếu tôi quay lại mã ở đây.
+
+5
+00:00:12,590 --> 00:00:15,230
+Hãy để tôi đóng tất cả các tab ở đây.
+
+6
+00:00:15,560 --> 00:00:18,530
+Dừng ứng dụng và.
+
+7
+00:00:18,560 --> 00:00:19,430
+Rất tiếc.
+
+8
+00:00:20,950 --> 00:00:22,860
+Hãy để tôi căn chỉnh nó một lần nữa.
+
+9
+00:00:22,870 --> 00:00:25,360
+Chúng tôi sẽ tìm kiếm bên ngoài.
+
+10
+00:00:25,780 --> 00:00:27,910
+Chúng tôi có thông tin đăng nhập bên ngoài.
+
+11
+00:00:28,300 --> 00:00:30,850
+Chúng tôi không muốn đi vào bên trong quản lý.
+
+12
+00:00:30,850 --> 00:00:37,240
+Chúng tôi muốn một tài khoản bên trong đăng nhập bên ngoài và chúng tôi có mô hình trang.
+
+13
+00:00:37,720 --> 00:00:45,040
+Vì vậy, hãy để tôi cũng mở sổ đăng ký mà chúng tôi có nơi chúng tôi đã định cấu hình nhiều thuộc tính hơn.
+
+14
+00:00:45,280 --> 00:00:54,400
+Tôi sẽ mở cả hai và hoàn thiện trong mô hình trang nơi chúng tôi có mô hình đầu vào, chúng tôi đã thêm tất cả các
+
+15
+00:00:54,400 --> 00:00:55,840
+thuộc tính này.
+
+16
+00:00:56,110 --> 00:00:57,850
+Hãy để tôi sao chép điều đó.
+
+17
+00:00:58,000 --> 00:01:03,580
+Chuyển đến đăng nhập bên ngoài và tôi sẽ thêm chúng ngay tại đó.
+
+18
+00:01:04,379 --> 00:01:06,570
+Để giữ cho mọi thứ đơn giản.
+
+19
+00:01:06,600 --> 00:01:14,220
+Nếu ai đó đang sử dụng thông tin đăng nhập bên ngoài, vai trò của họ sẽ được mặc định là khách hàng và họ sẽ không thể có
+
+20
+00:01:14,220 --> 00:01:17,250
+được công ty, nhân viên hoặc quản trị viên.
+
+21
+00:01:17,670 --> 00:01:21,690
+Chúng tôi sẽ giữ mọi thứ siêu đơn giản với yêu cầu đó.
+
+22
+00:01:22,170 --> 00:01:30,960
+Sau đó, nếu tôi cuộn xuống đây nơi chúng tôi có xác nhận không đồng bộ về bài đăng, thì nó đang tạo người dùng đó.
+
+23
+00:01:32,210 --> 00:01:34,460
+Nhưng trước đó, hãy để tôi cuộn lên.
+
+24
+00:01:34,460 --> 00:01:37,320
+Và ở đây chúng ta có cuộc gọi lại on cat.
+
+25
+00:01:37,340 --> 00:01:38,900
+Không đồng bộ ở đó.
+
+26
+00:01:38,900 --> 00:01:46,730
+Nếu bạn để ý, nó đang điền vào mô hình đầu vào và nó đang nhận email từ hiệu trưởng chấm thông tin sẽ đến
+
+27
+00:01:46,730 --> 00:01:48,110
+từ Facebook.
+
+28
+00:01:49,330 --> 00:01:50,500
+Tương tự điều đó.
+
+29
+00:01:50,500 --> 00:01:59,200
+Facebook cũng sẽ có tên của người dùng để chúng tôi có thể sao chép và lấy các loại tên tương tự và chúng tôi sẽ điền
+
+30
+00:01:59,230 --> 00:02:03,610
+tên của người dùng khi chúng tôi ở trên trang đăng ký.
+
+31
+00:02:04,510 --> 00:02:08,380
+Sau đó, chúng tôi có xác nhận không đồng bộ trên bài đăng.
+
+32
+00:02:09,350 --> 00:02:09,919
+Ngay tại đó.
+
+33
+00:02:09,919 --> 00:02:12,230
+Chúng tôi đang thiết lập email đầu vào.
+
+34
+00:02:12,440 --> 00:02:20,570
+Trên hết, chúng tôi cũng sẽ đặt các thuộc tính khác, nhưng nếu bạn thử, chúng không tồn tại trên danh tính người
+
+35
+00:02:20,570 --> 00:02:21,350
+dùng.
+
+36
+00:02:22,010 --> 00:02:24,800
+Vì vậy, tạo người dùng nhấn F12.
+
+37
+00:02:24,830 --> 00:02:30,950
+Chúng tôi sẽ sửa đổi điều đó thành người dùng ứng dụng và điều đó sẽ giải quyết vấn đề của chúng tôi.
+
+38
+00:02:32,410 --> 00:02:34,600
+Vì vậy, hãy để tôi thêm điều đó ở đây.
+
+39
+00:02:34,690 --> 00:02:37,810
+Và hoàn thiện tất cả các lỗi biến mất.
+
+40
+00:02:37,840 --> 00:02:41,170
+Bây giờ chúng tôi đang tạo một người dùng ứng dụng.
+
+41
+00:02:41,860 --> 00:02:49,840
+Điều cuối cùng, khi kết quả thành công, chúng tôi muốn đợi người quản lý người dùng gạch dưới dấu chấm thêm vào vai trò không
+
+42
+00:02:49,840 --> 00:02:50,680
+đồng bộ.
+
+43
+00:02:50,710 --> 00:02:56,950
+Chúng tôi muốn thêm người dùng vào vai trò của khách hàng dấu chấm.
+
+44
+00:02:58,870 --> 00:03:02,350
+Với mô hình trang được định cấu hình đó trông thật tuyệt.
+
+45
+00:03:02,380 --> 00:03:06,340
+Hãy để tôi làm việc trên html dấu chấm css bên ngoài.
+
+46
+00:03:06,370 --> 00:03:08,380
+Ở đó chúng tôi có email.
+
+47
+00:03:08,620 --> 00:03:13,150
+Sao chép và dán nó sáu lần nữa ở đây.
+
+48
+00:03:13,150 --> 00:03:15,310
+Và sau đó hãy để tôi sửa đổi.
+
+49
+00:03:15,400 --> 00:03:16,210
+Tên.
+
+50
+00:03:16,210 --> 00:03:17,800
+Chúng tôi có điều đó.
+
+51
+00:03:21,240 --> 00:03:22,050
+Sau tên.
+
+52
+00:03:22,050 --> 00:03:23,880
+Cho mình xin số đt.
+
+53
+00:03:28,290 --> 00:03:30,990
+Tôi cũng sẽ sửa đổi trình giữ chỗ.
+
+54
+00:03:33,360 --> 00:03:34,320
+Hoàn hảo.
+
+55
+00:03:34,350 --> 00:03:36,720
+Sau đó, chúng tôi có địa chỉ đường phố.
+
+56
+00:03:37,110 --> 00:03:39,270
+Sao chép và dán đó.
+
+57
+00:03:41,110 --> 00:03:42,940
+Chúng tôi có thành phố.
+
+58
+00:03:50,130 --> 00:03:52,650
+Nhà nước và mã bưu điện.
+
+59
+00:04:00,510 --> 00:04:01,080
+Hoàn hảo.
+
+60
+00:04:01,080 --> 00:04:02,160
+Trông tôt đây.
+
+61
+00:04:02,160 --> 00:04:04,620
+Hãy để tôi sửa đổi điều này ở đây.
+
+62
+00:04:05,730 --> 00:04:07,740
+Chúng tôi sẽ có nhà nước.
+
+63
+00:04:08,850 --> 00:04:11,450
+Và một niềm tin có vẻ tốt.
+
+64
+00:04:11,460 --> 00:04:16,769
+Hãy để tôi bắt đầu ứng dụng và thử đăng ký bằng Facebook.
+
+65
+00:04:19,970 --> 00:04:24,080
+Lần trước khi chúng tôi thử điều đó, chúng tôi đã không nhấn nút đăng ký.
+
+66
+00:04:24,080 --> 00:04:28,750
+Nhờ đó, chúng tôi sẽ có thể tiếp tục và hoàn thiện.
+
+67
+00:04:28,760 --> 00:04:34,370
+Bạn có thể thấy nó truy xuất tên cũng như email và điều đó thật tuyệt.
+
+68
+00:04:34,970 --> 00:04:37,790
+Bây giờ, nếu bạn nhập mọi thứ khác
+
+69
+00:04:40,490 --> 00:04:45,500
+vào đây và gửi nút đăng ký, nó sẽ tự động đăng nhập cho bạn.
+
+70
+00:04:45,830 --> 00:04:46,670
+Hoàn hảo.
+
+71
+00:04:46,700 --> 00:04:48,710
+Bạn có thể thấy rằng đang làm việc.
+
+72
+00:04:49,130 --> 00:04:56,180
+Nếu bạn nhấp vào xin chào ở đây, mật khẩu không tồn tại vì chúng tôi đang sử dụng thông tin đăng nhập bên ngoài.
+
+73
+00:04:56,180 --> 00:05:01,460
+Nhưng nếu chúng tôi muốn cùng với đăng nhập bên ngoài, chúng tôi cũng có thể thêm mật khẩu.
+
+74
+00:05:02,210 --> 00:05:08,600
+Trong thông tin đăng nhập bên ngoài tại đây, bạn có thể thấy Facebook đã được đăng ký và điều đó có vẻ ổn.
+
+75
+00:05:09,650 --> 00:05:11,480
+Bây giờ, với cấu hình đó.
+
+76
+00:05:11,510 --> 00:05:17,370
+Lần tới khi tôi phải đăng nhập, nếu tôi vào trang đăng nhập, tôi có Facebook ở đây.
+
+77
+00:05:17,390 --> 00:05:21,530
+Nếu tôi chọn cái đó, nó sẽ tự động đăng nhập cho tôi.
+
+78
+00:05:21,950 --> 00:05:23,090
+Rất hoàn hảo.
+
+79
+00:05:23,120 --> 00:05:26,210
+Bạn có thể thấy nó dễ dàng và thuận tiện như thế nào.
+
+80
+00:05:26,810 --> 00:05:29,950
+Một điều mà tôi sẽ thay đổi là trên sổ đăng ký.
+
+81
+00:05:29,960 --> 00:05:32,270
+Để tôi mang cái này đến trung tâm.
+
+82
+00:05:32,690 --> 00:05:35,420
+Vì vậy, hãy để tôi mở sổ đăng ký.
+
+83
+00:05:35,450 --> 00:05:37,460
+Chấm Cshtml.
+
+84
+00:05:38,240 --> 00:05:42,550
+Cuộn xuống đây nơi chúng tôi có div ở đây.
+
+85
+00:05:42,560 --> 00:05:47,000
+Hãy để tôi thêm phần đệm ba và trung tâm văn bản.
+
+86
+00:05:47,180 --> 00:05:48,680
+Tôi cũng sẽ loại bỏ điều này.
+
+87
+00:05:48,680 --> 00:05:50,450
+Sử dụng dịch vụ khác.
+
+88
+00:05:51,430 --> 00:05:53,350
+Hãy để tôi quay trở lại.
+
+89
+00:05:53,380 --> 00:05:59,170
+Điều này đã bị sai lệch ở đây và tôi cũng muốn mở đăng nhập.
+
+90
+00:06:00,840 --> 00:06:03,300
+Chúng tôi đã đăng nhập, cuộn xuống.
+
+91
+00:06:03,570 --> 00:06:05,520
+Chúng tôi không cần điều này.
+
+92
+00:06:06,350 --> 00:06:07,520
+Đến ba giờ.
+
+93
+00:06:07,790 --> 00:06:09,290
+Trung tâm văn bản.
+
+94
+00:06:10,300 --> 00:06:13,480
+Lưu nó và để tôi quay lại đây.
+
+95
+00:06:13,720 --> 00:06:14,350
+Hoàn hảo.
+
+96
+00:06:14,350 --> 00:06:15,880
+Điều đó có vẻ tốt hơn nhiều.
+
+97
+00:06:15,910 --> 00:06:16,960
+Đăng nhập.
+
+98
+00:06:16,960 --> 00:06:17,890
+Hoàn hảo.
+
+99
+00:06:18,250 --> 00:06:23,410
+Vì vậy, thông tin đăng nhập bên ngoài đã được định cấu hình trong ứng dụng của chúng tôi.
+

@@ -1,0 +1,544 @@
+1
+00:00:01,890 --> 00:00:04,500
+Instructor: Now we want to work on what happens
+
+2
+00:00:04,500 --> 00:00:07,050
+when we populate the details here
+
+3
+00:00:07,050 --> 00:00:09,633
+and when we hit the place order button.
+
+4
+00:00:10,530 --> 00:00:13,380
+In that case we have to do two things.
+
+5
+00:00:13,380 --> 00:00:15,060
+We have to insert a record
+
+6
+00:00:15,060 --> 00:00:18,870
+in the OrderHeader and create that OrderHeader
+
+7
+00:00:18,870 --> 00:00:22,440
+and after that we will have to create order details
+
+8
+00:00:22,440 --> 00:00:26,520
+with all the products that are there in the shopping cart.
+
+9
+00:00:26,520 --> 00:00:30,210
+So let me work through that and stop the project.
+
+10
+00:00:30,210 --> 00:00:32,853
+We will work on the cart controller.
+
+11
+00:00:33,900 --> 00:00:36,690
+We have the summary get action method.
+
+12
+00:00:36,690 --> 00:00:40,590
+Let me copy that and paste it one more time.
+
+13
+00:00:40,590 --> 00:00:44,640
+Next action method will be the summary post action method.
+
+14
+00:00:44,640 --> 00:00:49,640
+Let me call that and it will be an HttpPost action method.
+
+15
+00:00:50,310 --> 00:00:53,880
+Now because the action name is different than summary,
+
+16
+00:00:53,880 --> 00:00:55,650
+we have to be explicit here
+
+17
+00:00:55,650 --> 00:01:00,650
+that hey this action name is actually summary action method.
+
+18
+00:01:01,500 --> 00:01:04,230
+We cannot have the name summary here
+
+19
+00:01:04,230 --> 00:01:07,050
+because we have the exact name in the get
+
+20
+00:01:07,050 --> 00:01:09,480
+and that way it will conflict.
+
+21
+00:01:09,480 --> 00:01:12,510
+So we have to call this action something else
+
+22
+00:01:12,510 --> 00:01:14,790
+and explicitly define the action name
+
+23
+00:01:14,790 --> 00:01:17,223
+as summary for HttpPost.
+
+24
+00:01:18,420 --> 00:01:21,000
+We need to think about what will be the model
+
+25
+00:01:21,000 --> 00:01:23,733
+that we will receive when we are posting.
+
+26
+00:01:24,660 --> 00:01:26,820
+Let me open the view here,
+
+27
+00:01:26,820 --> 00:01:31,820
+go to view and we have the shopping cart view model.
+
+28
+00:01:31,920 --> 00:01:35,626
+In there we want to retrieve the OrderHeader.Name
+
+29
+00:01:35,626 --> 00:01:37,980
+PhoneNumber, StreetAddress
+
+30
+00:01:37,980 --> 00:01:41,097
+so we can retrieve that shopping cart view model
+
+31
+00:01:41,097 --> 00:01:45,063
+and the parameter of post right here.
+
+32
+00:01:47,070 --> 00:01:51,630
+We can say ShoppingCart view model and give that a name.
+
+33
+00:01:51,630 --> 00:01:54,000
+But we can do something better.
+
+34
+00:01:54,000 --> 00:01:56,370
+What we can do is if we go up,
+
+35
+00:01:56,370 --> 00:01:58,830
+we have the ShoppingCart view model
+
+36
+00:01:58,830 --> 00:02:02,880
+and that is what we are using in summary as well.
+
+37
+00:02:02,880 --> 00:02:06,030
+Because when we go down to the get action method
+
+38
+00:02:06,030 --> 00:02:10,080
+we are passing that exact ShoppingCart view model.
+
+39
+00:02:10,080 --> 00:02:13,120
+So what I can do here is I can use BindProperty
+
+40
+00:02:14,370 --> 00:02:16,170
+and that will automatically
+
+41
+00:02:16,170 --> 00:02:18,900
+bind the ShoppingCart view model.
+
+42
+00:02:18,900 --> 00:02:22,950
+It'll work exactly the same like it works in raiser pages
+
+43
+00:02:22,950 --> 00:02:26,010
+and basically what will happen is when the details
+
+44
+00:02:26,010 --> 00:02:30,632
+will be populated here and when they hit the submit button
+
+45
+00:02:30,632 --> 00:02:33,990
+this ShoppingCart view model will automatically
+
+46
+00:02:33,990 --> 00:02:36,873
+be populated with those values.
+
+47
+00:02:37,800 --> 00:02:40,290
+And that way we do not have to write that
+
+48
+00:02:40,290 --> 00:02:44,100
+inside the SummaryPOST action method right here.
+
+49
+00:02:44,100 --> 00:02:48,483
+The ShoppingCart view model will automatically be populated.
+
+50
+00:02:49,410 --> 00:02:52,380
+Because that is automatically populated,
+
+51
+00:02:52,380 --> 00:02:55,533
+we do not have to create a new instance of that.
+
+52
+00:02:56,430 --> 00:02:58,890
+What we would rather do is we will only
+
+53
+00:02:58,890 --> 00:03:03,810
+populate the ShoppingCartVM.ShoppingCartList
+
+54
+00:03:03,810 --> 00:03:05,283
+from the database.
+
+55
+00:03:06,270 --> 00:03:08,730
+Let me remove everything else here.
+
+56
+00:03:08,730 --> 00:03:12,360
+So we are populating the ShoppingCartList once again
+
+57
+00:03:12,360 --> 00:03:15,210
+because when we are posting we might lose some
+
+58
+00:03:15,210 --> 00:03:16,800
+of the details there
+
+59
+00:03:16,800 --> 00:03:20,313
+because we do not have everything in the input field.
+
+60
+00:03:21,420 --> 00:03:23,460
+So that looks good here.
+
+61
+00:03:23,460 --> 00:03:26,490
+After that, I will populate the OrderDate
+
+62
+00:03:26,490 --> 00:03:28,200
+to be today's DateTime
+
+63
+00:03:28,200 --> 00:03:30,340
+and I will populate the ApplicationUserId
+
+64
+00:03:31,530 --> 00:03:36,530
+and the OrderHeader to be the userId that we retrieve here.
+
+65
+00:03:37,680 --> 00:03:41,220
+Once we do that, we no longer need this mapping
+
+66
+00:03:41,220 --> 00:03:45,270
+because that will automatically be populated.
+
+67
+00:03:45,270 --> 00:03:47,970
+We need to calculate the order total,
+
+68
+00:03:47,970 --> 00:03:50,130
+so that logic looks good.
+
+69
+00:03:50,130 --> 00:03:53,193
+And right here we are populating the ApplicationUser.
+
+70
+00:03:54,720 --> 00:03:58,350
+Now when we have the ApplicationUser populated
+
+71
+00:03:58,350 --> 00:04:01,770
+we can check that ApplicationUser to find out
+
+72
+00:04:01,770 --> 00:04:05,883
+if there is a company ID that is associated to that user.
+
+73
+00:04:06,840 --> 00:04:10,710
+The reason I am saying is in ASP.Net user
+
+74
+00:04:10,710 --> 00:04:12,570
+we have the company ID.
+
+75
+00:04:12,570 --> 00:04:16,709
+If that is assigned, that means that it is a company account
+
+76
+00:04:16,709 --> 00:04:19,350
+and we will be using net 30
+
+77
+00:04:19,350 --> 00:04:21,630
+and directly placing the order
+
+78
+00:04:21,630 --> 00:04:24,663
+rather than including any payment gateway.
+
+79
+00:04:25,680 --> 00:04:27,390
+So I can check here if
+
+80
+00:04:27,390 --> 00:04:29,980
+ShoppingCartVM.OrderHeader.ApplicationUser
+
+81
+00:04:32,990 --> 00:04:35,790
+.CompanyId.GetValueOrDefault is equal equal to zero.
+
+82
+00:04:39,420 --> 00:04:42,420
+Now the reason I am using GetValueOrDefault
+
+83
+00:04:42,420 --> 00:04:44,943
+is because CompanyId can be null.
+
+84
+00:04:45,870 --> 00:04:49,620
+GetValueOrDefault will handle that scenario.
+
+85
+00:04:49,620 --> 00:04:53,070
+If that value is equal equal to zero,
+
+86
+00:04:53,070 --> 00:04:56,080
+that means it is a regular customer account
+
+87
+00:04:57,090 --> 00:04:59,613
+and we need to capture payment.
+
+88
+00:05:03,300 --> 00:05:06,813
+In the else part, it is a company user.
+
+89
+00:05:07,950 --> 00:05:10,650
+So basically if it is a customer account
+
+90
+00:05:10,650 --> 00:05:12,840
+then what is the order status?
+
+91
+00:05:12,840 --> 00:05:15,540
+Let me go back to the PowerPoint here.
+
+92
+00:05:15,540 --> 00:05:18,273
+We have to make both of them to be pending.
+
+93
+00:05:19,320 --> 00:05:21,750
+So we go back here, we will assign
+
+94
+00:05:21,750 --> 00:05:25,140
+the OrderHeader.PaymentStatus as pending
+
+95
+00:05:25,140 --> 00:05:27,993
+and OrderStatus as pending as well.
+
+96
+00:05:29,160 --> 00:05:31,950
+Then in the else part, if it is a company account
+
+97
+00:05:31,950 --> 00:05:35,040
+if I go back when the order is placed,
+
+98
+00:05:35,040 --> 00:05:39,450
+the status is approved and the payment status is approved
+
+99
+00:05:39,450 --> 00:05:40,833
+for delayed payment.
+
+100
+00:05:41,760 --> 00:05:45,870
+So right here let me assign both of those status.
+
+101
+00:05:45,870 --> 00:05:49,380
+PaymentStatus will be approved for delayed payment
+
+102
+00:05:49,380 --> 00:05:53,223
+and OrderStatus is approved right there.
+
+103
+00:05:54,120 --> 00:05:56,670
+With that, we are handling everything
+
+104
+00:05:56,670 --> 00:05:59,670
+and now we can create the OrderHeader.
+
+105
+00:05:59,670 --> 00:06:03,390
+So on _unitOfWork.OrderHeader we will add
+
+106
+00:06:03,390 --> 00:06:07,083
+the OrderHeader is inside ShoppingCartVM.OrderHeader,
+
+107
+00:06:09,000 --> 00:06:11,640
+and we will save the changes.
+
+108
+00:06:11,640 --> 00:06:14,310
+That will create OrderHeader.
+
+109
+00:06:14,310 --> 00:06:17,670
+Right now we have only created OrderHeader,
+
+110
+00:06:17,670 --> 00:06:21,150
+then we have to create the order detail.
+
+111
+00:06:21,150 --> 00:06:24,756
+For order detail we will have a foreach loop
+
+112
+00:06:24,756 --> 00:06:26,905
+and we will say variable cart
+
+113
+00:06:26,905 --> 00:06:29,822
+in ShoppingCartVM.ShoppingCartList.
+
+114
+00:06:31,974 --> 00:06:34,800
+For each of the item in the shopping cart
+
+115
+00:06:34,800 --> 00:06:38,043
+we will have to create an order detailed record.
+
+116
+00:06:39,630 --> 00:06:44,630
+So we will create individual orderDetail is equal to new
+
+117
+00:06:44,910 --> 00:06:47,850
+and then we have to populate few details
+
+118
+00:06:47,850 --> 00:06:51,783
+like ProductId is inside cart.ProductId.
+
+119
+00:06:52,800 --> 00:06:56,220
+We also have to populate the OrderHeaderId
+
+120
+00:06:56,220 --> 00:06:58,620
+and how will we get that?
+
+121
+00:06:58,620 --> 00:07:01,560
+Because we have saved the OrderHeader here
+
+122
+00:07:01,560 --> 00:07:03,820
+the ShoppingCartVM.OrderHeaderId
+
+123
+00:07:05,190 --> 00:07:07,950
+will be populated inside there.
+
+124
+00:07:07,950 --> 00:07:11,640
+So in ShoppingCartVM.OrderHeader
+
+125
+00:07:11,640 --> 00:07:15,900
+ID field will be populated, because on line 101,
+
+126
+00:07:15,900 --> 00:07:19,773
+the OrderHeader will be created in the database.
+
+127
+00:07:21,210 --> 00:07:23,220
+Finally, we need the price that is
+
+128
+00:07:23,220 --> 00:07:28,193
+inside cart.Price and count is inside cart.Count.
+
+129
+00:07:29,430 --> 00:07:31,983
+And that looks good for one order detail.
+
+130
+00:07:32,940 --> 00:07:34,980
+We have to save that to the database,
+
+131
+00:07:34,980 --> 00:07:39,980
+so _unitOfWork.OrderDetail and we have to add a record.
+
+132
+00:07:40,920 --> 00:07:45,920
+After we do that, we will call _unitOfWork.Save.
+
+133
+00:07:45,990 --> 00:07:50,790
+That will create OrderHeader as well as OrderDetail.
+
+134
+00:07:50,790 --> 00:07:53,640
+Once we have created all the details
+
+135
+00:07:53,640 --> 00:07:57,120
+we need to redirect to a confirmation page.
+
+136
+00:07:57,120 --> 00:07:59,663
+Let me do that in the next video.
+

@@ -1,0 +1,192 @@
+1
+00:00:01,950 --> 00:00:03,690
+Instructor: When we are working here,
+
+2
+00:00:03,690 --> 00:00:06,513
+we basically need to populate all the details.
+
+3
+00:00:07,530 --> 00:00:10,950
+If I go to SQL Server real quick here,
+
+4
+00:00:10,950 --> 00:00:15,870
+and if I examine the "AspNetUsers", if you go to the right,
+
+5
+00:00:15,870 --> 00:00:19,293
+I believe we added more properties for user.
+
+6
+00:00:20,220 --> 00:00:23,250
+So when we have to populate this information,
+
+7
+00:00:23,250 --> 00:00:26,520
+we can go to the database or "AspNetUser"
+
+8
+00:00:26,520 --> 00:00:29,610
+and try to retrieve the information from there.
+
+9
+00:00:29,610 --> 00:00:32,133
+They can of course edit that if they want.
+
+10
+00:00:33,030 --> 00:00:37,650
+So let me go back here and stop the application.
+
+11
+00:00:37,650 --> 00:00:40,470
+We are in the cart controller.
+
+12
+00:00:40,470 --> 00:00:43,710
+In order to navigate to the application user,
+
+13
+00:00:43,710 --> 00:00:45,930
+let me copy everything that we have
+
+14
+00:00:45,930 --> 00:00:50,130
+in the index and paste it in summary here.
+
+15
+00:00:50,130 --> 00:00:53,343
+We need to populate the shopping cart view model.
+
+16
+00:00:54,750 --> 00:00:57,960
+What we have here for user ID looks good.
+
+17
+00:00:57,960 --> 00:01:00,930
+We will populate the shopping cart view model,
+
+18
+00:01:00,930 --> 00:01:04,890
+and after that, in the "view model .OrderHeader",
+
+19
+00:01:04,890 --> 00:01:08,853
+we have "ApplicationUser" that we want to populate.
+
+20
+00:01:09,840 --> 00:01:10,800
+To retrieve that,
+
+21
+00:01:10,800 --> 00:01:15,300
+we can go to "_unitofWork.ApplicationUser.Get",
+
+22
+00:01:15,300 --> 00:01:20,300
+and we can get that based on "u.Id==",
+
+23
+00:01:20,700 --> 00:01:23,337
+we have that inside the "userId".
+
+24
+00:01:24,450 --> 00:01:27,180
+Once we have the application user here,
+
+25
+00:01:27,180 --> 00:01:30,090
+we can manually update all the properties which
+
+26
+00:01:30,090 --> 00:01:33,870
+are in "OrderHeader", like name, phone number,
+
+27
+00:01:33,870 --> 00:01:37,800
+street address, city, state, and postal code
+
+28
+00:01:37,800 --> 00:01:42,360
+based on everything from the "ApplicationUser".
+
+29
+00:01:42,360 --> 00:01:45,060
+So that will populate the defaults,
+
+30
+00:01:45,060 --> 00:01:48,180
+and then we are calculating the order total.
+
+31
+00:01:48,180 --> 00:01:49,680
+That looks good.
+
+32
+00:01:49,680 --> 00:01:51,780
+When we return back to the view,
+
+33
+00:01:51,780 --> 00:01:54,543
+we will return the shopping cart view model.
+
+34
+00:01:55,740 --> 00:01:59,100
+With that in place, let me add a debugging point
+
+35
+00:01:59,100 --> 00:02:03,150
+and run the application to see how the view model looks
+
+36
+00:02:03,150 --> 00:02:04,593
+on the summary page.
+
+37
+00:02:05,760 --> 00:02:10,380
+We will go to "cart" here and hit the "summary" button.
+
+38
+00:02:10,380 --> 00:02:12,310
+Let me examine the view model
+
+39
+00:02:13,290 --> 00:02:15,270
+in the "OrderHeader".
+
+40
+00:02:15,270 --> 00:02:16,103
+Perfect.
+
+41
+00:02:16,103 --> 00:02:19,620
+You can see, name is populated, city,
+
+42
+00:02:19,620 --> 00:02:23,550
+we have postal code, phone number, application user.
+
+43
+00:02:23,550 --> 00:02:24,900
+That looks good.
+
+44
+00:02:24,900 --> 00:02:27,183
+And we have the shopping cart list.
+
+45
+00:02:28,290 --> 00:02:31,860
+Based on that, we can populate all the information.
+
+46
+00:02:31,860 --> 00:02:33,900
+If we go to the view here,
+
+47
+00:02:33,900 --> 00:02:37,530
+and we have to make this more dynamic.
+
+48
+00:02:37,530 --> 00:02:40,233
+Let me do that in the next video.
+

@@ -1,0 +1,72 @@
+1
+00:00:01,609 --> 00:00:09,410
+Thay đổi cuối cùng mà tôi muốn hiển thị là nếu chúng tôi đăng xuất tại đây và nếu chúng tôi cố gắng đăng ký bằng thông tin đăng
+
+2
+00:00:09,410 --> 00:00:14,150
+nhập Facebook, nó sẽ không hoạt động vì URL chuyển hướng không hợp lệ.
+
+3
+00:00:14,900 --> 00:00:18,560
+Vì vậy, chúng tôi phải đi đến các nhà phát triển dot Facebook. com.
+
+4
+00:00:18,890 --> 00:00:21,590
+Và hãy để tôi sao chép tên miền ở đây.
+
+5
+00:00:21,980 --> 00:00:23,720
+Chuyển đến ứng dụng của tôi.
+
+6
+00:00:23,720 --> 00:00:31,010
+Chúng tôi có cồng kềnh ở đây, hãy để tôi vào đó trong cài đặt cơ bản.
+
+7
+00:00:31,190 --> 00:00:33,470
+Chúng tôi cần chuyển hướng Uri.
+
+8
+00:00:34,400 --> 00:00:37,100
+Tôi tin rằng đó là trong cài đặt Facebook.
+
+9
+00:00:38,330 --> 00:00:41,600
+Và ngay tại đây, cùng với localhost.
+
+10
+00:00:41,630 --> 00:00:47,040
+Chúng tôi cũng sẽ thêm URL mới có đăng nhập Facebook.
+
+11
+00:00:47,060 --> 00:00:48,650
+Lưu các thay đổi.
+
+12
+00:00:49,940 --> 00:00:50,690
+Hoàn hảo.
+
+13
+00:00:50,960 --> 00:00:57,170
+Với cấu hình đó, hãy để tôi quay lại đây và để tôi thử lại Facebook.
+
+14
+00:00:57,680 --> 00:00:59,000
+Và tuyệt vời.
+
+15
+00:00:59,030 --> 00:01:00,740
+Đó là chức năng.
+
+16
+00:01:01,130 --> 00:01:07,430
+Tôi có thể đăng ký tại đây và nó sẽ tự động đăng nhập cho tôi bằng Facebook.
+
+17
+00:01:08,430 --> 00:01:09,390
+Quá tuyệt vời.
+
+18
+00:01:09,420 --> 00:01:15,810
+Cùng với đó, ứng dụng của chúng tôi được triển khai lên Azure và mọi thứ đang hoạt động như mong đợi.
+

@@ -1,0 +1,256 @@
+1
+00:00:01,640 --> 00:00:05,240
+Làm cách nào để có thể kiểm tra chức năng email này?
+
+2
+00:00:05,720 --> 00:00:12,440
+Hãy để tôi đầu tiên đi đến chương trình. cs và đảm bảo rằng tôi đã nhập chính xác người gửi email.
+
+3
+00:00:12,470 --> 00:00:13,850
+Trông tôt đây.
+
+4
+00:00:13,850 --> 00:00:17,720
+Và vì điều đó, nếu tôi kiểm tra sổ đăng ký ở đây.
+
+5
+00:00:18,620 --> 00:00:20,750
+Hãy để tôi mở mô hình trang.
+
+6
+00:00:21,580 --> 00:00:26,800
+Và nếu bạn kiểm tra, chúng tôi có người gửi email AI trong quá trình tiêm phụ thuộc.
+
+7
+00:00:27,010 --> 00:00:35,200
+Ngoài ra khi đăng ký thành công tại đây sẽ tự động gửi email xác nhận tài khoản.
+
+8
+00:00:35,680 --> 00:00:38,200
+Vì vậy, logic đó đã có.
+
+9
+00:00:38,640 --> 00:00:43,900
+Hãy để tôi chạy ứng dụng và đăng ký để xem nó có hoạt động không.
+
+10
+00:00:44,470 --> 00:00:51,610
+Trước đây logic đã có, nhưng người gửi email trống vì không có email nào được
+
+11
+00:00:51,610 --> 00:00:52,210
+gửi.
+
+12
+00:00:52,330 --> 00:00:57,070
+Nhưng bây giờ chúng tôi đã thêm logic, nó sẽ gửi một email.
+
+13
+00:00:59,680 --> 00:01:02,260
+Để em đăng ký.
+
+14
+00:01:03,850 --> 00:01:08,770
+Địa chỉ email hợp lệ ở đây, vì vậy hãy để tôi nhấn nút đăng ký.
+
+15
+00:01:10,350 --> 00:01:11,070
+Hoàn hảo.
+
+16
+00:01:11,070 --> 00:01:11,900
+Thế là xong.
+
+17
+00:01:11,910 --> 00:01:13,890
+Hãy để tôi mở Gmail ở đây.
+
+18
+00:01:15,320 --> 00:01:22,040
+Và sau đó, tất nhiên, chúng tôi sẽ phải xem xét thư mục thư rác và chúng tôi có email này từ cuốn sách cồng kềnh.
+
+19
+00:01:22,070 --> 00:01:23,990
+Nó phải cồng kềnh.
+
+20
+00:01:24,200 --> 00:01:27,360
+Tôi tin rằng tôi có một lỗi chính tả trong người gửi email.
+
+21
+00:01:27,380 --> 00:01:28,460
+Chúng ta đi thôi.
+
+22
+00:01:28,670 --> 00:01:35,000
+Vì vậy, bất kỳ tên nào chúng ta có ở đây, nó đang sử dụng tên đó ngay tại đây và nó đang hiển thị.
+
+23
+00:01:35,000 --> 00:01:38,120
+Vui lòng xác nhận tài khoản của bạn bằng cách nhấp vào đây.
+
+24
+00:01:38,510 --> 00:01:45,260
+Bây giờ, thật ngạc nhiên, khi chúng tôi nhấp vào đó, nó sẽ đưa chúng tôi đến trang xác nhận và nó hiển thị.
+
+25
+00:01:45,290 --> 00:01:47,870
+Cảm ơn bạn đã xác nhận email của bạn.
+
+26
+00:01:48,260 --> 00:01:55,550
+Bây giờ, tất cả logic này đã được tích hợp sẵn với danh tính mạng vì bạn có thể thấy trong cơ sở dữ liệu
+
+27
+00:01:55,550 --> 00:01:59,840
+khi chúng tôi kiểm tra ASP. NET bảng Người dùng.
+
+28
+00:02:00,020 --> 00:02:02,180
+Để tôi mở cái đó.
+
+29
+00:02:03,380 --> 00:02:07,850
+Bạn sẽ thấy email xác nhận sẽ đúng với tài khoản này.
+
+30
+00:02:08,120 --> 00:02:08,900
+Đó là đâu?
+
+31
+00:02:08,900 --> 00:02:10,100
+Ngay chỗ này.
+
+32
+00:02:10,550 --> 00:02:13,190
+Bạn có thể thấy email xác nhận là đúng.
+
+33
+00:02:13,460 --> 00:02:18,080
+Vì vậy, việc triển khai đó cũng hoạt động như mong đợi.
+
+34
+00:02:18,590 --> 00:02:25,450
+Trên hết, nếu bạn muốn gửi email sau khi đặt hàng, chúng tôi cũng có thể làm điều đó.
+
+35
+00:02:25,460 --> 00:02:27,530
+Nó là đơn giản.
+
+36
+00:02:28,290 --> 00:02:30,990
+Chúng tôi có điều đó trong bộ điều khiển giỏ hàng.
+
+37
+00:02:31,890 --> 00:02:33,720
+Để tôi mở cái đó.
+
+38
+00:02:35,290 --> 00:02:41,440
+Và ở đó chúng ta sẽ phải tiêm người gửi email bằng cách sử dụng phép nội xạ phụ thuộc.
+
+39
+00:02:42,550 --> 00:02:44,410
+Hãy để tôi làm điều đó ở đây.
+
+40
+00:02:46,250 --> 00:02:47,600
+Và hoàn hảo.
+
+41
+00:02:47,840 --> 00:02:52,640
+Sau đó, phương thức hành động sẽ là xác nhận đơn hàng.
+
+42
+00:02:53,060 --> 00:03:00,380
+Và ngay tại đây chúng ta có thể sử dụng người gửi email gạch dưới mà chúng ta có phương thức gửi email không đồng bộ.
+
+43
+00:03:00,380 --> 00:03:04,820
+Chúng tôi cần cung cấp chủ đề email và thông báo HTML.
+
+44
+00:03:05,360 --> 00:03:11,570
+Email nằm bên trong người dùng ứng dụng chấm tiêu đề đơn hàng. e-mail.
+
+45
+00:03:11,840 --> 00:03:17,900
+Tiếp theo, chúng ta cần một chủ ngữ để có thể nói số lượng lớn đơn đặt hàng mới.
+
+46
+00:03:18,080 --> 00:03:21,560
+Và cuối cùng, chúng tôi cần một số văn bản ở đây.
+
+47
+00:03:21,920 --> 00:03:32,120
+Vì vậy, đây sẽ là HTML để chúng tôi có thể thêm thẻ đoạn với thẻ đóng và chúng tôi có thể nói đơn hàng mới được tạo.
+
+48
+00:03:32,870 --> 00:03:39,830
+Và cùng với đó, chúng tôi sẽ thêm ID đơn hàng bên trong tiêu đề đơn hàng. nhận dạng.
+
+49
+00:03:40,730 --> 00:03:41,600
+Hoàn hảo.
+
+50
+00:03:41,810 --> 00:03:43,250
+Trông tôt đây.
+
+51
+00:03:44,260 --> 00:03:49,900
+Với cấu hình đó, hãy để tôi khởi động lại ứng dụng và thử đặt hàng.
+
+52
+00:03:53,180 --> 00:03:55,200
+Chúng tôi đã đăng nhập.
+
+53
+00:03:55,220 --> 00:03:57,770
+Hãy để tôi thêm mặt hàng vào giỏ hàng.
+
+54
+00:03:58,640 --> 00:04:00,440
+Tới giỏ hàng ở đây.
+
+55
+00:04:00,440 --> 00:04:02,960
+Tóm tắt đặt hàng.
+
+56
+00:04:06,370 --> 00:04:06,940
+Hoàn hảo.
+
+57
+00:04:06,940 --> 00:04:09,160
+Hãy để tôi nhấn nút thanh toán ở đây.
+
+58
+00:04:10,570 --> 00:04:12,550
+Và điều đó hiệu quả.
+
+59
+00:04:12,640 --> 00:04:14,800
+Số thứ tự là 1010.
+
+60
+00:04:14,800 --> 00:04:22,480
+Và sau đó, nếu bạn mở Gmail, bạn sẽ thấy email, đơn đặt hàng mới, sách cồng kềnh và đơn đặt hàng mới cùng với ID
+
+61
+00:04:22,480 --> 00:04:23,530
+đơn đặt hàng.
+
+62
+00:04:24,250 --> 00:04:32,470
+Bây giờ bạn có thể thích thú với các mẫu HTML ở đây, nhưng tôi đang giữ mọi thứ cực kỳ đơn giản để hoàn hảo với
+
+63
+00:04:32,500 --> 00:04:33,190
+điều đó.
+
+64
+00:04:33,190 --> 00:04:36,730
+Chức năng email có vẻ tốt trong dự án của chúng tôi.
+

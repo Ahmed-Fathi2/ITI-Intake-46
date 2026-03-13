@@ -1,0 +1,272 @@
+1
+00:00:01,670 --> 00:00:06,500
+Chúng tôi có trang chủ và trang chi tiết đang hoạt động như mong đợi.
+
+2
+00:00:06,830 --> 00:00:14,200
+Với điều đó được bảo hiểm, tôi muốn làm việc về xác thực và ủy quyền cũng như nhận dạng giàn giáo với
+
+3
+00:00:14,240 --> 00:00:15,530
+dự án Dotnet.
+
+4
+00:00:16,170 --> 00:00:22,020
+Khi chúng ta nói về danh tính, chúng ta nghĩ ngay đến đăng ký đăng nhập.
+
+5
+00:00:22,020 --> 00:00:24,120
+Nếu mật khẩu không hợp lệ thì sao?
+
+6
+00:00:24,150 --> 00:00:30,720
+Làm cách nào để tạo tất cả các bảng đó trong cơ sở dữ liệu và đảm bảo rằng bảo mật là ưu tiên hàng đầu?
+
+7
+00:00:31,110 --> 00:00:36,220
+Nhưng khi nói đến dự án Dotnet, chúng ta không phải lo lắng về tất cả những điều đó.
+
+8
+00:00:36,240 --> 00:00:43,950
+Nhóm Dotnet cung cấp triển khai nhận dạng mặc định mà chúng tôi có thể yên tâm sử dụng vì nó được
+
+9
+00:00:43,950 --> 00:00:47,040
+nhóm Dotnet xây dựng và cung cấp.
+
+10
+00:00:47,340 --> 00:00:54,660
+Và điều đó về cơ bản loại bỏ tất cả các công việc nặng nhọc và chúng ta có thể tin tưởng vào mã đang được viết.
+
+11
+00:00:55,200 --> 00:01:02,700
+Nhưng làm thế nào để chúng tôi thêm danh tính đó, đó là thông tin đăng nhập, đăng ký và mọi thứ liên quan đến dự án của
+
+12
+00:01:02,700 --> 00:01:03,570
+chúng tôi?
+
+13
+00:01:04,950 --> 00:01:12,780
+Để bắt đầu dự án web, chúng tôi sẽ nhấp chuột phải vào Thêm và chúng tôi sẽ chọn mục giàn giáo mới.
+
+14
+00:01:13,320 --> 00:01:17,410
+Ở đó chúng tôi có bản sắc và chúng tôi có thể chọn điều đó.
+
+15
+00:01:18,300 --> 00:01:23,740
+Giờ đây, trong các phiên bản sau của Net 8, danh tính có thể được cập nhật.
+
+16
+00:01:23,760 --> 00:01:27,420
+Nếu điều đó xảy ra, tôi cũng sẽ cập nhật khóa học.
+
+17
+00:01:27,450 --> 00:01:29,910
+Nhưng đây là những gì nó là ngay bây giờ.
+
+18
+00:01:30,630 --> 00:01:35,610
+Ở trên cùng ở đây, nếu chúng ta muốn một trang chính khác, chúng ta có thể chọn trang đó.
+
+19
+00:01:35,790 --> 00:01:37,520
+Nếu không, chúng ta có thể để lại điều đó.
+
+20
+00:01:37,530 --> 00:01:42,930
+Nhưng sau đó, bạn có thể xem tất cả các tệp do nhóm nhận dạng cung cấp.
+
+21
+00:01:43,770 --> 00:01:51,870
+Chúng tôi có nhiều trang ở đây để đăng nhập, đặt đăng xuất, đăng ký mật khẩu, đặt lại mật khẩu và hơn thế nữa.
+
+22
+00:01:52,320 --> 00:01:55,410
+Bạn sẽ không cần tất cả các trang ngay tại đây.
+
+23
+00:01:55,530 --> 00:01:59,360
+Vì vậy, những gì chúng tôi có thể làm là chúng tôi có thể chọn các trang mà chúng tôi muốn.
+
+24
+00:01:59,370 --> 00:02:03,570
+Nhưng trước khi tôi làm điều đó, chúng ta có một thứ gọi là Dbcontext.
+
+25
+00:02:03,810 --> 00:02:10,949
+Bây giờ chúng tôi đã có một dbcontext trong truy cập dữ liệu, nhưng bạn có thể thấy rằng nó không được phát hiện ở đây.
+
+26
+00:02:11,550 --> 00:02:16,420
+Lý do nó không bị phát hiện không phải vì nó nằm trong dự án của chính nó.
+
+27
+00:02:16,440 --> 00:02:24,280
+Đó là bởi vì khi chúng tôi có một dbcontext để nhận dạng, chúng tôi cần thực hiện một số cấu hình và chúng tôi sẽ thực
+
+28
+00:02:24,280 --> 00:02:26,500
+hiện điều đó trước khi tiếp tục.
+
+29
+00:02:27,180 --> 00:02:35,100
+Nếu tôi mở bối cảnh cơ sở dữ liệu mà chúng tôi có, đó là bối cảnh cơ sở dữ liệu ứng dụng về cơ bản triển khai bối cảnh
+
+30
+00:02:35,100 --> 00:02:36,390
+cơ sở dữ liệu.
+
+31
+00:02:36,940 --> 00:02:45,160
+Nhưng nếu bạn phải triển khai danh tính, thì chúng ta phải triển khai một thứ gọi là dbcontext danh tính.
+
+32
+00:02:45,160 --> 00:02:50,350
+Và nếu bạn nhấn điều khiển. ở đây, chúng ta phải cài đặt gói NuGet.
+
+33
+00:02:50,470 --> 00:02:56,260
+Microsoft DOT, ASP. NET Core chấm Dấu chấm nhận dạng, lõi Entity Framework.
+
+34
+00:02:56,890 --> 00:03:04,090
+Chúng tôi có thể cài đặt gói đó trực tiếp từ đây hoặc có thể nói là cài đặt với trình quản lý gói, mở
+
+35
+00:03:04,090 --> 00:03:08,980
+trình quản lý gói tại đây và chúng tôi có thể cài đặt Dotnet 8.
+
+36
+00:03:09,520 --> 00:03:11,320
+Hãy để tôi làm điều đó.
+
+37
+00:03:12,030 --> 00:03:12,780
+Hoàn hảo.
+
+38
+00:03:12,780 --> 00:03:13,740
+Thế là xong.
+
+39
+00:03:14,250 --> 00:03:20,520
+Khi đã xong, chúng ta phải thêm câu lệnh sử dụng đó và lỗi sẽ biến mất.
+
+40
+00:03:20,790 --> 00:03:23,900
+Bây giờ đó là sự thay đổi duy nhất mà chúng ta phải làm.
+
+41
+00:03:23,910 --> 00:03:30,540
+Nhưng khi chúng tôi sử dụng dbcontext nhận dạng, nếu chúng tôi chạy dự án của mình, sẽ xảy ra lỗi.
+
+42
+00:03:30,540 --> 00:03:32,070
+Và hãy để tôi chỉ ra điều đó.
+
+43
+00:03:33,120 --> 00:03:34,650
+Chúng tôi thấy một ngoại lệ ở đây.
+
+44
+00:03:34,650 --> 00:03:40,470
+Thông tin đăng nhập người dùng nhận dạng loại thực thể yêu cầu phải xác định khóa chính.
+
+45
+00:03:41,100 --> 00:03:47,760
+Tôi sẽ không đi sâu vào chi tiết về những gì đang diễn ra ở đây, nhưng về cơ bản chúng ta
+
+46
+00:03:47,760 --> 00:03:55,260
+có ngữ cảnh DB của ứng dụng, nếu bạn có mô hình đang tạo ở đó, về cơ bản, bạn sẽ phải viết một đoạn dòng
+
+47
+00:03:55,260 --> 00:04:02,040
+này và đó là vì các khóa nhận dạng các bảng được ánh xạ trong quá trình tạo mô hình.
+
+48
+00:04:02,040 --> 00:04:08,070
+Và nếu phương thức cụ thể này không được gọi, thì bạn sẽ gặp thông báo lỗi.
+
+49
+00:04:08,550 --> 00:04:11,040
+Vì vậy, bỏ qua tất cả các chi tiết ở đây.
+
+50
+00:04:11,040 --> 00:04:13,980
+Đây là một trong những cấu hình cần thiết.
+
+51
+00:04:14,250 --> 00:04:21,240
+Vì vậy, khi chúng tôi có ngữ cảnh DB nhận dạng, chúng tôi phải thêm dựa trên trình tạo mô hình tạo mô hình.
+
+52
+00:04:21,240 --> 00:04:25,740
+Và cùng với đó, nếu chúng ta chạy dự án ở đây, nó sẽ hoạt động trở lại.
+
+53
+00:04:27,170 --> 00:04:28,220
+Và hoàn hảo.
+
+54
+00:04:28,220 --> 00:04:31,130
+Bạn có thể thấy ứng dụng sắp xuất hiện ở đây.
+
+55
+00:04:31,130 --> 00:04:36,050
+Chúng tôi có thể điều hướng đến các chi tiết và mọi thứ đều hoạt động như cũ.
+
+56
+00:04:36,530 --> 00:04:45,080
+Nhưng về cơ bản, bối cảnh DB hiện đang triển khai bối cảnh DB nhận dạng thay vì bối cảnh DB đơn giản.
+
+57
+00:04:45,990 --> 00:04:47,940
+Với sự thay đổi danh tính đó.
+
+58
+00:04:48,050 --> 00:04:56,070
+Dbcontext Nếu chúng tôi nhấp chuột phải vào dự án web và nếu chúng tôi cố gắng xác định danh tính ở đây, hãy để tôi
+
+59
+00:04:56,100 --> 00:04:57,090
+làm điều đó.
+
+60
+00:04:58,140 --> 00:05:01,980
+Và theo mặc định, hãy để tôi ghi đè lên tất cả các tệp.
+
+61
+00:05:01,980 --> 00:05:10,380
+Nhưng dbcontext bạn có thể thấy nó tự động phát hiện ngữ cảnh DB của ứng dụng vì nó có danh tính.
+
+62
+00:05:10,410 --> 00:05:11,790
+Bối cảnh DB.
+
+63
+00:05:13,090 --> 00:05:16,780
+Với cấu hình đó, hãy để tôi nhấn nút THÊM.
+
+64
+00:05:17,520 --> 00:05:23,790
+Quá trình này có thể mất một lúc, vì vậy hãy để tôi đợi tất cả các giàn giáo được hoàn thành và hoàn thiện.
+
+65
+00:05:23,790 --> 00:05:26,340
+Bạn có thể thấy rằng đã hoàn thành thành công.
+
+66
+00:05:26,340 --> 00:05:31,140
+Và trong các thay đổi git ở đây, bạn có thể thấy có 79 thay đổi.
+
+67
+00:05:31,530 --> 00:05:37,230
+Vì vậy, khá nhiều thứ đã được thay đổi ở đây và nhiều thứ đã được thêm vào.
+
+68
+00:05:37,590 --> 00:05:42,120
+Hãy để tôi hướng dẫn bạn qua tất cả những điều đó trong video tiếp theo.
+

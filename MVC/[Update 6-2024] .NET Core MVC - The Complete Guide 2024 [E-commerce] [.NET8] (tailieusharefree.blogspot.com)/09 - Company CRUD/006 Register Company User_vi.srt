@@ -1,0 +1,72 @@
+1
+00:00:02,190 --> 00:00:09,420
+Điều cuối cùng còn lại ở đây là nếu chúng tôi có công ty và chúng tôi chọn một công ty ở đây, chúng tôi cần điền
+
+2
+00:00:09,420 --> 00:00:12,720
+ID công ty khi chúng tôi đăng ký người dùng.
+
+3
+00:00:13,020 --> 00:00:18,990
+Và ID công ty này chỉ nên được điền nếu vai trò là công ty.
+
+4
+00:00:20,220 --> 00:00:28,830
+Vì vậy, hãy để tôi quay lại và chúng tôi sẽ chuyển đến mô hình trang nơi chúng tôi có bài đăng trước khi chúng tôi tạo người
+
+5
+00:00:28,830 --> 00:00:29,610
+dùng.
+
+6
+00:00:29,610 --> 00:00:40,170
+Chúng tôi phải kiểm tra ở đây nếu vai trò dấu chấm đầu vào bằng với vai trò dấu chấm chi tiết tĩnh của công ty.
+
+7
+00:00:41,070 --> 00:00:49,140
+Trong trường hợp đó, chúng tôi muốn chỉ định người dùng. ID công ty bằng với đầu vào. ID công ty.
+
+8
+00:00:50,270 --> 00:00:55,010
+Với cấu hình đó, hãy để tôi khởi động lại và xem nó có hoạt động không.
+
+9
+00:00:55,810 --> 00:01:01,660
+Tôi cũng sẽ mở SQL Server để kiểm tra người dùng đã được tạo.
+
+10
+00:01:04,220 --> 00:01:06,050
+Chúng tôi sẽ chọn công ty.
+
+11
+00:01:06,050 --> 00:01:10,850
+Và hãy để tôi đưa hộp sinh động đó ở đây hoặc đăng ký.
+
+12
+00:01:13,370 --> 00:01:14,150
+Hoàn hảo.
+
+13
+00:01:14,150 --> 00:01:15,090
+Thế là xong.
+
+14
+00:01:15,110 --> 00:01:23,960
+Hãy để tôi quay lại cơ sở dữ liệu của chúng tôi, Bulky, và để tôi kiểm tra ASP. NET bảng Người dùng.
+
+15
+00:01:25,070 --> 00:01:27,420
+Người dùng mới ở đâu?
+
+16
+00:01:27,440 --> 00:01:32,300
+Ngay đây chúng ta đi đến đúng và hoàn hảo.
+
+17
+00:01:32,330 --> 00:01:37,220
+Chúng tôi có ID công ty đã được chỉ định và nó trông rất tuyệt.
+
+18
+00:01:38,360 --> 00:01:44,030
+Cùng với đó, chúng tôi có thể đăng ký người dùng công ty trong ứng dụng của mình.
+

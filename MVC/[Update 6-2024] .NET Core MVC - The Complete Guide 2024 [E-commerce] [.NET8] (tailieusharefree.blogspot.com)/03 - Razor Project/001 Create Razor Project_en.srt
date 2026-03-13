@@ -1,0 +1,124 @@
+1
+00:00:01,589 --> 00:00:08,730
+Now we have the bulky project and there we are able to perform all the CRUD operations on categories.
+
+2
+00:00:08,940 --> 00:00:13,080
+And right now what we are working on is an MVC project.
+
+3
+00:00:13,440 --> 00:00:20,040
+But when it comes to .net programming language, there is also another way you can write the same code,
+
+4
+00:00:20,040 --> 00:00:26,940
+and that is using razor pages rather than using models, views and controllers.
+
+5
+00:00:27,510 --> 00:00:34,830
+And the approach to razor pages is somewhat similar to what we have been working in older .net days where
+
+6
+00:00:34,830 --> 00:00:37,770
+we have a back end and a front end page.
+
+7
+00:00:38,490 --> 00:00:45,990
+So let me spend some time and try to replicate the same project that we have built using MVC, using
+
+8
+00:00:45,990 --> 00:00:47,220
+razor pages.
+
+9
+00:00:47,250 --> 00:00:54,420
+That way, within a short time you will have a brief idea of how razor pages actually work.
+
+10
+00:00:55,230 --> 00:01:00,270
+So in our existing solution here, we can have multiple project.
+
+11
+00:01:00,550 --> 00:01:03,370
+One project that we have is bulky web.
+
+12
+00:01:03,400 --> 00:01:09,970
+Let me add a new project here and that will be of the type razor pages.
+
+13
+00:01:10,330 --> 00:01:15,970
+If you type razor here, you can see we have the ASP.NET Core Web app.
+
+14
+00:01:15,970 --> 00:01:19,840
+And this is not the one with model view or controller.
+
+15
+00:01:20,020 --> 00:01:23,110
+It is using the razor pages content.
+
+16
+00:01:23,620 --> 00:01:25,300
+So we will select that.
+
+17
+00:01:25,330 --> 00:01:28,060
+Hit the next button project name.
+
+18
+00:01:28,060 --> 00:01:33,940
+Let me call that bulky web razor, underscore temp and select the next button.
+
+19
+00:01:34,090 --> 00:01:39,070
+Again, authentication will be none here and everything stays the same.
+
+20
+00:01:39,550 --> 00:01:47,320
+We will hit the create button and that will add one more project in our solution, which will be bulky
+
+21
+00:01:47,320 --> 00:01:48,730
+web razor.
+
+22
+00:01:49,700 --> 00:01:56,570
+Now, if I set this as a startup project, it will run this particular website rather than the other
+
+23
+00:01:56,570 --> 00:01:57,080
+one.
+
+24
+00:01:57,080 --> 00:01:59,390
+And let me try to run that.
+
+25
+00:02:00,510 --> 00:02:07,110
+When you run the project, you will see the default page looks exactly the same like we had for an MVC
+
+26
+00:02:07,110 --> 00:02:07,950
+project.
+
+27
+00:02:08,520 --> 00:02:12,030
+But this time you will notice some things are different.
+
+28
+00:02:12,330 --> 00:02:16,200
+If you notice, the URL here is directly privacy.
+
+29
+00:02:16,230 --> 00:02:23,370
+Previously it was home, which was the controller and then privacy, which was the action method.
+
+30
+00:02:23,820 --> 00:02:28,470
+But when we use razor pages, we do not have any controllers.
+
+31
+00:02:29,460 --> 00:02:36,330
+In the next video, let me first show you what is the differences between both the project type.
+

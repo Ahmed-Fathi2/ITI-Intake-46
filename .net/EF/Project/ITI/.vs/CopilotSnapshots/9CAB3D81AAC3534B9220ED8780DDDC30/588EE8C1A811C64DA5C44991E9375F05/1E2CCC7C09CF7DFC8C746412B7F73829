@@ -1,0 +1,165 @@
+﻿using ITI.Application.Dtos;
+using ITI.Application.Interfaces.Services;
+using System.ComponentModel;
+using System.Drawing;
+using System.Linq;
+using System.Windows.Forms;
+
+namespace ITI.WinForms
+{
+    public class CourseSessionForm : Form
+    {
+        private readonly ICourseSessionService courseSessionService;
+        private readonly ICourseService courseService;
+        private readonly IInstractorService instractorService;
+
+        private DataGridView grid;
+        private DateTimePicker datePicker;
+        private TextBox titleTxt;
+        private ComboBox courseCombo;
+        private ComboBox instractorCombo;
+        private Button addBtn;
+        private Button updateBtn;
+        private Button deleteBtn;
+
+        public CourseSessionForm(ICourseSessionService courseSessionService, ICourseService courseService, IInstractorService instractorService)
+        {
+            this.courseSessionService = courseSessionService;
+            this.courseService = courseService;
+            this.instractorService = instractorService;
+
+            InitializeComponent();
+            LoadLookups();
+            LoadSessions();
+        }
+
+        private void InitializeComponent()
+        {
+            Text = "Course Sessions";
+            ClientSize = new Size(1100, 700);
+            StartPosition = FormStartPosition.CenterScreen;
+            Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+
+            grid = new DataGridView { Location = new Point(20, 20), Size = new Size(1040, 360), ReadOnly = true, AutoGenerateColumns = true, Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right };
+            datePicker = new DateTimePicker { Location = new Point(160, 400), Size = new Size(220, 32), Format = DateTimePickerFormat.Short };
+            titleTxt = new TextBox { Location = new Point(160, 450), Size = new Size(600, 32) };
+            courseCombo = new ComboBox { Location = new Point(160, 500), Size = new Size(420, 32), DropDownStyle = ComboBoxStyle.DropDownList };
+            instractorCombo = new ComboBox { Location = new Point(160, 550), Size = new Size(420, 32), DropDownStyle = ComboBoxStyle.DropDownList };
+
+            var dateLbl = new Label { Text = "Date", Location = new Point(20, 400), Size = new Size(120, 25) };
+            var titleLbl = new Label { Text = "Title", Location = new Point(20, 450), Size = new Size(120, 25) };
+            var courseLbl = new Label { Text = "Course", Location = new Point(20, 500), Size = new Size(120, 25) };
+            var insLbl = new Label { Text = "Instructor", Location = new Point(20, 550), Size = new Size(120, 25) };
+
+            addBtn = new Button { Text = "Add", Location = new Point(800, 400), Size = new Size(160, 40), Font = new Font("Segoe UI", 10F) };
+            updateBtn = new Button { Text = "Update", Location = new Point(800, 460), Size = new Size(160, 40), Font = new Font("Segoe UI", 10F) };
+            deleteBtn = new Button { Text = "Delete", Location = new Point(800, 520), Size = new Size(160, 40), Font = new Font("Segoe UI", 10F) };
+
+            Controls.AddRange(new Control[] { grid, datePicker, titleTxt, courseCombo, instractorCombo, dateLbl, titleLbl, courseLbl, insLbl, addBtn, updateBtn, deleteBtn });
+
+            addBtn.Click += AddBtn_Click;
+            updateBtn.Click += UpdateBtn_Click;
+            deleteBtn.Click += DeleteBtn_Click;
+            grid.SelectionChanged += Grid_SelectionChanged;
+        }
+
+        private void LoadLookups()
+        {
+            var courses = courseService.GetAll().ToList();
+            var courseItems = new List<object>();
+            courseItems.Add(new { Id = 0, Name = "-- Select Course --" });
+            courseItems.AddRange(courses.Select(c => new { Id = c.Id, Name = c.Name }));
+            courseCombo.DataSource = courseItems;
+            courseCombo.DisplayMember = "Name";
+            courseCombo.ValueMember = "Id";
+
+            var ins = instractorService.GetAll().ToList();
+            var insItems = new List<object>();
+            insItems.Add(new { Id = 0, Name = "-- Select Instructor --" });
+            insItems.AddRange(ins.Select(i => new { Id = i.Id, Name = i.FullName }));
+            instractorCombo.DataSource = insItems;
+            instractorCombo.DisplayMember = "Name";
+            instractorCombo.ValueMember = "Id";
+        }
+
+        private void LoadSessions()
+        {
+            var list = courseSessionService.GetAll().ToList();
+            grid.DataSource = null;
+            grid.DataSource = new BindingList<AllCourseSessionDto>(list);
+        }
+
+        private void AddBtn_Click(object? sender, EventArgs e)
+        {
+            if (!(courseCombo.SelectedValue is int cId) || cId == 0)
+            {
+                MessageBox.Show("Select a course.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (!(instractorCombo.SelectedValue is int iId) || iId == 0)
+            {
+                MessageBox.Show("Select an instructor.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            var dto = new CreateCourseSessionDto(DateOnly.FromDateTime(datePicker.Value), titleTxt.Text, cId, iId);
+            courseSessionService.Add(dto);
+            ClearInputs();
+            LoadSessions();
+        }
+
+        private void UpdateBtn_Click(object? sender, EventArgs e)
+        {
+            if (grid.CurrentRow?.DataBoundItem is AllCourseSessionDto dto)
+            {
+                if (!(courseCombo.SelectedValue is int cId) || cId == 0)
+                {
+                    MessageBox.Show("Select a course.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (!(instractorCombo.SelectedValue is int iId) || iId == 0)
+                {
+                    MessageBox.Show("Select an instructor.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                var update = new UpdateCourseSessionDto(dto.Id, DateOnly.FromDateTime(datePicker.Value), titleTxt.Text, cId, iId);
+                courseSessionService.Update(update);
+                LoadSessions();
+            }
+        }
+
+        private void DeleteBtn_Click(object? sender, EventArgs e)
+        {
+            if (grid.CurrentRow?.DataBoundItem is AllCourseSessionDto dto)
+            {
+                var r = MessageBox.Show("Delete this session?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (r == DialogResult.Yes)
+                {
+                    courseSessionService.Delete(dto.Id);
+                    LoadSessions();
+                    ClearInputs();
+                }
+            }
+        }
+
+        private void Grid_SelectionChanged(object? sender, EventArgs e)
+        {
+            if (grid.CurrentRow?.DataBoundItem is AllCourseSessionDto dto)
+            {
+                datePicker.Value = dto.Date.ToDateTime(new TimeOnly(0,0));
+                titleTxt.Text = dto.Title ?? string.Empty;
+                courseCombo.SelectedValue = dto.CourseId;
+                instractorCombo.SelectedValue = dto.InstractorId;
+            }
+        }
+
+        private void ClearInputs()
+        {
+            datePicker.Value = DateTime.Today;
+            titleTxt.Text = string.Empty;
+            courseCombo.SelectedValue = 0;
+            instractorCombo.SelectedValue = 0;
+        }
+    }
+}

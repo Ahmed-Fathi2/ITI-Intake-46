@@ -1,0 +1,412 @@
+1
+00:00:01,490 --> 00:00:06,020
+Now I want you to think on what will be there on the edit page.
+
+2
+00:00:06,470 --> 00:00:13,550
+Basically, edit page will be exactly same as the create page, but the category name and display order
+
+3
+00:00:13,550 --> 00:00:19,640
+will be populated based on whatever category the user wants to edit.
+
+4
+00:00:20,390 --> 00:00:27,770
+On top of that, when we create a category, we do not care about what category it is, but when we
+
+5
+00:00:27,770 --> 00:00:33,200
+edit a category, we need to know which category the user wants to edit.
+
+6
+00:00:33,230 --> 00:00:41,150
+Based on that, we will retrieve that category in the Get action method and pass that to our view to
+
+7
+00:00:41,150 --> 00:00:42,230
+display that.
+
+8
+00:00:42,970 --> 00:00:50,380
+But first let me design an empty view where on the edit it will basically display the same view that
+
+9
+00:00:50,380 --> 00:00:51,880
+we have for Create.
+
+10
+00:00:52,910 --> 00:00:55,370
+We will go back to our code here.
+
+11
+00:00:55,550 --> 00:00:57,180
+Stop the project.
+
+12
+00:00:57,200 --> 00:01:02,810
+First, we need to add that action method inside the category controller.
+
+13
+00:01:02,930 --> 00:01:09,500
+Let me close everything else and we will have both get and post action method.
+
+14
+00:01:09,830 --> 00:01:15,110
+When we do not define anything here by default, it is a get action method.
+
+15
+00:01:15,930 --> 00:01:23,600
+So we can copy both get and post action method for create and paste it one more time.
+
+16
+00:01:23,610 --> 00:01:26,310
+Rename that to be edit here.
+
+17
+00:01:27,480 --> 00:01:30,240
+And we have the edit post as well.
+
+18
+00:01:31,180 --> 00:01:38,680
+Now when we are working with edit Like I said before, we need the ID that user wants to edit.
+
+19
+00:01:40,000 --> 00:01:44,680
+So that we will retrieve in the parameter ID right here.
+
+20
+00:01:46,020 --> 00:01:55,140
+We can make that nullable here and then we can add a validation that if ID is null or if ID is equal
+
+21
+00:01:55,140 --> 00:02:01,380
+to zero, that means it is not a valid ID so we can directly return back.
+
+22
+00:02:01,380 --> 00:02:02,460
+Not found.
+
+23
+00:02:03,270 --> 00:02:09,690
+What you can also do is you can have an error page and you can return back to that view, which will
+
+24
+00:02:09,690 --> 00:02:13,920
+be an error view displaying that something is not valid.
+
+25
+00:02:15,080 --> 00:02:18,590
+But I will keep things super simple right now.
+
+26
+00:02:19,540 --> 00:02:25,180
+Then if the ID is valid, we need to retrieve that category from database.
+
+27
+00:02:25,750 --> 00:02:33,220
+Now, when we were retrieving all the categories, we were doing that by using underscore DB dot categories
+
+28
+00:02:33,640 --> 00:02:40,450
+similar to that, if we have to retrieve one category entity, framework core has helper methods for
+
+29
+00:02:40,480 --> 00:02:41,050
+that.
+
+30
+00:02:42,180 --> 00:02:44,610
+Now we have multiple ways of doing that.
+
+31
+00:02:44,610 --> 00:02:48,540
+So let me spend some time and show you the multiple ways.
+
+32
+00:02:49,740 --> 00:03:00,270
+It will be a category object and I will call that category from DB is equal to underscore DB.categories.
+
+33
+00:03:00,270 --> 00:03:08,310
+. we have a method which is find find will basically work on primary key of that model.
+
+34
+00:03:08,520 --> 00:03:16,410
+We know ID is the primary key of categories, so if I pass the ID here, it will automatically find
+
+35
+00:03:16,410 --> 00:03:19,530
+that and assign that to category from DB.
+
+36
+00:03:20,500 --> 00:03:23,260
+We have a warning here that it can be null.
+
+37
+00:03:23,260 --> 00:03:31,270
+And that's okay, because after we find that, we will check here if category from DB is null.
+
+38
+00:03:34,190 --> 00:03:36,860
+In that case, we will again return.
+
+39
+00:03:36,860 --> 00:03:37,880
+Not found.
+
+40
+00:03:40,400 --> 00:03:46,730
+But if it finds the category, then we will pass that to our view and display that.
+
+41
+00:03:47,000 --> 00:03:48,110
+So perfect.
+
+42
+00:03:48,110 --> 00:03:51,320
+That is one way of retrieving the category.
+
+43
+00:03:51,950 --> 00:03:54,110
+Let me see if that works.
+
+44
+00:03:54,650 --> 00:03:57,800
+We will worry about the post action later on.
+
+45
+00:03:57,800 --> 00:04:05,150
+But before that, in order for this to work, we need to pass the ID when we are calling the edit action
+
+46
+00:04:05,150 --> 00:04:05,930
+method.
+
+47
+00:04:06,690 --> 00:04:14,010
+If I go to the index action of category where we are invoking edit we are not passing an ID.
+
+48
+00:04:14,790 --> 00:04:18,730
+How can we pass an ID when we are calling a link here?
+
+49
+00:04:18,750 --> 00:04:25,920
+Because if we were using something like an href here, we can say we want to go to category forward
+
+50
+00:04:25,920 --> 00:04:30,810
+slash edit and then we can pass the ID that the user selects here.
+
+51
+00:04:31,350 --> 00:04:37,170
+But when we have tag helpers, we have something called as ASP route ID.
+
+52
+00:04:38,310 --> 00:04:39,720
+With ASP route.
+
+53
+00:04:39,750 --> 00:04:42,750
+We can pass any property right here.
+
+54
+00:04:43,110 --> 00:04:50,160
+We can pass something called as category ID is equal to and that will be the ID in OBJ.
+
+55
+00:04:50,370 --> 00:04:54,450
+So we have to use the @ sign obj.id.
+
+56
+00:04:55,580 --> 00:04:58,160
+You can call this anything you want.
+
+57
+00:04:58,190 --> 00:05:05,600
+I will call that ID, because if we examine the category controller, I have ID right here.
+
+58
+00:05:05,630 --> 00:05:08,930
+That way it will automatically map that.
+
+59
+00:05:10,230 --> 00:05:11,010
+Perfect.
+
+60
+00:05:11,100 --> 00:05:15,090
+With that configured, let me see that in action.
+
+61
+00:05:19,060 --> 00:05:23,680
+We go to category here and we will edit the scifi.
+
+62
+00:05:24,420 --> 00:05:29,340
+We have the id that is two when we press F10 here.
+
+63
+00:05:30,270 --> 00:05:31,110
+Perfect.
+
+64
+00:05:31,110 --> 00:05:33,240
+It retrieves that category.
+
+65
+00:05:34,130 --> 00:05:37,130
+So find is working as expected.
+
+66
+00:05:37,520 --> 00:05:42,260
+Now, as I said before, there are multiple ways to retrieve a record.
+
+67
+00:05:42,560 --> 00:05:45,470
+Let me also show you the other ways.
+
+68
+00:05:45,980 --> 00:05:47,630
+I will copy this.
+
+69
+00:05:48,390 --> 00:05:50,880
+Paste it about two more times here.
+
+70
+00:05:51,910 --> 00:05:54,190
+And I'll call this one and two.
+
+71
+00:05:54,220 --> 00:05:56,300
+For different variable name.
+
+72
+00:05:56,320 --> 00:06:00,970
+The next method we have something called as first or default.
+
+73
+00:06:01,680 --> 00:06:11,280
+What that will do is it will use a link operation and we have to say u.id is equal equal to the ID that
+
+74
+00:06:11,280 --> 00:06:13,650
+is being passed right here.
+
+75
+00:06:15,060 --> 00:06:19,260
+You can make this a nullable field and the warnings will go away.
+
+76
+00:06:19,410 --> 00:06:20,800
+There we go.
+
+77
+00:06:20,820 --> 00:06:26,670
+But first, our default will basically try to find out on whether there is any record.
+
+78
+00:06:26,700 --> 00:06:29,910
+If not, it will return a null object.
+
+79
+00:06:29,910 --> 00:06:32,730
+And that will be assigned right here.
+
+80
+00:06:34,040 --> 00:06:38,560
+First, our default will work even if the ID is not primary.
+
+81
+00:06:38,570 --> 00:06:46,340
+So if you want to search on name, you can say where name is equal equal to or you can also do . contains.
+
+82
+00:06:46,640 --> 00:06:50,000
+So you can be fancy with first or default.
+
+83
+00:06:50,180 --> 00:06:55,160
+But when you are working with find it only works on the primary key.
+
+84
+00:06:55,160 --> 00:06:58,730
+So you cannot do any modifications in there.
+
+85
+00:07:00,240 --> 00:07:02,130
+So that is the other route.
+
+86
+00:07:02,130 --> 00:07:09,840
+And finally, on categories, we have a where condition where similar to first or default, we can use
+
+87
+00:07:09,840 --> 00:07:19,770
+the link operation and say u.id is equal equal to ID, and once we retrieve that on that, we can add
+
+88
+00:07:19,770 --> 00:07:21,240
+first our default.
+
+89
+00:07:22,000 --> 00:07:28,420
+Now, typically I like the first or default approach, unless some situation is there where you have
+
+90
+00:07:28,420 --> 00:07:35,410
+to do quite a few calculations or filtering and then get first or default only, then I will use the
+
+91
+00:07:35,410 --> 00:07:36,850
+last approach here.
+
+92
+00:07:37,540 --> 00:07:44,860
+But if we add a debugging point and if we run the application, we will see all three of them works
+
+93
+00:07:44,860 --> 00:07:46,330
+exactly the same.
+
+94
+00:07:47,160 --> 00:07:49,650
+I will do edit for the test here.
+
+95
+00:07:50,190 --> 00:07:55,710
+It hits our breakpoint and populated db1.
+
+96
+00:07:55,740 --> 00:07:58,100
+Populated db2.
+
+97
+00:07:58,110 --> 00:07:59,520
+Populated.
+
+98
+00:07:59,760 --> 00:08:00,780
+Perfect.
+
+99
+00:08:01,260 --> 00:08:07,830
+So with that we have seen multiple ways to retrieve one of the category from database.
+
+100
+00:08:08,520 --> 00:08:13,260
+I will comment out the later two here and that looks good.
+
+101
+00:08:14,280 --> 00:08:21,000
+Now that we are passing categories to the view, we can work on the view and display all the category
+
+102
+00:08:21,000 --> 00:08:22,050
+properties.
+
+103
+00:08:22,410 --> 00:08:25,410
+Let me do that in the next video.
+

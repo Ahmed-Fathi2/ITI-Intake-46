@@ -1,0 +1,804 @@
+1
+00:00:00,000 --> 00:00:02,280
+Instructor: In this short video,
+
+2
+00:00:02,280 --> 00:00:05,400
+we will see the different service lifetimes
+
+3
+00:00:05,400 --> 00:00:10,050
+when it comes to dependency injection in .NET Core.
+
+4
+00:00:10,050 --> 00:00:13,290
+Now, you do not have to program this along with me.
+
+5
+00:00:13,290 --> 00:00:16,650
+I just want you guys to watch the next 10 minutes,
+
+6
+00:00:16,650 --> 00:00:20,550
+and understand what are the different service lifetimes
+
+7
+00:00:20,550 --> 00:00:23,220
+in dependency injection.
+
+8
+00:00:23,220 --> 00:00:25,800
+Before we take a look at any example,
+
+9
+00:00:25,800 --> 00:00:28,530
+let me quickly give you a rough idea
+
+10
+00:00:28,530 --> 00:00:32,490
+on what each lifetime is responsible for.
+
+11
+00:00:32,490 --> 00:00:36,540
+Transient lifetime is the simplest one among all of them,
+
+12
+00:00:36,540 --> 00:00:39,600
+and it is also one of the safest one.
+
+13
+00:00:39,600 --> 00:00:41,040
+Transient basically means
+
+14
+00:00:41,040 --> 00:00:43,770
+that whenever we want any implementation,
+
+15
+00:00:43,770 --> 00:00:47,340
+create a new object, and give that new object.
+
+16
+00:00:47,340 --> 00:00:50,520
+You never have to reuse an existing object.
+
+17
+00:00:50,520 --> 00:00:52,950
+Every time a service is requested,
+
+18
+00:00:52,950 --> 00:00:55,443
+a new implementation is created.
+
+19
+00:00:56,400 --> 00:00:58,680
+After that, we have the scoped,
+
+20
+00:00:58,680 --> 00:01:02,190
+where it depends on the HTTP request.
+
+21
+00:01:02,190 --> 00:01:06,120
+So whenever an HTTP request is sent to the server,
+
+22
+00:01:06,120 --> 00:01:10,740
+that time for that scope, one lifetime will be created,
+
+23
+00:01:10,740 --> 00:01:14,820
+and then the same object or same service is used
+
+24
+00:01:14,820 --> 00:01:19,530
+wherever in that request the service is requested.
+
+25
+00:01:19,530 --> 00:01:22,140
+So let's say for one single page load,
+
+26
+00:01:22,140 --> 00:01:24,660
+we are calling a service 10 times.
+
+27
+00:01:24,660 --> 00:01:27,930
+It'll only create that object one time,
+
+28
+00:01:27,930 --> 00:01:32,930
+and it'll use that same object 10 times in that one request.
+
+29
+00:01:33,510 --> 00:01:36,150
+But then if a next request comes in,
+
+30
+00:01:36,150 --> 00:01:39,033
+then a new implementation is created.
+
+31
+00:01:39,990 --> 00:01:42,270
+And finally, we have singleton,
+
+32
+00:01:42,270 --> 00:01:44,670
+where one implementation is created
+
+33
+00:01:44,670 --> 00:01:47,640
+for the lifetime of the application.
+
+34
+00:01:47,640 --> 00:01:50,100
+So once the application starts,
+
+35
+00:01:50,100 --> 00:01:54,000
+we create an object of that service or an implementation,
+
+36
+00:01:54,000 --> 00:01:57,360
+and that is used for all the upcoming request
+
+37
+00:01:57,360 --> 00:01:59,853
+unless you restart the application.
+
+38
+00:02:01,170 --> 00:02:04,383
+So to give you a rough idea, again, transient,
+
+39
+00:02:05,315 --> 00:02:08,490
+new service is created every single time,
+
+40
+00:02:08,490 --> 00:02:13,490
+for scoped, new service will be created once per request,
+
+41
+00:02:13,680 --> 00:02:17,430
+and for singleton, new service will be created
+
+42
+00:02:17,430 --> 00:02:20,283
+once per application lifetime.
+
+43
+00:02:21,120 --> 00:02:24,630
+Now, scoped is one of the most recommended approach
+
+44
+00:02:24,630 --> 00:02:26,580
+for web application.
+
+45
+00:02:26,580 --> 00:02:31,380
+Because of that, a service will be created on each request.
+
+46
+00:02:31,380 --> 00:02:33,900
+But even with all of this overview,
+
+47
+00:02:33,900 --> 00:02:36,393
+things might be a little complicated.
+
+48
+00:02:37,260 --> 00:02:39,720
+So let me explain that a little more
+
+49
+00:02:39,720 --> 00:02:41,883
+with a real world example.
+
+50
+00:02:42,930 --> 00:02:45,090
+Let me switch to Visual Studio,
+
+51
+00:02:45,090 --> 00:02:48,333
+and we will be creating an MVC application.
+
+52
+00:02:49,260 --> 00:02:51,510
+I will give it a name of DI_Service_Lifetime,
+
+53
+00:02:53,160 --> 00:02:54,753
+and let me create that.
+
+54
+00:02:56,280 --> 00:03:00,120
+In the project here, let me create a new folder
+
+55
+00:03:00,120 --> 00:03:02,163
+for services.
+
+56
+00:03:03,270 --> 00:03:05,937
+In there, let me create three interface
+
+57
+00:03:05,937 --> 00:03:08,880
+for the three service that we have.
+
+58
+00:03:08,880 --> 00:03:11,763
+So the first one will be IScoped.
+
+59
+00:03:13,020 --> 00:03:17,943
+Let me add a new one here, that will be singleton.
+
+60
+00:03:18,900 --> 00:03:22,443
+And finally, we will be adding the transient.
+
+61
+00:03:23,561 --> 00:03:26,042
+These are just the interface name.
+
+62
+00:03:26,042 --> 00:03:28,260
+We have not added any functionality.
+
+63
+00:03:28,260 --> 00:03:31,023
+In there, let me add a method, GetGuid,
+
+64
+00:03:31,890 --> 00:03:34,530
+which will return a random guid.
+
+65
+00:03:34,530 --> 00:03:37,083
+So the return type will be string.
+
+66
+00:03:39,030 --> 00:03:40,810
+Perfect, I will add that
+
+67
+00:03:41,646 --> 00:03:44,043
+in all the three interface that we added.
+
+68
+00:03:45,090 --> 00:03:49,173
+Now we need to add implementation of these three interface.
+
+69
+00:03:50,280 --> 00:03:53,430
+Implementation will be pretty simple.
+
+70
+00:03:53,430 --> 00:03:57,590
+Let me add a class here for the SingletonGuidService
+
+71
+00:03:58,470 --> 00:04:02,610
+that will implement the ISingletonGuidService,
+
+72
+00:04:02,610 --> 00:04:04,413
+implement the interface.
+
+73
+00:04:06,000 --> 00:04:09,190
+Here, let me create a private read-only guid
+
+74
+00:04:10,152 --> 00:04:12,873
+with the name of Id, and in the constructor,
+
+75
+00:04:13,803 --> 00:04:16,173
+Id, we will say Guid.NewGuid.
+
+76
+00:04:17,279 --> 00:04:18,723
+In the function here,
+
+77
+00:04:19,599 --> 00:04:22,173
+we just want to return Id.ToString.
+
+78
+00:04:23,400 --> 00:04:25,200
+That looks good.
+
+79
+00:04:25,200 --> 00:04:27,780
+Let me create the same implementation
+
+80
+00:04:27,780 --> 00:04:31,320
+for the other two interface that we have.
+
+81
+00:04:31,320 --> 00:04:35,673
+Let me add a class which will be ScopedGuidService,
+
+82
+00:04:36,657 --> 00:04:40,107
+and that will implement the IScopedGuidService.
+
+83
+00:04:41,730 --> 00:04:45,660
+I can copy everything here, paste it,
+
+84
+00:04:45,660 --> 00:04:48,660
+and we will change the constructor name.
+
+85
+00:04:48,660 --> 00:04:50,250
+Looks good.
+
+86
+00:04:50,250 --> 00:04:53,823
+Let me add the last one, which is TransientGuidService.
+
+87
+00:04:56,070 --> 00:05:00,123
+Let me copy and paste it in here.
+
+88
+00:05:01,050 --> 00:05:05,880
+And this will implement the ITransientGuidService.
+
+89
+00:05:05,880 --> 00:05:07,980
+So now we have three interface,
+
+90
+00:05:07,980 --> 00:05:11,610
+and their corresponding three implementation.
+
+91
+00:05:11,610 --> 00:05:13,440
+That looks good.
+
+92
+00:05:13,440 --> 00:05:17,700
+But when we register the services to Program.cs,
+
+93
+00:05:17,700 --> 00:05:22,700
+we have to write the lifecycle to which we want to register.
+
+94
+00:05:22,890 --> 00:05:25,506
+So in the add service here,
+
+95
+00:05:25,506 --> 00:05:28,980
+we will say builder.Services.add,
+
+96
+00:05:28,980 --> 00:05:32,643
+and then we have to write what lifecycle we want to use.
+
+97
+00:05:33,874 --> 00:05:36,513
+We have scoped, transient, and singleton.
+
+98
+00:05:37,350 --> 00:05:40,110
+In singleton, we will have the interface,
+
+99
+00:05:40,110 --> 00:05:43,170
+which is ISingletonGuidService,
+
+100
+00:05:43,170 --> 00:05:48,170
+and implementation is inside the SingletonGuidService.
+
+101
+00:05:48,180 --> 00:05:51,000
+That is how we register a service
+
+102
+00:05:51,000 --> 00:05:54,300
+to the dependency injection container.
+
+103
+00:05:54,300 --> 00:05:58,293
+We will also register the transient and scoped service.
+
+104
+00:05:59,310 --> 00:06:00,240
+Perfect.
+
+105
+00:06:00,240 --> 00:06:01,560
+So it is exactly same
+
+106
+00:06:01,560 --> 00:06:05,460
+like if we were registering DP context to the container,
+
+107
+00:06:05,460 --> 00:06:07,950
+and then when we have to use that,
+
+108
+00:06:07,950 --> 00:06:10,533
+we will do that inside the HomeController.
+
+109
+00:06:11,670 --> 00:06:14,790
+Before we start using that, right here,
+
+110
+00:06:14,790 --> 00:06:17,910
+let me create six private fields.
+
+111
+00:06:17,910 --> 00:06:20,220
+Two will be for the scoped service,
+
+112
+00:06:20,220 --> 00:06:23,850
+two for singleton, and two for transient.
+
+113
+00:06:23,850 --> 00:06:26,910
+We have scoped one, two, singleton one, two,
+
+114
+00:06:26,910 --> 00:06:28,593
+and transient one, two.
+
+115
+00:06:29,670 --> 00:06:34,110
+Next, what we want is implementation of these interface.
+
+116
+00:06:34,110 --> 00:06:37,530
+We registered that in Program.cs right here,
+
+117
+00:06:37,530 --> 00:06:39,725
+so basically we are saying
+
+118
+00:06:39,725 --> 00:06:42,485
+that when someone asks for an implementation
+
+119
+00:06:42,485 --> 00:06:46,410
+of ISingletonGuidService, we are telling the .NET framework
+
+120
+00:06:46,410 --> 00:06:49,530
+that provide them the implementation that is there
+
+121
+00:06:49,530 --> 00:06:51,603
+in the SingletonGuidService.
+
+122
+00:06:52,470 --> 00:06:56,709
+But there we are telling that use the AddSingleton
+
+123
+00:06:56,709 --> 00:06:57,759
+that is the lifetime.
+
+124
+00:06:58,995 --> 00:07:01,110
+So when we want to use the implementation
+
+125
+00:07:01,110 --> 00:07:05,935
+inside the constructor here, we can directly ask .NET Core
+
+126
+00:07:05,935 --> 00:07:09,810
+that we need the implementation of IScopedGuidService,
+
+127
+00:07:09,810 --> 00:07:13,470
+and we will call that as scopedGuid.
+
+128
+00:07:13,470 --> 00:07:16,410
+Then we want another implementation of that.
+
+129
+00:07:16,410 --> 00:07:21,410
+So scopedGuid1, comma, we will have scopedGuid2.
+
+130
+00:07:21,420 --> 00:07:24,240
+And similarly, we want the implementation
+
+131
+00:07:24,240 --> 00:07:27,780
+for singleton and transient service.
+
+132
+00:07:27,780 --> 00:07:30,377
+So these are the implementation
+
+133
+00:07:30,377 --> 00:07:31,860
+that .NET framework will provide
+
+134
+00:07:31,860 --> 00:07:36,000
+based on what we registered in Program.cs.
+
+135
+00:07:36,000 --> 00:07:38,970
+Then we have to assign these implementation
+
+136
+00:07:38,970 --> 00:07:42,573
+to the local variable that we have right here.
+
+137
+00:07:43,800 --> 00:07:48,170
+For that, we will say _singleton1 is equal to singleton1,
+
+138
+00:07:49,246 --> 00:07:50,883
+and same for everything else.
+
+139
+00:07:51,972 --> 00:07:54,150
+I can change this to be scoped1
+
+140
+00:07:54,150 --> 00:07:56,523
+rather than scopedGuid here.
+
+141
+00:07:57,600 --> 00:08:00,090
+Perfect, looks good.
+
+142
+00:08:00,090 --> 00:08:02,790
+So we have this implementation.
+
+143
+00:08:02,790 --> 00:08:07,080
+On there, we can call the method, which is GetGuid.
+
+144
+00:08:07,080 --> 00:08:09,420
+Rather than making anything fancy,
+
+145
+00:08:09,420 --> 00:08:12,960
+let me use a string builder for messages here,
+
+146
+00:08:12,960 --> 00:08:15,750
+and I will append to that message
+
+147
+00:08:15,750 --> 00:08:17,853
+using string interpolation.
+
+148
+00:08:19,380 --> 00:08:21,870
+So first, I will say Transient 1,
+
+149
+00:08:21,870 --> 00:08:24,300
+and then we will display the value
+
+150
+00:08:24,300 --> 00:08:27,873
+using _transient1.GetGuid.
+
+151
+00:08:30,270 --> 00:08:35,270
+We have that method, and after that, let me add a new line.
+
+152
+00:08:36,659 --> 00:08:38,970
+So perfect, that looks good.
+
+153
+00:08:38,970 --> 00:08:43,970
+For the first transient, copy and paste that once again.
+
+154
+00:08:44,280 --> 00:08:47,970
+We want to display the transient2.GetGuid.
+
+155
+00:08:47,970 --> 00:08:50,523
+And let me add one more new line there.
+
+156
+00:08:52,590 --> 00:08:56,250
+Copy these, paste it two more times.
+
+157
+00:08:56,250 --> 00:08:58,533
+Next, we want this scoped1.
+
+158
+00:09:00,480 --> 00:09:04,653
+scoped1, scoped2, _scoped1, _scoped2.
+
+159
+00:09:09,180 --> 00:09:11,343
+And finally, we need singleton.
+
+160
+00:09:12,300 --> 00:09:13,133
+Perfect.
+
+161
+00:09:14,230 --> 00:09:15,829
+When we return back,
+
+162
+00:09:15,829 --> 00:09:17,753
+we do not want to return back to a view,
+
+163
+00:09:17,753 --> 00:09:19,080
+we just want to return okay
+
+164
+00:09:19,080 --> 00:09:23,163
+and display the message, .ToString, on the screen.
+
+165
+00:09:24,360 --> 00:09:27,630
+So now we need to think about what will happen.
+
+166
+00:09:27,630 --> 00:09:30,880
+All of them have basically the same GetGuid method
+
+167
+00:09:32,026 --> 00:09:33,540
+which returns a random guid,
+
+168
+00:09:33,540 --> 00:09:35,670
+but the only thing that is different
+
+169
+00:09:35,670 --> 00:09:39,033
+is on how the lifecycle have been registered.
+
+170
+00:09:40,110 --> 00:09:43,803
+So let me run this, and see that in action.
+
+171
+00:09:45,780 --> 00:09:46,953
+And perfect.
+
+172
+00:09:47,918 --> 00:09:49,950
+We have something right here.
+
+173
+00:09:49,950 --> 00:09:51,660
+You can see when we are working
+
+174
+00:09:51,660 --> 00:09:55,530
+with the transient request here, the guids are different,
+
+175
+00:09:55,530 --> 00:09:57,990
+but when we have scoped or singleton,
+
+176
+00:09:57,990 --> 00:09:59,730
+they are the same.
+
+177
+00:09:59,730 --> 00:10:02,160
+As we know, singleton stays same
+
+178
+00:10:02,160 --> 00:10:05,940
+for the lifecycle of the application.
+
+179
+00:10:05,940 --> 00:10:08,970
+So even when we refresh the application,
+
+180
+00:10:08,970 --> 00:10:11,520
+scoped and transient will be different,
+
+181
+00:10:11,520 --> 00:10:15,390
+but singleton will always stay the same.
+
+182
+00:10:15,390 --> 00:10:17,910
+You can see when I'm refreshing here,
+
+183
+00:10:17,910 --> 00:10:21,060
+transient is getting updated along with scoped,
+
+184
+00:10:21,060 --> 00:10:24,243
+but singleton always stays the same.
+
+185
+00:10:25,410 --> 00:10:27,752
+And then for scoped here,
+
+186
+00:10:27,752 --> 00:10:30,000
+you can see every time for a single request,
+
+187
+00:10:30,000 --> 00:10:33,931
+it gets a new value, but for one request,
+
+188
+00:10:33,931 --> 00:10:36,393
+the value stays the same in both of them.
+
+189
+00:10:37,230 --> 00:10:42,230
+But in transient, for any time a guid is requested,
+
+190
+00:10:42,241 --> 00:10:43,920
+it calls a new guid.
+
+191
+00:10:43,920 --> 00:10:47,373
+So that means every time when a transient is called,
+
+192
+00:10:48,295 --> 00:10:52,050
+it basically gives a new implementation of that service.
+
+193
+00:10:52,050 --> 00:10:54,362
+When it comes to scoped,
+
+194
+00:10:54,362 --> 00:10:57,660
+the implementation stays same for one request.
+
+195
+00:10:57,660 --> 00:11:01,200
+If in that one request, we are calling this 10 times,
+
+196
+00:11:01,200 --> 00:11:03,420
+we will get the same service,
+
+197
+00:11:03,420 --> 00:11:07,500
+but for the next time, it will get you a different service
+
+198
+00:11:07,500 --> 00:11:09,333
+when you are working with scoped.
+
+199
+00:11:10,770 --> 00:11:13,710
+So with that, you can see how transient, scoped,
+
+200
+00:11:13,710 --> 00:11:15,750
+and singleton are different
+
+201
+00:11:15,750 --> 00:11:19,563
+when it comes to dependency injection service lifetime.
+

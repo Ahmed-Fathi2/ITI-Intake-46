@@ -1,0 +1,52 @@
+1
+00:00:01,819 --> 00:00:05,480
+Bây giờ, khi chúng tôi đang lập trình, chúng tôi sẽ yêu cầu một số công cụ.
+
+2
+00:00:05,990 --> 00:00:09,500
+Đây là ba công cụ mà bạn sẽ cần cho khóa học này.
+
+3
+00:00:10,160 --> 00:00:14,120
+Trước tiên, bạn sẽ phải cài đặt . ròng bảy hoặc . NET tám.
+
+4
+00:00:14,450 --> 00:00:19,670
+Khi bạn tham gia khóa học này, nếu . net 8 hoặc phiên bản mới nhất của . mạng lưới.
+
+5
+00:00:19,700 --> 00:00:25,880
+Nếu đó là bản xem trước, thì hãy đảm bảo tải xuống phiên bản xem trước và làm theo.
+
+6
+00:00:26,510 --> 00:00:34,100
+Bạn sẽ yêu cầu Visual Studio 2022 nếu bạn đang sử dụng . ròng bảy vì . net 8 hiện đang được xem
+
+7
+00:00:34,100 --> 00:00:34,940
+trước.
+
+8
+00:00:35,060 --> 00:00:42,890
+Nhưng nếu bạn tải xuống . net 8 thì bạn có thể tải xuống bản xem trước Visual Studio 2022 và cùng với đó, chúng tôi
+
+9
+00:00:42,890 --> 00:00:45,170
+sẽ có thể sử dụng các tệp . mạng tám.
+
+10
+00:00:46,540 --> 00:00:53,080
+Cuối cùng, đối với cơ sở dữ liệu, chúng tôi sẽ yêu cầu SQL Server và SQL Server Management Studio.
+
+11
+00:00:53,440 --> 00:00:59,440
+Vì vậy, về cơ bản, bạn có thể theo dõi khóa học này bằng cách sử dụng . ròng bảy hoặc . mạng tám.
+
+12
+00:01:00,950 --> 00:01:08,480
+Tôi cũng sẽ có các liên kết đến mọi thứ trong phần mô tả của video, vì vậy hãy đảm bảo tải chúng xuống
+
+13
+00:01:08,480 --> 00:01:11,720
+và để tôi tiếp tục từ video tiếp theo.
+

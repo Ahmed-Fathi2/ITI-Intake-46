@@ -1,0 +1,16 @@
+F:\ITI\.Net\mvc\Labs\Layerd Arch\Ecom\Ecom.BLL\bin\Debug\net10.0\Ecom.BLL.deps.json
+F:\ITI\.Net\mvc\Labs\Layerd Arch\Ecom\Ecom.BLL\bin\Debug\net10.0\Ecom.BLL.dll
+F:\ITI\.Net\mvc\Labs\Layerd Arch\Ecom\Ecom.BLL\bin\Debug\net10.0\Ecom.BLL.pdb
+F:\ITI\.Net\mvc\Labs\Layerd Arch\Ecom\Ecom.BLL\bin\Debug\net10.0\Ecom.DAL.dll
+F:\ITI\.Net\mvc\Labs\Layerd Arch\Ecom\Ecom.BLL\bin\Debug\net10.0\Ecom.DAL.pdb
+F:\ITI\.Net\mvc\Labs\Layerd Arch\Ecom\Ecom.BLL\obj\Debug\net10.0\Ecom.BLL.csproj.AssemblyReference.cache
+F:\ITI\.Net\mvc\Labs\Layerd Arch\Ecom\Ecom.BLL\obj\Debug\net10.0\Ecom.BLL.GeneratedMSBuildEditorConfig.editorconfig
+F:\ITI\.Net\mvc\Labs\Layerd Arch\Ecom\Ecom.BLL\obj\Debug\net10.0\Ecom.BLL.AssemblyInfoInputs.cache
+F:\ITI\.Net\mvc\Labs\Layerd Arch\Ecom\Ecom.BLL\obj\Debug\net10.0\Ecom.BLL.AssemblyInfo.cs
+F:\ITI\.Net\mvc\Labs\Layerd Arch\Ecom\Ecom.BLL\obj\Debug\net10.0\Ecom.BLL.csproj.CoreCompileInputs.cache
+F:\ITI\.Net\mvc\Labs\Layerd Arch\Ecom\Ecom.BLL\obj\Debug\net10.0\Ecom.BLL.sourcelink.json
+F:\ITI\.Net\mvc\Labs\Layerd Arch\Ecom\Ecom.BLL\obj\Debug\net10.0\Ecom.BLL.csproj.Up2Date
+F:\ITI\.Net\mvc\Labs\Layerd Arch\Ecom\Ecom.BLL\obj\Debug\net10.0\Ecom.BLL.dll
+F:\ITI\.Net\mvc\Labs\Layerd Arch\Ecom\Ecom.BLL\obj\Debug\net10.0\refint\Ecom.BLL.dll
+F:\ITI\.Net\mvc\Labs\Layerd Arch\Ecom\Ecom.BLL\obj\Debug\net10.0\Ecom.BLL.pdb
+F:\ITI\.Net\mvc\Labs\Layerd Arch\Ecom\Ecom.BLL\obj\Debug\net10.0\ref\Ecom.BLL.dll

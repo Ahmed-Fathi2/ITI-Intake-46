@@ -1,0 +1,328 @@
+1
+00:00:01,770 --> 00:00:04,680
+-: Now when we go to summary and place order
+
+2
+00:00:04,680 --> 00:00:07,470
+it takes us to the Stripe and there we have
+
+3
+00:00:07,470 --> 00:00:11,850
+to enter credit card information and hit "PLACE ORDER."
+
+4
+00:00:11,850 --> 00:00:13,620
+Once that is successful,
+
+5
+00:00:13,620 --> 00:00:16,860
+it will take us to this particular page.
+
+6
+00:00:16,860 --> 00:00:19,860
+But when we go to this page, how will we know
+
+7
+00:00:19,860 --> 00:00:24,270
+that whether the payment was actually successful or not?
+
+8
+00:00:24,270 --> 00:00:27,060
+For that, we will have to get the session again
+
+9
+00:00:27,060 --> 00:00:30,273
+from Stripe and check its status.
+
+10
+00:00:31,170 --> 00:00:32,790
+So if you scroll down
+
+11
+00:00:32,790 --> 00:00:35,610
+where we have the order confirmation,
+
+12
+00:00:35,610 --> 00:00:38,433
+right here we will have to add some logic.
+
+13
+00:00:39,330 --> 00:00:42,150
+First, based on the ID, we will retrieve
+
+14
+00:00:42,150 --> 00:00:44,910
+the complete order header.
+
+15
+00:00:44,910 --> 00:00:47,730
+After that, we only care about payment
+
+16
+00:00:47,730 --> 00:00:51,510
+if the payment status is not delayed payment
+
+17
+00:00:51,510 --> 00:00:54,180
+because if that is delayed payment
+
+18
+00:00:54,180 --> 00:00:56,430
+that we see in the first order
+
+19
+00:00:56,430 --> 00:00:59,373
+then we do not care about Stripe right now.
+
+20
+00:01:00,300 --> 00:01:02,280
+So we will add the if condition.
+
+21
+00:01:02,280 --> 00:01:07,280
+If orderHeader.PaymentStatus is not equal to SD.,
+
+22
+00:01:08,820 --> 00:01:12,000
+we have the payment status delayed.
+
+23
+00:01:12,000 --> 00:01:17,000
+If that is not the case, then this is an order by customer.
+
+24
+00:01:18,420 --> 00:01:23,340
+In that case, we have to go and retrieve a Stripe session.
+
+25
+00:01:23,340 --> 00:01:26,040
+Doing that is super simple.
+
+26
+00:01:26,040 --> 00:01:29,400
+Let me create a variable with the name of service
+
+27
+00:01:29,400 --> 00:01:33,690
+and that will be of type new SessionService
+
+28
+00:01:33,690 --> 00:01:36,990
+that is a built-in class in Stripe package.
+
+29
+00:01:36,990 --> 00:01:40,650
+And then we want to retrieve a session object.
+
+30
+00:01:40,650 --> 00:01:44,190
+Using the service, we can invoke a built-in method,
+
+31
+00:01:44,190 --> 00:01:46,530
+get inside there, and there,
+
+32
+00:01:46,530 --> 00:01:49,443
+we basically have to write the session ID.
+
+33
+00:01:50,490 --> 00:01:53,100
+Good thing is we are saving that session ID
+
+34
+00:01:53,100 --> 00:01:57,360
+in orderHeader so we can retrieve that session ID
+
+35
+00:01:57,360 --> 00:02:00,660
+and then we can check the payment status.
+
+36
+00:02:00,660 --> 00:02:05,660
+So we can say if session.PaymentStatus==
+
+37
+00:02:07,950 --> 00:02:10,990
+and let me go to stripe documentation
+
+38
+00:02:12,300 --> 00:02:14,793
+stripessession.net.
+
+39
+00:02:20,340 --> 00:02:24,353
+And right there let me search for payment_status.
+
+40
+00:02:28,999 --> 00:02:31,050
+You can see the possible enum values
+
+41
+00:02:31,050 --> 00:02:36,050
+for payment_status is paid, unpaid, or no_payment_required.
+
+42
+00:02:36,180 --> 00:02:39,090
+We care if the payment status is paid.
+
+43
+00:02:39,090 --> 00:02:42,210
+That means everything was successful.
+
+44
+00:02:42,210 --> 00:02:46,080
+So right here we can convert this to be toLower,
+
+45
+00:02:46,080 --> 00:02:49,170
+and if that is equal-equal to paid,
+
+46
+00:02:49,170 --> 00:02:52,143
+that means that actual payment went through.
+
+47
+00:02:53,010 --> 00:02:54,960
+In that case, this session object
+
+48
+00:02:54,960 --> 00:02:57,720
+will have the PaymentIntentID.
+
+49
+00:02:57,720 --> 00:03:01,710
+So let me copy this line, paste it again, and we want
+
+50
+00:03:01,710 --> 00:03:06,710
+to update the PaymentIntentID and that will work.
+
+51
+00:03:06,810 --> 00:03:08,760
+Now when we update the PaymentIntentID,
+
+52
+00:03:09,690 --> 00:03:12,140
+we also have to update the order status.
+
+53
+00:03:12,140 --> 00:03:17,140
+So OrderHeader.UpdateStatus.
+
+54
+00:03:17,280 --> 00:03:21,153
+The ID is inside directly the ID.
+
+55
+00:03:23,130 --> 00:03:26,280
+Copy and paste that, comma...
+
+56
+00:03:26,280 --> 00:03:29,160
+And the new status will be status approved
+
+57
+00:03:29,160 --> 00:03:31,710
+and the payment status is also done.
+
+58
+00:03:31,710 --> 00:03:34,533
+So SD.PaymentStatusApproved.
+
+59
+00:03:36,060 --> 00:03:39,090
+After all of that, do not forget to do
+
+60
+00:03:39,090 --> 00:03:43,533
+_unitOfWork.Save or else things won't work.
+
+61
+00:03:44,580 --> 00:03:47,910
+So perfect, we are updating the payment status here
+
+62
+00:03:47,910 --> 00:03:51,750
+and everything is completed at this point.
+
+63
+00:03:51,750 --> 00:03:53,130
+Before we move forward,
+
+64
+00:03:53,130 --> 00:03:55,980
+what we can do is remove the shopping cart
+
+65
+00:03:55,980 --> 00:03:58,230
+and make that empty.
+
+66
+00:03:58,230 --> 00:04:01,030
+So List of ShoppingCart, retrieve all the shopping cart,
+
+67
+00:04:04,416 --> 00:04:07,083
+_unitOfWork.ShoppingCart.GetAll.
+
+68
+00:04:09,480 --> 00:04:13,020
+We want to get them based on the user ID.
+
+69
+00:04:13,020 --> 00:04:16,750
+So u=>u.ApplicationUserId == orderHeader.ApplicationUserId
+
+70
+00:04:23,010 --> 00:04:26,313
+and we will convert that toList.
+
+71
+00:04:27,930 --> 00:04:31,323
+Let me break that out so it's easier to read.
+
+72
+00:04:32,730 --> 00:04:33,600
+Perfect.
+
+73
+00:04:33,600 --> 00:04:35,190
+Once we have the list,
+
+74
+00:04:35,190 --> 00:04:38,640
+we need to remove that from our database
+
+75
+00:04:38,640 --> 00:04:42,390
+so _unitOfWork.ShoppingCart.
+
+76
+00:04:42,390 --> 00:04:44,820
+We have a RemoveRange there
+
+77
+00:04:44,820 --> 00:04:47,613
+and we can pass all the shopping cart there.
+
+78
+00:04:48,690 --> 00:04:52,893
+Finally, we will save the changes and that should work.
+
+79
+00:04:53,970 --> 00:04:56,910
+With that, we have added quite a few logic
+
+80
+00:04:56,910 --> 00:04:59,370
+in the order confirmation page
+
+81
+00:04:59,370 --> 00:05:03,960
+and let me restart the application and test everything
+
+82
+00:05:03,960 --> 00:05:05,433
+in the next video.
+

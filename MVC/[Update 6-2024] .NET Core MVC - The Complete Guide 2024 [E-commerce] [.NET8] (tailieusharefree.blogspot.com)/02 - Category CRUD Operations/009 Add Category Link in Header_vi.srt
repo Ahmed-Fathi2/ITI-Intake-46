@@ -1,0 +1,140 @@
+1
+00:00:01,609 --> 00:00:06,790
+Chúng tôi muốn hiển thị tất cả các danh mục trên trang danh sách danh mục mà chúng tôi đã thêm.
+
+2
+00:00:06,800 --> 00:00:13,370
+Nhưng mỗi khi chúng tôi chạy ứng dụng, chúng tôi không muốn vào đây và nhập URL này.
+
+3
+00:00:13,670 --> 00:00:17,000
+Thay vào đó, tôi muốn thêm một cái gì đó như thể loại ở đây.
+
+4
+00:00:17,000 --> 00:00:20,930
+Khi chúng tôi nhấp vào đó, nó sẽ đưa chúng tôi đến URL này.
+
+5
+00:00:21,880 --> 00:00:25,570
+Bây giờ, chúng ta có tiêu đề này mà bạn nhìn thấy trên màn hình ở đâu?
+
+6
+00:00:26,050 --> 00:00:29,530
+Nếu bạn đặt bố cục gạch dưới, bạn đã đúng.
+
+7
+00:00:29,800 --> 00:00:31,980
+Hãy để tôi dừng ứng dụng.
+
+8
+00:00:31,990 --> 00:00:39,940
+Nếu chúng tôi chuyển đến thư mục dùng chung, chúng tôi có bố cục được gạch chân ở đó và ở đó chúng tôi có các phần
+
+9
+00:00:39,970 --> 00:00:43,570
+tử UL và LI nơi chúng tôi có LI với thẻ liên kết.
+
+10
+00:00:44,190 --> 00:00:50,670
+Bây giờ, thẻ neo này có vẻ hơi khác một chút vì trong thẻ neo này, chúng ta có một thứ
+
+11
+00:00:50,670 --> 00:00:52,410
+được gọi là vùng ASP.
+
+12
+00:00:52,590 --> 00:00:54,630
+Bạn chỉ có thể xóa nó ngay bây giờ.
+
+13
+00:00:54,630 --> 00:01:01,470
+Chúng tôi không quan tâm đến chúng, nhưng chúng tôi có một thứ gọi là bộ điều khiển ASP và hành động ASP.
+
+14
+00:01:01,860 --> 00:01:06,570
+Đây là những trình trợ giúp thẻ và chúng rất hữu ích khi bạn làm việc với. ứng dụng mạng.
+
+15
+00:01:06,810 --> 00:01:08,130
+Bạn có thể coi chúng
+
+16
+00:01:08,400 --> 00:01:16,140
+như một hàm trợ giúp hoặc các thực thể trợ giúp có sẵn cho bạn khi chúng ta có thẻ liên kết thay vì có một href
+
+17
+00:01:16,140 --> 00:01:23,490
+ở đây và nói rằng không sao, hãy đưa tôi tới dấu gạch chéo về phía trước và sau đó lập chỉ mục.
+
+18
+00:01:23,490 --> 00:01:24,740
+Chúng tôi có các thẻ trợ giúp
+
+19
+00:01:24,750 --> 00:01:31,770
+ở đây, nơi chúng tôi có thể nói trên thẻ neo, đưa tôi đến bộ điều khiển, đó là bộ điều khiển gia đình và trong đó đưa tôi đến hành động lập chỉ mục.
+
+20
+00:01:31,770 --> 00:01:36,630
+Và nếu bạn nhìn vào đó, sẽ rõ ràng hơn rằng bộ điều khiển
+
+21
+00:01:37,560 --> 00:01:44,040
+nào, hành động nào đang được gọi khi chúng ta nhấp vào thẻ neo này.
+
+22
+00:01:44,140 --> 00:01:46,210
+Hãy để tôi sao chép này và dán nó một lần nữa.
+
+23
+00:01:47,170 --> 00:01:50,250
+Điều tiếp theo mà chúng tôi muốn thực hiện là bộ điều khiển danh mục và hành động là hành động lập chỉ mục.
+
+24
+00:01:50,320 --> 00:01:58,420
+Cái chúng tôi muốn gọi ở đây là phạm trù và hoàn hảo.
+
+25
+00:01:59,050 --> 00:02:04,270
+Trông tôt đây.
+
+26
+00:02:04,270 --> 00:02:05,620
+Đây chỉ là các lớp bootstrap, vì vậy chúng tôi sẽ bỏ qua chúng.
+
+27
+00:02:06,500 --> 00:02:09,979
+Nhưng về cơ bản, chúng tôi đã thêm một yếu tố khác ngay tại đây.
+
+28
+00:02:09,979 --> 00:02:14,150
+Với cấu hình đó, hãy để tôi chạy ứng dụng và xem nó có hoạt động không.
+
+29
+00:02:15,410 --> 00:02:20,480
+Hoàn hảo.
+
+30
+00:02:21,230 --> 00:02:21,930
+Chúng tôi có danh mục và khi chúng tôi nhấp vào đó, nó sẽ chạm vào điểm gỡ lỗi của chúng tôi.
+
+31
+00:02:21,950 --> 00:02:27,250
+Hãy để tôi loại bỏ và tiếp tục.
+
+32
+00:02:27,260 --> 00:02:29,690
+Và hoàn hảo.
+
+33
+00:02:29,990 --> 00:02:31,490
+Để xóa, bạn chỉ cần nhấp vào đó một lần nữa và nó sẽ xóa điểm gỡ lỗi đó.
+
+34
+00:02:31,670 --> 00:02:37,760
+Rất hoàn hảo.
+
+35
+00:02:38,420 --> 00:02:39,560
+Bây giờ chúng ta có thể vào danh mục và điều hướng giữa các trang khá dễ dàng.
+

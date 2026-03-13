@@ -1,0 +1,236 @@
+1
+00:00:01,859 --> 00:00:03,120
+Instructor: Now in our project,
+
+2
+00:00:03,120 --> 00:00:05,370
+when we go to the details here
+
+3
+00:00:05,370 --> 00:00:09,150
+we cannot add items to the shopping cart.
+
+4
+00:00:09,150 --> 00:00:11,040
+And the reason is simple.
+
+5
+00:00:11,040 --> 00:00:15,480
+We do not have a model to store shopping cart in database.
+
+6
+00:00:15,480 --> 00:00:18,480
+Now there are multiple ways to store shopping cart.
+
+7
+00:00:18,480 --> 00:00:21,270
+You can obviously store all the shopping cart
+
+8
+00:00:21,270 --> 00:00:23,730
+in the session as well.
+
+9
+00:00:23,730 --> 00:00:27,000
+I always like to store that in database
+
+10
+00:00:27,000 --> 00:00:28,800
+because what typically happens
+
+11
+00:00:28,800 --> 00:00:32,729
+is when someone has items added to the shopping cart,
+
+12
+00:00:32,729 --> 00:00:35,160
+if we have that in the database
+
+13
+00:00:35,160 --> 00:00:37,020
+we can always track that,
+
+14
+00:00:37,020 --> 00:00:39,990
+hey, the item was in cart for three days
+
+15
+00:00:39,990 --> 00:00:43,350
+and we can send them promotional emails.
+
+16
+00:00:43,350 --> 00:00:45,990
+Because of those marketing that could be done
+
+17
+00:00:45,990 --> 00:00:47,670
+with the shopping cart,
+
+18
+00:00:47,670 --> 00:00:51,033
+it is always good to add that to a database.
+
+19
+00:00:51,870 --> 00:00:54,423
+So think about what will be all the properties
+
+20
+00:00:54,423 --> 00:00:58,563
+that are needed to add an item to the shopping cart?
+
+21
+00:00:59,670 --> 00:01:03,660
+For that, we will require what product has been added,
+
+22
+00:01:03,660 --> 00:01:06,270
+what is the count of that product,
+
+23
+00:01:06,270 --> 00:01:07,470
+and on top of that,
+
+24
+00:01:07,470 --> 00:01:10,020
+what is the user ID of the user
+
+25
+00:01:10,020 --> 00:01:12,420
+that added the shopping cart?
+
+26
+00:01:12,420 --> 00:01:15,720
+Because without user ID it will be a big mess
+
+27
+00:01:15,720 --> 00:01:18,363
+because any user can add an item.
+
+28
+00:01:19,230 --> 00:01:22,170
+So our model is pretty simple.
+
+29
+00:01:22,170 --> 00:01:25,410
+Let me switch back and stop the application,
+
+30
+00:01:25,410 --> 00:01:27,960
+close everything else here,
+
+31
+00:01:27,960 --> 00:01:30,723
+and we will be adding a new model.
+
+32
+00:01:31,590 --> 00:01:36,363
+Add a new class that will be shopping cart.
+
+33
+00:01:37,650 --> 00:01:42,650
+It will be a public class and it will have four properties.
+
+34
+00:01:42,990 --> 00:01:46,380
+We will have ID, which will be a primary key.
+
+35
+00:01:46,380 --> 00:01:49,710
+We have product ID and user ID,
+
+36
+00:01:49,710 --> 00:01:53,010
+and count will resemble to the quantity.
+
+37
+00:01:53,010 --> 00:01:56,250
+Product ID that we have here will be a foreign key
+
+38
+00:01:56,250 --> 00:01:57,780
+to the product table.
+
+39
+00:01:57,780 --> 00:02:01,920
+So let me add that foreign key and validate never
+
+40
+00:02:01,920 --> 00:02:04,653
+and we have the application user ID.
+
+41
+00:02:05,640 --> 00:02:09,479
+That will be foreign key to the application user table,
+
+42
+00:02:09,479 --> 00:02:11,703
+so we will add that as well.
+
+43
+00:02:12,810 --> 00:02:15,030
+Finally, where we have the count here
+
+44
+00:02:15,030 --> 00:02:16,620
+I can add a validation.
+
+45
+00:02:16,620 --> 00:02:20,340
+That range must be between 1 to 1000.
+
+46
+00:02:20,340 --> 00:02:24,423
+If it is not, we will display a custom error message.
+
+47
+00:02:25,470 --> 00:02:29,220
+So that looks good for the shopping cart model.
+
+48
+00:02:29,220 --> 00:02:32,040
+We have to add that to our database.
+
+49
+00:02:32,040 --> 00:02:34,380
+And thankfully with shopping cart
+
+50
+00:02:34,380 --> 00:02:37,023
+we will not have to seed any record.
+
+51
+00:02:38,310 --> 00:02:40,743
+So we have shopping cart here,
+
+52
+00:02:42,510 --> 00:02:45,180
+call that shopping carts,
+
+53
+00:02:45,180 --> 00:02:47,343
+and we have to add a migration.
+
+54
+00:02:48,690 --> 00:02:52,110
+I will call that add shopping cart to DB
+
+55
+00:02:52,110 --> 00:02:54,603
+and let me update the database.
+
+56
+00:02:59,130 --> 00:03:00,000
+Perfect.
+
+57
+00:03:00,000 --> 00:03:02,610
+So our shopping cart model has been added
+
+58
+00:03:02,610 --> 00:03:04,110
+to our database.
+
+59
+00:03:04,110 --> 00:03:06,783
+Let me continue from the next video.
+

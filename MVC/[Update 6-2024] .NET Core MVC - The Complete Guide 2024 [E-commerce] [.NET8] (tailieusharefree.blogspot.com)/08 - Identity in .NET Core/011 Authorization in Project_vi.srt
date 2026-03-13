@@ -1,0 +1,400 @@
+1
+00:00:01,569 --> 00:00:09,490
+Bây giờ chúng tôi có người dùng có vai trò thực tế trong trang web của mình, chúng tôi có thể thực hiện một sửa
+
+2
+00:00:09,490 --> 00:00:15,130
+đổi và đó là quản lý nội dung chỉ hiển thị nếu người dùng là quản trị viên.
+
+3
+00:00:15,640 --> 00:00:20,650
+Nếu không, thì họ không nên xem phần quản lý nội dung ngay tại đây.
+
+4
+00:00:21,160 --> 00:00:24,760
+Vậy làm cách nào để kiểm tra vai trò của người dùng đã đăng nhập?
+
+5
+00:00:25,770 --> 00:00:26,340
+Vì điều đó.
+
+6
+00:00:26,340 --> 00:00:33,000
+Nếu chúng tôi quay lại ứng dụng và chúng tôi phải thêm nó vào bên trong bố cục được gạch dưới, đó
+
+7
+00:00:33,000 --> 00:00:37,680
+là trang chính thì chúng tôi có danh sách thả xuống ngay tại đây.
+
+8
+00:00:38,320 --> 00:00:46,060
+Để kiểm tra vai trò của người dùng đã đăng nhập, chúng ta có thể thêm điều kiện if bằng cú pháp dao cạo và chúng
+
+9
+00:00:46,060 --> 00:00:49,870
+ta có đối tượng người dùng đã có sẵn trong dự án.
+
+10
+00:00:50,230 --> 00:00:57,880
+Vì vậy, chúng tôi có thể kiểm tra xem người dùng có phương thức trợ giúp nào đang đóng vai trò hay không và chúng tôi có thể kiểm tra tên của vai trò.
+
+11
+00:00:58,630 --> 00:01:03,200
+Chúng tôi cần các chi tiết tĩnh ở đây, nhưng nó không thể truy cập được.
+
+12
+00:01:03,220 --> 00:01:05,740
+Chúng ta phải thêm câu lệnh sử dụng.
+
+13
+00:01:07,040 --> 00:01:09,890
+Chúng tôi sẽ nói tiện ích chấm sách cồng kềnh.
+
+14
+00:01:09,920 --> 00:01:16,130
+Và nếu chúng tôi không muốn thêm nó ở đây, chúng tôi có thể thêm nó vào bên trong chế độ xem nhập.
+
+15
+00:01:16,960 --> 00:01:18,370
+Ngay chỗ này.
+
+16
+00:01:19,140 --> 00:01:23,670
+Và hãy để tôi thêm điều đó vào các quan điểm khác mà chúng ta có.
+
+17
+00:01:24,320 --> 00:01:29,540
+Vì vậy, trong các khu vực thực sự quan điểm của quản trị viên.
+
+18
+00:01:29,570 --> 00:01:37,790
+Xem nhập dán mà khách hàng xem xem nhập.
+
+19
+00:01:39,120 --> 00:01:41,850
+Và cho tôi xem danh tính.
+
+20
+00:01:42,750 --> 00:01:45,030
+Chúng tôi đã xem nhập khẩu.
+
+21
+00:01:46,040 --> 00:01:47,000
+Dán cái đó.
+
+22
+00:01:47,180 --> 00:01:51,410
+Bây giờ tôi cũng sẽ dán hai danh tính bên trong khác.
+
+23
+00:01:52,270 --> 00:01:55,150
+Và tôi nghĩ rằng tôi đã cắt nó, vì vậy.
+
+24
+00:01:55,600 --> 00:01:56,320
+Hoàn hảo.
+
+25
+00:01:56,320 --> 00:01:57,670
+Trông tôt đây.
+
+26
+00:01:57,760 --> 00:01:59,860
+Hãy để tôi đóng tất cả các tab.
+
+27
+00:01:59,890 --> 00:02:01,930
+Tôi đã mở quá nhiều tab.
+
+28
+00:02:02,620 --> 00:02:09,340
+Hãy để tôi thu gọn tất cả và chúng tôi đang làm việc trên bố cục gạch dưới được chia sẻ.
+
+29
+00:02:09,520 --> 00:02:19,090
+Vì vậy, bây giờ PSD có thể truy cập được và chúng tôi có thể nói nếu người dùng có vai trò quản trị viên, thì chúng tôi muốn hiển thị đồng minh cụ thể
+
+30
+00:02:19,120 --> 00:02:19,540
+này.
+
+31
+00:02:20,870 --> 00:02:28,010
+Nếu tôi lưu nó và chạy ứng dụng, bạn sẽ nhận thấy rằng trình đơn thả xuống này sẽ bị ẩn trừ khi người
+
+32
+00:02:28,010 --> 00:02:30,320
+dùng là người dùng quản trị.
+
+33
+00:02:31,740 --> 00:02:40,410
+Vì vậy, ngay bây giờ, chúng tôi không thấy rằng nếu chúng tôi đăng nhập với tư cách là khách hàng thử nghiệm, nó sẽ không khả dụng.
+
+34
+00:02:41,800 --> 00:02:43,330
+Bạn có thể thấy rằng.
+
+35
+00:02:43,330 --> 00:02:49,240
+Và nếu chúng tôi đăng xuất ở đây, hãy để tôi đăng nhập với tư cách quản trị viên.
+
+36
+00:02:50,200 --> 00:02:51,010
+Rất tiếc.
+
+37
+00:02:52,110 --> 00:02:53,640
+Nó phải là quản trị viên.
+
+38
+00:02:53,670 --> 00:02:55,020
+Chúng ta đi thôi.
+
+39
+00:02:58,790 --> 00:03:02,210
+Và hoàn hảo, sau đó chúng ta có thể xem điều đó.
+
+40
+00:03:02,840 --> 00:03:07,760
+Bây giờ ở đây chúng tôi chỉ chuyển đổi khi hiển thị quản lý nội dung này.
+
+41
+00:03:08,060 --> 00:03:16,790
+Nhưng nếu ai đó có URL ở đây, nếu đăng xuất ở đây và thậm chí sau đó nếu họ nhập URL, bạn có thể thấy
+
+42
+00:03:16,790 --> 00:03:20,870
+họ có thể truy cập và quản lý danh mục đó.
+
+43
+00:03:20,870 --> 00:03:22,880
+Điều đó là không thể.
+
+44
+00:03:23,390 --> 00:03:31,700
+Chúng tôi cần đảm bảo rằng chỉ quản trị viên mới có quyền truy cập vào trang này, thêm vào đó là điều cực kỳ đơn giản và những gì chúng
+
+45
+00:03:31,700 --> 00:03:34,940
+tôi sẽ làm là nơi chúng tôi có bộ điều khiển.
+
+46
+00:03:36,080 --> 00:03:39,890
+Hãy để tôi đi đến khu vực điều khiển quản trị viên.
+
+47
+00:03:40,760 --> 00:03:43,790
+Chúng tôi đang ở trong bộ điều khiển danh mục ở đây.
+
+48
+00:03:43,790 --> 00:03:51,560
+Chúng tôi có thể thêm một từ khóa được ủy quyền và chúng tôi đang nói rằng chỉ các vai trò mới bằng SD.
+
+49
+00:03:52,430 --> 00:03:57,230
+Quản trị viên chấm có thể truy cập tất cả các phương thức hành động của bộ điều khiển.
+
+50
+00:03:57,440 --> 00:04:05,250
+Vì vậy, nếu người dùng cố truy cập vào hành động lập chỉ mục hoặc bất kỳ phương thức hành động nào khác, nếu vai trò của họ không phải là quản trị
+
+51
+00:04:05,280 --> 00:04:07,770
+viên, thì họ sẽ không có quyền truy cập đó.
+
+52
+00:04:08,190 --> 00:04:09,720
+Từ khóa được ủy quyền này.
+
+53
+00:04:09,720 --> 00:04:16,800
+Bạn có thể thêm điều đó vào bộ điều khiển danh mục hoàn chỉnh sẽ áp dụng cho tất cả các phương thức hành động,
+
+54
+00:04:16,800 --> 00:04:24,540
+nhưng nếu bạn muốn áp dụng chúng riêng lẻ, bạn cũng có thể làm điều đó trên các phương thức hành động riêng lẻ.
+
+55
+00:04:25,230 --> 00:04:28,200
+Vì vậy, bất cứ tuyến đường nào bạn muốn, bạn có thể chọn tuyến đường đó.
+
+56
+00:04:28,410 --> 00:04:35,700
+Tôi sẽ áp dụng điều đó trên toàn cầu cho bộ điều khiển danh mục cũng như bộ điều khiển sản phẩm.
+
+57
+00:04:37,010 --> 00:04:41,030
+Khi chúng tôi làm điều đó, hãy để tôi lưu ứng dụng ở đây.
+
+58
+00:04:45,040 --> 00:04:47,800
+Hãy để tôi đăng nhập với tư cách quản trị viên trước.
+
+59
+00:04:48,810 --> 00:04:51,330
+Chúng ta sẽ có thể truy cập đó.
+
+60
+00:04:52,930 --> 00:04:58,330
+Hãy để tôi đăng xuất và để tôi đăng nhập ở đây với tư cách là khách hàng thử nghiệm.
+
+61
+00:04:58,810 --> 00:05:03,640
+Và nếu tôi dán URL đó vào đây, bạn sẽ thấy điều gì đó kỳ lạ.
+
+62
+00:05:03,880 --> 00:05:07,300
+Nó đang vào tài khoản và sau đó truy cập bị từ chối.
+
+63
+00:05:07,330 --> 00:05:09,460
+Nhưng chúng tôi không có trang đó.
+
+64
+00:05:10,300 --> 00:05:17,100
+Nếu bạn quay lại và tìm kiếm trong Solution Explorer, chúng tôi thực sự có một trang bị từ chối truy cập.
+
+65
+00:05:17,110 --> 00:05:21,340
+Hãy để tôi chỉ ra cái đã được thêm vào danh tính.
+
+66
+00:05:21,340 --> 00:05:24,400
+Nhưng đó là bên trong khu vực nhận dạng.
+
+67
+00:05:24,430 --> 00:05:28,720
+Ở đây, nó đang cố gắng xem xét trực tiếp quyền truy cập tài khoản bị từ chối.
+
+68
+00:05:29,260 --> 00:05:31,330
+Nếu nó là như thế này.
+
+69
+00:05:32,260 --> 00:05:34,930
+Sau đó, trang đó đang thực sự tải.
+
+70
+00:05:35,320 --> 00:05:41,590
+Vì vậy, tuyến đường mặc định cho quyền truy cập bị từ chối không hoạt động và chúng tôi phải ghi đè lên điều đó.
+
+71
+00:05:42,520 --> 00:05:44,710
+Và nó không chỉ là con đường đó.
+
+72
+00:05:44,740 --> 00:05:52,570
+Nếu tôi đăng xuất tại đây và nếu tôi cố truy cập vào sản phẩm quản trị, bạn sẽ nhận thấy nó đang chuyển hướng tôi đến
+
+73
+00:05:52,570 --> 00:05:55,510
+đăng nhập vì người dùng chưa đăng nhập.
+
+74
+00:05:55,540 --> 00:05:57,190
+Họ không thể truy cập đó.
+
+75
+00:05:57,280 --> 00:06:02,170
+Đầu tiên họ phải đăng nhập và sau đó họ phải có vai trò quản trị viên.
+
+76
+00:06:02,440 --> 00:06:08,410
+Vì vậy, ở đây cũng thiếu khu vực cụ thể, đó là bản sắc.
+
+77
+00:06:08,440 --> 00:06:11,500
+Nếu chúng ta có điều đó, thì nó sẽ hoạt động.
+
+78
+00:06:12,330 --> 00:06:18,510
+Bây giờ, đây là đường dẫn ứng dụng mặc định được đặt theo mặc định trong ứng dụng.
+
+79
+00:06:18,660 --> 00:06:26,460
+Nhưng vì chúng tôi đã thêm danh tính ở đây nên chúng tôi phải ghi đè cấu hình mặc định đó và chúng tôi sẽ thực hiện điều
+
+80
+00:06:26,460 --> 00:06:29,790
+đó bên trong Program. cs.
+
+81
+00:06:30,660 --> 00:06:35,170
+Hãy để tôi giảm thiểu điều này và mở chương trình. cs.
+
+82
+00:06:36,260 --> 00:06:38,720
+Bên trong nhà xây dựng. dịch vụ.
+
+83
+00:06:38,750 --> 00:06:46,610
+Chúng tôi có một cái gì đó gọi là người xây dựng. các dịch vụ chấm cấu hình cookie của ứng dụng và ở đó trên tùy chọn,
+
+84
+00:06:46,610 --> 00:06:52,430
+chúng tôi có đường dẫn đăng nhập đăng xuất đường dẫn truy cập bị từ chối và cấu hình khác.
+
+85
+00:06:53,160 --> 00:06:56,790
+Ngay bây giờ, tôi sẽ chỉ chuyển đổi ba cấu hình này.
+
+86
+00:06:56,790 --> 00:07:00,720
+Và với điều đó, hãy để tôi khởi động lại ứng dụng.
+
+87
+00:07:02,940 --> 00:07:04,130
+Với sự thay đổi đó.
+
+88
+00:07:04,140 --> 00:07:08,940
+Nếu tôi cố gắng truy cập sản phẩm quản trị, mọi thứ vẫn không hoạt động.
+
+89
+00:07:08,970 --> 00:07:11,460
+Nó vẫn đi theo lộ trình cũ.
+
+90
+00:07:11,820 --> 00:07:14,340
+Chính xác thì chuyện gì đang xảy ra ở đây vậy?
+
+91
+00:07:14,850 --> 00:07:21,420
+Chà, khi bạn thêm cookie cấu hình ứng dụng, có một điều mà bạn nên nhớ.
+
+92
+00:07:21,450 --> 00:07:24,930
+Bạn không thể thêm nó trước khi thêm danh tính.
+
+93
+00:07:24,960 --> 00:07:31,110
+Vì vậy, chúng tôi phải thêm nó sau dòng 16 và chỉ khi đó nó mới hoạt động.
+
+94
+00:07:31,960 --> 00:07:33,160
+Với điều đó được lưu lại.
+
+95
+00:07:33,160 --> 00:07:35,710
+Hãy để tôi khởi động lại ứng dụng.
+
+96
+00:07:40,660 --> 00:07:41,530
+Thời gian này.
+
+97
+00:07:41,530 --> 00:07:49,480
+Nếu tôi thử danh mục quản trị viên, nó sẽ chuyển hướng đến đúng đường dẫn và nếu tôi đăng nhập với tư cách khách hàng, chúng tôi sẽ thấy quyền truy cập
+
+98
+00:07:49,480 --> 00:07:50,200
+bị từ chối.
+
+99
+00:07:51,160 --> 00:07:51,860
+Hoàn hảo.
+
+100
+00:07:51,880 --> 00:08:00,040
+Cùng với đó, chúng tôi đã triển khai ủy quyền thành công dựa trên vai trò của người dùng đã đăng nhập.
+

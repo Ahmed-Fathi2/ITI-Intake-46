@@ -1,0 +1,180 @@
+1
+00:00:01,560 --> 00:00:06,060
+We have used temp data to display the success notification.
+
+2
+00:00:06,860 --> 00:00:09,530
+But what if we had more than one page?
+
+3
+00:00:09,890 --> 00:00:12,320
+Let's say in our website we have category.
+
+4
+00:00:12,320 --> 00:00:19,070
+We have something called as cover type products and we want to perform CRUD operations on all of them.
+
+5
+00:00:19,790 --> 00:00:27,110
+Then rather than adding the same logic or same code that we have in one page, we will be reusing that
+
+6
+00:00:27,110 --> 00:00:28,730
+on multiple pages.
+
+7
+00:00:29,000 --> 00:00:31,040
+And right now it is success.
+
+8
+00:00:31,070 --> 00:00:36,830
+You might also have temp data for error and display a corresponding error message.
+
+9
+00:00:37,800 --> 00:00:44,100
+Rather than adding the same code in all the places, it is best to use partial views.
+
+10
+00:00:44,640 --> 00:00:50,370
+We have already seen one of the partial view which was validation scripts partial.
+
+11
+00:00:50,610 --> 00:00:56,220
+But this time we want to move our temp data logic in its own partial view.
+
+12
+00:00:56,250 --> 00:00:57,900
+How can we do that?
+
+13
+00:00:58,850 --> 00:01:01,070
+Well, doing that is super simple.
+
+14
+00:01:01,070 --> 00:01:06,510
+Again, in the solution here where we have the shared folder.
+
+15
+00:01:06,530 --> 00:01:09,650
+We will right click add a new view.
+
+16
+00:01:09,890 --> 00:01:15,320
+We will go with the empty view and the name for partial view.
+
+17
+00:01:15,350 --> 00:01:18,830
+I typically like to write underscore that way.
+
+18
+00:01:18,860 --> 00:01:22,880
+Looking at that, I can tell that this will be a partial view.
+
+19
+00:01:24,880 --> 00:01:29,920
+will call this underscore notification . css html.
+
+20
+00:01:31,170 --> 00:01:32,790
+We go to our index.
+
+21
+00:01:32,820 --> 00:01:35,040
+Let me cut the if condition.
+
+22
+00:01:35,160 --> 00:01:37,440
+Paste it right here.
+
+23
+00:01:39,320 --> 00:01:45,800
+Then let me copy this, paste it once again and we will display error here.
+
+24
+00:01:46,100 --> 00:01:52,580
+So if temp data of error is not null, then we display that error as well.
+
+25
+00:01:53,500 --> 00:01:57,700
+We do not have this error right now, but I just added that code.
+
+26
+00:01:58,470 --> 00:02:03,330
+Now, how do we consume this partial view inside our index?
+
+27
+00:02:04,380 --> 00:02:05,520
+That is simple.
+
+28
+00:02:05,520 --> 00:02:09,870
+We have the partial tag here and we need to give that a name.
+
+29
+00:02:10,729 --> 00:02:14,510
+And for the name, make sure there is no spelling mistake.
+
+30
+00:02:14,670 --> 00:02:16,250
+Else it will not work.
+
+31
+00:02:16,850 --> 00:02:17,770
+Perfect.
+
+32
+00:02:17,780 --> 00:02:23,540
+So that way we have added or consumed the partial view that we just created.
+
+33
+00:02:24,400 --> 00:02:27,520
+With that in place, let me run the project.
+
+34
+00:02:29,560 --> 00:02:31,210
+It should work the same.
+
+35
+00:02:31,210 --> 00:02:33,460
+Let me try to edit here.
+
+36
+00:02:34,710 --> 00:02:35,760
+And perfect.
+
+37
+00:02:35,760 --> 00:02:38,850
+We have category updated successfully.
+
+38
+00:02:39,530 --> 00:02:44,720
+So with that very small example, we have seen how to create a partial view.
+
+39
+00:02:44,720 --> 00:02:51,770
+And then on any page where we have to consume it, we can do that by adding just one line of code.
+
+40
+00:02:52,160 --> 00:02:58,790
+On top of that, if we have to change the implementation of notification, we do that directly in the
+
+41
+00:02:58,790 --> 00:03:04,880
+partial view and all the views that are consuming this partial view will get that update.
+
+42
+00:03:05,090 --> 00:03:11,540
+If it was not the case, then we will have to update it individually in all the places.
+
+43
+00:03:12,330 --> 00:03:18,510
+So for all the reusable components in your page, you should be using partial views.
+
+44
+00:03:19,570 --> 00:03:21,370
+With that basic idea.
+
+45
+00:03:21,370 --> 00:03:24,370
+Let me continue from the next video.
+

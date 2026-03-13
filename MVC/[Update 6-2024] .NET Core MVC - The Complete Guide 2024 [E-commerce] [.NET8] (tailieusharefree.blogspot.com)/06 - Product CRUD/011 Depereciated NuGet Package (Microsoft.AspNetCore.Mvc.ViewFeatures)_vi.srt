@@ -1,0 +1,140 @@
+1
+00:00:01,830 --> 00:00:03,120
+Người hướng dẫn: Bây giờ,
+
+2
+00:00:03,120 --> 00:00:05,370
+trong video tiếp theo, chúng tôi sẽ thêm ViewModels
+
+3
+00:00:05,370 --> 00:00:07,590
+vào đây và đoạn mã mà bạn nhìn thấy trên màn
+
+4
+00:00:07,590 --> 00:00:10,620
+hình vẫn chưa được thêm vào dự án của bạn nhưng vì đã có bản
+
+5
+00:00:10,620 --> 00:00:13,530
+cập nhật với . NET, tôi muốn cho bạn
+
+6
+00:00:13,530 --> 00:00:18,420
+thấy những gì không hoạt động trong video tiếp theo và giải pháp
+
+7
+00:00:18,420 --> 00:00:22,383
+cho vấn đề đó trước khi bạn giải quyết vấn đề đó.
+
+8
+00:00:23,280 --> 00:00:26,700
+Vì vậy, trong video tiếp theo, khi thêm Mô hình Chế độ xem
+
+9
+00:00:26,700 --> 00:00:28,710
+Sản phẩm, bạn sẽ có một đối tượng Sản
+
+10
+00:00:28,710 --> 00:00:33,093
+phẩm và ở đó chúng ta sẽ có một IEnumerable của SelectListItem.
+
+11
+00:00:33,960 --> 00:00:36,300
+Nếu bạn nhấn Contorl + dấu chấm ở đây,
+
+12
+00:00:36,300 --> 00:00:38,700
+thông thường chúng ta sẽ cài đặt gói NuGet
+
+13
+00:00:38,700 --> 00:00:43,700
+Microsoft. AspNetCore. Mvc. Lượt xem.
+
+14
+00:00:43,890 --> 00:00:46,800
+Nhưng gói NuGet đó đã bị khấu hao nên tôi
+
+15
+00:00:46,800 --> 00:00:51,060
+không muốn bạn theo dõi điều đó ở video tiếp theo.
+
+16
+00:00:51,060 --> 00:00:55,350
+Những gì bạn nên làm là bạn sẽ mở dự án ở đây.
+
+17
+00:00:55,350 --> 00:00:58,950
+Trong dự án mô hình, wChúng tôi sẽ thêm ViewModel đó.
+
+18
+00:00:58,950 --> 00:01:02,703
+Vì vậy trong dự án mô hình, bạn sẽ chỉnh sửa tệp dự án.
+
+19
+00:01:04,620 --> 00:01:07,920
+Và lý do gói Nuget bị khấu hao là do chức
+
+20
+00:01:07,920 --> 00:01:11,040
+năng đó đã được chuyển sang framework
+
+21
+00:01:11,040 --> 00:01:14,910
+mặc định của ASP. NET Core.
+
+22
+00:01:14,910 --> 00:01:18,690
+Vì vậy, trong ItemGroup ở đây, bạn sẽ phải thêm dòng
+
+23
+00:01:18,690 --> 00:01:21,450
+này và dòng này sẽ bao gồm tất cả các gói
+
+24
+00:01:21,450 --> 00:01:24,153
+mặc định có trong AspNetCore.
+
+25
+00:01:25,440 --> 00:01:28,710
+Cùng với đó, nếu lưu ở đây và quay lại, bạn sẽ nhấn
+
+26
+00:01:28,710 --> 00:01:30,510
+Control + dấu chấm và chúng
+
+27
+00:01:30,510 --> 00:01:33,033
+ta sẽ có trực tiếp câu lệnh sử dụng.
+
+28
+00:01:33,930 --> 00:01:37,500
+Vì vậy, hãy đảm bảo khi gặp sự cố trong video
+
+29
+00:01:37,500 --> 00:01:40,230
+tiếp theo, không cài đặt gói NuGet,
+
+30
+00:01:40,230 --> 00:01:42,510
+thay vào đó bạn sẽ phải thêm
+
+31
+00:01:42,510 --> 00:01:46,440
+khung đó vào tệp dự án của dự án mô hình.
+
+32
+00:01:46,440 --> 00:01:48,990
+Và nếu bạn kết thúc việc sử dụng SelectListItem
+
+33
+00:01:48,990 --> 00:01:50,790
+trong bất kỳ dự án nào khác, đừng
+
+34
+00:01:50,790 --> 00:01:53,730
+cài đặt bất kỳ gói nào đã hết giá trị.
+
+35
+00:01:53,730 --> 00:01:56,703
+Bạn phải thêm khung vào tệp dự án.
+

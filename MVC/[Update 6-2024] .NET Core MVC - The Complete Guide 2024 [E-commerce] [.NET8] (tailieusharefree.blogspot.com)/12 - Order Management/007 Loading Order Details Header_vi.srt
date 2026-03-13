@@ -1,0 +1,532 @@
+1
+00:00:01,790 --> 00:00:05,750
+Bây giờ chúng ta cần thao tác trên view để biết chi tiết đơn hàng.
+
+2
+00:00:06,550 --> 00:00:11,910
+Vì vậy, hãy để tôi chuyển đổi lại và dừng ứng dụng trên các chi tiết ở đây.
+
+3
+00:00:11,920 --> 00:00:19,150
+Chúng tôi sẽ thêm một chế độ xem, chế độ xem trống, đảm bảo đặt tên chính xác các chi tiết giống nhau.
+
+4
+00:00:19,150 --> 00:00:21,070
+Chấm css, HTML.
+
+5
+00:00:21,790 --> 00:00:23,200
+Bây giờ để thiết kế.
+
+6
+00:00:23,200 --> 00:00:25,210
+Chúng ta không nên lãng phí thời gian của mình.
+
+7
+00:00:25,210 --> 00:00:28,300
+Vì vậy, hãy để tôi chuyển trở lại đoạn trích của chúng tôi.
+
+8
+00:00:28,540 --> 00:00:30,100
+Mục 12.
+
+9
+00:00:30,130 --> 00:00:33,100
+Chúng tôi có giao diện người dùng chi tiết đơn hàng.
+
+10
+00:00:33,130 --> 00:00:37,780
+Sao chép và dán tất cả HTML và CSS.
+
+11
+00:00:37,780 --> 00:00:45,520
+Và với cấu hình đó, hãy để tôi chạy ứng dụng để lần đầu tiên cảm nhận về những gì chúng tôi muốn xây dựng.
+
+12
+00:00:46,390 --> 00:00:51,040
+Chúng tôi vào phần quản lý đơn hàng, chỉnh sửa và hoàn thiện.
+
+13
+00:00:51,070 --> 00:00:55,810
+Chúng tôi có khá nhiều thứ ngay tại đây ở phía bên trái.
+
+14
+00:00:55,810 --> 00:01:03,190
+Ở đây chúng tôi có tất cả các chi tiết đặt hàng và chúng tôi cũng có một nút để cập nhật các chi tiết đặt hàng.
+
+15
+00:01:03,610 --> 00:01:09,310
+Bây giờ chi tiết đơn hàng chỉ có thể được cập nhật bởi quản trị viên hoặc nhân viên.
+
+16
+00:01:09,580 --> 00:01:17,290
+Vì vậy, nếu người dùng đang đăng nhập và họ đang xem tóm tắt đơn hàng, họ sẽ không thể cập nhật chi tiết
+
+17
+00:01:17,290 --> 00:01:26,090
+đơn hàng trước khi chúng tôi làm việc trên tất cả các mặt hàng và các nút ở đây, trước tiên hãy để tôi xử lý tiêu đề đơn
+
+18
+00:01:26,090 --> 00:01:34,460
+hàng ở đây và sửa đổi phần này thành hiển thị tất cả các chi tiết và chỉ quản trị viên mới có thể cập nhật chúng.
+
+19
+00:01:35,300 --> 00:01:38,660
+Vì vậy, hãy để tôi quay trở lại và làm việc với chúng.
+
+20
+00:01:39,230 --> 00:01:46,100
+Điều đầu tiên chúng tôi quay lại các đơn đặt hàng ở đây và trong trường hợp đó, chúng tôi sẽ chuyển hướng chúng trở lại hành động
+
+21
+00:01:46,100 --> 00:01:46,820
+lập chỉ mục.
+
+22
+00:01:47,900 --> 00:01:55,190
+Sau đó, chúng tôi muốn kiểm tra vai trò của người dùng dựa trên đó, họ sẽ có thể cập nhật bất kỳ chi tiết nào.
+
+23
+00:01:55,490 --> 00:02:04,070
+Vì vậy, ví dụ, tên ở đây và chúng tôi sẽ nói nếu người dùng. đang trong vai trò, theo cách đó chúng tôi có thể kiểm tra vai trò của
+
+24
+00:02:04,070 --> 00:02:05,660
+người dùng đã đăng nhập.
+
+25
+00:02:05,930 --> 00:02:16,070
+Chúng tôi muốn truy cập vào chi tiết tĩnh của mình và ở đó chúng tôi có vai trò quản trị viên hoặc nếu người dùng đóng vai trò này và chúng tôi
+
+26
+00:02:16,070 --> 00:02:18,980
+sẽ nói nhân viên có vai trò dấu chấm SD.
+
+27
+00:02:19,700 --> 00:02:27,500
+Vì vậy, nếu người dùng đã đăng nhập thuộc một trong những vai trò này, thì họ sẽ có thể chỉnh sửa tên.
+
+28
+00:02:27,500 --> 00:02:33,370
+Vì vậy, đầu vào chúng tôi sẽ sử dụng ASP cho đó là tiêu đề đơn hàng.
+
+29
+00:02:33,380 --> 00:02:35,300
+Chúng tôi quên thêm mô hình.
+
+30
+00:02:35,300 --> 00:02:38,960
+Ở đây chúng tôi đang chuyển mô hình xem đơn đặt hàng.
+
+31
+00:02:39,290 --> 00:02:41,630
+Vì vậy, đó sẽ là mô hình.
+
+32
+00:02:43,900 --> 00:02:54,340
+Khi chúng tôi thêm rằng ASP cho sẽ dành cho tiêu đề đơn hàng. loại tên sẽ là văn bản ở đây và lớp sẽ là điều khiển
+
+33
+00:02:54,370 --> 00:02:55,510
+biểu mẫu.
+
+34
+00:02:57,760 --> 00:02:58,390
+Hoàn hảo.
+
+35
+00:02:58,390 --> 00:02:59,490
+Trông tôt đây.
+
+36
+00:02:59,500 --> 00:03:02,200
+Tất cả các dòng nguệch ngoạc đã biến mất.
+
+37
+00:03:03,350 --> 00:03:04,400
+Cùng với đó.
+
+38
+00:03:04,400 --> 00:03:12,620
+Hãy để tôi thêm xác thực nếu chúng tôi cho phép họ cập nhật phần đó trong phần khác, tôi có thể sao chép phần này,
+
+39
+00:03:12,650 --> 00:03:17,030
+dán vào đây, nhưng chúng tôi sẽ đặt phần này ở dạng chỉ đọc.
+
+40
+00:03:17,210 --> 00:03:24,860
+Vì vậy, nếu vai trò không phải là quản trị viên hoặc nhân viên, thì đó sẽ là trường chỉ đọc nếu không họ sẽ có thể
+
+41
+00:03:24,860 --> 00:03:25,640
+cập nhật.
+
+42
+00:03:26,480 --> 00:03:31,100
+Hãy để tôi lưu và chạy ứng dụng và xem nó có hoạt động không.
+
+43
+00:03:32,550 --> 00:03:34,570
+Nhưng ngay bây giờ chúng tôi chưa đăng nhập.
+
+44
+00:03:34,590 --> 00:03:36,150
+Nếu chúng ta đến đó.
+
+45
+00:03:36,960 --> 00:03:45,900
+Bạn có thể thấy tên chỉ được đọc. Tôi không thể chỉnh sửa, nhưng hãy để tôi đăng nhập ở đây với tư cách quản trị viên.
+
+46
+00:03:46,530 --> 00:03:47,460
+Rất tiếc.
+
+47
+00:03:47,460 --> 00:03:49,710
+Email là quản trị viên thử nghiệm.
+
+48
+00:03:50,550 --> 00:03:52,260
+Hãy để tôi sửa nó.
+
+49
+00:03:55,120 --> 00:03:57,760
+Và hoàn hảo mà hoạt động ở đây.
+
+50
+00:03:57,850 --> 00:04:03,160
+Bây giờ, nếu chúng ta đi quản lý trật tự và nếu tôi thử, nó sẽ hoạt động.
+
+51
+00:04:03,460 --> 00:04:07,870
+Vì vậy, vai trò của chúng tôi đang được triển khai dựa trên loại người dùng.
+
+52
+00:04:07,870 --> 00:04:10,780
+Họ sẽ có thể cập nhật tài sản.
+
+53
+00:04:11,140 --> 00:04:15,640
+Chúng ta phải thêm logic này vào mọi thứ khác ngay tại đây.
+
+54
+00:04:16,089 --> 00:04:18,350
+Vì vậy, chúng tôi có số điện thoại.
+
+55
+00:04:18,370 --> 00:04:20,589
+Hãy để tôi sửa đổi điều đó.
+
+56
+00:04:23,380 --> 00:04:29,410
+Và để tôi dán nó cho tất cả các thuộc tính và sau đó tôi sẽ bắt đầu sửa đổi chúng.
+
+57
+00:04:29,680 --> 00:04:33,670
+Chúng tôi có khá nhiều tài sản, vì vậy hãy kiên nhẫn.
+
+58
+00:04:33,970 --> 00:04:36,800
+Cái cuối cùng ở đây là trạng thái thanh toán.
+
+59
+00:04:36,820 --> 00:04:41,980
+Chúng tôi đang ở trên đó và để tôi bắt đầu thêm tất cả chúng.
+
+60
+00:04:43,240 --> 00:04:48,880
+Bất cứ nơi nào tôi có trường nhập liệu, tôi sẽ thay thế trường đó bằng những gì chúng tôi đã sao chép.
+
+61
+00:05:08,030 --> 00:05:09,650
+Và hoàn hảo.
+
+62
+00:05:09,830 --> 00:05:11,960
+Hãy để tôi cố gắng sửa đổi chúng.
+
+63
+00:05:11,960 --> 00:05:14,090
+Vì vậy, chúng tôi có địa chỉ ở đây.
+
+64
+00:05:14,630 --> 00:05:16,730
+Tiếp theo chúng ta có thành phố.
+
+65
+00:05:17,270 --> 00:05:19,030
+Rất tiếc, đó là địa chỉ đường phố.
+
+66
+00:05:19,040 --> 00:05:20,180
+Lỗi của tôi.
+
+67
+00:05:21,180 --> 00:05:22,770
+Chúng tôi có thành phố.
+
+68
+00:05:24,330 --> 00:05:26,070
+Chúng tôi có ngày này.
+
+69
+00:05:28,970 --> 00:05:31,310
+Tiếp theo chúng ta có mã bưu chính.
+
+70
+00:05:32,750 --> 00:05:34,280
+Sao chép cái đó.
+
+71
+00:05:35,450 --> 00:05:37,280
+Sau đó, chúng tôi cuộn xuống.
+
+72
+00:05:37,310 --> 00:05:43,130
+Email sẽ luôn ở dạng chỉ đọc, vì vậy sẽ không thể cập nhật email đó.
+
+73
+00:05:44,000 --> 00:05:46,010
+Hãy để tôi sửa cái đó.
+
+74
+00:05:46,220 --> 00:05:48,710
+Và đó là bên trong ứng dụng.
+
+75
+00:05:48,710 --> 00:05:51,320
+người dùng. e-mail.
+
+76
+00:05:52,160 --> 00:05:55,040
+Trường tiếp theo mà chúng tôi muốn ở đây là Đặt hàng!
+
+77
+00:05:55,040 --> 00:05:55,670
+Ngày.
+
+78
+00:05:56,060 --> 00:05:56,540
+Đặt hàng!
+
+79
+00:05:56,540 --> 00:05:56,810
+Ngày.
+
+80
+00:05:56,810 --> 00:06:03,440
+Ngoài ra, nó hoàn toàn không thể chỉnh sửa được và chúng tôi sẽ hiển thị giá trị của nó theo thứ tự.
+
+81
+00:06:03,440 --> 00:06:07,700
+Tiêu đề thứ tự chấm Ngày chấm hai Chuỗi ngày ngắn.
+
+82
+00:06:08,410 --> 00:06:11,260
+Tiếp theo, chúng tôi có nhà cung cấp dịch vụ và theo dõi.
+
+83
+00:06:12,160 --> 00:06:14,020
+Với Carrier và theo dõi.
+
+84
+00:06:14,020 --> 00:06:21,640
+Hãy để tôi thêm cả hai và để tôi xóa xác thực, bởi vì nếu người dùng muốn giữ chúng trống hoặc đại loại như
+
+85
+00:06:21,640 --> 00:06:27,490
+thế, chúng tôi sẽ xử lý các xác thực đó bằng cách sử dụng một số JavaScript.
+
+86
+00:06:28,240 --> 00:06:28,900
+Ngay lập tức.
+
+87
+00:06:28,900 --> 00:06:31,210
+Hãy để tôi giữ mọi thứ đơn giản ở đây.
+
+88
+00:06:31,940 --> 00:06:32,540
+Hoàn hảo.
+
+89
+00:06:32,540 --> 00:06:34,790
+Chúng tôi có tàu sân bay và theo dõi.
+
+90
+00:06:35,210 --> 00:06:36,380
+Cuộn xuống.
+
+91
+00:06:36,380 --> 00:06:39,350
+Chúng tôi có ngày vận chuyển cho ngày vận chuyển.
+
+92
+00:06:39,350 --> 00:06:42,350
+Ngoài ra, nó sẽ là một trường chỉ đọc.
+
+93
+00:06:42,500 --> 00:06:50,960
+Vì vậy, thay vì xác thực và mọi thứ và như trước đây, chúng tôi sẽ thêm giá trị sẽ là ngày giao
+
+94
+00:06:50,960 --> 00:06:55,970
+hàng chấm tiêu đề đơn hàng và hai chuỗi ngày chụp.
+
+95
+00:06:57,200 --> 00:07:01,490
+Sau đó, chúng tôi có ID phiên và ID mục đích thanh toán.
+
+96
+00:07:02,030 --> 00:07:08,120
+Những trường này chúng tôi không muốn hiển thị nếu người dùng không phải là quản trị viên hoặc nhân viên.
+
+97
+00:07:09,080 --> 00:07:10,580
+Vì vậy, hãy để tôi sao chép này.
+
+98
+00:07:10,610 --> 00:07:19,540
+Nếu có điều kiện, hãy thêm nó ở trên cùng tại đây và tôi sẽ đóng nó sau cả hai div ngay tại đây.
+
+99
+00:07:19,550 --> 00:07:28,400
+Và nếu đó là quản trị viên hoặc nhân viên, thì chúng tôi sẽ hiển thị và cả hai sẽ ở chế độ chỉ đọc.
+
+100
+00:07:30,190 --> 00:07:32,860
+Vì vậy, ngay tại đây, chúng tôi có ID phiên.
+
+101
+00:07:34,290 --> 00:07:36,840
+Và chúng tôi có ID mục đích thanh toán.
+
+102
+00:07:38,160 --> 00:07:43,470
+Sau đó, chúng tôi cuộn xuống, chúng tôi có ngày đến hạn thanh toán và ngày thanh toán.
+
+103
+00:07:43,770 --> 00:07:47,340
+Bây giờ tại một thời điểm, chỉ một trong số họ sẽ được nhìn thấy.
+
+104
+00:07:47,790 --> 00:07:54,810
+Về cơ bản, nếu ID phiên là null, điều đó có nghĩa là chúng tôi có ngày đến hạn thanh toán và khoản thanh toán chưa được thực
+
+105
+00:07:54,810 --> 00:07:55,410
+hiện.
+
+106
+00:07:56,080 --> 00:08:04,060
+Vì vậy, ngay tại đây, chúng ta có thể kiểm tra xem id phiên thứ tự dấu chấm của tiêu đề và mô hình có phải là null hay không.
+
+107
+00:08:05,820 --> 00:08:09,270
+Điều đó có nghĩa là ngày đến hạn thanh toán sẽ được hiển thị.
+
+108
+00:08:10,010 --> 00:08:11,960
+Vì vậy, hãy để tôi cắt cái này.
+
+109
+00:08:13,230 --> 00:08:18,090
+Dán nó ở đây và nó sẽ chỉ được đọc.
+
+110
+00:08:19,510 --> 00:08:25,990
+Chúng tôi không muốn ASP vì chúng tôi sẽ thêm một giá trị ở đó và giá trị đó sẽ ở bên trong.
+
+111
+00:08:25,990 --> 00:08:32,650
+Mô hình chấm đơn đặt hàng tiêu đề chấm thanh toán Ngày đáo hạn chấm hai shot Chuỗi ngày.
+
+112
+00:08:33,780 --> 00:08:41,100
+Để tôi sao chép toàn bộ div này, và tôi sẽ dán nó ngay tại đây.
+
+113
+00:08:41,490 --> 00:08:44,310
+Đây sẽ là ngày thanh toán.
+
+114
+00:08:46,060 --> 00:08:48,310
+Và hãy để tôi trở lại đây.
+
+115
+00:08:49,120 --> 00:08:52,030
+Nếu không, chúng tôi sẽ hiển thị ngày thanh toán.
+
+116
+00:08:52,730 --> 00:08:53,610
+Hoàn hảo.
+
+117
+00:08:53,630 --> 00:08:54,710
+Có vẻ tốt.
+
+118
+00:08:55,900 --> 00:09:01,570
+Sau đó, chúng tôi có trạng thái thanh toán và đó có thể là trường chỉ đọc.
+
+119
+00:09:01,660 --> 00:09:04,430
+Vì vậy, hãy để tôi hiển thị trạng thái thanh toán.
+
+120
+00:09:04,450 --> 00:09:05,830
+Chỉ đọc.
+
+121
+00:09:07,390 --> 00:09:12,040
+Với điều đó, hãy để tôi lưu nó ở đây và chúng ta hãy quay trở lại.
+
+122
+00:09:12,340 --> 00:09:13,150
+Tuyệt vời.
+
+123
+00:09:13,180 --> 00:09:16,510
+Tất cả các chi tiết ở đây đang được phổ biến.
+
+124
+00:09:16,660 --> 00:09:19,990
+Chúng tôi không có ngày vận chuyển hoặc ngày đến hạn thanh toán.
+
+125
+00:09:20,020 --> 00:09:23,770
+Do đó, bạn sẽ thấy ngày giả ngay tại đây.
+
+126
+00:09:24,650 --> 00:09:28,580
+Nếu quay lại đây để em chọn và duyệt Order.
+
+127
+00:09:28,970 --> 00:09:30,610
+Trông tôt đây.
+
+128
+00:09:30,620 --> 00:09:32,510
+Còn cái kia?
+
+129
+00:09:32,510 --> 00:09:36,260
+Chúng tôi có ID phiên và ID mục đích thanh toán.
+
+130
+00:09:37,010 --> 00:09:45,470
+Bây giờ, nếu tôi đăng xuất tại đây và nếu tôi vào quản lý đơn đặt hàng và ngay tại đây, chúng tôi không thấy ID phiên và
+
+131
+00:09:45,470 --> 00:09:46,700
+điều đó có vẻ ổn.
+
+132
+00:09:47,470 --> 00:09:52,450
+Vì vậy, cùng với đó, chúng tôi đã sửa đổi chi tiết tiêu đề đơn hàng ngay tại đây.
+
+133
+00:09:52,480 --> 00:09:55,630
+Hãy để tôi tiếp tục từ video tiếp theo.
+

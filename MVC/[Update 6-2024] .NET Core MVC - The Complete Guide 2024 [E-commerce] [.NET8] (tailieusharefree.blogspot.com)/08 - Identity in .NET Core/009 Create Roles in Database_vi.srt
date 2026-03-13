@@ -1,0 +1,480 @@
+1
+00:00:02,260 --> 00:00:07,150
+Chúng tôi muốn làm việc với các vai trò và cách chúng tôi có thể định cấu hình danh tính.
+
+2
+00:00:07,720 --> 00:00:17,320
+Nếu tôi quay lại mã của mình ở đây, hãy để tôi dừng ứng dụng và mở chương trình. cs trong danh tính mặc định.
+
+3
+00:00:17,350 --> 00:00:19,740
+Nó chỉ thêm người dùng nhận dạng.
+
+4
+00:00:19,750 --> 00:00:23,860
+Nó không thêm vai trò cho danh tính trong dự án của chúng tôi.
+
+5
+00:00:24,160 --> 00:00:31,420
+Nếu chúng tôi phải thêm vai trò, thì thay vì danh tính mặc định, chúng tôi phải tùy chỉnh vai trò đó và chúng
+
+6
+00:00:31,420 --> 00:00:34,510
+tôi sẽ nói, Này, tôi muốn thêm danh tính.
+
+7
+00:00:35,110 --> 00:00:41,620
+Bây giờ khi bạn thêm danh tính theo mặc định cùng với người dùng, nó cũng sẽ có một vai trò.
+
+8
+00:00:42,190 --> 00:00:48,880
+Và cũng giống như người dùng nhận dạng, chúng tôi có cách triển khai mặc định, đó là vai trò nhận dạng.
+
+9
+00:00:50,720 --> 00:00:52,460
+Với dòng cụ thể đó.
+
+10
+00:00:52,460 --> 00:00:58,070
+Chúng tôi đã thêm vai trò vào danh tính của mình và điều đó được bao gồm trong dự án của chúng tôi.
+
+11
+00:00:58,100 --> 00:01:06,470
+Bây giờ, khi chúng tôi thêm một vai trò ở đây, giả sử khi chúng tôi đăng ký người dùng trong danh sách thả xuống, chúng tôi muốn hiển
+
+12
+00:01:06,470 --> 00:01:08,570
+thị tất cả các vai trò có sẵn.
+
+13
+00:01:09,750 --> 00:01:14,670
+Nhưng ngay bây giờ, nếu chúng tôi truy cập cơ sở dữ liệu của mình, chúng tôi thậm chí không có bất kỳ vai trò nào.
+
+14
+00:01:14,880 --> 00:01:17,010
+Chúng ta cần nhường lại vai trò đó.
+
+15
+00:01:17,040 --> 00:01:24,260
+Vì vậy, những gì tôi sẽ làm ngay bây giờ, tôi sẽ có cách bổ sung các vai trò đó trong trình xử lý Onget.
+
+16
+00:01:24,270 --> 00:01:28,350
+Về cơ bản, khi Trang được tải, tôi sẽ kiểm tra cơ sở dữ liệu.
+
+17
+00:01:28,350 --> 00:01:31,440
+Này, có vai trò của quản trị viên ở đây không?
+
+18
+00:01:31,470 --> 00:01:33,810
+Nếu có, thì tôi sẽ không làm gì cả.
+
+19
+00:01:33,810 --> 00:01:38,910
+Nhưng nếu không có vai trò nào thì tôi sẽ tạo vai trò đó ngay tại đây.
+
+20
+00:01:39,750 --> 00:01:44,370
+Để làm được tất cả những điều đó, chúng ta sẽ cần lớp trợ giúp ở đây.
+
+21
+00:01:44,370 --> 00:01:46,480
+Cũng giống như đăng nhập quản lý.
+
+22
+00:01:46,500 --> 00:01:50,280
+Chúng tôi cũng có một thứ gọi là quản lý vai trò.
+
+23
+00:01:50,880 --> 00:01:58,710
+Trình quản lý vai trò hoạt động dựa trên vai trò nhận dạng và chúng tôi sẽ phải thực hiện điều đó bằng cách sử dụng phép nội xạ phụ thuộc.
+
+24
+00:02:00,120 --> 00:02:01,440
+Vì vậy, hãy để tôi làm điều đó.
+
+25
+00:02:01,450 --> 00:02:05,010
+Người quản lý vai trò ngang bằng với người quản lý vai trò.
+
+26
+00:02:06,180 --> 00:02:09,710
+Hãy để tôi cuộn xuống nơi chúng tôi có trình xử lý on get.
+
+27
+00:02:09,720 --> 00:02:17,790
+Bây giờ, trước tiên tôi muốn kiểm tra xem có bất kỳ vai trò nào thay vì có chuỗi ma thuật của quản trị viên hoặc khách hàng
+
+28
+00:02:17,970 --> 00:02:21,960
+hay không, hãy để tôi tạo một tệp chứa các hằng số đó.
+
+29
+00:02:21,960 --> 00:02:28,740
+Và để làm được điều đó, chúng tôi có tiện ích chấm sách cồng kềnh, nơi chúng tôi đã thêm một chi tiết tĩnh của lớp.
+
+30
+00:02:29,950 --> 00:02:35,200
+Bên trong đó, tôi sẽ tạo cho một hằng số sẽ là vai trò khách hàng.
+
+31
+00:02:35,230 --> 00:02:43,090
+Sau đó, tôi sẽ thêm vai trò công ty, quản trị viên và vai trò nhân viên dựa trên các vai trò ở đây, chúng tôi có
+
+32
+00:02:43,090 --> 00:02:46,990
+thể có một số chức năng mà chúng tôi muốn bật và tắt.
+
+33
+00:02:47,380 --> 00:02:54,850
+Ngay bây giờ, chúng ta sẽ làm việc với vai trò quản trị viên và khách hàng, nhưng trước hết chúng ta phải tạo các vai
+
+34
+00:02:54,850 --> 00:02:57,670
+trò này bên trong cơ sở dữ liệu của mình.
+
+35
+00:02:58,480 --> 00:03:01,110
+Chúng tôi sẽ làm điều đó trong đăng ký ở đây.
+
+36
+00:03:01,120 --> 00:03:05,950
+Chúng tôi có thể kiểm tra bằng cách sử dụng trình quản lý vai trò gạch dưới phương thức trợ giúp của chúng tôi.
+
+37
+00:03:05,980 --> 00:03:09,730
+Có một vai trò phương thức trợ giúp tồn tại không đồng bộ.
+
+38
+00:03:10,120 --> 00:03:11,260
+Chúng ta có thể kiểm tra.
+
+39
+00:03:11,260 --> 00:03:16,690
+Này, có vai trò nào có tên là khách hàng của người dùng dấu chấm SDE không?
+
+40
+00:03:16,810 --> 00:03:19,840
+Nếu có, thì chúng tôi không muốn làm bất cứ điều gì.
+
+41
+00:03:19,840 --> 00:03:24,880
+Nhưng nếu vai trò đó không tồn tại, thì chúng tôi muốn tạo tất cả các vai trò.
+
+42
+00:03:25,150 --> 00:03:29,290
+Bây giờ, vì đây là một phương thức không đồng bộ, chúng ta sẽ phải đợi điều đó.
+
+43
+00:03:29,290 --> 00:03:37,400
+Vì vậy, thay vì viết await ngay tại đây, những gì chúng ta có thể làm là sau phương thức ở đây, chúng ta có thể nói
+
+44
+00:03:37,400 --> 00:03:39,950
+dot getwaiter dot get result.
+
+45
+00:03:40,450 --> 00:03:43,600
+Điều đó giống như viết và chờ tuyên bố.
+
+46
+00:03:43,630 --> 00:03:46,690
+Nhưng khi chúng tôi đang gọi ở đây, chúng tôi không thể làm điều đó.
+
+47
+00:03:46,690 --> 00:03:50,590
+Vì vậy, đó là lý do tại sao chúng ta có thể sử dụng get Waiter dot get result.
+
+48
+00:03:51,040 --> 00:03:53,500
+Vì vậy, điều đó sẽ kiểm tra xem vai trò có tồn tại hay không.
+
+49
+00:03:53,530 --> 00:03:57,620
+Nếu nó không tồn tại, thì chúng tôi muốn tạo vai trò đó.
+
+50
+00:03:57,640 --> 00:04:02,950
+Vì vậy, trên Trình quản lý vai trò, chúng tôi có một phương thức trợ giúp khác tạo không đồng bộ.
+
+51
+00:04:03,700 --> 00:04:07,990
+Bên trong đó nếu bạn di chuột, nó sẽ có một hàng nhận dạng.
+
+52
+00:04:09,390 --> 00:04:14,670
+Chúng tôi sẽ phải tạo vai trò nhận dạng mới và ở đó chúng tôi phải chuyển tên vai trò.
+
+53
+00:04:14,670 --> 00:04:17,279
+Vì vậy, tôi sẽ nói vai trò khách hàng.
+
+54
+00:04:17,459 --> 00:04:22,770
+Khi tôi làm điều đó một lần nữa, nó không đồng bộ, vì vậy chúng tôi sẽ chờ điều đó.
+
+55
+00:04:22,800 --> 00:04:25,950
+Chúng ta có thể sử dụng get Waiter dot get result.
+
+56
+00:04:26,680 --> 00:04:30,010
+Bây giờ chúng ta có thể kiểm tra xem có bất kỳ quy tắc nào không tồn tại hay không.
+
+57
+00:04:30,040 --> 00:04:35,360
+Chúng tôi muốn tạo tất cả các quy tắc mà chúng tôi có bên trong chi tiết tĩnh của mình.
+
+58
+00:04:35,380 --> 00:04:37,120
+Vì vậy, hãy để tôi làm điều đó.
+
+59
+00:04:37,210 --> 00:04:38,440
+Và hoàn hảo.
+
+60
+00:04:38,440 --> 00:04:39,490
+Trông tôt đây.
+
+61
+00:04:39,760 --> 00:04:42,430
+Bây giờ, hãy để tôi sử dụng tên đầy đủ ở đây.
+
+62
+00:04:43,240 --> 00:04:50,110
+Và thay vì người dùng, hãy để tôi trực tiếp sử dụng khách hàng hoặc nếu đó là khách hàng của công ty, có thể.
+
+63
+00:04:50,530 --> 00:04:56,980
+Vì vậy, ở đây tôi sẽ đổi tên chúng thành công ty và.
+
+64
+00:04:58,440 --> 00:04:59,970
+Tôi có khách hàng.
+
+65
+00:05:00,710 --> 00:05:02,270
+Điều đó có ý nghĩa hơn.
+
+66
+00:05:04,550 --> 00:05:05,210
+Tuyệt vời.
+
+67
+00:05:05,210 --> 00:05:08,660
+Vì vậy, chúng tôi đang tạo bốn vai trò trong cơ sở dữ liệu của mình.
+
+68
+00:05:08,960 --> 00:05:15,050
+Bây giờ, khi chúng ta đang sử dụng phương thức tạo không đồng bộ hoặc phương thức trợ giúp đó, chúng ta không cần lưu các thay đổi.
+
+69
+00:05:15,080 --> 00:05:22,100
+Phương thức của trình trợ giúp đảm nhận mọi thứ và chúng tôi không phải lo lắng về việc thêm một đơn vị công việc
+
+70
+00:05:22,100 --> 00:05:24,140
+hoặc bất kỳ thay đổi DB nào.
+
+71
+00:05:25,100 --> 00:05:29,930
+Với cấu hình đó, hãy để tôi lưu cái này và chạy ứng dụng.
+
+72
+00:05:32,360 --> 00:05:34,370
+Để tạo vai trò.
+
+73
+00:05:34,400 --> 00:05:39,680
+Tất cả những gì chúng ta phải làm là nhấp, đăng ký và thao tác đó sẽ gọi trình xử lý get.
+
+74
+00:05:39,920 --> 00:05:43,490
+Nhưng khi chúng ta làm điều đó, chúng ta sẽ thấy một ngoại lệ.
+
+75
+00:05:44,120 --> 00:05:50,840
+Nó nói Không thể giải quyết người gửi email trong khi kích hoạt mô hình đăng ký.
+
+76
+00:05:51,530 --> 00:05:54,050
+Chính xác thì chuyện gì đang xảy ra ở đây vậy?
+
+77
+00:05:54,170 --> 00:05:58,190
+Tại sao bây giờ chúng tôi thấy lỗi người gửi email này?
+
+78
+00:05:58,760 --> 00:06:06,710
+Lý do là trong sổ đăng ký, chúng tôi đã sửa đổi người dùng tạo, nhưng trên hết, nếu bạn cuộn lên, chúng tôi có
+
+79
+00:06:06,780 --> 00:06:13,050
+người gửi email đã được đưa vào đây và chúng tôi đang sử dụng người gửi email này.
+
+80
+00:06:13,070 --> 00:06:21,320
+Nếu chúng tôi cuộn xuống để gửi email, nhưng điều đó không quan trọng khi nó đang cố gắng đưa người gửi
+
+81
+00:06:21,320 --> 00:06:28,310
+email vào, nó sẽ đưa ra thông báo lỗi và vì chúng tôi chưa triển khai giao diện này, nó nói
+
+82
+00:06:28,310 --> 00:06:35,460
+rằng này, tôi không thể giải quyết những gì nên được triển khai cho logic người gửi email
+
+83
+00:06:35,460 --> 00:06:36,270
+này.
+
+84
+00:06:36,420 --> 00:06:40,470
+Và đó cũng chính xác là điều tương tự với đơn vị công việc.
+
+85
+00:06:40,500 --> 00:06:47,010
+Nếu bạn nhớ nơi chúng tôi có giao diện của đơn vị công việc, chúng tôi đã thêm
+
+86
+00:06:47,010 --> 00:06:55,860
+việc triển khai giao diện đó trong Program. cs và sau đó nó có thể cung cấp cho chúng tôi cách triển khai đó khi chúng tôi yêu cầu tiêm phụ thuộc.
+
+87
+00:06:56,070 --> 00:07:00,240
+Nhưng người gửi email không có triển khai mặc định.
+
+88
+00:07:01,290 --> 00:07:08,040
+Để giải quyết lỗi đó, tất cả những gì chúng ta phải làm là triển khai cho người gửi email.
+
+89
+00:07:08,310 --> 00:07:14,460
+Bây giờ, tất nhiên, chúng tôi không muốn dành thời gian ngay bây giờ để triển khai logic email,
+
+90
+00:07:14,460 --> 00:07:21,990
+nhưng chúng tôi có thể triển khai một người gửi email giả vì lỗi xảy ra khi nó đang cố chèn và không thực sự gửi email.
+
+91
+00:07:22,530 --> 00:07:26,700
+Bây giờ chúng ta nên thêm triển khai cho người gửi email ở đâu?
+
+92
+00:07:26,850 --> 00:07:32,660
+Đó là điều phổ biến và tôi tin rằng nó nên nằm trong dự án tiện ích.
+
+93
+00:07:32,670 --> 00:07:36,900
+Vì vậy, hãy để tôi dừng tiện ích ứng dụng.
+
+94
+00:07:36,930 --> 00:07:38,610
+Thêm một tập tin lớp.
+
+95
+00:07:39,880 --> 00:07:42,970
+Và tôi sẽ gọi cho người gửi email đó.
+
+96
+00:07:44,110 --> 00:07:50,330
+Chúng tôi sẽ đặt lớp đó thành lớp công khai và lớp đó sẽ triển khai người gửi email.
+
+97
+00:07:50,350 --> 00:07:54,700
+Chúng tôi sẽ nhấn điều khiển DOT và chúng tôi sẽ phải cài đặt gói.
+
+98
+00:07:54,700 --> 00:07:58,720
+Microsoft DOT, ASP. NET Core Dot Identity UI.
+
+99
+00:07:59,650 --> 00:08:04,610
+Khi chúng tôi cài đặt nó, thì chúng tôi cũng sẽ phải triển khai giao diện.
+
+100
+00:08:04,630 --> 00:08:06,400
+Vì vậy, hãy để tôi làm điều đó.
+
+101
+00:08:06,400 --> 00:08:10,000
+Và có một phương pháp gửi email không đồng bộ.
+
+102
+00:08:10,450 --> 00:08:17,380
+Bây giờ, ngay bây giờ, thay vì đưa ra một ngoại lệ ở đây, sẽ hợp lý hơn nếu chỉ trả lại nhiệm vụ DOT đã hoàn thành trong
+
+103
+00:08:17,740 --> 00:08:20,890
+tương lai Nếu chúng ta phải gửi email ở đây.
+
+104
+00:08:20,920 --> 00:08:25,420
+Chúng tôi thực sự sẽ có logic ở đây để gửi email.
+
+105
+00:08:25,870 --> 00:08:29,290
+Nhưng ngay bây giờ chúng tôi đang giữ mọi thứ siêu đơn giản.
+
+106
+00:08:29,830 --> 00:08:36,280
+Khi chúng tôi đã triển khai, tất cả những gì chúng tôi phải làm là đăng ký dịch vụ đó trong các dịch vụ của mình.
+
+107
+00:08:36,490 --> 00:08:46,340
+Vì vậy, người xây dựng. dịch vụ chấm thêm người gửi email tôi có phạm vi và việc triển khai nằm bên trong người gửi email.
+
+108
+00:08:48,120 --> 00:08:51,630
+Với cấu hình đó, lỗi sẽ biến mất.
+
+109
+00:08:56,550 --> 00:09:02,160
+Và hãy để tôi đi đăng ký ở đây và hoàn thiện trang được tải.
+
+110
+00:09:02,250 --> 00:09:09,210
+Bây giờ, một lần nữa, tại sao điều này bị hỏng khi chúng tôi thêm vai trò là vì trong chương trình, chúng tôi không còn sử dụng danh tính
+
+111
+00:09:09,210 --> 00:09:10,170
+mặc định nữa.
+
+112
+00:09:10,320 --> 00:09:17,970
+Chúng tôi đang thêm một triển khai tùy chỉnh vì điều đó, nó không có bất kỳ triển khai giả nào cho người
+
+113
+00:09:17,970 --> 00:09:19,080
+gửi email.
+
+114
+00:09:19,500 --> 00:09:24,600
+Nhưng một khi get handler được gọi, vai trò của chúng ta phải được tạo.
+
+115
+00:09:25,110 --> 00:09:27,900
+Nếu tôi làm mới ở đây, hoàn hảo.
+
+116
+00:09:27,930 --> 00:09:35,040
+Chúng tôi có bảng vai trò được điền tự động dựa trên tên mà chúng tôi đã đặt cho vai trò của mình.
+
+117
+00:09:36,240 --> 00:09:37,400
+Rất hoàn hảo.
+
+118
+00:09:37,410 --> 00:09:41,610
+Bảng quy tắc của chúng tôi hiện đã được điền và chúng tôi có người dùng.
+
+119
+00:09:41,940 --> 00:09:46,890
+Khi chúng tôi đăng ký người dùng, làm cách nào chúng tôi có thể gán cho người dùng một số vai trò?
+
+120
+00:09:47,490 --> 00:09:50,250
+Hãy để tôi làm điều đó trong video tiếp theo.
+

@@ -1,0 +1,16 @@
+F:\ITI\.Net\Api\Laps\WebService-Api\WebService.BLL\obj\Debug\net10.0\WebService.BLL.pdb
+F:\ITI\.Net\Api\Laps\WebService-Api\WebService.BLL\obj\Debug\net10.0\WebService.BLL.csproj.AssemblyReference.cache
+F:\ITI\.Net\Api\Laps\WebService-Api\WebService.BLL\obj\Debug\net10.0\WebService.BLL.GeneratedMSBuildEditorConfig.editorconfig
+F:\ITI\.Net\Api\Laps\WebService-Api\WebService.BLL\obj\Debug\net10.0\WebService.BLL.AssemblyInfoInputs.cache
+F:\ITI\.Net\Api\Laps\WebService-Api\WebService.BLL\obj\Debug\net10.0\WebService.BLL.AssemblyInfo.cs
+F:\ITI\.Net\Api\Laps\WebService-Api\WebService.BLL\obj\Debug\net10.0\WebService.BLL.csproj.CoreCompileInputs.cache
+F:\ITI\.Net\Api\Laps\WebService-Api\WebService.BLL\obj\Debug\net10.0\WebService.BLL.sourcelink.json
+F:\ITI\.Net\Api\Laps\WebService-Api\WebService.BLL\obj\Debug\net10.0\WebService.BLL.dll
+F:\ITI\.Net\Api\Laps\WebService-Api\WebService.BLL\bin\Debug\net10.0\WebService.BLL.deps.json
+F:\ITI\.Net\Api\Laps\WebService-Api\WebService.BLL\bin\Debug\net10.0\WebService.BLL.dll
+F:\ITI\.Net\Api\Laps\WebService-Api\WebService.BLL\bin\Debug\net10.0\WebService.BLL.pdb
+F:\ITI\.Net\Api\Laps\WebService-Api\WebService.BLL\bin\Debug\net10.0\WebService.DAL.dll
+F:\ITI\.Net\Api\Laps\WebService-Api\WebService.BLL\bin\Debug\net10.0\WebService.DAL.pdb
+F:\ITI\.Net\Api\Laps\WebService-Api\WebService.BLL\obj\Debug\net10.0\WebServi.A3289D05.Up2Date
+F:\ITI\.Net\Api\Laps\WebService-Api\WebService.BLL\obj\Debug\net10.0\refint\WebService.BLL.dll
+F:\ITI\.Net\Api\Laps\WebService-Api\WebService.BLL\obj\Debug\net10.0\ref\WebService.BLL.dll

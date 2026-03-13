@@ -1,0 +1,148 @@
+1
+00:00:02,009 --> 00:00:06,750
+Now, these are the built in validations that we have with data annotation.
+
+2
+00:00:07,110 --> 00:00:13,680
+But what if you want some custom validation, Like let's say for some reason you want a validation that
+
+3
+00:00:13,680 --> 00:00:16,500
+name and display order cannot be same.
+
+4
+00:00:17,560 --> 00:00:24,040
+In order to implement that, Let me go back to the controller and where we have the create.
+
+5
+00:00:24,070 --> 00:00:26,050
+We have to do some check.
+
+6
+00:00:26,290 --> 00:00:36,610
+We can check if obj.name.two lower is equal equal to obj dot display order.two string.
+
+7
+00:00:37,590 --> 00:00:40,610
+Well, we do not need to lower because it will be number.
+
+8
+00:00:40,620 --> 00:00:41,730
+That's okay.
+
+9
+00:00:41,730 --> 00:00:48,390
+If that is the case, then on the model state that we have, we want to add a custom error message.
+
+10
+00:00:49,270 --> 00:00:54,430
+And for that on Model State, we have a method add model error.
+
+11
+00:00:55,300 --> 00:00:57,810
+There we can add a model error.
+
+12
+00:00:57,820 --> 00:01:00,310
+We have key and error message.
+
+13
+00:01:00,820 --> 00:01:02,560
+Now what is this key?
+
+14
+00:01:02,980 --> 00:01:09,580
+This key is basically if we go to category Create, here we have the name.
+
+15
+00:01:09,940 --> 00:01:17,020
+If we want to assign it to the name field here, then that is the exact key that we should use here.
+
+16
+00:01:17,380 --> 00:01:22,180
+So let me use that key and I will add a custom error message.
+
+17
+00:01:22,180 --> 00:01:26,230
+The display order cannot exactly match the name.
+
+18
+00:01:27,130 --> 00:01:32,500
+Once we do that, if I run the application, let's see what happens.
+
+19
+00:01:33,500 --> 00:01:36,920
+We go to category here create.
+
+20
+00:01:37,950 --> 00:01:46,320
+And if we create perfect, we see that error message and that is being displayed under the field where
+
+21
+00:01:46,320 --> 00:01:47,990
+we have category name.
+
+22
+00:01:48,000 --> 00:01:52,320
+That is exactly what we did when we added this key name.
+
+23
+00:01:53,240 --> 00:02:01,490
+But we have something else here as well, Not here in the create page where we have this span right
+
+24
+00:02:01,490 --> 00:02:02,110
+here.
+
+25
+00:02:02,120 --> 00:02:03,830
+Well, let me do that.
+
+26
+00:02:03,830 --> 00:02:11,960
+After the heading here we can add a div and we have ASP validation summary for individual ones.
+
+27
+00:02:11,960 --> 00:02:17,720
+We have the ASP validation or but we have the ASP validation summary.
+
+28
+00:02:18,820 --> 00:02:19,720
+For that field.
+
+29
+00:02:19,720 --> 00:02:28,150
+If I make it as all and I close that, let me save this and go back refresh here.
+
+30
+00:02:28,600 --> 00:02:32,890
+Well, I think for validations we will have to restart.
+
+31
+00:02:34,880 --> 00:02:38,150
+And go to category create.
+
+32
+00:02:39,080 --> 00:02:39,860
+Perfect.
+
+33
+00:02:39,890 --> 00:02:46,700
+Now you can see with validation summary, it displays the summary at the top along with the individual
+
+34
+00:02:46,700 --> 00:02:48,530
+ones right here.
+
+35
+00:02:49,610 --> 00:02:56,240
+And if we have the custom error message, you can see that is also being displayed.
+
+36
+00:02:56,900 --> 00:03:03,710
+So if you want to list all of the error messages at one place rather than individual ones, you can
+
+37
+00:03:03,710 --> 00:03:07,400
+use the ASP validation summary Tag Helper.
+

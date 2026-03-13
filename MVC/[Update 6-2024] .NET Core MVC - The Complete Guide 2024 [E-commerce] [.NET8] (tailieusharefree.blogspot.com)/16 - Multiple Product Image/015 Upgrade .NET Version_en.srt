@@ -1,0 +1,288 @@
+1
+00:00:01,956 --> 00:00:03,360
+Instructor: What we did previously
+
+2
+00:00:03,360 --> 00:00:06,600
+is we downgraded our application to .NET 7
+
+3
+00:00:06,600 --> 00:00:09,840
+in order to deploy that from Azure Portal,
+
+4
+00:00:09,840 --> 00:00:14,340
+but we can also deploy that directly from Visual Studio,
+
+5
+00:00:14,340 --> 00:00:15,813
+as I said before,
+
+6
+00:00:16,860 --> 00:00:20,310
+and for that, let me go to SQL Database here.
+
+7
+00:00:20,310 --> 00:00:22,650
+We have the bulkymvc.
+
+8
+00:00:22,650 --> 00:00:24,753
+Let me delete that database.
+
+9
+00:00:28,260 --> 00:00:31,170
+We will delete that here.
+
+10
+00:00:31,170 --> 00:00:32,700
+Wait for that.
+
+11
+00:00:32,700 --> 00:00:37,530
+And while that is being deleted, let me go to App Services.
+
+12
+00:00:37,530 --> 00:00:39,630
+I can search here.
+
+13
+00:00:39,630 --> 00:00:43,380
+And we have the bulkymvc-dotnetmastery.
+
+14
+00:00:43,380 --> 00:00:45,570
+Delete that as well.
+
+15
+00:00:45,570 --> 00:00:48,480
+We need to copy the name here,
+
+16
+00:00:48,480 --> 00:00:51,690
+paste that, and delete.
+
+17
+00:00:51,690 --> 00:00:53,580
+Right, that looks good.
+
+18
+00:00:53,580 --> 00:00:55,290
+Let me go back here,
+
+19
+00:00:55,290 --> 00:00:57,420
+and from the Visual Studio,
+
+20
+00:00:57,420 --> 00:01:02,190
+if we right-click on the web project, select Publish there,
+
+21
+00:01:02,190 --> 00:01:04,050
+well, before we do that,
+
+22
+00:01:04,050 --> 00:01:07,743
+let me upgrade our version to .NET 8.
+
+23
+00:01:08,790 --> 00:01:10,560
+So, let me right-click here.
+
+24
+00:01:10,560 --> 00:01:12,570
+Edit Project File.
+
+25
+00:01:12,570 --> 00:01:15,120
+Make this .NET 8.
+
+26
+00:01:15,120 --> 00:01:17,493
+Let me open all the project files,
+
+27
+00:01:23,160 --> 00:01:25,803
+make them all .NET 8 here,
+
+28
+00:01:28,530 --> 00:01:29,823
+and save that.
+
+29
+00:01:31,020 --> 00:01:33,090
+Close all the tabs here,
+
+30
+00:01:33,090 --> 00:01:35,790
+and then we can open individual,
+
+31
+00:01:35,790 --> 00:01:38,220
+Manage NuGet Packages,
+
+32
+00:01:38,220 --> 00:01:40,770
+Include Prerelease here,
+
+33
+00:01:40,770 --> 00:01:42,753
+and let me update the package.
+
+34
+00:01:45,930 --> 00:01:47,310
+That looks good.
+
+35
+00:01:47,310 --> 00:01:49,353
+We have the models here.
+
+36
+00:01:50,220 --> 00:01:52,173
+Include Prerelease.
+
+37
+00:01:55,163 --> 00:01:56,618
+Perfect.
+
+38
+00:01:56,618 --> 00:01:58,893
+Where we have the DataAccess.
+
+39
+00:02:01,500 --> 00:02:03,723
+Let me update all of them.
+
+40
+00:02:07,980 --> 00:02:10,919
+And finally, we need the web project.
+
+41
+00:02:10,919 --> 00:02:14,190
+Let me handle that. Whoops.
+
+42
+00:02:14,190 --> 00:02:16,023
+Manage NuGet Package.
+
+43
+00:02:16,950 --> 00:02:18,693
+Update all the package.
+
+44
+00:02:20,310 --> 00:02:23,223
+We did the wrong update here. Decline that.
+
+45
+00:02:24,810 --> 00:02:28,200
+I need prerelease there, and update.
+
+46
+00:02:28,200 --> 00:02:31,260
+Whoops, decline that again.
+
+47
+00:02:31,260 --> 00:02:34,890
+I do not want the Stripe, but I want Microsoft.
+
+48
+00:02:34,890 --> 00:02:36,450
+That looks good.
+
+49
+00:02:36,450 --> 00:02:37,323
+Continue.
+
+50
+00:02:38,760 --> 00:02:40,410
+Perfect.
+
+51
+00:02:40,410 --> 00:02:43,200
+With that, let me close all the tabs,
+
+52
+00:02:43,200 --> 00:02:45,123
+rebuild the solution,
+
+53
+00:02:46,980 --> 00:02:48,030
+and great.
+
+54
+00:02:48,030 --> 00:02:51,573
+Let me run this to make sure that the project is good,
+
+55
+00:02:52,500 --> 00:02:54,960
+and we are getting an error here.
+
+56
+00:02:54,960 --> 00:02:58,860
+When I google that, it says that the new .NET 8 version
+
+57
+00:02:58,860 --> 00:03:01,260
+is not automatically installed,
+
+58
+00:03:01,260 --> 00:03:04,263
+so let me download the preview 2 here,
+
+59
+00:03:05,490 --> 00:03:07,083
+and let me download that.
+
+60
+00:03:08,220 --> 00:03:11,310
+When I started the application, I had preview 1,
+
+61
+00:03:11,310 --> 00:03:13,560
+and preview 2 has been released,
+
+62
+00:03:13,560 --> 00:03:16,800
+so even though we are adding that in the NuGet package,
+
+63
+00:03:16,800 --> 00:03:19,470
+it has not been installed on my machine.
+
+64
+00:03:19,470 --> 00:03:21,933
+That is why we saw that error message.
+
+65
+00:03:22,890 --> 00:03:27,213
+Let me install that, and I will close Visual Studio.
+
+66
+00:03:32,520 --> 00:03:34,320
+Perfect, that is complete.
+
+67
+00:03:34,320 --> 00:03:36,900
+Let me open the project again
+
+68
+00:03:36,900 --> 00:03:39,753
+and try to run that with .NET 8.
+
+69
+00:03:41,820 --> 00:03:42,653
+Perfect.
+
+70
+00:03:42,653 --> 00:03:44,580
+This time, it is up and running
+
+71
+00:03:44,580 --> 00:03:47,490
+and everything is looking good.
+
+72
+00:03:47,490 --> 00:03:51,453
+In the next video, let me work on deploying the application.
+

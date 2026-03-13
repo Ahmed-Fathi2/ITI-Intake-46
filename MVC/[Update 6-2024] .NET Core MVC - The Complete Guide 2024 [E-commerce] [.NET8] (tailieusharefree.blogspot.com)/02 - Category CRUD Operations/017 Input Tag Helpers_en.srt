@@ -1,0 +1,232 @@
+1
+00:00:01,660 --> 00:00:08,770
+Now we have the form to create a category, but with .net core, we have tag helpers that we can use
+
+2
+00:00:08,770 --> 00:00:15,910
+to make this input fields more dynamic because basically we have to bind somewhere that this input field
+
+3
+00:00:15,910 --> 00:00:17,410
+is for category name.
+
+4
+00:00:17,410 --> 00:00:20,380
+And the next one here is for display order.
+
+5
+00:00:20,800 --> 00:00:25,450
+In older versions of .net, we used to bind them with name property.
+
+6
+00:00:25,480 --> 00:00:29,320
+When we post the form we used to retrieve and assign them.
+
+7
+00:00:29,320 --> 00:00:32,800
+But .net core has made everything super simple.
+
+8
+00:00:33,250 --> 00:00:41,860
+We have the model that we have defined here, so with input we have tag helpers which is ASP hyphen
+
+9
+00:00:41,860 --> 00:00:42,790
+for.
+
+10
+00:00:43,890 --> 00:00:44,730
+Inside there.
+
+11
+00:00:44,730 --> 00:00:50,820
+We have to define what this input field will be responsible for and that is for name.
+
+12
+00:00:51,300 --> 00:00:58,260
+Now, if you think how name is working here, that is because we have category model and that has a
+
+13
+00:00:58,260 --> 00:01:00,990
+property with the value of name.
+
+14
+00:01:01,380 --> 00:01:04,620
+If you write name one here, it will not work.
+
+15
+00:01:04,709 --> 00:01:11,820
+You can see category does not contain a definition for name, so it will only have those properties
+
+16
+00:01:11,820 --> 00:01:14,130
+which are defined in your model.
+
+17
+00:01:14,580 --> 00:01:20,350
+And the best part is if you have ASP four, then you do not have to define type as well.
+
+18
+00:01:20,370 --> 00:01:24,990
+It will automatically find out the type based on the property name.
+
+19
+00:01:25,900 --> 00:01:32,050
+So the next one here, we will say ASP for that will be for display order.
+
+20
+00:01:32,080 --> 00:01:36,160
+We type that and IntelliSense already displays that.
+
+21
+00:01:37,210 --> 00:01:40,240
+Same thing we have for the label name as well.
+
+22
+00:01:40,660 --> 00:01:49,300
+So if we use ASP for we do not have to define display order here, it will automatically add that and
+
+23
+00:01:49,300 --> 00:01:50,500
+let me show that.
+
+24
+00:01:51,880 --> 00:01:54,550
+We will remove the category name here.
+
+25
+00:01:54,610 --> 00:01:58,090
+Save them and let's go back.
+
+26
+00:01:58,630 --> 00:01:59,250
+Great.
+
+27
+00:01:59,260 --> 00:02:02,380
+You can see name and display order.
+
+28
+00:02:02,950 --> 00:02:05,230
+But then we have another issue.
+
+29
+00:02:05,440 --> 00:02:08,740
+The property names that we have does not have a space.
+
+30
+00:02:08,860 --> 00:02:12,340
+What if we want to add a space in display order?
+
+31
+00:02:13,580 --> 00:02:14,210
+For that.
+
+32
+00:02:14,210 --> 00:02:18,690
+We have data annotations that we have to add on our model.
+
+33
+00:02:18,710 --> 00:02:20,060
+Where is that?
+
+34
+00:02:20,090 --> 00:02:22,220
+We have the category model.
+
+35
+00:02:22,880 --> 00:02:25,520
+Let me stop the application here.
+
+36
+00:02:26,590 --> 00:02:33,010
+We have seen the data annotations that were required for entity framework core, but we can also add
+
+37
+00:02:33,010 --> 00:02:39,640
+data annotations that are useful for client side UI or client side validation.
+
+38
+00:02:40,370 --> 00:02:43,190
+We have something called as display name.
+
+39
+00:02:43,460 --> 00:02:46,790
+And there we have to write the name that we want.
+
+40
+00:02:46,970 --> 00:02:51,800
+So when it is being displayed, we want display order with a space.
+
+41
+00:02:51,800 --> 00:02:56,660
+And where we have the name, let's say we want to display name.
+
+42
+00:02:58,860 --> 00:03:00,450
+Of category name.
+
+43
+00:03:01,500 --> 00:03:05,250
+With that configured, let me run the application again.
+
+44
+00:03:06,260 --> 00:03:10,760
+So let me go to category again and create new category.
+
+45
+00:03:11,060 --> 00:03:11,660
+Perfect.
+
+46
+00:03:11,690 --> 00:03:14,960
+Now we have the category name and display order.
+
+47
+00:03:15,110 --> 00:03:17,750
+The textbox here looks off.
+
+48
+00:03:17,750 --> 00:03:19,730
+Let me go back here.
+
+49
+00:03:19,910 --> 00:03:20,780
+Whoops.
+
+50
+00:03:21,810 --> 00:03:29,470
+Sometimes you will have to stop and restart for the UI changes as well, but that should be okay.
+
+51
+00:03:29,490 --> 00:03:34,120
+Let's go back here and perfect now.
+
+52
+00:03:34,140 --> 00:03:40,620
+Best thing when we are using ASP four and the property name are the same for label and input.
+
+53
+00:03:40,650 --> 00:03:46,080
+If you click on the label, it will automatically highlight the input field.
+
+54
+00:03:46,650 --> 00:03:50,760
+So that is also done with the help of Tag Helper.
+
+55
+00:03:51,360 --> 00:03:53,100
+You can see display order.
+
+56
+00:03:53,100 --> 00:03:59,370
+It automatically knows it's an integer value and it defines that right here.
+
+57
+00:03:59,670 --> 00:04:03,660
+So that is the beauty of working with tag helpers.
+
+58
+00:04:04,630 --> 00:04:08,980
+With that configured, let me continue from the next video.
+

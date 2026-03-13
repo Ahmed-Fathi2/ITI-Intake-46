@@ -1,0 +1,368 @@
+1
+00:00:01,690 --> 00:00:08,860
+Bây giờ chúng tôi muốn xem điều gì sẽ xảy ra khi chúng tôi điền thông tin chi tiết vào đây và khi chúng tôi nhấn nút
+
+2
+00:00:08,860 --> 00:00:09,640
+đặt hàng.
+
+3
+00:00:10,180 --> 00:00:13,060
+Trong trường hợp đó, chúng ta phải làm hai việc.
+
+4
+00:00:13,090 --> 00:00:18,580
+Chúng ta phải chèn một bản ghi vào tiêu đề đơn hàng và tạo tiêu đề đơn hàng đó.
+
+5
+00:00:18,580 --> 00:00:25,300
+Và sau đó, chúng tôi sẽ phải tạo chi tiết đơn hàng với tất cả các sản phẩm có trong giỏ
+
+6
+00:00:25,300 --> 00:00:25,990
+hàng.
+
+7
+00:00:26,200 --> 00:00:29,980
+Vì vậy, hãy để tôi giải quyết vấn đề đó và dừng dự án.
+
+8
+00:00:30,010 --> 00:00:32,830
+Chúng tôi sẽ làm việc trên bộ điều khiển giỏ hàng.
+
+9
+00:00:33,760 --> 00:00:36,540
+Chúng ta có phương thức hành động tóm tắt get.
+
+10
+00:00:36,550 --> 00:00:40,150
+Hãy để tôi sao chép nó và dán nó một lần nữa.
+
+11
+00:00:40,270 --> 00:00:44,390
+Phương pháp hành động tiếp theo sẽ là phương pháp hành động bài tóm tắt.
+
+12
+00:00:44,410 --> 00:00:49,780
+Hãy để tôi gọi nó và nó sẽ là một phương thức hành động đăng bài HTTP.
+
+13
+00:00:50,020 --> 00:00:57,100
+Bây giờ, vì tên hành động khác với tóm tắt, chúng ta phải làm rõ ở đây rằng tên hành động
+
+14
+00:00:57,100 --> 00:01:00,970
+này thực sự là phương thức hành động tóm tắt.
+
+15
+00:01:01,180 --> 00:01:08,110
+Chúng tôi không thể có tên tóm tắt ở đây vì chúng tôi có tên chính xác trong get và theo cách đó, nó
+
+16
+00:01:08,110 --> 00:01:09,040
+sẽ xung đột.
+
+17
+00:01:09,160 --> 00:01:17,020
+Vì vậy, chúng tôi phải gọi hành động này bằng một cái gì đó khác và xác định rõ ràng tên hành động là tóm tắt cho bài đăng
+
+18
+00:01:17,020 --> 00:01:17,770
+HTTP.
+
+19
+00:01:18,190 --> 00:01:23,830
+Chúng ta cần suy nghĩ về mô hình mà chúng ta sẽ nhận được khi đăng bài.
+
+20
+00:01:24,370 --> 00:01:26,590
+Hãy để tôi mở xem ở đây.
+
+21
+00:01:26,620 --> 00:01:31,210
+Chuyển đến chế độ xem và chúng tôi có mô hình chế độ xem giỏ hàng.
+
+22
+00:01:31,750 --> 00:01:39,200
+Trong đó chúng ta muốn lấy tiêu đề đơn hàng, chấm tên, số điện thoại, địa chỉ đường phố để có
+
+23
+00:01:39,200 --> 00:01:45,170
+thể lấy model view giỏ hàng đó trong tham số của bài viết ngay tại đây.
+
+24
+00:01:46,920 --> 00:01:53,650
+Chúng ta có thể nói mô hình xem giỏ hàng và đặt tên cho nó, nhưng chúng ta có thể làm điều gì đó tốt hơn.
+
+25
+00:01:53,670 --> 00:02:00,870
+Những gì chúng tôi có thể làm là nếu chúng tôi đi lên, chúng tôi có mô hình xem giỏ hàng và tóm lại đó cũng là những gì chúng
+
+26
+00:02:00,870 --> 00:02:02,190
+tôi đang sử dụng.
+
+27
+00:02:02,580 --> 00:02:09,270
+Bởi vì khi chúng ta chuyển sang phương thức get action, chúng ta sẽ chuyển mô hình xem giỏ hàng chính xác đó.
+
+28
+00:02:09,889 --> 00:02:17,420
+Vì vậy, những gì tôi có thể làm ở đây là tôi có thể sử dụng thuộc tính liên kết và điều đó sẽ tự động liên kết mô hình chế độ
+
+29
+00:02:17,420 --> 00:02:18,380
+xem giỏ hàng.
+
+30
+00:02:18,560 --> 00:02:22,700
+Nó sẽ hoạt động giống hệt nhau, giống như nó hoạt động trong các trang dao cạo.
+
+31
+00:02:22,700 --> 00:02:29,570
+Và về cơ bản, điều sẽ xảy ra là khi các chi tiết sẽ được điền ở đây và khi chúng
+
+32
+00:02:29,570 --> 00:02:36,860
+nhấn nút gửi, mô hình chế độ xem giỏ hàng sẽ tự động được điền các giá trị đó.
+
+33
+00:02:37,710 --> 00:02:43,840
+Và theo cách đó, chúng ta không cần phải viết điều đó bên trong phương pháp hành động bài tóm tắt ngay tại đây.
+
+34
+00:02:43,860 --> 00:02:48,450
+Mô hình xem giỏ hàng sẽ tự động được điền.
+
+35
+00:02:49,360 --> 00:02:52,160
+Bởi vì đó là tự động điền.
+
+36
+00:02:52,180 --> 00:02:55,540
+Chúng tôi không phải tạo một phiên bản mới của điều đó.
+
+37
+00:02:56,370 --> 00:03:03,540
+Những gì chúng tôi muốn làm là chúng tôi sẽ chỉ điền vào danh sách giỏ hàng của mô hình xem giỏ
+
+38
+00:03:03,540 --> 00:03:05,250
+hàng từ cơ sở dữ liệu.
+
+39
+00:03:06,200 --> 00:03:08,510
+Hãy để tôi loại bỏ mọi thứ khác ở đây.
+
+40
+00:03:08,510 --> 00:03:14,930
+Vì vậy, chúng tôi đang điền danh sách giỏ hàng một lần nữa, vì khi chúng tôi đăng, chúng tôi có thể
+
+41
+00:03:14,930 --> 00:03:20,300
+mất một số chi tiết ở đó vì chúng tôi không có mọi thứ trong trường nhập liệu.
+
+42
+00:03:21,190 --> 00:03:23,320
+Vì vậy, có vẻ tốt ở đây.
+
+43
+00:03:23,350 --> 00:03:30,340
+Sau đó, tôi sẽ điền ngày đặt hàng là ngày giờ của ngày hôm nay và tôi sẽ điền ID người dùng ứng
+
+44
+00:03:30,340 --> 00:03:36,520
+dụng vào tiêu đề đơn đặt hàng làm ID người dùng mà chúng tôi truy xuất ở đây.
+
+45
+00:03:37,520 --> 00:03:44,480
+Khi chúng tôi làm điều đó, chúng tôi không còn cần ánh xạ này nữa vì ánh xạ đó sẽ tự động được điền.
+
+46
+00:03:45,050 --> 00:03:49,850
+Chúng ta cần tính toán tổng đơn hàng sao cho hợp lý.
+
+47
+00:03:49,850 --> 00:03:53,900
+Và ngay tại đây, chúng tôi đang phổ biến người dùng ứng dụng.
+
+48
+00:03:54,410 --> 00:04:02,000
+Bây giờ khi chúng tôi có người dùng ứng dụng được điền, chúng tôi có thể kiểm tra người dùng ứng dụng đó để tìm xem
+
+49
+00:04:02,000 --> 00:04:05,870
+có ID công ty nào được liên kết với người dùng đó không.
+
+50
+00:04:06,730 --> 00:04:10,380
+Lý do tôi đang nói là một ASP. Người dùng net.
+
+51
+00:04:10,390 --> 00:04:17,470
+Chúng tôi có ID công ty, nếu được chỉ định, điều đó có nghĩa là đó là tài khoản công ty và chúng
+
+52
+00:04:17,470 --> 00:04:24,580
+tôi sẽ sử dụng net 30 và trực tiếp đặt hàng thay vì bao gồm bất kỳ cổng thanh toán nào.
+
+53
+00:04:25,450 --> 00:04:34,930
+Vì vậy, tôi có thể kiểm tra ở đây nếu mô hình xem giỏ hàng chấm tiêu đề đơn hàng người dùng chấm ứng dụng. id công ty dot nhận giá trị hoặc
+
+54
+00:04:34,930 --> 00:04:38,650
+mặc định bằng 0.
+
+55
+00:04:39,070 --> 00:04:46,960
+Bây giờ lý do tôi đang sử dụng get value hoặc default là vì ID công ty có thể là null, get value hoặc default
+
+56
+00:04:46,960 --> 00:04:48,910
+sẽ xử lý tình huống đó.
+
+57
+00:04:49,510 --> 00:04:58,840
+Nếu giá trị đó bằng 0, điều đó có nghĩa đó là tài khoản khách hàng thông thường và chúng tôi cần thu hồi khoản thanh
+
+58
+00:04:58,840 --> 00:04:59,680
+toán.
+
+59
+00:05:03,080 --> 00:05:04,640
+Trong phần khác.
+
+60
+00:05:04,670 --> 00:05:06,800
+Đó là một người dùng công ty.
+
+61
+00:05:07,700 --> 00:05:12,560
+Vì vậy, về cơ bản, nếu đó là tài khoản của khách hàng, thì trạng thái đơn hàng là gì?
+
+62
+00:05:12,590 --> 00:05:15,230
+Hãy để tôi quay lại PowerPoint ở đây.
+
+63
+00:05:15,260 --> 00:05:18,320
+Chúng tôi phải làm cho cả hai đang chờ xử lý.
+
+64
+00:05:19,090 --> 00:05:20,740
+Vì vậy, chúng tôi quay trở lại đây.
+
+65
+00:05:20,740 --> 00:05:27,910
+Chúng tôi sẽ chỉ định trạng thái thanh toán cho tiêu đề đơn hàng là đang chờ xử lý và trạng thái đơn hàng là đang chờ xử lý.
+
+66
+00:05:28,960 --> 00:05:35,650
+Rồi ở phần other nếu là tài khoản công ty nếu mình quay lại khi đặt hàng thì trạng thái được
+
+67
+00:05:35,680 --> 00:05:40,900
+duyệt và trạng thái thanh toán là được duyệt thanh toán chậm.
+
+68
+00:05:41,470 --> 00:05:45,550
+Vì vậy, ngay tại đây, hãy để tôi chỉ định cả hai trạng thái đó.
+
+69
+00:05:45,580 --> 00:05:53,170
+Trạng thái thanh toán sẽ được duyệt thanh toán chậm và trạng thái đơn hàng được duyệt ngay tại đó.
+
+70
+00:05:53,830 --> 00:05:59,290
+Cùng với đó, chúng tôi đang xử lý mọi thứ và bây giờ chúng tôi có thể tạo tiêu đề đơn hàng.
+
+71
+00:05:59,320 --> 00:06:06,910
+Vì vậy, trên đơn vị công việc tiêu đề dấu chấm đơn hàng, chúng tôi sẽ thêm tiêu đề đơn hàng vào bên trong chế độ xem
+
+72
+00:06:06,940 --> 00:06:13,720
+giỏ hàng mô hình tiêu đề dấu chấm đơn hàng và chúng tôi sẽ lưu các thay đổi sẽ tạo tiêu đề đơn hàng.
+
+73
+00:06:14,080 --> 00:06:17,350
+Ngay bây giờ chúng tôi chỉ tạo tiêu đề đơn hàng.
+
+74
+00:06:17,380 --> 00:06:25,570
+Sau đó, chúng tôi phải tạo chi tiết đơn hàng cho chi tiết đơn hàng, chúng tôi sẽ có một vòng lặp cho mỗi vòng lặp và chúng
+
+75
+00:06:25,570 --> 00:06:34,700
+tôi sẽ nói giỏ hàng có thể thay đổi trong chế độ xem giỏ hàng của mô hình danh sách giỏ hàng chấm cho từng mặt hàng trong giỏ hàng.
+
+76
+00:06:34,730 --> 00:06:38,150
+Chúng ta sẽ phải tạo một bản ghi chi tiết đơn hàng.
+
+77
+00:06:39,400 --> 00:06:41,710
+Vì vậy, chúng tôi sẽ tạo đơn đặt hàng cá nhân.
+
+78
+00:06:41,710 --> 00:06:51,130
+Chi tiết bằng mới và sau đó chúng tôi phải điền chi tiết chế độ xem như ID sản phẩm nằm trong ID sản phẩm chấm giỏ
+
+79
+00:06:51,130 --> 00:06:51,970
+hàng.
+
+80
+00:06:52,420 --> 00:06:57,880
+Chúng tôi cũng phải điền ID tiêu đề đơn hàng Và chúng tôi sẽ lấy ID đó như thế nào?
+
+81
+00:06:58,300 --> 00:07:01,330
+Vì chúng tôi đã lưu tiêu đề đơn hàng ở đây.
+
+82
+00:07:01,330 --> 00:07:07,300
+ID tiêu đề đơn đặt hàng của chế độ xem giỏ hàng sẽ được điền bên trong đó.
+
+83
+00:07:07,630 --> 00:07:16,090
+Vì vậy, trong chế độ xem giỏ hàng, trường id tiêu đề đơn hàng sẽ được điền vì trên dòng 101, tiêu đề
+
+84
+00:07:16,090 --> 00:07:19,720
+đơn hàng sẽ được tạo trong cơ sở dữ liệu.
+
+85
+00:07:21,100 --> 00:07:28,570
+Cuối cùng, chúng ta cần giá nằm trong giá chấm giỏ hàng và số lượng nằm trong số chấm giỏ hàng.
+
+86
+00:07:29,350 --> 00:07:32,110
+Và điều đó có vẻ tốt cho một chi tiết đặt hàng.
+
+87
+00:07:32,720 --> 00:07:34,940
+Chúng ta phải lưu nó vào cơ sở dữ liệu.
+
+88
+00:07:34,940 --> 00:07:40,460
+Vì vậy, một đơn vị lệnh sản xuất chi tiết và chúng tôi phải thêm một bản ghi.
+
+89
+00:07:40,730 --> 00:07:45,200
+Sau khi chúng tôi làm điều đó, chúng tôi sẽ gọi đơn vị công việc dot save.
+
+90
+00:07:45,890 --> 00:07:50,030
+Điều đó sẽ tạo tiêu đề đơn hàng cũng như chi tiết đơn hàng.
+
+91
+00:07:50,660 --> 00:07:56,570
+Khi chúng tôi đã tạo tất cả các chi tiết, chúng tôi cần chuyển hướng đến trang xác nhận.
+
+92
+00:07:56,780 --> 00:07:59,450
+Hãy để tôi làm điều đó trong video tiếp theo.
+

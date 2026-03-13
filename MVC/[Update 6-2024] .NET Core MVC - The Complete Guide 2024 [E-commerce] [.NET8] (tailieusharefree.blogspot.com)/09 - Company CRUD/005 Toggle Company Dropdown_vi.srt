@@ -1,0 +1,132 @@
+1
+00:00:01,510 --> 00:00:06,130
+Bây giờ danh sách thả xuống cho công ty không phải lúc nào cũng hiển thị.
+
+2
+00:00:06,430 --> 00:00:11,320
+Tôi muốn nó hiển thị nếu hàng đã chọn là công ty.
+
+3
+00:00:12,210 --> 00:00:20,010
+Chúng tôi sẽ nhanh chóng đạt được điều đó bằng cách sử dụng JavaScript nơi chúng tôi có danh sách thả xuống ở đây, chúng tôi sẽ nói kiểu
+
+4
+00:00:20,010 --> 00:00:24,870
+hiển thị không và chúng tôi cuộn xuống, chúng tôi có phần dành cho tập lệnh.
+
+5
+00:00:25,750 --> 00:00:26,620
+Chèn vào đó.
+
+6
+00:00:26,620 --> 00:00:31,480
+Chúng tôi sẽ thêm thẻ tập lệnh và chúng tôi có thể thêm JavaScript tùy chỉnh.
+
+7
+00:00:32,600 --> 00:00:35,780
+Chúng tôi sẽ thêm điều đó khi tài liệu đã sẵn sàng.
+
+8
+00:00:35,780 --> 00:00:42,710
+Và điều chúng tôi muốn làm là khi Hàng được sửa đổi, chúng tôi muốn nó kích hoạt phần đó.
+
+9
+00:00:43,420 --> 00:00:51,430
+Nếu tôi nhấn F12 tại đây và kiểm tra điều này, bạn sẽ nhận thấy rằng nó tự động nhận ID của hàng gạch dưới đầu
+
+10
+00:00:51,430 --> 00:00:51,850
+vào.
+
+11
+00:00:52,660 --> 00:00:55,030
+Vì vậy, tôi có thể sử dụng nó ở đây.
+
+12
+00:00:55,660 --> 00:01:03,940
+Và tôi sẽ nói khi quy tắc gạch dưới đầu vào thay đổi dấu chấm được kích hoạt, thì tôi muốn gọi một hàm.
+
+13
+00:01:05,600 --> 00:01:10,400
+Trong chức năng đó, chúng ta sẽ phải lấy vai trò nào đã được chọn.
+
+14
+00:01:10,580 --> 00:01:15,320
+Nếu đó chỉ là công ty, thì chúng tôi muốn chuyển đổi danh sách thả xuống.
+
+15
+00:01:16,160 --> 00:01:20,600
+Vì vậy, chúng tôi sẽ nói lựa chọn biến bằng đô la.
+
+16
+00:01:20,900 --> 00:01:31,100
+Và ở đó chúng ta có thể nhận được điều đó bằng cách sử dụng hàm băm dựa trên hàng đầu vào và sau đó chúng ta có thể nhận tùy chọn được chọn.
+
+17
+00:01:31,750 --> 00:01:38,530
+Điều đó sẽ cung cấp cho chúng tôi giá trị đã được chọn và chúng tôi sẽ gọi văn bản trên đó.
+
+18
+00:01:39,730 --> 00:01:44,650
+Cuối cùng, chúng ta có thể kiểm tra xem lựa chọn có bình đẳng với công ty hay không.
+
+19
+00:01:45,900 --> 00:01:48,420
+Chúng ta muốn làm gì trong trường hợp đó?
+
+20
+00:01:48,930 --> 00:01:51,780
+Trong trường hợp đó, chúng tôi muốn hiển thị trình đơn thả xuống.
+
+21
+00:01:52,080 --> 00:01:54,810
+Bây giờ chúng ta muốn chuyển đổi danh sách thả xuống nào?
+
+22
+00:01:54,840 --> 00:01:59,580
+Hãy để tôi lấy id của nó là ID công ty gạch dưới đầu vào.
+
+23
+00:02:00,390 --> 00:02:06,420
+Các ID này được tạo tự động dựa trên biểu mẫu ASP mà chúng tôi có.
+
+24
+00:02:07,570 --> 00:02:16,180
+Vì vậy, ngay tại đây, chúng tôi sẽ thêm ký hiệu đô la và tôi sẽ nói đầu vào hàm băm, dấu chấm ID công ty gạch dưới hiển thị
+
+25
+00:02:16,690 --> 00:02:18,660
+trong phần khác ở đây.
+
+26
+00:02:18,670 --> 00:02:20,140
+Tôi sẽ giấu điều đó.
+
+27
+00:02:21,710 --> 00:02:23,450
+Tôi tin rằng có vẻ tốt.
+
+28
+00:02:23,480 --> 00:02:31,220
+Nhưng JavaScript là một công việc phức tạp, vì vậy trừ khi và cho đến khi chúng tôi khởi động lại ứng dụng
+
+29
+00:02:31,220 --> 00:02:37,640
+hoặc thấy ứng dụng đó hoạt động, thật khó tin vì có khả năng xảy ra lỗi chính tả.
+
+30
+00:02:38,820 --> 00:02:42,840
+Chúng tôi chọn công ty đi lên và hoàn thiện.
+
+31
+00:02:42,960 --> 00:02:47,190
+Nếu tôi chọn bất cứ thứ gì khác, thì danh sách thả xuống sẽ biến mất.
+
+32
+00:02:48,020 --> 00:02:48,680
+Hoàn hảo.
+
+33
+00:02:48,680 --> 00:02:51,080
+Điều đó có vẻ tốt cho danh sách thả xuống của chúng tôi.
+

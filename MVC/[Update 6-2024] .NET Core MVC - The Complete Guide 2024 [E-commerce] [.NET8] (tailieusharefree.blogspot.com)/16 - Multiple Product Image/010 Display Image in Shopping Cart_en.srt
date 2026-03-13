@@ -1,0 +1,400 @@
+1
+00:00:01,640 --> 00:00:03,930
+-: Now on the homepage here
+
+2
+00:00:03,930 --> 00:00:06,540
+we do not want to load all the images
+
+3
+00:00:06,540 --> 00:00:09,180
+but rather, I want to load one of the image
+
+4
+00:00:09,180 --> 00:00:11,403
+and display that right here.
+
+5
+00:00:12,660 --> 00:00:15,240
+We will go back to the application
+
+6
+00:00:15,240 --> 00:00:18,330
+and we will go to home controller.
+
+7
+00:00:18,330 --> 00:00:20,283
+Let me go to customer.
+
+8
+00:00:21,480 --> 00:00:22,380
+Perfect.
+
+9
+00:00:22,380 --> 00:00:25,620
+We have the index here where when we are including
+
+10
+00:00:25,620 --> 00:00:27,450
+the category for product,
+
+11
+00:00:27,450 --> 00:00:30,483
+we want to include product images as well.
+
+12
+00:00:31,530 --> 00:00:34,740
+Again, make sure there is no spelling mistake here
+
+13
+00:00:34,740 --> 00:00:36,270
+and on top of that
+
+14
+00:00:36,270 --> 00:00:40,380
+we can pass multiple include properties with a comma.
+
+15
+00:00:40,380 --> 00:00:44,883
+Our repository is capable to handle that so this will work.
+
+16
+00:00:45,720 --> 00:00:48,090
+We also have the details here.
+
+17
+00:00:48,090 --> 00:00:51,030
+Let me make sure I load product image
+
+18
+00:00:51,030 --> 00:00:54,663
+when we are navigating to the details page as well.
+
+19
+00:00:55,530 --> 00:01:00,270
+After that, let me go to the index view, go to view.
+
+20
+00:01:00,270 --> 00:01:04,170
+Here we are displaying an image URL,
+
+21
+00:01:04,170 --> 00:01:06,300
+but now what we will have to do is
+
+22
+00:01:06,300 --> 00:01:10,680
+we will first have to check if there are any product image.
+
+23
+00:01:10,680 --> 00:01:12,810
+We will have an F condition.
+
+24
+00:01:12,810 --> 00:01:17,810
+I will say product dot product images is not null
+
+25
+00:01:18,030 --> 00:01:22,312
+and product dot product images dot count
+
+26
+00:01:22,312 --> 00:01:24,153
+must be greater than zero.
+
+27
+00:01:25,170 --> 00:01:28,863
+If that is the case, then let me copy this IMG tag,
+
+28
+00:01:30,267 --> 00:01:33,900
+paste it here, the SRC, we will get that from
+
+29
+00:01:33,900 --> 00:01:38,900
+product dot product images dot first or default.
+
+30
+00:01:39,480 --> 00:01:42,663
+We want to retrieve the first one on there,
+
+31
+00:01:43,919 --> 00:01:44,819
+we have image URL.
+
+32
+00:01:46,020 --> 00:01:48,840
+Now in the L spot, it basically means that
+
+33
+00:01:48,840 --> 00:01:52,140
+that product does not have any image,
+
+34
+00:01:52,140 --> 00:01:54,630
+so rather than going empty here,
+
+35
+00:01:54,630 --> 00:01:57,600
+I can display a fake image here.
+
+36
+00:01:57,600 --> 00:02:02,550
+And to display that I can add a link to placehold dot co,
+
+37
+00:02:02,550 --> 00:02:05,373
+define a random size, and PNG.
+
+38
+00:02:06,600 --> 00:02:10,353
+With that, let me save here all of that.
+
+39
+00:02:11,430 --> 00:02:15,450
+Let's go back and great.
+
+40
+00:02:15,450 --> 00:02:18,480
+Wherever we have the image it is being displayed.
+
+41
+00:02:18,480 --> 00:02:20,763
+If not, we have the placeholder.
+
+42
+00:02:21,750 --> 00:02:26,313
+Let me try to modify the product image for cotton candy.
+
+43
+00:02:28,170 --> 00:02:33,170
+Delete that, delete that, and delete that as well.
+
+44
+00:02:33,720 --> 00:02:35,493
+We need cotton candy.
+
+45
+00:02:37,129 --> 00:02:40,980
+Go to homepage and perfect.
+
+46
+00:02:40,980 --> 00:02:42,123
+That looks good.
+
+47
+00:02:43,020 --> 00:02:47,040
+Then let me add a few items to the cart here
+
+48
+00:02:47,040 --> 00:02:49,203
+which have image of course.
+
+49
+00:02:50,640 --> 00:02:53,610
+And then if we navigate the shopping cart
+
+50
+00:02:53,610 --> 00:02:55,980
+let me display the image here
+
+51
+00:02:55,980 --> 00:03:00,093
+before we work on displaying image in the details page.
+
+52
+00:03:01,110 --> 00:03:04,380
+So we will have to display in shopping cart.
+
+53
+00:03:04,380 --> 00:03:06,390
+Let me go there.
+
+54
+00:03:06,390 --> 00:03:09,990
+For shopping cart, we will go to the cart controller.
+
+55
+00:03:09,990 --> 00:03:10,950
+Where is that?
+
+56
+00:03:10,950 --> 00:03:12,840
+Right here.
+
+57
+00:03:12,840 --> 00:03:15,030
+We have the index.
+
+58
+00:03:15,030 --> 00:03:17,100
+When we are retrieving things here
+
+59
+00:03:17,100 --> 00:03:20,760
+product is already in include properties.
+
+60
+00:03:20,760 --> 00:03:24,120
+Now with EF core, you also have then include
+
+61
+00:03:24,120 --> 00:03:28,140
+but I am honestly not big fan of then include
+
+62
+00:03:28,140 --> 00:03:30,690
+because when we are including properties,
+
+63
+00:03:30,690 --> 00:03:34,080
+entity framework core is also tracking them.
+
+64
+00:03:34,080 --> 00:03:37,260
+So rather than making our repository way more
+
+65
+00:03:37,260 --> 00:03:40,380
+complex to include the dot then include,
+
+66
+00:03:40,380 --> 00:03:45,240
+we can manually include all the product image right here.
+
+67
+00:03:45,240 --> 00:03:47,790
+First, we will retrieve our innumerable
+
+68
+00:03:47,790 --> 00:03:51,150
+of all the product images from the database
+
+69
+00:03:51,150 --> 00:03:53,550
+and where we have the for each loop,
+
+70
+00:03:53,550 --> 00:03:57,450
+we can load cart dot product dot product images
+
+71
+00:03:57,450 --> 00:04:01,620
+is equal to product images dot where.
+
+72
+00:04:01,620 --> 00:04:05,490
+We can say U goes to U dot product ID.
+
+73
+00:04:05,490 --> 00:04:10,490
+That product ID must match the card dot product dot ID.
+
+74
+00:04:12,480 --> 00:04:14,100
+That way it will retrieve
+
+75
+00:04:14,100 --> 00:04:17,279
+and we will convert that to a list.
+
+76
+00:04:17,279 --> 00:04:18,570
+Perfect.
+
+77
+00:04:18,570 --> 00:04:21,180
+So now the product dot product images
+
+78
+00:04:21,180 --> 00:04:24,333
+in the shopping cart will be populated.
+
+79
+00:04:25,650 --> 00:04:27,900
+We can copy the condition that we added
+
+80
+00:04:27,900 --> 00:04:30,900
+on the homepage here, copy that,
+
+81
+00:04:30,900 --> 00:04:33,540
+and I will open the index view
+
+82
+00:04:33,540 --> 00:04:37,770
+or card controller where we have the image.
+
+83
+00:04:37,770 --> 00:04:41,070
+Let me paste it right there.
+
+84
+00:04:41,070 --> 00:04:45,030
+Here we also have to add a class of width hundred.
+
+85
+00:04:45,030 --> 00:04:47,793
+Let me do that in both the places.
+
+86
+00:04:49,230 --> 00:04:50,910
+We will have to navigate to
+
+87
+00:04:50,910 --> 00:04:55,470
+item dot product product images.
+
+88
+00:04:55,470 --> 00:04:58,623
+Copy that and paste it here.
+
+89
+00:04:59,580 --> 00:05:04,580
+Perfect. Let me save all, continue editing, save everything.
+
+90
+00:05:05,790 --> 00:05:08,520
+Rebuild the changes.
+
+91
+00:05:08,520 --> 00:05:09,873
+Rebuild the change.
+
+92
+00:05:10,740 --> 00:05:13,494
+We have an error here.
+
+93
+00:05:13,494 --> 00:05:17,820
+Whoops. Let me reach something is wrong.
+
+94
+00:05:17,820 --> 00:05:19,263
+Let me restart.
+
+95
+00:05:20,850 --> 00:05:23,733
+And I see an issue here.
+
+96
+00:05:25,350 --> 00:05:29,910
+For some reason, Stripe is added in the product controller.
+
+97
+00:05:29,910 --> 00:05:33,663
+Let me remove that and run the application.
+
+98
+00:05:34,740 --> 00:05:39,740
+Perfect. Let me go to our cart here and great!
+
+99
+00:05:40,620 --> 00:05:44,460
+Shopping cart is also looking much better.
+
+100
+00:05:44,460 --> 00:05:47,253
+Let me continue in the next video.
+

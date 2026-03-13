@@ -1,0 +1,40 @@
+﻿using ITI.Application.Interfaces.Repositories;
+using ITI.Application.Interfaces.Services;
+using ITI.Application.Services;
+using ITI.Infrastructure.Persistence.Context;
+using ITI.Infrastructure.Repositories;
+using Microsoft.Extensions.DependencyInjection;
+
+namespace ITI.WinForms
+{
+    internal static class Program
+    {
+        public static IServiceProvider ServiceProvider { get; private set; }
+
+        [STAThread]
+        static void Main()
+        {
+            var services = new ServiceCollection();
+
+            ConfigureServices(services);
+
+            ServiceProvider = services.BuildServiceProvider();
+
+            ApplicationConfiguration.Initialize();
+
+            var form = ServiceProvider.GetRequiredService<Form1>();
+            System.Windows.Forms.Application.Run(form);
+        }
+
+        private static void ConfigureServices(IServiceCollection services)
+        {
+            services.AddTransient<Form1>();
+
+            services.AddDbContext<AppDbContext>();
+            services.AddScoped<IStudentService,StudentService>();
+            services.AddScoped<IStudentRepository,StudentRepository>();
+
+
+        }
+    }
+}

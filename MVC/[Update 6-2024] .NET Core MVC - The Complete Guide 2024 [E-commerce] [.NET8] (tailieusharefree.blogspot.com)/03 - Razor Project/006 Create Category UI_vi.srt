@@ -1,0 +1,212 @@
+1
+00:00:01,700 --> 00:00:04,760
+Chúng tôi có thể hiển thị tất cả các danh mục.
+
+2
+00:00:04,910 --> 00:00:09,710
+Nếu tôi chạy lại ứng dụng và nếu tôi đi đến các danh mục ở đó.
+
+3
+00:00:10,540 --> 00:00:16,510
+Nếu tôi nhấp vào tạo danh mục mới, bạn có thể thấy nó không thể định tuyến đến trang đó.
+
+4
+00:00:16,690 --> 00:00:22,000
+Nếu đó là ứng dụng MVC, bạn sẽ thấy trang thông báo lỗi không tìm thấy.
+
+5
+00:00:22,060 --> 00:00:28,180
+Nhưng trong các trang dao cạo, nếu không tìm thấy nó, tôi nhận thấy nó thậm chí không chuyển hướng.
+
+6
+00:00:28,790 --> 00:00:33,380
+Vì vậy, tiếp theo chúng ta phải tạo danh mục này và trang tạo.
+
+7
+00:00:34,130 --> 00:00:38,410
+Chúng tôi sẽ mở giải pháp Explorer Bên trong danh mục.
+
+8
+00:00:38,420 --> 00:00:45,680
+Tôi sẽ thêm một trang dao cạo mới sẽ trống và chúng tôi sẽ gọi đó là tạo.
+
+9
+00:00:47,860 --> 00:00:48,550
+Hoàn hảo.
+
+10
+00:00:48,580 --> 00:00:50,890
+Ta có mô hình trang tương ứng.
+
+11
+00:00:50,920 --> 00:01:00,580
+Bây giờ giao diện người dùng sẽ giống hệt nhau, vì vậy chúng ta có thể chuyển đến danh mục Chế độ xem, tạo bản sao, đóng bản sao đó và cũng có thể
+
+12
+00:01:00,580 --> 00:01:01,990
+thu nhỏ phần này.
+
+13
+00:01:02,410 --> 00:01:06,550
+Dán nó ngay tại đây, lên đầu trang.
+
+14
+00:01:06,580 --> 00:01:12,970
+Chúng tôi không có mô hình cho danh mục, nhưng chúng tôi sẽ phải tạo mô hình đó trong mô hình trang.
+
+15
+00:01:13,990 --> 00:01:22,480
+Vì vậy, khi chúng ta đi tạo CSS, HTML dot CSS trong dự án dao cạo ở đây, chúng ta sẽ phải tạo cái đó.
+
+16
+00:01:23,320 --> 00:01:26,710
+Trên hết, chúng ta cần ngữ cảnh DB của ứng dụng.
+
+17
+00:01:26,710 --> 00:01:30,730
+Vì vậy, hãy để tôi sao chép những dòng này, dán nó ở đây.
+
+18
+00:01:30,730 --> 00:01:35,140
+Chúng ta sẽ phải thay đổi tên hàm tạo để tạo mô hình.
+
+19
+00:01:35,680 --> 00:01:41,740
+Hãy để tôi thêm câu lệnh sử dụng ở đây và chúng tôi không có danh sách danh mục.
+
+20
+00:01:41,740 --> 00:01:46,900
+Khi chúng tôi đang tạo, chúng tôi sẽ làm việc với một danh mục.
+
+21
+00:01:47,530 --> 00:01:51,280
+Thêm câu lệnh sử dụng và hoàn thiện.
+
+22
+00:01:51,820 --> 00:01:58,720
+Nếu chúng tôi truy cập trang dao cạo ở đây, chúng tôi không có tên, nhưng chúng tôi có danh mục. tên.
+
+23
+00:01:59,830 --> 00:02:03,100
+Chúng tôi sẽ phải thay thế nó ở tất cả các nơi.
+
+24
+00:02:03,280 --> 00:02:05,710
+Vì vậy, hãy để tôi làm điều đó.
+
+25
+00:02:07,760 --> 00:02:09,199
+Và hoàn hảo.
+
+26
+00:02:09,680 --> 00:02:11,540
+Chúng tôi không có bộ điều khiển.
+
+27
+00:02:11,540 --> 00:02:13,520
+Chúng tôi có trang ASP.
+
+28
+00:02:15,350 --> 00:02:19,820
+Đó sẽ là danh mục chuyển tiếp gạch chéo chỉ mục.
+
+29
+00:02:20,870 --> 00:02:23,060
+Và điều đó có vẻ tốt.
+
+30
+00:02:24,220 --> 00:02:28,270
+Hãy để tôi chạy ứng dụng và xem nó có hoạt động không.
+
+31
+00:02:29,810 --> 00:02:36,980
+Chúng tôi vào danh mục tạo ở đây và nó không hoạt động trong chỉ mục.
+
+32
+00:02:37,010 --> 00:02:43,580
+Chúng tôi cần một dấu gạch chéo ở đây và hoàn thiện nó hoạt động.
+
+33
+00:02:43,730 --> 00:02:47,450
+Nó tải danh mục trống khi chúng tôi nhấn tạo.
+
+34
+00:02:47,480 --> 00:02:56,300
+Chúng tôi cũng có xác thực bởi vì khi tạo ở đây, chúng tôi có một phần tập lệnh xác thực và điều đó cũng có
+
+35
+00:02:56,300 --> 00:03:00,170
+mặt theo mặc định trong các trang dao cạo.
+
+36
+00:03:01,020 --> 00:03:03,600
+Vì vậy, bạn có thể thấy mọi thứ đều giống nhau.
+
+37
+00:03:03,600 --> 00:03:06,650
+Khi chúng tôi quay lại danh sách, điều đó không hiệu quả.
+
+38
+00:03:06,660 --> 00:03:09,090
+Chúng ta cần một dấu gạch chéo về phía trước ở đó.
+
+39
+00:03:09,270 --> 00:03:14,160
+Và hãy để tôi sửa đổi trong chỉ mục ngay tại đây.
+
+40
+00:03:14,190 --> 00:03:16,590
+Đây sẽ là danh mục.
+
+41
+00:03:20,270 --> 00:03:20,810
+Chuẩn rồi.
+
+42
+00:03:20,810 --> 00:03:21,980
+Trông tôt đây.
+
+43
+00:03:22,790 --> 00:03:23,540
+Hoàn hảo.
+
+44
+00:03:23,540 --> 00:03:26,660
+Vì vậy, bây giờ chúng ta có thể quay lại, chỉnh sửa và xóa.
+
+45
+00:03:26,690 --> 00:03:30,920
+Chúng tôi chưa thêm các trang đó, vì vậy sẽ không hoạt động.
+
+46
+00:03:31,340 --> 00:03:34,200
+Nhưng tạo danh mục mới đang hoạt động.
+
+47
+00:03:34,220 --> 00:03:41,840
+Nếu bạn nhập một cái gì đó và nhấn tạo, không có gì xảy ra bởi vì những gì chúng ta có ngay bây giờ trong mô hình
+
+48
+00:03:41,840 --> 00:03:46,430
+trang chỉ là trình xử lý nhận và điều đó thậm chí không làm gì cả.
+
+49
+00:03:47,300 --> 00:03:53,630
+Bởi vì khi chúng tôi tạo một danh mục, chúng tôi muốn tải trang trống và hiển thị hộp văn bản.
+
+50
+00:03:53,630 --> 00:03:55,220
+Như vậy là được.
+
+51
+00:03:55,580 --> 00:03:58,430
+Nhưng làm thế nào để chúng tôi thêm một điểm cuối bài đăng ở đây?
+
+52
+00:03:58,430 --> 00:04:03,350
+Vì vậy, khi chúng tôi nhấn nút gửi, chúng tôi muốn tạo danh mục đó.
+
+53
+00:04:04,110 --> 00:04:07,020
+Hãy để tôi cho bạn thấy điều đó trong video tiếp theo.
+

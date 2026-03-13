@@ -1,0 +1,232 @@
+1
+00:00:02,640 --> 00:00:04,770
+Instructor: Next thing. What I want to add here is
+
+2
+00:00:04,770 --> 00:00:07,892
+based on the user id, we want to lock any account and
+
+3
+00:00:07,892 --> 00:00:11,583
+unlock any account in dotnet core.
+
+4
+00:00:12,480 --> 00:00:14,550
+Now, doing that is super simple.
+
+5
+00:00:14,550 --> 00:00:17,070
+In the ASP Net user table,
+
+6
+00:00:17,070 --> 00:00:22,070
+we have a column for that which is lockout end right here.
+
+7
+00:00:22,710 --> 00:00:26,880
+If the value in this column is populated for any user,
+
+8
+00:00:26,880 --> 00:00:29,640
+and if that date is in a future date
+
+9
+00:00:29,640 --> 00:00:33,270
+their account will be locked till that date.
+
+10
+00:00:33,270 --> 00:00:35,400
+So that is the simple logic.
+
+11
+00:00:35,400 --> 00:00:37,500
+If we want to lock any account,
+
+12
+00:00:37,500 --> 00:00:41,070
+we have to set the lockout end to be the future date.
+
+13
+00:00:41,070 --> 00:00:44,013
+Until that date, the account will be locked.
+
+14
+00:00:44,940 --> 00:00:49,260
+So let me switch back and let me work on that right here
+
+15
+00:00:49,260 --> 00:00:51,210
+in the controller.
+
+16
+00:00:51,210 --> 00:00:53,310
+I will rename this to be locked
+
+17
+00:00:53,310 --> 00:00:57,723
+unlock here and I will make that an HTTP Post.
+
+18
+00:00:59,460 --> 00:01:03,014
+We will get the ID here, but that will be user id
+
+19
+00:01:03,014 --> 00:01:07,353
+which will be string, and we will get that from body.
+
+20
+00:01:08,610 --> 00:01:09,481
+Based on that id,
+
+21
+00:01:09,481 --> 00:01:13,560
+we want to retrieve the user record from the database
+
+22
+00:01:13,560 --> 00:01:17,973
+and we will return JSON back if that object is empty.
+
+23
+00:01:18,840 --> 00:01:20,994
+Now, when we get the record, we will be using
+
+24
+00:01:20,994 --> 00:01:25,770
+same method to lock a user and unlock a user.
+
+25
+00:01:25,770 --> 00:01:30,540
+So if the date is not empty and if the date is future
+
+26
+00:01:30,540 --> 00:01:33,510
+that means that user is currently locked,
+
+27
+00:01:33,510 --> 00:01:35,073
+we have to unlock them.
+
+28
+00:01:36,090 --> 00:01:38,538
+So if OBJ from DB
+
+29
+00:01:38,538 --> 00:01:41,790
+lockout end is not null,
+
+30
+00:01:41,790 --> 00:01:44,520
+and OBJ from db
+
+31
+00:01:44,520 --> 00:01:48,720
+dot lockout end is greater than today's date.
+
+32
+00:01:48,720 --> 00:01:51,870
+So it's greater than datetime dot now.
+
+33
+00:01:51,870 --> 00:01:55,350
+That means that user is currently locked
+
+34
+00:01:55,350 --> 00:01:57,963
+and we need to unlock them.
+
+35
+00:01:59,370 --> 00:02:03,630
+So here we will say OBJ from db dot lockout end
+
+36
+00:02:03,630 --> 00:02:06,750
+is equal to datetime dot now.
+
+37
+00:02:06,750 --> 00:02:09,780
+What that will do is from this point onwards
+
+38
+00:02:09,780 --> 00:02:11,613
+the user will be unlocked.
+
+39
+00:02:12,630 --> 00:02:16,680
+That looks good, but if the user is already unlocked,
+
+40
+00:02:16,680 --> 00:02:18,690
+we want to lock them.
+
+41
+00:02:18,690 --> 00:02:22,500
+So lockout end is equal to datetime.now
+
+42
+00:02:22,500 --> 00:02:25,320
+and we want to add years.
+
+43
+00:02:25,320 --> 00:02:28,080
+Let's add a thousand years.
+
+44
+00:02:28,080 --> 00:02:29,700
+So that user will be locked
+
+45
+00:02:29,700 --> 00:02:32,700
+out for the next thousand years.
+
+46
+00:02:32,700 --> 00:02:35,400
+We have to save the changes.
+
+47
+00:02:35,400 --> 00:02:38,010
+Right now we are not using unit of work.
+
+48
+00:02:38,010 --> 00:02:39,300
+We are directly working
+
+49
+00:02:39,300 --> 00:02:43,230
+with entity framework core with underscore db.
+
+50
+00:02:43,230 --> 00:02:45,210
+So when we have to make a change,
+
+51
+00:02:45,210 --> 00:02:47,730
+we can directly retrieve that record
+
+52
+00:02:47,730 --> 00:02:51,543
+update something in that record and save the changes.
+
+53
+00:02:52,620 --> 00:02:54,060
+This will work right now
+
+54
+00:02:54,060 --> 00:02:57,450
+because the record that is retrieved is being tracked
+
+55
+00:02:57,450 --> 00:02:59,313
+by entity framework core.
+
+56
+00:03:00,900 --> 00:03:03,510
+So the post method looks good here.
+
+57
+00:03:03,510 --> 00:03:07,890
+We need to consume that from the user dot js.
+
+58
+00:03:07,890 --> 00:03:10,563
+Let me do that in the next video.
+
