@@ -1,0 +1,78 @@
+﻿@page "/exam/{examId:int}"
+@inject ApplicationDbContext Db
+@inject NavigationManager Nav
+@using ExamSystem.Models
+
+<h3>Exam</h3>
+
+@if (exam == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <h4>@exam.Title</h4>
+    <EditForm Model="answers" OnValidSubmit="Submit">
+        @foreach (var q in exam.Questions!)
+        {
+            <div style="margin-bottom:1rem">
+                <p><b>@q.Text</b></p>
+                @foreach (var a in q.Answers!)
+                {
+                    <div>
+                        <input type="radio" name="q@q.Id" @onclick="() => SelectAnswer(q.Id, a.Id)" /> @a.Text
+                    </div>
+                }
+            </div>
+        }
+        <button type="submit">Submit</button>
+    </EditForm>
+}
+
+@code {
+    [Parameter]
+    public int examId { get; set; }
+
+    private Exam? exam;
+    private Dictionary<int, int> answers = new(); // questionId -> answerId
+
+    protected override async Task OnInitializedAsync()
+    {
+        exam = await Db.Exams
+            .Include(e => e.Questions!)
+                .ThenInclude(q => q.Answers!)
+            .FirstOrDefaultAsync(e => e.Id == examId);
+    }
+
+    void SelectAnswer(int questionId, int answerId)
+    {
+        answers[questionId] = answerId;
+    }
+
+    async Task Submit()
+    {
+        // Calculate score: 1 point per correct answer
+        int score = 0;
+        foreach (var q in exam!.Questions!)
+        {
+            if (answers.TryGetValue(q.Id, out var aid))
+            {
+                var a = q.Answers!.FirstOrDefault(x => x.Id == aid);
+                if (a != null && a.IsCorrect) score++;
+            }
+        }
+
+        // Save student exam - for simplicity no user tracking here (requires auth integration)
+        var studentExam = new StudentExam
+        {
+            ExamId = exam.Id,
+            Score = score,
+            SubmittedAt = DateTime.UtcNow,
+            StudentId = "anonymous"
+        };
+        Db.StudentExams.Add(studentExam);
+        await Db.SaveChangesAsync();
+
+        Nav.NavigateTo($"/result/{studentExam.Id}");
+    }
+}

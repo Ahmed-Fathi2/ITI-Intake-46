@@ -342,9 +342,9 @@
               "Title": "AuthManger.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\mvc\\Labs\\Layerd Arch\\Ecom\\Ecom.BLL\\Managers\\AuthManager\\AuthManger.cs",
               "RelativeDocumentMoniker": "Ecom.BLL\\Managers\\AuthManager\\AuthManger.cs",
-              "ToolTip": "F:\\ITI\\.Net\\mvc\\Labs\\Layerd Arch\\Ecom\\Ecom.BLL\\Managers\\AuthManager\\AuthManger.cs*",
-              "RelativeToolTip": "Ecom.BLL\\Managers\\AuthManager\\AuthManger.cs*",
-              "ViewState": "AgIAAB4AAAAAAAAAAAApwCgAAABZAAAAAAAAAA==",
+              "ToolTip": "F:\\ITI\\.Net\\mvc\\Labs\\Layerd Arch\\Ecom\\Ecom.BLL\\Managers\\AuthManager\\AuthManger.cs",
+              "RelativeToolTip": "Ecom.BLL\\Managers\\AuthManager\\AuthManger.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAApwCgAAABZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-06T22:01:51.795Z",
               "EditorCaption": ""
@@ -359,8 +359,7 @@
               "RelativeToolTip": "Ecom.MVC\\Controllers\\AccountController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-07T01:04:38.135Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-07T01:04:38.135Z"
             },
             {
               "$type": "Document",

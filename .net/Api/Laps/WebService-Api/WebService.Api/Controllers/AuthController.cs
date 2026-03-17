@@ -7,7 +7,7 @@ using WebService.BLL.Managers.Auth;
 
 namespace WebService.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class AuthController : ControllerBase
     {
@@ -17,14 +17,35 @@ namespace WebService.Api.Controllers
         {
             _authManger = authManger;
         }
-        [HttpPost]
+        [HttpPost("register")]
 
         public async Task<ActionResult<Result>> Register(RegisterRequestDto registerRequestDto)
         {
-
-            var result = await _authManger.RegisterAsync(registerRequestDto);  
+            var origin = Request.Headers.Origin.ToString(); // Scheme + Host + Port (e.g., http://localhost:3000)
+            var result = await _authManger.RegisterAsync(registerRequestDto,origin);  
             
             return result.IsSuccess ? Ok() : result.ToProblem();
+        }
+
+        [HttpPost]
+
+        public async Task<ActionResult<Result>> Login(LoginRequestDto loginRequestDto)
+        {
+
+            var result = await _authManger.LoginAsync(loginRequestDto);
+
+            return result.IsSuccess ? Ok(result.Value) : result.ToProblem();
+        }
+
+
+        [HttpGet("emailConfirmation")]
+        public async Task<ActionResult<Result>> EmailConfirmation([FromQuery]EmailConfirmationRequestDto emailConfirmationRequestDto)
+        {
+
+            var result = await _authManger.ConfirmEmail(emailConfirmationRequestDto);
+
+            return result.IsSuccess ? Ok() : result.ToProblem();
+          
         }
     }
 }

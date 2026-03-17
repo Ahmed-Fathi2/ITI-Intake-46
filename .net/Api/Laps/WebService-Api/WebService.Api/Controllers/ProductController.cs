@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using WebService.BLL.Abstractions;
+using WebService.BLL.Abstractions.Constants;
 using WebService.BLL.Dtos.Product;
 using WebService.BLL.Managers.Product;
 
@@ -24,14 +26,17 @@ namespace WebService.Api.Controllers
         //}
 
         [HttpGet]
+        //[Authorize]
         public async Task<ActionResult<PaginatedList<ProductsResponseDto>>> GetAllProducts([FromQuery] ProductRequestFilter requestFilter)
         {
             var result = await _productManager.GetProducts(requestFilter);
+            //throw new Exception("Error");
             return Ok(result.Value);
         }
 
 
         [HttpGet("{id}")]
+        [Authorize(Roles =DefaultRole.Admin)]
         public async Task<ActionResult<ProductsResponseDto>> GetProductById([FromRoute] int id)
         {
             var result = await _productManager.GetProductById(id);

@@ -75,7 +75,7 @@
         </select> *@
 
         <label asp-for="CategoryId" class="form-label"></label>
-        <select class="form-select" asp-for="CategoryId" asp-items="Model.Categories"></select>
+        <select class="form-select" asp-for="CategoryId" asp-items="@ViewBag.Categories"></select>
     </div>
 
 

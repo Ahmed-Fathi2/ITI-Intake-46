@@ -1,0 +1,358 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{392CE6C0-C873-123E-795E-C699233A0E8B}|BookWarehouse.Presentation\\BookWarehouse.Presentation.csproj|f:\\iti\\mvc\\bookwarehouse\\bookwarehouse\\bookwarehouse.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{392CE6C0-C873-123E-795E-C699233A0E8B}|BookWarehouse.Presentation\\BookWarehouse.Presentation.csproj|solutionrelative:bookwarehouse.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Infrastructure\\Persistence\\Migrations\\20260316232129_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BookWarehouse.Infrastructure\\Persistence\\Migrations\\20260316232129_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92AD4AB6-8F56-92A3-8D6F-829CEE55E4E5}|BookWarehouse.Infrastructure\\BookWarehouse.Infrastructure.csproj|f:\\iti\\mvc\\bookwarehouse\\bookwarehouse\\bookwarehouse.infrastructure\\persistence\\configurations\\categoryconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92AD4AB6-8F56-92A3-8D6F-829CEE55E4E5}|BookWarehouse.Infrastructure\\BookWarehouse.Infrastructure.csproj|solutionrelative:bookwarehouse.infrastructure\\persistence\\configurations\\categoryconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Infrastructure\\Persistence\\Migrations\\20260316232009_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BookWarehouse.Infrastructure\\Persistence\\Migrations\\20260316232009_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE410192-C04B-B652-FF0F-9167E4162227}|BookWarehouse.Domain\\BookWarehouse.Domain.csproj|f:\\iti\\mvc\\bookwarehouse\\bookwarehouse\\bookwarehouse.domain\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE410192-C04B-B652-FF0F-9167E4162227}|BookWarehouse.Domain\\BookWarehouse.Domain.csproj|solutionrelative:bookwarehouse.domain\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92AD4AB6-8F56-92A3-8D6F-829CEE55E4E5}|BookWarehouse.Infrastructure\\BookWarehouse.Infrastructure.csproj|f:\\iti\\mvc\\bookwarehouse\\bookwarehouse\\bookwarehouse.infrastructure\\persistence\\seeders\\categoryseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92AD4AB6-8F56-92A3-8D6F-829CEE55E4E5}|BookWarehouse.Infrastructure\\BookWarehouse.Infrastructure.csproj|solutionrelative:bookwarehouse.infrastructure\\persistence\\seeders\\categoryseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92AD4AB6-8F56-92A3-8D6F-829CEE55E4E5}|BookWarehouse.Infrastructure\\BookWarehouse.Infrastructure.csproj|f:\\iti\\mvc\\bookwarehouse\\bookwarehouse\\bookwarehouse.infrastructure\\persistence\\seeders\\icategoryseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92AD4AB6-8F56-92A3-8D6F-829CEE55E4E5}|BookWarehouse.Infrastructure\\BookWarehouse.Infrastructure.csproj|solutionrelative:bookwarehouse.infrastructure\\persistence\\seeders\\icategoryseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92AD4AB6-8F56-92A3-8D6F-829CEE55E4E5}|BookWarehouse.Infrastructure\\BookWarehouse.Infrastructure.csproj|f:\\iti\\mvc\\bookwarehouse\\bookwarehouse\\bookwarehouse.infrastructure\\persistence\\seeders\\databaseseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92AD4AB6-8F56-92A3-8D6F-829CEE55E4E5}|BookWarehouse.Infrastructure\\BookWarehouse.Infrastructure.csproj|solutionrelative:bookwarehouse.infrastructure\\persistence\\seeders\\databaseseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92AD4AB6-8F56-92A3-8D6F-829CEE55E4E5}|BookWarehouse.Infrastructure\\BookWarehouse.Infrastructure.csproj|f:\\iti\\mvc\\bookwarehouse\\bookwarehouse\\bookwarehouse.infrastructure\\persistence\\seeders\\idatabaseseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92AD4AB6-8F56-92A3-8D6F-829CEE55E4E5}|BookWarehouse.Infrastructure\\BookWarehouse.Infrastructure.csproj|solutionrelative:bookwarehouse.infrastructure\\persistence\\seeders\\idatabaseseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92AD4AB6-8F56-92A3-8D6F-829CEE55E4E5}|BookWarehouse.Infrastructure\\BookWarehouse.Infrastructure.csproj|f:\\iti\\mvc\\bookwarehouse\\bookwarehouse\\bookwarehouse.infrastructure\\servicesextention\\infrastructureservicesextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92AD4AB6-8F56-92A3-8D6F-829CEE55E4E5}|BookWarehouse.Infrastructure\\BookWarehouse.Infrastructure.csproj|solutionrelative:bookwarehouse.infrastructure\\servicesextention\\infrastructureservicesextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{392CE6C0-C873-123E-795E-C699233A0E8B}|BookWarehouse.Presentation\\BookWarehouse.Presentation.csproj|f:\\iti\\mvc\\bookwarehouse\\bookwarehouse\\bookwarehouse.presentation\\bookwarehouse.presentation.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{392CE6C0-C873-123E-795E-C699233A0E8B}|BookWarehouse.Presentation\\BookWarehouse.Presentation.csproj|solutionrelative:bookwarehouse.presentation\\bookwarehouse.presentation.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92AD4AB6-8F56-92A3-8D6F-829CEE55E4E5}|BookWarehouse.Infrastructure\\BookWarehouse.Infrastructure.csproj|f:\\iti\\mvc\\bookwarehouse\\bookwarehouse\\bookwarehouse.infrastructure\\persistence\\context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92AD4AB6-8F56-92A3-8D6F-829CEE55E4E5}|BookWarehouse.Infrastructure\\BookWarehouse.Infrastructure.csproj|solutionrelative:bookwarehouse.infrastructure\\persistence\\context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE410192-C04B-B652-FF0F-9167E4162227}|BookWarehouse.Domain\\BookWarehouse.Domain.csproj|f:\\iti\\mvc\\bookwarehouse\\bookwarehouse\\bookwarehouse.domain\\common\\iauditableentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE410192-C04B-B652-FF0F-9167E4162227}|BookWarehouse.Domain\\BookWarehouse.Domain.csproj|solutionrelative:bookwarehouse.domain\\common\\iauditableentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Infrastructure\\Persistence\\Migrations\\20260316223626_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BookWarehouse.Infrastructure\\Persistence\\Migrations\\20260316223626_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{392CE6C0-C873-123E-795E-C699233A0E8B}|BookWarehouse.Presentation\\BookWarehouse.Presentation.csproj|f:\\iti\\mvc\\bookwarehouse\\bookwarehouse\\bookwarehouse.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{392CE6C0-C873-123E-795E-C699233A0E8B}|BookWarehouse.Presentation\\BookWarehouse.Presentation.csproj|solutionrelative:bookwarehouse.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Infrastructure\\Persistence\\Migrations\\20260316221938_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BookWarehouse.Infrastructure\\Persistence\\Migrations\\20260316221938_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09EF1F48-DB89-05B5-4A94-A2D36AAEAD87}|BookWarehouse.Application\\BookWarehouse.Application.csproj|f:\\iti\\mvc\\bookwarehouse\\bookwarehouse\\bookwarehouse.application\\servicesextension.cs\\applicationservicesextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09EF1F48-DB89-05B5-4A94-A2D36AAEAD87}|BookWarehouse.Application\\BookWarehouse.Application.csproj|solutionrelative:bookwarehouse.application\\servicesextension.cs\\applicationservicesextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92AD4AB6-8F56-92A3-8D6F-829CEE55E4E5}|BookWarehouse.Infrastructure\\BookWarehouse.Infrastructure.csproj|f:\\iti\\mvc\\bookwarehouse\\bookwarehouse\\bookwarehouse.infrastructure\\bookwarehouse.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{92AD4AB6-8F56-92A3-8D6F-829CEE55E4E5}|BookWarehouse.Infrastructure\\BookWarehouse.Infrastructure.csproj|solutionrelative:bookwarehouse.infrastructure\\bookwarehouse.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE410192-C04B-B652-FF0F-9167E4162227}|BookWarehouse.Domain\\BookWarehouse.Domain.csproj|f:\\iti\\mvc\\bookwarehouse\\bookwarehouse\\bookwarehouse.domain\\bookwarehouse.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{DE410192-C04B-B652-FF0F-9167E4162227}|BookWarehouse.Domain\\BookWarehouse.Domain.csproj|solutionrelative:bookwarehouse.domain\\bookwarehouse.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09EF1F48-DB89-05B5-4A94-A2D36AAEAD87}|BookWarehouse.Application\\BookWarehouse.Application.csproj|f:\\iti\\mvc\\bookwarehouse\\bookwarehouse\\bookwarehouse.application\\bookwarehouse.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{09EF1F48-DB89-05B5-4A94-A2D36AAEAD87}|BookWarehouse.Application\\BookWarehouse.Application.csproj|solutionrelative:bookwarehouse.application\\bookwarehouse.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Presentation\\Program.cs",
+              "RelativeDocumentMoniker": "BookWarehouse.Presentation\\Program.cs",
+              "ToolTip": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Presentation\\Program.cs*",
+              "RelativeToolTip": "BookWarehouse.Presentation\\Program.cs*",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T21:56:44.246Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "20260316232129_InitialCreate.cs",
+              "DocumentMoniker": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Infrastructure\\Persistence\\Migrations\\20260316232129_InitialCreate.cs",
+              "RelativeDocumentMoniker": "BookWarehouse.Infrastructure\\Persistence\\Migrations\\20260316232129_InitialCreate.cs",
+              "ToolTip": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Infrastructure\\Persistence\\Migrations\\20260316232129_InitialCreate.cs",
+              "RelativeToolTip": "BookWarehouse.Infrastructure\\Persistence\\Migrations\\20260316232129_InitialCreate.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T23:21:29.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "20260316232009_InitialCreate.cs",
+              "DocumentMoniker": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Infrastructure\\Persistence\\Migrations\\20260316232009_InitialCreate.cs",
+              "RelativeDocumentMoniker": "BookWarehouse.Infrastructure\\Persistence\\Migrations\\20260316232009_InitialCreate.cs",
+              "ToolTip": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Infrastructure\\Persistence\\Migrations\\20260316232009_InitialCreate.cs",
+              "RelativeToolTip": "BookWarehouse.Infrastructure\\Persistence\\Migrations\\20260316232009_InitialCreate.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwBYAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T23:20:09.739Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DataBaseSeeder.cs",
+              "DocumentMoniker": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Infrastructure\\Persistence\\Seeders\\DataBaseSeeder.cs",
+              "RelativeDocumentMoniker": "BookWarehouse.Infrastructure\\Persistence\\Seeders\\DataBaseSeeder.cs",
+              "ToolTip": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Infrastructure\\Persistence\\Seeders\\DataBaseSeeder.cs",
+              "RelativeToolTip": "BookWarehouse.Infrastructure\\Persistence\\Seeders\\DataBaseSeeder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T23:17:12.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IDataBaseSeeder.cs",
+              "DocumentMoniker": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Infrastructure\\Persistence\\Seeders\\IDataBaseSeeder.cs",
+              "RelativeDocumentMoniker": "BookWarehouse.Infrastructure\\Persistence\\Seeders\\IDataBaseSeeder.cs",
+              "ToolTip": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Infrastructure\\Persistence\\Seeders\\IDataBaseSeeder.cs",
+              "RelativeToolTip": "BookWarehouse.Infrastructure\\Persistence\\Seeders\\IDataBaseSeeder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T23:17:12.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CategorySeeder.cs",
+              "DocumentMoniker": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Infrastructure\\Persistence\\Seeders\\CategorySeeder.cs",
+              "RelativeDocumentMoniker": "BookWarehouse.Infrastructure\\Persistence\\Seeders\\CategorySeeder.cs",
+              "ToolTip": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Infrastructure\\Persistence\\Seeders\\CategorySeeder.cs",
+              "RelativeToolTip": "BookWarehouse.Infrastructure\\Persistence\\Seeders\\CategorySeeder.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowCgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T23:00:40.121Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ICategorySeeder.cs",
+              "DocumentMoniker": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Infrastructure\\Persistence\\Seeders\\ICategorySeeder.cs",
+              "RelativeDocumentMoniker": "BookWarehouse.Infrastructure\\Persistence\\Seeders\\ICategorySeeder.cs",
+              "ToolTip": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Infrastructure\\Persistence\\Seeders\\ICategorySeeder.cs",
+              "RelativeToolTip": "BookWarehouse.Infrastructure\\Persistence\\Seeders\\ICategorySeeder.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAIwAgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T23:00:39.908Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Category.cs",
+              "DocumentMoniker": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Domain\\Entities\\Category.cs",
+              "RelativeDocumentMoniker": "BookWarehouse.Domain\\Entities\\Category.cs",
+              "ToolTip": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Domain\\Entities\\Category.cs",
+              "RelativeToolTip": "BookWarehouse.Domain\\Entities\\Category.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAABAAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T21:31:05.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CategoryConfiguration.cs",
+              "DocumentMoniker": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Infrastructure\\Persistence\\Configurations\\CategoryConfiguration.cs",
+              "RelativeDocumentMoniker": "BookWarehouse.Infrastructure\\Persistence\\Configurations\\CategoryConfiguration.cs",
+              "ToolTip": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Infrastructure\\Persistence\\Configurations\\CategoryConfiguration.cs",
+              "RelativeToolTip": "BookWarehouse.Infrastructure\\Persistence\\Configurations\\CategoryConfiguration.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAqwBAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T21:41:28.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "InfrastructureServicesExtension.cs",
+              "DocumentMoniker": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Infrastructure\\ServicesExtention\\InfrastructureServicesExtension.cs",
+              "RelativeDocumentMoniker": "BookWarehouse.Infrastructure\\ServicesExtention\\InfrastructureServicesExtension.cs",
+              "ToolTip": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Infrastructure\\ServicesExtention\\InfrastructureServicesExtension.cs",
+              "RelativeToolTip": "BookWarehouse.Infrastructure\\ServicesExtention\\InfrastructureServicesExtension.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T22:01:50.054Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BookWarehouse.Presentation.csproj",
+              "DocumentMoniker": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Presentation\\BookWarehouse.Presentation.csproj",
+              "RelativeDocumentMoniker": "BookWarehouse.Presentation\\BookWarehouse.Presentation.csproj",
+              "ToolTip": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Presentation\\BookWarehouse.Presentation.csproj",
+              "RelativeToolTip": "BookWarehouse.Presentation\\BookWarehouse.Presentation.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-16T21:16:20.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Infrastructure\\Persistence\\Context\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "BookWarehouse.Infrastructure\\Persistence\\Context\\ApplicationDbContext.cs",
+              "ToolTip": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Infrastructure\\Persistence\\Context\\ApplicationDbContext.cs",
+              "RelativeToolTip": "BookWarehouse.Infrastructure\\Persistence\\Context\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAgwCcAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T21:37:05.166Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "20260316223626_InitialCreate.cs",
+              "DocumentMoniker": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Infrastructure\\Persistence\\Migrations\\20260316223626_InitialCreate.cs",
+              "RelativeDocumentMoniker": "BookWarehouse.Infrastructure\\Persistence\\Migrations\\20260316223626_InitialCreate.cs",
+              "ToolTip": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Infrastructure\\Persistence\\Migrations\\20260316223626_InitialCreate.cs",
+              "RelativeToolTip": "BookWarehouse.Infrastructure\\Persistence\\Migrations\\20260316223626_InitialCreate.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T22:36:26.144Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Presentation\\appsettings.json",
+              "RelativeDocumentMoniker": "BookWarehouse.Presentation\\appsettings.json",
+              "ToolTip": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Presentation\\appsettings.json",
+              "RelativeToolTip": "BookWarehouse.Presentation\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-16T21:56:47.949Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IAuditableEntity.cs",
+              "DocumentMoniker": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Domain\\Common\\IAuditableEntity.cs",
+              "RelativeDocumentMoniker": "BookWarehouse.Domain\\Common\\IAuditableEntity.cs",
+              "ToolTip": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Domain\\Common\\IAuditableEntity.cs",
+              "RelativeToolTip": "BookWarehouse.Domain\\Common\\IAuditableEntity.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwAcAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T21:26:32.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "20260316221938_InitialCreate.cs",
+              "DocumentMoniker": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Infrastructure\\Persistence\\Migrations\\20260316221938_InitialCreate.cs",
+              "RelativeDocumentMoniker": "BookWarehouse.Infrastructure\\Persistence\\Migrations\\20260316221938_InitialCreate.cs",
+              "ToolTip": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Infrastructure\\Persistence\\Migrations\\20260316221938_InitialCreate.cs",
+              "RelativeToolTip": "BookWarehouse.Infrastructure\\Persistence\\Migrations\\20260316221938_InitialCreate.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwCoAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T22:19:39.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ApplicationServicesExtension.cs",
+              "DocumentMoniker": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Application\\ServicesExtension.cs\\ApplicationServicesExtension.cs",
+              "RelativeDocumentMoniker": "BookWarehouse.Application\\ServicesExtension.cs\\ApplicationServicesExtension.cs",
+              "ToolTip": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Application\\ServicesExtension.cs\\ApplicationServicesExtension.cs",
+              "RelativeToolTip": "BookWarehouse.Application\\ServicesExtension.cs\\ApplicationServicesExtension.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T22:13:24.9Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "BookWarehouse.Infrastructure.csproj",
+              "DocumentMoniker": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Infrastructure\\BookWarehouse.Infrastructure.csproj",
+              "RelativeDocumentMoniker": "BookWarehouse.Infrastructure\\BookWarehouse.Infrastructure.csproj",
+              "ToolTip": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Infrastructure\\BookWarehouse.Infrastructure.csproj",
+              "RelativeToolTip": "BookWarehouse.Infrastructure\\BookWarehouse.Infrastructure.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-16T21:22:36.737Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "BookWarehouse.Domain.csproj",
+              "DocumentMoniker": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Domain\\BookWarehouse.Domain.csproj",
+              "RelativeDocumentMoniker": "BookWarehouse.Domain\\BookWarehouse.Domain.csproj",
+              "ToolTip": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Domain\\BookWarehouse.Domain.csproj",
+              "RelativeToolTip": "BookWarehouse.Domain\\BookWarehouse.Domain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-16T21:17:19.835Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "BookWarehouse.Application.csproj",
+              "DocumentMoniker": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Application\\BookWarehouse.Application.csproj",
+              "RelativeDocumentMoniker": "BookWarehouse.Application\\BookWarehouse.Application.csproj",
+              "ToolTip": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Application\\BookWarehouse.Application.csproj",
+              "RelativeToolTip": "BookWarehouse.Application\\BookWarehouse.Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-16T21:16:21.342Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -28,6 +28,7 @@ namespace WebApplication2.Ecom.MVC.Controllers
         public IActionResult Index()
         {
             var productReadVM = _productManager.GetAllProducts();
+            ViewBag.ProductReadVM = productReadVM;
 
             return View(productReadVM);
         }

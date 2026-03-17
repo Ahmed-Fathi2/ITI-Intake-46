@@ -3,12 +3,72 @@
   "WorkspaceRootPath": "F:\\ITI\\.Net\\EF\\Project\\ITI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B2511FEF-9271-5935-6B1F-FF6BAEF92E2F}|ITI.WinForms\\ITI.WinForms.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.winforms\\iti.winforms.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{B2511FEF-9271-5935-6B1F-FF6BAEF92E2F}|ITI.WinForms\\ITI.WinForms.csproj|solutionrelative:iti.winforms\\iti.winforms.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{626C9657-9F61-0379-1652-FDA61CBEE1D5}|ITI.Application\\ITI.Application.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.application\\services\\courseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{626C9657-9F61-0379-1652-FDA61CBEE1D5}|ITI.Application\\ITI.Application.csproj|solutionrelative:iti.application\\services\\courseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E18D348D-5958-D5BC-1E93-26A59A38D30A}|ITI.Domain\\ITI.Domain.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.domain\\entities\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E18D348D-5958-D5BC-1E93-26A59A38D30A}|ITI.Domain\\ITI.Domain.csproj|solutionrelative:iti.domain\\entities\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E18D348D-5958-D5BC-1E93-26A59A38D30A}|ITI.Domain\\ITI.Domain.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.domain\\entities\\studentcourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E18D348D-5958-D5BC-1E93-26A59A38D30A}|ITI.Domain\\ITI.Domain.csproj|solutionrelative:iti.domain\\entities\\studentcourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E18D348D-5958-D5BC-1E93-26A59A38D30A}|ITI.Domain\\ITI.Domain.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.domain\\entities\\instractor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E18D348D-5958-D5BC-1E93-26A59A38D30A}|ITI.Domain\\ITI.Domain.csproj|solutionrelative:iti.domain\\entities\\instractor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E18D348D-5958-D5BC-1E93-26A59A38D30A}|ITI.Domain\\ITI.Domain.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.domain\\entities\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E18D348D-5958-D5BC-1E93-26A59A38D30A}|ITI.Domain\\ITI.Domain.csproj|solutionrelative:iti.domain\\entities\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E18D348D-5958-D5BC-1E93-26A59A38D30A}|ITI.Domain\\ITI.Domain.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.domain\\entities\\coursesession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E18D348D-5958-D5BC-1E93-26A59A38D30A}|ITI.Domain\\ITI.Domain.csproj|solutionrelative:iti.domain\\entities\\coursesession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E18D348D-5958-D5BC-1E93-26A59A38D30A}|ITI.Domain\\ITI.Domain.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.domain\\entities\\coursesessionattendance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E18D348D-5958-D5BC-1E93-26A59A38D30A}|ITI.Domain\\ITI.Domain.csproj|solutionrelative:iti.domain\\entities\\coursesessionattendance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5231359E-67BD-3025-36EE-826D84D0ECF6}|ITI.Infrastructure\\ITI.Infrastructure.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.infrastructure\\migrations\\20260224185751_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5231359E-67BD-3025-36EE-826D84D0ECF6}|ITI.Infrastructure\\ITI.Infrastructure.csproj|solutionrelative:iti.infrastructure\\migrations\\20260224185751_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5231359E-67BD-3025-36EE-826D84D0ECF6}|ITI.Infrastructure\\ITI.Infrastructure.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.infrastructure\\repositories\\courserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5231359E-67BD-3025-36EE-826D84D0ECF6}|ITI.Infrastructure\\ITI.Infrastructure.csproj|solutionrelative:iti.infrastructure\\repositories\\courserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5231359E-67BD-3025-36EE-826D84D0ECF6}|ITI.Infrastructure\\ITI.Infrastructure.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.infrastructure\\repositories\\coursesessionattendancerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5231359E-67BD-3025-36EE-826D84D0ECF6}|ITI.Infrastructure\\ITI.Infrastructure.csproj|solutionrelative:iti.infrastructure\\repositories\\coursesessionattendancerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5231359E-67BD-3025-36EE-826D84D0ECF6}|ITI.Infrastructure\\ITI.Infrastructure.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.infrastructure\\repositories\\coursesessionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5231359E-67BD-3025-36EE-826D84D0ECF6}|ITI.Infrastructure\\ITI.Infrastructure.csproj|solutionrelative:iti.infrastructure\\repositories\\coursesessionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5231359E-67BD-3025-36EE-826D84D0ECF6}|ITI.Infrastructure\\ITI.Infrastructure.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.infrastructure\\repositories\\departmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5231359E-67BD-3025-36EE-826D84D0ECF6}|ITI.Infrastructure\\ITI.Infrastructure.csproj|solutionrelative:iti.infrastructure\\repositories\\departmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5231359E-67BD-3025-36EE-826D84D0ECF6}|ITI.Infrastructure\\ITI.Infrastructure.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.infrastructure\\persistence\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5231359E-67BD-3025-36EE-826D84D0ECF6}|ITI.Infrastructure\\ITI.Infrastructure.csproj|solutionrelative:iti.infrastructure\\persistence\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5231359E-67BD-3025-36EE-826D84D0ECF6}|ITI.Infrastructure\\ITI.Infrastructure.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.infrastructure\\persistence\\configurations\\coursesessionattendanceconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5231359E-67BD-3025-36EE-826D84D0ECF6}|ITI.Infrastructure\\ITI.Infrastructure.csproj|solutionrelative:iti.infrastructure\\persistence\\configurations\\coursesessionattendanceconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5231359E-67BD-3025-36EE-826D84D0ECF6}|ITI.Infrastructure\\ITI.Infrastructure.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.infrastructure\\persistence\\configurations\\courseconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5231359E-67BD-3025-36EE-826D84D0ECF6}|ITI.Infrastructure\\ITI.Infrastructure.csproj|solutionrelative:iti.infrastructure\\persistence\\configurations\\courseconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E18D348D-5958-D5BC-1E93-26A59A38D30A}|ITI.Domain\\ITI.Domain.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.domain\\entities\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E18D348D-5958-D5BC-1E93-26A59A38D30A}|ITI.Domain\\ITI.Domain.csproj|solutionrelative:iti.domain\\entities\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B2511FEF-9271-5935-6B1F-FF6BAEF92E2F}|ITI.WinForms\\ITI.WinForms.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.winforms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,10 +103,6 @@
       "RelativeMoniker": "D:0:0:{B2511FEF-9271-5935-6B1F-FF6BAEF92E2F}|ITI.WinForms\\ITI.WinForms.csproj|solutionrelative:iti.winforms\\mainmenuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5231359E-67BD-3025-36EE-826D84D0ECF6}|ITI.Infrastructure\\ITI.Infrastructure.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.infrastructure\\repositories\\coursesessionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5231359E-67BD-3025-36EE-826D84D0ECF6}|ITI.Infrastructure\\ITI.Infrastructure.csproj|solutionrelative:iti.infrastructure\\repositories\\coursesessionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B2511FEF-9271-5935-6B1F-FF6BAEF92E2F}|ITI.WinForms\\ITI.WinForms.csproj|F:\\ITI\\.Net\\EF\\Project\\ITI\\iti.winforms\\instractorform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{B2511FEF-9271-5935-6B1F-FF6BAEF92E2F}|ITI.WinForms\\ITI.WinForms.csproj|solutionrelative:iti.winforms\\instractorform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -71,16 +127,8 @@
       "RelativeMoniker": "D:0:0:{626C9657-9F61-0379-1652-FDA61CBEE1D5}|ITI.Application\\ITI.Application.csproj|solutionrelative:iti.application\\dtos\\alldepartmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E18D348D-5958-D5BC-1E93-26A59A38D30A}|ITI.Domain\\ITI.Domain.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.domain\\entities\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E18D348D-5958-D5BC-1E93-26A59A38D30A}|ITI.Domain\\ITI.Domain.csproj|solutionrelative:iti.domain\\entities\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{626C9657-9F61-0379-1652-FDA61CBEE1D5}|ITI.Application\\ITI.Application.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.application\\services\\departmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{626C9657-9F61-0379-1652-FDA61CBEE1D5}|ITI.Application\\ITI.Application.csproj|solutionrelative:iti.application\\services\\departmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E18D348D-5958-D5BC-1E93-26A59A38D30A}|ITI.Domain\\ITI.Domain.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.domain\\entities\\instractor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E18D348D-5958-D5BC-1E93-26A59A38D30A}|ITI.Domain\\ITI.Domain.csproj|solutionrelative:iti.domain\\entities\\instractor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B2511FEF-9271-5935-6B1F-FF6BAEF92E2F}|ITI.WinForms\\ITI.WinForms.csproj|F:\\ITI\\.Net\\EF\\Project\\ITI\\iti.winforms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -135,14 +183,6 @@
       "RelativeMoniker": "D:0:0:{6B43FFC7-5E78-402A-8495-34AA1D7E87F0}|ITI.WinForms\\ITI.WinForms.csproj|solutionrelative:iti.winforms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E18D348D-5958-D5BC-1E93-26A59A38D30A}|ITI.Domain\\ITI.Domain.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.domain\\entities\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E18D348D-5958-D5BC-1E93-26A59A38D30A}|ITI.Domain\\ITI.Domain.csproj|solutionrelative:iti.domain\\entities\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5231359E-67BD-3025-36EE-826D84D0ECF6}|ITI.Infrastructure\\ITI.Infrastructure.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.infrastructure\\migrations\\20260224185751_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5231359E-67BD-3025-36EE-826D84D0ECF6}|ITI.Infrastructure\\ITI.Infrastructure.csproj|solutionrelative:iti.infrastructure\\migrations\\20260224185751_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5231359E-67BD-3025-36EE-826D84D0ECF6}|ITI.Infrastructure\\ITI.Infrastructure.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.infrastructure\\persistence\\configurations\\departmentconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5231359E-67BD-3025-36EE-826D84D0ECF6}|ITI.Infrastructure\\ITI.Infrastructure.csproj|solutionrelative:iti.infrastructure\\persistence\\configurations\\departmentconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -163,10 +203,6 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ITI.Infrastructure\\Migrations\\20260224185218_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5231359E-67BD-3025-36EE-826D84D0ECF6}|ITI.Infrastructure\\ITI.Infrastructure.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.infrastructure\\persistence\\configurations\\courseconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5231359E-67BD-3025-36EE-826D84D0ECF6}|ITI.Infrastructure\\ITI.Infrastructure.csproj|solutionrelative:iti.infrastructure\\persistence\\configurations\\courseconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\ITI\\.net\\EF\\Project\\ITI\\ITI.Infrastructure\\Migrations\\20260224154812_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ITI.Infrastructure\\Migrations\\20260224154812_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -175,36 +211,12 @@
       "RelativeMoniker": "D:0:0:{5231359E-67BD-3025-36EE-826D84D0ECF6}|ITI.Infrastructure\\ITI.Infrastructure.csproj|solutionrelative:iti.infrastructure\\persistence\\configurations\\studentcourseconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5231359E-67BD-3025-36EE-826D84D0ECF6}|ITI.Infrastructure\\ITI.Infrastructure.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.infrastructure\\persistence\\configurations\\coursesessionattendanceconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5231359E-67BD-3025-36EE-826D84D0ECF6}|ITI.Infrastructure\\ITI.Infrastructure.csproj|solutionrelative:iti.infrastructure\\persistence\\configurations\\coursesessionattendanceconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5231359E-67BD-3025-36EE-826D84D0ECF6}|ITI.Infrastructure\\ITI.Infrastructure.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.infrastructure\\persistence\\configurations\\instractorconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5231359E-67BD-3025-36EE-826D84D0ECF6}|ITI.Infrastructure\\ITI.Infrastructure.csproj|solutionrelative:iti.infrastructure\\persistence\\configurations\\instractorconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5231359E-67BD-3025-36EE-826D84D0ECF6}|ITI.Infrastructure\\ITI.Infrastructure.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.infrastructure\\persistence\\configurations\\studentconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5231359E-67BD-3025-36EE-826D84D0ECF6}|ITI.Infrastructure\\ITI.Infrastructure.csproj|solutionrelative:iti.infrastructure\\persistence\\configurations\\studentconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E18D348D-5958-D5BC-1E93-26A59A38D30A}|ITI.Domain\\ITI.Domain.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.domain\\entities\\studentcourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E18D348D-5958-D5BC-1E93-26A59A38D30A}|ITI.Domain\\ITI.Domain.csproj|solutionrelative:iti.domain\\entities\\studentcourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E18D348D-5958-D5BC-1E93-26A59A38D30A}|ITI.Domain\\ITI.Domain.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.domain\\entities\\coursesessionattendance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E18D348D-5958-D5BC-1E93-26A59A38D30A}|ITI.Domain\\ITI.Domain.csproj|solutionrelative:iti.domain\\entities\\coursesessionattendance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E18D348D-5958-D5BC-1E93-26A59A38D30A}|ITI.Domain\\ITI.Domain.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.domain\\entities\\coursesession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E18D348D-5958-D5BC-1E93-26A59A38D30A}|ITI.Domain\\ITI.Domain.csproj|solutionrelative:iti.domain\\entities\\coursesession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E18D348D-5958-D5BC-1E93-26A59A38D30A}|ITI.Domain\\ITI.Domain.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.domain\\entities\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E18D348D-5958-D5BC-1E93-26A59A38D30A}|ITI.Domain\\ITI.Domain.csproj|solutionrelative:iti.domain\\entities\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2511FEF-9271-5935-6B1F-FF6BAEF92E2F}|ITI.WinForms\\ITI.WinForms.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.winforms\\iti.winforms.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{B2511FEF-9271-5935-6B1F-FF6BAEF92E2F}|ITI.WinForms\\ITI.WinForms.csproj|solutionrelative:iti.winforms\\iti.winforms.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{626C9657-9F61-0379-1652-FDA61CBEE1D5}|ITI.Application\\ITI.Application.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.application\\dtos\\createdepartmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -267,16 +279,8 @@
       "RelativeMoniker": "D:0:0:{626C9657-9F61-0379-1652-FDA61CBEE1D5}|ITI.Application\\ITI.Application.csproj|solutionrelative:iti.application\\interfaces\\repositories\\icourserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5231359E-67BD-3025-36EE-826D84D0ECF6}|ITI.Infrastructure\\ITI.Infrastructure.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.infrastructure\\repositories\\courserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5231359E-67BD-3025-36EE-826D84D0ECF6}|ITI.Infrastructure\\ITI.Infrastructure.csproj|solutionrelative:iti.infrastructure\\repositories\\courserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{626C9657-9F61-0379-1652-FDA61CBEE1D5}|ITI.Application\\ITI.Application.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.application\\interfaces\\services\\icourseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{626C9657-9F61-0379-1652-FDA61CBEE1D5}|ITI.Application\\ITI.Application.csproj|solutionrelative:iti.application\\interfaces\\services\\icourseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{626C9657-9F61-0379-1652-FDA61CBEE1D5}|ITI.Application\\ITI.Application.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.application\\services\\courseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{626C9657-9F61-0379-1652-FDA61CBEE1D5}|ITI.Application\\ITI.Application.csproj|solutionrelative:iti.application\\services\\courseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{626C9657-9F61-0379-1652-FDA61CBEE1D5}|ITI.Application\\ITI.Application.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.application\\dtos\\allcoursesessiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -317,10 +321,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{626C9657-9F61-0379-1652-FDA61CBEE1D5}|ITI.Application\\ITI.Application.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.application\\interfaces\\repositories\\icoursesessionattendancerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{626C9657-9F61-0379-1652-FDA61CBEE1D5}|ITI.Application\\ITI.Application.csproj|solutionrelative:iti.application\\interfaces\\repositories\\icoursesessionattendancerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5231359E-67BD-3025-36EE-826D84D0ECF6}|ITI.Infrastructure\\ITI.Infrastructure.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.infrastructure\\repositories\\coursesessionattendancerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5231359E-67BD-3025-36EE-826D84D0ECF6}|ITI.Infrastructure\\ITI.Infrastructure.csproj|solutionrelative:iti.infrastructure\\repositories\\coursesessionattendancerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{626C9657-9F61-0379-1652-FDA61CBEE1D5}|ITI.Application\\ITI.Application.csproj|f:\\iti\\.net\\ef\\project\\iti\\iti.application\\interfaces\\services\\icoursesessionattendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -374,62 +374,156 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CourseSessionForm.cs [Design]",
-              "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.WinForms\\CourseSessionForm.cs",
-              "RelativeDocumentMoniker": "ITI.WinForms\\CourseSessionForm.cs",
-              "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.WinForms\\CourseSessionForm.cs [Design]",
-              "RelativeToolTip": "ITI.WinForms\\CourseSessionForm.cs [Design]",
+              "DocumentIndex": 8,
+              "Title": "20260224185751_InitialCreate.cs",
+              "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\Migrations\\20260224185751_InitialCreate.cs",
+              "RelativeDocumentMoniker": "ITI.Infrastructure\\Migrations\\20260224185751_InitialCreate.cs",
+              "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\Migrations\\20260224185751_InitialCreate.cs",
+              "RelativeToolTip": "ITI.Infrastructure\\Migrations\\20260224185751_InitialCreate.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T15:46:20.485Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-02-24T18:57:51.789Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CourseSessionForm.cs",
-              "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.WinForms\\CourseSessionForm.cs",
-              "RelativeDocumentMoniker": "ITI.WinForms\\CourseSessionForm.cs",
-              "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.WinForms\\CourseSessionForm.cs",
-              "RelativeToolTip": "ITI.WinForms\\CourseSessionForm.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAIBJwKgAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "CourseSessionAttendance.cs",
+              "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Domain\\Entities\\CourseSessionAttendance.cs",
+              "RelativeDocumentMoniker": "ITI.Domain\\Entities\\CourseSessionAttendance.cs",
+              "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Domain\\Entities\\CourseSessionAttendance.cs",
+              "RelativeToolTip": "ITI.Domain\\Entities\\CourseSessionAttendance.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T15:11:13.157Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-22T19:14:22.009Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CourseSession.cs",
+              "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Domain\\Entities\\CourseSession.cs",
+              "RelativeDocumentMoniker": "ITI.Domain\\Entities\\CourseSession.cs",
+              "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Domain\\Entities\\CourseSession.cs",
+              "RelativeToolTip": "ITI.Domain\\Entities\\CourseSession.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAjwBAAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T19:14:21.815Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Department.cs",
+              "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Domain\\Entities\\Department.cs",
+              "RelativeDocumentMoniker": "ITI.Domain\\Entities\\Department.cs",
+              "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Domain\\Entities\\Department.cs",
+              "RelativeToolTip": "ITI.Domain\\Entities\\Department.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T19:14:21.672Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Instractor.cs",
+              "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Domain\\Entities\\Instractor.cs",
+              "RelativeDocumentMoniker": "ITI.Domain\\Entities\\Instractor.cs",
+              "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Domain\\Entities\\Instractor.cs",
+              "RelativeToolTip": "ITI.Domain\\Entities\\Instractor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA4AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T19:14:21.526Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.WinForms\\Form1.cs",
-              "RelativeDocumentMoniker": "ITI.WinForms\\Form1.cs",
-              "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.WinForms\\Form1.cs",
-              "RelativeToolTip": "ITI.WinForms\\Form1.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAIBJwB8AAAAIAAAAAAAAAA==",
+              "Title": "Student.cs",
+              "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Domain\\Entities\\Student.cs",
+              "RelativeDocumentMoniker": "ITI.Domain\\Entities\\Student.cs",
+              "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Domain\\Entities\\Student.cs",
+              "RelativeToolTip": "ITI.Domain\\Entities\\Student.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAnwAUAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T14:20:51.208Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-22T19:14:21.03Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StudentCourse.cs",
+              "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Domain\\Entities\\StudentCourse.cs",
+              "RelativeDocumentMoniker": "ITI.Domain\\Entities\\StudentCourse.cs",
+              "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Domain\\Entities\\StudentCourse.cs",
+              "RelativeToolTip": "ITI.Domain\\Entities\\StudentCourse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T19:14:21.388Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\Persistence\\Context\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "ITI.Infrastructure\\Persistence\\Context\\AppDbContext.cs",
-              "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\Persistence\\Context\\AppDbContext.cs",
-              "RelativeToolTip": "ITI.Infrastructure\\Persistence\\Context\\AppDbContext.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAhwCQAAAAJAAAAAAAAAA==",
+              "Title": "CourseService.cs",
+              "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\Services\\CourseService.cs",
+              "RelativeDocumentMoniker": "ITI.Application\\Services\\CourseService.cs",
+              "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\Services\\CourseService.cs",
+              "RelativeToolTip": "ITI.Application\\Services\\CourseService.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwD8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-22T15:12:14.019Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-05T14:47:42.594Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ITI.WinForms.csproj",
+              "DocumentMoniker": "F:\\ITI\\.net\\EF\\Project\\ITI\\ITI.WinForms\\ITI.WinForms.csproj",
+              "RelativeDocumentMoniker": "ITI.WinForms\\ITI.WinForms.csproj",
+              "ToolTip": "F:\\ITI\\.net\\EF\\Project\\ITI\\ITI.WinForms\\ITI.WinForms.csproj",
+              "RelativeToolTip": "ITI.WinForms\\ITI.WinForms.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-02-22T15:15:13.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CourseRepository.cs",
+              "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\Repositories\\CourseRepository.cs",
+              "RelativeDocumentMoniker": "ITI.Infrastructure\\Repositories\\CourseRepository.cs",
+              "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\Repositories\\CourseRepository.cs",
+              "RelativeToolTip": "ITI.Infrastructure\\Repositories\\CourseRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T14:46:36.796Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CourseSessionAttendanceRepository.cs",
+              "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\Repositories\\CourseSessionAttendanceRepository.cs",
+              "RelativeDocumentMoniker": "ITI.Infrastructure\\Repositories\\CourseSessionAttendanceRepository.cs",
+              "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\Repositories\\CourseSessionAttendanceRepository.cs",
+              "RelativeToolTip": "ITI.Infrastructure\\Repositories\\CourseSessionAttendanceRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T15:16:19.566Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CourseSessionRepository.cs",
+              "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\Repositories\\CourseSessionRepository.cs",
+              "RelativeDocumentMoniker": "ITI.Infrastructure\\Repositories\\CourseSessionRepository.cs",
+              "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\Repositories\\CourseSessionRepository.cs",
+              "RelativeToolTip": "ITI.Infrastructure\\Repositories\\CourseSessionRepository.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAkwCYAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T15:10:18.215Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "DepartmentRepository.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\Repositories\\DepartmentRepository.cs",
               "RelativeDocumentMoniker": "ITI.Infrastructure\\Repositories\\DepartmentRepository.cs",
@@ -437,33 +531,55 @@
               "RelativeToolTip": "ITI.Infrastructure\\Repositories\\DepartmentRepository.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAuwDwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T14:06:12.002Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-05T14:06:12.002Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 90,
-              "Title": "UIHelpers.cs",
-              "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.WinForms\\UI\\UIHelpers.cs",
-              "RelativeDocumentMoniker": "ITI.WinForms\\UI\\UIHelpers.cs",
-              "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.WinForms\\UI\\UIHelpers.cs",
-              "RelativeToolTip": "ITI.WinForms\\UI\\UIHelpers.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 13,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\Persistence\\Context\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "ITI.Infrastructure\\Persistence\\Context\\AppDbContext.cs",
+              "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\Persistence\\Context\\AppDbContext.cs",
+              "RelativeToolTip": "ITI.Infrastructure\\Persistence\\Context\\AppDbContext.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAawCQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-11T19:48:49.964Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-22T15:12:14.019Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
-              "Title": "CreateStudentCourseDto.cs",
-              "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\Dtos\\CreateStudentCourseDto.cs",
-              "RelativeDocumentMoniker": "ITI.Application\\Dtos\\CreateStudentCourseDto.cs",
-              "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\Dtos\\CreateStudentCourseDto.cs",
-              "RelativeToolTip": "ITI.Application\\Dtos\\CreateStudentCourseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 14,
+              "Title": "CourseSessionAttendanceConfig.cs",
+              "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\Persistence\\Configurations\\CourseSessionAttendanceConfig.cs",
+              "RelativeDocumentMoniker": "ITI.Infrastructure\\Persistence\\Configurations\\CourseSessionAttendanceConfig.cs",
+              "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\Persistence\\Configurations\\CourseSessionAttendanceConfig.cs",
+              "RelativeToolTip": "ITI.Infrastructure\\Persistence\\Configurations\\CourseSessionAttendanceConfig.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T15:48:35.317Z"
+              "WhenOpened": "2026-02-23T01:17:03.932Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CourseConfig.cs",
+              "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\Persistence\\Configurations\\CourseConfig.cs",
+              "RelativeDocumentMoniker": "ITI.Infrastructure\\Persistence\\Configurations\\CourseConfig.cs",
+              "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\Persistence\\Configurations\\CourseConfig.cs",
+              "RelativeToolTip": "ITI.Infrastructure\\Persistence\\Configurations\\CourseConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-23T01:17:03.398Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Course.cs",
+              "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Domain\\Entities\\Course.cs",
+              "RelativeDocumentMoniker": "ITI.Domain\\Entities\\Course.cs",
+              "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Domain\\Entities\\Course.cs",
+              "RelativeToolTip": "ITI.Domain\\Entities\\Course.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T19:14:21.248Z"
             },
             {
               "$type": "Document",
@@ -479,6 +595,68 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 83,
+              "Title": "CreateStudentCourseDto.cs",
+              "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\Dtos\\CreateStudentCourseDto.cs",
+              "RelativeDocumentMoniker": "ITI.Application\\Dtos\\CreateStudentCourseDto.cs",
+              "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\Dtos\\CreateStudentCourseDto.cs",
+              "RelativeToolTip": "ITI.Application\\Dtos\\CreateStudentCourseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T15:48:35.317Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 90,
+              "Title": "UIHelpers.cs",
+              "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.WinForms\\UI\\UIHelpers.cs",
+              "RelativeDocumentMoniker": "ITI.WinForms\\UI\\UIHelpers.cs",
+              "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.WinForms\\UI\\UIHelpers.cs",
+              "RelativeToolTip": "ITI.WinForms\\UI\\UIHelpers.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T19:48:49.964Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.WinForms\\Form1.cs",
+              "RelativeDocumentMoniker": "ITI.WinForms\\Form1.cs",
+              "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.WinForms\\Form1.cs",
+              "RelativeToolTip": "ITI.WinForms\\Form1.cs",
+              "ViewState": "AgIAAF0AAAAAAAAAAIBJwB8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T14:20:51.208Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CourseSessionForm.cs",
+              "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.WinForms\\CourseSessionForm.cs",
+              "RelativeDocumentMoniker": "ITI.WinForms\\CourseSessionForm.cs",
+              "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.WinForms\\CourseSessionForm.cs",
+              "RelativeToolTip": "ITI.WinForms\\CourseSessionForm.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAIBJwKgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T15:11:13.157Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CourseSessionForm.cs [Design]",
+              "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.WinForms\\CourseSessionForm.cs",
+              "RelativeDocumentMoniker": "ITI.WinForms\\CourseSessionForm.cs",
+              "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.WinForms\\CourseSessionForm.cs [Design]",
+              "RelativeToolTip": "ITI.WinForms\\CourseSessionForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T15:46:20.485Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 89,
               "Title": "StudentCourseForm.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.WinForms\\StudentCourseForm.cs",
@@ -487,8 +665,7 @@
               "RelativeToolTip": "ITI.WinForms\\StudentCourseForm.cs",
               "ViewState": "AgIAADcAAAAAAAAAAIBJwH4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T15:58:04.854Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-05T15:58:04.854Z"
             },
             {
               "$type": "Document",
@@ -540,19 +717,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 22,
               "Title": "CourseForm.cs [Design]",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.WinForms\\CourseForm.cs",
               "RelativeDocumentMoniker": "ITI.WinForms\\CourseForm.cs",
               "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.WinForms\\CourseForm.cs [Design]",
               "RelativeToolTip": "ITI.WinForms\\CourseForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T15:25:50.579Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-03-05T15:25:50.579Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 21,
               "Title": "CourseForm.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.WinForms\\CourseForm.cs",
               "RelativeDocumentMoniker": "ITI.WinForms\\CourseForm.cs",
@@ -560,36 +736,33 @@
               "RelativeToolTip": "ITI.WinForms\\CourseForm.cs",
               "ViewState": "AgIAACYAAAAAAAAAAABBwJQAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T14:48:21.37Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-05T14:48:21.37Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 24,
               "Title": "MainMenuForm.cs [Design]",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.WinForms\\MainMenuForm.cs",
               "RelativeDocumentMoniker": "ITI.WinForms\\MainMenuForm.cs",
               "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.WinForms\\MainMenuForm.cs [Design]",
               "RelativeToolTip": "ITI.WinForms\\MainMenuForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T14:08:58.755Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-03-05T14:08:58.755Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 20,
               "Title": "CourseSessionAttendanceForm.cs [Design]",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.WinForms\\CourseSessionAttendanceForm.cs",
               "RelativeDocumentMoniker": "ITI.WinForms\\CourseSessionAttendanceForm.cs",
               "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.WinForms\\CourseSessionAttendanceForm.cs [Design]",
               "RelativeToolTip": "ITI.WinForms\\CourseSessionAttendanceForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T15:46:16.659Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-03-05T15:46:16.659Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 77,
               "Title": "CreateCourseSessionAttendanceDto.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\Dtos\\CreateCourseSessionAttendanceDto.cs",
               "RelativeDocumentMoniker": "ITI.Application\\Dtos\\CreateCourseSessionAttendanceDto.cs",
@@ -601,7 +774,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 23,
               "Title": "MainMenuForm.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.WinForms\\MainMenuForm.cs",
               "RelativeDocumentMoniker": "ITI.WinForms\\MainMenuForm.cs",
@@ -609,36 +782,22 @@
               "RelativeToolTip": "ITI.WinForms\\MainMenuForm.cs",
               "ViewState": "AgIAAFwAAAAAAAAAAIBJwEwAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T13:26:45.755Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-05T13:26:45.755Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 25,
               "Title": "InstractorForm.cs [Design]",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.WinForms\\InstractorForm.cs",
               "RelativeDocumentMoniker": "ITI.WinForms\\InstractorForm.cs",
               "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.WinForms\\InstractorForm.cs [Design]",
               "RelativeToolTip": "ITI.WinForms\\InstractorForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T15:08:44.264Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-03-05T15:08:44.264Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "CourseSessionRepository.cs",
-              "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\Repositories\\CourseSessionRepository.cs",
-              "RelativeDocumentMoniker": "ITI.Infrastructure\\Repositories\\CourseSessionRepository.cs",
-              "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\Repositories\\CourseSessionRepository.cs",
-              "RelativeToolTip": "ITI.Infrastructure\\Repositories\\CourseSessionRepository.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAkwCYAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T15:10:18.215Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 76,
               "Title": "AllCourseSessionAttendanceDto.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\Dtos\\AllCourseSessionAttendanceDto.cs",
               "RelativeDocumentMoniker": "ITI.Application\\Dtos\\AllCourseSessionAttendanceDto.cs",
@@ -650,7 +809,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 78,
               "Title": "UpdateCourseSessionAttendanceDto.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\Dtos\\UpdateCourseSessionAttendanceDto.cs",
               "RelativeDocumentMoniker": "ITI.Application\\Dtos\\UpdateCourseSessionAttendanceDto.cs",
@@ -662,7 +821,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 79,
               "Title": "ICourseSessionAttendanceRepository.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\Interfaces\\Repositories\\ICourseSessionAttendanceRepository.cs",
               "RelativeDocumentMoniker": "ITI.Application\\Interfaces\\Repositories\\ICourseSessionAttendanceRepository.cs",
@@ -682,8 +841,7 @@
               "RelativeToolTip": "ITI.WinForms\\CourseSessionAttendanceForm.cs",
               "ViewState": "AgIAAEAAAAAAAAAAAIBJwL4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T15:17:22.12Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-05T15:17:22.12Z"
             },
             {
               "$type": "Document",
@@ -711,19 +869,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
-              "Title": "CourseSessionAttendanceRepository.cs",
-              "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\Repositories\\CourseSessionAttendanceRepository.cs",
-              "RelativeDocumentMoniker": "ITI.Infrastructure\\Repositories\\CourseSessionAttendanceRepository.cs",
-              "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\Repositories\\CourseSessionAttendanceRepository.cs",
-              "RelativeToolTip": "ITI.Infrastructure\\Repositories\\CourseSessionAttendanceRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T15:16:19.566Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 70,
               "Title": "AllCourseSessionDto.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\Dtos\\AllCourseSessionDto.cs",
               "RelativeDocumentMoniker": "ITI.Application\\Dtos\\AllCourseSessionDto.cs",
@@ -735,7 +881,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 71,
               "Title": "CreateCourseSessionDto.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\Dtos\\CreateCourseSessionDto.cs",
               "RelativeDocumentMoniker": "ITI.Application\\Dtos\\CreateCourseSessionDto.cs",
@@ -747,7 +893,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 72,
               "Title": "UpdateCourseSessionDto.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\Dtos\\UpdateCourseSessionDto.cs",
               "RelativeDocumentMoniker": "ITI.Application\\Dtos\\UpdateCourseSessionDto.cs",
@@ -759,7 +905,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 73,
               "Title": "ICourseSessionRepository.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\Interfaces\\Repositories\\ICourseSessionRepository.cs",
               "RelativeDocumentMoniker": "ITI.Application\\Interfaces\\Repositories\\ICourseSessionRepository.cs",
@@ -771,7 +917,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 75,
               "Title": "CourseSessionService.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\Services\\CourseSessionService.cs",
               "RelativeDocumentMoniker": "ITI.Application\\Services\\CourseSessionService.cs",
@@ -783,7 +929,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 74,
               "Title": "ICourseSessionService.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\Interfaces\\Services\\ICourseSessionService.cs",
               "RelativeDocumentMoniker": "ITI.Application\\Interfaces\\Services\\ICourseSessionService.cs",
@@ -795,7 +941,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 26,
               "Title": "Form1.resx",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.WinForms\\Form1.resx",
               "RelativeDocumentMoniker": "ITI.WinForms\\Form1.resx",
@@ -806,7 +952,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 68,
               "Title": "ICourseRepository.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\Interfaces\\Repositories\\ICourseRepository.cs",
               "RelativeDocumentMoniker": "ITI.Application\\Interfaces\\Repositories\\ICourseRepository.cs",
@@ -818,7 +964,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 67,
               "Title": "UpdateCourseDto.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\Dtos\\UpdateCourseDto.cs",
               "RelativeDocumentMoniker": "ITI.Application\\Dtos\\UpdateCourseDto.cs",
@@ -830,7 +976,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 66,
               "Title": "CreateCourseDto.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\Dtos\\CreateCourseDto.cs",
               "RelativeDocumentMoniker": "ITI.Application\\Dtos\\CreateCourseDto.cs",
@@ -842,7 +988,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 28,
               "Title": "Program.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.WinForms\\Program.cs",
               "RelativeDocumentMoniker": "ITI.WinForms\\Program.cs",
@@ -854,7 +1000,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 27,
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.WinForms\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "ITI.WinForms\\Form1.Designer.cs",
@@ -862,24 +1008,11 @@
               "RelativeToolTip": "ITI.WinForms\\Form1.Designer.cs",
               "ViewState": "AgIAABUAAAAAAAAAAABBwAIAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T15:55:55.188Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-26T15:55:55.188Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
-              "Title": "CourseRepository.cs",
-              "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\Repositories\\CourseRepository.cs",
-              "RelativeDocumentMoniker": "ITI.Infrastructure\\Repositories\\CourseRepository.cs",
-              "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\Repositories\\CourseRepository.cs",
-              "RelativeToolTip": "ITI.Infrastructure\\Repositories\\CourseRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T14:46:36.796Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 69,
               "Title": "ICourseService.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\Interfaces\\Services\\ICourseService.cs",
               "RelativeDocumentMoniker": "ITI.Application\\Interfaces\\Services\\ICourseService.cs",
@@ -891,19 +1024,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
-              "Title": "CourseService.cs",
-              "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\Services\\CourseService.cs",
-              "RelativeDocumentMoniker": "ITI.Application\\Services\\CourseService.cs",
-              "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\Services\\CourseService.cs",
-              "RelativeToolTip": "ITI.Application\\Services\\CourseService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T14:47:42.594Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 65,
               "Title": "AllCourseDto.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\Dtos\\AllCourseDto.cs",
               "RelativeDocumentMoniker": "ITI.Application\\Dtos\\AllCourseDto.cs",
@@ -915,7 +1036,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 57,
               "Title": "AllInstractorDto.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\Dtos\\AllInstractorDto.cs",
               "RelativeDocumentMoniker": "ITI.Application\\Dtos\\AllInstractorDto.cs",
@@ -927,7 +1048,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 58,
               "Title": "IInstractorRepository.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\Interfaces\\Repositories\\IInstractorRepository.cs",
               "RelativeDocumentMoniker": "ITI.Application\\Interfaces\\Repositories\\IInstractorRepository.cs",
@@ -939,7 +1060,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 59,
               "Title": "InstractorRepository.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\Repositories\\InstractorRepository.cs",
               "RelativeDocumentMoniker": "ITI.Infrastructure\\Repositories\\InstractorRepository.cs",
@@ -951,7 +1072,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 60,
               "Title": "IInstractorService.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\Interfaces\\Services\\IInstractorService.cs",
               "RelativeDocumentMoniker": "ITI.Application\\Interfaces\\Services\\IInstractorService.cs",
@@ -963,7 +1084,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 61,
               "Title": "CreateInstractorDto.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\Dtos\\CreateInstractorDto.cs",
               "RelativeDocumentMoniker": "ITI.Application\\Dtos\\CreateInstractorDto.cs",
@@ -975,7 +1096,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 64,
               "Title": "InstractorForm.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.WinForms\\InstractorForm.cs",
               "RelativeDocumentMoniker": "ITI.WinForms\\InstractorForm.cs",
@@ -983,12 +1104,11 @@
               "RelativeToolTip": "ITI.WinForms\\InstractorForm.cs",
               "ViewState": "AgIAADwAAAAAAAAAAIBJwJIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T14:31:58.208Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-05T14:31:58.208Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 63,
               "Title": "InstractorService.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\Services\\InstractorService.cs",
               "RelativeDocumentMoniker": "ITI.Application\\Services\\InstractorService.cs",
@@ -1000,7 +1120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 62,
               "Title": "UpdateInstractorDto.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\Dtos\\UpdateInstractorDto.cs",
               "RelativeDocumentMoniker": "ITI.Application\\Dtos\\UpdateInstractorDto.cs",
@@ -1012,7 +1132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 56,
               "Title": "20260305141804_updateDepartmentByMakingImstractorNullable.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\Migrations\\20260305141804_updateDepartmentByMakingImstractorNullable.cs",
               "RelativeDocumentMoniker": "ITI.Infrastructure\\Migrations\\20260305141804_updateDepartmentByMakingImstractorNullable.cs",
@@ -1024,7 +1144,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 30,
               "Title": "AllDepartmentDto.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\Dtos\\AllDepartmentDto.cs",
               "RelativeDocumentMoniker": "ITI.Application\\Dtos\\AllDepartmentDto.cs",
@@ -1036,7 +1156,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 29,
               "Title": "DepartmentForm.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.WinForms\\DepartmentForm.cs",
               "RelativeDocumentMoniker": "ITI.WinForms\\DepartmentForm.cs",
@@ -1044,23 +1164,23 @@
               "RelativeToolTip": "ITI.WinForms\\DepartmentForm.cs",
               "ViewState": "AgIAADoAAAAAAAAAAIBJwJAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T14:06:52.262Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-05T14:06:52.262Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 32,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.WinForms\\Form1.cs",
               "RelativeDocumentMoniker": "ITI.WinForms\\Form1.cs",
               "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.WinForms\\Form1.cs [Design]",
               "RelativeToolTip": "ITI.WinForms\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T14:19:53.671Z"
+              "WhenOpened": "2026-02-26T14:19:53.671Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 31,
               "Title": "DepartmentService.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\Services\\DepartmentService.cs",
               "RelativeDocumentMoniker": "ITI.Application\\Services\\DepartmentService.cs",
@@ -1072,19 +1192,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Department.cs",
-              "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Domain\\Entities\\Department.cs",
-              "RelativeDocumentMoniker": "ITI.Domain\\Entities\\Department.cs",
-              "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Domain\\Entities\\Department.cs",
-              "RelativeToolTip": "ITI.Domain\\Entities\\Department.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-22T19:14:21.672Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 34,
               "Title": "UpdateDepartmentDto.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\Dtos\\UpdateDepartmentDto.cs",
               "RelativeDocumentMoniker": "ITI.Application\\Dtos\\UpdateDepartmentDto.cs",
@@ -1096,19 +1204,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Instractor.cs",
-              "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Domain\\Entities\\Instractor.cs",
-              "RelativeDocumentMoniker": "ITI.Domain\\Entities\\Instractor.cs",
-              "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Domain\\Entities\\Instractor.cs",
-              "RelativeToolTip": "ITI.Domain\\Entities\\Instractor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA4AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-22T19:14:21.526Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 33,
               "Title": "IDepartmentService.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\Interfaces\\Services\\IDepartmentService.cs",
               "RelativeDocumentMoniker": "ITI.Application\\Interfaces\\Services\\IDepartmentService.cs",
@@ -1120,7 +1216,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 55,
               "Title": "IDepartmentRepository.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\Interfaces\\Repositories\\IDepartmentRepository.cs",
               "RelativeDocumentMoniker": "ITI.Application\\Interfaces\\Repositories\\IDepartmentRepository.cs",
@@ -1132,7 +1228,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 54,
               "Title": "CreateDepartmentDto.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\Dtos\\CreateDepartmentDto.cs",
               "RelativeDocumentMoniker": "ITI.Application\\Dtos\\CreateDepartmentDto.cs",
@@ -1144,7 +1240,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 36,
               "Title": "IStudentRepository.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\Interfaces\\Repositories\\IStudentRepository.cs",
               "RelativeDocumentMoniker": "ITI.Application\\Interfaces\\Repositories\\IStudentRepository.cs",
@@ -1156,7 +1252,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 37,
               "Title": "UpdateStudentDto.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\Dtos\\UpdateStudentDto.cs",
               "RelativeDocumentMoniker": "ITI.Application\\Dtos\\UpdateStudentDto.cs",
@@ -1168,7 +1264,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 35,
               "Title": "StudentRepository.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\Repositories\\StudentRepository.cs",
               "RelativeDocumentMoniker": "ITI.Infrastructure\\Repositories\\StudentRepository.cs",
@@ -1180,7 +1276,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 40,
               "Title": "StudentService.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\Services\\StudentService.cs",
               "RelativeDocumentMoniker": "ITI.Application\\Services\\StudentService.cs",
@@ -1192,7 +1288,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 41,
               "Title": "IStudentService.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\Interfaces\\Services\\IStudentService.cs",
               "RelativeDocumentMoniker": "ITI.Application\\Interfaces\\Services\\IStudentService.cs",
@@ -1204,7 +1300,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 38,
               "Title": "AllStudentDto.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\Dtos\\AllStudentDto.cs",
               "RelativeDocumentMoniker": "ITI.Application\\Dtos\\AllStudentDto.cs",
@@ -1216,7 +1312,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 39,
               "Title": "CreateStudentDto.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\Dtos\\CreateStudentDto.cs",
               "RelativeDocumentMoniker": "ITI.Application\\Dtos\\CreateStudentDto.cs",
@@ -1228,7 +1324,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 43,
               "Title": "App.config",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\App.config",
               "RelativeDocumentMoniker": "ITI.Infrastructure\\App.config",
@@ -1240,7 +1336,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 42,
               "Title": "App.config",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.WinForms\\App.config",
               "RelativeDocumentMoniker": "ITI.WinForms\\App.config",
@@ -1252,7 +1348,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 44,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.WinForms\\Form1.cs",
               "RelativeDocumentMoniker": "ITI.WinForms\\Form1.cs",
@@ -1263,19 +1359,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "20260224185751_InitialCreate.cs",
-              "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\Migrations\\20260224185751_InitialCreate.cs",
-              "RelativeDocumentMoniker": "ITI.Infrastructure\\Migrations\\20260224185751_InitialCreate.cs",
-              "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\Migrations\\20260224185751_InitialCreate.cs",
-              "RelativeToolTip": "ITI.Infrastructure\\Migrations\\20260224185751_InitialCreate.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-24T18:57:51.789Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 46,
               "Title": "20260224185631_InitialCreate.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\Migrations\\20260224185631_InitialCreate.cs",
               "RelativeDocumentMoniker": "ITI.Infrastructure\\Migrations\\20260224185631_InitialCreate.cs",
@@ -1286,7 +1370,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 47,
               "Title": "20260224185414_InitialCreate.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\Migrations\\20260224185414_InitialCreate.cs",
               "RelativeDocumentMoniker": "ITI.Infrastructure\\Migrations\\20260224185414_InitialCreate.cs",
@@ -1297,19 +1381,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "Student.cs",
-              "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Domain\\Entities\\Student.cs",
-              "RelativeDocumentMoniker": "ITI.Domain\\Entities\\Student.cs",
-              "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Domain\\Entities\\Student.cs",
-              "RelativeToolTip": "ITI.Domain\\Entities\\Student.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAnwAUAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-22T19:14:21.03Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 49,
               "Title": "20260224185218_InitialCreate.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\Migrations\\20260224185218_InitialCreate.cs",
               "RelativeDocumentMoniker": "ITI.Infrastructure\\Migrations\\20260224185218_InitialCreate.cs",
@@ -1320,19 +1392,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "CourseConfig.cs",
-              "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\Persistence\\Configurations\\CourseConfig.cs",
-              "RelativeDocumentMoniker": "ITI.Infrastructure\\Persistence\\Configurations\\CourseConfig.cs",
-              "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\Persistence\\Configurations\\CourseConfig.cs",
-              "RelativeToolTip": "ITI.Infrastructure\\Persistence\\Configurations\\CourseConfig.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAUwBAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-23T01:17:03.398Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 45,
               "Title": "DepartmentConfig.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\Persistence\\Configurations\\DepartmentConfig.cs",
               "RelativeDocumentMoniker": "ITI.Infrastructure\\Persistence\\Configurations\\DepartmentConfig.cs",
@@ -1344,7 +1404,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 50,
               "Title": "20260224154812_InitialCreate.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\Migrations\\20260224154812_InitialCreate.cs",
               "RelativeDocumentMoniker": "ITI.Infrastructure\\Migrations\\20260224154812_InitialCreate.cs",
@@ -1355,19 +1415,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "CourseSessionAttendanceConfig.cs",
-              "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\Persistence\\Configurations\\CourseSessionAttendanceConfig.cs",
-              "RelativeDocumentMoniker": "ITI.Infrastructure\\Persistence\\Configurations\\CourseSessionAttendanceConfig.cs",
-              "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\Persistence\\Configurations\\CourseSessionAttendanceConfig.cs",
-              "RelativeToolTip": "ITI.Infrastructure\\Persistence\\Configurations\\CourseSessionAttendanceConfig.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAIBJwBYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-23T01:17:03.932Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 48,
               "Title": "CourseSessionConfig.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\Persistence\\Configurations\\CourseSessionConfig.cs",
               "RelativeDocumentMoniker": "ITI.Infrastructure\\Persistence\\Configurations\\CourseSessionConfig.cs",
@@ -1379,7 +1427,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 52,
               "Title": "InstractorConfig.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\Persistence\\Configurations\\InstractorConfig.cs",
               "RelativeDocumentMoniker": "ITI.Infrastructure\\Persistence\\Configurations\\InstractorConfig.cs",
@@ -1391,7 +1439,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 51,
               "Title": "StudentCourseConfig.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\Persistence\\Configurations\\StudentCourseConfig.cs",
               "RelativeDocumentMoniker": "ITI.Infrastructure\\Persistence\\Configurations\\StudentCourseConfig.cs",
@@ -1403,7 +1451,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 53,
               "Title": "StudentConfig.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Infrastructure\\Persistence\\Configurations\\StudentConfig.cs",
               "RelativeDocumentMoniker": "ITI.Infrastructure\\Persistence\\Configurations\\StudentConfig.cs",
@@ -1412,66 +1460,6 @@
               "ViewState": "AgIAAAMAAAAAAAAAAAAUwBMAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-22T19:47:08.093Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "StudentCourse.cs",
-              "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Domain\\Entities\\StudentCourse.cs",
-              "RelativeDocumentMoniker": "ITI.Domain\\Entities\\StudentCourse.cs",
-              "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Domain\\Entities\\StudentCourse.cs",
-              "RelativeToolTip": "ITI.Domain\\Entities\\StudentCourse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-22T19:14:21.388Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "CourseSessionAttendance.cs",
-              "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Domain\\Entities\\CourseSessionAttendance.cs",
-              "RelativeDocumentMoniker": "ITI.Domain\\Entities\\CourseSessionAttendance.cs",
-              "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Domain\\Entities\\CourseSessionAttendance.cs",
-              "RelativeToolTip": "ITI.Domain\\Entities\\CourseSessionAttendance.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-22T19:14:22.009Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "CourseSession.cs",
-              "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Domain\\Entities\\CourseSession.cs",
-              "RelativeDocumentMoniker": "ITI.Domain\\Entities\\CourseSession.cs",
-              "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Domain\\Entities\\CourseSession.cs",
-              "RelativeToolTip": "ITI.Domain\\Entities\\CourseSession.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAIA6wBAAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-22T19:14:21.815Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "Course.cs",
-              "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Domain\\Entities\\Course.cs",
-              "RelativeDocumentMoniker": "ITI.Domain\\Entities\\Course.cs",
-              "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Domain\\Entities\\Course.cs",
-              "RelativeToolTip": "ITI.Domain\\Entities\\Course.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAIA6wBAAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-22T19:14:21.248Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "ITI.WinForms.csproj",
-              "DocumentMoniker": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.WinForms\\ITI.WinForms.csproj",
-              "RelativeDocumentMoniker": "ITI.WinForms\\ITI.WinForms.csproj",
-              "ToolTip": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.WinForms\\ITI.WinForms.csproj",
-              "RelativeToolTip": "ITI.WinForms\\ITI.WinForms.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-02-22T15:15:13.575Z"
             }
           ]
         }

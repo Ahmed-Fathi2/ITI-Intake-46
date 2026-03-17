@@ -10,6 +10,7 @@ public static class ResultExtensions
     {
         if (result.IsSuccess)
             throw new InvalidOperationException("Cannot convert success result to a problem");
+
         var firstError = result.Errors.FirstOrDefault();
         var statusCode = firstError?.StatusCode ?? StatusCodes.Status400BadRequest;
 

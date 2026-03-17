@@ -1,0 +1,16 @@
+F:\ITI\MVC\BookWarehouse\BookWarehouse\BookWarehouse.Application\bin\Debug\net10.0\BookWarehouse.Application.deps.json
+F:\ITI\MVC\BookWarehouse\BookWarehouse\BookWarehouse.Application\bin\Debug\net10.0\BookWarehouse.Application.dll
+F:\ITI\MVC\BookWarehouse\BookWarehouse\BookWarehouse.Application\bin\Debug\net10.0\BookWarehouse.Application.pdb
+F:\ITI\MVC\BookWarehouse\BookWarehouse\BookWarehouse.Application\bin\Debug\net10.0\BookWarehouse.Domain.dll
+F:\ITI\MVC\BookWarehouse\BookWarehouse\BookWarehouse.Application\bin\Debug\net10.0\BookWarehouse.Domain.pdb
+F:\ITI\MVC\BookWarehouse\BookWarehouse\BookWarehouse.Application\obj\Debug\net10.0\BookWarehouse.Application.csproj.AssemblyReference.cache
+F:\ITI\MVC\BookWarehouse\BookWarehouse\BookWarehouse.Application\obj\Debug\net10.0\BookWarehouse.Application.GeneratedMSBuildEditorConfig.editorconfig
+F:\ITI\MVC\BookWarehouse\BookWarehouse\BookWarehouse.Application\obj\Debug\net10.0\BookWarehouse.Application.AssemblyInfoInputs.cache
+F:\ITI\MVC\BookWarehouse\BookWarehouse\BookWarehouse.Application\obj\Debug\net10.0\BookWarehouse.Application.AssemblyInfo.cs
+F:\ITI\MVC\BookWarehouse\BookWarehouse\BookWarehouse.Application\obj\Debug\net10.0\BookWarehouse.Application.csproj.CoreCompileInputs.cache
+F:\ITI\MVC\BookWarehouse\BookWarehouse\BookWarehouse.Application\obj\Debug\net10.0\BookWarehouse.Application.sourcelink.json
+F:\ITI\MVC\BookWarehouse\BookWarehouse\BookWarehouse.Application\obj\Debug\net10.0\BookWare.AF02D161.Up2Date
+F:\ITI\MVC\BookWarehouse\BookWarehouse\BookWarehouse.Application\obj\Debug\net10.0\BookWarehouse.Application.dll
+F:\ITI\MVC\BookWarehouse\BookWarehouse\BookWarehouse.Application\obj\Debug\net10.0\refint\BookWarehouse.Application.dll
+F:\ITI\MVC\BookWarehouse\BookWarehouse\BookWarehouse.Application\obj\Debug\net10.0\BookWarehouse.Application.pdb
+F:\ITI\MVC\BookWarehouse\BookWarehouse\BookWarehouse.Application\obj\Debug\net10.0\ref\BookWarehouse.Application.dll

@@ -159,6 +159,8 @@ namespace WebApplication2.Controllers
 
             }).ToList();
 
+            ViewBag.Categories = categories;
+
             var productEditVM = new ProductEditVM
             {
                 Id= product.Id,
@@ -167,8 +169,8 @@ namespace WebApplication2.Controllers
                 Price = product.Price,
                 Count = product.Count,
                 CategoryId = product.CategoryId,
-                CategoryName = product.Category.Name,
-                Categories = categories
+                CategoryName = product.Category.Name
+                //Categories = categories
             };
 
 

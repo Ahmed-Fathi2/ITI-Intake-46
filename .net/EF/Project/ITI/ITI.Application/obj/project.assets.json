@@ -33,9 +33,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\ITI.Application.csproj",
+      "projectUniqueName": "F:\\ITI\\.net\\EF\\Project\\ITI\\ITI.Application\\ITI.Application.csproj",
       "projectName": "ITI.Application",
-      "projectPath": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\ITI.Application.csproj",
+      "projectPath": "F:\\ITI\\.net\\EF\\Project\\ITI\\ITI.Application\\ITI.Application.csproj",
       "packagesPath": "C:\\Users\\dell\\.nuget\\packages\\",
       "outputPath": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Application\\obj\\",
       "projectStyle": "PackageReference",
@@ -58,8 +58,8 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Domain\\ITI.Domain.csproj": {
-              "projectPath": "F:\\ITI\\.Net\\EF\\Project\\ITI\\ITI.Domain\\ITI.Domain.csproj"
+            "F:\\ITI\\.net\\EF\\Project\\ITI\\ITI.Domain\\ITI.Domain.csproj": {
+              "projectPath": "F:\\ITI\\.net\\EF\\Project\\ITI\\ITI.Domain\\ITI.Domain.csproj"
             }
           }
         }

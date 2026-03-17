@@ -1,0 +1,29 @@
+@page "/subjects"
+@inject ApplicationDbContext Db
+
+<h3>Subjects</h3>
+
+@if (subjects == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <ul>
+        @foreach (var s in subjects)
+        {
+            <li>
+                <a href="/exams/@s.Id">@s.Name</a>
+            </li>
+        }
+    </ul>
+}
+
+@code {
+    private List<Subject>? subjects;
+
+    protected override async Task OnInitializedAsync()
+    {
+        subjects = await Db.Subjects.ToListAsync();
+    }
+}

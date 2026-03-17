@@ -1,0 +1,33 @@
+﻿@page "/exams/{subjectId:int}"
+@inject ApplicationDbContext Db
+@using ExamSystem.Models
+
+<h3>Exams</h3>
+
+@if (exams == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <ul>
+        @foreach (var e in exams)
+        {
+            <li>
+                <a href="/exam/@e.Id">@e.Title</a>
+            </li>
+        }
+    </ul>
+}
+
+@code {
+    [Parameter]
+    public int subjectId { get; set; }
+
+    private List<Exam>? exams;
+
+    protected override async Task OnInitializedAsync()
+    {
+        exams = await Db.Exams.Where(x => x.SubjectId == subjectId).ToListAsync();
+    }
+}

@@ -174,3 +174,9 @@ F:\ITI\.Net\Api\Laps\WebService-Api\WebService.Api\obj\Debug\net10.0\WebService.
 F:\ITI\.Net\Api\Laps\WebService-Api\WebService.Api\obj\Debug\net10.0\ref\WebService.Api.dll
 F:\ITI\.Net\Api\Laps\WebService-Api\WebService.Api\bin\Debug\net10.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 F:\ITI\.Net\Api\Laps\WebService-Api\WebService.Api\obj\Debug\net10.0\WebService.Api.MvcApplicationPartsAssemblyInfo.cs
+F:\ITI\.Net\Api\Laps\WebService-Api\WebService.Api\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+F:\ITI\.Net\Api\Laps\WebService-Api\WebService.Api\bin\Debug\net10.0\SendGrid.dll
+F:\ITI\.Net\Api\Laps\WebService-Api\WebService.Api\bin\Debug\net10.0\StarkbankEcdsa.dll
+F:\ITI\.Net\Api\Laps\WebService-Api\WebService.Api\bin\Debug\net10.0\System.Net.Http.Formatting.dll
+F:\ITI\.Net\Api\Laps\WebService-Api\WebService.Api\bin\Debug\net10.0\System.Web.Http.dll
+F:\ITI\.Net\Api\Laps\WebService-Api\WebService.Api\bin\Debug\net10.0\Newtonsoft.Json.Bson.dll

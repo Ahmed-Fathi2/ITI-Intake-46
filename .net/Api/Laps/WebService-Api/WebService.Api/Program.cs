@@ -2,10 +2,17 @@
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Mapster;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Text;
+using WebService.Api.Abstractions;
 using WebService.BLL.Abstractions;
+using WebService.BLL.Abstractions.Auth;
 using WebService.BLL.Managers.Auth;
+using WebService.BLL.Managers.Email;
 using WebService.BLL.Managers.FileManager;
 using WebService.BLL.Managers.Product;
 using WebService.DAL;
@@ -18,7 +25,7 @@ namespace WebService.Api
     public class Program
     {
         public static void Main(string[] args)
-        {
+       {
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
@@ -34,6 +41,7 @@ namespace WebService.Api
             });
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<AppDbContext>()
+                .AddDefaultTokenProviders()
                 .AddSignInManager();
 
 
@@ -56,6 +64,10 @@ namespace WebService.Api
                 options.User.AllowedUserNameCharacters ="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
 
                 options.User.RequireUniqueEmail = false;
+
+
+                options.SignIn.RequireConfirmedEmail = true;
+                options.SignIn.RequireConfirmedPhoneNumber = false;
             });
 
             builder.Services.AddScoped<IProductRepository, ProductRepository>();
@@ -63,6 +75,10 @@ namespace WebService.Api
             builder.Services.AddScoped<IProductManager, ProductManager>();
             builder.Services.AddScoped<IFileManager, FileManager>();
             builder.Services. AddScoped<IAuthManager,AuthManager>();
+            builder.Services.AddSingleton<IJwtProvider, JwtProvider>();
+            builder.Services.AddScoped<IEmailSender, EmailSender>();
+            builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+            builder.Services.AddProblemDetails();
 
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
@@ -75,6 +91,33 @@ namespace WebService.Api
             builder.Services.AddMapster();
             var config = TypeAdapterConfig.GlobalSettings;
             config.Scan(typeof(AssemblyMarker).Assembly);
+
+
+
+            builder.Services.AddAuthentication(option =>
+            {
+                // Tell the app to use JWT Bearer authentication by default
+                option.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+
+                // Tell the app If the user is not authenticated, challenge them using JWT Bearer authentication and rerun a 401 Unauthorized response
+                option.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            .AddJwtBearer(o =>
+            {
+            o.SaveToken = true;
+                o.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true, // Validate Signature using the signing key
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime= true,
+
+                    IssuerSigningKey= new SymmetricSecurityKey(Encoding.UTF8.GetBytes("7K+2mXqP9vRnLwA3sYdF8hJcT5bNgUeZ1oQpWkViCxMj6rHyDs4OtBIlEuAfG0n+mXqP9vRnLwB4=")),
+                    ValidIssuer= "iti",
+                    ValidAudience= "iti_students"
+                };
+            
+            });
 
 
             var app = builder.Build();
@@ -92,6 +135,8 @@ namespace WebService.Api
 
 
             app.MapControllers();
+
+            app.UseExceptionHandler();
 
             app.Run();
         }

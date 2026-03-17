@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "6dyRYctuAhc=",
+  "success": true,
+  "projectFilePath": "F:\\ITI\\MVC\\BookWarehouse\\BookWarehouse\\BookWarehouse.Application\\BookWarehouse.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dell\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.5\\microsoft.extensions.dependencyinjection.abstractions.10.0.5.nupkg.sha512"
+  ],
+  "logs": []
+}

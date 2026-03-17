@@ -18,7 +18,7 @@ namespace WebApplication2.ViewModel
 
 
 
-        public List<SelectListItem>? Categories { get; set; }
+        //public List<SelectListItem>? Categories { get; set; }
 
     }
 }

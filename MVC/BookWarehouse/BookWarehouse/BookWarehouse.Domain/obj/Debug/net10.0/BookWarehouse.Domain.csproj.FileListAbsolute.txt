@@ -1,0 +1,12 @@
+F:\ITI\MVC\BookWarehouse\BookWarehouse\BookWarehouse.Domain\bin\Debug\net10.0\BookWarehouse.Domain.deps.json
+F:\ITI\MVC\BookWarehouse\BookWarehouse\BookWarehouse.Domain\bin\Debug\net10.0\BookWarehouse.Domain.dll
+F:\ITI\MVC\BookWarehouse\BookWarehouse\BookWarehouse.Domain\bin\Debug\net10.0\BookWarehouse.Domain.pdb
+F:\ITI\MVC\BookWarehouse\BookWarehouse\BookWarehouse.Domain\obj\Debug\net10.0\BookWarehouse.Domain.GeneratedMSBuildEditorConfig.editorconfig
+F:\ITI\MVC\BookWarehouse\BookWarehouse\BookWarehouse.Domain\obj\Debug\net10.0\BookWarehouse.Domain.AssemblyInfoInputs.cache
+F:\ITI\MVC\BookWarehouse\BookWarehouse\BookWarehouse.Domain\obj\Debug\net10.0\BookWarehouse.Domain.AssemblyInfo.cs
+F:\ITI\MVC\BookWarehouse\BookWarehouse\BookWarehouse.Domain\obj\Debug\net10.0\BookWarehouse.Domain.csproj.CoreCompileInputs.cache
+F:\ITI\MVC\BookWarehouse\BookWarehouse\BookWarehouse.Domain\obj\Debug\net10.0\BookWarehouse.Domain.sourcelink.json
+F:\ITI\MVC\BookWarehouse\BookWarehouse\BookWarehouse.Domain\obj\Debug\net10.0\BookWarehouse.Domain.dll
+F:\ITI\MVC\BookWarehouse\BookWarehouse\BookWarehouse.Domain\obj\Debug\net10.0\refint\BookWarehouse.Domain.dll
+F:\ITI\MVC\BookWarehouse\BookWarehouse\BookWarehouse.Domain\obj\Debug\net10.0\BookWarehouse.Domain.pdb
+F:\ITI\MVC\BookWarehouse\BookWarehouse\BookWarehouse.Domain\obj\Debug\net10.0\ref\BookWarehouse.Domain.dll
