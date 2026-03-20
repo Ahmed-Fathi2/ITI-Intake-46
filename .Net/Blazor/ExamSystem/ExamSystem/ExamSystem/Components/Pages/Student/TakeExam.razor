@@ -1,0 +1,255 @@
+@page "/take-exam/{studentExamId:int}"
+@attribute [Authorize]
+
+<PageTitle>Take Exam - @studentExam?.Exam?.Title</PageTitle>
+
+@if (studentExam != null && questions.Any())
+{
+    <MudPaper Elevation="0" Class="pa-6 mb-8 rounded-xl" Style="background: linear-gradient(135deg, rgba(var(--mud-palette-primary-rgb), 0.05) 0%, rgba(var(--mud-palette-secondary-rgb), 0.05) 100%); border: 1px solid rgba(var(--mud-palette-primary-rgb), 0.1);">
+        <div class="d-flex align-center justify-space-between mb-4">
+            <MudText Typo="Typo.h5" Class="font-weight-bold" Color="Color.Primary">@studentExam.Exam?.Title</MudText>
+            <MudChip T="string" Color="Color.Secondary" Variant="Variant.Filled" Size="Size.Small" Class="rounded-pill font-weight-bold">
+                Question @(currentQuestionIndex + 1) of @questions.Count
+            </MudChip>
+        </div>
+        <MudProgressLinear Value="@Progress" Color="Color.Primary" Class="rounded-pill" Size="Size.Medium" />
+    </MudPaper>
+
+    <MudCard Elevation="3" Class="rounded-xl overflow-hidden mb-6">
+        <div class="pa-4" Style="background-color: rgba(var(--mud-palette-primary-rgb), 0.03); border-bottom: 1px solid rgba(0,0,0,0.05);">
+            <MudText Typo="Typo.subtitle2" Color="Color.Secondary" Class="text-uppercase font-weight-bold" Style="letter-spacing: 1px;">Question @(currentQuestionIndex + 1)</MudText>
+        </div>
+        <MudCardContent Class="pa-6 pa-md-8">
+            <MudText Typo="Typo.h5" Class="mb-8 font-weight-medium" Style="line-height: 1.6;">@currentQuestion.Text</MudText>
+
+            <MudRadioGroup @bind-Value="selectedAnswerId" T="int?">
+                <MudStack Spacing="3" Class="w-100 mt-6">
+                    @foreach (var answer in currentQuestion.Answers)
+                    {
+                        <MudPaper Elevation="0" 
+                                  Class="pa-1 rounded-lg transition-all" 
+                                  Style="@(selectedAnswerId == answer.Id ? "background-color: rgba(var(--mud-palette-primary-rgb), 0.08); border: 2px solid var(--mud-palette-primary);" : "border: 1px solid rgba(0,0,0,0.1);")">
+                            <MudRadio T="int?" Value="@( (int?)answer.Id )" Color="Color.Primary" Class="w-100 pa-4">
+                                <MudText Typo="Typo.body1" Class="@(selectedAnswerId == answer.Id ? "font-weight-bold color-primary" : "")">@answer.Text</MudText>
+                            </MudRadio>
+                        </MudPaper>
+                    }
+                </MudStack>
+            </MudRadioGroup>
+        </MudCardContent>
+    </MudCard>
+
+    <MudStack Row="true" Justify="Justify.SpaceBetween" Class="mt-8 mb-16">
+        <MudButton Variant="Variant.Outlined" Color="Color.Default" Disabled="@(currentQuestionIndex == 0)" OnClick="PreviousQuestion" Size="Size.Large" Class="rounded-pill px-6 font-weight-bold" StartIcon="@Icons.Material.Filled.ArrowBack">Previous</MudButton>
+        
+        <MudSpacer />
+
+        @if (currentQuestionIndex < questions.Count - 1)
+        {
+            <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="NextQuestion" Size="Size.Large" Class="rounded-pill px-8 font-weight-bold" EndIcon="@Icons.Material.Filled.ArrowForward">Next</MudButton>
+        }
+        else
+        {
+            <MudButton Variant="Variant.Filled" Color="Color.Success" OnClick="SubmitExam" Disabled="@(!CanSubmit)" Size="Size.Large" Class="rounded-pill px-8 font-weight-bold" EndIcon="@Icons.Material.Filled.CheckCircle">Submit Exam</MudButton>
+        }
+    </MudStack>
+}
+
+<MudDialog @bind-Visible="@confirmSubmit" MaxWidth="MaxWidth.Small">
+    <DialogContent>
+        <MudText>Are you sure you want to submit the exam? You cannot change your answers after submission.</MudText>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="() => confirmSubmit = false">Cancel</MudButton>
+        <MudButton Variant="Variant.Filled" Color="Color.Success" OnClick="ConfirmSubmit">Submit</MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+    [Parameter] public int StudentExamId { get; set; }
+
+    private StudentExam? studentExam;
+    private List<Question> questions = new();
+    private int currentQuestionIndex;
+    private Question currentQuestion = new();
+    private int? _selectedAnswerId;
+    private int? selectedAnswerId
+    {
+        get => _selectedAnswerId;
+        set
+        {
+            _selectedAnswerId = value;
+            if (value.HasValue && currentQuestion != null)
+            {
+                // persist current selection immediately so Submit enabled updates reliably
+                answers[currentQuestion.Id] = value.Value;
+            }
+            else if (!value.HasValue && currentQuestion != null)
+            {
+                // if cleared, remove saved answer for current question
+                if (answers.ContainsKey(currentQuestion.Id))
+                    answers.Remove(currentQuestion.Id);
+            }
+            // trigger UI update
+            StateHasChanged();
+        }
+    }
+    private bool confirmSubmit;
+    private Dictionary<int, int> answers = new();
+
+    private double Progress => (double)(currentQuestionIndex + 1) / questions.Count * 100;
+    private bool AllQuestionsAnswered => questions != null && questions.Count > 0 && answers.Count == questions.Count;
+
+    // Allow submit when on the last question and that question has an answer selected,
+    // or when all questions are answered.
+    // private bool CanSubmit
+    // {
+    //     get
+    //     {
+    //         if (questions == null || questions.Count == 0)
+    //             return false;
+
+    //         if (answers.Count == questions.Count)
+    //             return true;
+
+    //         if on last question and it has an answer selected (either in answers or selectedAnswerId)
+    //         if (currentQuestionIndex == questions.Count - 1)
+    //         {
+    //             if (currentQuestion != null && (answers.ContainsKey(currentQuestion.Id) || selectedAnswerId.HasValue))
+    //                 return true;
+    //         }
+
+    //         return false;
+    //     }
+    // }
+
+    private bool CanSubmit =>
+    questions != null &&
+    questions.Count > 0 &&
+    answers.ContainsKey(currentQuestion.Id);
+
+    [Inject] private ApplicationDbContext DbContext { get; set; } = default!;
+    [Inject] private NavigationManager Navigation { get; set; } = default!;
+    [Inject] private ISnackbar Snackbar { get; set; } = default!;
+
+    protected override async Task OnParametersSetAsync()
+    {
+        studentExam = await DbContext.StudentExams
+            .Include(se => se.Exam)
+            .Include(se => se.StudentAnswers)
+            .FirstOrDefaultAsync(se => se.Id == StudentExamId);
+
+        if (studentExam != null)
+        {
+            if (studentExam.IsCompleted)
+            {
+                Navigation.NavigateTo($"/result/{StudentExamId}");
+                return;
+            }
+
+            questions = await DbContext.Questions
+                .Include(q => q.Answers)
+                .Where(q => q.ExamId == studentExam.ExamId)
+                .OrderBy(q => q.Order)
+                .ToListAsync();
+
+            // Load existing answers
+            foreach (var sa in studentExam.StudentAnswers)
+            {
+                answers[sa.QuestionId] = sa.SelectedAnswerId;
+            }
+
+            UpdateCurrentQuestion();
+        }
+    }
+
+    private void UpdateCurrentQuestion()
+    {
+        if (questions.Any() && currentQuestionIndex < questions.Count)
+        {
+            currentQuestion = questions[currentQuestionIndex];
+            selectedAnswerId = answers.ContainsKey(currentQuestion.Id) ? answers[currentQuestion.Id] : (int?)null;
+        }
+    }
+
+    private void NextQuestion()
+    {
+        if (selectedAnswerId.HasValue)
+        {
+            answers[currentQuestion.Id] = selectedAnswerId.Value;
+        }
+
+        if (currentQuestionIndex < questions.Count - 1)
+        {
+            currentQuestionIndex++;
+            UpdateCurrentQuestion();
+        }
+    }
+
+    private void PreviousQuestion()
+    {
+        if (selectedAnswerId.HasValue)
+        {
+            answers[currentQuestion.Id] = selectedAnswerId.Value;
+        }
+
+        if (currentQuestionIndex > 0)
+        {
+            currentQuestionIndex--;
+            UpdateCurrentQuestion();
+        }
+    }
+
+    private void SubmitExam()
+    {
+        confirmSubmit = true;
+    }
+
+    private async Task ConfirmSubmit()
+    {
+        // Save final answer
+        if (selectedAnswerId.HasValue)
+        {
+            answers[currentQuestion.Id] = selectedAnswerId.Value;
+        }
+
+        // Calculate score
+        int score = 0;
+
+        // Ensure we don't insert duplicate student answers if this is a retry/refresh
+        if (studentExam!.StudentAnswers.Any())
+        {
+            DbContext.StudentAnswers.RemoveRange(studentExam.StudentAnswers);
+        }
+
+        foreach (var q in questions)
+        {
+            if (answers.ContainsKey(q.Id))
+            {
+                var selectedAnswer = q.Answers.FirstOrDefault(a => a.Id == answers[q.Id]);
+                if (selectedAnswer?.IsCorrect == true)
+                {
+                    score++;
+                }
+
+                // Save student answer
+                var studentAnswer = new StudentAnswer
+                {
+                    StudentExamId = StudentExamId,
+                    QuestionId = q.Id,
+                    SelectedAnswerId = answers[q.Id]
+                };
+                DbContext.StudentAnswers.Add(studentAnswer);
+            }
+        }
+
+        studentExam!.Score = score;
+        studentExam.TotalQuestions = questions.Count;
+        studentExam.SubmittedAt = DateTime.UtcNow;
+
+        await DbContext.SaveChangesAsync();
+
+        Navigation.NavigateTo($"/result/{StudentExamId}");
+        Snackbar.Add("Exam submitted successfully!", Severity.Success);
+    }
+}

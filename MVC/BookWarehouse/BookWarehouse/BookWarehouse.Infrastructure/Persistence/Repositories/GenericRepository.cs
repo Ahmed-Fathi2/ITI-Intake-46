@@ -7,23 +7,9 @@ using System.Text;
 
 namespace BookWarehouse.Infrastructure.Persistence.Repositories
 {
-    public class GenericRepository<TEntity, TKey> : IGenericRepository<TEntity, TKey> where TEntity : class
+    public class GenericRepository<TEntity, TKey>(ApplicationDbContext dbContext) : IGenericRepository<TEntity, TKey> where TEntity : class
     {
-        protected readonly ApplicationDbContext _dbContext;
-
-        public GenericRepository(ApplicationDbContext dbContext)
-        {
-            _dbContext = dbContext;
-        }
-        public void Add(TEntity category)
-        {
-            _dbContext.Add(category);
-        }
-
-        public void Delete(TEntity category)
-        {
-           _dbContext.Remove(category);
-        }
+        protected readonly ApplicationDbContext _dbContext = dbContext;
 
         public async Task<IEnumerable<TEntity>> GetAllAsync()
         {
@@ -33,6 +19,17 @@ namespace BookWarehouse.Infrastructure.Persistence.Repositories
         public async Task<TEntity?> GetByIdAsync(TKey id)
         {
             return await _dbContext.Set<TEntity>().FindAsync(id);  
+        }
+
+    
+        public void Add(TEntity category)
+        {
+            _dbContext.Add(category);
+        }
+
+        public void Delete(TEntity category)
+        {
+            _dbContext.Remove(category);
         }
     }
 }

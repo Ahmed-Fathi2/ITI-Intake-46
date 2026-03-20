@@ -1,0 +1,319 @@
+@page "/admin/questions"
+@attribute [Authorize(Roles = "Admin")]
+
+<PageTitle>Manage Questions</PageTitle>
+
+<MudText Typo="Typo.h4" GutterBottom="true">Manage Questions</MudText>
+
+<MudGrid>
+    <MudItem xs="12" md="4">
+        <MudSelect T="int" Value="selectedExamId" ValueChanged="OnSelectedExamChanged" Label="Select Exam" Clearable="true">
+            @foreach (var exam in exams)
+            {
+                <MudSelectItem Value="@exam.Id">@exam.Title</MudSelectItem>
+            }
+        </MudSelect>
+    </MudItem>
+    <MudItem xs="12" md="4">
+        <MudButton Variant="Variant.Filled" Color="Color.Primary" StartIcon="@Icons.Material.Filled.Add" OnClick="OpenCreateDialog" Disabled="selectedExamId == 0">Add Question</MudButton>
+    </MudItem>
+</MudGrid>
+
+@if (selectedExamId > 0)
+{
+    <MudTable Items="@questions" Hover="true" Elevation="4" Class="mt-4">
+        <HeaderContent>
+            <MudTh>Question</MudTh>
+            <MudTh>Order</MudTh>
+            <MudTh>Answers</MudTh>
+            <MudTh>Actions</MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            <MudTd>@context.Text</MudTd>
+            <MudTd>@context.Order</MudTd>
+            <MudTd>
+                <div class="d-flex flex-wrap gap-2">
+                    @foreach (var ans in context.Answers)
+                    {
+                        <MudChip T="string" Size="Size.Small" Color="@(ans.IsCorrect ? Color.Success : Color.Default)" Variant="@(ans.IsCorrect ? Variant.Filled : Variant.Text)" Style="@(!ans.IsCorrect ? "border: 1px solid rgba(0,0,0,0.1);" : "")">
+                            @ans.Text
+                        </MudChip>
+                    }
+                </div>
+            </MudTd>
+            <MudTd>
+                <MudIconButton Icon="@Icons.Material.Filled.Edit" Size="Size.Small" OnClick="() => OpenEditDialog(context)" />
+                <MudIconButton Icon="@Icons.Material.Filled.Delete" Size="Size.Small" Color="Color.Error" OnClick="() => DeleteQuestion(context)" />
+            </MudTd>
+        </RowTemplate>
+    </MudTable>
+}
+
+<MudDialog @bind-Visible="@dialogOpen" MaxWidth="MaxWidth.Large">
+    <TitleContent>
+        <MudText Typo="Typo.h6" Class="font-weight-bold d-flex align-center">
+            <MudIcon Icon="@Icons.Material.Filled.QuestionAnswer" Class="mr-2" Color="Color.Tertiary" />
+            @(question.Id == 0 ? "Add New Question" : "Edit Question")
+        </MudText>
+    </TitleContent>
+    <DialogContent>
+        <MudForm @ref="form">
+            <MudPaper Elevation="0" Class="pa-4 mb-6" Style="background-color: rgba(var(--mud-palette-primary-rgb), 0.03); border: 1px solid rgba(var(--mud-palette-primary-rgb), 0.1); border-radius: 12px;">
+                <MudTextField @bind-Value="question.Text" Label="Question Text" Variant="Variant.Outlined" Required="true" RequiredError="Question text is required!" Lines="2" Class="mb-4 bg-transparent" />
+                <MudNumericField @bind-Value="question.Order" Label="Order" Variant="Variant.Outlined" Min="1" Required="true" RequiredError="Order is required!" Class="bg-transparent" />
+            </MudPaper>
+
+            <div class="d-flex align-center justify-space-between mb-2">
+                <MudText Typo="Typo.h6" Class="font-weight-bold d-flex align-center"><MudIcon Icon="@Icons.Material.Filled.FormatListBulleted" Class="mr-2" /> Answers</MudText>
+                @if (answers.Count < 6)
+                {
+                    <MudButton Variant="Variant.Text" Color="Color.Primary" StartIcon="@Icons.Material.Filled.Add" OnClick="AddAnswer" Class="font-weight-bold rounded-pill">Add Answer</MudButton>
+                }
+            </div>
+            
+            <MudGrid Spacing="2">
+                @for (int i = 0; i < answers.Count; i++)
+                {
+                    var index = i;
+                    <MudItem xs="12" sm="6">
+                        <MudPaper Elevation="0" Class="pa-3 d-flex flex-column h-100 transition-all" Style="@($"border-radius: 12px; border: {(answers[index].IsCorrect ? "2px solid var(--mud-palette-success)" : "1px solid rgba(0,0,0,0.1)")}; background-color: {(answers[index].IsCorrect ? "rgba(var(--mud-palette-success-rgb), 0.05)" : "transparent")};")">
+                            <MudTextField @bind-Value="answers[index].Text" Label="@($"Answer {index + 1}")" Variant="Variant.Text" Underline="false" Required="true" RequiredError="Answer text is required!" Class="mb-2 font-weight-bold" />
+                            <div class="d-flex align-center justify-space-between mt-auto">
+                                <MudSwitch T="bool" Value="answers[index].IsCorrect" ValueChanged="@((bool val) => OnAnswerCorrectChanged(index, val))" Color="Color.Success" Label="Correct Answer" />
+                                @if (answers.Count > 4)
+                                {
+                                    <MudIconButton Icon="@Icons.Material.Filled.DeleteOutline" Size="Size.Small" Color="Color.Error" OnClick="() => RemoveAnswer(index)" />
+                                }
+                            </div>
+                        </MudPaper>
+                    </MudItem>
+                }
+            </MudGrid>
+        </MudForm>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="CloseDialog" Class="rounded-pill font-weight-bold px-6">Cancel</MudButton>
+        <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="SaveQuestion" Class="rounded-pill font-weight-bold px-8" StartIcon="@Icons.Material.Filled.Save">Save Question</MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+    private List<Exam> exams = new();
+    private List<Question> questions = new();
+    private int selectedExamId;
+    private bool dialogOpen;
+    private Question question = new();
+    private List<Answer> answers = new();
+
+    [Inject] private ApplicationDbContext DbContext { get; set; } = default!;
+    [Inject] private ISnackbar Snackbar { get; set; } = default!;
+
+    protected override async Task OnInitializedAsync()
+    {
+        exams = await DbContext.Exams.Include(e => e.Questions).ToListAsync();
+    }
+
+    private async Task LoadQuestions()
+    {
+        if (selectedExamId > 0)
+        {
+            // Use AsNoTracking for display lists to prevent tracker issues
+            questions = await DbContext.Questions
+                .Include(q => q.Answers)
+                .Where(q => q.ExamId == selectedExamId)
+                .OrderBy(q => q.Order)
+                .AsNoTracking()
+                .ToListAsync();
+        }
+        else
+        {
+            questions = new List<Question>();
+        }
+    }
+
+    private async Task OnSelectedExamChanged(int value)
+    {
+        selectedExamId = value;
+        await LoadQuestions();
+        StateHasChanged();
+    }
+
+    private void OpenCreateDialog()
+    {
+        question = new Question { ExamId = selectedExamId };
+        answers = new List<Answer>
+        {
+            new Answer(),
+            new Answer(),
+            new Answer(),
+            new Answer()
+        };
+        dialogOpen = true;
+    }
+
+    private void OpenEditDialog(Question q)
+    {
+        question = new Question
+        {
+            Id = q.Id,
+            Text = q.Text,
+            ExamId = q.ExamId,
+            Order = q.Order
+        };
+        // Clone answers to avoid direct modification of tracked items
+        answers = q.Answers.Select(a => new Answer
+        {
+            Id = a.Id,
+            Text = a.Text,
+            IsCorrect = a.IsCorrect,
+            QuestionId = a.QuestionId
+        }).ToList();
+        dialogOpen = true;
+    }
+
+    private void CloseDialog()
+    {
+        dialogOpen = false;
+        form?.ResetAsync();
+    }
+
+    private MudForm form = default!;
+
+    private void AddAnswer()
+    {
+        answers.Add(new Answer());
+    }
+
+    private void RemoveAnswer(int index)
+    {
+        if (answers.Count > 4)
+        {
+            answers.RemoveAt(index);
+        }
+    }
+
+    private void OnAnswerCorrectChanged(int index, bool val)
+    {
+        answers[index].IsCorrect = val;
+        if (val)
+        {
+            // Turn off all other answers if this one is selected as correct
+            for (int i = 0; i < answers.Count; i++)
+            {
+                if (i != index) answers[i].IsCorrect = false;
+            }
+        }
+    }
+
+    private async Task SaveQuestion()
+    {
+        await form.ValidateAsync();
+        if (!form.IsValid) return;
+
+        if (answers.Count(a => a.IsCorrect) != 1)
+        {
+            Snackbar.Add("You must select exactly one correct answer before saving.", Severity.Warning);
+            return;
+        }
+
+        try
+        {
+            if (question.Id == 0)
+            {
+                question.Text = question.Text ?? "";
+                // Assign answers directly to the navigation property for atomicity
+                foreach (var ans in answers)
+                {
+                    ans.Text = ans.Text ?? "";
+                    ans.QuestionId = 0; // Ensure ID matches behavior
+                    question.Answers.Add(ans);
+                }
+                DbContext.Questions.Add(question);
+            }
+            else
+            {
+                var existing = await DbContext.Questions.Include(q => q.Answers).FirstOrDefaultAsync(q => q.Id == question.Id);
+                if (existing != null)
+                {
+                    existing.Text = question.Text ?? "";
+                    existing.Order = question.Order;
+
+                    // Identify answers to remove
+                    var incomingIds = answers.Where(a => a.Id > 0).Select(a => a.Id).ToList();
+                    var toDelete = existing.Answers.Where(ea => !incomingIds.Contains(ea.Id)).ToList();
+                    foreach (var d in toDelete)
+                        DbContext.Answers.Remove(d);
+
+                    // Add new answers / update existing
+                    foreach (var ans in answers)
+                    {
+                        if (ans.Id == 0)
+                        {
+                            ans.Text = ans.Text ?? "";
+                            ans.QuestionId = existing.Id;
+                            DbContext.Answers.Add(ans);
+                        }
+                        else
+                        {
+                            var existingAns = existing.Answers.FirstOrDefault(ea => ea.Id == ans.Id);
+                            if (existingAns != null)
+                            {
+                                existingAns.Text = ans.Text ?? "";
+                                existingAns.IsCorrect = ans.IsCorrect;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            await DbContext.SaveChangesAsync();
+            await LoadQuestions();
+            // Also refresh exam list to keep counts updated
+            exams = await DbContext.Exams.AsNoTracking().ToListAsync();
+            
+            CloseDialog();
+            Snackbar.Add("Question saved successfully", Severity.Success);
+        }
+        catch (Exception ex)
+        {
+            DbContext.ChangeTracker.Clear();
+            string msg = ex.InnerException?.Message ?? ex.Message;
+            if (msg.Contains("REFERENCE constraint") || msg.Contains("FOREIGN KEY constraint"))
+            {
+                Snackbar.Add("Cannot save changes because some answers are already selected by students.", Severity.Error);
+            }
+            else
+            {
+                Snackbar.Add("Failed to save: " + msg, Severity.Error);
+            }
+        }
+    }
+
+    private async Task DeleteQuestion(Question q)
+    {
+        try
+        {
+            var existing = await DbContext.Questions.FindAsync(q.Id);
+            if (existing != null)
+            {
+                DbContext.Questions.Remove(existing);
+                await DbContext.SaveChangesAsync();
+                await LoadQuestions();
+                Snackbar.Add("Question deleted", Severity.Info);
+            }
+        }
+        catch (Exception ex)
+        {
+            DbContext.ChangeTracker.Clear();
+            string msg = ex.InnerException?.Message ?? ex.Message;
+            if (msg.Contains("REFERENCE constraint") || msg.Contains("FOREIGN KEY constraint"))
+            {
+                Snackbar.Add("Cannot delete question because it is referenced in an existing student exam.", Severity.Error);
+            }
+            else
+            {
+                Snackbar.Add("Failed to delete: " + msg, Severity.Error);
+            }
+        }
+    }
+}

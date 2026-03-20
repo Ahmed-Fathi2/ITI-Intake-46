@@ -1,0 +1,99 @@
+﻿@page "/admin/dashboard"
+@attribute [Authorize(Roles = "Admin")]
+
+<PageTitle>Admin Dashboard</PageTitle>
+
+<MudText Typo="Typo.h4" GutterBottom="true">Admin Dashboard</MudText>
+
+<MudGrid>
+    <MudItem xs="12" sm="6" md="3">
+        <MudCard Elevation="4">
+            <MudCardContent Class="d-flex align-center">
+                <MudIcon Icon="@Icons.Material.Filled.Subject" Size="Size.Large" Color="Color.Primary" Class="mr-3" />
+                <div>
+                    <MudText Typo="Typo.h6">Subjects</MudText>
+                    <MudText Typo="Typo.body2" Color="Color.Secondary">@subjectsCount subjects</MudText>
+                </div>
+            </MudCardContent>
+        </MudCard>
+    </MudItem>
+
+    <MudItem xs="12" sm="6" md="3">
+        <MudCard Elevation="4">
+            <MudCardContent Class="d-flex align-center">
+                <MudIcon Icon="@Icons.Material.Filled.Assignment" Size="Size.Large" Color="Color.Secondary" Class="mr-3" />
+                <div>
+                    <MudText Typo="Typo.h6">Exams</MudText>
+                    <MudText Typo="Typo.body2" Color="Color.Secondary">@examsCount exams</MudText>
+                </div>
+            </MudCardContent>
+        </MudCard>
+    </MudItem>
+
+    <MudItem xs="12" sm="6" md="3">
+        <MudCard Elevation="4">
+            <MudCardContent Class="d-flex align-center">
+                <MudIcon Icon="@Icons.Material.Filled.QuestionAnswer" Size="Size.Large" Color="Color.Tertiary" Class="mr-3" />
+                <div>
+                    <MudText Typo="Typo.h6">Questions</MudText>
+                    <MudText Typo="Typo.body2" Color="Color.Secondary">@questionsCount questions</MudText>
+                </div>
+            </MudCardContent>
+        </MudCard>
+    </MudItem>
+
+    <MudItem xs="12" sm="6" md="3">
+        <MudCard Elevation="4">
+            <MudCardContent Class="d-flex align-center">
+                <MudIcon Icon="@Icons.Material.Filled.People" Size="Size.Large" Color="Color.Info" Class="mr-3" />
+                <div>
+                    <MudText Typo="Typo.h6">Students</MudText>
+                    <MudText Typo="Typo.body2" Color="Color.Secondary">@studentsCount students</MudText>
+                </div>
+            </MudCardContent>
+        </MudCard>
+    </MudItem>
+</MudGrid>
+
+<MudText Typo="Typo.h5" Class="mt-4" GutterBottom="true">Recent Activity</MudText>
+
+<MudTable Items="@recentExams" Hover="true" Elevation="4">
+    <HeaderContent>
+        <MudTh>Student</MudTh>
+        <MudTh>Exam</MudTh>
+        <MudTh>Score</MudTh>
+        <MudTh>Submitted At</MudTh>
+    </HeaderContent>
+    <RowTemplate>
+        <MudTd>@context.Student?.UserName</MudTd>
+        <MudTd>@context.Exam?.Title</MudTd>
+        <MudTd>@context.Score / @context.TotalQuestions</MudTd>
+        <MudTd>@context.SubmittedAt?.ToString("g")</MudTd>
+    </RowTemplate>
+</MudTable>
+
+@code {
+    private int subjectsCount;
+    private int examsCount;
+    private int questionsCount;
+    private int studentsCount;
+    private List<StudentExam> recentExams = new();
+
+    [Inject] private ApplicationDbContext DbContext { get; set; } = default!;
+
+    protected override async Task OnInitializedAsync()
+    {
+        subjectsCount = await DbContext.Subjects.CountAsync();
+        examsCount = await DbContext.Exams.CountAsync();
+        questionsCount = await DbContext.Questions.CountAsync();
+        studentsCount = await DbContext.Users.CountAsync();
+
+        recentExams = await DbContext.StudentExams
+            .Include(se => se.Student)
+            .Include(se => se.Exam)
+            .Where(se => se.SubmittedAt.HasValue)
+            .OrderByDescending(se => se.SubmittedAt)
+            .Take(10)
+            .ToListAsync();
+    }
+}

@@ -4,6 +4,8 @@ namespace ExamSystem.Models
 {
     public class ApplicationUser : IdentityUser
     {
-        // Additional profile properties can be added here for students
+        public string? FirstName { get; set; }
+        public string? LastName { get; set; }
+
     }
 }

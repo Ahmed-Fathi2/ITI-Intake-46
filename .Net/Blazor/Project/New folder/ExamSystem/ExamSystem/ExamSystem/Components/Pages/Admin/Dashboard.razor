@@ -1,0 +1,124 @@
+@page "/admin/dashboard"
+@attribute [Authorize(Roles = "Admin")]
+
+<PageTitle>Admin Dashboard</PageTitle>
+
+<div class="d-flex align-center justify-space-between mb-6">
+    <div>
+        <MudText Typo="Typo.h4" Class="font-weight-bold">Admin Dashboard</MudText>
+        <MudText Typo="Typo.body2" Color="Color.Secondary">Overview of your exam system.</MudText>
+    </div>
+</div>
+
+<MudGrid Class="mb-8">
+    <MudItem xs="12" sm="6" md="3">
+        <MudCard Elevation="3" Class="rounded-xl h-100" Style="background: linear-gradient(135deg, var(--mud-palette-primary) 0%, #818cf8 100%); color: white;">
+            <MudCardContent Class="d-flex align-center justify-space-between h-100 pa-6">
+                <div>
+                    <MudText Typo="Typo.subtitle2" Class="text-uppercase mb-1" Style="opacity: 0.8; letter-spacing: 1px;">Subjects</MudText>
+                    <MudText Typo="Typo.h3" Class="font-weight-bold">@subjectsCount</MudText>
+                </div>
+                <MudIcon Icon="@Icons.Material.Filled.Subject" Style="font-size: 3rem; opacity: 0.8;" />
+            </MudCardContent>
+        </MudCard>
+    </MudItem>
+
+    <MudItem xs="12" sm="6" md="3">
+        <MudCard Elevation="3" Class="rounded-xl h-100" Style="background: linear-gradient(135deg, var(--mud-palette-secondary) 0%, #f472b6 100%); color: white;">
+            <MudCardContent Class="d-flex align-center justify-space-between h-100 pa-6">
+                <div>
+                    <MudText Typo="Typo.subtitle2" Class="text-uppercase mb-1" Style="opacity: 0.8; letter-spacing: 1px;">Exams</MudText>
+                    <MudText Typo="Typo.h3" Class="font-weight-bold">@examsCount</MudText>
+                </div>
+                <MudIcon Icon="@Icons.Material.Filled.Assignment" Style="font-size: 3rem; opacity: 0.8;" />
+            </MudCardContent>
+        </MudCard>
+    </MudItem>
+
+    <MudItem xs="12" sm="6" md="3">
+        <MudCard Elevation="3" Class="rounded-xl h-100" Style="background: linear-gradient(135deg, var(--mud-palette-tertiary, #10b981) 0%, #34d399 100%); color: white;">
+            <MudCardContent Class="d-flex align-center justify-space-between h-100 pa-6">
+                <div>
+                    <MudText Typo="Typo.subtitle2" Class="text-uppercase mb-1" Style="opacity: 0.8; letter-spacing: 1px;">Questions</MudText>
+                    <MudText Typo="Typo.h3" Class="font-weight-bold">@questionsCount</MudText>
+                </div>
+                <MudIcon Icon="@Icons.Material.Filled.QuestionAnswer" Style="font-size: 3rem; opacity: 0.8;" />
+            </MudCardContent>
+        </MudCard>
+    </MudItem>
+
+    <MudItem xs="12" sm="6" md="3">
+        <MudCard Elevation="3" Class="rounded-xl h-100" Style="background: linear-gradient(135deg, var(--mud-palette-info) 0%, #38bdf8 100%); color: white;">
+            <MudCardContent Class="d-flex align-center justify-space-between h-100 pa-6">
+                <div>
+                    <MudText Typo="Typo.subtitle2" Class="text-uppercase mb-1" Style="opacity: 0.8; letter-spacing: 1px;">Students</MudText>
+                    <MudText Typo="Typo.h3" Class="font-weight-bold">@studentsCount</MudText>
+                </div>
+                <MudIcon Icon="@Icons.Material.Filled.People" Style="font-size: 3rem; opacity: 0.8;" />
+            </MudCardContent>
+        </MudCard>
+    </MudItem>
+</MudGrid>
+
+<MudPaper Elevation="3" Class="rounded-xl pa-0 overflow-hidden">
+    <div class="pa-6 border-b-1 mud-border-lines-default">
+        <MudText Typo="Typo.h6" Class="font-weight-bold">Recent Activity</MudText>
+    </div>
+    
+    <MudTable Items="@recentExams" Hover="true" Elevation="0" Class="rounded-0">
+        <HeaderContent>
+            <MudTh>Student</MudTh>
+            <MudTh>Exam</MudTh>
+            <MudTh>Score</MudTh>
+            <MudTh>Percentage</MudTh>
+            <MudTh>Submitted At</MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            <MudTd>
+                <div class="d-flex align-center">
+                    <MudAvatar Size="Size.Small" Color="Color.Primary" Variant="Variant.Filled" Class="mr-3">
+                        @(context.Student?.UserName?.Substring(0,1).ToUpper() ?? "?")
+                    </MudAvatar>
+                    <MudText Typo="Typo.body2" Class="font-weight-bold">@context.Student?.UserName</MudText>
+                </div>
+            </MudTd>
+            <MudTd>@context.Exam?.Title</MudTd>
+            <MudTd>
+                <MudText Typo="Typo.body2" Class="font-weight-bold">@context.Score / @context.TotalQuestions</MudText>
+            </MudTd>
+            <MudTd>
+                <MudChip T="string" Color="@(context.Percentage >= 50 ? Color.Success : Color.Error)" Size="Size.Small" Variant="Variant.Text" Class="font-weight-bold pl-0 ml-n1">
+                    @context.Percentage.ToString("F1")%
+                </MudChip>
+            </MudTd>
+            <MudTd>@context.SubmittedAt?.ToString("MMM dd, yyyy HH:mm")</MudTd>
+        </RowTemplate>
+    </MudTable>
+</MudPaper>
+
+@code {
+    private int subjectsCount;
+    private int examsCount;
+    private int questionsCount;
+    private int studentsCount;
+    private List<StudentExam> recentExams = new();
+
+    [Inject] private ApplicationDbContext DbContext { get; set; } = default!;
+
+    protected override async Task OnInitializedAsync()
+    {
+        subjectsCount = await DbContext.Subjects.CountAsync();
+        examsCount = await DbContext.Exams.CountAsync();
+        questionsCount = await DbContext.Questions.CountAsync();
+        var studentRoleId = await DbContext.Roles.Where(r => r.Name == "Student").Select(r => r.Id).FirstOrDefaultAsync();
+        studentsCount = await DbContext.UserRoles.CountAsync(ur => ur.RoleId == studentRoleId);
+
+        recentExams = await DbContext.StudentExams
+            .Include(se => se.Student)
+            .Include(se => se.Exam)
+            .Where(se => se.SubmittedAt.HasValue)
+            .OrderByDescending(se => se.SubmittedAt)
+            .Take(10)
+            .ToListAsync();
+    }
+}

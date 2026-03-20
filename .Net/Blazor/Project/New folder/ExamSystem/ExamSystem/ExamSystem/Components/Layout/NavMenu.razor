@@ -1,0 +1,56 @@
+@implements IDisposable
+
+@inject NavigationManager NavigationManager
+
+<MudNavMenu Class="pt-4 px-2">
+    <MudNavLink Href="/" Icon="@Icons.Material.Filled.Home" Match="NavLinkMatch.All" Class="rounded-lg mb-1">Home</MudNavLink>
+
+    <AuthorizeView Roles="Student">
+        <Authorized>
+            <MudNavGroup Title="Student" Icon="@Icons.Material.Filled.School" Expanded="true" Class="rounded-lg mb-1">
+                <MudNavLink Href="/subjects" Icon="@Icons.Material.Filled.Subject" Class="rounded-lg mb-1">Subjects</MudNavLink>
+                <MudNavLink Href="/my-exams" Icon="@Icons.Material.Filled.Assignment" Class="rounded-lg mb-1">My Exams</MudNavLink>
+            </MudNavGroup>
+        </Authorized>
+    </AuthorizeView>
+
+    <AuthorizeView Roles="Admin">
+        <Authorized>
+            <MudNavGroup Title="Admin" Icon="@Icons.Material.Filled.AdminPanelSettings" Expanded="true" Class="rounded-lg mb-1">
+                <MudNavLink Href="/admin/dashboard" Icon="@Icons.Material.Filled.Dashboard" Class="rounded-lg mb-1">Dashboard</MudNavLink>
+                <MudNavLink Href="/admin/subjects" Icon="@Icons.Material.Filled.Subject" Class="rounded-lg mb-1">Manage Subjects</MudNavLink>
+                <MudNavLink Href="/admin/exams" Icon="@Icons.Material.Filled.Assignment" Class="rounded-lg mb-1">Manage Exams</MudNavLink>
+                <MudNavLink Href="/admin/questions" Icon="@Icons.Material.Filled.QuestionAnswer" Class="rounded-lg mb-1">Manage Questions</MudNavLink>
+            </MudNavGroup>
+        </Authorized>
+    </AuthorizeView>
+
+    <AuthorizeView>
+        <NotAuthorized>
+            <MudNavLink Href="/Account/Login" Icon="@Icons.Material.Filled.Login" Class="rounded-lg mb-1">Login</MudNavLink>
+            <MudNavLink Href="/Account/Register" Icon="@Icons.Material.Filled.PersonAdd" Class="rounded-lg mb-1">Register</MudNavLink>
+        </NotAuthorized>
+    </AuthorizeView>
+</MudNavMenu>
+
+@code {
+    private string? currentUrl;
+
+    protected override void OnInitialized()
+    {
+        currentUrl = NavigationManager.ToBaseRelativePath(NavigationManager.Uri);
+        NavigationManager.LocationChanged += OnLocationChanged;
+    }
+
+    private void OnLocationChanged(object? sender, LocationChangedEventArgs e)
+    {
+        currentUrl = NavigationManager.ToBaseRelativePath(e.Location);
+        StateHasChanged();
+    }
+
+    public void Dispose()
+    {
+        NavigationManager.LocationChanged -= OnLocationChanged;
+    }
+}
+

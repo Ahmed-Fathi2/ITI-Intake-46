@@ -1,0 +1,313 @@
+@page "/"
+@using Microsoft.AspNetCore.Identity
+@using Microsoft.EntityFrameworkCore
+@using ExamSystem.Data
+
+<PageTitle>Exam System - Home</PageTitle>
+
+<AuthorizeView>
+    <NotAuthorized>
+        <!-- GUEST VIEW -->
+        <MudContainer MaxWidth="MaxWidth.Large" Class="pt-16 pb-16 text-center animate-fade-in">
+            <MudText Typo="Typo.h1" Class="font-weight-bold mb-6 section-title">
+                Elevate Your Assessment
+            </MudText>
+            <MudText Typo="Typo.h5" Class="mb-12 mx-auto" Style="max-width: 600px; color: var(--mud-palette-text-secondary); line-height: 1.6;">
+                The most elegant, fastest, and reliable way to conduct and take exams online. 
+                Experience a modern platform built for the future of education.
+            </MudText>
+
+            <div class="d-flex justify-center gap-4 align-center mb-16">
+                <MudButton Href="/Account/Register" Variant="Variant.Filled" Color="Color.Primary" Size="Size.Large" Class="rounded-pill px-8 py-3 font-weight-bold shadow-primary">
+                    Get Started Free
+                </MudButton>
+                <MudButton Href="/Account/Login" Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Large" Class="rounded-pill px-8 py-3 font-weight-bold">
+                    Sign In
+                </MudButton>
+            </div>
+
+            <MudGrid Class="justify-center mt-8">
+                <MudItem xs="4" sm="3" md="2">
+                    <div class="floating-icon icon-delay-1">
+                        <MudPaper Elevation="0" Class="pa-6 rounded-xl rotate-card-1 d-flex justify-center align-center glass-card">
+                            <MudIcon Icon="@Icons.Material.Filled.MenuBook" Style="font-size: 3.5rem; color: var(--mud-palette-primary);" />
+                        </MudPaper>
+                    </div>
+                </MudItem>
+                <MudItem xs="4" sm="3" md="2" Class="mt-8">
+                    <div class="floating-icon">
+                        <MudPaper Elevation="0" Class="pa-6 rounded-xl hover-float d-flex justify-center align-center glass-card active-card">
+                            <MudIcon Icon="@Icons.Material.Filled.Timer" Style="font-size: 3.5rem; color: var(--mud-palette-secondary);" />
+                        </MudPaper>
+                    </div>
+                </MudItem>
+                <MudItem xs="4" sm="3" md="2">
+                    <div class="floating-icon icon-delay-2">
+                        <MudPaper Elevation="0" Class="pa-6 rounded-xl rotate-card-2 d-flex justify-center align-center glass-card">
+                            <MudIcon Icon="@Icons.Material.Filled.AutoGraph" Style="font-size: 3.5rem; color: var(--mud-palette-tertiary);" />
+                        </MudPaper>
+                    </div>
+                </MudItem>
+            </MudGrid>
+        </MudContainer>
+    </NotAuthorized>
+    <Authorized>
+        @if (context.User.IsInRole("Admin"))
+        {
+            <!-- ADMIN VIEW -->
+            <MudContainer MaxWidth="MaxWidth.Large" Class="pt-10 pb-16 animate-fade-up">
+                <div class="mb-10 d-flex flex-column flex-sm-row justify-space-between align-start align-sm-center">
+                    <div>
+                        <MudText Typo="Typo.h3" Class="font-weight-bold mb-1 header-gradient">Admin Settings</MudText>
+                        <MudText Typo="Typo.subtitle1" Color="Color.Secondary">Manage your platform's content and track activity effortlessly.</MudText>
+                    </div>
+                    <MudButton Href="/admin/dashboard" Variant="Variant.Filled" Color="Color.Primary" Class="rounded-pill px-8 py-2 mt-4 mt-sm-0 font-weight-bold shadow-primary" StartIcon="@Icons.Material.Filled.Dashboard">
+                        Full Dashboard
+                    </MudButton>
+                </div>
+
+                <MudGrid Spacing="4">
+                    <MudItem xs="12" sm="6" md="3">
+                        <MudCard Elevation="0" Class="rounded-xl admin-quick-card primary-border" @onclick='() => Navigation.NavigateTo("/admin/subjects")'>
+                            <MudCardContent Class="pa-8 text-center">
+                                <div class="icon-blob mb-4 mx-auto bg-primary-light">
+                                    <MudIcon Icon="@Icons.Material.Filled.Category" Color="Color.Primary" Size="Size.Large" />
+                                </div>
+                                <MudText Typo="Typo.h3" Class="font-weight-bold mb-1" Color="Color.Primary">@totalSubjects</MudText>
+                                <MudText Typo="Typo.button" Class="font-weight-bold text-uppercase opacity-60">Subjects</MudText>
+                            </MudCardContent>
+                        </MudCard>
+                    </MudItem>
+
+                    <MudItem xs="12" sm="6" md="3">
+                        <MudCard Elevation="0" Class="rounded-xl admin-quick-card secondary-border" @onclick='() => Navigation.NavigateTo("/admin/exams")'>
+                            <MudCardContent Class="pa-8 text-center">
+                                <div class="icon-blob mb-4 mx-auto bg-secondary-light">
+                                    <MudIcon Icon="@Icons.Material.Filled.Assignment" Color="Color.Secondary" Size="Size.Large" />
+                                </div>
+                                <MudText Typo="Typo.h3" Class="font-weight-bold mb-1" Color="Color.Secondary">@totalExams</MudText>
+                                <MudText Typo="Typo.button" Class="font-weight-bold text-uppercase opacity-60">Exams</MudText>
+                            </MudCardContent>
+                        </MudCard>
+                    </MudItem>
+
+                    <MudItem xs="12" sm="6" md="3">
+                        <MudCard Elevation="0" Class="rounded-xl admin-quick-card tertiary-border" @onclick='() => Navigation.NavigateTo("/admin/questions")'>
+                            <MudCardContent Class="pa-8 text-center">
+                                <div class="icon-blob mb-4 mx-auto bg-tertiary-light">
+                                    <MudIcon Icon="@Icons.Material.Filled.Quiz" Color="Color.Tertiary" Size="Size.Large" />
+                                </div>
+                                <MudText Typo="Typo.h3" Class="font-weight-bold mb-1" Color="Color.Tertiary">@totalQuestions</MudText>
+                                <MudText Typo="Typo.button" Class="font-weight-bold text-uppercase opacity-60">Questions</MudText>
+                            </MudCardContent>
+                        </MudCard>
+                    </MudItem>
+
+                    <MudItem xs="12" sm="6" md="3">
+                        <MudCard Elevation="0" Class="rounded-xl admin-quick-card success-border">
+                            <MudCardContent Class="pa-8 text-center">
+                                <div class="icon-blob mb-4 mx-auto bg-success-light">
+                                    <MudIcon Icon="@Icons.Material.Filled.People" Color="Color.Success" Size="Size.Large" />
+                                </div>
+                                <MudText Typo="Typo.h3" Class="font-weight-bold mb-1" Color="Color.Success">@totalStudents</MudText>
+                                <MudText Typo="Typo.button" Class="font-weight-bold text-uppercase opacity-60">Students</MudText>
+                            </MudCardContent>
+                        </MudCard>
+                    </MudItem>
+                </MudGrid>
+            </MudContainer>
+        }
+        else
+        {
+            <!-- STUDENT VIEW -->
+            <MudContainer MaxWidth="MaxWidth.Large" Class="pt-10 pb-16 animate-fade-up">
+                <div class="d-flex flex-column align-center text-center mb-12">
+                    <div class="avatar-glow mb-4">
+                        <MudAvatar Color="Color.Primary" Size="Size.Large" Style="width: 80px; height: 80px; font-size: 2.5rem; font-weight: bold; border: 4px solid white; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                            @(context.User.Identity?.Name?.FirstOrDefault().ToString().ToUpper() ?? "S")
+                        </MudAvatar>
+                    </div>
+                    <MudText Typo="Typo.h3" Class="font-weight-bold mb-2 header-gradient">Welcome Back, @(context.User.Identity?.Name?.Split('@')[0] ?? "Student")</MudText>
+                    <MudText Typo="Typo.h6" Color="Color.Secondary" Style="font-weight: 400; opacity: 0.8;">Explore and challenge yourself with our curated exams.</MudText>
+                </div>
+
+                @if (subjects.Any())
+                {
+                    <MudGrid Spacing="4">
+                        @foreach (var subject in subjects)
+                        {
+                            <MudItem xs="12" sm="6" md="4">
+                                <MudCard Elevation="0" Class="h-100 rounded-xl modern-subject-card" @onclick="() => NavigateToExams(subject.Id)">
+                                    <MudCardContent Class="pa-8 d-flex flex-column h-100">
+                                        <div class="d-flex justify-space-between align-start mb-6">
+                                            <div class="icon-blob subject-blob">
+                                                <MudIcon Icon="@Icons.Material.Filled.LibraryBooks" Class="subject-icon" />
+                                            </div>
+                                            <MudChip T="string" Color="Color.Tertiary" Variant="Variant.Text" Size="Size.Small" Class="font-weight-bold px-4 bg-tertiary-light">
+                                                @subject.Exams.Count Exams
+                                            </MudChip>
+                                        </div>
+                                        <MudText Typo="Typo.h5" Class="font-weight-bold mb-3">@subject.Name</MudText>
+                                        <MudText Typo="Typo.body2" Class="mb-8 opacity-70 line-clamp-2">
+                                            @(string.IsNullOrWhiteSpace(subject.Description) ? "Test your knowledge and skills in this comprehensive subject curriculum." : subject.Description)
+                                        </MudText>
+                                        <div class="mt-auto d-flex align-center justify-space-between">
+                                            <MudText Typo="Typo.button" Color="Color.Primary" Class="font-weight-bold">View Exams</MudText>
+                                            <div class="arrow-circle">
+                                                <MudIcon Icon="@Icons.Material.Filled.ArrowForward" Size="Size.Small" />
+                                            </div>
+                                        </div>
+                                    </MudCardContent>
+                                </MudCard>
+                            </MudItem>
+                        }
+                    </MudGrid>
+                }
+            </MudContainer>
+        }
+    </Authorized>
+</AuthorizeView>
+
+<style>
+    .section-title {
+        background: linear-gradient(90deg, var(--mud-palette-primary) 0%, var(--mud-palette-tertiary) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: -2px;
+    }
+
+    .header-gradient {
+        background: linear-gradient(90deg, var(--mud-palette-text-primary) 0%, var(--mud-palette-primary) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .shadow-primary { box-shadow: 0 10px 25px rgba(var(--mud-palette-primary-rgb), 0.3) !important; }
+
+    .glass-card {
+        background: rgba(var(--mud-palette-surface-rgb), 0.7) !important;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.2) !important;
+    }
+    
+    .active-card {
+        background: white !important;
+        box-shadow: 0 30px 60px rgba(0,0,0,0.1) !important;
+    }
+
+    .rotate-card-1 { transform: rotate(-10deg) translateY(20px); }
+    .rotate-card-2 { transform: rotate(10deg) translateY(20px); }
+    .hover-float { transform: translateY(-10px); z-index: 2; }
+
+    .admin-quick-card {
+        border-radius: 24px !important;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        cursor: pointer;
+        background: var(--mud-palette-surface);
+    }
+    .admin-quick-card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.05) !important; }
+    
+    .primary-border { border: 1px solid rgba(var(--mud-palette-primary-rgb), 0.1) !important; }
+    .secondary-border { border: 1px solid rgba(var(--mud-palette-secondary-rgb), 0.1) !important; }
+    .tertiary-border { border: 1px solid rgba(var(--mud-palette-tertiary-rgb), 0.1) !important; }
+    .success-border { border: 1px solid rgba(var(--mud-palette-success-rgb), 0.1) !important; }
+
+    .icon-blob {
+        width: 64px;
+        height: 64px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.4s ease;
+    }
+    .bg-primary-light { background: rgba(var(--mud-palette-primary-rgb), 0.1); }
+    .bg-secondary-light { background: rgba(var(--mud-palette-secondary-rgb), 0.1); }
+    .bg-tertiary-light { background: rgba(var(--mud-palette-tertiary-rgb), 0.1); }
+    .bg-success-light { background: rgba(var(--mud-palette-success-rgb), 0.1); }
+
+    .modern-subject-card {
+        border-radius: 28px !important;
+        background: var(--mud-palette-surface);
+        border: 1px solid rgba(0,0,0,0.05) !important;
+        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        cursor: pointer;
+    }
+    .modern-subject-card:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 25px 50px rgba(var(--mud-palette-primary-rgb), 0.08) !important;
+        border-color: rgba(var(--mud-palette-primary-rgb), 0.2) !important;
+    }
+
+    .subject-blob {
+        background: rgba(var(--mud-palette-background-grey-rgb), 0.5);
+        transition: all 0.4s ease;
+    }
+    .modern-subject-card:hover .subject-blob {
+        background: var(--mud-palette-primary);
+        transform: rotate(10deg) scale(1.1);
+    }
+    .modern-subject-card:hover .subject-icon { color: white; }
+
+    .arrow-circle {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: rgba(var(--mud-palette-primary-rgb), 0.05);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--mud-palette-primary);
+        transition: all 0.3s ease;
+    }
+    .modern-subject-card:hover .arrow-circle { background: var(--mud-palette-primary); color: white; }
+
+    /* Animations */
+    .floating-icon { animation: float 6s ease-in-out infinite; }
+    .icon-delay-1 { animation-delay: 1.5s; }
+    .icon-delay-2 { animation-delay: 3s; }
+    @@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+
+    .animate-fade-up { animation: fadeUp 0.8s ease-out forwards; }
+    .animate-fade-in { animation: fadeIn 1s ease-out forwards; }
+    @@keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    @@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+    .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .opacity-60 { opacity: 0.6; }
+    .opacity-70 { opacity: 0.7; }
+</style>
+
+@code {
+    private List<Subject> subjects = new();
+    private int totalSubjects, totalExams, totalQuestions, totalStudents;
+
+    [Inject] private ApplicationDbContext DbContext { get; set; } = default!;
+    [Inject] private AuthenticationStateProvider AuthState { get; set; } = default!;
+    [Inject] private NavigationManager Navigation { get; set; } = default!;
+    [Inject] private UserManager<ApplicationUser> UserManager { get; set; } = default!;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await AuthState.GetAuthenticationStateAsync();
+        var user = authState.User;
+
+        if (user.Identity?.IsAuthenticated == true)
+        {
+            if (user.IsInRole("Admin"))
+            {
+                totalSubjects = await DbContext.Subjects.CountAsync();
+                totalExams = await DbContext.Exams.CountAsync();
+                totalQuestions = await DbContext.Questions.CountAsync();
+                var studentUsers = await UserManager.GetUsersInRoleAsync("Student");
+                totalStudents = studentUsers.Count;
+            }
+            else
+            {
+                subjects = await DbContext.Subjects.Include(s => s.Exams).ToListAsync();
+            }
+        }
+    }
+
+    private void NavigateToExams(int subjectId) => Navigation.NavigateTo($"/exams/{subjectId}");
+}
