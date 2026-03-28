@@ -1,0 +1,154 @@
+====================================4=====================================================
+View
+|
+Model Prop 
+الداتا لي بتتبعت من الباك الي الفرونت بتتحط فيها 
+
+View:RazorPage Class 
+ف انت بتورث ال 
+--> model 
+من الكلاس دة بقي
+
+Class  RazorPage <T>
+{
+Public T Model
+}
+
+لذلك لو انت عملت موديل من غير من تحدد النوع 
+-->> Lossly Type ---->>>  هنا النوع بيتحدد ف الرن تيم و الديناميك اصلا دي وظيفتها بتحدد النوع ف الرن تيم
+لذلك ميكروسفت بتعمل 
+Class  RazorPage <dynmaic>
+{
+Public dynamic Model
+}
+-->> strong Type 
+@model int 
+View:RazorPage<int>
+{
+Public int Model
+Public ViewDataDectionary ViewData --- Note
+Public dynamiv ViewBag --- Note
+}
+
+
+=========================================================================================
+Return View()
+Views ---->>> ViewFolder with ControllerName --->> Has view With ActionName
+if NotFound --->> View --->> Shared
+
+=========================================================================================
+OnConfigring 
+--------------
+1-AppDbContext() ctor --->>>inheritance --->> 2-Dbcontxect() ctor :this()-->3- OverLoad Ctor(options) 
+4-OnConfigring --->>call with every instance created
+
+
+Service Provider [DI]
+----------------------
+5-IOC Container --->>Create AppDbContext--------->>>> Go To Overload ctor of APP Dbcontext(options):Base(options)
+
+=========================================5================================================
+
+طرق بعت الداتا من الباك الي هو الكنترولر الي الفرونت الي هو الفيو
+
+Controller ------------->>>>> View
+
+=========================================================================================
+1-ViewData
+-------------
+YourController:Controller
+	inherate --->>> ViewDataDectionary[Class] :IDectionary<string,object>
+			  --->> Named [[[[ViewData]]]]]]
+
+When You Make Return View(Student)  
+ --->>> AutoMatically Send ViewData Dectionary To View  ------>>>> هااااااااااااااااااااامممممممممممممممم
+So View Has -->> 1- Model=student
+		 2- ViewData<string,object> Dectionary
+
+
+Ex:
+var student = db.student.find(id);
+ViewData["msg"]="hello World"
+ViewData["Age"]=10
+
+return View(student)
+
+that mean controller pass 3 params to view one to Model and 2 in viewData
+
+
+ViewData in controller inhert form Controller 
+ViewData in View inhert form RazorPage
+
+
+Data passed From :
+	ViewData in controller ---------->>> ViewData in View
+
+problems of ViewData:
+=========================
+1- انك وانت بتسخدمها ف الفيو لازم تكتب الكي مظبوط الي هو اصلا ---->> Magic String 
+وبالتالي احتمالية انك تغلط فية كبيرة
+ 
+2-Casting because value of dectionary is object 
+
+
+=========================================================================================
+
+2- ViewBag -------->>> dynamic ViewBag  
+
+dynamic ViewBag  {
+get{return viewData[key]}
+set{viewData[key]=value}
+}
+معناها كدة انها بتقري وتكتب من viewData 
+يعني ف الاخر بتقري وتكتب من نفس الدكشنري بتاع الفيوداتا --------->>>>>> important
+
+بس الميزة ان مفيش كاست هو بياخد القيمة وفي الرن تيم بيحدد نوعها [important]
+
+ex:
+ViewBag.key=value
+ViewBag.Msg="Hello World"
+ViewBag.Age=24
+
+so in view No Need For Casting
+ex in View:
+<h1>@ViewBag.Age</h1> ------>> No Need for Casting in RunTime will Know Type  
+
+Ex:::
+In Controller:
+ViewBag.Name="Fathi"
+
+In View:
+<h1>@ViewData["Name"]</h1> 
+
+لان الفيو باج بتقري وتكتب من الفيوداتا دكشنري اصلا 
+
+Ex2:::
+In Controller:
+ViewData["Name"]="Ahmed"
+ViewBag.Name="Fathi"
+
+ 
+In View:
+<h1>@ViewData["Name"]</h1>  ---------->>>> Fathi 
+لية لان الفيو باج بتقري وتكتب من الفيوداتا دكشنري اصلا 
+
+--- solve problem of Casting which in ViewData
+-Problem:: برضو نفس المشكلة الاولي لو كتبت الكي غلط اكسبشن علطول انت ممكن تغلط لان مفيش اوتوكمبليت
+
+
+3- viewModel [Dto in Api]
+	1- Send More than one model
+	2- Security يعني تنحكم ف الدتا الي هتتبعت سواء تقلل عن الموديل او تزود علية
+	3- اقدر اغير ف اسامي الكولوم ك امان 
+
+
+
+
+
+
+
+
+
+
+
+

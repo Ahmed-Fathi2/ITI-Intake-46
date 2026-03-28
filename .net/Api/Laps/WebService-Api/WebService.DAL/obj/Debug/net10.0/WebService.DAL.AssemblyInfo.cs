@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebService.DAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a995708c6e02acb9dfaf6f447955107a6ac40b10")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+926030df9322dc25470de5874c69c7f8fda03f88")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebService.DAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebService.DAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

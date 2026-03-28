@@ -1,0 +1,46 @@
+============================================================7=============================================================
+1-Filter--->>> [HttpGet]
+               [HttpPost]
+
+--->>> In MVC Action Can Serve Get OR Post ByDefault
+
+
+ViewData
+ViewBag	   ------->>>> Scope --->>> One Action  TO OneView
+ViewModel
+
+2- Implement create Action With Pure Html
+3- Implement Update Action With Pure Html
+
+
+============================================================8=============================================================
+In View 
+
+1- Pure Html
+
+2-Html Helper  ---->> Pure C#  --->> Microsoft provide Some Method and Call Them -->> provide @Html object
+
+ex:
+Lossly Type:
+============
+@Html.Texbox("Name");  --->> Razor Engine Replace it with Pure html 
+	-->> This Represent attributes
+		[id  && name  && value]
+
+Strong Type: لازم الفيو يكون سترونج تايب يعني لازم @model <Type>
+============
+@Html.TexboxFor(x=>x.Name);  --->> Razor Engine Replace it with Pure html 
+	-->> This Represent attributes
+		[id  && name  && value]
+
+@Html.TexboxFor(x=>x.Name); ======  <input type="text" id="Name" name="Name" value="Name" />
+		       |				|	   |	       |
+		       |--------------------------------|----------|-----------|
+ 
+
+** Display(Name="Full Name") Above Prop of VM 
+
+
+3-Tag Helper --->> Provide Server side Attributes 
+
+

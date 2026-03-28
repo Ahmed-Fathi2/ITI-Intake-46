@@ -1,0 +1,63 @@
+2️-Manual Mapping Example
+
+Let’s say you have a Poll entity:
+
+public class Poll
+{
+    public int Id { get; set; }
+    public string Title { get; set; } = string.Empty;
+    public string Summary { get; set; } = string.Empty;
+    public DateTime StartsAt { get; set; }
+}
+
+And you want to expose a DTO to the API:
+
+public class PollDto
+{
+    public int Id { get; set; }
+    public string Title { get; set; } = string.Empty;
+    public string Summary { get; set; } = string.Empty;
+}
+Manual Mapping
+public static class PollMapper
+{
+    public static PollDto ToDto(Poll entity)
+    {
+        return new PollDto
+        {
+            Id = entity.Id,
+            Title = entity.Title,
+            Summary = entity.Summary
+        };
+    }
+
+    public static Poll ToEntity(PollDto dto)
+    {
+        return new Poll
+        {
+            Id = dto.Id,
+            Title = dto.Title,
+            Summary = dto.Summary
+        };
+    }
+}
+2-Mapping in the Service Layer (Clean Architecture)
+public class PollService
+{
+    private readonly AppDbContext _context;
+
+    public PollService(AppDbContext context)
+    {
+        _context = context;
+    }
+
+    public async Task<Result<PollDto>> GetPollById(int id)
+    {
+        var poll = await _context.Polls.FindAsync(id);
+
+        if (poll == null)
+            return Result.Failure<PollDto>(new Error("Poll.NotFound", "No poll was found with the given ID", 404));
+
+        return Result.Success(PollMapper.ToDto(poll));
+    }
+}

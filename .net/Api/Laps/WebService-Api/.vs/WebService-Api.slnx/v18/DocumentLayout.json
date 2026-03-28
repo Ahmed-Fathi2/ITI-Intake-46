@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C47E057D-FB85-CF81-B863-00C50DC931D7}|WebService.Api\\WebService.Api.csproj|f:\\iti\\.net\\api\\laps\\webservice-api\\webservice.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C47E057D-FB85-CF81-B863-00C50DC931D7}|WebService.Api\\WebService.Api.csproj|solutionrelative:webservice.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50293048-2004-D638-0E6C-2D10B228848E}|WebService.BLL\\WebService.BLL.csproj|f:\\iti\\.net\\api\\laps\\webservice-api\\webservice.bll\\managers\\file\\filemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50293048-2004-D638-0E6C-2D10B228848E}|WebService.BLL\\WebService.BLL.csproj|solutionrelative:webservice.bll\\managers\\file\\filemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{50293048-2004-D638-0E6C-2D10B228848E}|WebService.BLL\\WebService.BLL.csproj|f:\\iti\\.net\\api\\laps\\webservice-api\\webservice.bll\\abstractions\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{50293048-2004-D638-0E6C-2D10B228848E}|WebService.BLL\\WebService.BLL.csproj|solutionrelative:webservice.bll\\abstractions\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{50293048-2004-D638-0E6C-2D10B228848E}|WebService.BLL\\WebService.BLL.csproj|f:\\iti\\.net\\api\\laps\\webservice-api\\webservice.bll\\abstractions\\error.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{50293048-2004-D638-0E6C-2D10B228848E}|WebService.BLL\\WebService.BLL.csproj|solutionrelative:webservice.bll\\abstractions\\error.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C47E057D-FB85-CF81-B863-00C50DC931D7}|WebService.Api\\WebService.Api.csproj|f:\\iti\\.net\\api\\laps\\webservice-api\\webservice.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C47E057D-FB85-CF81-B863-00C50DC931D7}|WebService.Api\\WebService.Api.csproj|solutionrelative:webservice.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C47E057D-FB85-CF81-B863-00C50DC931D7}|WebService.Api\\WebService.Api.csproj|f:\\iti\\.net\\api\\laps\\webservice-api\\webservice.api\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -163,10 +167,6 @@
       "RelativeMoniker": "D:0:0:{50293048-2004-D638-0E6C-2D10B228848E}|WebService.BLL\\WebService.BLL.csproj|solutionrelative:webservice.bll\\managers\\product\\iproductmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{50293048-2004-D638-0E6C-2D10B228848E}|WebService.BLL\\WebService.BLL.csproj|f:\\iti\\.net\\api\\laps\\webservice-api\\webservice.bll\\managers\\file\\filemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50293048-2004-D638-0E6C-2D10B228848E}|WebService.BLL\\WebService.BLL.csproj|solutionrelative:webservice.bll\\managers\\file\\filemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{50293048-2004-D638-0E6C-2D10B228848E}|WebService.BLL\\WebService.BLL.csproj|f:\\iti\\.net\\api\\laps\\webservice-api\\webservice.bll\\dtos\\product\\createproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{50293048-2004-D638-0E6C-2D10B228848E}|WebService.BLL\\WebService.BLL.csproj|solutionrelative:webservice.bll\\dtos\\product\\createproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -286,71 +286,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "FileController.cs",
-              "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.Api\\Controllers\\FileController.cs",
-              "RelativeDocumentMoniker": "WebService.Api\\Controllers\\FileController.cs",
-              "ToolTip": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.Api\\Controllers\\FileController.cs",
-              "RelativeToolTip": "WebService.Api\\Controllers\\FileController.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAiwB4AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-12T04:06:57.015Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.Api\\Program.cs",
-              "RelativeDocumentMoniker": "WebService.Api\\Program.cs",
-              "ToolTip": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.Api\\Program.cs",
-              "RelativeToolTip": "WebService.Api\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-08T13:20:59.476Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.Api\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "WebService.Api\\Controllers\\ProductController.cs",
-              "ToolTip": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.Api\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "WebService.Api\\Controllers\\ProductController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACAAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-11T02:24:55.889Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.Api\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "WebService.Api\\appsettings.Development.json",
-              "ToolTip": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.Api\\appsettings.Development.json",
-              "RelativeToolTip": "WebService.Api\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-08T13:49:12.806Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PaginatedList.cs",
-              "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.BLL\\Abstractions\\PaginatedList.cs",
-              "RelativeDocumentMoniker": "WebService.BLL\\Abstractions\\PaginatedList.cs",
-              "ToolTip": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.BLL\\Abstractions\\PaginatedList.cs",
-              "RelativeToolTip": "WebService.BLL\\Abstractions\\PaginatedList.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAASwBkAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-12T00:24:02.468Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "GlobalExceptionHandler.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.Api\\Abstractions\\GlobalExceptionHandler.cs",
               "RelativeDocumentMoniker": "WebService.Api\\Abstractions\\GlobalExceptionHandler.cs",
@@ -362,7 +302,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "AuthManager.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.BLL\\Managers\\Auth\\AuthManager.cs",
               "RelativeDocumentMoniker": "WebService.BLL\\Managers\\Auth\\AuthManager.cs",
@@ -374,7 +314,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Error.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.BLL\\Abstractions\\Error.cs",
               "RelativeDocumentMoniker": "WebService.BLL\\Abstractions\\Error.cs",
@@ -386,20 +326,93 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Result.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.BLL\\Abstractions\\Result.cs",
               "RelativeDocumentMoniker": "WebService.BLL\\Abstractions\\Result.cs",
               "ToolTip": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.BLL\\Abstractions\\Result.cs",
               "RelativeToolTip": "WebService.BLL\\Abstractions\\Result.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAgwBUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA3wBUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-11T02:47:34.161Z",
+              "WhenOpened": "2026-03-11T02:47:34.161Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FileManager.cs",
+              "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.BLL\\Managers\\File\\FileManager.cs",
+              "RelativeDocumentMoniker": "WebService.BLL\\Managers\\File\\FileManager.cs",
+              "ToolTip": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.BLL\\Managers\\File\\FileManager.cs",
+              "RelativeToolTip": "WebService.BLL\\Managers\\File\\FileManager.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAwCUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T04:12:48.641Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 6,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.Api\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "WebService.Api\\appsettings.Development.json",
+              "ToolTip": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.Api\\appsettings.Development.json",
+              "RelativeToolTip": "WebService.Api\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-08T13:49:12.806Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.Api\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "WebService.Api\\Controllers\\ProductController.cs",
+              "ToolTip": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.Api\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "WebService.Api\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACAAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T02:24:55.889Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.Api\\Program.cs",
+              "RelativeDocumentMoniker": "WebService.Api\\Program.cs",
+              "ToolTip": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.Api\\Program.cs",
+              "RelativeToolTip": "WebService.Api\\Program.cs",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAqwIYAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-08T13:20:59.476Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PaginatedList.cs",
+              "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.BLL\\Abstractions\\PaginatedList.cs",
+              "RelativeDocumentMoniker": "WebService.BLL\\Abstractions\\PaginatedList.cs",
+              "ToolTip": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.BLL\\Abstractions\\PaginatedList.cs",
+              "RelativeToolTip": "WebService.BLL\\Abstractions\\PaginatedList.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAASwBkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T00:24:02.468Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FileController.cs",
+              "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.Api\\Controllers\\FileController.cs",
+              "RelativeDocumentMoniker": "WebService.Api\\Controllers\\FileController.cs",
+              "ToolTip": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.Api\\Controllers\\FileController.cs",
+              "RelativeToolTip": "WebService.Api\\Controllers\\FileController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAiwB4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T04:06:57.015Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "JwtProvider.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.BLL\\Managers\\Auth\\JwtProvider.cs",
               "RelativeDocumentMoniker": "WebService.BLL\\Managers\\Auth\\JwtProvider.cs",
@@ -411,7 +424,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "EmailSender.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.BLL\\Managers\\Email\\EmailSender.cs",
               "RelativeDocumentMoniker": "WebService.BLL\\Managers\\Email\\EmailSender.cs",
@@ -423,7 +436,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "ResultExtension.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.Api\\Abstractions\\ResultExtension.cs",
               "RelativeDocumentMoniker": "WebService.Api\\Abstractions\\ResultExtension.cs",
@@ -435,7 +448,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "ApplicationUser.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.DAL\\Data\\Entities\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "WebService.DAL\\Data\\Entities\\ApplicationUser.cs",
@@ -447,7 +460,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "IEmailSender.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.BLL\\Managers\\Email\\IEmailSender.cs",
               "RelativeDocumentMoniker": "WebService.BLL\\Managers\\Email\\IEmailSender.cs",
@@ -459,7 +472,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "UploadProductImageDtoValidator.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.BLL\\Validation\\Product\\UploadProductImageDtoValidator.cs",
               "RelativeDocumentMoniker": "WebService.BLL\\Validation\\Product\\UploadProductImageDtoValidator.cs",
@@ -471,7 +484,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "BaseRequestFilter.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.BLL\\Abstractions\\Common\\BaseRequestFilter.cs",
               "RelativeDocumentMoniker": "WebService.BLL\\Abstractions\\Common\\BaseRequestFilter.cs",
@@ -483,7 +496,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "AuthController.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.Api\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "WebService.Api\\Controllers\\AuthController.cs",
@@ -495,7 +508,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "UserError.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.BLL\\Abstractions\\Errors\\User\\UserError.cs",
               "RelativeDocumentMoniker": "WebService.BLL\\Abstractions\\Errors\\User\\UserError.cs",
@@ -507,7 +520,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "EmailConfirmationRequestDto.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.BLL\\Dtos\\Auth\\EmailConfirmationRequestDto.cs",
               "RelativeDocumentMoniker": "WebService.BLL\\Dtos\\Auth\\EmailConfirmationRequestDto.cs",
@@ -519,7 +532,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "IAuthManager.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.BLL\\Managers\\Auth\\IAuthManager.cs",
               "RelativeDocumentMoniker": "WebService.BLL\\Managers\\Auth\\IAuthManager.cs",
@@ -531,7 +544,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "Notes.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.Api\\Abstractions\\Notes\\Notes.cs",
               "RelativeDocumentMoniker": "WebService.Api\\Abstractions\\Notes\\Notes.cs",
@@ -543,7 +556,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "appsettings.json",
               "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.Api\\appsettings.json",
               "RelativeDocumentMoniker": "WebService.Api\\appsettings.json",
@@ -555,7 +568,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "IJwtProvider.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.BLL\\Abstractions\\Auth\\IJwtProvider.cs",
               "RelativeDocumentMoniker": "WebService.BLL\\Abstractions\\Auth\\IJwtProvider.cs",
@@ -567,7 +580,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "LoginRequestDtoValidator.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.BLL\\Validation\\Auth\\LoginRequestDtoValidator.cs",
               "RelativeDocumentMoniker": "WebService.BLL\\Validation\\Auth\\LoginRequestDtoValidator.cs",
@@ -579,7 +592,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "LoginResponse.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.BLL\\Dtos\\Auth\\LoginResponse.cs",
               "RelativeDocumentMoniker": "WebService.BLL\\Dtos\\Auth\\LoginResponse.cs",
@@ -591,7 +604,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "LoginRequestDto.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.BLL\\Dtos\\Auth\\LoginRequestDto.cs",
               "RelativeDocumentMoniker": "WebService.BLL\\Dtos\\Auth\\LoginRequestDto.cs",
@@ -603,7 +616,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "RegisterRequestDtoValidator.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.BLL\\Validation\\Auth\\RegisterRequestDtoValidator.cs",
               "RelativeDocumentMoniker": "WebService.BLL\\Validation\\Auth\\RegisterRequestDtoValidator.cs",
@@ -627,7 +640,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "WebService.BLL.csproj",
               "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.BLL\\WebService.BLL.csproj",
               "RelativeDocumentMoniker": "WebService.BLL\\WebService.BLL.csproj",
@@ -639,7 +652,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "RegisterRequestDto.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.BLL\\Dtos\\Auth\\RegisterRequestDto.cs",
               "RelativeDocumentMoniker": "WebService.BLL\\Dtos\\Auth\\RegisterRequestDto.cs",
@@ -651,7 +664,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "AuthConfiguration.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.BLL\\MappingConfiguration\\Auth\\AuthConfiguration.cs",
               "RelativeDocumentMoniker": "WebService.BLL\\MappingConfiguration\\Auth\\AuthConfiguration.cs",
@@ -663,7 +676,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "DefaultRole.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.BLL\\Abstractions\\Constants\\DefaultRole.cs",
               "RelativeDocumentMoniker": "WebService.BLL\\Abstractions\\Constants\\DefaultRole.cs",
@@ -675,7 +688,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "RoleController.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.Api\\Controllers\\RoleController.cs",
               "RelativeDocumentMoniker": "WebService.Api\\Controllers\\RoleController.cs",
@@ -687,7 +700,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "ApplicationUserConfiguration.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.DAL\\Data\\Configuration\\ApplicationUserConfiguration.cs",
               "RelativeDocumentMoniker": "WebService.DAL\\Data\\Configuration\\ApplicationUserConfiguration.cs",
@@ -699,7 +712,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "WebService.DAL.csproj",
               "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.DAL\\WebService.DAL.csproj",
               "RelativeDocumentMoniker": "WebService.DAL\\WebService.DAL.csproj",
@@ -711,7 +724,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "ProductManager.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.BLL\\Managers\\Product\\ProductManager.cs",
               "RelativeDocumentMoniker": "WebService.BLL\\Managers\\Product\\ProductManager.cs",
@@ -735,7 +748,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "20260313125244_AddIdentityTable.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.DAL\\Migrations\\20260313125244_AddIdentityTable.cs",
               "RelativeDocumentMoniker": "WebService.DAL\\Migrations\\20260313125244_AddIdentityTable.cs",
@@ -746,7 +759,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.DAL\\Data\\Context\\AppDbContext.cs",
               "RelativeDocumentMoniker": "WebService.DAL\\Data\\Context\\AppDbContext.cs",
@@ -770,18 +783,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "FileManager.cs",
-              "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.BLL\\Managers\\File\\FileManager.cs",
-              "RelativeDocumentMoniker": "WebService.BLL\\Managers\\File\\FileManager.cs",
-              "ToolTip": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.BLL\\Managers\\File\\FileManager.cs",
-              "RelativeToolTip": "WebService.BLL\\Managers\\File\\FileManager.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAAwCQAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-12T04:12:48.641Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 44,
               "Title": "UploadProductImageDto.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.BLL\\Dtos\\Product\\UploadProductImageDto.cs",
@@ -794,7 +795,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "ProductConfiguration.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.BLL\\MappingConfiguration\\Product\\ProductConfiguration.cs",
               "RelativeDocumentMoniker": "WebService.BLL\\MappingConfiguration\\Product\\ProductConfiguration.cs",
@@ -806,7 +807,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "IProductManager.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.BLL\\Managers\\Product\\IProductManager.cs",
               "RelativeDocumentMoniker": "WebService.BLL\\Managers\\Product\\IProductManager.cs",
@@ -818,7 +819,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "ProductsResponseDto.cs",
               "DocumentMoniker": "F:\\ITI\\.Net\\Api\\Laps\\WebService-Api\\WebService.BLL\\Dtos\\Product\\ProductsResponseDto.cs",
               "RelativeDocumentMoniker": "WebService.BLL\\Dtos\\Product\\ProductsResponseDto.cs",

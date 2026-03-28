@@ -1,0 +1,135 @@
+==============================================================================================================================================================================
+									*** Identity *** 
+==============================================================================================================================================================================
+1-Install ----->>> Microsoft.identity.EntityFrameWorkCore
+ 
+
+	Models				BLL [Managers]     	DAL [Repository]		  AppDbContext:IdentityDbContext
+	  |				|				|				|
+	  |				|				UserStore/RoleStore	 	----->>>>  IdentityDbContext:IdentityDbContext<TCustomUser , TCustomRole>:DbContext
+	IdentityUser	            UserManager<IdentityUser/ApplicationUser>                                                     {
+	IdentityRole		    RoleManager<IdentityUser/ApplicationUser> 	                                			DbSet<IdentityUser> Users               		
+          |			    SignInManager [****Imp*****]									DbSet<IdentityRole> Roles
+	  |											   				  }																														
+All Pk Of Identity entities	
+is -------> [String as a guid ----------> Guid.NewGuid().tostring()] 			
+
+
+==============================================================================================================================================================================
+2- ApplicationUser:IdentityUser:IdentityUser<T as Id Type>
+
+	so ---> ApplicationUser:IdentityUser<Int> ---> this mean pk = int
+
+==============================================================================================================================================================================	
+
+3- When Add Custom [ApplicationUser Calss]  &&&&& [ApplicationRole Class] 
+  
+AppDbContext:IdentityDbContext<TUser,TRole , TKey if you change PK type >
+		 ----->>>>>>>>>>>  IdentityDbContext:IdentityDbContext<TCustomUser , TCustomRole>:DbContext
+                                                  {
+	                               			DbSet<IdentityUser> Users               		
+          						DbSet<IdentityRole> Roles
+	  				          }																														
+==============================================================================================================================================================================
+
+4- Inject Identity In IOC Container [هاااااااااااااااااااااااااااام]
+
+builder.Service.AddIdntity<ApplicationUser,ApplicationRole>() ----> to add  managers ---> UserManger/RoleManger
+	.AddEntityFrameWorkstores<AppDbContext>();  -------> to add repos --->UserStore/RoleStore 
+
+==============================================================================================================================================================================
+	       
+4-    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+        base.OnModelCreating(modelBuilder);
+
+    } 
+---------> دة وظيفتة الاساسية انة ياخد اي customization ويطلع بيها للاب
+
+
+==============================================================================================================================================================================
+
+5- Recommed To Inject UserManger / RoleManger   --->> in BBL 
+
+==============================================================================================================================================================================
+
+6- IdentityResult result = await _userManager.CreateAsync(ApplicationUser,Password); ----> This Function Make Pass Hashed
+	|				|
+	|------------دايما يرجع النوع دة-------|
+
+
+---->مجرد ما استخدمت دي وعملت هاش للباص هو 
+	identity عاملة فاليديشن علي الباص by default 
+
+
+builder.Services.Configure<IdentityOptions>(options =>
+{
+    // Default Password settings.
+    options.Password.RequireDigit = true;
+    options.Password.RequireLowercase = true;
+    options.Password.RequireNonAlphanumeric = true;
+    options.Password.RequireUppercase = true;
+    options.Password.RequiredLength = 6;
+    options.Password.RequiredUniqueChars = 1;
+});
+
+
+builder.Services.Configure<IdentityOptions>(options =>
+{
+    // Default SignIn settings.
+    options.SignIn.RequireConfirmedEmail = false;
+    options.SignIn.RequireConfirmedPhoneNumber = false;
+}); 
+
+==============================================================================================================================================================================
+
+7- create Register
+
+8- Create Login
+
+9- Create LogOut
+
+==============================================================================================================================================================================
+10- if Not Authorized ----> redirect to Accout/Login   [default behavior]
+
+==============================================================================================================================================================================
+
+----------------Steps----------------
+
+1- Add Custom User/Role Entities   -------->>>>>    Update ApplicationDbContext:IdentityDbContext<Tuser,TRole , TPf>    --------------->>>>> register identity in IOC Container
+
+
+==============================================================================================================================================================================
+
+1- Create Roles EndPoint
+
+2- Assign Default Role when you Register
+
+3- Claims ---> piece of information about user 
+
+
+
+in mvc ---> when you login --> identity genegate Claims[id-name-email-stamp-role-auth menthod] and stores in cookies of browser
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   

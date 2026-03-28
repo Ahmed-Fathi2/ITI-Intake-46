@@ -1,0 +1,320 @@
+=============================================================================================================================
+**********Api*********Lec1************
+=============================================================================================================================
+1-
+    Web app[MVC-Razor]       web service[Api]
+                         |
+                      asp.NetCore -----> Add Some Dependances & configs to console app to run as a web app 
+                         |
+                       .Net [ Console app / Windows Forms]
+=============================================================================================================================
+
+2- ASP ---> Active server Pages
+
+
+3- Client Side ----------->>>> Server Side ---------------->>>> DataBase
+    [Machine]                   [Machine]
+
+
+So 
+    1- How Machine Talk the other Machine
+    2- Method Calling ---> How C-Side understand S-Side
+    3- Send & Recieve Data
+    4-service Description
+=============================================================================================================================
+
+ *** Soap[simple object Access Protocol] ****                                         
+
+=============================================================================================================================
+    1- msg protocol --> طريقىة بتخلي اي ديستربيوتت سيستم تقدر تكلم بعض 			
+									   
+
+    2- Machine-Machine  ->> any protocol common between tow machine 
+				used to communicate
+
+
+    3- Method Calling   ->> Proxy Class لير مساعدة ف النص وظيفتها ت ماب بين الاتنين ---> map (mobile-desktop) form-to(C#-java) 
+       How 2-machine understand each other
+       ex: at clint side maked using ex js
+       cant understand C# code , Java Code
+
+	Problem::: There is proxy calss can map  Native-js From-To [C#-Java]  --->  دي النقطة الي ضربت التكنولوجي دي ف مقتل وموتتها قبل ما تبدا 
+    
+    4- Send -Reviece Data ->> Soap File [XML File]
+
+    5- Service Docs ->> WSDL
+
+
+=============================================================================================================================
+=============================================================================================================================
+=============================================================================================================================
+
+ ***Rest [Http Based Services]****
+ 	 2- SW Architecture , used in web services
+	 to define set of rules/constrains and 
+	 make apps communicate due to these constraints	
+=============================================================================================================================
+
+  2- Machine-Machine  ->> machine talk to other machine using http protocol
+
+  3- Method Calling   ->> URL --> Routing Mapping To Call Controller/Action
+
+
+  4- Send -Reviece Data ->> Json ---> Light Weight
+
+  5- Service Docs ->> Helper Page --> Documentation
+
+=============================================================================================================================
+=============================================================================================================================
+=============================================================================================================================
+
+ControllerBase ----> Related Http services
+	| |
+	| |__________
+	|	    |
+    Controller      |
+	|           |
+	|           |
+       MVC         Api
+
+Rest   ----> Set of Constraints --> follow them when you build web serviecs [Principle]
+Restful----> Api which built Following these  Constraints [Implement Constraints of Rest Principles]
+
+=============================================================================================================================
+=============================================================================================================================
+=============================================================================================================================
+
+ [ApiController] --------------->>>> Filter Attribute ----->>> For Serialization-Deserialization
+ [Route("[controller]")] ---------->> Routing
+ public class WeatherForecastController : ControllerBase
+ {
+    
+ }
+	
+
+=============================================================================================================================
+=============================================================================================================================
+=============================================================================================================================
+
+1️-Convention-Based Routing  --->> in MVc 
+
+2️-Attribute-Based Routing ---->> in MVC - Api
+
+=============================================================================================================================
+=============================================================================================================================
+=============================================================================================================================
+1️-Convention-Based Routing
+=============================================================================================================================
+
+
+ده النوع التقليدي في MVC.
+
+تحدد الـ route pattern مرة واحدة في Startup / Program.cs
+
+كل الكنترولرز والأكشنز بيتبعوا القاعدة دي بشكل تلقائي (convention)
+
+مثال:
+
+في Program.cs أو Startup.cs:
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}/{id?}");
+});
+تفسير pattern:
+
+{controller} → اسم الكنترولر بدون كلمة "Controller"
+
+{action} → اسم الـ Action method
+
+{id?} → parameter اختياري
+
+كيف يشتغل؟
+URL ----->>>>> 	ControllerName	ActionName	Id[optional]
+/	Home	Index	-
+/Products/List	Products	List	-
+/Products/Details/5	Products	Details	5
+=============================================================================================================================
+=============================================================================================================================
+=============================================================================================================================
+2️-Attribute-Based Routing
+=============================================================================================================================
+
+كل أكشن أو كنترولر بيحدد الـ route بنفسه باستخدام attributes
+
+دي الطريقة الأكثر مرونة
+
+مثال:
+[Route("products")]
+public class ProductsController : Controller
+{
+    [HttpGet("")]
+    public IActionResult List()
+    {
+        return View();
+    }
+
+    [HttpGet("{id}")]
+    public IActionResult Details(int id)
+    {
+        return View();
+    }
+
+    [HttpPost("create")]
+    public IActionResult Create(Product model)
+    {
+        return RedirectToAction("List");
+    }
+}
+كيف يشتغل؟
+URL	Action
+/products	List
+/products/5	Details
+/products/create	Create
+
+
+
+MVC التقليدي مع Views → غالبًا Convention-based كفاية
+
+APIs أو مشاريع كبيرة → Attribute-based Routing أفضل
+
+=============================================================================================================================
+=============================================================================================================================
+=============================================================================================================================
+
+1- Install Scalar.AspNetCore ------>>>> For Docs Like Swager
+
+   // Configure the HTTP request pipeline.
+            if (app.Environment.IsDevelopment())
+            {
+                app.MapOpenApi();
+                app.MapScalarApiReference();
+            }
+
+update laungh setting file
+   "https": {
+      "launchBrowser": true,
+      "launchUrl": "scalar",
+      }
+
+=============================================================================================================================
+=============================================================================================================================
+=============================================================================================================================
+
+=============================================================================================================================
+
+===============[Error -Ambigouty when Routing]=======================================================================
+ 1- [HttpGet("{id}")] -------------->>>>>>>    // Get: /api/Employees/1  
+ 2- [HttpGet("{name}")] -------------->>>>>>> // Get: /api/Employees/1 
+
+=============================================================================================================================
+-Solution  
+====================     
+ 1- [HttpGet("/{name}")] -------------->>>>>>>    // Get: /name  -------->>> Abslute Routing ---> كدة انت لغيت api/Controller
+
+
+ 2- [HttpGet("{id:int}")] -------------->>>>>>>    // Get: /api/Employees/1  
+ 2- [HttpGet("{name:alpha}")]-------------->>>>>>>    // Get: /api/Employees/Fathi
+
+=============================================================================================================================
+
+ 1- [HttpGet("Details")] -------------->>>>>>>    // Get: /api/Employees/Details (OkKKKK)
+       
+ 2- [HttpGet("Users")] -------------->>>>>>>     // Get: /api/Employees/Users   (OkKKKK)
+
+=============================================================================================================================
+=============================================================================================================================
+=============================================================================================================================
+
+Return-Type From Endpoint Api
+
+1- IActionResult ----------->>> NotRecommended in Api ---> More Generic
+
+2- ActionResult<T-Return-Type> ------>>> Used -->> Make Return Type More Strongly Type ----> الميزة القوي جدا لما تروح تفتح سوجر مثلا هتلاقية عامل الجيسون لل ريترن لانك عامله سترونج تايب من غير ما تكتب انت حاجة  ----> Make Api More Descriptive 
+
+3-TypedResult <ok(~~),NotFound()> ---->>> More More Strong return Type
+
+
+=============================================================================================================================
+
+CreatedAtAction("GetById",new{id=emploee.id},employee) ----> rerturn in header Location Prop  include GetById Url EndPoint
+								Sothat FrontEnd Need Id to use it in another operation
+
+
+
+
+
+
+=============================================================================================================================
+=============================================================================================================================
+Routing Attributes
+
+- [FromRoute]
+- [FromQuery]
+- [FromForm]
+=============================================================================================================================
+=============================================================================================================================
+=============================================================================================================================
+
+
+inastall Fluent Validation
+install  Mapster
+use dtos
+use N-tier---->> Api // BLL // DAL
+Add swager // PostMan
+add app-config/serviceRegister in External File [Important]
+
+
+
+1-Install-Package Swashbuckle.AspNetCore
+
+2-// Add Swagger
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+3-if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+4-//laungh setting
+ "https": {
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      }
+
+5-//Optional
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "My API",
+        Version = "v1"
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,120 @@
+Q1:
+==============
+
+-->> Support threshold = 2
+============================================================
+-->>Step 1:
+
+Item	              Count
+
+HotDogs	                4
+Buns			2
+Ketchup			2
+Coke			3
+Chips			4
+
+--------->>>>>> [All>=2]
+
+L1 = {HotDogs, Buns, Ketchup, Coke, Chips}
+
+============================================================
+
+-->>Step 2
+
+
+Itemset			Count
+
+HotDogs, Buns		2
+HotDogs, Ketchup	1 ***
+HotDogs, Coke		2
+HotDogs, Chips		2
+Buns, Ketchup		1 ***
+Buns, Coke		0 ***
+Buns, Chips		0 ***
+Ketchup, Coke		0 ***
+Ketchup, Chips		1 ***
+Coke, Chips		3
+
+L2 =
+{HotDogs, Buns}
+{HotDogs, Coke}
+{HotDogs, Chips}
+{Coke, Chips}
+
+============================================================
+-->>Step 3
+
+Itemset				Count
+
+HotDogs, Coke, Chips		 2
+HotDogs, Buns, Coke	         *** 
+HotDogs, Buns, Chips		 ***
+
+
+L3 = {HotDogs, Coke, Chips}
+
+-->>Answers :
+
+L1: {HotDogs, Buns, Ketchup, Coke, Chips}
+L2: {HotDogs,Buns}, {HotDogs,Coke}, {HotDogs,Chips}, {Coke,Chips}
+L3: {HotDogs, Coke, Chips}
+
+===========================================================================================================================
+Q2:
+==========
+
+-->>support = 60% * 5  = 3 
+============================================================
+-->>Step 1
+
+Item			Count
+A			3
+B			3
+C			2 ***
+D			5
+E			4
+F			3
+G			1 ***
+H			1 ***
+I			1 ***
+J			1 ***
+K			1 ***
+
+L1 = {A, B, D, E, F}
+============================================================
+-->>Step 2:
+
+Itemset			Count
+A,B			1 ***
+A,D			3
+A,E			2 ***
+A,F			2 ***
+B,D			3
+B,E			3
+B,F			2 ***
+D,E			4
+D,F			3
+E,F			2 ***
+
+L2 =
+
+{A,D}
+{B,D}
+{B,E}
+{D,E}
+{D,F}
+
+============================================================
+-->>Step 3
+
+Itemset			Count
+{B,D,E}			3
+{D,E,F}			***
+
+L3 = {B, D, E}
+
+
+Answer :
+L1: {A, B, D, E, F}
+L2: {A,D}, {B,D}, {B,E}, {D,E}, {D,F}
+L3: {B, D, E}

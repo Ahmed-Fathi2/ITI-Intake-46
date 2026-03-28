@@ -122,14 +122,15 @@ namespace WebService.Api
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
-            {
+            //// Configure the HTTP request pipeline.
+            //if (app.Environment.IsDevelopment())
+            //{
                 app.UseSwagger();
                 app.UseSwaggerUI();
                 app.MapOpenApi();
-            }
+            //}
 
+            app.UseAuthentication();
             app.UseAuthorization();
             app.UseStaticFiles();
 

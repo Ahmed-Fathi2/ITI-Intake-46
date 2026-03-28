@@ -1,0 +1,48 @@
+==================================================================================================================
+Api-Day4		
+==================================================================================================================
+1- Login
+2- Jwt ---->>
+	 Http &&& Api ---->> is stateless 
+
+Login Request --->>> Server 
+   Jwt	      <<<--- Server
+
+
+JWT  ----->>> Header . PayLoad . Signature
+
+Header: Token MetaData -->>> tokenType:Jwt ||| Algo used to hashing token
+Paylaoad: User MetaData ---->> Claims --->>> USerID || Name || Email || Roles || Permissions
+Signature:  Header + PayLoad + SecretKey 
+
+
+
+2- انا ك سيرفر بعت التوكن ازاي لما يتبعت تاني في اي ريكويست هعملة 
+	--->>>Token Server Validation
+
+Request [Jwt In Header]  --->>> Server --->>>
+	1- Server Used Header && PayLoad of Token in Request Header 
+	2- Server used Secret Key  To Generate New Signature
+	3- Compare Generated Signature With INComing Signature 
+	4- if Equal -->> token is Valid ||| Not Equal --->> token Not Valid
+
+==================================================================================================================
+Install Packages
+==================================================================================================================
+1- Microsoft.AspNetCore.Authentication.JwtBearer
+2- System.IdentityMode.Tokens.Jwt
+2- MicroSoft.Identity.EntityFrameWorkCore
+
+==================================================================================================================
+Record As DTo 
+	-->> Imutable
+	-->> Value Based Equality
+
+==================================================================================================================
+
+1- cors
+2- Vergion
+3- Logging
+4- Policy based Auth
+5- Role based auth
+6- Claim based  auth

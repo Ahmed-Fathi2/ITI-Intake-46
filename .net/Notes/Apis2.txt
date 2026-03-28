@@ -1,0 +1,192 @@
+================================================================================================================================
+********Api********Lec2******
+================================================================================================================================
+
+1-Using DTo
+2-Inhance Code With Aysnc/Sync
+3-Inhance Generic Repository ------>>> inhance GetAll By Adding Generic filter && Order && tracking
+4-1-Validation ---->>> Data Annotaion ---->No SOC 
+	       ---->>> Fluent Validation Package
+5-Result Pattern
+6-Mapping --->AutoMApper
+	  --->Mapster
+          --->Manual Mapping
+
+================================================================================================================================
+**** WHen User Domain Models **** دة سبب المشكلة الاساسي هو التعامل ب domain models 
+	 ----->> In ASP.NET Core, the Reference Loop problem happens when serializing objects with navigation properties
+
+ف لو انت بترحع الموظفين وعالم انكلود للقسم وبالتالي هو بيتعامل مباشرة مع الدومين موديل 
+لما يجي الفريم ورك يعمل -----> serialize 
+هيروح للموظق ومنة الي القسم ومن القسم للموظف ومن الموظف للقسم ..............
+lead to infinte loop
+================================================================================================================================
+
+Serialization vs Deserialization in C#
+
+Serialization---------->>> converts an object into a storable/transmittable format (JSON, XML, binary, etc.).
+Deserialization----------->>>> is the reverse — converting that format back into an object.
+
+
+public class Person
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+}
+
+var person = new Person { Name = "Alice", Age = 30 };
+
+// SERIALIZE — object → JSON string
+string json = JsonSerializer.Serialize(person);
+// Output: {"Name":"Alice","Age":30}
+
+// DESERIALIZE — JSON string → object
+Person restored = JsonSerializer.Deserialize<Person>(json);
+// restored.Name == "Alice", restored.Age == 30
+================================================================================================================================
+public class Department
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+
+    public List<Employee> Employees { get; set; }
+}
+
+public class Employee
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+
+    public Department Department { get; set; }
+}
+
+Relationship:
+
+Department
+   └── Employees
+            └── Department
+                     └── Employees
+                              └── Department
+
+When returning:
+
+return Ok(department);
+
+Serialization becomes:
+
+Department
+ └ Employees
+    └ Department
+       └ Employees
+          └ Department
+             └ ...
+
+This creates infinite recursion.
+
+2️-The Error
+
+You usually get:
+
+A possible object cycle was detected.
+or
+Self referencing loop detected
+
+
+3️-=====Solutions===== (Important Interview Question)
+=========================================================================================================================================
+=========================================================================================================================================
+✅ 1. Use DTOs (Best Practice) -------------->>> Data Transfer object
+=========================================================================================================================================
+=========================================================================================================================================
+1- مش هتعمل ريترن لكل حاجة في الدومين موديل انت براحتك ترجع الي انت عاوزة 
+2- تغير اسامي الكولوم بحيث الي هيستخدم الاندبيونت ميعرفش الاسامي الاصلية للحماية 
+3- اخف بكتير في ال---->serialize & de-Serialize
+4- فلما بيعمل serialize هيعمل لل DTO 
+    الي معندهاش nav prop 
+=========================================================================================================================================
+=========================================================================================================================================
+
+presentation layer doesn't have Ref to Design Package which in DAL ---> So You Must Inatall it
+
+=========================================================================================================================================
+=========================================================================================================================================
+GetAll/GetById ------------------>>> ASync(Multithreading) --->> CAll DB Direct
+Add/Update/Delete ---------------->>> Sync(single Thread) --->> call Local Container Then Save changes[Db]
+SaveChangesAsync(); 
+=========================================================================================================================================
+=========================================================================================================================================
+
+Seeding ---->> HasData
+	---->> طريقة الكورس الاجنبي
+	---->> طريقة محمد حاتم day12 ---> 01:25
+
+
+3-Inhance Generic Repository ------>>> inhance GetAll By Adding Generic filter && Order && tracking
+
+================================================================================================================================
+================================================================================================================================
+
+1-Validation
+
+--Data Annotaion ---->No SOC 
+
+--Fluent Validation 
+ 1- insatll PAckage
+ 2- register Validators in IOC Container ----------->>>> service.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+ 3- Add AutoValidation ------>>>>   service.AddFluentValidationAutoValidation();  [هااااااااااااااااااااااااااااااااااااااااااااااااام]       
+ 4-ValidationCalss :AbstractValidator<DTO>
+
+
+
+
+NotEmpty() -------->>>> validate --->> Not Null, Not Empty ,Not WhiteSpace
+NotNull()  -------->>>> validate --->> Not Null
+
+
+
+
+4- Result Pattern
+
+================================================================================================================================
+================================================================================================================================
+
+
+validation --->>> return Standard shape of error
+Result ---->> Code && Descriptio ----->>> So You must change it [ Result Shape ------------->> Problem Shape ]
+By USing Problem ---->>> in ControllerBase 
+ 
+    public virtual ObjectResult Problem(
+        string? detail,
+        string? instance,
+        int? statusCode,
+        string? title,
+        string? type)
+        => Problem(detail, instance, statusCode, title, type, extensions: null);
+
+
+
+
+Problem Fun ----->>> Use ProblemDetails-Class 
+|
+|
+|
+return ObjectResult:ActionResult
+	|
+	|
+	|
+1- Set StatusCode of Response 
+2- Has Value --->> شايلة ProblemDetails
+
+
+RFC : Datils of Error
+
+================================================================
+1- Using Auto Mapper 
+2- Using Mapster 
+3- Using Manual Mapping
+
+===============================================================
+Pagination 
+Filter
+UPload Images
+==============================================================

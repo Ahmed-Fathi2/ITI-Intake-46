@@ -1,0 +1,75 @@
+=========================================================================================================================================
+1- Model Binding 
+=========================================================================================================================================
+--->> request To Controller/Action ----< Model Binding  >------ Action Input Params
+
+Model Binding Search in httpcontext.Request 
+				-->FormData[Body]
+				-->Query Parameters
+				-->Routes  -->> Route Segments {Controller}/{Action}/{id?}
+=========================================================================================================================================
+Form Method=Get   ------->>>>  Data Will Send In Query Params -->> like Ex:
+Form Method=Post  ------->>>>  Data will Send In FormData [Body]
+=========================================================================================================================================
+Ex:  Form Method=Get Action=Employee/Index  ------->> Has Input-->> Name & Age 
+			|
+			|
+<input id="Name name="Age" >  --->>> [name attribute] the impotant attri because this is [key] of value in url request
+			|
+			|---------------------------------Submit-------------------|
+								      	       	   |
+								      		   |
+when submit --> Send Request To --->>> Get: {origin}/Employee/Index? Name=Ahmed & Age=24 [Request]
+|										   |	
+|										   |
+|										   |
+^									      Model Binding
+Model Binding Search in Routes | Query Params | FormData		           |
+|									           |
+|					      |------------------------------------|
+^					      |
+Public IActionResult Index (string Name , int Age)
+{
+  ----
+  ----
+}
+
+
+Note :: شرط علشان الموديل بايدن يعرف ي ماب القيم الي جاية في الركويست لل القيم الي ف الاكشن لازم يكون نفس الاسامي يعني الريكوسيت لازم بالظبط 
+	-->> Ignore Case Senstive
+
+--->>> if action Input Param with a diffirent naming --->> ModelBinding Will Set action Input Param with Default Value
+
+
+=========================================================================================================================================
+Ex2: شرح تفاصيل 
+ --------------
+In Create Form 
+1- Action Rerturn View OF Form so No @model Need 
+2- Action OF Save in DB if Validation Failed So return the Same View OF Form But Need Ro Pass Input Params To it [Note]
+
+الفكرة انك ف الاول بترجع الفيو الي فية الفورم ودة مش محتاج الي حاجة في الموديل بارمتير بتاعة بس لما يدوس كريت مثلا هيروح علشان يحفظ ف الداتا بيز وقتها لو حصل فشل هتحتاج تفضل ف نفس الفورم ويكون القيم الي اليوزر دخلها موجود مراحتش لذلك هتحتاج تبعت القين الي استقبلها 
+بس وقتها الفيو انت كنت عاملة معندوش موديل بالتالي هتروح تضيفة بس 
+علشان تروح تدي قيم للانبت بتاعت الفورم في الفاليو بتاعت كل انبت 
+هنا المشكلة هتحصل لان لما بترجع الفيو ف الاول بتكون مش باعت حاجة بذلك هيحاول يحط فاليو ف الانبت من الموديل الي هو فاضي ف هيضرب لذلك هتعمل كدة 
+<input Value="@Model?.Name" />
+
+
+---->>لذلك فهمت دلوقتي ل ف الكريت بتعمل الموديل سترونج تايب 
+و في Tag Hleper لازم تعملها سترونج تايب وهي بتهندل الحتة بتاعت النل دي من نفسها 
+
+========================================================================================================================================= 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

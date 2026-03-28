@@ -1,0 +1,15 @@
+F:\ITI\.Net\Api\Laps\WebService-Api\WebService.DAL\bin\Release\net10.0\WebService.DAL.deps.json
+F:\ITI\.Net\Api\Laps\WebService-Api\WebService.DAL\bin\Release\net10.0\WebService.DAL.runtimeconfig.json
+F:\ITI\.Net\Api\Laps\WebService-Api\WebService.DAL\bin\Release\net10.0\WebService.DAL.dll
+F:\ITI\.Net\Api\Laps\WebService-Api\WebService.DAL\bin\Release\net10.0\WebService.DAL.pdb
+F:\ITI\.Net\Api\Laps\WebService-Api\WebService.DAL\obj\Release\net10.0\WebService.DAL.csproj.AssemblyReference.cache
+F:\ITI\.Net\Api\Laps\WebService-Api\WebService.DAL\obj\Release\net10.0\WebService.DAL.GeneratedMSBuildEditorConfig.editorconfig
+F:\ITI\.Net\Api\Laps\WebService-Api\WebService.DAL\obj\Release\net10.0\WebService.DAL.AssemblyInfoInputs.cache
+F:\ITI\.Net\Api\Laps\WebService-Api\WebService.DAL\obj\Release\net10.0\WebService.DAL.AssemblyInfo.cs
+F:\ITI\.Net\Api\Laps\WebService-Api\WebService.DAL\obj\Release\net10.0\WebService.DAL.csproj.CoreCompileInputs.cache
+F:\ITI\.Net\Api\Laps\WebService-Api\WebService.DAL\obj\Release\net10.0\WebService.DAL.sourcelink.json
+F:\ITI\.Net\Api\Laps\WebService-Api\WebService.DAL\obj\Release\net10.0\WebService.DAL.dll
+F:\ITI\.Net\Api\Laps\WebService-Api\WebService.DAL\obj\Release\net10.0\refint\WebService.DAL.dll
+F:\ITI\.Net\Api\Laps\WebService-Api\WebService.DAL\obj\Release\net10.0\WebService.DAL.pdb
+F:\ITI\.Net\Api\Laps\WebService-Api\WebService.DAL\obj\Release\net10.0\WebService.DAL.genruntimeconfig.cache
+F:\ITI\.Net\Api\Laps\WebService-Api\WebService.DAL\obj\Release\net10.0\ref\WebService.DAL.dll

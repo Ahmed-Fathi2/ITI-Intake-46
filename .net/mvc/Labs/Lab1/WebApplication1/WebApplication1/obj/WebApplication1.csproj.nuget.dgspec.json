@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\ITI\\.net\\mvc\\Labs\\Lab1\\WebApplication1\\WebApplication1\\WebApplication1.csproj": {}
+    "F:\\ITI\\.Net\\mvc\\Labs\\Lab1\\WebApplication1\\WebApplication1\\WebApplication1.csproj": {}
   },
   "projects": {
-    "F:\\ITI\\.net\\mvc\\Labs\\Lab1\\WebApplication1\\WebApplication1\\WebApplication1.csproj": {
+    "F:\\ITI\\.Net\\mvc\\Labs\\Lab1\\WebApplication1\\WebApplication1\\WebApplication1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\ITI\\.net\\mvc\\Labs\\Lab1\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+        "projectUniqueName": "F:\\ITI\\.Net\\mvc\\Labs\\Lab1\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
         "projectName": "WebApplication1",
-        "projectPath": "F:\\ITI\\.net\\mvc\\Labs\\Lab1\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+        "projectPath": "F:\\ITI\\.Net\\mvc\\Labs\\Lab1\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
         "packagesPath": "C:\\Users\\dell\\.nuget\\packages\\",
-        "outputPath": "F:\\ITI\\.net\\mvc\\Labs\\Lab1\\WebApplication1\\WebApplication1\\obj\\",
+        "outputPath": "F:\\ITI\\.Net\\mvc\\Labs\\Lab1\\WebApplication1\\WebApplication1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net10.0": {
@@ -68,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

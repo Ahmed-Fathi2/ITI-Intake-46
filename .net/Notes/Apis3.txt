@@ -1,0 +1,57 @@
+============================================================================================================================================
+Api-Day3
+============================================================================================================================================
+1- File Managment
+2- Pagenation
+3- filter
+4-Versioning
+5-Logging
+6-Cors
+============================================================================================================================================
+1- File Managment
+
+Json Not Support Files  Only Text
+
+So Using FormData
+But 
+it Heavy And Flat Object
+
+So Make one end point for File 
+
+
+----->> Add [[[[  ImageURL ]]]] to ApplicationUSer Table
+
+--->> web Host Environment
+
+
+
+--->>> BackGround Job To remove images on server not related to any in db
+
+
+Comman --->> PaginationParameters
+
+
+system.linq.dynamic.core
+
+
+
+
+
+
+
+
+Pagination
+
+
+
+Input  ----------->>> PageNumber   &&&&&   PageSize
+return ----------->>> Items  &&  PageNumber && TotalPages && IsPrevious && IsNext
+
+
+validation -->> File extension //// File Signature
+
+
+FileSize 
+FileName
+FileContent
+FileExtension

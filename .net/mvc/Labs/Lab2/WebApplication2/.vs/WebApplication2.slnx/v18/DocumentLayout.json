@@ -186,8 +186,7 @@
               "RelativeToolTip": "WebApplication2\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-27T13:21:12.988Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-27T13:21:12.988Z"
             },
             {
               "$type": "Document",
@@ -247,8 +246,7 @@
               "RelativeToolTip": "WebApplication2\\ViewModel\\ProductCreateVM.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAYwAsAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-23T17:18:41.327Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-23T17:18:41.327Z"
             },
             {
               "$type": "Document",
@@ -260,8 +258,7 @@
               "RelativeToolTip": "WebApplication2\\ViewModel\\ProductEditVM.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-23T19:02:52.366Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-23T19:02:52.366Z"
             },
             {
               "$type": "Document",
@@ -273,8 +270,7 @@
               "RelativeToolTip": "WebApplication2\\Views\\Product\\Edit.cshtml",
               "ViewState": "AgIAADkAAAAAAAAAAAAAAE0AAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-23T18:58:35.928Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-23T18:58:35.928Z"
             },
             {
               "$type": "Document",
@@ -284,7 +280,7 @@
               "RelativeDocumentMoniker": "WebApplication2\\Controllers\\ProductController.cs",
               "ToolTip": "F:\\ITI\\.Net\\mvc\\Labs\\Lab2\\WebApplication2\\WebApplication2\\Controllers\\ProductController.cs",
               "RelativeToolTip": "WebApplication2\\Controllers\\ProductController.cs",
-              "ViewState": "AgIAAK8AAAAAAAAAAAAmwLsAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAAAHcAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-23T14:11:03.831Z",
               "EditorCaption": ""

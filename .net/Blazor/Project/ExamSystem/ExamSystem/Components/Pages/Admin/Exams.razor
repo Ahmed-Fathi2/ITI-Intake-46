@@ -1,0 +1,201 @@
+@page "/admin/exams"
+@attribute [Authorize(Roles = "Admin")]
+
+<PageTitle>Manage Exams</PageTitle>
+
+<MudText Typo="Typo.h4" GutterBottom="true">Manage Exams</MudText>
+
+<MudButton Variant="Variant.Filled" Color="Color.Primary" StartIcon="@Icons.Material.Filled.Add" OnClick="OpenCreateDialog">Add Exam</MudButton>
+
+
+<MudTable Items="@exams" Hover="true" Elevation="4" Class="mt-4">
+    <HeaderContent>
+        <MudTh>Title</MudTh>
+        <MudTh>Subject</MudTh>
+        <MudTh>Duration (min)</MudTh>
+        <MudTh>Questions</MudTh>
+        <MudTh>Actions</MudTh>
+    </HeaderContent>
+
+    <RowTemplate>
+        <MudTd>@context.Title</MudTd>
+        <MudTd>@context.Subject?.Name</MudTd>
+        <MudTd>@context.DurationMinutes</MudTd>
+        <MudTd>@context.Questions.Count</MudTd>
+        <MudTd>
+            <MudIconButton Icon="@Icons.Material.Filled.Edit" Size="Size.Small" OnClick="() => OpenEditDialog(context)" />
+            <MudIconButton Icon="@Icons.Material.Filled.Delete" Size="Size.Small" Color="Color.Error" OnClick="() => DeleteExam(context)" />
+        </MudTd>
+    </RowTemplate>
+</MudTable>
+
+<MudDialog @bind-Visible="@dialogOpen" MaxWidth="MaxWidth.Medium">
+    <TitleContent>
+        <MudText Typo="Typo.h6" Class="font-weight-bold d-flex align-center">
+            <MudIcon Icon="@Icons.Material.Filled.Assignment" Class="mr-2" Color="Color.Secondary" />
+            @(exam.Id == 0 ? "Add New Exam" : "Edit Exam")
+        </MudText>
+    </TitleContent>
+    <DialogContent>
+        <MudForm @ref="form">
+            <MudGrid>
+                <MudItem xs="12">
+                    <MudTextField @bind-Value="exam.Title" Label="Exam Title" Variant="Variant.Outlined" Required="true" RequiredError="Exam title is required!" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Title" />
+                </MudItem>
+                <MudItem xs="12" md="6">
+                    <MudSelect T="int" @bind-Value="exam.SubjectId" Label="Subject" Variant="Variant.Outlined" Required="true" RequiredError="Subject is required!" AnchorOrigin="Origin.BottomCenter" AdornmentIcon="@Icons.Material.Filled.LibraryBooks">
+                        @foreach (var subj in subjects)
+                        {
+                            <MudSelectItem Value="@subj.Id">@subj.Name</MudSelectItem>
+                        }
+
+<style>
+    .page-header { margin-top: 1.5rem; margin-bottom: 0.75rem; }
+    .exam-grid { margin-top: 1rem; }
+    .exam-card { border-left: 6px solid var(--mud-palette-primary); }
+    .exam-card .description { color: rgba(0,0,0,0.6); margin-top: 0.25rem; }
+    .exam-card .meta { display:flex; gap:1.25rem; color: rgba(0,0,0,0.75); }
+    .exam-card .actions { display:flex; gap:0.25rem; }
+    @@media (max-width: 768px) {
+        .exam-card { border-left-width: 4px; }
+    }
+</style>
+                    </MudSelect>
+                </MudItem>
+                <MudItem xs="12" md="6">
+                    <MudNumericField @bind-Value="exam.DurationMinutes" Label="Duration (minutes)" Variant="Variant.Outlined" Min="1" Required="true" RequiredError="Duration is required!" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Timer" />
+                </MudItem>
+                <MudItem xs="12">
+                    <MudTextField @bind-Value="exam.Description" Label="Description" Variant="Variant.Outlined" Lines="3" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Description" />
+                </MudItem>
+            </MudGrid>
+        </MudForm>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="CloseDialog" Class="rounded-pill font-weight-bold px-6">Cancel</MudButton>
+        <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="SaveExam" Class="rounded-pill font-weight-bold px-8" StartIcon="@Icons.Material.Filled.Save">Save Changes</MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+    private List<Exam> exams = new();
+    private List<Subject> subjects = new();
+    private bool dialogOpen;
+    private Exam exam = new();
+
+    [Inject] private IDbContextFactory<ApplicationDbContext> DbFactory { get; set; } = default!;
+    [Inject] private ISnackbar Snackbar { get; set; } = default!;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadData();
+    }
+
+    private async Task LoadData()
+    {
+        await using var db = DbFactory.CreateDbContext();
+        exams = await db.Exams
+            .Include(e => e.Subject)
+            .Include(e => e.Questions)
+            .AsNoTracking()
+            .ToListAsync();
+
+        subjects = await db.Subjects.AsNoTracking().ToListAsync();
+        StateHasChanged();
+    }
+
+    private void OpenCreateDialog()
+    {
+        exam = new Exam { Description = string.Empty, DurationMinutes = 60 };
+        dialogOpen = true;
+    }
+
+    private void OpenEditDialog(Exam ex)
+    {
+        exam = new Exam
+        {
+            Id = ex.Id,
+            Title = ex.Title,
+            Description = ex.Description,
+            SubjectId = ex.SubjectId,
+            DurationMinutes = ex.DurationMinutes
+        };
+        dialogOpen = true;
+    }
+
+    private void CloseDialog()
+    {
+        dialogOpen = false;
+        form?.ResetAsync();
+    }
+
+    private MudForm form = default!;
+
+    private async Task SaveExam()
+    {
+        await form.ValidateAsync();
+        if (!form.IsValid) return;
+
+        try
+        {
+            await using var db = DbFactory.CreateDbContext();
+            if (exam.Id == 0)
+            {
+                exam.Title = exam.Title ?? "";
+                exam.Description = exam.Description ?? "";
+                db.Exams.Add(exam);
+            }
+            else
+            {
+                var existing = await db.Exams.FindAsync(exam.Id);
+                if (existing != null)
+                {
+                    existing.Title = exam.Title ?? "";
+                    existing.Description = exam.Description ?? "";
+                    existing.SubjectId = exam.SubjectId;
+                    existing.DurationMinutes = exam.DurationMinutes;
+                }
+            }
+            await db.SaveChangesAsync();
+            await LoadData();
+            CloseDialog();
+            Snackbar.Add("Exam saved successfully", Severity.Success);
+        }
+        catch (Exception ex)
+        {
+            // If we have a db from factory, clear its tracker; otherwise nothing to clear.
+            try { /* best-effort clear if possible */ }
+            catch { }
+            Snackbar.Add("Failed to save exam: " + (ex.InnerException?.Message ?? ex.Message), Severity.Error);
+        }
+    }
+
+    private async Task DeleteExam(Exam ex)
+    {
+        await using var db = DbFactory.CreateDbContext();
+        try
+        {
+            var existing = await db.Exams.FindAsync(ex.Id);
+            if (existing != null)
+            {
+                db.Exams.Remove(existing);
+                await db.SaveChangesAsync();
+                await LoadData();
+                Snackbar.Add("Exam deleted", Severity.Info);
+            }
+        }
+        catch (Exception exception)
+        {
+            db.ChangeTracker.Clear();
+            string msg = exception.InnerException?.Message ?? exception.Message;
+            if (msg.Contains("REFERENCE constraint") || msg.Contains("FOREIGN KEY constraint"))
+            {
+                Snackbar.Add("Cannot delete exam because it has questions or is linked to a student exam.", Severity.Error);
+            }
+            else
+            {
+                Snackbar.Add("Failed to delete exam: " + msg, Severity.Error);
+            }
+        }
+    }
+}

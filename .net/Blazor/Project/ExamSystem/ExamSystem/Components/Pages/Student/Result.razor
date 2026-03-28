@@ -1,0 +1,108 @@
+@page "/result/{studentExamId:int}"
+@attribute [Authorize]
+@using Microsoft.EntityFrameworkCore
+@using ExamSystem.Data
+
+<PageTitle>Exam Result | @(studentExam?.Exam?.Title ?? "Result")</PageTitle>
+
+<MudContainer MaxWidth="MaxWidth.Medium" Class="mt-12 mb-16 px-4 result-container">
+    @if (studentExam == null)
+    {
+        <div class="d-flex flex-column align-items-center justify-center pt-16">
+            <MudProgressCircular Color="Color.Primary" Indeterminate="true" Size="Size.Large" />
+            <MudText Typo="Typo.h6" Class="mt-4">Loading your results...</MudText>
+        </div>
+    }
+    else
+    {
+        <MudGrid Spacing="4">
+            <MudItem xs="12" md="8">
+                <MudText Typo="Typo.h5" Class="mb-4">Review Answers</MudText>
+
+                @foreach (var (sa, index) in studentExam.StudentAnswers.Select((val, i) => (val, i + 1)))
+                {
+                    var borderClass = sa.IsCorrect ? "border-success" : "border-error";
+                    <MudPaper Elevation="1" Class=@($"pa-4 mb-4 rounded-lg review-card {borderClass}")>
+                        <div class="d-flex align-center mb-2">
+                            <MudAvatar Color="@(sa.IsCorrect ? Color.Success : Color.Error)" Size="Size.Small" Class="mr-3">@index</MudAvatar>
+                            <MudText Typo="Typo.h6">@sa.Question?.Text</MudText>
+                        </div>
+
+                        <MudDivider Class="my-3"/>
+
+                        <div class="ml-10 answer-block">
+                            <MudText Typo="Typo.body1" Class="@(sa.IsCorrect ? "text-success" : "text-error")">
+                                Your Answer: <b>@sa.SelectedAnswer?.Text</b>
+                            </MudText>
+
+                            @if (!sa.IsCorrect)
+                            {
+                                <MudText Typo="Typo.body1" Color="Color.Primary" Class="mt-1">
+                                    Correct Answer: <b>@sa.Question?.Answers.FirstOrDefault(a => a.IsCorrect)?.Text</b>
+                                </MudText>
+                            }
+                        </div>
+                    </MudPaper>
+                }
+            </MudItem>
+
+            <MudItem xs="12" md="4">
+                <MudPaper Elevation="2" Class="pa-6 mb-4 rounded-lg result-summary">
+                    <div class="d-flex flex-column align-center text-center">
+                        <MudText Typo="Typo.h6" Class="mb-2">Exam Result</MudText>
+                        <MudText Typo="Typo.h2" Color="@(studentExam.Percentage >= 50 ? Color.Success : Color.Error)" Class="font-weight-bold percent-large mb-2">@studentExam.Percentage.ToString("F0")%</MudText>
+
+                        <div class="status-chips mb-3">
+                            <MudChip T="string" Color="Color.Default" Variant="Variant.Text">Score: <b class="ml-1">@studentExam.Score / @studentExam.TotalQuestions</b></MudChip>
+                            <MudChip T="string" Color="@(studentExam.Percentage >= 50 ? Color.Success : Color.Error)" Variant="Variant.Filled" Class="ml-2">@(studentExam.Percentage >= 50 ? "Passed" : "Failed")</MudChip>
+                        </div>
+
+                        <MudText Typo="Typo.caption" Class="opacity-7 mb-3">Submitted on: @studentExam.SubmittedAt?.ToString("MMMM dd, yyyy - hh:mm tt")</MudText>
+
+                        <div class="d-flex justify-center">
+                            <MudButton Variant="Variant.Filled" Color="Color.Primary" Href="/" Class="mr-2">Back to Home</MudButton>
+                        </div>
+                    </div>
+                </MudPaper>
+            </MudItem>
+        </MudGrid>
+    }
+</MudContainer>
+
+<style>
+    .text-success { color: var(--mud-palette-success); }
+    .text-error { color: var(--mud-palette-error); }
+
+    .percent-large { font-size: 4.5rem; line-height: 1; }
+
+    .result-container { padding-top: 2.5rem; }
+
+    .result-summary { display: flex; align-items: center; justify-content: center; }
+    .result-summary .status-chips { display: flex; gap: 0.5rem; align-items: center; justify-content: center; flex-wrap: wrap; }
+
+    .review-card { transition: box-shadow .15s ease-in-out; border-left: 6px solid transparent; }
+    .review-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+    .answer-block b { color: var(--mud-palette-primary); }
+    .border-success { border-left-color: var(--mud-palette-success); }
+    .border-error { border-left-color: var(--mud-palette-error); }
+</style>
+
+@code {
+    [Parameter] public int StudentExamId { get; set; }
+
+    private StudentExam? studentExam;
+
+    [Inject] private ApplicationDbContext DbContext { get; set; } = default!;
+
+    protected override async Task OnParametersSetAsync()
+    {
+        studentExam = await DbContext.StudentExams
+            .Include(se => se.Exam)
+            .Include(se => se.StudentAnswers)
+                .ThenInclude(sa => sa.Question)
+                    .ThenInclude(q => q.Answers)
+            .Include(se => se.StudentAnswers)
+                .ThenInclude(sa => sa.SelectedAnswer)
+            .FirstOrDefaultAsync(se => se.Id == StudentExamId);
+    }
+}
